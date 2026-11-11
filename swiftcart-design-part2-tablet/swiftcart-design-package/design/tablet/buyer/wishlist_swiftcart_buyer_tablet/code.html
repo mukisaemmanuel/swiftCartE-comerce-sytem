@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SwiftCart Uganda - Buyer Marketplace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#d5e3fd", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary-container": "#541200", "on-surface-variant": "#5b4039", "on-tertiary-container": "#00311f", "primary-fixed-dim": "#ffb5a0", "on-secondary-fixed-variant": "#3f465c", "on-surface": "#0d1c2f", "on-background": "#0d1c2f", "on-secondary-fixed": "#131b2e", "inverse-on-surface": "#ebf1ff", "tertiary": "#006c49", "error": "#ba1a1a", "primary-fixed": "#ffdbd1", "on-error-container": "#93000a", "tertiary-fixed-dim": "#4edea3", "surface-container": "#e6eeff", "surface": "#f8f9ff", "surface-tint": "#b02f00", "on-tertiary-fixed": "#002113", "on-primary-fixed": "#3b0900", "on-error": "#ffffff", "secondary-container": "#dae2fd", "inverse-primary": "#ffb5a0", "tertiary-fixed": "#6ffbbe", "secondary": "#565e74", "on-primary": "#ffffff", "background": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "surface-container-highest": "#d5e3fd", "surface-dim": "#ccdbf4", "primary-container": "#ff5722", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#dae2fd", "inverse-surface": "#233144", "error-container": "#ffdad6", "tertiary-container": "#00a572", "surface-bright": "#f8f9ff", "outline": "#907067", "on-primary-fixed-variant": "#862200", "surface-container-low": "#eff4ff", "on-secondary-container": "#5c647a", "outline-variant": "#e4beb4", "surface-container-high": "#dde9ff", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem", "space-md": "0.75rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin-desktop": "2rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm" data-path="marketplace-home" href="#"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">SwiftCart</span><span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded">UG</span></a><button class="hidden xl:flex items-center gap-space-xs text-left px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div><p class="font-label-sm text-label-sm text-secondary">Deliver to</p><p class="font-label-md text-label-md text-on-surface truncate max-w-[130px]">Kampala Central</p></div></button></div><div class="flex-1 max-w-2xl mx-space-sm hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg p-1 focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary-container transition-all"><select class="bg-transparent text-secondary font-label-md text-label-md px-space-sm py-2 rounded focus:outline-none cursor-pointer border-r border-outline-variant/30"><option value="all">All Categories</option><option value="electronics">Electronics &amp; Phones</option><option value="supermarket">Groceries &amp; Pantry</option><option value="fashion">Kampala Fashion</option><option value="appliances">Home Appliances</option><option value="hardware">Hardware &amp; Tools</option></select><div class="flex-1 flex items-center px-space-sm gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">search</span><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Search products, brands, local suppliers..." type="text"/></div><button class="p-2 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Search by image"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button><button class="bg-primary-container text-on-primary font-label-lg text-label-lg px-space-lg py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center shrink-0">Search</button></div></div><nav class="flex items-center gap-space-sm shrink-0" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a aria-current="page" class="hidden lg:inline-flex items-center px-space-sm py-2 transition-colors bg-surface-container text-primary font-bold rounded-lg" data-path="wishlist" href="#">Wishlist</a><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="verified-stores" href="#">Stores</a><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="buyer-orders" href="#">Orders</a><a class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="notifications" href="#" title="Notifications"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary rounded-full"></span></a><a class="relative flex items-center gap-space-xs px-space-sm py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="shopping-cart" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute -top-1.5 -right-2 bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full min-w-[18px] text-center">3</span></div><span class="hidden xl:inline font-label-lg text-label-lg text-on-surface font-bold">Cart</span></a><div class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-bold tracking-tight">SN</div></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-320px)]"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Banner -->
+<div class="w-full bg-primary-fixed/60 px-margin-desktop py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">trending_down</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed truncate">
+<span class="font-bold">UGX 116,500</span> total discount available across 2 saved items right now in Kampala warehouses.
+      </p>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant bg-surface-container-lowest px-space-sm py-0.5 rounded shadow-sm shrink-0">Updated 14m ago</span>
+</div>
+<div class="max-w-[834px] mx-auto w-full px-margin-desktop py-space-xl flex flex-col gap-space-lg">
+<!-- Header Block -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">My Wishlist</h1>
+<span class="font-headline-sm text-headline-sm text-primary font-extrabold">(6 Items)</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Synced with Kampala Central</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+        Save items for later, track price drops across Kampala vendors, and order with 1-tap boda delivery.
+      </p>
+</div>
+<!-- Controls Row: Search + Sort Filter -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-8 flex items-center bg-surface-container-lowest rounded-xl px-space-md py-2.5 shadow-sm focus-within:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mr-space-sm">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="wishlistSearchInput" placeholder="Search saved products, brands, or local vendors..." type="text"/>
+<button class="text-secondary hover:text-on-surface transition-colors hidden" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="md:col-span-4 flex items-center justify-end bg-surface-container-lowest rounded-xl px-space-md py-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mr-space-xs shrink-0">sort</span>
+<label class="sr-only" for="sortSelector">Sort Wishlist</label>
+<select class="w-full bg-transparent font-label-lg text-label-lg text-on-surface cursor-pointer focus:outline-none" id="sortSelector">
+<option value="recent">Recently Added</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-drop">Biggest Price Drop</option>
+</select>
+</div>
+</div>
+<!-- Filter Chips Horizontal Scroller -->
+<div class="flex items-center gap-space-sm overflow-x-auto pb-1 -mx-margin-desktop px-margin-desktop scrollbar-none">
+<button class="wishlist-filter-chip active shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-primary-container text-on-primary font-bold shadow-sm transition-all" data-category="all">
+        All Items <span class="ml-1 opacity-90">(6)</span>
+</button>
+<button class="wishlist-filter-chip shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-surface-container-lowest text-secondary hover:bg-surface-container hover:text-on-surface shadow-sm transition-all flex items-center gap-1" data-category="drops">
+<span class="material-symbols-outlined text-[18px] text-tertiary">trending_down</span>
+        Price Drops <span class="ml-1 font-bold text-tertiary">(2)</span>
+</button>
+<button class="wishlist-filter-chip shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-surface-container-lowest text-secondary hover:bg-surface-container hover:text-on-surface shadow-sm transition-all" data-category="instock">
+        In Stock (5)
+      </button>
+<button class="wishlist-filter-chip shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-surface-container-lowest text-secondary hover:bg-surface-container hover:text-on-surface shadow-sm transition-all" data-category="tech">
+        Tech &amp; Audio (3)
+      </button>
+<button class="wishlist-filter-chip shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-surface-container-lowest text-secondary hover:bg-surface-container hover:text-on-surface shadow-sm transition-all" data-category="home">
+        Home (2)
+      </button>
+<button class="wishlist-filter-chip shrink-0 font-label-lg text-label-lg px-space-lg py-2 rounded-full bg-surface-container-lowest text-secondary hover:bg-surface-container hover:text-on-surface shadow-sm transition-all" data-category="fashion">
+        Fashion (1)
+      </button>
+</div>
+<!-- 2-Column High-Density Tablet Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="wishlistGrid">
+<!-- Card 1: SoundCore Space One ANC -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="tech drops instock" data-drop="61500" data-price="248500" data-stock="in">
+<div>
+<!-- Top Media Aspect Box -->
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="SoundCore Space One ANC modern black wireless over-ear noise-cancelling headphones resting on a minimalist concrete plinth, studio lighting, deep matte finish, crisp commercial product photograph." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh1AGvfP_C2t_1TriZu-rR5r326ezROsMFxDuFMjA4NU4H-rhO8a_5m-jhJNsfapB9_00bkhrdxGYKnUZvi8tAXZp7e_PaE289K5QibzjCi_FgrBirYEud2qYTwlEdExT1FZcCg--B4pBMP3eXX8Q1cry2T5_yMrscwI8H8lQ0T0dc-WJchPHzvicD9dkHI_-iat7I6mQhS0RGOMMM7tF2VvaI2PVPlTEzYFKcH5vu"/>
+<!-- Badges overlay -->
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-space-sm py-0.5 rounded shadow-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Save UGX 61,500
+              </span>
+</div>
+<!-- Remove Button -->
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Merchant Attribution -->
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md text-secondary truncate">SoundCore Uganda Official</span>
+<span class="font-label-sm text-label-sm bg-tertiary-container/20 text-on-tertiary-container px-1 py-0.2 rounded font-bold ml-auto shrink-0">Verified</span>
+</div>
+<!-- Title -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            SoundCore Space One ANC Headphones
+          </h3>
+<!-- Ratings Row -->
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary">(128 reviews)</span>
+</div>
+<!-- Pricing Block -->
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-primary">UGX 248,500</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">UGX 310,000</span>
+</div>
+<!-- Delivery / Stock Pill -->
+<div class="mt-space-xs flex items-center gap-1.5 text-tertiary font-label-md text-label-md bg-tertiary-container/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">two_wheeler</span>
+<span class="truncate">In Stock • Express Boda delivery available</span>
+</div>
+</div>
+<!-- Action Bottom -->
+<div class="mt-space-md pt-space-xs">
+<button class="add-to-cart-btn w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Move to Cart</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Anker 65W GaN Dual-Port Charger -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="tech drops instock" data-drop="30000" data-price="115000" data-stock="in">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Anker 65W compact GaN dual-port fast charger in sleek matte white finish with dual USB-C slots, shot with clean architectural shadows on light gradient background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_Nmx2U6WH1Wvu0OTA1ccYJXlHrRsiSeGWWagLB-jCx8jvGcziRSAgRkfhUkoQElUOKTO-2YRx262E2TJuMfBzkHCdfUjTxZN813vGJ8M9qZNmeU-qEJWTjXz6mNPXkBhM93HtO-fU9VxjwijNtmC6qZmj8YCOBmlzBZgkfABMWzT8kX5rrG1cKcPgy5q3XZvbPkaOkI_CEG7keDMwe5kkN8BfhcxRwfdPD8rdjuf"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-space-sm py-0.5 rounded shadow-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Save UGX 30,000
+              </span>
+</div>
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">storefront</span>
+<span class="font-label-md text-label-md text-secondary truncate">Anker Flagship Uganda</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed px-1 py-0.2 rounded font-bold ml-auto shrink-0">Official Brand</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            Anker 65W GaN Dual-Port Charger
+          </h3>
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.8</span>
+<span class="font-body-sm text-body-sm text-secondary">(94 reviews)</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-primary">UGX 115,000</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">UGX 145,000</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5 text-primary-container font-label-md text-label-md bg-primary-fixed/30 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Low Stock • Only 4 remaining</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="add-to-cart-btn w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Move to Cart</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Samsung Galaxy A54 Clear Armor Case -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="fashion tech instock" data-drop="0" data-price="35000" data-stock="in">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Crystal clear military-grade protective phone case on modern smartphone, subtle reflections, sleek transparent polymer casing, clean white surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLLkbj6g3ruWZz7v6TqjXdzN-3m_h_nwkHKpSYwWjFiERf6eVjzycdYujZoYR7_HQVm_JBDzcPGkGH2uXnEtYIBLz55x68N0a7Du9d3o7n3H8vL6jc1hEFs5AnAYiFDtArUr3QBFfSSqfixcbz4LqGVorkeP8KYtHEEGoB16hdoccmCqbTLZXS5zCs0maF_B3AJZWsXeai3_BnL2fz8jrW2y6IV7DpZDH6EtoFn4sW"/>
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">storefront</span>
+<span class="font-label-md text-label-md text-secondary truncate">Kampala Phone Hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            Samsung Galaxy A54 Clear Armor Case
+          </h3>
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.6</span>
+<span class="font-body-sm text-body-sm text-secondary">(42 reviews)</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-on-surface">UGX 35,000</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5 text-tertiary font-label-md text-label-md bg-tertiary-container/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>In Stock • Ships within 2 hours</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="add-to-cart-btn w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Move to Cart</span>
+</button>
+</div>
+</div>
+<!-- Card 4: JBL Charge 5 Portable Waterproof Speaker -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between opacity-95" data-category="tech home outstock" data-drop="0" data-price="520000" data-stock="out">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 grayscale-[25%]" data-alt="JBL Charge 5 rugged waterproof bluetooth speaker in deep teal and copper accents, moisture droplets on durable woven fabric grille, outdoor daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-arLhNtA9ikkqvCFqn3hKnf--hsLi7VeDzxIdOEeLEaKzt6cgtuS9kMI1fCAcJXd6QQ_IZ3hy6aD4FrQQJOcl0vsM9ZWA9mFps4Fs_4jnnXuYAajmliM1XXs-NLAXuoJslgGf6AvWqBFz_foSleDuZMutQG9J3uFlSmpKtnNOdXIkOIga-eV8lYV1SwLcMMdvOcy6Tg-oro082TXfK8JPMoVbnxtxGnTMzmywGOOd"/>
+<div class="absolute top-2 left-2">
+<span class="font-label-sm text-label-sm bg-inverse-surface text-inverse-on-surface px-space-sm py-0.5 rounded shadow-sm font-bold">
+                Restocking Soon
+              </span>
+</div>
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">storefront</span>
+<span class="font-label-md text-label-md text-secondary truncate">Gadget Central Uganda</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            JBL Charge 5 Portable Waterproof Speaker
+          </h3>
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">5.0</span>
+<span class="font-body-sm text-body-sm text-secondary">(210 reviews)</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-secondary">UGX 520,000</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5 text-error font-label-md text-label-md bg-error-container/40 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">remove_shopping_cart</span>
+<span>Out of Stock across Kampala stores</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="notify-btn w-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+<span>Notify Me on Restock</span>
+</button>
+</div>
+</div>
+<!-- Card 5: Oraimo FreePods 4 ANC -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="tech drops instock" data-drop="25000" data-price="145000" data-stock="in">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Oraimo FreePods 4 true wireless earbuds standing in open charging case, premium black and gunmetal texture, dynamic reflections, editorial studio product capture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwW-V4YbszcV2LAlxAYBBQRKeBc7yHiVSeEJKpy9EPlGEntSLpCmO2HNTO4l5gkxVhdRn-j-WNGPJ4yf0aQcYPpAztn0tBoJHlTcEJ3GkfDXQSP4MlneXnUttqnST4RUakE3iSucETtP27XvnsH6-Hzml76OQekNZKrEMjv6gihUVA7NcKae4lhVJmMshGBTp-ZYMWAL7PSDrTZyjAzK5ajRRQFcoOzASDi9yYlcwp"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-space-sm py-0.5 rounded shadow-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Dropped UGX 25,000
+              </span>
+</div>
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md text-secondary truncate">Oraimo Official Store</span>
+<span class="font-label-sm text-label-sm bg-tertiary-container/20 text-on-tertiary-container px-1 py-0.2 rounded font-bold ml-auto shrink-0">Official Brand</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            Oraimo FreePods 4 ANC
+          </h3>
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.7</span>
+<span class="font-body-sm text-body-sm text-secondary">(315 reviews)</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-primary">UGX 145,000</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">UGX 170,000</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5 text-secondary font-label-sm text-label-sm bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-tertiary text-[16px]">schedule</span>
+<span>Price dropped 2 days ago</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="add-to-cart-btn w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Move to Cart</span>
+</button>
+</div>
+</div>
+<!-- Card 6: Sony WH-1000XM5 Wireless Headphones -->
+<div class="wishlist-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="tech home instock" data-drop="0" data-price="1450000" data-stock="in">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-low overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Sony WH-1000XM5 high-end flagship wireless headphones in silver platinum edition, soft matte texture, sculptural minimalist profile on warm neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoPLnCaW9obV4SoHa96-UlkZ2oLlxO-utB2CgX_sONW3w3PKgsg9JK0aIo5wSymRx7Q3eEkMDVukXDFGPKt1mXLxAosJMnDxJ5dn7EWeyuhUEALIvy2PN0R6D3-HP-Yg0Au6uB6N0UW-Q373eNXatSeIm4ORxjo4Jnmx3_H6RNLtOZkHz7eWzf0ox4L7Yt-vpAq7tU8kY5tmSEbhqFaSa1m6E-Xnm0djJ-v_gA_aMW"/>
+<div class="absolute top-2 left-2">
+<span class="font-label-sm text-label-sm bg-surface-container-lowest/90 text-on-surface px-space-sm py-0.5 rounded shadow-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">local_police</span> Verified Authentic
+              </span>
+</div>
+<button class="remove-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 text-secondary hover:text-error hover:bg-surface-container-lowest flex items-center justify-center shadow-sm transition-colors" title="Remove item">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">storefront</span>
+<span class="font-label-md text-label-md text-secondary truncate">Victoria Tech Supplies</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-1 py-0.2 rounded font-bold ml-auto shrink-0">Kampala Central</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+            Sony WH-1000XM5 Wireless Headphones
+          </h3>
+<div class="flex items-center gap-1 my-1">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary">(87 reviews)</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-price-display text-price-display text-on-surface">UGX 1,450,000</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5 text-tertiary font-label-md text-label-md bg-tertiary-container/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>1-Year Official East Africa Warranty</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="add-to-cart-btn w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Move to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Container (Hidden by Default) -->
+<div class="hidden flex-col items-center justify-center py-space-xl text-center bg-surface-container-lowest rounded-xl shadow-sm p-space-xl" id="emptyWishlistState">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[36px]">bookmark_border</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">No matching wishlist items</h3>
+<p class="font-body-md text-body-md text-secondary max-w-sm mb-space-md">Try clearing your filters or search keywords to view your saved products.</p>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-space-lg py-2 rounded-lg" id="resetFiltersBtn">Reset Filter</button>
+</div>
+<!-- Sticky / Bottom Feature Card: Price Drop Watchlist Summary -->
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-md border-l-4 border-l-primary-container flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Left: Analytics & Details -->
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm bg-primary-fixed rounded-xl text-on-primary-fixed shrink-0 hidden sm:flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">price_change</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-extrabold">Price Intelligence Hub</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Active Tracking</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Price Drop Watchlist Summary</h4>
+<p class="font-body-md text-body-md text-secondary mt-1">
+              You are saving <span class="text-tertiary font-bold font-price-display text-body-lg">UGX 116,500</span> across current discounts in your list.
+            </p>
+</div>
+</div>
+<!-- Right: Instant Delivery Metric / Boda Pill -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">electric_moped</span>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Fastest Dispatch</p>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Within 45 Mins</p>
+</div>
+</div>
+</div>
+<!-- Divider line via surface tint -->
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Action Footer: Quick Toggle & Batch CTA -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<!-- WhatsApp Toggle -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="sr-only peer" id="whatsappToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary relative"></div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Notify via WhatsApp on Price Drops</span>
+<span class="font-label-sm text-label-sm bg-tertiary-container/20 text-on-tertiary-container px-1 rounded font-bold">256-MTN</span>
+</div>
+</label>
+<!-- Batch Add CTA -->
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg px-space-xl py-3 rounded-xl flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.98]" id="batchAddBtn">
+<span class="material-symbols-outlined text-[22px]">shopping_cart_checkout</span>
+<span>Add All In-Stock to Cart <span class="font-extrabold tracking-tight">(UGX 2,393,500)</span></span>
+</button>
+</div>
+</div>
+<!-- Micro Kampala Guarantee Badge -->
+<div class="flex items-center justify-center gap-space-md text-secondary py-space-xs">
+<div class="flex items-center gap-1 text-center font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Kampala Escrow Protected</span>
+</div>
+<span class="text-secondary/40">•</span>
+<div class="flex items-center gap-1 text-center font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">currency_exchange</span>
+<span>Instant MoMo &amp; Airtel Refunds</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Wishlist Tablet Interactivity
+  (function() {
+    const searchInput = document.getElementById('wishlistSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const sortSelector = document.getElementById('sortSelector');
+    const filterChips = document.querySelectorAll('.wishlist-filter-chip');
+    const cards = Array.from(document.querySelectorAll('.wishlist-card'));
+    const grid = document.getElementById('wishlistGrid');
+    const emptyState = document.getElementById('emptyWishlistState');
+    const resetBtn = document.getElementById('resetFiltersBtn');
+    const batchAddBtn = document.getElementById('batchAddBtn');
+
+    let currentFilter = 'all';
+
+    function applyFilterAndSort() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const vendor = card.querySelector('.font-label-md').textContent.toLowerCase();
+        const categoryData = card.getAttribute('data-category') || '';
+        
+        let matchesQuery = title.includes(query) || vendor.includes(query);
+        let matchesFilter = false;
+
+        if (currentFilter === 'all') {
+          matchesFilter = true;
+        } else if (currentFilter === 'drops') {
+          matchesFilter = categoryData.includes('drops');
+        } else if (currentFilter === 'instock') {
+          matchesFilter = card.getAttribute('data-stock') === 'in';
+        } else if (currentFilter === 'tech') {
+          matchesFilter = categoryData.includes('tech');
+        } else if (currentFilter === 'home') {
+          matchesFilter = categoryData.includes('home');
+        } else if (currentFilter === 'fashion') {
+          matchesFilter = categoryData.includes('fashion');
+        }
+
+        if (matchesQuery && matchesFilter) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+
+      sortCards();
+    }
+
+    function sortCards() {
+      const sortVal = sortSelector.value;
+      const sorted = cards.slice().sort((a, b) => {
+        const priceA = parseInt(a.getAttribute('data-price') || '0', 10);
+        const priceB = parseInt(b.getAttribute('data-price') || '0', 10);
+        const dropA = parseInt(a.getAttribute('data-drop') || '0', 10);
+        const dropB = parseInt(b.getAttribute('data-drop') || '0', 10);
+
+        if (sortVal === 'price-low') {
+          return priceA - priceB;
+        } else if (sortVal === 'price-drop') {
+          return dropB - dropA;
+        }
+        return 0; // default recent
+      });
+
+      sorted.forEach(c => grid.appendChild(c));
+    }
+
+    // Filter chip handlers
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold');
+          c.classList.add('bg-surface-container-lowest', 'text-secondary');
+        });
+        chip.classList.add('bg-primary-container', 'text-on-primary', 'font-bold');
+        chip.classList.remove('bg-surface-container-lowest', 'text-secondary');
+
+        currentFilter = chip.getAttribute('data-category');
+        applyFilterAndSort();
+      });
+    });
+
+    // Search input handler
+    searchInput.addEventListener('input', () => {
+      if (searchInput.value.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+      applyFilterAndSort();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      applyFilterAndSort();
+    });
+
+    sortSelector.addEventListener('change', () => {
+      sortCards();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      currentFilter = 'all';
+      filterChips[0].click();
+    });
+
+    // Remove item micro-interaction
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.wishlist-card');
+        if (card) {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          card.style.transition = 'all 0.25s ease';
+          setTimeout(() => {
+            card.remove();
+            const index = cards.indexOf(card);
+            if (index > -1) cards.splice(index, 1);
+            applyFilterAndSort();
+          }, 250);
+        }
+      });
+    });
+
+    // Add to cart toast / feedback micro-interaction
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const initialText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Added to Boda Cart</span>';
+        this.classList.remove('bg-primary-container');
+        this.classList.add('bg-tertiary', 'text-on-tertiary');
+        setTimeout(() => {
+          this.innerHTML = initialText;
+          this.classList.remove('bg-tertiary', 'text-on-tertiary');
+          this.classList.add('bg-primary-container');
+        }, 1800);
+      });
+    });
+
+    // Batch Add feedback
+    if (batchAddBtn) {
+      batchAddBtn.addEventListener('click', function() {
+        const prevContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[22px]">check_circle</span><span>5 Items Placed into Cart!</span>';
+        this.classList.remove('bg-primary-container');
+        this.classList.add('bg-tertiary');
+        setTimeout(() => {
+          this.innerHTML = prevContent;
+          this.classList.remove('bg-tertiary');
+          this.classList.add('bg-primary-container');
+        }, 2200);
+      });
+    }
+
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-auto"><div class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-outline-variant/20"><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">verified_user</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Ugandan Buyer Guarantee</h4><p class="font-body-sm text-body-sm text-secondary mt-1">100% genuine merchandise, escrow-protected payments, and vetted regional vendors.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">local_shipping</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Hassle-Free Returns</h4><p class="font-body-sm text-body-sm text-secondary mt-1">7-day doorstep return pickup across Kampala, Entebbe, Wakiso, and Mukono metro.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-secondary-container text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">support_agent</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Help &amp; Support</h4><p class="font-body-sm text-body-sm text-secondary mt-1">Dedicated 24/7 localized support via live toll-free line, WhatsApp, and Kampala help hub.</p></div></div><div class="flex flex-col justify-start"><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Accepted In Uganda</h4><p class="font-body-sm text-body-sm text-secondary mt-1 mb-space-sm">Instant checkout with national mobile wallets and cards:</p></div><div class="flex flex-wrap items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#FFCC00]/20 text-[#6B5500] font-bold">MTN MoMo</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#E40000]/10 text-[#9E0000] font-bold">Airtel Money</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-secondary-container text-on-secondary-fixed font-bold">Visa</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container text-secondary font-bold">Cash on Delivery</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm text-primary font-extrabold tracking-tight">SwiftCart</span><span class="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Lumumba Avenue, Nakasero, Kampala. All rights reserved.</span></div><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="buyer-protection" href="#">Buyer Protection Policy</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="kampala-delivery-rates" href="#">Delivery Rates</a></div></div></div></footer></body></html>

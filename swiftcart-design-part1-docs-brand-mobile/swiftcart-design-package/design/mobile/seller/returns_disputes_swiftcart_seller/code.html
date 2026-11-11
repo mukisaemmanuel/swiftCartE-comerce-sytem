@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><title>SwiftCart Seller Hub</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f8f9ff", "on-background": "#0d1c2f", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "surface-container-highest": "#d5e3fd", "on-primary-fixed-variant": "#862200", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#b02f00", "surface-container-lowest": "#ffffff", "on-primary-container": "#541200", "on-secondary-fixed-variant": "#3f465c", "surface-container": "#e6eeff", "outline": "#907067", "surface": "#f8f9ff", "secondary-fixed": "#dae2fd", "on-secondary-container": "#5c647a", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "primary": "#b02f00", "surface-container-high": "#dde9ff", "outline-variant": "#e4beb4", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "inverse-on-surface": "#ebf1ff", "primary-container": "#ff5722", "error-container": "#ffdad6", "on-surface-variant": "#5b4039", "on-surface": "#0d1c2f", "on-primary-fixed": "#3b0900", "tertiary": "#006c49", "inverse-primary": "#ffb5a0", "surface-bright": "#f8f9ff", "error": "#ba1a1a", "surface-dim": "#ccdbf4", "inverse-surface": "#233144", "primary-fixed": "#ffdbd1", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#005236", "tertiary-container": "#00a572", "secondary-container": "#dae2fd", "surface-variant": "#d5e3fd", "primary-fixed-dim": "#ffb5a0", "surface-container-low": "#eff4ff", "secondary": "#565e74", "on-tertiary-container": "#00311f", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "margin-desktop": "2rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASukitJqOPfdw-qrh6qxhhaube9-Rv83U4SVoiLEwrWKvFDe143CH9Aig1H_0eFo-YRLPnPpd171sotfk7XIkuQoWFWG_cXc0-altAlGEkmzstn7TXSdZ3AcIWL5nXjTYGMbsfmuY3jLR2GT1J4IKc1xWI59IZ0mVmeZ4lf5Efthk49vduTpQuqhMPBiv2ZsKtyFrdPepZXyOi7Dh9aVBZ7EngD0xoY1zr3U9bCuWmfmfR3Brr6BbTFg"><h1 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Returns And Disputes</h1></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="document.documentElement.classList.toggle('dark')"><span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="font-label-sm text-label-sm font-bold text-on-primary">KG</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-gutter py-space-sm gap-space-md text-on-surface">
+<!-- Escrow Legal Compliance Banner -->
+<div class="w-full rounded-xl bg-surface-container-highest/60 p-space-sm flex items-start gap-space-sm shadow-sm backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex-1 min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Payment Protection</span><span class="w-1 h-1 rounded-full bg-outline"></span><span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">SwiftCart Uganda</span></div><p class="font-body-sm text-body-sm text-on-surface mt-0.5">Payment Protection: <strong class="font-semibold text-primary">UGX 280,000</strong> for order #RT-309 is held safely by SwiftCart pending return verification.</p></div>
+</div>
+<!-- Header Tabs with Live Badges -->
+<div class="flex items-center gap-space-xs p-1 bg-surface-container rounded-xl overflow-x-auto select-none">
+<button class="flex-1 min-w-[100px] py-2 px-space-xs rounded-lg bg-surface text-primary shadow-sm flex items-center justify-center gap-1.5 transition-all" id="tab-active" onclick="switchTab('active')">
+<span class="font-label-lg text-label-lg">Requests</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm leading-none">2</span>
+</button>
+<button class="flex-1 min-w-[100px] py-2 px-space-xs rounded-lg text-on-surface-variant flex items-center justify-center gap-1.5 hover:text-on-surface transition-all" id="tab-dispute" onclick="switchTab('dispute')">
+<span class="font-label-lg text-label-lg">In Dispute</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm leading-none">1</span>
+</button>
+<button class="flex-1 min-w-[100px] py-2 px-space-xs rounded-lg text-on-surface-variant flex items-center justify-center gap-1.5 hover:text-on-surface transition-all" id="tab-resolved" onclick="switchTab('resolved')">
+<span class="font-label-lg text-label-lg">Resolved</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm leading-none">14</span>
+</button>
+</div>
+<!-- Active Dispute Case Card (High Priority) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<!-- Header row: Case ID & Countdown Timer -->
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Case #RT-309</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Urgent</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Order #SC-8921 • Kampala Central</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-error-container text-on-error-container shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span class="font-label-sm text-label-sm font-bold">18h left</span>
+</div>
+</div>
+<!-- Product & Claim Details -->
+<div class="flex gap-space-sm p-space-sm rounded-lg bg-surface-container-low items-center">
+<img class="w-14 h-14 rounded-lg object-cover shrink-0" data-alt="SoundCore Space One active noise cancelling wireless headphones in matte black finish on a sleek studio surface with blue accent lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5GW5uj8GIByTWz8ibHqdO1_03tTWdyXxAE52hD0qiu2dScXy1pxTiU-3-kDhtkbh0El2JqqAPPsen_itCKNdiPuzaVEC1YrLFzrdD2n3s8FkXsLQZWM8Qa7QZ6c3nzKPgVmP7rkrn7PzYoK_9jodCQ2ergNrMclXW_eWzgjCoIS0HuDiBOk7gUEu_tD8hXAwIU4y0ityk6WVnFYDEfwQvVQlne9l6f8XUZly3a4rt">
+<div class="flex-1 min-w-0">
+<div class="font-label-lg text-label-lg text-on-surface truncate">SoundCore Space One ANC</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">UGX 280,000</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant text-[11px]">
+<span class="">Buyer: Alex K.</span>
+<span class="">•</span>
+<span class="text-tertiary flex items-center"><span class="material-symbols-outlined text-[12px] mr-0.5">verified</span>Verified Buyer</span>
+</div>
+</div>
+</div>
+<!-- Claim Statement -->
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Buyer Claim</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">"Left ear cup does not power on after unboxing. Original packaging intact."</p>
+</div>
+<!-- Buyer Visual Proofs -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Buyer Evidence (3 Photos)</span>
+<span class="font-label-sm text-label-sm text-primary">Tap to inspect</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="relative group rounded-lg overflow-hidden bg-surface-container aspect-square cursor-pointer" onclick="openLightbox('Serial Sticker &amp; Box Seal')">
+<img class="w-full h-full object-cover" data-alt="Close-up macro shot of product warranty barcode sticker showing unbroken security hologram and intact factory seal on black packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-VcchryyGlDw0JJwBWoph8tijE6MHTFDIDtgMz-r2r8Apzj9JKnUtZom3QikP5OQF2u_nr6uOoOvyGbZk9K9X6LW33UFDGS3P3Nw6SdO95AK4uN0TtqF04wDw_w0Ow3Nv_zmnjtXEBbRhX3w_hypY3Yom2xF5OzVm7ODgoAsV_r48FJtq_xQPWVD59_cVrsCksuvP3o4UXP0XZq6jQlabn-_vZOCHwU5T94WDecg5">
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white opacity-90 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</div>
+<span class="absolute bottom-1 left-1 bg-surface-container-highest/90 text-on-surface text-[9px] px-1 rounded font-label-sm">Serial &amp; Label</span>
+</div>
+<div class="relative group rounded-lg overflow-hidden bg-surface-container aspect-square cursor-pointer" onclick="openLightbox('LED Failure Indicator')">
+<img class="w-full h-full object-cover" data-alt="Close up view of the black headphone charging port and LED power indicator remaining dark while plugged into official fast charging cable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz7jIHP1_oPBAeW-TEXRNg7DSu1YMKfNVKjx6lPJXm1u6lIKgPt1-ECip-qldbCBUbC2k9BdFdCmSyAWF_28bNgKH5a4bnhgCpX6ujyaKBdqvnTaVctnY7EyAB7geKkaoTBdMVjKh4scQkEkyxXEcOe3Zot7QCpfq5inb3ztMK3TQ0jDFBpE3DwZmyGhO7d8r3OtPTlt4sIId2mCMXn3ZHb5VPL70VJjsa42smUtqJ">
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white opacity-90 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</div>
+<span class="absolute bottom-1 left-1 bg-surface-container-highest/90 text-on-surface text-[9px] px-1 rounded font-label-sm">Power LED</span>
+</div>
+<div class="relative group rounded-lg overflow-hidden bg-surface-container aspect-square cursor-pointer" onclick="openLightbox('Complete Unboxed Contents')">
+<img class="w-full h-full object-cover" data-alt="Neatly arranged unboxing view showing black headphones, carrying pouch, aux wire, manual, and original retail box on a clean wooden table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmPoBjI_TOVq06sr4G71i-d-kVLYO17uu6bA4Str3bvHlZDxqAXkv1Z7mo2_Nki6Eh8KEdLUhzVZNEWIzX_BtBXlSaYz3Oppvw_rvWpHImkJN5hAxVG2zP1N1YOBPaBB-zUjtFxo7Zux1KjbunJAXM7yc3Q8Dq-rZ8WCm_Og0q52ndYrqu7CnkJw6vW-VZt2y6sompM5c73yAJWlYKn1_MPPglWVQKJfgAq01gYmec">
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white opacity-90 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</div>
+<span class="absolute bottom-1 left-1 bg-surface-container-highest/90 text-on-surface text-[9px] px-1 rounded font-label-sm">Accessories</span>
+</div>
+</div>
+</div>
+<!-- Escrow Dynamic Status Indicator -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug"><strong class="text-on-surface font-semibold">Payment Protection Active:</strong> UGX 280,000 is held safely by SwiftCart while support reviews the photos and claim.</p>
+</div>
+<!-- Audit Timeline (Compact Accordion/Stack) -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Audit Chronology</span>
+<div class="flex flex-col gap-2 pl-2">
+<div class="flex items-start gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0 mt-1"></span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">Delivery confirmed by SafeBoda</p>
+<span class="text-[10px] text-on-surface-variant">Yesterday, 3:15 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0 mt-1"></span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">Dispute submitted by buyer</p>
+<span class="text-[10px] text-on-surface-variant">Yesterday, 6:30 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0 mt-1"></span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Return Request Logged</p>
+<span class="text-[10px] text-on-surface-variant">System • Yesterday, 6:31 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0 mt-1 animate-ping"></span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-primary font-bold">Awaiting Seller Decision</p>
+<span class="text-[10px] text-on-surface-variant">Expires in 18 hours</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Resolution Actions -->
+<div class="flex flex-col gap-2 pt-1">
+<!-- 1. Accept Return -->
+<button class="w-full py-3 px-space-md rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.98] transition-all" onclick="handleAcceptReturn()">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+<span class="">Accept Return &amp; Authorize Boda Pickup</span>
+</button>
+<!-- 2. Direct Replacement Swap -->
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-[0.98] transition-all" onclick="handleOfferSwap()">
+<span class="material-symbols-outlined text-[18px]">swap_horizontal_circle</span>
+<span class="">Offer Replacement Item (Direct Swap)</span>
+</button>
+<!-- 3. Contest Dispute -->
+<button class="w-full py-2.5 px-space-md rounded-xl bg-transparent text-error font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-error-container/20 active:scale-[0.98] transition-all" onclick="openContestDialog()"><span class="material-symbols-outlined text-[18px]">assignment_turned_in</span><span class="">Submit Dispute Response &amp; Photos</span></button>
+</div>
+</div>
+<!-- Second Case: Case #RT-298 (Resolved Card) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Case #RT-298</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Order #SC-8604</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        Resolved
+      </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-lg object-cover shrink-0" data-alt="Anker 65W GaN Fast Charger compact wall adapter plugged in beside a braided USB-C cable on office desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4UBBnZZrKEK7D03Lv-VsTrhJBjtJdjPkBp4-Eq43hWF5W95gVkDlDtMNPdSwdIAOg65EYo69U0Fq51hBuibhMZ4cUyTHLknB_PO3D1DyGUeXsVSZ63HjM_HRECtf5YMMW5xqlxweKcU9f9V34QmytiCksooBkl25qrOR3XXptdq72ZSn_JfnSPhKahW8Fdb24FIov89y6SGZrQie8lJNaJMt_zI25mPBZuVTlUDbi">
+<div class="flex-1 min-w-0">
+<div class="font-body-md text-body-md font-semibold text-on-surface truncate">Anker 65W GaN Fast Charger</div>
+<div class="font-body-sm text-body-sm text-tertiary font-bold">UGX 145,000 Payout Released</div>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-[12px] text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px] shrink-0">handshake</span>
+<span class="">Buyer withdrew claim after troubleshooting guidance. Payout cleared to merchant wallet.</span>
+</div>
+</div>
+<!-- Seller Contest / Arbitration Modal Dialog -->
+<div class="fixed inset-0 z-50 bg-on-background/70 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4" id="contest-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-lg flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<!-- Modal Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">shield</span></div><div><h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Seller Dispute Response</h3><p class="font-body-sm text-body-sm text-on-surface-variant">SwiftCart Uganda Support Review</p></div></div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95" onclick="closeContestDialog()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Legal Disclaimer -->
+<div class="p-2.5 rounded-lg bg-surface-container text-body-sm text-on-surface-variant leading-relaxed">Please provide factual packaging details and testing proof. SwiftCart Uganda support will evaluate the response to decide on fund release, buyer return, or partial refund.</div>
+<!-- Form Inputs -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg font-semibold text-on-surface flex items-center justify-between" for="contest-reason">
+<span class="">Seller Defense Statement *</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Min 20 characters</span>
+</label>
+<textarea class="w-full p-space-sm rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container resize-none" id="contest-reason" placeholder="Provide factual context (e.g., unit was pre-tested prior to dispatch, serial code mismatch, or improper customer usage)..." rows="3"></textarea>
+</div>
+<!-- Upload packaging video / photo proof -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Packaging Proof / Serial Video *</span>
+<div class="w-full p-4 rounded-xl bg-surface-container-low flex flex-col items-center justify-center gap-1.5 cursor-pointer hover:bg-surface-container transition-colors" onclick="triggerProofUpload()">
+<span class="material-symbols-outlined text-primary text-[28px]">cloud_upload</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold" id="upload-label">Upload CCTV Packaging Footage or Photo</span>
+<span class="text-[11px] text-on-surface-variant">MP4, MOV, or JPG (Max 25MB)</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 py-3 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg active:scale-98 transition-transform" onclick="closeContestDialog()">
+          Cancel
+        </button>
+<button class="flex-1 py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md active:scale-98 transition-transform flex items-center justify-center gap-1" onclick="submitContestForm()"><span class="material-symbols-outlined text-[18px]">send</span><span class="">Submit Response</span></button>
+</div>
+</div>
+</div>
+<!-- Toast Notification System -->
+<div class="fixed bottom-6 left-4 right-4 z-50 pointer-events-none transition-all duration-300 opacity-0 transform translate-y-4 flex justify-center" id="desk-toast">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 max-w-sm pointer-events-auto">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">Action processed successfully</span>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(type) {
+    const tabActive = document.getElementById('tab-active');
+    const tabDispute = document.getElementById('tab-dispute');
+    const tabResolved = document.getElementById('tab-resolved');
+
+    [tabActive, tabDispute, tabResolved].forEach(tab => {
+      tab.className = "flex-1 min-w-[100px] py-2 px-space-xs rounded-lg text-on-surface-variant flex items-center justify-center gap-1.5 hover:text-on-surface transition-all";
+    });
+
+    if (type === 'active') {
+      tabActive.className = "flex-1 min-w-[100px] py-2 px-space-xs rounded-lg bg-surface text-primary shadow-sm flex items-center justify-center gap-1.5 transition-all";
+      showToast("Filtered: 2 Return Requests awaiting authorization");
+    } else if (type === 'dispute') {
+      tabDispute.className = "flex-1 min-w-[100px] py-2 px-space-xs rounded-lg bg-surface text-primary shadow-sm flex items-center justify-center gap-1.5 transition-all";
+      showToast("Filtered: 1 Formal Arbitration in review");
+    } else {
+      tabResolved.className = "flex-1 min-w-[100px] py-2 px-space-xs rounded-lg bg-surface text-tertiary shadow-sm flex items-center justify-center gap-1.5 transition-all";
+      showToast("Filtered: 14 Resolved claims in archive");
+    }
+  }
+
+  function handleAcceptReturn() {
+    showToast("Return Accepted! Dispatching SafeBoda courier for pickup.");
+  }
+
+  function handleOfferSwap() {
+    showToast("Direct swap offer transmitted to buyer inbox.");
+  }
+
+  function openContestDialog() {
+    const modal = document.getElementById('contest-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeContestDialog() {
+    const modal = document.getElementById('contest-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function triggerProofUpload() {
+    const label = document.getElementById('upload-label');
+    label.innerText = "Attaching: packaging_station_cam_RT309.mp4 (14.2 MB)";
+    label.classList.add('text-tertiary');
+    showToast("Video dispatch record attached");
+  }
+
+  function submitContestForm() {
+    const reason = document.getElementById('contest-reason').value;
+    if (!reason || reason.trim().length < 15) {
+      alert("Please provide a detailed factual explanation (minimum 15 characters).");
+      return;
+    }
+    closeContestDialog();
+    showToast("Arbitration request registered. SwiftCart Officer assigned.");
+  }
+
+  function openLightbox(label) {
+    showToast("Inspecting evidence: " + label);
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('desk-toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.innerText = msg;
+    toast.classList.remove('opacity-0', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 3200);
+  }
+</script></main>
+
+</body></html>

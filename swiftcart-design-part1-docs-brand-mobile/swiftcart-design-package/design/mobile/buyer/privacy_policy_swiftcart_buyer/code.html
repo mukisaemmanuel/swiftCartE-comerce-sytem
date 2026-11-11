@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#bec6e0", "tertiary-fixed": "#6ffbbe", "primary-fixed": "#ffdbd1", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "surface-tint": "#b02f00", "surface-bright": "#f8f9ff", "on-secondary-container": "#5c647a", "secondary-container": "#dae2fd", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "on-error-container": "#93000a", "on-error": "#ffffff", "on-background": "#0d1c2f", "on-surface": "#0d1c2f", "surface-variant": "#d5e3fd", "on-tertiary-container": "#00311f", "secondary-fixed": "#dae2fd", "on-secondary-fixed": "#131b2e", "surface": "#f8f9ff", "primary-container": "#ff5722", "tertiary-container": "#00a572", "on-primary-fixed-variant": "#862200", "inverse-on-surface": "#ebf1ff", "secondary": "#565e74", "primary": "#b02f00", "tertiary-fixed-dim": "#4edea3", "outline": "#907067", "on-tertiary-fixed-variant": "#005236", "tertiary": "#006c49", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#3b0900", "surface-dim": "#ccdbf4", "on-primary-container": "#541200", "background": "#f8f9ff", "inverse-primary": "#ffb5a0", "outline-variant": "#e4beb4", "on-surface-variant": "#5b4039", "on-primary": "#ffffff", "surface-container-highest": "#d5e3fd", "surface-container-low": "#eff4ff", "surface-container": "#e6eeff", "primary-fixed-dim": "#ffb5a0", "on-tertiary-fixed": "#002113", "inverse-surface": "#233144", "surface-container-high": "#dde9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "margin": "1rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors -ml-space-xs" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><div class="flex flex-col min-w-0 ml-space-xs"><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase truncate">SwiftCart Uganda</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Buyer Privacy</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Page options" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Document Metadata & Header -->
+<div class="px-margin pt-space-md pb-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Consumer Legal Protection</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Privacy Policy</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+      Last updated: October 24, 2024 • SwiftCart Uganda Ltd.
+    </p>
+</div>
+<!-- Trust Highlights & Key Summary Callout -->
+<div class="px-margin mb-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">SwiftCart Data Pledge</h3>
+<p class="font-body-sm text-body-sm text-secondary">Simple summary of how we safeguard your information.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+        We collect only the data needed to process your orders, deliver via local Boda riders, and ensure secure mobile money payments. <span class="font-semibold text-primary">We never sell your personal information.</span>
+</p>
+<!-- Key Micro-Pillars -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-sm pt-space-xs">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Zero PIN Storage</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Live Transit GPS Only</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Table of Contents Pill Bar (Interactive Quick Nav) -->
+<div class="px-margin mb-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-1">1. Collection</a>
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-2">2. Usage &amp; Boda</a>
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-3">3. MoMo Payments</a>
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-4">4. GPS Location</a>
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-5">5. Security</a>
+<a class="shrink-0 font-label-md text-label-md px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors" href="#section-6">6. Your Rights</a>
+</div>
+</div>
+<!-- Policy Content Accordion Stack -->
+<div class="px-margin space-y-space-sm" id="policyAccordion">
+<!-- Section 1 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-1" open="">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">1. Information We Collect</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-xs leading-relaxed">
+<p>
+          To maintain commercial accuracy and smooth dispatch operations across Uganda, we gather details directly when you register an account or initiate an order:
+        </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">person</span>
+<div>
+<strong class="font-label-lg text-label-lg text-on-surface block">Buyer Identity</strong>
+<span>Full legal name, authenticated contact phone number (+256 format), and active email address.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">location_on</span>
+<div>
+<strong class="font-label-lg text-label-lg text-on-surface block">Ugandan Destination Records</strong>
+<span>Detailed physical delivery addresses (Division, District, landmark instructions, plot/building numbers across Kampala, Entebbe, Wakiso, Mukono, and regional hubs).</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">receipt_long</span>
+<div>
+<strong class="font-label-lg text-label-lg text-on-surface block">Commercial Transaction Logs</strong>
+<span>Cart metadata, purchase history, order invoices, delivery completion receipts, and merchant ratings.</span>
+</div>
+</div>
+</div>
+</div>
+</details>
+<!-- Section 2 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-2" open="">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">2. How We Use Your Data</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-sm leading-relaxed">
+<p>
+          Every record collected is utilized strictly to provide lightning-fast, verified local commerce:
+        </p>
+<ul class="space-y-space-xs pl-space-xs">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check</span>
+<span><strong>Fulfillment:</strong> Forwarding your purchase request to verified merchants for fast item picking and packing.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check</span>
+<span><strong>Boda Rider Dispatch:</strong> When an order is handed over, your destination drop-off point and direct phone number are shared solely with the assigned courier to enable instant drop-off coordination and door-to-door arrival alerts.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check</span>
+<span><strong>Resolution &amp; Support:</strong> SwiftCart customer care agents inspect transaction logs to quickly resolve returns, failed handoffs, or merchant discrepancies.</span>
+</li>
+</ul>
+</div>
+</details>
+<!-- Section 3 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-3">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">3. Payment Information</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-xs leading-relaxed">
+<div class="p-space-sm rounded-lg bg-primary-fixed/30 text-on-primary-fixed">
+<div class="flex items-center gap-1.5 font-label-lg text-label-lg text-on-primary-fixed mb-1">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+            Payment Integrity Standard
+          </div>
+<p class="font-body-sm text-body-sm">
+            We do not store your Mobile Money PIN or bank card CVV. All MTN MoMo and Airtel Money payments are processed directly through certified telecom payment gateways.
+          </p>
+</div>
+<p class="pt-space-xs">
+          When initiating payment via MTN MoMo or Airtel Money, an encrypted USSD prompt push is initiated directly to your registered handset. SwiftCart systems receive only authenticated authorization tokens and transaction reference IDs, preventing sensitive PIN disclosure at all stages.
+        </p>
+</div>
+</details>
+<!-- Section 4 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-4">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">4. Location &amp; Tracking</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-xs leading-relaxed">
+<p>
+          Precise GPS coordinates are utilized <span class="font-semibold text-on-surface">only while an active delivery is in transit</span> to facilitate real-time rider navigation through Kampala's winding sectors and regional road networks.
+        </p>
+<p>
+          Once your package is marked as Delivered by the Boda rider and confirmed via your OTP or signature, background location sampling terminates immediately. We do not track your perpetual device movements when the SwiftCart app is idle.
+        </p>
+</div>
+</details>
+<!-- Section 5 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-5">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">5. Data Retention &amp; Security</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-xs leading-relaxed">
+<p>
+          Buyer records are maintained in compliance with Uganda’s Data Protection and Privacy Act (2019) and hosted on enterprise-grade ISO 27001-certified cloud infrastructure.
+        </p>
+<p>
+          All data in transit is protected via TLS 1.3 encryption, and sensitive databases employ AES-256 field encryption at rest. Audit logs are routinely inspected to guard against unauthorized access, credential stuffing, and illicit merchant leakage.
+        </p>
+</div>
+</details>
+<!-- Section 6 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-200" id="section-6">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">6. Your Rights &amp; Deletion</span>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-sm leading-relaxed">
+<p>
+          You hold definitive sovereignty over your personal profile. You may at any point exercise your statutory entitlements:
+        </p>
+<div class="space-y-space-xs">
+<div class="flex items-start gap-2 bg-surface-container-low p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">download</span>
+<div class="text-body-sm font-body-sm">
+<strong class="text-on-surface font-label-md block">Data Export:</strong> Request a complete JSON/CSV dossier of your past order transactions, addresses, and account logs.
+            </div>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">delete_forever</span>
+<div class="text-body-sm font-body-sm">
+<strong class="text-on-surface font-label-md block">Account &amp; Data Erasure:</strong> Purge your profile identifiers, saved delivery pins, and telephone records.
+            </div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm">
+          To initiate an export or total deletion, submit a ticket in our Help Centre or contact our data registry directly at <a class="text-primary font-semibold underline" href="mailto:privacy@swiftcart.ug">privacy@swiftcart.ug</a>. Requests are completed within 72 business hours.
+        </p>
+</div>
+</details>
+</div>
+<!-- Physical & Officer Contact Information -->
+<div class="px-margin mt-space-md mb-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">apartment</span>
+<h4 class="font-label-lg text-label-lg text-on-surface">Data Protection Officer &amp; Registry</h4>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm space-y-1">
+<p class="text-on-surface font-semibold">SwiftCart Uganda Logistics Technologies Ltd.</p>
+<p>Plot 14, Jinja Road, Kampala, Uganda</p>
+<p class="flex items-center gap-1.5 pt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+<a class="text-primary font-medium" href="mailto:privacy@swiftcart.ug">privacy@swiftcart.ug</a>
+</p>
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">support_agent</span>
+<span>In-App: Profile → Help Centre → Privacy Desk</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Acknowledge & Export Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md shadow-xl px-margin py-space-sm pb-safe">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<!-- Download PDF Action -->
+<button aria-label="Download Privacy Policy PDF" class="flex items-center justify-center gap-1.5 px-4 h-12 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-transform active:scale-[0.98]" id="downloadPdfBtn">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="hidden xs:inline">PDF</span>
+</button>
+<!-- Primary Acknowledge Button -->
+<button class="flex-1 h-12 flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-transform active:scale-[0.98]" id="acknowledgeBtn">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>I Understand &amp; Acknowledge</span>
+</button>
+</div>
+</div>
+<!-- Interactive Feedback Toast (Triggered via JS) -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 transform transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px] w-[90%] max-w-sm" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface p-space-sm rounded-xl shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]" id="toastIcon">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-inverse-on-surface" id="toastTitle">Acknowledged</span>
+<span class="font-body-sm text-body-sm text-surface-container-high truncate" id="toastDesc">Your privacy preferences are active.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const acknowledgeBtn = document.getElementById('acknowledgeBtn');
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastDesc = document.getElementById('toastDesc');
+    const toastIcon = document.getElementById('toastIcon');
+
+    let toastTimeout;
+
+    function showToast(title, message, iconName) {
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTitle.textContent = title;
+      toastDesc.textContent = message;
+      toastIcon.textContent = iconName;
+
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+      }, 2600);
+    }
+
+    if (acknowledgeBtn) {
+      acknowledgeBtn.addEventListener('click', () => {
+        showToast('Privacy Policy Acknowledged', 'Preferences saved for SwiftCart Uganda.', 'verified');
+        acknowledgeBtn.classList.remove('bg-primary-container');
+        acknowledgeBtn.classList.add('bg-tertiary');
+        const textSpan = acknowledgeBtn.querySelector('span:not(.material-symbols-outlined)');
+        if (textSpan) textSpan.textContent = 'Acknowledged';
+      });
+    }
+
+    if (downloadPdfBtn) {
+      downloadPdfBtn.addEventListener('click', () => {
+        showToast('Preparing Legal PDF', 'SwiftCart_Privacy_Policy_2024.pdf downloaded.', 'download');
+      });
+    }
+  })();
+</script></main></body></html>

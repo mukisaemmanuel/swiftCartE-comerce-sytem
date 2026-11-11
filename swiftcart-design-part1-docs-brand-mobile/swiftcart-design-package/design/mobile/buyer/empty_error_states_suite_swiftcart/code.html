@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#e4beb4", "surface-container": "#e6eeff", "on-primary-container": "#541200", "inverse-surface": "#233144", "secondary": "#565e74", "surface-container-high": "#dde9ff", "outline": "#907067", "error-container": "#ffdad6", "primary-fixed": "#ffdbd1", "on-secondary-container": "#5c647a", "primary-container": "#ff5722", "on-tertiary-fixed": "#002113", "surface-dim": "#ccdbf4", "tertiary": "#006c49", "on-secondary-fixed": "#131b2e", "on-primary-fixed": "#3b0900", "surface-tint": "#b02f00", "inverse-primary": "#ffb5a0", "background": "#f8f9ff", "on-secondary": "#ffffff", "on-surface": "#0d1c2f", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#4edea3", "on-tertiary": "#ffffff", "primary": "#b02f00", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "inverse-on-surface": "#ebf1ff", "secondary-fixed": "#dae2fd", "surface-container-low": "#eff4ff", "secondary-container": "#dae2fd", "on-error": "#ffffff", "on-tertiary-container": "#00311f", "tertiary-container": "#00a572", "surface-container-highest": "#d5e3fd", "on-primary": "#ffffff", "tertiary-fixed": "#6ffbbe", "surface-bright": "#f8f9ff", "surface-variant": "#d5e3fd", "on-primary-fixed-variant": "#862200", "on-background": "#0d1c2f", "on-error-container": "#93000a", "on-surface-variant": "#5b4039", "on-secondary-fixed-variant": "#3f465c", "primary-fixed-dim": "#ffb5a0", "surface-container-lowest": "#ffffff", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "space-xl": "2rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><img alt="swiftcart-logo-final.png" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Empty &amp; Error States</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface pb-safe"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Interactive State Selector Bar -->
+<section class="sticky top-16 z-40 -mx-margin px-margin py-space-sm bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar scroll-smooth">
+<button aria-selected="true" class="tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-primary-container text-on-primary shadow-sm" id="tab-btn-1" onclick="switchState(1)">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Empty Cart</span>
+</button>
+<button aria-selected="false" class="tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="tab-btn-2" onclick="switchState(2)">
+<span class="material-symbols-outlined text-[16px]">search_off</span>
+<span>No Results</span>
+</button>
+<button aria-selected="false" class="tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="tab-btn-3" onclick="switchState(3)">
+<span class="material-symbols-outlined text-[16px]">wifi_off</span>
+<span>Offline</span>
+</button>
+<button aria-selected="false" class="tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="tab-btn-4" onclick="switchState(4)">
+<span class="material-symbols-outlined text-[16px]">error_med</span>
+<span>Payment Failed</span>
+</button>
+<button aria-selected="false" class="tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="tab-btn-5" onclick="switchState(5)">
+<span class="material-symbols-outlined text-[16px]">explore_off</span>
+<span>404 Lost</span>
+</button>
+</div>
+</section>
+<!-- STATE 1: Empty Cart -->
+<section class="state-card flex flex-col w-full mt-space-md animate-fade-in" id="state-view-1">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<!-- Playful Decorative Ambient Ring -->
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-primary-fixed-dim/30 pointer-events-none blur-2xl"></div>
+<!-- Vector Shopping Cart Graphic -->
+<div class="relative w-28 h-28 my-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-fixed/50 rounded-full scale-100 animate-pulse"></div>
+<div class="relative w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center shadow-sm">
+<svg class="w-12 h-12 text-primary-container" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="9" cy="21" r="1"></circle>
+<circle cx="20" cy="21" r="1"></circle>
+<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+</svg>
+<div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-label-sm text-label-sm shadow-sm">
+            0
+          </div>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed/30 text-on-tertiary-fixed mb-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">local_mall</span>
+<span>SwiftCart Kampala</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Your Shopping Cart is Empty</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xs">
+        Looks like you haven't added any authentic gadgets or items yet. Browse verified Kampala merchants today.
+      </p>
+<button class="w-full mt-space-lg min-h-[48px] bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Start Shopping (Explore Deals)</span>
+</button>
+</div>
+<!-- Recommendations Carousel -->
+<div class="mt-space-lg flex flex-col w-full">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Popular items you might like</h3>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Fast Dispatch</span>
+</div>
+<div class="flex gap-space-sm overflow-x-auto no-scrollbar py-space-xs -mx-margin px-margin">
+<!-- Item 1 -->
+<div class="w-44 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="relative aspect-square w-full rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="SoundCore Space One active noise cancelling over-ear headphones on an urban minimalist stand with soft studio lighting and warm orange reflections, realistic commercial product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzDIhlKEbEPjtuizjreYBsUTmi46XPuI2Tyj_qlYgb6itcSUVhsxzyLAV5nqE5498SbyzrPJhhhZcbXsvLQtpw-MYZQScOdbc6VfeyIKgqkFbcZ6d4sUKbpiYw3nnbPZd4Ip7tgpOwAO3UuW2Y4YgW6uQXlosq3FrjFOoGjxGnJN8rAmggknb-ymmLFOiwpsZCvR3Kw8uNIKv8wH713pgzCeIJMFdLQ70rzrf7UhOg"/>
+<span class="absolute top-1.5 left-1.5 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">Official</span>
+</div>
+<div class="mt-space-xs flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">SoundCore Official</p>
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 leading-tight">SoundCore Space One ANC</h4>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-lg text-label-lg text-primary font-bold">UGX 380,000</span>
+</div>
+<button class="mt-2 w-full py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="w-44 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="relative aspect-square w-full rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Anker 65W GaN compact wall fast charger block with dual USB-C ports on a clean architectural pedestal with sleek modern hardware aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYlO-xyi2-EfajKTFTW9Ak7uG5Hahsr91H0UELdQHWloP61cdcfPjz80qikQJxx7uWEoCv9-PZIshRuu9krN6RS92E_-Na2VX4zTYTqWDM_Vkov61FjWfDliVhLZVnKkSmq33TJzrbqNAljVQJLcTaRYJ2xS5_jcGEyCJkBlboaQMlPiwBllVVjc0zl40YiFObaD6rSIiguHW6wPe6VXZNvgVZiflEg_aelQN_iKy"/>
+<span class="absolute top-1.5 left-1.5 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded">Verified</span>
+</div>
+<div class="mt-space-xs flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Anker Direct UG</p>
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 leading-tight">Anker Prime 65W GaN Fast Charger</h4>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-lg text-label-lg text-primary font-bold">UGX 165,000</span>
+</div>
+<button class="mt-2 w-full py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="w-44 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="relative aspect-square w-full rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Oraimo FreePods wireless earbuds inside matte charging case glowing with ambient emerald status LED indicator, high clarity consumer gadget photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOk-6Bd6qfNWlbewyYoO0Q_rSq7mhBOLibTcAlABKKVXS1odUpK7mlFyxiT3t5UiwiPivj2sSInAJ8LnBLzUkg1wK0SwGrIGd7iJCkN_Yty031Q-fCw-B2l3Hi_qpZY0Xwpb_e4CJ4vqAveERCPSEWHAGAFYDXE0UPdxRKSsegjoJaDqJDRHyM_PXWzOY2fool3fctr3TtdStUGJoCDLpFWNxfoGsWuA-hIhe0LWRu"/>
+<span class="absolute top-1.5 left-1.5 bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded">Hot Deal</span>
+</div>
+<div class="mt-space-xs flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Oraimo Kampala</p>
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 leading-tight">Oraimo FreePods Pro ANC</h4>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-lg text-label-lg text-primary font-bold">UGX 145,000</span>
+</div>
+<button class="mt-2 w-full py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STATE 2: No Search Results -->
+<section class="state-card hidden flex-col w-full mt-space-md" id="state-view-2">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Illustrative Search Glyphs -->
+<div class="relative w-28 h-28 my-space-sm flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[48px]">manage_search</span>
+</div>
+<div class="absolute bottom-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[18px]">close</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span>Query:</span>
+<span class="font-bold text-on-surface">“XYZ-Nonexistent”</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">No matches found</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xs">
+        Check your spelling, try broader keywords, or browse popular electronics categories in Kampala.
+      </p>
+<!-- Suggested Chips -->
+<div class="w-full mt-space-lg flex flex-col items-start">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-2 font-bold">Suggested Searches in Uganda</span>
+<div class="flex flex-wrap gap-2 w-full">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+            Wireless Earbuds
+          </button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">headphones</span>
+            SoundCore ANC
+          </button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+            Fast Charger
+          </button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">solar_power</span>
+            Solar Inverters
+          </button>
+</div>
+</div>
+<!-- Quick Category Nav -->
+<div class="mt-space-lg w-full bg-surface-container-low rounded-xl p-space-md text-left flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-[20px]">category</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Browse Catalog Directory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Over 12,000 listed verified tech products</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- STATE 3: Offline / No Internet -->
+<section class="state-card hidden flex-col w-full mt-space-md" id="state-view-3">
+<!-- Persistent Offline Notification Pill -->
+<div class="w-full bg-on-secondary-fixed text-on-secondary py-2.5 px-3.5 rounded-xl flex items-center justify-between shadow-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold">Offline Mode • Showing cached items</span>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-highest">Kampala Server</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center">
+<div class="relative w-28 h-28 my-space-sm flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-error-container/60 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-[44px]">wifi_off</span>
+</div>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">No Internet Connection</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xs">
+        You are currently offline. Check your MTN / Airtel data connection or local Wi-Fi router.
+      </p>
+<!-- Network Diagnostic Panel -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mt-space-md text-left flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sim_card</span>
+            MTN Uganda 5G/4G
+          </span>
+<span class="text-error font-semibold">No Signal</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sim_card_download</span>
+            Airtel Data Bundle
+          </span>
+<span class="text-secondary font-semibold">Disconnected</span>
+</div>
+</div>
+<button class="w-full mt-space-lg min-h-[48px] bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2" onclick="simulateRetry(this)">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-500">sync</span>
+<span>Retry Connection</span>
+</button>
+</div>
+</section>
+<!-- STATE 4: Payment Failed -->
+<section class="state-card hidden flex-col w-full mt-space-md" id="state-view-4">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Shield / Timeout Icon -->
+<div class="relative w-28 h-28 my-space-sm flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-[44px]">timer_off</span>
+</div>
+<div class="absolute top-1 right-1 w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container mb-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Prompt Expired</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Payment Authorization Timed Out</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xs">
+        Your MTN MoMo prompt was not confirmed in time. Don't worry, your order is saved and you will <strong class="text-on-surface font-semibold">NEVER</strong> be double-charged.
+      </p>
+<!-- Trust Assurance Box -->
+<div class="w-full mt-space-md p-space-sm rounded-xl bg-surface-container flex items-start gap-3 text-left">
+<span class="material-symbols-outlined text-tertiary text-[24px] shrink-0 mt-0.5">shield_with_heart</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface font-bold">SwiftCart SafeGuard Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0 UGX has been deducted from your Mobile Money wallet.</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full flex flex-col gap-space-xs mt-space-lg">
+<button class="w-full min-h-[48px] bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">send_to_mobile</span>
+<span>Retry MoMo Prompt</span>
+</button>
+<button class="w-full min-h-[44px] bg-transparent text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>Change Payment Method (Airtel / Visa)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- STATE 5: 404 Page Not Found -->
+<section class="state-card hidden flex-col w-full mt-space-md" id="state-view-5">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Compass / 404 Illustration -->
+<div class="relative w-28 h-28 my-space-sm flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[46px]">explore_off</span>
+</div>
+<div class="absolute bottom-0 right-1 px-2 py-0.5 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm font-extrabold shadow-sm">
+          404
+        </div>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant mb-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">wrong_location</span>
+<span>Dead End</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">This page went off the Kampala map</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xs">
+        The product or merchant store link you followed may have moved, expired, or been unlisted by the vendor.
+      </p>
+<!-- Direct Assistance Options -->
+<div class="w-full grid grid-cols-2 gap-space-xs mt-space-md text-left">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">help_center</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Help Center</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24/7 WhatsApp UG</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="material-symbols-outlined text-tertiary text-[20px]">local_shipping</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Order Tracking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Check parcel route</span>
+</div>
+</div>
+<button class="w-full mt-space-lg min-h-[48px] bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2" onclick="switchState(1)">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span>Back to Home</span>
+</button>
+</div>
+</section>
+<!-- Interactive State Controller Script -->
+<script>
+    function switchState(index) {
+      // Toggle Tab Buttons Appearance
+      for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById('tab-btn-' + i);
+        const card = document.getElementById('state-view-' + i);
+        if (i === index) {
+          btn.className = 'tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-primary-container text-on-primary shadow-sm';
+          btn.setAttribute('aria-selected', 'true');
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+        } else {
+          btn.className = 'tab-trigger flex items-center gap-1.5 px-3 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-high text-on-surface-variant hover:text-on-surface';
+          btn.setAttribute('aria-selected', 'false');
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      }
+    }
+
+    function simulateRetry(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      icon.classList.add('rotate-180');
+      btn.disabled = true;
+      const originalText = btn.lastElementChild.textContent;
+      btn.lastElementChild.textContent = 'Connecting to MTN network...';
+      setTimeout(() => {
+        icon.classList.remove('rotate-180');
+        btn.disabled = false;
+        btn.lastElementChild.textContent = originalText;
+      }, 1200);
+    }
+  </script>
+</div></main></body></html>

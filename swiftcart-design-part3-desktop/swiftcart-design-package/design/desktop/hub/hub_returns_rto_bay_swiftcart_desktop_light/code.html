@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-high": "#eee7e1",
+          "surface-bright": "#fff8f2",
+          "outline": "#907067",
+          "secondary": "#505b90",
+          "on-tertiary-fixed": "#002113",
+          "on-surface-variant": "#5c4039",
+          "primary-container": "#da3700",
+          "surface-container-highest": "#e8e1dc",
+          "on-secondary-fixed-variant": "#384377",
+          "secondary-fixed": "#dde1ff",
+          "inverse-primary": "#ffb5a1",
+          "surface": "#fff8f2",
+          "on-secondary-fixed": "#091649",
+          "primary-fixed-dim": "#ffb5a1",
+          "on-error-container": "#93000a",
+          "on-background": "#1e1b18",
+          "on-error": "#ffffff",
+          "tertiary": "#006947",
+          "on-primary": "#ffffff",
+          "background": "#fff8f2",
+          "on-tertiary": "#ffffff",
+          "tertiary-fixed": "#6ffbbe",
+          "tertiary-container": "#00855b",
+          "primary-fixed": "#ffdbd1",
+          "secondary-fixed-dim": "#b8c3ff",
+          "on-surface": "#1e1b18",
+          "on-primary-container": "#fffcff",
+          "inverse-surface": "#33302c",
+          "secondary-container": "#b8c3ff",
+          "surface-container-low": "#f9f2ec",
+          "surface-container-lowest": "#ffffff",
+          "surface-variant": "#e8e1dc",
+          "on-secondary-container": "#444f83",
+          "on-tertiary-fixed-variant": "#005236",
+          "primary": "#ae2a00",
+          "outline-variant": "#e5beb4",
+          "on-primary-fixed-variant": "#881f00",
+          "error": "#ba1a1a",
+          "surface-container": "#f3ede7",
+          "surface-tint": "#b22b00",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#4edea3",
+          "inverse-on-surface": "#f6f0ea",
+          "error-container": "#ffdad6",
+          "surface-dim": "#dfd9d3",
+          "on-tertiary-container": "#f4fff6",
+          "on-primary-fixed": "#3c0800",
+          "emerald-escrow": "#00855b",
+          "mtn-yellow": "#D97706",
+          "amber-warning": "#D97706"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1rem",
+          "space-md": "0.75rem",
+          "space-xs": "0.25rem",
+          "margin": "1rem",
+          "space-xl": "1.5rem",
+          "gutter": "0.75rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "price-display": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "currency-code": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "code-display": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "700" }],
+          "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+          "price-display": ["22px", { "lineHeight": "28px", "fontWeight": "800" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+          "currency-code": ["12px", { "lineHeight": "14px", "fontWeight": "700" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+          "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+          "code-display": ["18px", { "lineHeight": "22px", "fontWeight": "800" }]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-surface-container-highest z-50 flex flex-col justify-between py-space-lg shadow-sm"><div class="flex flex-col gap-space-lg"><div class="px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVpBWIs5XQ28bVfOoWV3C7pdQ80vQZpy6zIAHeikBdjWhpkpINET7f_7jTqi9yGUGQU7hEikd_KrJ8jOB5WTRyPGCJK0jRZfRk8tAZCig7uiDyQB5vkMC8Foerea2SW4duJ91S2CBaA3I1hGkdqcDWEiDHMWibEcL91CBSqwcLyep42BbI5j6KR3UiSgJeMw2bttPzBUS60Jl3yLrd6vx44QwltEgeQsMed6ZVlt_CaeJirRyNhYreCg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-extrabold">SwiftCart</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Hub Ops Portal</span></div></div></div><div class="mx-space-lg px-space-md py-space-sm rounded-lg bg-surface-container-low border border-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-pulse"></span><span class="font-label-md text-label-md text-on-surface font-semibold">Station 04 Online</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold">UG-KLA</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="station-overview" href="#"><span class="material-symbols-outlined text-[20px] text-outline">hub</span>Station Overview</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inbound-intake-&amp;-scan" href="#"><span class="material-symbols-outlined text-[20px] text-outline">barcode_scanner</span>Inbound Intake &amp; Scan</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="rider-dispatch-&amp;-staging" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>Rider Dispatch &amp; Staging</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="storage-&amp;-aging-matrix" href="#"><span class="material-symbols-outlined text-[20px] text-outline">shelves</span>Storage &amp; Aging Matrix</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="line-haul-manifests" href="#"><span class="material-symbols-outlined text-[20px] text-outline">local_shipping</span>Line-Haul Manifests</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="customer-pickup" href="#"><span class="material-symbols-outlined text-[20px] text-outline">countertops</span>Customer Pickup</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="damaged-&amp;-quarantine-bay" href="#"><span class="material-symbols-outlined text-[20px] text-outline">gavel</span>Damaged &amp; Quarantine Bay</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-&amp;-rto" href="#"><span class="material-symbols-outlined text-[20px] text-outline">replay</span>Returns &amp; RTO</a></nav></div><div class="px-space-lg flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Ledger Custody</span><span class="material-symbols-outlined text-emerald-escrow text-[16px]">verified_user</span></div><span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 48,250,000</span><span class="font-body-sm text-body-sm text-emerald-escrow font-semibold">Escrow Locked Active</span></div><div class="text-center"><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 SwiftCart Uganda Logistics</span></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl z-40 border-b border-surface-container-highest shadow-sm"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVpBWIs5XQ28bVfOoWV3C7pdQ80vQZpy6zIAHeikBdjWhpkpINET7f_7jTqi9yGUGQU7hEikd_KrJ8jOB5WTRyPGCJK0jRZfRk8tAZCig7uiDyQB5vkMC8Foerea2SW4duJ91S2CBaA3I1hGkdqcDWEiDHMWibEcL91CBSqwcLyep42BbI5j6KR3UiSgJeMw2bttPzBUS60Jl3yLrd6vx44QwltEgeQsMed6ZVlt_CaeJirRyNhYreCg"/><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low border border-surface-container-highest"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-md text-label-md text-on-surface font-bold">Kampala Central Hub #04 - William St</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low border border-surface-container-highest"><span class="material-symbols-outlined text-emerald-escrow text-[16px]">conveyor_belt</span><span class="font-label-sm text-label-sm text-on-surface">Belt #2 Speed:</span><span class="font-label-sm text-label-sm text-emerald-escrow font-bold">1.4 m/s (Nominal)</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low border border-surface-container-highest"><span class="material-symbols-outlined text-emerald-escrow text-[16px]">qr_code_scanner</span><span class="font-label-sm text-label-sm text-on-surface">Honeywell Xenon 1950g</span><span class="font-label-sm text-label-sm text-emerald-escrow font-bold">Ready</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low border border-surface-container-highest"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span><span class="font-code-display text-label-md text-on-surface font-bold tracking-wider">14:38:09 EAT</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold">Brian Mukasa</span><span class="font-label-sm text-label-sm text-primary font-bold">Hub Lead Supervisor</span></div><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Sub-Header: Node Status Bar -->
+<div class="w-full bg-surface-container-low px-space-xl py-space-sm flex flex-wrap items-center justify-between gap-y-2 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5 font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container -ml-3.5"></span>
+<span>Depot Intranet Mesh</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm">William St Gateway</span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">dns</span>
+<span>Arbitration Oracle Node <strong class="text-on-surface">UG-ARB-04</strong></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[15px]">sync_saved_locally</span>
+<span class="font-bold">Automatic Escrow Restoral Engine Active</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wide">Sync Latency: 14ms</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Encrypted Channel</span>
+</div>
+</div>
+<!-- Main Viewport Workspace -->
+<div class="p-space-xl flex flex-col gap-space-xl max-w-[1680px] mx-auto w-full">
+<!-- Page Header & Action Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm tracking-wider uppercase font-bold">RTO Bay Operational</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+            Line Departure 17:30 EAT Truck #02
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cluster Code: <strong class="text-on-surface">UG-KLA-RTO-C2</strong></span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          Returns &amp; Return-To-Origin (RTO) Processing Bay
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Station Bay R-01 • William Street Logistics Depot • Reverse Manifest Consolidation &amp; Merchant Restoral
+        </p>
+</div>
+<!-- Quick Action Group -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">history</span>
+<span>Audit Log</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">rule</span>
+<span>Dispute Desk (9)</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-md hover:opacity-95 transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+<span>Create New Return Bag</span>
+</button>
+</div>
+</div>
+<!-- 4 Top KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-3 -top-3 w-16 h-16 rounded-full bg-primary-fixed/25 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Active RTO Inventory</span>
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_return</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">38</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Parcels</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">arrow_upward</span> +6 vs AM intake
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Bay Density 42%</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-3 -top-3 w-16 h-16 rounded-full bg-secondary-fixed/25 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Consolidated for Dispatch</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">inventory_2</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">24</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Parcels</span>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>2 Master Sacks Packed</span>
+<span class="font-bold text-secondary">60% target</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-3 -top-3 w-16 h-16 rounded-full bg-tertiary-fixed/25 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Escrow Reversal Rate</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-headline-lg text-headline-lg text-tertiary-container font-extrabold tracking-tight">94.2%</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Success</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">lock_reset</span> Auto-reconciled
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">UGX 14.8M secured today</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-3 -top-3 w-16 h-16 rounded-full bg-surface-container-highest pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Avg Restoral Turnaround</span>
+<span class="material-symbols-outlined text-outline text-[20px]">timer</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">44.1</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Hours</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">check_circle</span> Under Target
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">SLA &lt;48 hrs</span>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Workflow Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / MAIN COLUMN (Reverse Logistics Manifest Table & Root Cause Breakdown) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Filter Tabs & Scanner Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold shadow-sm whitespace-nowrap transition-all" type="button">
+              All Returns (38)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold whitespace-nowrap transition-all" type="button">
+              Customer Refused / Expired (18)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold whitespace-nowrap transition-all" type="button">
+              Arbitration Ruled (9)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold whitespace-nowrap transition-all" type="button">
+              Damaged / Tampered (11)
+            </button>
+</div>
+<!-- Barcode Search Input -->
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">barcode_scanner</span>
+<input class="w-full pl-9 pr-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/60 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Scan SKU / Waybill..." type="text"/>
+</div>
+</div>
+<!-- Reverse Logistics Manifest Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low/70 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Reverse Logistics Inward Manifest</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated against merchant consignment serial numbers &amp; custody signatures</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">Live Buffer</span>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-md px-space-md" scope="col">Return ID</th>
+<th class="py-space-md px-space-md" scope="col">Original Order</th>
+<th class="py-space-md px-space-md" scope="col">Merchant Destination</th>
+<th class="py-space-md px-space-md" scope="col">Return Reason</th>
+<th class="py-space-md px-space-md" scope="col">Holding Period</th>
+<th class="py-space-md px-space-md" scope="col">Condition Grade</th>
+<th class="py-space-md px-space-md text-right" scope="col">Action</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">qr_code_2</span>
+<span class="font-label-md text-label-md text-primary">#RET-UG-4019</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">SC-97108</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">UGX 185,000</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Elite Mobile Acc.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wandegeya Commercial Plz</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Buyer Remorse</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> 74 hrs
+                      </span>
+<span class="font-label-sm text-label-sm text-error/80 uppercase font-semibold">SLA EXCEEDED</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Grade A (Sealed)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">qr_code_2</span>
+<span class="font-label-md text-label-md text-primary">#RET-UG-4022</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">SC-96540</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">UGX 890,000</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Kampala Phone Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nakasero Complex Fl 2</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Delivery Failed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Bodas unreachable</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">52 hrs</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Pending Sack</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Grade A (Box)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">qr_code_2</span>
+<span class="font-label-md text-label-md text-primary">#RET-UG-3998</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">SC-95812</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">UGX 340,000</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Kikuubo Wholesalers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Downtown Block D</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Arbitration Ruled</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wrong Color Shipped</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">28 hrs</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Within Window</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm font-bold">Grade B (Opened)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">qr_code_2</span>
+<span class="font-label-md text-label-md text-primary">#RET-UG-3984</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">SC-95104</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">UGX 120,000</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Victoria Beauty</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bugolobi Village Mall</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Tamper Claim</span>
+<span class="font-label-sm text-label-sm text-error">Seal Compromised</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">18 hrs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Dispute Hold</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Grade C (Defect)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">drive_file_move</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination/Export -->
+<div class="p-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Displaying 4 of 38 returns in active buffer</span>
+<span class="text-outline-variant">•</span>
+<button class="text-primary hover:underline font-bold flex items-center gap-1 font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span> Export Intake Manifest (.CSV)
+              </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-bold" type="button">
+                Barcode Rescan
+              </button>
+</div>
+</div>
+</div>
+<!-- Bottom Dual Analytics Panes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Root Cause Breakdown -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Returns Root Cause</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Past 7 Days</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<!-- Visual Donut (Inline SVG) -->
+<div class="relative w-28 h-28 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle -->
+<circle class="text-surface-container-high" cx="18" cy="18" fill="none" r="14" stroke="currentColor" stroke-width="4.5"></circle>
+<!-- Segment 1: Refused 47% -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#da3700" stroke-dasharray="41.3 88" stroke-dashoffset="0" stroke-width="4.5"></circle>
+<!-- Segment 2: Undeliverable 29% -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#505b90" stroke-dasharray="25.5 88" stroke-dashoffset="-41.3" stroke-width="4.5"></circle>
+<!-- Segment 3: Arbitrated 24% -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#00855b" stroke-dasharray="21.1 88" stroke-dashoffset="-66.8" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-none">38</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px]">Cases</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<span class="truncate text-on-surface">Customer Refused</span>
+</div>
+<span class="font-bold text-on-surface">47%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<span class="truncate text-on-surface">Undeliverable/Address</span>
+</div>
+<span class="font-bold text-on-surface">29%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0"></span>
+<span class="truncate text-on-surface">Arbitration Ruled</span>
+</div>
+<span class="font-bold text-on-surface">24%</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span>Buyer remorse claims trigger automatic return slip verification.</span>
+</div>
+</div>
+<!-- Merchant Geography Heat-Map Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Restoral Geography</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Next-hop merchant return route</p>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Rider Assigned</span>
+</div>
+<!-- Route Map Visual -->
+<div class="w-full h-28 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-space-sm" data-location="Kampala Central Market to Nakasero to Bugolobi Uganda" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5giNWRP3lnFcryebiEs3QVYEqmX6IpR_AO_lzqiHyArlMu2c5p6svyXs-HWqaArD9wtGOVU6nz0loy2HrXjntzmdIB2NgPuez50x_xR_ZS-8h1JwMfmlN68RM8CkCuia6CFdwJtV2QX2jTpp3horUL0NUSg3tCm6PJGPgbhPZrSLtp9FoN6fCvEK2AUZMY3MzPHCPW935fYmY6Nj5JjKITmoRcEMj2DI49ofPdhOb')">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-space-sm py-1 rounded text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Active Loop: Central - Nakasero - Bugolobi</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface font-body-sm text-body-sm pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>Loop Distance: <strong class="text-on-surface">14.2 km</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">3 Merchants on this run</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (Master Return Sack Assembly Console) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Master Return Sack Assembly Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col gap-space-lg relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-extrabold uppercase">Active Master Sack Assembly</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">SEALING ACTIVE</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Master Return Bag #RTO-08</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Nakasero &amp; Downtown Merchant Loop • Cluster #KLA-NORTH-2</p>
+</div>
+<!-- Courier Profile Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-sm" data-alt="Close up portrait photograph of Denis Otim, a professional Ugandan delivery courier wearing a safe orange riding jacket and helmet, daylight urban Kampala background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJqoktukvNY4Ve8C8FXbwREJ-N3YlxpB5-4QKSha9yTG2Yf2qicXK5iyCznph89325Eejg1PV1woyzeeufHf-kNfK4BbZmLJgEG2hUvZSvS_aYnkLTk1rwFb9rx_kei6yA2JUYHhvK9Rgqu-Pdv-dKnSe4bPH-ZgaL1BXf25R4qMG8FCaYVZ1c-VZw7A2JwqB-AiGVGxGjS5PmfvqhVpk5OkSEGTDg85C3ibLu6h7g"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Denis Otim</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">SafeBoda Reverse • Reverse Courier #RC-9042</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Plate: UER 310B • PSV Authorized</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">Bay Gate 04</span>
+<span class="font-body-sm text-body-sm text-tertiary font-bold mt-1">4.92 ★ (810 runs)</span>
+</div>
+</div>
+<!-- Capacity & Restoral Metrics -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Capacity</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">12 / 15</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Parcels</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden mt-1">
+<div class="h-full bg-primary-container rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Escrow Restoral</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">UGX 2.84M</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">To be credited to 5 shops</span>
+</div>
+</div>
+<!-- Wire Seal Identification Input / Tag -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="uppercase font-bold">Tamper Wire Seal Barcode</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Digital Signed
+              </span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-2 rounded-lg shadow-inner">
+<span class="font-code-display text-label-lg text-label-lg font-extrabold tracking-widest text-on-surface">#SEAL-RTO-88192</span>
+<button class="text-primary hover:text-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<!-- Restoral Handover Protocol (Interactive Checklist) -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">
+              Restoral Handover Protocol
+            </span>
+<div class="flex flex-col gap-2">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox"/>
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">All 12 parcel waybills cross-checked</span>
+<span class="text-on-surface-variant text-[11px]">Validated against Reverse Manifest #MAN-KLA-9921</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox"/>
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Merchant return slips inserted</span>
+<span class="text-on-surface-variant text-[11px]">Physical printed slips placed in weatherproof exterior pouch</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox"/>
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Courier Denis Otim ID &amp; PSV verified</span>
+<span class="text-on-surface-variant text-[11px]">Biometric match confirmed on SwiftCart Rider App</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Manifest Mini Items -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold uppercase">Manifest Contents (Sack #08)</span>
+<span class="text-primary font-bold">4 of 12 Merchants</span>
+</div>
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low max-h-36 overflow-y-auto">
+<div class="flex items-center justify-between font-body-sm text-body-sm p-1 rounded bg-surface-container-lowest">
+<span class="font-bold text-on-surface truncate">Elite Mobile Acc.</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm shrink-0">4 SKUs • Wandegeya</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm p-1 rounded bg-surface-container-lowest">
+<span class="font-bold text-on-surface truncate">Kla Phone Hub</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm shrink-0">3 SKUs • Nakasero</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm p-1 rounded bg-surface-container-lowest">
+<span class="font-bold text-on-surface truncate">Simba Telecom Outlet</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm shrink-0">5 SKUs • Luwum St</span>
+</div>
+</div>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+<span>Seal Bag &amp; Dispatch Return Courier</span>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-bold flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Waybill (A4)</span>
+</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-bold flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Transfer Selected</span>
+</button>
+</div>
+<!-- SafeBoda Reassurance Footer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0">security</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-snug">
+<strong>SafeBoda Reverse Custody Rule:</strong> Merchant OTP required on delivery before escrow reversal clears to merchant MTN/Airtel wallet.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

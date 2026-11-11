@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#e5beb4", "container-dark-high": "#1E293B", "action-gradient-start": "#FF8A1F", "on-error": "#690005", "background": "#0d1225", "on-error-container": "#ffdad6", "tertiary": "#4edea3", "on-secondary-fixed-variant": "#384377", "secondary-fixed": "#dde1ff", "surface-container": "#1a1f31", "action-gradient-end": "#DA3700", "primary-container": "#da3700", "secondary-fixed-dim": "#b8c3ff", "outline-variant": "#5c4039", "surface-cream": "#FFF8F2", "error-container": "#93000a", "error": "#ffb4ab", "on-primary": "#611300", "on-secondary": "#212d5f", "on-primary-container": "#fffcff", "secondary-container": "#384377", "on-tertiary-fixed-variant": "#005236", "primary-fixed": "#ffdbd1", "on-secondary-container": "#a7b2ed", "airtel-red": "#ED1C24", "surface-container-high": "#24293c", "surface-container-lowest": "#080d1f", "amber-warning": "#F59E0B", "outline": "#ac8980", "surface-tint": "#ffb5a1", "surface": "#0d1225", "on-primary-fixed-variant": "#881f00", "mtn-yellow": "#FFCC00", "on-tertiary": "#003824", "on-primary-fixed": "#3c0800", "container-dark-low": "#0F172A", "surface-container-highest": "#2f3448", "surface-dark": "#080D1F", "tertiary-container": "#00855b", "secondary": "#b8c3ff", "on-tertiary-container": "#f4fff6", "emerald-escrow": "#10B981", "on-tertiary-fixed": "#002113", "on-background": "#dde1fb", "surface-bright": "#34384c", "surface-container-low": "#161b2d", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed": "#091649", "inverse-primary": "#b22b00", "inverse-surface": "#dde1fb", "danger-penalty": "#EF4444", "on-surface": "#dde1fb", "tertiary-fixed-dim": "#4edea3", "primary-fixed-dim": "#ffb5a1", "primary": "#ffb5a1", "surface-variant": "#2f3448", "surface-dim": "#0d1225", "inverse-on-surface": "#2b3043" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "margin-desktop": "2rem", "space-xl": "1.5rem", "space-lg": "1rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "code-display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "code-display": ["20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "price-display": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-28 w-full px-margin-desktop flex flex-col justify-between pt-space-sm pb-0"><div class="flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SwiftCart Central Command</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-0.5">Tablet Operational Deck</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span class="font-label-sm text-label-sm text-emerald-escrow">Super Admin • Enclave Verified</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg"><div class="flex flex-col items-start"><span class="font-label-sm text-label-sm text-on-surface-variant">BoU Escrow Reserve</span><span class="font-label-md text-label-md text-emerald-escrow">UGX 198.4M</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex flex-col items-start"><span class="font-label-sm text-label-sm text-on-surface-variant">Active Nodes</span><span class="font-label-md text-label-md text-on-surface">142</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Theme toggle" class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="relative"><button aria-label="Notifications" class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[9px] flex items-center justify-center font-bold">4</span></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">Officer Namubiru</span><span class="font-label-sm text-label-sm text-primary">Superadmin Node</span></div></div></div></div></div><nav class="flex items-center gap-space-xs overflow-x-auto no-scrollbar" data-active-classes="text-on-surface border-b-2 border-primary-container bg-surface-container-high font-label-md"><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg" data-path="command-overview" href="#">Command Overview</a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg flex items-center gap-1.5" data-path="kyc-applications" href="#">KYC Applications <span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px]">12</span></a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg" data-path="sellers-directory" href="#">Sellers Directory</a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg flex items-center gap-1.5" data-path="escrow-and-disputes" href="#">Escrow &amp; Disputes <span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px]">5</span></a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg" data-path="orders-oversight" href="#">Orders Oversight</a><a aria-current="page" class="px-space-md py-2 transition-colors whitespace-nowrap rounded-t-lg text-on-surface border-b-2 border-primary-container bg-surface-container-high font-label-md" data-path="payout-queue" href="#">Payout Queue</a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg" data-path="users-and-roles" href="#">Users &amp; Roles</a><a class="px-space-md py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap rounded-t-lg" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="h-7 bg-surface-container-lowest px-margin-desktop flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-sm truncate"><span class="material-symbols-outlined text-emerald-escrow text-[14px]">verified_user</span><span class="truncate">BoU NPS Reg. 2020 §18 Escrow Custody Active • Tier-1 Trust Ledger</span></div><div class="flex items-center gap-space-xs shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span><span class="text-tertiary font-label-sm text-label-sm">Cryptographic Audit Enclave: Active</span></div></div></header><main class="w-full pt-35 bg-surface min-h-[calc(100vh-4rem)]"><div class="w-full px-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Operational Banner / Connectivity & Sweep Counter -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm bg-surface-container-low px-space-lg py-space-sm rounded-xl mb-space-lg shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-ping"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Automated Settlement Cycle</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-[10px]">T+0 Daily Protocol</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Next Scheduled Batch Sweep at <span class="text-primary-container font-headline-sm">18:00 EAT</span> (in 02h 44m 12s)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-emerald-escrow text-[16px]">account_balance</span>
+<span class="font-label-sm text-label-sm">Stanbic Node: Synchronized</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">format_image_left</span>
+<span class="font-label-sm text-label-sm">Dual Auth Active</span>
+</div>
+</div>
+</div>
+<!-- Top Stats Grid (4 cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-primary-container/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scheduled 18:00 EAT Sweep</span>
+<span class="material-symbols-outlined text-primary text-[20px]">schedule_send</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-display text-price-display text-on-surface">UGX 42,180,000</span>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs bg-surface-container/50 px-space-xs rounded">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Queue Depth</span>
+<span class="font-label-md text-label-md text-primary">48 verified merchants</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Telecom Float Liquidity</span>
+<span class="material-symbols-outlined text-emerald-escrow text-[20px]">signal_cellular_alt</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-mtn-yellow"></span>
+<span class="font-label-sm text-label-sm text-on-surface">MTN MoMo Float</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">UGX 85.4M <span class="text-tertiary font-label-sm text-[10px] ml-0.5">● Nominal</span></span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-mtn-yellow h-full rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-airtel-red"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Airtel Money</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">UGX 42.1M <span class="text-tertiary font-label-sm text-[10px] ml-0.5">● Nominal</span></span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow In Custody</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">lock</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-display text-price-display text-emerald-escrow">UGX 198,420,000</span>
+</div>
+<div class="flex items-center gap-1 mt-space-sm pt-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-emerald-escrow text-[14px]">account_balance_wallet</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Stanbic BoU Statutory Trustee #90302</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Automated Clearing Ratio</span>
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">bolt</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface">99.4%</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm">Instant Disburse</span>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs bg-error-container/20 px-space-xs rounded">
+<span class="font-label-sm text-label-sm text-error">Flagged Holds</span>
+<span class="font-label-md text-label-md text-error font-bold">3 Dockets (UGX 8.45M)</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Financial Operations Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (60% equivalent -> 7 cols on 12-col grid) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Stream Header & Filters -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">payments</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">MoMo Settlement Stream</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time mobile money settlement orchestration queue</p>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+            Node API: 220 TPS
+          </span>
+</div>
+<!-- Search & Tokenized Filter Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-high text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-9 pr-3 py-2 rounded-lg outline-none focus:bg-surface-container-highest transition-all" placeholder="Search Merchant name, TIN (10-digit), or REF-ID..." type="text"/>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md whitespace-nowrap">All Batches</button>
+<button class="px-space-md py-1.5 rounded-lg bg-emerald-escrow/15 text-emerald-escrow font-label-md text-label-md whitespace-nowrap flex items-center gap-1">Ready <span class="px-1.5 py-0.2 rounded-full bg-emerald-escrow/20 text-[10px]">45</span></button>
+<button class="px-space-md py-1.5 rounded-lg bg-error-container/30 text-error font-label-md text-label-md whitespace-nowrap flex items-center gap-1">Hold <span class="px-1.5 py-0.2 rounded-full bg-error text-on-error font-label-sm text-[10px]">3</span></button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap">Done (120)</button>
+</div>
+</div>
+</div>
+<!-- Batch Cards List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Batch Card 1: READY FOR SWEEP -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">headphones</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda Official</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Tier-1
+                  </span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-mtn-yellow"></span>
+                    MTN MoMo: <span class="text-on-surface font-code-display text-[12px]">+256 772 ••• 456</span>
+</span>
+<span>•</span>
+<span>18 Orders Cleared</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">TIN: 1002938192</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-price-display text-price-display text-on-surface">UGX 6,240,000</span>
+<span class="px-space-sm py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold tracking-wide mt-1">READY FOR SWEEP</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-emerald-escrow text-[16px]">lock_open</span>
+<span>0% Hold • Automated Bank-grade Risk Score: <strong class="text-emerald-escrow">99.8/100</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors">Inspect Ledger</button>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">Fast-Disburse</button>
+</div>
+</div>
+</div>
+<!-- Batch Card 2: AUDIT HOLD TRIGGERED -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden bg-gradient-to-r from-error-container/10 via-surface-container-low to-surface-container-low">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[22px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Kikuubo Wholesale Store</span>
+<span class="px-space-xs py-0.5 rounded bg-error/15 text-error font-label-sm text-label-sm font-bold">
+                    FLAGGED
+                  </span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-airtel-red"></span>
+                    Airtel Money: <span class="text-on-surface font-code-display text-[12px]">+256 755 ••• 891</span>
+</span>
+<span>•</span>
+<span>24 Orders In Review</span>
+<span>•</span>
+<span class="text-error font-label-sm text-label-sm">TIN #10992381 (DUPLICATE)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-price-display text-price-display text-error">UGX 4,820,000</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold tracking-wide mt-1 animate-pulse">AUDIT HOLD TRIGGERED</span>
+</div>
+</div>
+<!-- Alert Reason Box -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-amber-warning text-[18px] shrink-0">gavel</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-error">Triggered:</strong> Duplicate TIN registration detected across merchant node #M-8812 &amp; #M-4421. Hub Tamper Seal Flagged on 3 parcels.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<button class="px-space-md py-1.5 rounded-lg bg-danger-penalty text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                Quarantine Payout
+              </button>
+</div>
+</div>
+</div>
+<!-- Batch Card 3: PENDING BIOMETRIC RE-CHECK -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-amber-warning/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-warning text-[22px]">fingerprint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Mukwano Mobile Traders</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Standard</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-mtn-yellow"></span>
+                    MTN MoMo: <span class="text-on-surface font-code-display text-[12px]">+256 788 ••• 029</span>
+</span>
+<span>•</span>
+<span>8 Orders</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">TIN: 1044910012</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-price-display text-price-display text-on-surface">UGX 3,150,000</span>
+<span class="px-space-sm py-0.5 rounded-full bg-amber-warning/15 text-amber-warning font-label-sm text-label-sm font-bold tracking-wide mt-1">PENDING BIOMETRIC</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-amber-warning text-[16px]">info</span>
+              NIRA Face Match confidence 64% (Threshold: 85%). Dispatch verification token dispatched.
+            </span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm">Request Push OTP</button>
+</div>
+</div>
+<!-- Batch Card 4: READY FOR SWEEP -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">eco</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Victoria Organic Foods</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> FMCG Agro
+                  </span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-airtel-red"></span>
+                    Airtel Money: <span class="text-on-surface font-code-display text-[12px]">+256 701 ••• 774</span>
+</span>
+<span>•</span>
+<span>12 Orders Cleared</span>
+<span>•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">TIN: 1088492041</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-price-display text-price-display text-on-surface">UGX 1,840,000</span>
+<span class="px-space-sm py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold tracking-wide mt-1">READY FOR SWEEP</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-emerald-escrow text-[16px]">verified_user</span>
+<span>Settlement Channel: Instant Airtel B2W • 0% Hold</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm">Inspect Ledger</button>
+</div>
+</div>
+</div>
+<!-- Batch Action Dock / Bottom Controller -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-xs">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="px-space-md py-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs w-full sm:w-auto transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Export BoU Settlement CSV
+          </button>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:scale-[1.01] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+          Authorize Manual Escrow Sweep (UGX 37,360,000)
+        </button>
+</div>
+</section>
+<!-- Right Column (40% equivalent -> 5 cols on 12-col grid) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Commission Matrix Container -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">percent</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category Commission Matrix</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Statutory Revenue Schedule</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" id="toggle-editor-btn">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+            + Edit Rates
+          </button>
+</div>
+<!-- Live Category Rates Table -->
+<div class="flex flex-col gap-space-xs">
+<!-- Category 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Consumer Electronics &amp; Audio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Effective since Jan 01, 2025</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary-container font-extrabold">8.0%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">tune</span>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Phones &amp; Tablets</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow">High velocity subsidy applied</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">6.5%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">tune</span>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">FMCG &amp; Groceries</span>
+<span class="font-label-sm text-label-sm text-tertiary">Essential goods statutory tier</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary font-extrabold">4.0%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">tune</span>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Fashion &amp; Apparel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standard vendor tier</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">12.0%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">tune</span>
+</div>
+</div>
+<!-- Category 5 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Computing &amp; Office</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enterprise peripherals</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">7.5%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">tune</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Docked 'Edit Category Commission Modal / Panel' -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container/30 -mx-space-md px-space-md -mt-space-md pt-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">price_change</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Stage Commission Adjustment</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">Statutory Ledger Staging</span>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault();">
+<!-- Select Category -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Select Product Category</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-md py-2.5 rounded-lg outline-none appearance-none cursor-pointer">
+<option selected="" value="electronics">Consumer Electronics &amp; Audio (Current: 8.0%)</option>
+<option value="phones">Phones &amp; Tablets (Current: 6.5%)</option>
+<option value="fmcg">FMCG &amp; Groceries (Current: 4.0%)</option>
+<option value="fashion">Fashion &amp; Apparel (Current: 12.0%)</option>
+<option value="computing">Computing &amp; Office (Current: 7.5%)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Rate Delta Comparison Widget -->
+<div class="grid grid-cols-2 gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Current Rate</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface">8.0%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">lock</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Proposed Rate</span>
+<div class="flex items-center gap-1 mt-0.5">
+<input class="w-24 bg-surface-container-highest text-tertiary font-headline-md text-headline-md rounded px-2 py-0.5 outline-none font-bold" type="text" value="7.5%"/>
+<span class="text-tertiary font-label-sm text-[11px] font-bold">-0.5%</span>
+</div>
+</div>
+</div>
+<!-- Effective Date Picker with 30-day requirement callout -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Effective Date (UG Code §14)</label>
+<span class="text-amber-warning font-label-sm text-[10px] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 30-Day Mandatory Notice
+              </span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-md py-2.5 rounded-lg outline-none cursor-pointer" type="date" value="2025-03-01"/>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Uganda E-Commerce Code requires minimum 30 calendar days before fee downward or upward adjustment executes.</p>
+</div>
+<!-- Regulatory Justification -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Executive Justification</label>
+<textarea class="w-full bg-surface-container-high text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm p-space-sm rounded-lg outline-none resize-none" rows="2">Quarterly volume rebate for Tier-1 Pioneer Mall merchants with high fulfillment SLA (&gt;98.5%).</textarea>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full py-3 px-space-md rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-[0_4px_18px_rgba(218,55,0,0.35)] active:scale-[0.98] transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+            Stage Rate Change &amp; Publish Notice
+          </button>
+</form>
+</div>
+<!-- Bank of Uganda Statutory Regulatory Footnote -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-emerald-escrow text-[22px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">BoU Regulatory Compliance Certification</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            All platform commission deductions and escrow disbursements strictly conform to the <strong>Bank of Uganda National Payment Systems (NPS) Act 2020 §24</strong>. Trust ledger reconciliations are reported every 24 hours to the Central Bank NPS Supervisor.
+          </p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for filter chips and responsive preview
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (!this.classList.contains('active-pill')) {
+        // Subtle haptic response simulation
+        this.classList.add('opacity-90');
+        setTimeout(() => this.classList.remove('opacity-90'), 150);
+      }
+    });
+  });
+</script></div></main><footer class="w-full bg-surface-container-low py-space-md mt-auto shadow-[0_-4px_16px_rgba(0,0,0,0.3)]"><div class="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 SwiftCart Uganda Ltd • Bank of Uganda Regulated National Payment Operator</span><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span>Latency: 28ms</span><span>Enclave Node: EBB-DC-04</span><span>Build v4.18.2-prod</span></div></div></footer></body></html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#384377", "surface-container-highest": "#2f3448", "on-error": "#690005", "primary-container": "#da3700", "secondary-fixed": "#dde1ff", "outline": "#ac8980", "container-dark-low": "#0F172A", "surface-variant": "#2f3448", "primary-fixed-dim": "#ffb5a1", "on-surface-variant": "#e5beb4", "action-gradient-start": "#FF8A1F", "mtn-yellow": "#FFCC00", "airtel-red": "#ED1C24", "surface-container-lowest": "#080d1f", "tertiary": "#4edea3", "on-error-container": "#ffdad6", "action-gradient-end": "#DA3700", "on-primary-fixed-variant": "#881f00", "on-secondary": "#212d5f", "on-primary": "#611300", "on-tertiary": "#003824", "primary": "#ffb5a1", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "secondary-container": "#384377", "surface-cream": "#FFF8F2", "error": "#ffb4ab", "surface-container-high": "#24293c", "surface-tint": "#ffb5a1", "on-secondary-container": "#a7b2ed", "on-background": "#dde1fb", "amber-warning": "#F59E0B", "outline-variant": "#5c4039", "inverse-primary": "#b22b00", "surface-dim": "#0d1225", "emerald-escrow": "#10B981", "on-tertiary-container": "#f4fff6", "inverse-on-surface": "#2b3043", "danger-penalty": "#EF4444", "on-secondary-fixed": "#091649", "secondary": "#b8c3ff", "tertiary-fixed": "#6ffbbe", "on-surface": "#dde1fb", "surface-dark": "#080D1F", "primary-fixed": "#ffdbd1", "on-primary-fixed": "#3c0800", "secondary-fixed-dim": "#b8c3ff", "surface": "#0d1225", "tertiary-fixed-dim": "#4edea3", "container-dark-high": "#1E293B", "surface-container": "#1a1f31", "surface-container-low": "#161b2d", "inverse-surface": "#dde1fb", "surface-bright": "#34384c", "error-container": "#93000a", "on-primary-container": "#fffcff", "tertiary-container": "#00855b", "background": "#0d1225" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "0.75rem", "space-lg": "1rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem" }, "fontFamily": { "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "price-display": [ "Plus Jakarta Sans" ], "code-display": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "fontWeight": "800" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "price-display": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "code-display": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" } ], "label-lg": [ "15px", { "lineHeight": "20px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface-dark font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-low/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrD7jiIPIlPo_glEdgpMhdpYVhzk_A9gqb2FaALFIiwW52ZIgMsy5m5JRhb-AWfsrdiYlpEQHuvMzGtnSEneYgWwOYmXxY9KR3tDXMhrE3Onl2N0KHVR7z0LgNV-HDR7b3LHByj6rGoNR1Hpmcape9OS1wiR4R6QKwT3P-q4jWUO6QbMvilI5CJHKQKrujLoM2FXLsRIxU0mFTfIa6X1_q4LE68Qprxe5pZNeGPeVETedjYXkUD8PpP0NQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SwiftCart Uganda</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dispatch &amp; Sim Ops</span></div></div><div class="h-6 w-px bg-surface-container-highest mx-space-xs"></div><div class="flex items-center gap-space-sm bg-container-dark-low px-space-md py-space-xs rounded-lg shadow-inner"><span class="material-symbols-outlined text-action-gradient-start text-[18px]">hub</span><span class="font-label-md text-label-md text-on-surface font-semibold">Kampala Central Hub #04</span><span class="text-on-surface-variant text-[11px]">(William St Corridor)</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs bg-container-dark-high/60 px-space-md py-space-xs rounded-lg"><span class="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary-fixed">Corridor 04: Active (98.4% On-Time)</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center bg-container-dark-low rounded-lg p-space-xs gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[16px] text-action-gradient-start">phone_iphone</span><span class="font-label-sm text-label-sm">Tecno Camon 20</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[16px] text-amber-warning">signal_cellular_alt_2_bar</span><span class="font-label-sm text-label-sm">Edge / 2.5G</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[16px] text-tertiary">battery_horiz_075</span><span class="font-label-sm text-label-sm">78%</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span class="font-label-sm text-label-sm">GPS: Mock Latency 140ms</span></div></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right"><span class="font-code-display text-[13px] text-on-surface font-mono">14:28:42 EAT</span><span class="font-label-sm text-label-sm text-emerald-escrow flex items-center justify-end gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span>Supervisor Engaged</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-container-dark-low z-40 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-md px-space-md"><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Dispatch Command Navigation</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-and-fleet-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-md text-label-md">Overview &amp; Fleet Map</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="active-task-and-otp-simulation" href="#"><span class="material-symbols-outlined text-[20px]">pin</span><span class="font-label-md text-label-md">Active Task &amp; OTP Simulation</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reverse-handover-and-inspection" href="#"><span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span><span class="font-label-md text-label-md">Reverse Handover &amp; Inspection</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="security-locked-and-exceptions" href="#"><span class="material-symbols-outlined text-[20px]">gshield</span><span class="font-label-md text-label-md">Security Locked &amp; Exceptions</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="earnings-and-telecom-momo-settlement-ledger" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Earnings &amp; Telecom MoMo</span></a></nav></div><div class="px-space-lg flex flex-col gap-space-sm"><div class="bg-surface-container-low p-space-md rounded-xl shadow-inner flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MTN / Airtel Gateway</span><span class="w-2 h-2 rounded-full bg-emerald-escrow"></span></div><span class="font-headline-sm text-headline-sm text-on-surface">UGX 42,850,200</span><span class="font-label-sm text-label-sm text-tertiary-fixed">Instant Escrow Custody Clear</span></div><div class="flex items-center justify-between text-on-surface-variant text-[11px] px-space-xs"><span>Sim Build v2.8.4</span><span>Node #EAT-KLA-04</span></div></div></aside><div class="pl-72"><main class="w-full pt-16 bg-surface-dark min-h-screen"><div class="flex flex-col w-full">
+<!-- Persistent Operational Corridor Alert Bar -->
+<div class="w-full bg-surface-container-low px-gutter-desktop py-space-sm flex items-center justify-between text-on-surface shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
+        Socket Live Stream: Connected
+      </span>
+<span class="text-on-surface-variant font-label-sm">Session ID: <span class="font-code-display text-[11px] text-primary-fixed-dim">WSS-EAT-KLA-9418</span></span>
+<span class="text-on-surface-variant text-body-sm font-body-sm">|</span>
+<span class="text-on-surface-variant font-body-sm">William St Central Corridor • Stage 04 Gate</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm text-on-surface-variant">
+<span>Mock Telemetry Jitter:</span>
+<span class="text-tertiary font-code-display text-[11px]">Active (Gaussian ±1.4m)</span>
+</div>
+<button class="px-space-md py-1 bg-surface-container-high hover:bg-surface-bright rounded text-on-surface font-label-sm transition-colors flex items-center gap-1.5" id="toggle-sim-mode">
+<span class="material-symbols-outlined text-[14px] text-action-gradient-start">sync_saved_locally</span>
+        Hot Reload Session
+      </button>
+</div>
+</div>
+<!-- Primary 3-Column Ergonomic Workstation Layout -->
+<div class="w-full p-gutter-desktop grid grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: Simulator Hardware & Condition Controls (3 of 12 cols) -->
+<div class="col-span-12 xl:col-span-3 flex flex-col gap-space-lg">
+<!-- Emulator Device Config Card -->
+<div class="bg-container-dark-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">devices</span>
+<span class="font-label-lg text-label-lg text-on-surface">Target Device Rig</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-tertiary-container/30 px-space-sm py-0.5 rounded">Emulated</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs p-1 bg-surface-container-lowest rounded-lg">
+<button class="py-space-xs text-center rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold shadow-inner" id="btn-device-android">
+            Tecno Camon 20
+          </button>
+<button class="py-space-xs text-center rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" id="btn-device-pixel">
+            Pixel 8 Pro
+          </button>
+</div>
+<!-- Network Condition Simulation Strip -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Network Profile</label>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-sm rounded bg-primary-container text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_4_bar</span>
+<span class="font-label-sm text-label-sm mt-1">MTN 4G</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt_2_bar</span>
+<span class="font-label-sm text-label-sm mt-1">3G Spotty</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">cloud_off</span>
+<span class="font-label-sm text-label-sm mt-1">Edge 2G</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Sliders: Battery Mock & Latency -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Battery Emulation</span>
+<span class="text-tertiary font-code-display text-[11px]" id="battery-disp">92% (Fast Discharging)</span>
+</div>
+<input class="w-full accent-action-gradient-start h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" id="slider-battery" max="100" min="5" type="range" value="92"/>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Base GPS Latency</span>
+<span class="text-on-surface font-code-display text-[11px]">140 ms</span>
+</div>
+<input class="w-full accent-primary-fixed-dim h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" max="600" min="30" type="range" value="140"/>
+</div>
+</div>
+<!-- Hardware Sensor Mocks -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Hardware Sensor Feeds</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-escrow text-[16px]">sensors</span> Gyro Horizon
+            </span>
+<span class="text-tertiary-fixed font-code-display text-[11px]">+3.2° Pitch</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-amber-warning text-[16px]">thermostat</span> Battery Temp
+            </span>
+<span class="text-amber-warning font-code-display text-[11px]">38.4°C</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">lock</span> Lockbox BX-04-209
+            </span>
+<span class="text-emerald-escrow font-label-sm font-bold">SECURED</span>
+</div>
+</div>
+</div>
+<!-- Supervisor Override Emergency Deck -->
+<div class="bg-container-dark-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-danger-penalty text-[20px]">admin_panel_settings</span>
+<span class="font-label-lg text-label-lg text-on-surface">Dispatcher Interventions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Live override controls immediately inject operational commands into Brian Kizito's active handset instance.
+        </p>
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-reroute">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-gradient-start text-[18px]">alt_route</span>
+              Trigger Corridor Reroute
+            </span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">send</span>
+</button>
+<button class="w-full h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-audio-ping">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-warning text-[18px]">volume_up</span>
+              Send Haptic Urgent Alert
+            </span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">notifications_active</span>
+</button>
+<button class="w-full h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-freeze-escrow">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-escrow text-[18px]">lock_clock</span>
+              Hold Escrow Release
+            </span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-bold">LOCKED</span>
+</button>
+<button class="w-full h-10 px-space-md rounded-lg bg-danger-penalty/15 hover:bg-danger-penalty/25 text-danger-penalty font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-cut-network">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">wifi_off</span>
+              Simulate Dropped Signal
+            </span>
+<span class="material-symbols-outlined text-[16px]">signal_disconnected</span>
+</button>
+</div>
+</div>
+<!-- Quick Telecom Gateway Health Indicator -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-mtn-yellow flex items-center justify-center font-black text-surface-dark font-headline-sm text-[12px]">M</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">MTN MoMo API Uganda</span>
+<span class="text-tertiary font-code-display text-[10px]">Ping: 22ms • 99.98% SLA</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-escrow text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- CENTER COLUMN: High-Fidelity Realistic Mobile Device Chassis (4 of 12 cols) -->
+<div class="col-span-12 xl:col-span-4 flex flex-col items-center">
+<!-- Device Wrapper with Bezel & Physical Aesthetic -->
+<div class="relative w-[390px] h-[812px] bg-surface-dark rounded-[50px] shadow-[0_12px_45px_rgba(0,0,0,0.85)] p-3 overflow-hidden flex flex-col">
+<!-- Screen Outer Inset Container with Realistic Rounded Screen -->
+<div class="relative w-full h-full bg-surface-dark rounded-[40px] overflow-hidden flex flex-col">
+<!-- Punch-hole Camera Notch -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-5 bg-surface-container-lowest rounded-full z-50 flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-surface-dark"></div>
+</div>
+<!-- Mobile Status Bar -->
+<div class="w-full h-11 pt-2 px-6 flex items-center justify-between text-on-surface z-40 bg-surface-dark/80 backdrop-blur-sm">
+<span class="font-headline-sm text-[13px] font-bold tracking-tight">14:38</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_4_bar</span>
+<span class="font-label-sm text-[11px] font-bold text-mtn-yellow">MTN 4G</span>
+<div class="flex items-center gap-0.5">
+<span class="font-label-sm text-[11px]" id="phone-battery-level">92%</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">battery_full</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Rider Application Interface -->
+<div class="flex-1 overflow-y-auto px-4 py-2 flex flex-col gap-3 pb-20">
+<!-- Rider Identity & Tier Header Card -->
+<div class="bg-container-dark-low rounded-2xl p-3 shadow-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of Brian Kizito, an energetic Ugandan professional boda boda driver wearing a matte black certified helmet with yellow trim in bright Kampala afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwT6NzJxqxNMOGB7xQhimOOmAJgx38mLyDamuXtNDMBJ6Z2fQueoaoMHfOAFVMFzRlhjLhwaqfSfijUtDQTduot-41GwxdZdrBromF-C5IH0L-tBGhI4A7fRCIbIOIN6saW-T7fzNYavMgzVxKzc_DB0EtATZJol6HAq3PZCtccaw6ps2XvezSOGqJtHAef2syA5jQIdZySJr9jIXfspjISwUq2g8JTPtKkhLq5t4N"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-escrow rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-extrabold">Brian Kizito</span>
+<span class="px-1.5 py-0.5 rounded bg-mtn-yellow/20 text-mtn-yellow font-label-sm text-[9px] font-bold uppercase">Gold Rider</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-[11px]">SafeBoda #RC-8821 • Bajaj UEF 842X</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-mtn-yellow text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.96</span>
+<span class="text-on-surface-variant text-[10px]">(1,420 trips)</span>
+</div>
+</div>
+</div>
+<!-- Online/Offline Operational Toggle Button -->
+<div class="flex flex-col items-end gap-1">
+<button class="relative w-12 h-6 rounded-full bg-emerald-escrow p-0.5 flex items-center transition-colors">
+<div class="w-5 h-5 rounded-full bg-surface-dark shadow-md ml-auto flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+</div>
+</button>
+<span class="text-[9px] font-bold text-tertiary-fixed tracking-wide uppercase">ONLINE</span>
+</div>
+</div>
+<!-- Daily Telemetry & Earnings Strip -->
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">Today's Runs</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5 font-bold">14<span class="text-on-surface-variant text-body-sm font-normal">/18</span></span>
+<span class="text-[10px] text-tertiary-fixed font-semibold mt-0.5">77% Target</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">Net Earnings</span>
+<span class="font-label-lg text-label-lg text-mtn-yellow mt-0.5 font-bold">78,500</span>
+<span class="text-[10px] text-on-surface-variant">UGX MoMo</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">On-Time SLA</span>
+<span class="font-headline-sm text-headline-sm text-emerald-escrow mt-0.5 font-bold">98.4%</span>
+<span class="text-[10px] text-tertiary-fixed font-semibold mt-0.5">Corridor Max</span>
+</div>
+</div>
+<!-- Primary Active Dispatch Task Card -->
+<div class="bg-container-dark-high rounded-2xl p-3.5 shadow-lg flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-action-gradient-start/10 rounded-full blur-xl pointer-events-none"></div>
+<!-- Card Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-action-gradient-end text-on-primary font-code-display text-[10px] font-bold tracking-wider">
+                    TASK-KLA-941
+                  </span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-[9px] font-bold">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                    ESCROW UGX 180k
+                  </span>
+</div>
+<span class="text-action-gradient-start font-label-sm text-label-sm font-bold animate-pulse">PICKUP PHASE</span>
+</div>
+<!-- Route Itinerary Points -->
+<div class="flex flex-col gap-2.5 relative pl-5">
+<div class="absolute left-1.5 top-2 bottom-3 w-0.5 bg-surface-container-highest"></div>
+<!-- Pickup Point -->
+<div class="relative">
+<div class="absolute -left-5 top-0.5 w-3 h-3 rounded-full bg-action-gradient-start shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase font-bold">Source Hub</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Kampala Central Phone Hub #04</span>
+<span class="text-[11px] text-on-surface-variant">William St Corridor, Shelf B-12 • 1 Parcel</span>
+</div>
+</div>
+<!-- Destination Point -->
+<div class="relative pt-1">
+<div class="absolute -left-5 top-1.5 w-3 h-3 rounded-full bg-tertiary shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase font-bold">Buyer Destination</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Kololo Terrace, Flat 4B</span>
+<span class="text-[11px] text-on-surface-variant">Buyer: Sarah K. (07•• ••• 418) • OTP Required</span>
+</div>
+</div>
+</div>
+<!-- Distance & Time Estimate Strip -->
+<div class="bg-surface-dark/70 rounded-xl px-3 py-2 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-action-gradient-start text-[16px]">navigation</span>
+<span class="font-label-sm font-bold">2.4 km</span>
+<span class="text-on-surface-variant text-[11px]">(via Kampala Rd)</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary-fixed font-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>14 mins est.</span>
+</div>
+</div>
+<!-- High-Touch Ergonomic Action Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-11 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary font-label-md text-label-md font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)] flex items-center justify-center gap-2 transition-transform active:scale-98">
+<span class="material-symbols-outlined text-[18px]">turn_sharp_right</span>
+                  Open Turn-by-Turn GPS Map
+                </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">call</span>
+                    Call Masked Buyer
+                  </button>
+<button class="h-9 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-mtn-yellow">pin</span>
+                    Verify Blind OTP
+                  </button>
+</div>
+</div>
+</div>
+<!-- Up Next Express Queue Preview -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant">Upcoming Corridor Queue (2)</span>
+<span class="text-tertiary font-label-sm text-[10px]">Auto-Batched</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface font-label-sm font-bold">#2</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Nakasero Hill Rd #19</span>
+<span class="text-[10px] text-on-surface-variant">Uganda Pharma Supply • 1.1 km away</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] text-mtn-yellow font-bold">UGX 9,000 Fee</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface font-label-sm font-bold">#3</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Yusuf Lule Rd (Garden City)</span>
+<span class="text-[10px] text-on-surface-variant">Electronics Pack • 2.8 km away</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] text-mtn-yellow font-bold">UGX 12,500 Fee</span>
+</div>
+</div>
+</div>
+<!-- Mobile App Bottom Navigation Bar (Fixed Ergonomic Tap Strip) -->
+<div class="absolute bottom-0 left-0 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md px-4 flex items-center justify-between z-40">
+<button class="flex flex-col items-center gap-0.5 text-action-gradient-start">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-sm text-[9px] font-bold">Overview</span>
+</button>
+<button class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span class="font-label-sm text-[9px]">Deliveries</span>
+</button>
+<button class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">map</span>
+<span class="font-label-sm text-[9px]">Corridor</span>
+</button>
+<button class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+<span class="font-label-sm text-[9px]">Earnings</span>
+</button>
+<button class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span class="font-label-sm text-[9px]">Support</span>
+</button>
+</div>
+<!-- Bottom Gesture Line -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-surface-container-highest rounded-full z-50"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-md text-center">
+        SwiftCart Driver Native Client • Flutter Web Canvas (390 x 812 dp)
+      </span>
+</div>
+<!-- RIGHT COLUMN: Dispatcher Live Corridor Map & WebSocket Event Stream (5 of 12 cols) -->
+<div class="col-span-12 xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Live Map Viewport & Corridor Telemetry Overlay -->
+<div class="bg-container-dark-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">radar</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block leading-tight">Kampala Corridor GPS Telemetry</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">William St → Kampala Rd → Yusuf Lule → Kololo</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/40 text-tertiary-fixed font-code-display text-[11px] font-bold">
+              34 km/h • NE 42°
+            </span>
+</div>
+</div>
+<!-- Simulated Map Canvas Container -->
+<div class="relative w-full h-72 bg-surface-dark overflow-hidden">
+<!-- Static Location Base Render -->
+<div class="w-full h-full bg-cover bg-center opacity-85" data-location="Kampala Central, William Street, Uganda" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMkhjBPUT-jN8EJxySxoYZcAZu-eZolHCf5VNgKoTK8hapsdSKsSnIq9_u2MIwQb_dDB2kqQyfPbJUD58ByHadv_we0nwTHWi99dcDJDz6A4qgyAxklgjCq44d217OuCXmf44eVLBy6ijykGRJfPDJf62pZN8hn-B8z8x9TbGeGAifLU7RDGq9bEJYWlBJDWXKbXG-PyFPKmd7bxAEqwwIWn-RsdakmY8FC0B-MAgt')"></div>
+<!-- Dynamic SVG Route Vector Overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 520 288">
+<!-- Planned Corridor Path -->
+<path class="opacity-75" d="M 60 210 Q 140 180, 210 160 T 340 120 T 450 60" stroke="#FF8A1F" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4"></path>
+<!-- Active Breadcrumb Completed Segment -->
+<path d="M 60 210 Q 140 180, 210 160" stroke="#4edea3" stroke-linecap="round" stroke-width="4"></path>
+<!-- Source Depot Node -->
+<circle cx="60" cy="210" fill="#080D1F" r="7" stroke="#FF8A1F" stroke-width="3"></circle>
+<text fill="#e5beb4" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" x="65" y="235">Depot #04</text>
+<!-- Live Boda Boda Position Node -->
+<g transform="translate(210, 160)">
+<circle class="animate-ping" cx="0" cy="0" fill="#FF8A1F" fill-opacity="0.25" r="14"></circle>
+<circle cx="0" cy="0" fill="#DA3700" r="8"></circle>
+<polygon fill="#ffffff" points="0,-4 3,4 -3,4" transform="rotate(42)"></polygon>
+</g>
+<text fill="#ffffff" font-family="Plus Jakarta Sans" font-size="11" font-weight="800" x="225" y="155">Brian Kizito (UEF 842X)</text>
+<!-- Destination Node -->
+<circle cx="450" cy="60" fill="#080D1F" r="7" stroke="#4edea3" stroke-width="3"></circle>
+<text fill="#4edea3" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" x="410" y="45">Kololo Flat 4B</text>
+</svg>
+<!-- Top-Right Helmet Camera Live Preview Widget -->
+<div class="absolute top-3 right-3 bg-surface-dark/90 backdrop-blur-md rounded-lg p-2 shadow-lg flex flex-col gap-1 w-36">
+<div class="flex items-center justify-between text-[10px] font-bold text-on-surface">
+<span class="flex items-center gap-1 text-danger-penalty">
+<span class="w-2 h-2 rounded-full bg-danger-penalty animate-pulse"></span> REC
+              </span>
+<span class="text-on-surface-variant font-code-display text-[9px]">1080p</span>
+</div>
+<div class="w-full h-16 bg-surface-container rounded overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="First-person motorcycle handlebar helmet view speeding along sunlit Kampala road with asphalt and distant acacia trees in Uganda" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgr8ZwOPcpbiaxBiahJftdZR1TqljOPk0YAcu30oqTSs0HvgIwe14Jv4XpjdNRX_MNI-zxDedYKeLNrVRHVupu7j3XqEtQMAmIs9Q_3Gub2x_LfiQ39XgyrCjcSm3Bw4V6bFhA5DNi2Mg6mF7o5FzNdyqXiI_Sx2rSuEfiVCLd-JXUPgPIPBJBLcKB_BHBUDiJbGahBquRvA7a3ZvVc5fQTAQpeWAuQpNYQ1EcCKpb"/>
+<div class="absolute bottom-1 left-1 bg-surface-dark/80 px-1 rounded text-[9px] text-tertiary font-code-display">Cam #01</div>
+</div>
+</div>
+<!-- Bottom Map Telemetry Ribbon -->
+<div class="absolute bottom-3 left-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md rounded-lg p-2 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-action-gradient-start text-[16px]">pin_drop</span>
+<span class="font-code-display text-[11px]">0.3174° N, 32.5825° E</span>
+</div>
+<div class="flex items-center gap-3 text-label-sm font-label-sm">
+<span class="text-tertiary-fixed font-bold">Lockbox Tamper: SECURE</span>
+<span class="text-on-surface-variant font-body-sm text-[11px]">• PSV Validated</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Key Metric Highlights -->
+<div class="grid grid-cols-4 p-space-md gap-space-sm bg-container-dark-low">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">Corridor Pace</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">34 km/h</span>
+<span class="text-tertiary-fixed text-[10px] font-semibold">Clear Traffic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">ETA Window</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">14:52 EAT</span>
+<span class="text-tertiary text-[10px] font-semibold">On Schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">Fuel Reserve</span>
+<span class="font-label-lg text-label-lg text-mtn-yellow font-bold">6.8 L</span>
+<span class="text-on-surface-variant text-[10px]">~140 km range</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase">Stage Proximity</span>
+<span class="font-label-lg text-label-lg text-tertiary-fixed font-bold">Stage 08</span>
+<span class="text-on-surface-variant text-[10px]">350m ahead</span>
+</div>
+</div>
+</div>
+<!-- Real-Time Event & WebSocket Trace Log (Monospace Telemetry Stream) -->
+<div class="bg-container-dark-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">terminal</span>
+<span class="font-label-lg text-label-lg text-on-surface">Dispatcher WebSocket Trace</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-[11px] underline" id="btn-clear-log">Clear</button>
+<span class="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+</div>
+</div>
+<div class="w-full h-52 bg-surface-container-lowest rounded-lg p-space-md overflow-y-auto flex flex-col gap-1.5 font-code-display text-[11px]" id="event-log-container">
+<div class="flex items-start gap-2 text-on-surface-variant">
+<span class="text-primary font-bold">14:38:12</span>
+<span class="text-on-surface">[WS_PING] Device heartbeat ACK - latency: 138ms</span>
+</div>
+<div class="flex items-start gap-2 text-tertiary-fixed">
+<span class="text-primary font-bold">14:38:18</span>
+<span>[GPS_COORDS] Lat 0.31742 Long 32.58251 • Heading 42° • Vel 9.4 m/s</span>
+</div>
+<div class="flex items-start gap-2 text-mtn-yellow">
+<span class="text-primary font-bold">14:38:22</span>
+<span>[STAGE_PROX] Boda rider approaching SafeBoda Stage #08 (Garden City Gate)</span>
+</div>
+<div class="flex items-start gap-2 text-emerald-escrow">
+<span class="text-primary font-bold">14:38:29</span>
+<span>[ESCROW_VERIFY] UGX 180,000 locked in MTN MoMo nodal custody #ESC-9418</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface-variant">
+<span class="text-primary font-bold">14:38:34</span>
+<span class="text-on-surface">[TAMPER_POLL] Lockbox #BX-04-209 reed switch integrity: HIGH</span>
+</div>
+<div class="flex items-start gap-2 text-tertiary">
+<span class="text-primary font-bold">14:38:40</span>
+<span>[CLIENT_EVENT] Screen rendered: Overview &amp; Turn-by-Turn prompt ready</span>
+</div>
+</div>
+<!-- Monospace Command Injector Strip -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<span class="font-code-display text-action-gradient-start text-[12px] font-bold">&gt;</span>
+<input class="flex-1 bg-surface-container-lowest px-space-md py-1.5 rounded text-on-surface font-code-display text-[11px] placeholder:text-on-surface-variant/50 focus:outline-none" id="cmd-input" placeholder="Inject simulator event (e.g., 'TRIGGER_TRAFFIC_JAM', 'PING_OFFLINE')..." type="text"/>
+<button class="px-space-md py-1.5 bg-surface-container-high hover:bg-surface-bright rounded text-on-surface font-label-sm text-label-sm" id="cmd-send">
+            Push
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Simulator Logic for Dispatch Operations
+  (function initSimulator() {
+    const batterySlider = document.getElementById('slider-battery');
+    const batteryDisp = document.getElementById('battery-disp');
+    const phoneBattery = document.getElementById('phone-battery-level');
+    const logContainer = document.getElementById('event-log-container');
+    const cmdInput = document.getElementById('cmd-input');
+    const cmdSend = document.getElementById('cmd-send');
+    const btnClear = document.getElementById('btn-clear-log');
+    
+    // Battery Live Emulation Bind
+    if (batterySlider && batteryDisp && phoneBattery) {
+      batterySlider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        batteryDisp.textContent = `${val}% (Simulated)`;
+        phoneBattery.textContent = `${val}%`;
+      });
+    }
+
+    // Helper to log operational events
+    function appendLog(type, message, colorClass = 'text-on-surface') {
+      if (!logContainer) return;
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+      const entry = document.createElement('div');
+      entry.className = `flex items-start gap-2 ${colorClass}`;
+      entry.innerHTML = `<span class="text-primary font-bold">${timeStr}</span><span>[${type}] ${message}</span>`;
+      logContainer.appendChild(entry);
+      logContainer.scrollTop = logContainer.scrollHeight;
+    }
+
+    // Supervisor Override Triggers
+    const btnReroute = document.getElementById('btn-reroute');
+    if (btnReroute) {
+      btnReroute.addEventListener('click', () => {
+        appendLog('DISPATCH_OVERRIDE', 'Corridor Re-route sent: Diverting via Nakasero bypass.', 'text-action-gradient-start font-bold');
+      });
+    }
+
+    const btnAudioPing = document.getElementById('btn-audio-ping');
+    if (btnAudioPing) {
+      btnAudioPing.addEventListener('click', () => {
+        appendLog('AUDIO_HAPTIC', 'Urgent buzzer sent to rider headset (frequency 850Hz).', 'text-amber-warning font-bold');
+      });
+    }
+
+    const btnFreeze = document.getElementById('btn-freeze-escrow');
+    if (btnFreeze) {
+      btnFreeze.addEventListener('click', () => {
+        appendLog('ESCROW_HOLD', 'Supervisor held payout release for #TASK-KLA-941.', 'text-danger-penalty font-bold');
+      });
+    }
+
+    const btnCutNet = document.getElementById('btn-cut-network');
+    if (btnCutNet) {
+      btnCutNet.addEventListener('click', () => {
+        appendLog('NET_INJECT', 'Simulating immediate packet blackout (Edge 0-signal).', 'text-danger-penalty');
+      });
+    }
+
+    // Command push
+    if (cmdSend && cmdInput) {
+      cmdSend.addEventListener('click', () => {
+        const val = cmdInput.value.trim();
+        if (val) {
+          appendLog('MANUAL_SIM', val, 'text-tertiary-fixed font-bold');
+          cmdInput.value = '';
+        }
+      });
+      cmdInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          cmdSend.click();
+        }
+      });
+    }
+
+    if (btnClear && logContainer) {
+      btnClear.addEventListener('click', () => {
+        logContainer.innerHTML = '';
+        appendLog('SYSTEM', 'Log buffer cleared by operator.', 'text-on-surface-variant');
+      });
+    }
+
+    // Subtle background stream ticker every 6 seconds
+    setInterval(() => {
+      const pings = ['Location pulse ACK &bull; Latency 134ms', 'MTN Base station handoff: Tower KLA-CTR-09', 'Lockbox temperature stable (31.2°C)'];
+      const pick = pings[Math.floor(Math.random() * pings.length)];
+      appendLog('HEARTBEAT', pick, 'text-on-surface-variant');
+    }, 8000);
+  })();
+</script></main></div></body></html>

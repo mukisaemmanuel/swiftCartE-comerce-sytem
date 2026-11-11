@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#ffb5a0", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "on-tertiary-fixed": "#002113", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862200", "secondary-fixed": "#dae2fd", "on-error": "#ffffff", "on-secondary": "#ffffff", "surface-container-low": "#eff4ff", "on-surface-variant": "#5b4039", "surface-container-lowest": "#ffffff", "tertiary": "#006c49", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#3f465c", "surface-dim": "#ccdbf4", "primary": "#b02f00", "on-error-container": "#93000a", "primary-fixed": "#ffdbd1", "background": "#f8f9ff", "tertiary-fixed": "#6ffbbe", "inverse-on-surface": "#ebf1ff", "on-surface": "#0d1c2f", "on-primary-fixed": "#3b0900", "inverse-surface": "#233144", "outline-variant": "#e4beb4", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "surface-container-highest": "#d5e3fd", "error-container": "#ffdad6", "tertiary-fixed-dim": "#4edea3", "on-primary-container": "#541200", "on-secondary-container": "#5c647a", "surface-tint": "#b02f00", "secondary-container": "#dae2fd", "on-tertiary-container": "#00311f", "on-background": "#0d1c2f", "surface-container-high": "#dde9ff", "surface-variant": "#d5e3fd", "secondary": "#565e74", "primary-container": "#ff5722", "surface-container": "#e6eeff", "outline": "#907067", "inverse-primary": "#ffb5a0", "tertiary-container": "#00a572", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "gutter": "1rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-lg": "1.25rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-xl-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}], "label-sm": ["10px", {"lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "price-display": ["26px", {"lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-space-xs leading-tight">Danger Zone</h1></div><div class="flex items-center gap-space-xs mr-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-on-surface select-none">AD</div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-lg">
+<!-- Subtitle & Context Banner -->
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<p class="font-body-sm text-body-sm text-secondary">System maintenance &amp; role management</p>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary">SwiftCart Platform • East Africa Hub</span>
+</div>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shield</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Level 3 Clearance</span>
+</div>
+</div>
+<!-- SECTION 1: ROLE MANAGEMENT -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Role Management</h2>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wide">Audit Log Active</span>
+</div>
+<!-- Targeted User Overview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm text-on-secondary-fixed font-bold shadow-inner">
+            IK
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Isaac Kato</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono">#USR-402</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Senior Hub Agent • Kampala Central Depot</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Current Assigned Role</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">badge</span>
+            Hub Operations Staff
+          </span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-bold">Active</span>
+</div>
+<!-- Role Selector Dropdown representation -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface block font-semibold" for="role-select">Assign Target Role</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-lg text-label-lg rounded-lg py-3 px-space-md appearance-none shadow-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" id="role-select">
+<option value="hub">Hub Operations Staff (Current)</option>
+<option value="admin">Admin Staff</option>
+<option value="finance">Finance Staff</option>
+<option selected="" value="super">Super Admin (Full Platform Control)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-md text-secondary">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step-by-Step Action Card: Elevation Modal / Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center gap-space-sm pb-space-xs bg-surface-container-low -mx-space-md -mt-space-md p-space-md rounded-t-xl">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Assign Super Admin Permissions</h3>
+<p class="font-body-sm text-body-sm text-secondary">Elevation requires audit reasoning and 2FA</p>
+</div>
+</div>
+<!-- Step 1: Typed Reason -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="reason-input">Step 1: Justification &amp; Purpose</label>
+<span class="font-label-sm text-label-sm text-primary font-bold">Required</span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg p-space-sm focus:outline-none focus:bg-surface-container-lowest shadow-inner resize-none" id="reason-input" placeholder="Provide a reason for administrative elevation..." rows="2">Covering lead operations during system expansion</textarea>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+          Logged in platform audit trails under Super Admin authority.
+        </p>
+</div>
+<!-- Step 2: 2-Factor Auth Code -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Step 2: 2-Factor Verification Code</label>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline" type="button">Resend SMS</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Sent to verified mobile: <span class="font-mono font-semibold text-on-surface">+256 772 ••• 819</span>
+</p>
+<!-- 6-box input mock -->
+<div class="grid grid-cols-6 gap-space-xs pt-1.5" id="otp-container">
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" type="text" value="4"/>
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" type="text" value="9"/>
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" placeholder="•" type="text"/>
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" placeholder="•" type="text"/>
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" placeholder="•" type="text"/>
+<input class="otp-input w-full h-12 text-center font-headline-md text-headline-md rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" inputmode="numeric" maxlength="1" placeholder="•" type="text"/>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-space-xs">
+<button class="w-full min-h-[48px] bg-primary text-on-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-transform" id="confirm-role-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+          Confirm Role Update
+        </button>
+<p class="font-body-sm text-body-sm text-center text-secondary mt-2">
+          Effective immediately across all Uganda hub terminals.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: DANGER ZONE -->
+<section class="flex flex-col space-y-space-md pt-space-xs">
+<!-- Danger Card Container with safety demarcation -->
+<div class="bg-error-container/30 rounded-xl p-space-md space-y-space-lg shadow-sm">
+<!-- Danger Zone Header -->
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error flex items-center justify-center text-on-error shadow-sm">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-error-container font-bold">Danger Zone - High-Impact Actions</h2>
+<p class="font-body-sm text-body-sm text-on-error-container/80">Immediate platform-wide consequences</p>
+</div>
+</div>
+<!-- Item 1: Storewide Maintenance Mode -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Storewide Maintenance Mode</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 leading-relaxed">
+              Pauses checkout for buyers while preserving active seller dashboards. Used during scheduled updates.
+            </p>
+</div>
+<div class="shrink-0 bg-tertiary-fixed px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-fixed">Inactive</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-xs px-space-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">gavel</span>
+<span class="font-body-sm text-body-sm text-secondary">Requires admin confirmation before activating.</span>
+</div>
+<button class="w-full min-h-[44px] bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs shadow-sm active:scale-[0.98] transition-transform" id="maintenance-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+          Pause Checkout (Maintenance Mode)
+        </button>
+</div>
+<!-- Item 2: Suspend Platform User -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Suspend Platform User</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Immediately revokes staff or seller portal access and halts all pending UGX balance payouts.
+          </p>
+</div>
+<div class="space-y-space-xs pt-1">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[20px] text-secondary">person_search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg py-2.5 pl-10 pr-space-md focus:outline-none focus:bg-surface-container-highest shadow-inner" id="suspend-query" placeholder="Type User ID (e.g. #USR-108) or Email..." type="text"/>
+</div>
+<button class="w-full min-h-[44px] bg-surface-container-lowest text-error font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs shadow-sm hover:bg-error-container active:scale-[0.98] transition-all" id="suspend-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+            Suspend User
+          </button>
+</div>
+</div>
+<!-- System Safeguard Notice -->
+<div class="flex items-center gap-2 pt-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-error-container/70">lock_clock</span>
+<span class="font-label-sm text-label-sm text-on-error-container/70">All high-impact events are cryptographically recorded in the central Kampala ledger.</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // Subtle tactile focus navigation for 2FA boxes
+    const inputs = document.querySelectorAll('.otp-input');
+    inputs.forEach((input, index) => {
+      input.addEventListener('keyup', (e) => {
+        if (e.key >= '0' && e.key <= '9') {
+          if (index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        } else if (e.key === 'Backspace') {
+          if (index > 0 && !input.value) {
+            inputs[index - 1].focus();
+          }
+        }
+      });
+    });
+
+    // Gentle feedback on button clicks
+    const confirmBtn = document.getElementById('confirm-role-btn');
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        const originalText = confirmBtn.innerHTML;
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span> Updating Permissions...';
+        confirmBtn.disabled = true;
+        setTimeout(() => {
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Permissions Updated';
+          confirmBtn.classList.remove('bg-primary');
+          confirmBtn.classList.add('bg-tertiary');
+          setTimeout(() => {
+            confirmBtn.innerHTML = originalText;
+            confirmBtn.disabled = false;
+            confirmBtn.classList.remove('bg-tertiary');
+            confirmBtn.classList.add('bg-primary');
+          }, 2400);
+        }, 1200);
+      });
+    }
+
+    const maintenanceBtn = document.getElementById('maintenance-btn');
+    if (maintenanceBtn) {
+      maintenanceBtn.addEventListener('click', () => {
+        const confirmed = window.confirm('Are you sure you want to pause buyer checkout nationwide across Uganda?');
+        if (confirmed) {
+          alert('Maintenance Mode initiated. Active seller tabs remain operational.');
+        }
+      });
+    }
+
+    const suspendBtn = document.getElementById('suspend-btn');
+    const suspendInput = document.getElementById('suspend-query');
+    if (suspendBtn && suspendInput) {
+      suspendBtn.addEventListener('click', () => {
+        const val = suspendInput.value.trim();
+        if (!val) {
+          suspendInput.focus();
+          return;
+        }
+        const confirmed = window.confirm(`Revoke all platform access for "${val}" immediately?`);
+        if (confirmed) {
+          alert(`Access revoked for ${val}. Session terminated.`);
+          suspendInput.value = '';
+        }
+      });
+    }
+  })();
+</script></main></body></html>

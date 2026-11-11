@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "container-dark-high": "#1E293B", "on-tertiary": "#003824", "on-secondary-fixed": "#091649", "airtel-red": "#ED1C24", "inverse-primary": "#b22b00", "tertiary-fixed-dim": "#4edea3", "outline-variant": "#5c4039", "on-error-container": "#ffdad6", "on-surface-variant": "#e5beb4", "surface-container-lowest": "#080d1f", "on-secondary-fixed-variant": "#384377", "surface-variant": "#2f3448", "tertiary": "#4edea3", "outline": "#ac8980", "on-secondary": "#212d5f", "error": "#ffb4ab", "on-primary-container": "#fffcff", "surface-dark": "#080D1F", "secondary-fixed-dim": "#b8c3ff", "primary-fixed-dim": "#ffb5a1", "surface-dim": "#0d1225", "surface-container-low": "#161b2d", "on-surface": "#dde1fb", "inverse-on-surface": "#2b3043", "danger-penalty": "#EF4444", "emerald-escrow": "#10B981", "background": "#0d1225", "inverse-surface": "#dde1fb", "surface-tint": "#ffb5a1", "on-secondary-container": "#a7b2ed", "on-tertiary-fixed-variant": "#005236", "secondary": "#b8c3ff", "secondary-container": "#384377", "primary": "#ffb5a1", "on-error": "#690005", "on-primary-fixed-variant": "#881f00", "tertiary-container": "#00855b", "surface-container-high": "#24293c", "action-gradient-start": "#FF8A1F", "tertiary-fixed": "#6ffbbe", "action-gradient-end": "#DA3700", "surface-bright": "#34384c", "on-background": "#dde1fb", "on-tertiary-fixed": "#002113", "primary-fixed": "#ffdbd1", "surface-cream": "#FFF8F2", "surface-container": "#1a1f31", "on-primary": "#611300", "on-primary-fixed": "#3c0800", "container-dark-low": "#0F172A", "amber-warning": "#F59E0B", "primary-container": "#da3700", "surface-container-highest": "#2f3448", "surface": "#0d1225", "secondary-fixed": "#dde1ff", "on-tertiary-container": "#f4fff6", "mtn-yellow": "#FFCC00", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "gutter-desktop": "1.5rem", "gutter": "0.75rem", "margin-desktop": "2rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-lg": "1rem", "margin": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "code-display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "code-display": ["20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><aside class="fixed left-0 top-0 bottom-0 w-[72px] bg-container-dark-low z-50 flex flex-col items-center py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-12 w-12 flex items-center justify-center mb-space-md rounded-xl bg-surface-container-high"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/></div><nav class="flex-1 flex flex-col gap-space-xs items-center w-full px-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)]"><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="overview" href="#" title="Overview"><span class="material-symbols-outlined text-[24px]">dashboard</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="orders" href="#" title="Orders"><span class="material-symbols-outlined text-[24px]">receipt_long</span></a><a aria-current="page" class="w-12 h-12 rounded-xl flex items-center justify-center transition-all bg-primary-container text-on-primary-container font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)]" data-path="products" href="#" title="Products"><span class="material-symbols-outlined text-[24px]">inventory_2</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="returns-and-disputes" href="#" title="Returns &amp; Disputes"><span class="material-symbols-outlined text-[24px]">assignment_return</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="wallet" href="#" title="Escrow &amp; Wallet"><span class="material-symbols-outlined text-[24px]">account_balance_wallet</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="analytics" href="#" title="Analytics"><span class="material-symbols-outlined text-[24px]">monitoring</span></a></nav><div class="flex flex-col gap-space-xs items-center w-full px-space-xs pt-space-xs"><a class="relative w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="notifications" href="#" title="Notifications"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-airtel-red"></span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="settings" href="#" title="Settings"><span class="material-symbols-outlined text-[24px]">settings</span></a></div></aside><div class="pl-[72px]"><header class="fixed top-0 left-[72px] right-0 h-16 bg-surface-dark/95 backdrop-blur-xl z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-md min-w-0"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><div class="flex items-center gap-space-xs bg-container-dark-low px-space-md py-1.5 rounded-xl"><span class="material-symbols-outlined text-primary text-[18px]">store</span><div class="flex flex-col min-w-0"><span class="font-label-md text-on-surface truncate">Victoria Tech Supplies</span><span class="font-label-sm text-on-surface-variant truncate">Nakasero Bay Hub #UG-8820</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-space-xs">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-container-dark-low px-space-md py-1.5 rounded-xl w-56"><span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span><span class="font-body-sm text-on-surface-variant select-none">Search orders, SKUs...</span></div><button class="w-9 h-9 rounded-xl bg-container-dark-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-container-dark-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><button class="relative w-9 h-9 rounded-xl bg-container-dark-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-container-dark-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full bg-airtel-red text-on-primary-container font-label-sm flex items-center justify-center px-1">4</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-label-md text-on-primary">VT</div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Offline Resiliency & Ledger Sync Indicator -->
+<div class="flex items-center justify-between px-gutter-desktop py-space-xs bg-amber-warning text-container-dark-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+<span class="font-label-sm uppercase tracking-wider">Local Cache Active • Nakasero Bay Edge Node #UG-8820</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm font-bold">2.4MB / 12MB Sync Queue</span>
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span>
+</div>
+</div>
+<!-- Operational Header & Action Surface -->
+<div class="px-gutter-desktop py-space-lg bg-surface-container-low shadow-md">
+<div class="flex flex-col gap-space-md md:flex-row md:items-center md:justify-between">
+<div class="flex flex-col gap-space-xs min-w-0">
+<!-- Breadcrumb & Metadata -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span>Products</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Edit Product</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold truncate">SoundCore Space One ANC</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<h1 class="font-headline-md text-on-surface tracking-tight">SoundCore Space One ANC</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Live in Store • Nakasero Bay</span>
+</div>
+<span class="font-body-sm text-on-surface-variant">• Last updated Today, 11:42 AM EAT</span>
+</div>
+</div>
+<!-- Action Suite -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="h-10 px-space-md rounded-xl bg-container-dark-high text-on-surface font-label-md flex items-center gap-space-xs hover:bg-surface-bright transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Preview in Buyer App</span>
+</button>
+<button class="h-10 px-space-md rounded-xl bg-surface-container-highest/60 text-on-surface-variant font-label-md hover:text-danger-penalty hover:bg-danger-penalty/10 transition-colors" type="button">
+          Discard
+        </button>
+<button class="h-10 px-space-lg rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg shadow-[0_4px_18px_rgba(218,55,0,0.35)] flex items-center gap-space-xs active:scale-95 transition-transform" id="save-publish-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Save &amp; Publish Changes</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tablet Split Workspace (834px Baseline Optimized) -->
+<div class="px-gutter-desktop py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Core Catalog Specifications (55% on lg: 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-xl">
+<!-- SECTION 1: Basic Information -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">feed</span>
+<h2 class="font-headline-sm text-on-surface">Basic Information</h2>
+</div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Catalog Spec</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5" for="prod-title">Product Title</label>
+<div class="relative">
+<input class="w-full bg-container-dark-low text-on-surface font-body-lg rounded-xl px-space-md py-3 focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="prod-title" type="text" value="SoundCore Space One ANC Wireless Over-Ear Headphones"/>
+<button class="absolute right-3 top-3 text-primary hover:text-action-gradient-start" title="Revert to Original" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">Brand Identity</label>
+<div class="flex items-center justify-between bg-container-dark-low px-space-md py-3 rounded-xl shadow-inner">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-lg text-on-surface font-semibold">SoundCore</span>
+<span class="material-symbols-outlined text-emerald-escrow text-[16px]" title="Authorized Brand Distro">verified</span>
+</div>
+<span class="font-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Verified Distro</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">Category Tree</label>
+<div class="flex items-center justify-between bg-container-dark-low px-space-md py-3 rounded-xl shadow-inner">
+<span class="font-body-sm text-on-surface truncate">Electronics &gt; Audio &gt; Headphones</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">tune</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Pricing & Commercial Ledger (UGX Integers) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-escrow text-[20px]">payments</span>
+<h2 class="font-headline-sm text-on-surface">Pricing &amp; Escrow Economics</h2>
+</div>
+<div class="flex items-center gap-1 text-emerald-escrow font-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>UG Escrow Protected</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Regular Price -->
+<div class="bg-container-dark-low p-space-md rounded-xl">
+<span class="font-label-sm text-on-surface-variant block mb-1">Standard SRP</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-on-surface-variant">UGX</span>
+<span class="font-price-display text-on-surface">310,000</span>
+</div>
+<span class="font-label-sm text-on-surface-variant line-through mt-1 block">Uganda Retail Baseline</span>
+</div>
+<!-- Discount Price -->
+<div class="bg-container-dark-low p-space-md rounded-xl ring-1 ring-primary/40 relative">
+<span class="font-label-sm text-primary block mb-1 font-bold">Active Sale Price</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-primary">UGX</span>
+<input class="w-full bg-transparent font-price-display text-on-primary-container font-extrabold focus:outline-none" type="text" value="248,500"/>
+</div>
+<span class="font-label-sm text-emerald-escrow mt-1 flex items-center gap-0.5 font-bold">
+<span class="material-symbols-outlined text-[12px]">trending_down</span>
+                19.8% Off SRP
+              </span>
+</div>
+<!-- Wholesale Cost -->
+<div class="bg-container-dark-low p-space-md rounded-xl">
+<span class="font-label-sm text-on-surface-variant block mb-1">Cost Basis (COGS)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-on-surface-variant">UGX</span>
+<span class="font-price-display text-on-surface-variant">195,000</span>
+</div>
+<span class="font-label-sm text-on-surface-variant mt-1 block">Direct Import Ledger</span>
+</div>
+</div>
+<!-- Live Margin Calculation Telematics -->
+<div class="mt-space-md bg-container-dark-high p-space-md rounded-xl flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-escrow/10 text-emerald-escrow">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<div>
+<span class="font-body-sm text-on-surface-variant block">Estimated Payout Per Unit Sold</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-on-surface font-extrabold">UGX 239,802</span>
+<span class="font-label-sm text-emerald-escrow bg-emerald-escrow/10 px-2 py-0.5 rounded font-bold">+21.3% Net Margin</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-on-surface-variant block">SwiftCart Fee: 3.5% (UGX 8,698)</span>
+<span class="font-label-sm text-on-surface-variant">Tax Stamp (URA EFRIS): Compliant</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Inventory & Boda Fulfillment Node -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">two_wheeler</span>
+<h2 class="font-headline-sm text-on-surface">Inventory &amp; Boda Fulfillment</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-action-gradient-start/15 text-action-gradient-start font-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">electric_moped</span>
+              Express Node Active
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">SKU Designation</label>
+<div class="bg-container-dark-low px-space-md py-2.5 rounded-xl flex items-center justify-between shadow-inner">
+<span class="font-code-display text-on-surface tracking-wider">SC-SPO1-BLK</span>
+<button class="text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">GS1 Barcode / EAN</label>
+<div class="bg-container-dark-low px-space-md py-2.5 rounded-xl flex items-center justify-between shadow-inner">
+<span class="font-code-display text-on-surface tracking-wider">0840045102941</span>
+<span class="material-symbols-outlined text-primary text-[18px]">barcode_scanner</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">Available Stock Units</label>
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 bg-container-dark-low px-space-md py-2.5 rounded-xl flex items-center justify-between shadow-inner">
+<span class="font-headline-sm text-on-surface font-extrabold">24</span>
+<span class="font-label-sm text-emerald-escrow font-bold">In Staging</span>
+</div>
+<button class="w-10 h-10 rounded-xl bg-container-dark-high flex items-center justify-center text-on-surface hover:bg-surface-bright" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1.5">Physical Hub Location</label>
+<div class="bg-container-dark-low px-space-md py-2.5 rounded-xl flex items-center gap-space-xs shadow-inner">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">warehouse</span>
+<span class="font-body-md text-on-surface font-semibold truncate">Nakasero Shelf B4 • Bin 12</span>
+</div>
+</div>
+</div>
+<!-- Boda Express Toggle Switch -->
+<div class="mt-space-md bg-container-dark-high p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-start gap-space-md min-w-0 pr-space-md">
+<div class="p-2 rounded-xl bg-primary-container text-on-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<span class="font-label-lg text-on-surface block">Fast Boda Express Dispatch (45-Min SLA)</span>
+<span class="font-body-sm text-on-surface-variant">Automated driver matching from Nakasero, Pioneer Mall, and Kamu Kamu plazas upon buyer checkout.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-action-gradient-start"></div>
+</label>
+</div>
+</div>
+<!-- SECTION 4: Rich Text Specifications -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">notes</span>
+<h2 class="font-headline-sm text-on-surface">Product Description &amp; Warranty</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 bg-container-dark-high rounded-lg text-on-surface-variant text-[16px] hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">format_bold</span>
+</button>
+<button class="px-2 py-1 bg-container-dark-high rounded-lg text-on-surface-variant text-[16px] hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+</button>
+<button class="px-2 py-1 bg-container-dark-high rounded-lg text-on-surface-variant text-[16px] hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">format_underlined</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-container-dark-low rounded-xl p-space-md text-on-surface font-body-md leading-relaxed min-h-[140px] focus:outline-none shadow-inner" contenteditable="true">
+            Experience next-level acoustic isolation engineered specifically for vibrant commuter journeys across Kampala. Featuring 98.5% Active Noise Reduction tailored to cancel harsh boda road sounds, heavy commercial traffic along Jinja Road, and open-market ambient frequencies. Built with LDAC High-Resolution wireless architecture delivering 3X more audio detail.
+            <br/><br/>
+            • 40 Hours playtime in ANC mode / 55 Hours in Normal mode<br/>
+            • Ultra-soft adaptive memory protein ear cups suited for high tropical humidity<br/>
+            • 5-minute fast USB-C charge yields 4 hours continuous playback<br/>
+            • 12-Month Official SoundCore Uganda Replacement Warranty supported at our Nakasero Bay Service Hub.
+          </div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Media Gallery & AI Commerce Studio (45% on lg: 5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xl">
+<!-- MEDIA GALLERY -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_library</span>
+<h2 class="font-headline-sm text-on-surface">Media Gallery</h2>
+</div>
+<span class="font-label-sm text-on-surface-variant">4 of 8 Slots Used</span>
+</div>
+<!-- Photo Gallery Grid (2x2 + Dropzone) -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Hero Photo -->
+<div class="relative group rounded-xl overflow-hidden aspect-square bg-container-dark-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="A pristine high-resolution commercial studio photograph of matte black SoundCore Space One over-ear headphones floating against a seamless deep slate background with sharp edge lighting and warm orange back-reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlORODgV4u0hPGRkIt4Z2obpulELejcWAJ8l1Y7Rm7OzHgvPt2KR9IEXYLkxOyQE3fjf21_0Q8w7jbWHQjcral8sAyXErDTxhXnf0IWu0FjkuM4UuY2A4-vbGqF0lzeDBIkqFt1SDoP0VWO5U59j2Apld8y4h5YlbIN6dMqntdSrQYuK5Hl9xTkQdCD1I79vXmciPEGLClnF0GQ98GXXHv3JkxE1OOwIwQzDgqASK0"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-action-gradient-start text-on-primary-container font-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[12px]">star</span>
+                Hero Active
+              </div>
+<div class="absolute inset-0 bg-container-dark-low/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-space-sm transition-opacity">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<!-- Photo 2 -->
+<div class="relative group rounded-xl overflow-hidden aspect-square bg-container-dark-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Close up macro studio detail photograph of the SoundCore Space One headphone ear cup showcasing textured acoustic fabric, ANC microphones, and polished aluminum hinges with soft dramatic side illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0pN3jhE1spQfLUVc7i6nI0xym9Ing2U7FQ9Mskyxys3UvLxzdKdYxAswA6PvNH-Z16WVvsRtrFiC5S_F0nWLAU1hB_VGJphq8lhextIpRsWS3yeZw8DMNt0UHLyce_jrRtj5mkBICfOoTge7Sq7sLSfZJBhMCd45TtLbwKaOpal1XpDbzTyFyuYBeYnilRatvefo1wFk5divjh8F09CUBXbibVHDvpvdsGN7Mt02O"/>
+<div class="absolute inset-0 bg-container-dark-low/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-space-sm transition-opacity">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<!-- Photo 3 -->
+<div class="relative group rounded-xl overflow-hidden aspect-square bg-container-dark-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Product packaging flatlay photograph showing SoundCore Space One retail packaging box, travel pouch, 3.5mm aux audio cable, and braided black USB-C fast charging cord on a dark granite surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFYue7bzVDHiGL9OmV2M1uKLa6vfC-DAH9-Vu2qHFszP12tl2iEpvlWbE1zlMg9_4NrBPuzU2WBHAS1EnvcYCCEnFQSRhAa6pFb1SPQKGTtLXu7HLzJ37rHj0AjsmB0tWp9I-ANR9P19XmsQPDTSUzGSPmdRQjPynNVHuSixME3CCIt0v6mlTK--lwQWPcf4ZI0OGoThZWmEXhjCYFFZYuzwrpM98AbCL81WnyfzCR"/>
+<div class="absolute inset-0 bg-container-dark-low/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-space-sm transition-opacity">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-bright" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<!-- Upload Dropzone -->
+<div class="rounded-xl aspect-square bg-container-dark-low hover:bg-container-dark-high flex flex-col items-center justify-center cursor-pointer transition-colors p-space-md text-center group">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+</div>
+<span class="font-label-md text-on-surface font-bold">Add Photo</span>
+<span class="font-body-sm text-on-surface-variant">JPG, PNG up to 10MB</span>
+</div>
+</div>
+</div>
+<!-- ✨ SWIFTCART AI COMMERCE ASSISTANT PANEL -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden">
+<!-- Subtle Glow Mesh -->
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-lg relative z-10">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-action-gradient-start to-action-gradient-end flex items-center justify-center text-on-primary-container shadow-md">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<h2 class="font-headline-sm text-on-surface">AI Commerce Studio</h2>
+</div>
+<span class="font-label-sm px-2 py-0.5 rounded-full bg-primary/10 text-primary font-bold">Kampala v2.4</span>
+</div>
+<div class="flex flex-col gap-space-lg relative z-10">
+<!-- AI Feature 1: Background Cleaner -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">magic_button</span>
+                  Studio Light &amp; Isolation
+                </span>
+<span class="font-label-sm text-emerald-escrow flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Applied
+                </span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-space-sm">Dust removal, true-black isolation, and warm daylight rim flare tuned for Ugandan buyer feeds.</p>
+<button class="w-full py-2 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-sm hover:bg-surface-bright flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Adjust Studio Shadow Parameters</span>
+</button>
+</div>
+<!-- AI Feature 2: Kampala SEO Title Optimizer -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-action-gradient-start">trending_up</span>
+                  Title &amp; Search Rank (Kampala)
+                </span>
+<span class="font-label-sm bg-primary/20 text-primary px-1.5 py-0.5 rounded font-bold">+14% CTR Boost</span>
+</div>
+<div class="bg-container-dark-high p-space-sm rounded-lg mb-space-sm">
+<span class="font-label-sm text-on-surface-variant block mb-1">Recommended Optimization:</span>
+<p class="font-body-sm text-on-surface font-semibold" id="ai-suggestion-text">"SoundCore Space One ANC Headphones - SafeBoda 45-Min Fast Delivery Kampala"</p>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md hover:opacity-90 flex items-center justify-center gap-space-xs shadow-sm transition-opacity" id="apply-ai-title" type="button">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Apply Title to Product</span>
+</button>
+</div>
+<!-- AI Feature 3: Description Generator with Tone Persona -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+                  AI Description Composer
+                </span>
+</div>
+<label class="block font-label-sm text-on-surface-variant mb-1">Localization Persona</label>
+<div class="grid grid-cols-3 gap-1.5 mb-space-sm">
+<button class="tone-btn active py-1.5 px-2 rounded bg-container-dark-high text-primary font-label-sm font-bold text-center" type="button">Kampala Commute</button>
+<button class="tone-btn py-1.5 px-2 rounded bg-container-dark-high text-on-surface-variant font-label-sm text-center hover:text-on-surface" type="button">Audiophile Spec</button>
+<button class="tone-btn py-1.5 px-2 rounded bg-container-dark-high text-on-surface-variant font-label-sm text-center hover:text-on-surface" type="button">Executive Focus</button>
+</div>
+<button class="w-full py-2 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-sm hover:bg-surface-bright flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+<span>Regenerate Ugandan Market Pitch</span>
+</button>
+</div>
+<!-- AI Feature 4: Kampala Price Intelligence -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-mtn-yellow">analytics</span>
+                  Kampala Price Telematics
+                </span>
+<span class="font-label-sm text-emerald-escrow font-bold">Top Seller Tier</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-body-sm py-1">
+<span class="text-on-surface-variant">Regional Market Mean:</span>
+<span class="font-bold">UGX 255,000</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-body-sm py-1">
+<span class="text-on-surface-variant">Your Active Price:</span>
+<span class="text-emerald-escrow font-bold">UGX 248,500</span>
+</div>
+<!-- Price Spectrum Bar -->
+<div class="w-full bg-container-dark-high h-2 rounded-full mt-2 relative overflow-hidden">
+<div class="bg-emerald-escrow h-full rounded-full w-[65%]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-on-surface-variant mt-1.5">
+<span>UGX 220,000 (Low)</span>
+<span class="text-emerald-escrow font-bold">Sweet Spot</span>
+<span>UGX 310,000 (SRP)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Footer Bar (Tablet Ergonomics Minimum Tap Footprint) -->
+<div class="sticky bottom-0 z-30 px-gutter-desktop py-space-md bg-container-dark-low/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-escrow opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-escrow"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">Store Node: Nakasero Central (Connected 5G/Fiber)</span>
+<span class="font-body-sm text-on-surface-variant">All updates synchronize across 14 Boda dispatch hubs in Greater Kampala</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial h-12 px-space-lg rounded-xl bg-container-dark-high text-on-surface font-label-md hover:bg-surface-bright transition-colors" type="button">
+          Discard Draft
+        </button>
+<button class="flex-1 sm:flex-initial h-12 px-space-xl rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg shadow-[0_4px_18px_rgba(218,55,0,0.35)] flex items-center justify-center gap-space-xs active:scale-95 transition-transform" id="floating-publish-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for editor actions
+  document.addEventListener('DOMContentLoaded', () => {
+    const applyTitleBtn = document.getElementById('apply-ai-title');
+    const prodTitleInput = document.getElementById('prod-title');
+    const aiSuggestionText = document.getElementById('ai-suggestion-text');
+
+    if (applyTitleBtn && prodTitleInput && aiSuggestionText) {
+      applyTitleBtn.addEventListener('click', () => {
+        // Strip outer quotes if present
+        const cleanedTitle = aiSuggestionText.innerText.replace(/^"|"$/g, '');
+        prodTitleInput.value = cleanedTitle;
+        applyTitleBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Title Updated!</span>';
+        applyTitleBtn.classList.remove('bg-primary-container');
+        applyTitleBtn.classList.add('bg-emerald-escrow', 'text-on-tertiary');
+        setTimeout(() => {
+          applyTitleBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">touch_app</span><span>Apply Title to Product</span>';
+          applyTitleBtn.classList.add('bg-primary-container');
+          applyTitleBtn.classList.remove('bg-emerald-escrow', 'text-on-tertiary');
+        }, 2400);
+      });
+    }
+
+    // Tone switcher interactive state
+    const toneBtns = document.querySelectorAll('.tone-btn');
+    toneBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        toneBtns.forEach(b => {
+          b.classList.remove('text-primary', 'font-bold');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('text-primary', 'font-bold');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    // Save Publish Feedback
+    const saveBtns = [document.getElementById('save-publish-btn'), document.getElementById('floating-publish-btn')];
+    saveBtns.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Syncing Catalog...</span>';
+          setTimeout(() => {
+            btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Published Live!</span>';
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+            }, 2000);
+          }, 800);
+        });
+      }
+    });
+  });
+</script></main></div></body></html>

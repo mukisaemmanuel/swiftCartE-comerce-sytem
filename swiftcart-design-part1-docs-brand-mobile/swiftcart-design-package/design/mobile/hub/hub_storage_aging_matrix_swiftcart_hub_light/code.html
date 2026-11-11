@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#b02f00", "on-error": "#ffffff", "surface-container-low": "#eff4ff", "tertiary-fixed": "#6ffbbe", "primary-fixed": "#ffdbd1", "on-error-container": "#93000a", "surface-dim": "#ccdbf4", "on-secondary-fixed": "#131b2e", "surface-bright": "#f8f9ff", "on-surface": "#0d1c2f", "surface-container": "#e6eeff", "secondary-container": "#dae2fd", "tertiary-container": "#00a572", "surface-tint": "#b02f00", "surface-container-high": "#dde9ff", "on-surface-variant": "#5b4039", "tertiary": "#006c49", "inverse-surface": "#233144", "on-secondary": "#ffffff", "inverse-on-surface": "#ebf1ff", "surface-variant": "#d5e3fd", "error-container": "#ffdad6", "on-tertiary-container": "#00311f", "background": "#f8f9ff", "on-tertiary": "#ffffff", "primary-container": "#ff5722", "error": "#ba1a1a", "on-primary-fixed-variant": "#862200", "on-secondary-fixed-variant": "#3f465c", "surface-container-highest": "#d5e3fd", "secondary-fixed": "#dae2fd", "inverse-primary": "#ffb5a0", "surface": "#f8f9ff", "on-background": "#0d1c2f", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#3b0900", "on-primary-container": "#541200", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#5c647a", "primary-fixed-dim": "#ffb5a0", "secondary-fixed-dim": "#bec6e0", "outline-variant": "#e4beb4", "secondary": "#565e74", "outline": "#907067", "on-tertiary-fixed": "#002113", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "space-md": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "margin-desktop": "2rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }] } } } }</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">chevron_left</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Uganda Ops</span><span class="font-headline-sm text-headline-sm leading-tight text-on-surface font-bold">Hub Storage Inspection</span></div></div></div><div class="flex items-center gap-space-sm"><div aria-label="User avatar" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Top Telemetry Status Stream -->
+<div class="w-full bg-surface-container px-margin py-1.5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-bold">GRID SYNC ACTIVE</span>
+<span class="font-body-sm text-body-sm text-secondary">| Sub-20ms Telemetry</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">0 Pending</span>
+</div>
+</div>
+<!-- Facility Node Master Card -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">warehouse</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">William St Central Hub</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-secondary font-bold">HUB-04</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>Lead: <strong class="text-on-surface">Isaac Kato</strong> (#AG-402)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Node Uptime</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">99.98%</span>
+</div>
+</div>
+<!-- Capacity Progress Tracking -->
+<div class="mt-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">342 / 460 Slots Occupied</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-bold">74% Capacity</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">118 Available</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary via-primary-container to-primary rounded-full" style="width: 74%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+<span>Optimal Bay Velocity</span>
+</div>
+<div class="flex items-center gap-1 bg-error-container/40 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-sm text-label-sm font-bold text-on-error-container">SLA Breach Risk: 6 Parcels</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SLA Thresholds Legend -->
+<div class="px-margin pt-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider block mb-1.5">Aging Matrix SLA Thresholds</span>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex items-center gap-1.5 bg-tertiary-fixed/30 p-1.5 rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>
+<div class="leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-bold block">&lt; 2 Days</span>
+<span class="font-label-sm text-[9px] text-tertiary font-semibold">Normal Inflow</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-amber-100/50 p-1.5 rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+<div class="leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-bold block">3-4 Days</span>
+<span class="font-label-sm text-[9px] text-amber-700 font-semibold">SMS Alert Required</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-error-container/40 p-1.5 rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>
+<div class="leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-bold block">5+ Days</span>
+<span class="font-label-sm text-[9px] text-error font-semibold">SLA Expired (RTO)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Persistent Search and Multi-Bay Tabs -->
+<div class="px-margin pt-space-md flex flex-col gap-space-sm">
+<!-- Search Bar -->
+<div class="relative flex items-center w-full">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-secondary font-body-sm text-body-sm pl-10 pr-20 py-2.5 rounded-xl shadow-sm outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search shelf ID (e.g. A04-2), barcode, or order ID..." type="text"/>
+<div class="absolute right-2 flex items-center gap-1">
+<button aria-label="Scan barcode" class="p-1 rounded-lg hover:bg-surface-container text-secondary" type="button">
+<span class="material-symbols-outlined text-[19px]">barcode_scanner</span>
+</button>
+<button aria-label="Filter results" class="p-1 rounded-lg hover:bg-surface-container text-secondary" type="button">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Bay Filtering Horizon Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none -mx-margin px-margin">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory_2</span>
+<span>All Bays (342)</span>
+</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">storefront</span>
+<span>Bay A (OTC Pickup)</span>
+</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">two_wheeler</span>
+<span>Bay B (Express Boda)</span>
+</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">local_shipping</span>
+<span>Bay C (Linehaul)</span>
+</button>
+</div>
+</div>
+<!-- Realtime Matrix Stream Header -->
+<div class="px-margin pt-space-md pb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Storage Matrix Shelf Feed</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Sorted by SLA Aging ↓</span>
+</div>
+<!-- Live Shelf Inventory Stack -->
+<div class="px-margin flex flex-col gap-space-md">
+<!-- Card 1: Slot A02 - Normal Inflow -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary"></div>
+<!-- Card Top Info -->
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container px-2.5 py-1 rounded-md text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase block font-bold">Slot</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-none">A02</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">#SC-ORD-9488</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-secondary px-1.5 py-0.2 rounded font-semibold">Tier 1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[180px]">SoundCore Space One ANC</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-price-display text-[16px] text-on-surface font-extrabold">UGX 340,000</span>
+<span class="font-label-sm text-[10px] text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified_user</span> Escrow Held
+          </span>
+</div>
+</div>
+<!-- Item Meta & SLA Pills -->
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between text-body-sm font-body-sm pl-2">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed/30 text-tertiary font-bold text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Ready for Rider Pickup
+          </span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Inflow: Today 15:10 (0d)</span>
+</div>
+</div>
+<!-- Micro Buyer & Action Row -->
+<div class="flex items-center justify-between pl-1 pt-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+<span>Buyer: 07••••••419</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-tertiary font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm hover:bg-tertiary-fixed/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+<span>PIN Lock Matched</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Slot A04 - SLA Expired Breach -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<!-- Card Top Info -->
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-2">
+<div class="bg-error-container/30 px-2.5 py-1 rounded-md text-center">
+<span class="font-label-sm text-label-sm text-error uppercase block font-bold">Slot</span>
+<span class="font-headline-sm text-headline-sm text-error font-extrabold leading-none">A04</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">#SC-ORD-9104</span>
+<span class="font-label-sm text-label-sm bg-error-container text-error px-1.5 py-0.2 rounded font-bold">URGENT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[180px]">Samsung Galaxy A54 5G</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-price-display text-[16px] text-on-surface font-extrabold">UGX 1,220,000</span>
+<span class="font-label-sm text-[10px] text-primary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">lock_clock</span> Merchant Hold
+          </span>
+</div>
+</div>
+<!-- Item Meta & SLA Expiry Warning Pill -->
+<div class="bg-error-container/20 p-2.5 rounded-lg flex flex-col gap-1.5 pl-2">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error font-extrabold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px]">alarm_on</span> SLA EXPIRED (+24h Breach)
+          </span>
+<span class="font-label-sm text-label-sm font-bold text-error">Held: 6 of 5 Days</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-error">ring_volume</span>
+            Buyer: <strong>07••••••882</strong> (2 Missed OTC Pickups)
+          </span>
+</div>
+</div>
+<!-- Dual High-Stakes Action Row -->
+<div class="grid grid-cols-2 gap-2 pl-1 pt-0.5">
+<button class="py-2 px-2 rounded-lg bg-amber-100 text-amber-900 font-label-md text-label-md font-bold flex items-center justify-center gap-1 active:scale-98 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+<span>Send SMS Alert</span>
+</button>
+<button class="py-2 px-2 rounded-lg bg-error-container text-error font-label-md text-label-md font-bold flex items-center justify-center gap-1 active:scale-98 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_return</span>
+<span>Initiate Return (RTO)</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Slot B01 - PIN Mismatch Alert -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-amber-500"></div>
+<!-- Card Top Info -->
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container px-2.5 py-1 rounded-md text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase block font-bold">Slot</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-none">B01</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">#SC-ORD-9281</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-secondary font-semibold px-1.5 py-0.2 rounded">Boda Bay</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[180px]">SoundCore ANC Life Q30</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-price-display text-[16px] text-on-surface font-extrabold">UGX 285,000</span>
+<span class="font-label-sm text-[10px] text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">security</span> Escrow Protected
+          </span>
+</div>
+</div>
+<!-- Item Meta & SLA Warning Pill -->
+<div class="bg-amber-50/80 p-2 rounded-lg flex items-center justify-between text-body-sm font-body-sm pl-2">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 font-bold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px]">pin</span> Hold - PIN Mismatch
+          </span>
+</div>
+<div class="flex items-center gap-1 text-amber-800 font-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Held: 3 Days (48h left)</span>
+</div>
+</div>
+<!-- Micro Rider Row & Resolution Link -->
+<div class="flex items-center justify-between pl-1 pt-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">two_wheeler</span>
+<span>Rider: <strong>J. Mugisha</strong> (#BD-112)</span>
+</div>
+<button class="font-label-md text-label-md font-bold text-primary flex items-center gap-0.5 hover:underline" type="button">
+<span>Resolve PIN Hold</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Slot C03 - Linehaul Staged -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<!-- Card Top Info -->
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container px-2.5 py-1 rounded-md text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase block font-bold">Slot</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-none">C03</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">#SC-ORD-8820</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary font-bold px-1.5 py-0.2 rounded">B2B Heavy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[180px]">Solar Inverter 3KVA Hybrid</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-price-display text-[16px] text-on-surface font-extrabold">UGX 2,450,000</span>
+<span class="font-label-sm text-[10px] text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">account_balance</span> Ledger Verified
+          </span>
+</div>
+</div>
+<!-- Item Meta & SLA Schedule Pill -->
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between text-body-sm font-body-sm pl-2">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px]">local_shipping</span> Linehaul Staged: Jinja Depot
+          </span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">departure_board</span>
+<span>Departs: Tonight 21:00</span>
+</div>
+</div>
+<!-- Micro Logistics Info & Weight specs -->
+<div class="flex items-center justify-between pl-1 pt-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">weight</span>
+<span>Heavy Cargo: <strong>18.4 kg</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-1 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Bay Cleared
+        </span>
+</div>
+</div>
+</div>
+<!-- Micro Audit Status Footer Note -->
+<div class="px-margin pt-space-lg flex items-center justify-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-body-sm text-body-sm">Last Physical Shelf Walkthrough: <strong>42 mins ago</strong> by Isaac K.</span>
+</div>
+<!-- Persistent Bottom Action Dock -->
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-xl px-margin py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)] z-40 flex items-center gap-space-sm pb-safe">
+<!-- Left Action: Audit Bay Inv. -->
+<button class="flex-1 h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-98 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">checklist_rtl</span>
+<span>Audit Bay Inv.</span>
+</button>
+<!-- Right Action: Scan to Shelf (Primary Orange) -->
+<button class="flex-[1.4] h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-extrabold flex items-center justify-center gap-2 shadow-md active:scale-98 hover:brightness-105 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+<span>Scan to Shelf</span>
+</button>
+</div>
+</div></main></body></html>

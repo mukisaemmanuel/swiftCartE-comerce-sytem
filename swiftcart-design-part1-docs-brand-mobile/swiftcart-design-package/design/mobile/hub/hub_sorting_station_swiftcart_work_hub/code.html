@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#0d1c2f", "secondary": "#565e74", "surface-container": "#e6eeff", "surface-dim": "#ccdbf4", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed": "#6ffbbe", "surface-container-lowest": "#ffffff", "surface-tint": "#b02f00", "on-primary-container": "#541200", "on-primary": "#ffffff", "surface-variant": "#d5e3fd", "primary-container": "#ff5722", "inverse-on-surface": "#ebf1ff", "on-primary-fixed-variant": "#862200", "primary-fixed": "#ffdbd1", "on-secondary-container": "#5c647a", "inverse-surface": "#233144", "secondary-container": "#dae2fd", "primary": "#b02f00", "error": "#ba1a1a", "on-secondary-fixed": "#131b2e", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "surface": "#f8f9ff", "outline": "#907067", "surface-container-high": "#dde9ff", "on-secondary": "#ffffff", "inverse-primary": "#ffb5a0", "secondary-fixed-dim": "#bec6e0", "on-error": "#ffffff", "on-error-container": "#93000a", "outline-variant": "#e4beb4", "background": "#f8f9ff", "tertiary-container": "#00a572", "primary-fixed-dim": "#ffb5a0", "secondary-fixed": "#dae2fd", "on-surface-variant": "#5b4039", "on-tertiary-container": "#00311f", "on-secondary-fixed-variant": "#3f465c", "on-tertiary": "#ffffff", "on-primary-fixed": "#3b0900", "surface-bright": "#f8f9ff", "surface-container-low": "#eff4ff", "tertiary": "#006c49", "surface-container-highest": "#d5e3fd", "on-background": "#0d1c2f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "gutter": "1rem", "margin": "1rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:"Plus Jakarta Sans",sans-serif;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">SwiftCart UG</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Online</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Sorting</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Alerts" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="Theme Toggle" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">routine</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm ml-0.5"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Operator & Hub Header Tile -->
+<div class="px-margin pt-space-xs pb-space-sm flex flex-col gap-space-xs bg-surface-container-low">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">warehouse</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider truncate">Sorting Deck • Terminal 04</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">William St Central Hub</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-surface-container-high flex-shrink-0">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Bay 4 Sorting</span>
+</div>
+</div>
+<!-- Shift Progress Micro-Tracker -->
+<div class="mt-1 p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary truncate">Operator on Duty</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Otim Samuel • ID #8841</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Shift Quota:</span>
+<span class="font-label-md text-label-md text-primary font-bold">142 / 160</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Mode Selector (Scrollable Tactile Tabs) -->
+<div class="px-margin pt-space-sm pb-space-xs overflow-x-auto no-scrollbar flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-inverse-surface text-inverse-on-surface shadow-sm font-label-md text-label-md flex-shrink-0 font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">two_wheeler</span>
+<span>Zone Sorting (Boda Racks)</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-secondary hover:text-on-surface font-label-md text-label-md flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">rv_hookup</span>
+<span>Regional Linehaul</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-secondary hover:text-on-surface font-label-md text-label-md flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Reverse Returns Bay</span>
+</button>
+</div>
+<!-- Active Focus Zone & Courier Staging Deck -->
+<div class="px-margin mt-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary/5 pointer-events-none"></div>
+<!-- Zone Identification Pill -->
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-on-secondary-fixed text-surface-container-lowest font-label-sm text-label-sm uppercase font-extrabold tracking-wide">Route 08</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">bolt</span>PRIORITY DISPATCH
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 tracking-tight truncate">Kampala Metro • East Corridor</h2>
+<p class="font-body-sm text-body-sm text-secondary truncate">Lugogo Bypass • Nakawa Market • Ntinda Complex</p>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+</div>
+<!-- Assigned Courier Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">sports_motorsports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Kizito Brian</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Bajaj Boxer • <strong class="text-on-surface">UEF 842X</strong></span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-on-secondary-container font-label-sm text-label-sm font-semibold flex-shrink-0">
+          Staged @ Bay 4
+        </span>
+</div>
+<!-- Capacity Meter with Animated Visual Bar -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">shopping_bag</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Courier Sack Capacity</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg text-primary-container font-extrabold">18</span>
+<span class="font-label-md text-label-md text-secondary">/ 20 pkgs</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">90% Full</span>
+</div>
+</div>
+<!-- Segmented Industrial Fill Bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex p-0.5 gap-0.5">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+<div class="h-full bg-surface-variant flex-1 rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Bag volume threshold reached • Safe to apply security tamper seal
+        </span>
+</div>
+</div>
+</div>
+<!-- High-Velocity Industrial Actions -->
+<div class="px-margin mt-space-md flex flex-col gap-space-sm">
+<!-- Camera Fast Scanner Button (Industrial 56px touch target) -->
+<button class="w-full h-14 rounded-xl bg-inverse-surface hover:bg-on-surface text-inverse-on-surface flex items-center justify-between px-space-md shadow-md active:scale-[0.99] transition-all" id="scan-trigger-btn" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">barcode_scanner</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold leading-tight">Scan Package into Bag</span>
+<span class="font-label-sm text-label-sm text-surface-variant/80">Optical 1D/2D Laser + Camera Auto-Sync</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</div>
+</button>
+<!-- Tamper Seal Generation Tile -->
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0">lock_open</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Tamper Barcode Seal</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-bold tracking-tight truncate" id="seal-code-text">#BAG-UG-2025-044</span>
+</div>
+</div>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-lowest hover:bg-surface text-primary shadow-sm font-label-md text-label-md font-bold flex items-center gap-1 active:scale-95 transition-transform flex-shrink-0" id="seal-action-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print &amp; Bind</span>
+</button>
+</div>
+</div>
+<!-- Dispatch Manifest Section -->
+<div class="px-margin mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">checklist</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Manifest Queue (Route 08)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">3 Bagged • 1 Incomplete</span>
+</div>
+<!-- Package Cards Queue -->
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Item 1: SoundCore Space One -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-mono font-bold text-secondary">#SC-ORD-9281</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold truncate">Forest Mall</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">SoundCore Space One Wireless</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex-shrink-0">
+          Bagged ✓
+        </span>
+</div>
+<!-- Item 2: Samsung Galaxy A54 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-mono font-bold text-secondary">#SC-ORD-9284</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold truncate">Ntinda Complex</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Samsung Galaxy A54 5G 128GB</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex-shrink-0">
+          Bagged ✓
+        </span>
+</div>
+<!-- Item 3: Anker 65W GaN Charger -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-mono font-bold text-secondary">#SC-ORD-9290</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold truncate">Spear Motors Nakawa</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Anker 65W GaN Fast Charger</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex-shrink-0">
+          Bagged ✓
+        </span>
+</div>
+<!-- Item 4: Oraimo FreePods 4 (Active Pending Item) -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-md flex items-center justify-between gap-space-sm transition-all duration-300" id="pending-item-card">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0 animate-pulse" id="pending-status-icon">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">#SC-ORD-9302</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold truncate">Makerere Main Gate</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Oraimo FreePods 4 ANC</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex-shrink-0 flex items-center gap-1" id="quick-pack-btn" type="button">
+<span>Pack Now</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Exception Handling Sub-Bar -->
+<div class="px-margin mt-space-md">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0">flag</span>
+<span class="font-label-md text-label-md text-secondary truncate">Station Exceptions</span>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-error">report_problem</span>
+<span>Missing SKU</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">alt_route</span>
+<span>Reroute</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Final Dispatch Primary Action Button (>= 52px ergonomics) -->
+<div class="px-margin mt-space-md">
+<button class="w-full h-14 rounded-xl bg-primary-container hover:bg-primary text-on-primary shadow-lg flex items-center justify-center gap-space-sm active:scale-[0.98] transition-all" id="dispatch-handover-btn" type="button">
+<span class="material-symbols-outlined text-[26px]">handshake</span>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-extrabold leading-tight">Handover to Courier Kizito</span>
+<span class="font-label-sm text-label-sm text-on-primary/90 font-medium">Requires Courier App QR Scan • Bay 4 Terminal</span>
+</div>
+<span class="material-symbols-outlined text-[20px] ml-auto">qr_code_2</span>
+</button>
+</div>
+<!-- Handover Verification Feedback Modal Container (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-end justify-center px-margin pb-20 hidden" id="handover-modal">
+<div class="w-full max-w-sm rounded-2xl bg-surface-container-lowest p-space-md shadow-2xl flex flex-col items-center text-center gap-space-sm">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dispatch Handover Staged</h4>
+<p class="font-body-sm text-body-sm text-secondary">Awaiting Rider Kizito Brian to scan bag seal <strong>#BAG-UG-2025-044</strong></p>
+</div>
+<div class="w-32 h-32 rounded-xl bg-surface-container flex items-center justify-center p-2 mt-1">
+<span class="material-symbols-outlined text-[72px] text-on-surface">qr_code_2</span>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold mt-1" id="close-modal-btn" type="button">
+        Return to Station Monitor
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions for Sorting Station Terminal
+  const quickPackBtn = document.getElementById('quick-pack-btn');
+  const pendingCard = document.getElementById('pending-item-card');
+  const pendingIcon = document.getElementById('pending-status-icon');
+  const sealActionBtn = document.getElementById('seal-action-btn');
+  const sealText = document.getElementById('seal-code-text');
+  const handoverBtn = document.getElementById('dispatch-handover-btn');
+  const handoverModal = document.getElementById('handover-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const scanBtn = document.getElementById('scan-trigger-btn');
+
+  // Pack Item Micro-Action
+  if (quickPackBtn) {
+    quickPackBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      pendingCard.classList.remove('bg-surface-container-lowest');
+      pendingCard.classList.add('bg-tertiary-fixed/20');
+      
+      pendingIcon.classList.remove('bg-primary-fixed', 'text-on-primary-fixed', 'animate-pulse');
+      pendingIcon.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      pendingIcon.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span>';
+      
+      quickPackBtn.className = 'px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex-shrink-0';
+      quickPackBtn.innerHTML = 'Bagged ✓';
+      quickPackBtn.disabled = true;
+    });
+  }
+
+  // Scan Button Toast Simulation
+  if (scanBtn) {
+    scanBtn.addEventListener('click', () => {
+      scanBtn.classList.add('scale-[0.98]');
+      setTimeout(() => scanBtn.classList.remove('scale-[0.98]'), 150);
+      if (quickPackBtn && !quickPackBtn.disabled) {
+        quickPackBtn.click();
+      }
+    });
+  }
+
+  // Barcode Seal Binding Feedback
+  if (sealActionBtn) {
+    sealActionBtn.addEventListener('click', () => {
+      sealActionBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span> Sealed!';
+      sealActionBtn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      sealText.classList.add('text-tertiary');
+    });
+  }
+
+  // Handover Modal Open/Close
+  if (handoverBtn && handoverModal) {
+    handoverBtn.addEventListener('click', () => {
+      handoverModal.classList.remove('hidden');
+    });
+  }
+
+  if (closeModalBtn && handoverModal) {
+    closeModalBtn.addEventListener('click', () => {
+      handoverModal.classList.add('hidden');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 w-14 h-12 text-secondary hover:text-on-surface transition-all" data-path="intake" href="#"><span class="material-symbols-outlined text-[22px]">move_to_inbox</span><span class="font-label-sm text-label-sm tracking-tight">Intake</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 w-14 h-12 transition-all text-primary font-label-md" data-path="sorting" href="#"><span class="material-symbols-outlined text-[22px]">filter_alt</span><span class="font-label-sm text-label-sm tracking-tight">Sorting</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-14 h-12 text-secondary hover:text-on-surface transition-all" data-path="outbound" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Outbound</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-14 h-12 text-secondary hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-14 h-12 text-secondary hover:text-on-surface transition-all" data-path="audit" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span class="font-label-sm text-label-sm tracking-tight">Audit</span></a></div></nav></body></html>

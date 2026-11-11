@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-variant":"#e8e1dc","inverse-surface":"#33302c","surface-tint":"#b22b00","inverse-on-surface":"#f6f0ea","on-error":"#ffffff","primary":"#ae2a00","on-secondary-fixed":"#091649","error":"#ba1a1a","surface-container-lowest":"#ffffff","surface-bright":"#fff8f2","on-tertiary-fixed":"#002113","primary-fixed-dim":"#ffb5a1","outline":"#907067","tertiary-fixed-dim":"#4edea3","surface-container-highest":"#e8e1dc","surface-container":"#f3ede7","primary-container":"#da3700","on-surface":"#1e1b18","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#384377","secondary":"#505b90","surface-dim":"#dfd9d3","outline-variant":"#e5beb4","on-surface-variant":"#5c4039","surface-container-low":"#f9f2ec","tertiary-fixed":"#6ffbbe","on-secondary-container":"#444f83","primary-fixed":"#ffdbd1","background":"#fff8f2","tertiary-container":"#00855b","on-primary-container":"#fffcff","on-error-container":"#93000a","error-container":"#ffdad6","secondary-fixed":"#dde1ff","on-tertiary-container":"#f4fff6","on-primary-fixed":"#3c0800","on-background":"#1e1b18","surface":"#fff8f2","on-tertiary-fixed-variant":"#005236","on-primary":"#ffffff","inverse-primary":"#ffb5a1","surface-container-high":"#eee7e1","on-secondary":"#ffffff","secondary-fixed-dim":"#b8c3ff","secondary-container":"#b8c3ff","tertiary":"#006947","on-primary-fixed-variant":"#881f00"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1rem","space-md":"0.75rem","gutter":"0.75rem","space-xs":"0.25rem","space-sm":"0.5rem","margin":"1rem","space-xl":"1.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"currency-code":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],"currency-code":["12px",{"lineHeight":"14px","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"12px","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"price-display":["22px",{"lineHeight":"28px","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"18px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-16 px-space-xl flex items-center justify-between shrink-0"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7VG2Yr54mjxR9P21ZBLXl6aZZcEwwiQsqIoiHbjiWrRN_LNFoZr3Xf-oe4BYMfP_1qfTYn5uJ5xBW3VXuWgAwlX6icRkGyeKFAms_9Rm8OgiigBM0_2i6WSBH73vih9ThQFvq8o5y5GIB4I5hUu6WDv_mmXgzlxE0fOe2UKPXKDysEMn8jwXwZ0CrcPMXuFluPDfvJv3KwHZHYm_NNC83GpTZCJg33NP-Qabix39nMe0w-t2mb1xZkFE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">SwiftCart</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Uganda Admin HQ</span></div></div></div><nav class="flex-1 px-space-md py-space-sm overflow-y-auto space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.30)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seller-applications" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-lg text-label-lg">Seller Applications</span></div><span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sellers-directory" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-lg text-label-lg">Sellers Directory</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.30)]" data-path="riders-fleet" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">two_wheeler</span><span class="font-label-lg text-label-lg">Riders Fleet</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="product-moderation" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Product Moderation</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">8</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders-oversight" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-lg text-label-lg">Orders Oversight</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="escrow-and-disputes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Escrow &amp; Disputes</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="payout-queue" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-lg text-label-lg">Payout Queue</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Platform Settings</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-log" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-lg text-label-lg">Audit Log</span></div></a></nav><div class="p-space-md shrink-0"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] space-y-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Telecom Core Rails</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span></div><div class="space-y-space-xs"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-on-surface">MTN MoMo Rail</span><span class="text-tertiary font-bold">99.9%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-tertiary h-full rounded-full w-[99.9%]"></div></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-on-surface">Airtel Money Rail</span><span class="text-tertiary font-bold">100%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-tertiary h-full rounded-full w-[100%]"></div></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.02)]"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface">Kampala Central Hub</span><span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold uppercase">Online</span></div></div><div class="flex-1 max-w-xl mx-space-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-10 pr-12 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-[0_1px_2px_rgba(14,27,77,0.02)] focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search orders, riders, couriers, dispatches, phone numbers..." type="text"/><span class="absolute right-space-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.02)]"><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface">MTN 99.9%</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.02)]"><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface">Airtel 100%</span></div></div><button class="p-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_1px_2px_rgba(14,27,77,0.02)]" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button class="relative p-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_1px_2px_rgba(14,27,77,0.02)]" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:block"><span class="font-label-md text-label-md text-on-surface leading-tight">Kizito Ronald</span><span class="font-label-sm text-label-sm text-primary leading-tight font-bold">Super Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-xl py-space-lg"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Breadcrumbs & Header -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Admin Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Riders Fleet Directory</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Riders &amp; Courier Fleet Operations Directory</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time Kampala metropolitan courier registry, active SafeBoda dispatches, shift telemetry, driver onboarding verification, and performance governance.</p>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<button class="h-12 px-space-lg rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-high transition-all flex items-center gap-space-sm active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Manifest (CSV)</span>
+</button>
+<button class="h-12 px-space-lg rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-lg text-label-lg shadow-[0_4px_14px_rgba(218,55,0,0.30)] hover:brightness-105 active:scale-95 transition-all flex items-center gap-space-sm" onclick="openOnboardModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Onboard New Courier</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Metric Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Active On-Duty Boda Fleet</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-display text-price-display text-on-surface">286</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 320 registered</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">two_wheeler</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center gap-space-xs">
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> 89.3%
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">fleet availability across 18 Kampala stages</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Current In-Transit Trips</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-display text-price-display text-on-surface">142</span>
+<span class="font-body-sm text-body-sm text-primary font-bold">Live Dispatches</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">navigation</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg speed <strong>28 km/h</strong> • <strong>21.4 min</strong> avg delivery time</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Handover Success Rate</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-display text-price-display text-tertiary">98.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Only <strong>6 code exceptions</strong> today (&lt;0.2%)</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Daily Earnings Disbursed</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-currency-code text-currency-code text-primary font-bold">UGX</span>
+<span class="font-price-display text-price-display text-on-surface">14,820,000</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-tertiary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant MTN MoMo &amp; Airtel Payouts</span>
+</div>
+</div>
+</div>
+<!-- Filter & Corridor Control Deck -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Corridor Selector -->
+<div class="relative min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">map</span>
+<select class="w-full h-10 pl-9 pr-8 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer">
+<option>Kampala Central (Nakasero, Kololo, Bugolobi, Ntinda)</option>
+<option>Kampala North (Kawempe, Kisaasi, Bwaise, Komamboga)</option>
+<option>Kampala South (Kabalagala, Kansanga, Ggaba, Makindye)</option>
+<option>Kampala East (Kireka, Bweyogerere, Mukono corridor)</option>
+<option>Entebbe Express Corridor &amp; Airport Cargo Hub</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter Chips -->
+<div class="flex items-center gap-1.5 p-1 rounded-lg bg-surface-container">
+<button class="px-space-sm py-1 rounded-md bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm font-bold" type="button">Active On Shift (286)</button>
+<button class="px-space-sm py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">Dispatched (142)</button>
+<button class="px-space-sm py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">Idle at Stage (94)</button>
+<button class="px-space-sm py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">On Break (50)</button>
+</div>
+</div>
+<!-- Search Input -->
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search rider, ID, stage, NIN, or plate..." type="text"/>
+</div>
+</div>
+<!-- Main Fleet Roster Table & Telematics Overview -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+<th class="py-space-md px-space-lg">Courier &amp; Badge</th>
+<th class="py-space-md px-space-md">Base Stage &amp; Hub</th>
+<th class="py-space-md px-space-md">Vehicle &amp; Plate</th>
+<th class="py-space-md px-space-md">Verification / KYC</th>
+<th class="py-space-md px-space-md">Telemetry &amp; Status</th>
+<th class="py-space-md px-space-md text-center">Daily SLA</th>
+<th class="py-space-md px-space-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Selected Featured Rider (Brian Kizito) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer bg-primary-fixed/10" onclick="openDrawer('RC-8821')">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Close up professional portrait of a confident Ugandan male motorcycle delivery courier smiling wearing a clean bright orange SafeBoda reflective vest and branded safety jacket against a warm sunlight Kampala background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6U2hPbuvL8HZNP2tXnueWywjyQcUKo2CvFdDXaQzUs7vbPsChUpzbT18SOux9x45qv7WT9jwMG3sZJRAWsggcA_zCjt3_negx4Pr55oc1WbbB5RSyLaU7tU_cJlM3vgwTU5q36e_2UztbKNSNSbSFXZhsQI01gqeAanj1kzkgZFSCUT3dIGIxDTURelBGXB5a84JniMriN6v3H3BQ-xkBe8CWAa4vBC800s81jR9d"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Brian Kizito</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold">Gold Tier</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-currency-code text-currency-code text-primary font-bold">#RC-8821</span>
+<span>•</span>
+<span class="flex items-center text-[#d97706] font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                    </span>
+<span class="text-[11px]">(648)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">William St Stage #04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Central Hub • Nakasero</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bajaj Boxer 150cc</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">UEF 842X</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary" title="Logbook Checked &amp; Cleared">check_circle</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Gear Checked (2025)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm text-[11px]">
+<span>NIN: CM8803•••104</span>
+<span>• KCCA Boda</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Delivering #SC-98241</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">battery_5_bar</span> 84%</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">signal_cellular_alt</span> MTN 4G</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">14 / 14</span>
+<span class="text-[11px] text-tertiary font-bold">100% on-time</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openDrawer('RC-8821')" title="Inspect Telematics" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Emergency Dispatch Re-route" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-error hover:bg-error-container transition-colors" title="Suspend Courier" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Sarah Namubiru -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('RC-9012')">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of a young Ugandan female motorcycle courier with helmet tucked under arm smiling proudly wearing a high visibility certified jacket and badge outdoors in Kampala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFTydDf2ST5Vxxo5Gw3D7vZUAiYl8FqA2hJl83m9vbftVNUxQmIHLpOTRZgUrhlyXKrG9pXaRNRUO0_nfw-M8Bsv2KAoqvaxRspOD9tOWFmxufk-I2Bl0yGDTov0VTe5yCzHUYwPPtJ_Z8ECXXC1V_jKsY6sgBvJZq89G0yQF1oNRDCbegE03N8dVwRVPD8VtfyZzbqaqAMAckvfJYdH3sN9TMpLHdAYBQCTwR86s"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Sarah Namubiru</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">Silver Tier</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-currency-code text-currency-code text-primary font-bold">#RC-9012</span>
+<span>•</span>
+<span class="flex items-center text-[#d97706] font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.95
+                    </span>
+<span class="text-[11px]">(412)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acacia Mall Stage</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kololo Sub-Hub</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">TVS Star HLX 125</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">UEX 512W</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary" title="Logbook Checked">check_circle</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Gear Checked (2025)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm text-[11px]">
+<span>NIN: CF9202•••381</span>
+<span>• KCCA Boda</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span>Idle at Acacia Hub</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">battery_full</span> 92%</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">signal_cellular_alt</span> Airtel 4G</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">11 / 11</span>
+<span class="text-[11px] text-tertiary font-bold">98% on-time</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openDrawer('RC-9012')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-error hover:bg-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Joseph Katende -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('RC-7740')">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of an experienced Ugandan male commercial delivery motorcyclist wearing protective eyewear and high viz uniform standing beside his motorcycle in Kampala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkEm0fJCNZA8WpI_Apc8Z-4UlXA88N7mjRY6DVc8-jbGCk4XuzIh7CWrs339KA3VOQESgB5cCsBY10UTVro5ERBVXENyekATm1oqeejWLgxtqIYU-v-9kWHW_tnGHZ56UkNsst5OjoXMJZcTVHWr5wpqGdIHXgrypE3GS2U7rX2n6HKMmTioeFpzeFxYBdsyrV52PcVJm1-vaBhrf9bD46qiyJFZNeAdKdcXoxjPv_"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Joseph Katende</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold">Gold Tier</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-currency-code text-currency-code text-primary font-bold">#RC-7740</span>
+<span>•</span>
+<span class="flex items-center text-[#d97706] font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.88
+                    </span>
+<span class="text-[11px]">(892)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Nakawa Market Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">East Corridor • Jinja Rd</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bajaj Boxer 150cc</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">UED 109K</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Gear Checked (2025)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm text-[11px]">
+<span>NIN: CM7711•••902</span>
+<span>• KCCA Boda</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Delivering #SC-98104</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">battery_6_bar</span> 76%</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">signal_cellular_alt</span> MTN 4G</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">16 / 16</span>
+<span class="text-[11px] text-tertiary font-bold">100% on-time</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openDrawer('RC-7740')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-error hover:bg-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Derrick Omondi (On Break) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('RC-8120')">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of an energetic Ugandan courier driver taking off motorcycle helmet smiling outdoors in sunshine Kampala city setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH-BHLu5tlzRXvX_pXsw_5rQalNEJA7EXXBlgIeIEN2lwbJU1YGzFBy78lEzQEIsy6yxncNC04aZgEqBorq6zKXn7MSl4Hq2EUw91HruoKzWhUJnIOlXIW4xhrXhL8TONlRfja3iZ6A1YObF7FAAtsXiiMy-nBukClrOZzAlD25YfEl943ZKn6JmOegL1IXk7M3KQ7GLoKAo8SgGYHu7WhFBsEFitb_kgYblmpNHOx"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Derrick Omondi</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-bold">Standard</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-currency-code text-currency-code text-primary font-bold">#RC-8120</span>
+<span>•</span>
+<span class="flex items-center text-[#d97706] font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.79
+                    </span>
+<span class="text-[11px]">(194)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ntinda Complex Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kisaasi / Ntinda Link</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Yamaha Crux 110</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">UEB 773M</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Gear Checked (2025)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm text-[11px]">
+<span>NIN: CM9504•••441</span>
+<span>• KCCA Boda</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-on-surface-variant"></span>
+<span>Shift Break (18m left)</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-primary">battery_3_bar</span> 42%</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">signal_cellular_alt</span> Airtel 4G</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">8 / 9</span>
+<span class="text-[11px] text-on-surface-variant font-medium">89% on-time</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openDrawer('RC-8120')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-error hover:bg-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Grace Kyomugisha -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('RC-6490')">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of a young smiling Ugandan female dispatch courier wearing an official reflective jacket with radio communicator on shoulder in Kampala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANQTT7g-3URVPTXhjcTyGHWj_3-s4InNyE7gh1cYJv4ylNmh2TjHu37Ru7u21oqLA7odAijAGCiFjFbrCpiX_U1-WEaExDrEET5EfmEpFAG74ZlBnLJcXJkELECkbcT5X7bILNh2vWWp6laemUiHXPA5Uh_bzcwmkO3XodlbDMtDVCP8UjbC2AKfvELGUkI2IynqsKUyi_ejslF6DrUERpG8FbjUyhaMox_OZW-Pxj"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Grace Kyomugisha</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold">Gold Tier</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-currency-code text-currency-code text-primary font-bold">#RC-6490</span>
+<span>•</span>
+<span class="flex items-center text-[#d97706] font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.98
+                    </span>
+<span class="text-[11px]">(520)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bugolobi Village Mall</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spring Road Hub</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bajaj Boxer 150cc</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">UEK 992P</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Gear Checked (2025)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm text-[11px]">
+<span>NIN: CF8901•••619</span>
+<span>• KCCA Boda</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Delivering #SC-98319</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">battery_full</span> 95%</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">signal_cellular_alt</span> MTN 4G</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">12 / 12</span>
+<span class="text-[11px] text-tertiary font-bold">100% on-time</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openDrawer('RC-6490')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-error hover:bg-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <strong>1 - 5</strong> of <strong>286 active couriers</strong> (320 registered)</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm disabled:opacity-50" disabled="" type="button">Previous</button>
+<button class="h-8 w-8 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center" type="button">1</button>
+<button class="h-8 w-8 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center justify-center" type="button">2</button>
+<button class="h-8 w-8 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center justify-center" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="h-8 w-8 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center justify-center" type="button">58</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Telemetry Slide-Out Drawer / Side Panel (Active for Brian Kizito #RC-8821) -->
+<div class="fixed inset-y-0 right-0 w-full max-w-xl bg-surface-container-lowest shadow-2xl z-50 transform translate-x-0 transition-transform duration-300 ease-out flex flex-col overflow-hidden" id="courierDrawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between shrink-0">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block leading-tight">Courier Operations Profile</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-Time Dispatch &amp; Telemetry Dossier</span>
+</div>
+</div>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Drawer Body -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Courier Identity Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md">
+<img class="w-16 h-16 rounded-xl object-cover shrink-0" data-alt="Close up professional portrait of Brian Kizito confident Ugandan motorcycle courier wearing safety orange reflective jacket and badge smiling in sunny Kampala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4tIu-xuDzXe0g91KfGCnahrcv2U6vd4074Dx5G-6CFF9WNzBgI46vTc6vpCuXKCM1-rcUpq_j4LabC9EkuKhecYLfOs8DZXWsj_67LdYw1F-z7QAWvSDG3VvnNdkUoyezulrAvj4OZhttAeq50Cp5jzf_9sBxs-3fa9f5NPbHQ8hawX9rOjiDpWhmnJAvrd1nYPmy4n_yvsiYA70XgXyB2Wgcz1xBEfR8v0xXkgx2"/>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Brian Kizito</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold shrink-0">SafeBoda Gold</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Rider ID: <strong class="text-on-surface font-currency-code text-currency-code">RC-8821</strong> • Stage: <strong>William St #04</strong>
+</p>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1 font-semibold text-on-surface"><span class="material-symbols-outlined text-[13px] text-primary">call</span> +256 758 ••• 391</span>
+<span>•</span>
+<span>NIRA NIN: <strong>CM88031204</strong></span>
+<span>•</span>
+<span>URA TIN: <strong>100492819</strong></span>
+</div>
+</div>
+</div>
+<!-- Live GPS Telemetry Map Snippet -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wide">Live Dispatch Route</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Trip #SC-98241 (Kololo Terrace)</span>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm">
+<!-- Google Maps static map wrapper using data-location -->
+<div class="w-full h-48 bg-cover bg-center" data-location="Kololo Terrace, Kampala, Uganda" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEYnU23ivMLW2CzewJFo-FqqxBiQnArCm6RBOFTuOV_PiwakE38Og6T0ukPiCWhHjQKG4NpdPPlQa__CFYhZazufASxfnruBRnjPKUeMvVaem9y7bXsCygy92UEhF9uT-0LkzLuneSTvANU-2HHdDwxV793UkoThY5aGpu_nJQcJWfB8TLaxsOUdnedRHvi_Mt08jatBLbEMb8LdSOzLbuO1-01sVq0JGuxwEIn8Eu')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/90 via-transparent to-transparent flex flex-col justify-end p-space-md">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-space-sm rounded-lg shadow-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">delivery_dining</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block leading-tight">1.4 km to Drop-off</span>
+<span class="text-[11px] text-on-surface-variant">Destination: Acacia Residences, Flat 4B</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-code text-currency-code text-tertiary block font-bold leading-tight">ETA 4 MIN</span>
+<span class="text-[10px] text-on-surface-variant font-bold">29 km/h live speed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Regulatory & KYC Credentials Dossier -->
+<div class="space-y-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wide">KYC &amp; Safety Compliance Status</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">verified_user</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">KCCA Commercial Permit</span>
+<span class="text-[11px] text-on-surface-variant block">#KMP-BODA-2024-819</span>
+<span class="text-[10px] text-tertiary font-bold">Active through Dec 2025</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">shield</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">PSV Rider Insurance</span>
+<span class="text-[11px] text-on-surface-variant block">Jubilee #JUB-88192-A</span>
+<span class="text-[10px] text-tertiary font-bold">Comprehensive Active</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">sports_motorsports</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">Safety Gear Physical Check</span>
+<span class="text-[11px] text-on-surface-variant block">Helmet, Vest &amp; Lockbox</span>
+<span class="text-[10px] text-tertiary font-bold">Inspected: 12 Oct 2025</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">badge</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">Logbook Verified</span>
+<span class="text-[11px] text-on-surface-variant block">Bajaj Boxer • UEF 842X</span>
+<span class="text-[10px] text-tertiary font-bold">Sole Owner Match</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Courier Earnings & Automatic Payout Section -->
+<div class="p-space-md rounded-xl bg-surface-container space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-on-surface-variant">Today's Earnings Ledger</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> Ready for MoMo
+          </span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-currency-code text-currency-code text-primary font-bold">UGX</span>
+<span class="font-price-display text-price-display text-on-surface">68,000</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">14 deliveries + UGX 12,000 SafeBoda express incentive</span>
+</div>
+<div class="p-space-xs px-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span>Target Wallet: <strong>MTN MoMo (+256 758•••391)</strong></span>
+</div>
+<span class="font-bold text-primary">Auto-Disburses at 21:00 EAT</span>
+</div>
+</div>
+<!-- Admin Governance & Action Panel -->
+<div class="space-y-space-sm pt-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wide">Governance &amp; Support Escalation</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-11 px-space-md rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">chat</span>
+<span>Masked WhatsApp Call</span>
+</button>
+<button class="h-11 px-space-md rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Trips Archive (648)</span>
+</button>
+</div>
+<!-- Suspend Action Strip -->
+<div class="p-space-md rounded-xl bg-error-container/30 space-y-space-sm">
+<div class="flex items-center gap-space-xs text-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Driver Performance / Disciplinary Action</span>
+</div>
+<div class="flex gap-space-xs">
+<select class="flex-1 h-10 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Reason: Traffic Infraction / Police Hold</option>
+<option>Reason: Customer Code Tampering / Missing Package</option>
+<option>Reason: Multiple Late Handovers (&gt;45m)</option>
+<option>Reason: Expired KCCA Permit / Insurance</option>
+</select>
+<button class="h-10 px-space-md rounded-lg bg-error text-on-error font-label-sm text-label-sm font-bold hover:brightness-110 active:scale-95 transition-all shrink-0" type="button">
+              Suspend Courier
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-md bg-surface-container-low shrink-0 flex items-center justify-between">
+<span class="text-[11px] text-on-surface-variant">Last ping: <strong>14 seconds ago</strong> from Kololo Tower</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="closeDrawer()" type="button">
+        Dismiss Inspector
+      </button>
+</div>
+</div>
+<!-- Onboard Modal Backdrop (Controlled via JS) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-space-md" id="onboardModal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Onboard New Courier</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SwiftCart Uganda &amp; SafeBoda Certified Logistics</span>
+</div>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="closeOnboardModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md overflow-y-auto max-h-[716px]">
+<div class="grid grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Courier Full Name</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. Ronald Mukasa" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">NIRA National ID (NIN)</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="CM9100..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Mobile Money Payout Number</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="+256 7..." type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Boda Registration Plate</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. UEL 419Z" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Base Boda Stage Assignment</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>William St Stage #04 (Central Kampala)</option>
+<option>Acacia Mall Stage (Kololo / Kamwokya)</option>
+<option>Nakawa Market Hub (Jinja Road corridor)</option>
+<option>Ntinda Complex Hub</option>
+<option>Bugolobi Village Mall Stage</option>
+</select>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container space-y-2">
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">Mandatory Safety &amp; Legal Verification</span>
+<div class="space-y-1.5">
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Dual DOT-Approved Helmets Verified</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Valid KCCA Commercial Rider Permit (2025)</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Logbook or Signed Hire-Purchase Agreement</span>
+</label>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container" onclick="closeOnboardModal()" type="button">Cancel</button>
+<button class="px-space-lg py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold hover:brightness-110 active:scale-95 transition-all" onclick="closeOnboardModal()" type="button">Submit &amp; Provision Driver ID</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openDrawer(courierId) {
+    const drawer = document.getElementById('courierDrawer');
+    if (drawer) {
+      drawer.classList.remove('translate-x-full');
+      drawer.classList.add('translate-x-0');
+    }
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('courierDrawer');
+    if (drawer) {
+      drawer.classList.remove('translate-x-0');
+      drawer.classList.add('translate-x-full');
+    }
+  }
+
+  function openOnboardModal() {
+    const modal = document.getElementById('onboardModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closeOnboardModal() {
+    const modal = document.getElementById('onboardModal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+</script></main></div></body></html>

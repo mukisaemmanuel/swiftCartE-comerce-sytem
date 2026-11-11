@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#33302c", "on-primary": "#ffffff", "on-primary-container": "#fffcff", "on-primary-fixed": "#3c0800", "error-container": "#ffdad6", "tertiary": "#006947", "on-tertiary-fixed": "#002113", "surface-container-high": "#eee7e1", "primary-container": "#da3700", "outline-variant": "#e5beb4", "on-secondary-fixed": "#091649", "surface-bright": "#fff8f2", "surface-tint": "#b22b00", "error": "#ba1a1a", "tertiary-fixed": "#6ffbbe", "on-secondary-container": "#444f83", "on-primary-fixed-variant": "#881f00", "on-secondary": "#ffffff", "primary-fixed": "#ffdbd1", "inverse-primary": "#ffb5a1", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-container": "#b8c3ff", "on-tertiary-container": "#f4fff6", "surface-container": "#f3ede7", "surface-container-low": "#f9f2ec", "outline": "#907067", "on-error-container": "#93000a", "secondary-fixed": "#dde1ff", "surface-dim": "#dfd9d3", "on-surface-variant": "#5c4039", "on-secondary-fixed-variant": "#384377", "on-surface": "#1e1b18", "background": "#fff8f2", "secondary-fixed-dim": "#b8c3ff", "surface-container-highest": "#e8e1dc", "primary-fixed-dim": "#ffb5a1", "surface": "#fff8f2", "primary": "#ae2a00", "inverse-on-surface": "#f6f0ea", "tertiary-fixed-dim": "#4edea3", "on-background": "#1e1b18", "on-tertiary-fixed-variant": "#005236", "secondary": "#505b90", "surface-variant": "#e8e1dc", "tertiary-container": "#00855b", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "gutter": "0.75rem", "space-lg": "1rem", "space-xs": "0.25rem" }, fontFamily: { "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "currency-code": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, fontSize: { "price-display": ["22px", { "lineHeight": "28px", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "currency-code": ["12px", { "lineHeight": "14px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f2;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-secondary-fixed hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button></div><h1 class="font-headline-sm text-headline-sm text-on-secondary-fixed text-center flex-1">Checkout</h1><div class="flex items-center justify-end w-11"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center rounded-full text-on-secondary-fixed hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Content Container with dense tactile spacing -->
+<div class="flex flex-col px-margin pt-space-md space-y-space-md">
+<!-- Buyer Protection Trust Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start space-x-space-md relative z-10">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-space-xs">
+<h2 class="font-label-lg text-label-lg text-on-surface">SwiftShield Guarantee</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase tracking-wider">Your payment is held safely until you receive your order.</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Your payment is held safely until you receive your order. Money is only transferred to the seller after your delivery code is confirmed.
+          </p>
+</div>
+</div>
+</div>
+<!-- 6-Digit Delivery Code Box (Hero Token of the Screen) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md relative overflow-hidden text-center">
+<div class="inline-flex items-center space-x-1.5 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-2.5 py-1 rounded-full mb-space-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">vpn_key</span>
+<span class="">Secure Handover Passcode</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[280px] mx-auto mb-space-md">
+        Give this 6-digit delivery code to your rider <strong class="text-on-surface font-semibold">ONLY</strong> when you have physically received and checked your items.
+      </p>
+<!-- Code Digits Display -->
+<div class="flex items-center justify-center space-x-2 sm:space-x-3 mb-space-md">
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">8</span>
+</div>
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">9</span>
+</div>
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">2</span>
+</div>
+<div class="w-2.5 h-1 bg-outline-variant rounded-full mx-0.5"></div>
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">1</span>
+</div>
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">4</span>
+</div>
+<div class="w-11 h-13 py-2 bg-surface-container rounded-lg flex flex-col items-center justify-center shadow-inner">
+<span class="font-price-display text-price-display text-primary">0</span>
+</div>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">lock_clock</span>
+<span class="">Code activates upon dispatch</span>
+</div>
+</div>
+<!-- Delivery Logistics Bento Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<!-- Address Block -->
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-space-md min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Dennis Mukasa</span>
+<span class="bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded">Home</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Plot 14 Acacia Avenue, Kololo, Kampala</p>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">+256 772 ••• 814</p>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md px-2 py-1 rounded hover:bg-surface-container-low transition-colors">
+          Change
+        </button>
+</div>
+<!-- Courier Service Spec -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center space-x-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">two_wheeler</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-md text-label-md text-on-surface">SafeBoda Express</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Delivers in 45 mins • Live tracking</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface shrink-0">UGX 5,000</span>
+</div>
+</div>
+<!-- Items Purchased Module -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface">Items in Package (2)</h3>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-2 py-0.5 rounded-full flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="">Verified Merchant</span>
+</span>
+</div>
+<!-- Item 1: Headphones -->
+<div class="flex items-center space-x-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="SoundCore Space One ANC Headphones in sleek obsidian matte finish resting on an acoustic sound stage with soft dramatic studio light and warm accents, high resolution product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGc6qpBkVVbX7veoTJzOjXKAGTCyBkdGnVRuZ84sVvTMZwp6iQ-Mb2Ua4exs3hKnmftEuKZ1Kp7u-hUR4IwNINHU1Irc8_KIcRvZHPmjApbVNsZNo-LRVlWxw3OzCDPQphvxbo2Rw2mulxShA3Qs2DfQ8XPKaYRVuvQUHZ8cpTypK-XT6FMDP9l_8hxOSiY5fEEYr0KzOj2tDv6uQZAgt9poEy7dr_w2RlwdrvOeiH">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-1">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1 rounded-sm">Official</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">SoundCore Audio</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">SoundCore Space One ANC Headphones</h4>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-secondary">Qty: 1</span>
+<span class="font-label-lg text-label-lg text-on-surface">UGX 385,000</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Charger -->
+<div class="flex items-center space-x-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Compact premium Anker 65W GaN USB-C multi-port fast wall charger plug with metallic pins and subtle neon indicator ring glowing softly, sharp macro commercial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPV1Fr62w8fiIB8fQL0jLvt3PcsKXu51mDzj83wzDXJDVN3LnhfMJF0unb2IL2Jmdd9bgxm0fMs0q4UnyDEPUI9cnon0TlWq05JIkUIBFCFgzoZ9VL8waXT-6HP0PKjCMcVps5qnGVbCN19OshlJsFgfcHG_kug9ubzotvXRUF9G5mByAg6c5g_zpS_FyEqVK3y1c2W7u65kusW-9fh3F5Uno0TTw52Q2CI2SiW6mf">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-1">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1 rounded-sm">Official</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Anker Direct</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">Anker 65W GaN Charger</h4>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-secondary">Qty: 1</span>
+<span class="font-label-lg text-label-lg text-on-surface">UGX 93,500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Selection Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-label-lg text-label-lg text-on-surface">Payment Method</h3>
+<span class="text-tertiary flex items-center space-x-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span class="">Instant MoMo Prompt</span>
+</span>
+</div>
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center space-x-space-md min-w-0">
+<!-- MTN Brand Color Indicator Pill -->
+<div class="w-11 h-11 rounded-xl bg-[#FFCC00] text-[#0D1C2F] flex items-center justify-center font-price-display text-[15px] font-extrabold shadow-sm shrink-0">
+            MoMo
+          </div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">MTN Mobile Money</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0772 ••• 814</p>
+</div>
+</div>
+<!-- Radio Active Indicator -->
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-white text-[16px]">check</span>
+</div>
+</div>
+</div>
+<!-- Financial Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Items Subtotal</span>
+<span class="font-label-md text-label-md text-on-surface">UGX 478,500</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Delivery Fee (SafeBoda)</span>
+<span class="font-label-md text-label-md text-on-surface">UGX 5,000</span>
+</div>
+<div class="h-px bg-surface-container-high my-space-xs"></div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total to Pay</span>
+<span class="font-price-display text-price-display text-primary">UGX 483,500</span>
+</div>
+</div>
+<!-- Final Sticky Action Tray -->
+<div class="pt-space-xs pb-space-lg flex flex-col items-center space-y-space-md">
+<button class="w-full h-13 py-3.5 bg-primary-container hover:bg-primary active:scale-[0.98] text-white font-label-lg text-label-lg rounded-xl shadow-lg flex items-center justify-center space-x-2 transition-all" id="payButton">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span class="">Confirm Order &amp; Pay UGX 483,500</span>
+</button>
+<!-- App Credential Footer -->
+<div class="flex flex-col items-center space-y-1 text-center">
+<div class="flex items-center space-x-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">SwiftCart Uganda</span>
+</div>
+<p class="font-body-sm text-[11px] text-secondary">
+          Buyer protection active • 100% money back if items are not delivered as described
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for touch feedback on the CTA
+  const payBtn = document.getElementById('payButton');
+  if (payBtn) {
+    payBtn.addEventListener('click', function() {
+      this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Initiating MoMo Prompt...</span>';
+      setTimeout(() => {
+        this.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Check Phone (PIN Prompt Sent)</span>';
+        this.classList.remove('bg-primary-container');
+        this.classList.add('bg-tertiary');
+      }, 1200);
+    });
+  }
+</script></main>
+
+
+</body></html>

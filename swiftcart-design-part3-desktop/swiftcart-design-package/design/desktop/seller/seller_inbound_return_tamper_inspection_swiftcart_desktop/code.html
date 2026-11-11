@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#24293c", "error": "#ffb4ab", "on-surface-variant": "#e5beb4", "primary": "#ffb5a1", "background": "#0d1225", "inverse-primary": "#b22b00", "tertiary-fixed-dim": "#4edea3", "airtel-red": "#ED1C24", "secondary": "#b8c3ff", "tertiary-container": "#00855b", "surface-dim": "#0d1225", "error-container": "#93000a", "mtn-yellow": "#FFCC00", "outline-variant": "#5c4039", "on-primary": "#611300", "surface-container": "#1a1f31", "on-secondary-container": "#a7b2ed", "secondary-fixed": "#dde1ff", "surface-container-lowest": "#080d1f", "on-primary-fixed": "#3c0800", "inverse-on-surface": "#2b3043", "on-background": "#dde1fb", "primary-fixed": "#ffdbd1", "amber-warning": "#F59E0B", "outline": "#ac8980", "on-primary-container": "#fffcff", "surface": "#0d1225", "surface-variant": "#2f3448", "surface-cream": "#FFF8F2", "surface-tint": "#ffb5a1", "on-surface": "#dde1fb", "on-tertiary-container": "#f4fff6", "surface-container-low": "#161b2d", "on-secondary-fixed": "#091649", "on-secondary": "#212d5f", "surface-dark": "#080D1F", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005236", "action-gradient-end": "#DA3700", "on-primary-fixed-variant": "#881f00", "container-dark-high": "#1E293B", "on-tertiary-fixed": "#002113", "inverse-surface": "#dde1fb", "tertiary-fixed": "#6ffbbe", "secondary-container": "#384377", "on-error": "#690005", "danger-penalty": "#EF4444", "action-gradient-start": "#FF8A1F", "on-secondary-fixed-variant": "#384377", "surface-bright": "#34384c", "tertiary": "#4edea3", "primary-fixed-dim": "#ffb5a1", "primary-container": "#da3700", "surface-container-highest": "#2f3448", "secondary-fixed-dim": "#b8c3ff", "emerald-escrow": "#10B981", "container-dark-low": "#0F172A", "on-tertiary": "#003824" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-xl": "1.5rem", "space-md": "0.75rem", "gutter-desktop": "1.5rem", "gutter": "0.75rem", "margin": "1rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "code-display": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "code-display": ["20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" }], "price-display": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface-dark text-on-surface font-body-md"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-40 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7VG2Yr54mjxR9P21ZBLXl6aZZcEwwiQsqIoiHbjiWrRN_LNFoZr3Xf-oe4BYMfP_1qfTYn5uJ5xBW3VXuWgAwlX6icRkGyeKFAms_9Rm8OgiigBM0_2i6WSBH73vih9ThQFvq8o5y5GIB4I5hUu6WDv_mmXgzlxE0fOe2UKPXKDysEMn8jwXwZ0CrcPMXuFluPDfvJv3KwHZHYm_NNC83GpTZCJg33NP-Qabix39nMe0w-t2mb1xZkFE"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SwiftCart</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-container/20 text-primary uppercase ml-1">Seller</span></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low rounded-xl p-space-md"><div class="flex items-center gap-space-xs text-tertiary mb-1"><span class="material-symbols-outlined text-[16px]">verified</span><span class="font-label-sm text-label-sm uppercase tracking-wide">URSB Verified Merchant</span></div><p class="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Nakasero Flagship Hub</p></div></div><nav class="px-space-md py-space-sm space-y-space-md" data-active-classes="bg-surface-container text-primary font-bold"><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">Daily Operations</span><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md">Orders</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-amber-warning/20 text-amber-warning font-bold">14 Pending</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="products-inventory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Products &amp; Inventory</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-error/20 text-error font-bold">2 Low</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="riders-logistics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">two_wheeler</span><span class="font-label-md text-label-md">Riders &amp; Logistics</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-bold">6 Active</span></a></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">Post-Purchase</span><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="returns-disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">gavel</span><span class="font-label-md text-label-md">Returns &amp; Disputes</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-danger-penalty/20 text-danger-penalty font-bold">1 Case</span></a></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">Business &amp; Finance</span><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="wallet-payouts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Wallet &amp; Payouts</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">14.8M UGX</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-heatmaps" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Analytics &amp; Heatmaps</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="discounts-ads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="font-label-md text-label-md">Discounts &amp; Ads</span></div></a></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">Settings</span><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="store-profile-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Store Profile &amp; KYC</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></div></a></div></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-escrow opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-escrow"></span></span><div class="leading-tight min-w-0"><p class="font-label-sm text-label-sm text-on-surface truncate font-bold">Kampala Hub Node</p><p class="font-body-sm text-body-sm text-tertiary truncate">Direct Escrow Active</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-30 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary font-body-sm text-body-sm" placeholder="Search orders (UGX), package OTPs, buyer phone, or SKU..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Theme Switcher" class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="relative"><button aria-label="Notifications" class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-action-gradient-start"></span></div><div class="h-8 w-px bg-surface-container-high mx-1"></div><div class="flex items-center gap-space-sm pl-2"><div class="text-right hidden sm:block"><p class="font-label-md text-label-md text-on-surface font-bold leading-none">Kizito Ronald</p><p class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-1">Store Manager (KR)</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md text-label-md font-bold"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Dynamic Operational Synchronization Banner -->
+<div class="w-full bg-surface-container-low px-gutter-desktop py-space-sm flex items-center justify-between rounded-xl mb-space-lg shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-amber-warning">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Field Ledger Custody</span>
+</div>
+<div class="h-3 w-px bg-surface-container-high"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span>
+        Ledger Transaction Locked in Nakasero Multi-Sig Escrow Vault
+      </p>
+</div>
+<div class="flex items-center gap-space-sm text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span>Live Node Synced: Kampala Prime GMT+3</span>
+</div>
+</div>
+<!-- Breadcrumb & Status Super-Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Merchant Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Post-Purchase</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface">Returns &amp; Disputes</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Inbound Inspection #RTN-4491</span>
+</nav>
+<div class="flex items-center gap-space-md flex-wrap mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Inbound Return &amp; Tamper Seal Inspection</h1>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+<span>Physical Inspection Active • Nakasero Flagship Hub #UG-04</span>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="bg-surface-container-low px-space-md py-2 rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_scanner</span>
+<div class="text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-none">Package Tracking</p>
+<p class="font-code-display text-body-sm font-bold text-on-surface tracking-wider leading-tight">#SC-PKG-88219-UG</p>
+</div>
+</div>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-highest transition-colors shadow-sm" id="btn-print-sheet">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Print Inspection Sheet</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-high text-danger-penalty font-label-md text-label-md flex items-center gap-2 hover:bg-danger-penalty/10 transition-colors shadow-sm" id="btn-escalate">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+<span>Escalate to Senior Inspector</span>
+</button>
+</div>
+</div>
+<!-- Return Manifest Summary Bar -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg mb-space-xl shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative">
+<!-- Item Meta -->
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-primary">headphones</span>
+<span>Order #SC-97810 • Dispute #DSP-88219</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface truncate">SoundCore Space One ANC Wireless</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 truncate">
+<span>Matte Black</span>
+<span>•</span>
+<span class="font-code-display text-primary tracking-wide">SN-ANK-994182-EAT</span>
+</p>
+</div>
+<!-- Logistics Trajectory -->
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-tertiary">alt_route</span>
+<span>Logistics Node Flow</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md text-label-md truncate">
+<span>Nakasero Hub</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">arrow_forward</span>
+<span>Kololo Terrace #4</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[16px] text-mtn-yellow">two_wheeler</span>
+<span>Boda #412 (Brian Kizito)</span>
+<span class="font-code-display text-xs text-on-surface-variant">07•• ••• 419</span>
+</div>
+</div>
+<!-- Tamper Bag Spec -->
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">inventory</span>
+<span>Tamper Polybag Seal</span>
+</div>
+<p class="font-code-display text-body-md font-bold text-tertiary tracking-wider truncate">#SWIFT-BAG-99201-KC</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Verified Intake: Today, 14:02 EAT</span>
+</p>
+</div>
+<!-- Dispatch Barcode Visualizer -->
+<div class="flex flex-col justify-between bg-surface-container rounded-lg p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">E-Waybill Barcode</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold">MATCHED</span>
+</div>
+<!-- Barcode Decorative Graphic -->
+<div class="flex items-center justify-center gap-0.5 py-1 text-on-surface opacity-85">
+<div class="h-7 w-1 bg-current"></div>
+<div class="h-7 w-0.5 bg-current"></div>
+<div class="h-7 w-2 bg-current"></div>
+<div class="h-7 w-0.5 bg-current"></div>
+<div class="h-7 w-1.5 bg-current"></div>
+<div class="h-7 w-1 bg-current"></div>
+<div class="h-7 w-0.5 bg-current"></div>
+<div class="h-7 w-2 bg-current"></div>
+<div class="h-7 w-1 bg-current"></div>
+<div class="h-7 w-0.5 bg-current"></div>
+<div class="h-7 w-1 bg-current"></div>
+<div class="h-7 w-2 bg-current"></div>
+<div class="h-7 w-0.5 bg-current"></div>
+<div class="h-7 w-1.5 bg-current"></div>
+<div class="h-7 w-1 bg-current"></div>
+</div>
+<span class="font-code-display text-center text-xs text-on-surface-variant tracking-widest block">RTN-4491-UG-KLA</span>
+</div>
+</div>
+</div>
+<!-- Dual-Column Workbench Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left Column: Multi-Point Physical Tamper Verification Checklist (~55% - 7 Cols) -->
+<section class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="h-7 w-7 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-md">5</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Physical Verification Pipeline</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-1 rounded">Protocol v3.4 Active</span>
+</div>
+<!-- Step 1 Card: Polybag Seal -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center font-bold text-label-md">01</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">External SwiftCart Tamper Polybag Seal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous vacuum heat-seam and void-ink telemetry inspection</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>PASSED - INTACT</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md mt-space-sm grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Void pattern: <strong class="text-on-surface">No Exposure Detected</strong></span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[18px]">qr_code_2</span>
+<span>Polybag SN: <strong class="text-on-surface font-code-display text-xs">#SWIFT-BAG-99201-KC</strong></span>
+</div>
+</div>
+</div>
+<!-- Step 2 Card: Retail Packaging & Hologram -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-amber-warning/20 text-amber-warning flex items-center justify-center font-bold text-label-md">02</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Retail Packaging &amp; Barcode Hologram</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manufacturer shrinkwrap integrity and Anker holographic anti-counterfeit seal</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>FLAGGED - OPENED SEAL</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md mt-space-sm flex flex-col gap-2 font-body-sm text-body-sm">
+<p class="text-on-surface">Retail box shrinkwrap cleanly unsealed at customer home. Anker security hologram sticker slit horizontally along top box flap.</p>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-amber-warning text-[16px]">info</span>
+<span>Requires Open-Box grade verification under SwiftCart RMA rules.</span>
+</div>
+</div>
+</div>
+<!-- Step 3 Card: Hardware Serial Number Verification -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center font-bold text-label-md">03</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Hardware Serial Number Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Physical headset laser-etched serial against outbound dispatch manifest</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+<span>100% MATCH</span>
+</div>
+</div>
+<div class="mt-space-sm space-y-space-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary text-[20px]">check</span>
+<input class="w-full h-11 pl-10 pr-24 rounded-lg bg-surface-container-lowest text-tertiary font-code-display text-body-md font-bold focus:outline-none" readonly="" type="text" value="SN-ANK-994182-EAT"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-label-sm text-on-surface-variant uppercase tracking-wider">Scanned 14:04</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Original Outbound Dispatch Log: <span class="text-on-surface font-semibold">2024-10-18 09:12 EAT by Dispatch Node Kampala #01</span></p>
+</div>
+</div>
+<!-- Step 4 Card: Physical Hardware & Accessories Inventory -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center font-bold text-label-md">04</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Physical Hardware &amp; Accessories Inventory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Checklist verification for all in-box accessories and aesthetic state</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5/5 Verified</span>
+</div>
+<div class="space-y-space-xs mt-space-sm">
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_box</span>
+<span class="font-body-md text-body-md text-on-surface">Headphones Unit</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary/10">Present • Pristine • 0 Scratches</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_box</span>
+<span class="font-body-md text-body-md text-on-surface">3.5mm AUX Audio Cable</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary/10">Present • Sealed Original Twist-Tie</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_box</span>
+<span class="font-body-md text-body-md text-on-surface">Braided USB-C Fast Charging Cable</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary/10">Present • Factory Band Intact</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_box</span>
+<span class="font-body-md text-body-md text-on-surface">SoundCore Travel Pouch</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary/10">Present • Flawless Velvet</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_box</span>
+<span class="font-body-md text-body-md text-on-surface">User Manual &amp; Safety Guide</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary/10">Present • Pristine Fold</span>
+</label>
+</div>
+</div>
+<!-- Step 5 Card: Power-On & Diagnostic Check -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center font-bold text-label-md">05</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Power-On &amp; Diagnostic Quick Check</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nakasero Bluetooth bench test &amp; acoustic hardware frequency sweep</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">electric_bolt</span>
+<span>DIAGNOSTICS HEALTHY</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-sm">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Battery Health</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">battery_charging_90</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold mt-2">88%</p>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Li-Po Cells Balanced
+            </p>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">ANC Toggle</span>
+<span class="material-symbols-outlined text-[18px] text-primary">noise_aware</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold mt-2">Operational</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span>Dual Mic Arrays OK</span>
+</p>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Bluetooth Node</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">bluetooth_connected</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold mt-2">BT 5.3 Active</p>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span>LDAC Codec Passed</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Inspection Photos & Resolution Verdict (~45% - 5 Cols) -->
+<section class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Inspection Camera Feed Gallery -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Inspection Camera Feed</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-Res physical evidence captured by Kizito Ronald</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+</div>
+<!-- Multi-Photo Mosaic Grid -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-sm">
+<!-- Main Highlight Photo: Headset on Workbench -->
+<div class="col-span-2 relative h-48 rounded-lg overflow-hidden group shadow-inner">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Macro close-up photograph of black SoundCore Space One over-ear noise-cancelling headphones resting on an anti-static blue electronics inspection bench in Nakasero Kampala. Clear lighting highlights the flawless matte black earcups and laser etched logo under neutral workbench illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3d0EDf7sBbfxsMC0cWWP49Y8yqsJQB_-QACD8ljxfF93k0sSLe3x5VRsZaSop9eQC64bdnFfJbig2DR8IWBkmDxQ48T4LavM_Dl-YSocqtwiX9J_CLd0j1ZKilIDWqRcRE4HTEj2MekuT26b5wwPfGkPsgn8GwPT0SKR5ZfnDlpfuQBLiO-r6Fa7WeorWGhRNBmr22iDsr52Az-Y9XTU2PEqNp7R2iWIiK7KY2vp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/20 to-transparent flex items-end p-space-sm">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm text-on-surface font-bold bg-surface-container-low/90 px-2 py-0.5 rounded backdrop-blur">Frame #01: Headphone Cradle &amp; Cushions</span>
+<span class="font-label-sm text-label-sm text-tertiary">Passed</span>
+</div>
+</div>
+</div>
+<!-- Evidence Photo 2: Sliced Seal -->
+<div class="relative h-32 rounded-lg overflow-hidden group shadow-inner">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up detailed shot of retail product packaging box seal for audio headphones. An Anker holographic security sticker is cleanly sliced across the cardboard seam, showing broken shrinkwrap with holographic reflections under indoor LED light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANbftwCZUppMeQ6VocP9Vz-2_sNkp8APVDFVMCf-wLwRG5SvtsnHTgAoT6rhAizULN-hOnCfF0lHG5nBsZWe5Sj9b6k0df343FbiJ5eZ-Kt7MvooV35fmozwXtXHX-a-1oP61S4XJeIPognAvcSr0-y0zxPAdvE2cA-eGBtEbWYkVkaNORmfZHhFfH4Y0UfpGyA0SIBdhySp4oZ0Dz7kqGqsxMcZpC7gViuHwGDHIZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-label-sm text-amber-warning bg-surface-dark/80 px-1.5 py-0.5 rounded">Frame #02: Sliced Seal</span>
+</div>
+</div>
+<!-- Evidence Photo 3: Serial Code Macro -->
+<div class="relative h-32 rounded-lg overflow-hidden group shadow-inner">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Crisp macro detail photo of a white paper product serial number barcode sticker on the side of a black electronics box. Text clearly reads SN-ANK-994182-EAT sharp and legible in high focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCObL7QozHlE8da6ZLHF1vRpgY_to0jw9gV-_CB-8HHPlsmKs9_cgW6ZxEG9er2DzDg3102EKbg2L-Zbo8bfbEOfyY9xYi3ndj8nGuPMdXn_0At5Inc9DaXWbY2lANHF7zTUQhUlQi4lBGAhxFtSQtTUZV2PLvA3mvXUlzE1XwpM59olHDyinHp-pJbJwEtxW52Q6UYjr3lCutl1j3CRuLgKPJpD0EyRjjH2NS56nCd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-dark/80 px-1.5 py-0.5 rounded">Frame #03: Serial Barcode</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_a_photo</span>
+<span>Attach Secondary Macro Image (Optional)</span>
+</button>
+</div>
+<!-- Restockability Assessment Radio Group -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Restockability Assessment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Determine downstream warehouse destination &amp; buyer re-sale grade</p>
+<div class="space-y-space-sm" id="disposition-selector">
+<!-- Option 1: Selected Default -->
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container cursor-pointer transition-all">
+<input checked="" class="mt-1 accent-action-gradient-start" name="disposition_choice" type="radio" value="open_box"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Restock as 'Open Box - Verified Pristine'</span>
+<span class="font-label-sm text-label-sm text-tertiary px-1.5 py-0.5 rounded bg-tertiary/15">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deduct 5% promotional re-tag fee. Item returns to active Nakasero flagship store stock immediately.</p>
+</div>
+</label>
+<!-- Option 2: Factory RMA -->
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-all">
+<input class="mt-1 accent-action-gradient-start" name="disposition_choice" type="radio" value="factory_rma"/>
+<div class="flex-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Return to Anker Factory Depot / Warranty RMA</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Route to Kampala Industrial Area distribution consolidation hub for regional RMA return.</p>
+</div>
+</label>
+<!-- Option 3: Reject -->
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-all">
+<input class="mt-1 accent-action-gradient-start" name="disposition_choice" type="radio" value="reject"/>
+<div class="flex-1">
+<span class="font-label-lg text-label-lg text-danger-penalty font-bold">Reject Return (Misuse or Item Swap)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deny escrow release to customer. Initiate fraud investigation with SwiftCart Risk Dept.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Financial Disposition & Escrow Settlement Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Financial Disposition</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated ledger resolution via SwiftCart Escrow Smart-Lock</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-emerald-escrow/10 text-emerald-escrow font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+<span>ESCROW READY</span>
+</span>
+</div>
+<div class="space-y-space-sm mb-space-md">
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Original Item Value</span>
+<span class="font-price-display text-body-lg text-on-surface font-bold">UGX 342,000</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span>Restocking &amp; Re-bagging Fee</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">info</span>
+</span>
+<span class="font-label-md text-label-md text-tertiary">- UGX 10,000 <span class="text-xs text-on-surface-variant">(Fund Covered)</span></span>
+</div>
+<div class="h-px bg-surface-container-high my-space-xs"></div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Net Buyer Refund</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-mtn-yellow"></span>
+<span>MTN Mobile Money Instant Payout</span>
+</p>
+</div>
+<span class="font-price-display text-price-display text-emerald-escrow font-bold">UGX 342,000</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mt-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">add_shopping_cart</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="text-on-surface">Merchant Inventory Balance:</strong> Nakasero store balance will be credited with +1 Unit (Open Box) upon submission.
+            </p>
+</div>
+</div>
+<!-- Inspector Authorization & Sign-off -->
+<div class="pt-space-sm space-y-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold font-label-md text-label-md">
+              KR
+            </div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Inspector Authorization</p>
+<p class="font-label-md text-label-md text-on-surface truncate font-bold">Kizito Ronald</p>
+<p class="font-body-sm text-body-sm text-tertiary truncate">Store General Manager • Nakasero Flagship</p>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<!-- Execution Trigger Stack -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-12 rounded-xl text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-lg shadow-action-gradient-end/30 bg-gradient-to-r from-action-gradient-start to-action-gradient-end" id="btn-confirm-verdict">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Confirm Inspection &amp; Release Escrow</span>
+</button>
+<button class="w-full h-10 rounded-lg bg-surface-container-high text-danger-penalty font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-danger-penalty/10 transition-colors" id="btn-arbitrate">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Flag Discrepancy &amp; Route to Arbitration</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Toast Notification Modal (Initially Hidden) -->
+<div class="fixed bottom-6 right-6 bg-surface-container-high text-on-surface p-space-md rounded-xl shadow-2xl flex items-center gap-space-md transition-all duration-300 translate-y-24 opacity-0 pointer-events-none z-50" id="toast-modal">
+<div class="w-8 h-8 rounded-full bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold" id="toast-title">Inspection Confirmed</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">UGX 342,000 released to buyer via MTN MoMo.</p>
+</div>
+</div>
+<script>
+    (function initInspectionWorkbench() {
+      const confirmBtn = document.getElementById('btn-confirm-verdict');
+      const toast = document.getElementById('toast-modal');
+      const toastTitle = document.getElementById('toast-title');
+      const toastDesc = document.getElementById('toast-desc');
+      const arbitrateBtn = document.getElementById('btn-arbitrate');
+      const printBtn = document.getElementById('btn-print-sheet');
+
+      function showToast(title, desc, isError = false) {
+        toastTitle.textContent = title;
+        toastDesc.textContent = desc;
+        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 4000);
+      }
+
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+          confirmBtn.innerHTML = `
+            <span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+            <span>Signing Node Telemetry...</span>
+          `;
+          confirmBtn.disabled = true;
+
+          setTimeout(() => {
+            confirmBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[20px]">verified</span>
+              <span>Escrow Released & Verified</span>
+            `;
+            confirmBtn.classList.remove('from-action-gradient-start', 'to-action-gradient-end');
+            confirmBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+            showToast('Return #RTN-4491 Finalized', 'Restocked to Nakasero Store. UGX 342,000 disbursed.');
+          }, 1000);
+        });
+      }
+
+      if (arbitrateBtn) {
+        arbitrateBtn.addEventListener('click', () => {
+          showToast('Arbitration Initiated', 'Case #RTN-4491 routed to SwiftCart Dispute Officer.', true);
+        });
+      }
+
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          showToast('Generating PDF', 'Manifest print slip RTN-4491-UG queued to receipt printer.');
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

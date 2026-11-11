@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#384377","secondary-fixed":"#dde1ff","on-secondary-fixed":"#091649","secondary":"#505b90","on-primary-container":"#fffcff","outline-variant":"#e5beb4","error-container":"#ffdad6","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#881f00","on-tertiary-container":"#f4fff6","on-background":"#1e1b18","inverse-primary":"#ffb5a1","on-surface":"#1e1b18","primary-fixed-dim":"#ffb5a1","on-primary-fixed":"#3c0800","on-surface-variant":"#5c4039","secondary-fixed-dim":"#b8c3ff","surface-variant":"#e8e1dc","surface-bright":"#fff8f2","tertiary-container":"#00855b","on-tertiary":"#ffffff","tertiary-fixed-dim":"#4edea3","on-primary":"#ffffff","inverse-on-surface":"#f6f0ea","surface-container":"#f3ede7","surface-container-low":"#f9f2ec","surface-container-highest":"#e8e1dc","on-error":"#ffffff","inverse-surface":"#33302c","primary-fixed":"#ffdbd1","tertiary":"#006947","outline":"#907067","primary-container":"#da3700","surface":"#fff8f2","on-tertiary-fixed-variant":"#005236","surface-container-high":"#eee7e1","error":"#ba1a1a","surface-tint":"#b22b00","on-secondary":"#ffffff","background":"#fff8f2","secondary-container":"#b8c3ff","tertiary-fixed":"#6ffbbe","on-secondary-container":"#444f83","primary":"#ae2a00","surface-dim":"#dfd9d3","on-tertiary-fixed":"#002113","on-error-container":"#93000a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","gutter":"0.75rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1rem","space-xl":"1.5rem","margin":"1rem"},fontFamily:{"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"currency-code":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","fontWeight":"700"}],"price-display":["22px",{"lineHeight":"28px","fontWeight":"800"}],"currency-code":["12px",{"lineHeight":"14px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"12px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(14,27,77,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7VG2Yr54mjxR9P21ZBLXl6aZZcEwwiQsqIoiHbjiWrRN_LNFoZr3Xf-oe4BYMfP_1qfTYn5uJ5xBW3VXuWgAwlX6icRkGyeKFAms_9Rm8OgiigBM0_2i6WSBH73vih9ThQFvq8o5y5GIB4I5hUu6WDv_mmXgzlxE0fOe2UKPXKDysEMn8jwXwZ0CrcPMXuFluPDfvJv3KwHZHYm_NNC83GpTZCJg33NP-Qabix39nMe0w-t2mb1xZkFE"/><div class="flex flex-col"><span class="font-label-lg text-label-lg text-primary tracking-tight">SwiftCart</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Uganda Admin</span></div></div><span class="bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm px-space-sm py-space-xs rounded-full flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">verified</span>Prod</span></div><nav class="px-space-md py-space-md space-y-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.20)]"><div class="space-y-space-xs"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Navigation</div><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Overview</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="seller-applications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">how_to_reg</span>Seller Applications</div><span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded-full">14</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="sellers-directory" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span>Sellers Directory</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="riders-fleet" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>Riders Fleet</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="product-moderation" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span>Product Moderation</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="orders-oversight" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Orders Oversight</a></div></div><div class="space-y-space-xs"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Financial Rails &amp; Escrow</div><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="escrow-disputes" href="#"><span class="material-symbols-outlined text-[20px]">shield_lock</span>Escrow &amp; Disputes</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="payout-queue" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Payout Queue</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="overpayments-refunds" href="#"><span class="material-symbols-outlined text-[20px]">price_change</span>Overpayments &amp; Refunds</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="commission-rates" href="#"><span class="material-symbols-outlined text-[20px]">percent</span>Commission Rates</a></div></div><div class="space-y-space-xs"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance</div><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Platform Settings</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="users-roles" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>Users &amp; Roles</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="homepage-ads" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span>Homepage &amp; Ads</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.20)]" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span>Audit Log</a></div></div></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Kampala Ops Desk</span><span class="font-body-sm text-body-sm text-on-surface-variant">+256 700 000 000</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">north_east</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-xl border border-outline-variant/30 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search vendors, escrow ID, MoMo reference, or riders..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Central Hub:</span><span class="font-label-sm text-label-sm text-tertiary uppercase">Active</span></div><div class="hidden lg:flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">MTN MoMo</span><span class="font-label-sm text-label-sm text-tertiary">99.98%</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Airtel Money</span><span class="font-label-sm text-label-sm text-tertiary">100%</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Theme Toggle" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button aria-label="Notifications" class="w-9 h-9 rounded-xl relative flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button></div><div class="flex items-center gap-space-sm pl-space-md border-l border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">Kizito Ronald</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold">Super Admin</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg space-y-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Section 1: Header Breadcrumbs & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Admin Operations</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>Security &amp; Compliance</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-label-md text-label-md">Audit Log &amp; Security Ledger</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Security Ledger &amp; Forensic Audit</h1>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Ledger Engine: Live Synced (12ms latency)</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 bg-tertiary-container/10 text-tertiary rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>BOU NPS Compliant (Act 2020)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md h-10 bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-xl font-label-md text-label-md flex items-center gap-2 transition-all shadow-sm active:scale-95" id="btnVerifyMerkle">
+<span class="material-symbols-outlined text-[18px] text-primary">token</span>
+<span>Verify Merkle Proofs</span>
+</button>
+<button class="px-space-lg h-10 bg-primary-container text-on-primary-container hover:opacity-95 rounded-xl font-label-md text-label-md flex items-center gap-2 transition-all shadow-[0_4px_14px_rgba(218,55,0,0.25)] active:scale-95">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Export Forensic CSV</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Summary & Security Health KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-sm transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Audited Events (24h)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight">14,892 Logs</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+8.4% vs avg</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• 100% cryptographic capture</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-sm transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Privileged Operations</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">shield_person</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">7 Critical Actions</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>3 Roles • 2 Escrows • 2 Root Rotations</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>100% Dual-Key 2FA Confirmed</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-sm transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Node Integrity &amp; Latency</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight">99.99% Ledger Uptime</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">sync</span>
+<span>Stanbic Trust Anchor reconciled 2m ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Latency: 12ms</span>
+<span class="text-tertiary">Uganda IXP (KLA)</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-sm transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Security Anomaly Score</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-sm text-headline-sm text-tertiary tracking-tight">0 Breaches Detected</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Enclave chassis sealed • Zero tamper alerts
+          </div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>NTRU-Prime Quantum Safe Layer</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Filter & Search Control Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Search bar -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="auditSearchInput" placeholder="Filter by hash, officer name, staff ID, IP, or order ref..." type="text"/>
+</div>
+<!-- Filter Dropdown 1: Category -->
+<div class="md:col-span-2">
+<select class="w-full h-11 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="categoryFilter">
+<option value="ALL">All Categories</option>
+<option value="PRIVILEGED">Privileged Escalation</option>
+<option value="ESCROW">Escrow &amp; Funds</option>
+<option value="KYC">KYC &amp; Onboarding</option>
+<option value="SETTINGS">Platform Settings</option>
+<option value="DISPATCH">Dispatch &amp; Riders</option>
+</select>
+</div>
+<!-- Filter Dropdown 2: Severity -->
+<div class="md:col-span-2">
+<select class="w-full h-11 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="severityFilter">
+<option value="ALL">All Severities</option>
+<option value="CRITICAL">Critical</option>
+<option value="HIGH">High</option>
+<option value="MEDIUM">Medium</option>
+<option value="INFO">Standard Audit (Info)</option>
+</select>
+</div>
+<!-- Filter Dropdown 3: Actor -->
+<div class="md:col-span-2">
+<select class="w-full h-11 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option>All Staff Officers</option>
+<option>Kizito Ronald (ADM-001)</option>
+<option>Patricia Namubiru (ADM-004)</option>
+<option>Sarah Auma (ADM-012)</option>
+<option>Brian Mukasa (ADM-022)</option>
+<option>System Cron / Enclave</option>
+</select>
+</div>
+<!-- Filter Dropdown 4: Date Range -->
+<div class="md:col-span-2 flex items-center gap-space-xs">
+<div class="w-full h-11 px-space-md bg-surface-container-low rounded-xl flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer hover:bg-surface-container">
+<span class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+<span>Today, 24 Oct</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<button class="w-11 h-11 flex-shrink-0 bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface rounded-xl flex items-center justify-center transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Two-Column Workspace (Master-Detail Forensic Inspector) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Master Audit Stream (5 cols) -->
+<div class="lg:col-span-5 flex flex-col space-y-space-md">
+<!-- Interactive Category Pill Tabs -->
+<div class="flex items-center gap-space-xs p-1 bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+<button class="audit-tab px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap shadow-sm">
+            All Logs <span class="ml-1 opacity-80 text-label-sm">14.8k</span>
+</button>
+<button class="audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Privileged <span class="ml-1 bg-primary-fixed text-on-primary-fixed px-1.5 py-0.2 rounded-full text-label-sm">7</span>
+</button>
+<button class="audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Escrow &amp; Funds <span class="ml-1 text-label-sm opacity-70">412</span>
+</button>
+<button class="audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Auth &amp; 2FA <span class="ml-1 text-label-sm opacity-70">1.2k</span>
+</button>
+</div>
+<!-- Log List Stream Container -->
+<div class="space-y-space-sm" id="logStreamList">
+<!-- Card 1 (Active/Selected) -->
+<div class="audit-card active bg-surface-container-lowest p-space-md rounded-xl shadow-md transition-all cursor-pointer relative overflow-hidden ring-2 ring-primary" data-log-id="LOG-88491-UG">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  CRITICAL
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14:18:22 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">SUPER_ADMIN_ROLE_ELEVATION</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">Kizito Ronald (ADM-001)</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: <span class="text-primary font-medium">Patricia Namubiru (ADM-004)</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-tertiary">key</span>
+<span>0x8f4c...91b0</span>
+</div>
+<span class="bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Dual-Sig Approved (2/2)
+                </span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="audit-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden" data-log-id="LOG-88490-UG">
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  HIGH
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">13:45:10 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">ESCROW_MANUAL_DISBURSEMENT_OVERRIDE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">Sarah Auma (ADM-012)</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: <span class="text-secondary font-medium">Order #SC-98241 (SoundCore UG)</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-outline">key</span>
+<span>0x3a7e...44c1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic text-[11px] truncate max-w-[180px]">
+                  NIRA doorstep match confirmed
+                </span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="audit-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden" data-log-id="LOG-88489-UG">
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  HIGH
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12:30:04 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">MERCHANT_STOREFRONT_FREEZE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">Kizito Ronald (ADM-001)</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: <span class="text-on-surface font-medium">Kampala Phone Hub (SC-UG-8821)</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-outline">key</span>
+<span>0x1b9d...28fe</span>
+</div>
+<span class="text-error font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span> Anti-Counterfeit Hold
+                </span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="audit-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden" data-log-id="LOG-88488-UG">
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+                  MEDIUM
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">11:15:40 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">COMMISSION_RATE_SCHEDULE_UPDATE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">Sarah Auma (ADM-012)</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: Consumer Electronics &gt; Audio (Adjusted to 7.5%)
+                </p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-outline">key</span>
+<span>0x5c8a...009a</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Policy: Standard Rev</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="audit-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden" data-log-id="LOG-88487-UG">
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+                  MEDIUM
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10:04:18 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">EMERGENCY_DISPATCH_PIN_OVERRIDE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">Brian Mukasa (ADM-022)</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: Docket #EXC-98235 (SafeBoda #UG-882)
+                </p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-outline">key</span>
+<span>0x991f...772b</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GPS Handshake Fallback</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="audit-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden" data-log-id="LOG-88486-UG">
+<div class="pl-2 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+                  INFO / HSM
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">09:00:00 EAT</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">SESSION_ROOT_KEY_ATTESTATION</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Actor: <strong class="text-on-surface">System Cron / Enclave Daemon</strong>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Target: Hardware Security Module #01 (Kololo DC)
+                </p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1 font-currency-code text-currency-code font-mono bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-tertiary">lock</span>
+<span>0x224a...bf12</span>
+</div>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Auto-Attested
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination summary indicator -->
+<div class="p-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Displaying 6 of 14,892 committed events</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center hover:bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 font-label-sm text-label-sm">Page 1 / 2,482</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center hover:bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Forensic Detail & Cryptographic Inspector (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-xl space-y-space-lg">
+<!-- Detail Dossier Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md bg-surface-container-low/50 -mx-space-xl -mt-space-xl p-space-xl rounded-t-xl">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Forensic Dossier: #LOG-88491-UG</span>
+<span class="bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+                CRYPTOGRAPHICALLY VALID
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Committed to Ledger Block #891,442 • Merkle Root: <span class="font-mono text-on-surface font-medium">0x4a99fc...003e</span>
+</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-tertiary flex items-center gap-1 font-label-sm text-label-sm px-space-sm py-1 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span> Proof Verified
+            </span>
+</div>
+</div>
+<!-- 1. Event Metadata Grid -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+<span>Event Context &amp; Environment Metadata</span>
+</h3>
+<span class="font-label-sm text-label-sm text-outline">SEC-LEVEL: A1</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Action Type &amp; Scope</span>
+<div class="font-label-md text-label-md text-on-surface">Role Elevation &gt; SUPER_ADMIN</div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Origin IP &amp; Geolocation</span>
+<div class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>196.12.140.22</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Kampala Central, Kololo NOC)</span>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Device &amp; Hardware Key</span>
+<div class="font-label-md text-label-md text-on-surface flex items-center gap-1 truncate">
+<span>Firefox 131.0 on macOS</span>
+<span class="bg-surface-container-lowest text-tertiary px-1.5 py-0.5 rounded text-[11px] font-bold">YubiKey 5C NFC</span>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Session Security Protocol</span>
+<div class="font-label-md text-label-md text-on-surface truncate">
+<span class="font-mono text-[12px]">sess_live_99a8b417c</span>
+<span class="text-tertiary ml-1 text-label-sm">• TLS 1.3 Strict Mutual Auth</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Multi-Sig Consensus & Authorization Evidence Flow -->
+<div class="space-y-space-sm">
+<h3 class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">group_add</span>
+<span>Multi-Signature Consensus &amp; Governance Evidence</span>
+</h3>
+<div class="space-y-space-sm">
+<!-- Signer 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md text-label-md mt-0.5">
+                  KR
+                </div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface">Kizito Ronald (Lead Super Admin)</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.2 rounded-full">Primary Authorizer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Staff ID: ADM-001 • Signature method: Master Credential Vault + Biometric Touch ID
+                  </p>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Attested: 24 Oct 2025 at 14:18:02 EAT
+                  </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<!-- Signer 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-md text-label-md mt-0.5">
+                  AK
+                </div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface">Arthur Kato (Secondary Super Admin)</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.2 rounded-full">Consensus Co-Signer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Staff ID: ADM-002 • Signed via FIDO2 Hardware Token (NFC Key #9810-UG)
+                  </p>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Attested: 24 Oct 2025 at 14:18:19 EAT
+                  </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+</div>
+<!-- Governance Note -->
+<div class="p-space-md bg-surface-container rounded-xl flex items-start gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">gavel</span>
+<div class="text-body-sm font-body-sm">
+<span class="font-label-md text-label-md text-on-surface">Legal Governance Justification:</span>
+              "Appointed Interim Chief Compliance Officer per Board Resolution BR-2025-09 (Uganda Data Protection &amp; Privacy Compliance Mandate)."
+            </div>
+</div>
+</div>
+<!-- 3. Raw Cryptographic Payload & Merkle Proof -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<span>Signed Ledger Block &amp; Cryptographic Attestation</span>
+</h3>
+<button class="flex items-center gap-1 px-space-sm py-1 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="copyPayloadBtn">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy JSON Payload</span>
+</button>
+</div>
+<div class="relative bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md overflow-x-auto font-mono text-body-sm shadow-inner">
+<pre class="leading-relaxed"><code id="rawPayloadCode">{
+  <span class="text-primary-fixed-dim">"ledger_index"</span>: 891442,
+  <span class="text-primary-fixed-dim">"block_timestamp_eat"</span>: <span class="text-secondary-fixed">"2025-10-24T14:18:22+03:00"</span>,
+  <span class="text-primary-fixed-dim">"prev_block_hash"</span>: <span class="text-secondary-fixed">"0x9e120aa7f39841cb029a8bb76209e81b671a5c6d31"</span>,
+  <span class="text-primary-fixed-dim">"current_hash"</span>: <span class="text-secondary-fixed">"0x8f4c339a0e671bc994017f8a329efba91b0002cd"</span>,
+  <span class="text-primary-fixed-dim">"event"</span>: {
+    <span class="text-primary-fixed-dim">"type"</span>: <span class="text-secondary-fixed">"SUPER_ADMIN_ROLE_ELEVATION"</span>,
+    <span class="text-primary-fixed-dim">"origin_actor"</span>: <span class="text-secondary-fixed">"Kizito Ronald (ADM-001)"</span>,
+    <span class="text-primary-fixed-dim">"grantee"</span>: <span class="text-secondary-fixed">"Patricia Namubiru (ADM-004)"</span>,
+    <span class="text-primary-fixed-dim">"quorum"</span>: <span class="text-secondary-fixed">"2/2_REQUIRING_BOARD_MINUTES_REF"</span>
+  },
+  <span class="text-primary-fixed-dim">"ecdsa_signature_r"</span>: <span class="text-secondary-fixed">"0x4b78fa9e01...77a1"</span>,
+  <span class="text-primary-fixed-dim">"ecdsa_signature_s"</span>: <span class="text-secondary-fixed">"0x902f1a6b82...02cc"</span>,
+  <span class="text-primary-fixed-dim">"hsm_root_key_fingerprint"</span>: <span class="text-secondary-fixed">"SHA256:UgCart-HSM-KLA-1"</span>,
+  <span class="text-primary-fixed-dim">"stanbic_reconciliation_ref"</span>: <span class="text-secondary-fixed">"STAN-UG-REC-20251024-88914"</span>
+}</code></pre>
+</div>
+</div>
+<!-- 4. Forensic Actions Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md h-10 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">picture_as_pdf</span>
+<span>Download Certificate (PDF)</span>
+</button>
+<button class="px-space-md h-10 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-colors" id="reverifyBtn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">security_update_good</span>
+<span>Re-Verify Against Stanbic Anchor</span>
+</button>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Immutable WORM Storage: Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Bottom Regulatory Compliance & Trust Statement Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/10 flex items-center justify-center text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-label-lg text-label-lg text-on-surface">Legal Admissibility &amp; Cryptographic Immutability Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+            All audit logs are cryptographically sealed pursuant to the <strong class="text-on-surface">Uganda Electronic Transactions Act (2011) §18</strong> and the <strong class="text-on-surface">Bank of Uganda National Payment Systems (NPS) Regulatory Ledger Standards</strong>. Zero-knowledge rollup hashes are immutably anchored every 10 minutes to Stanbic Bank Uganda’s Institutional Trust Anchor.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right hidden sm:block">
+<div class="font-label-md text-label-md text-on-surface">Bank of Uganda NPS-04</div>
+<div class="font-label-sm text-label-sm text-tertiary">Compliance Audited • 2025</div>
+</div>
+<span class="material-symbols-outlined text-[36px] text-tertiary">shield</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive micro-interactions for the forensic inspection workspace
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Audit Card Selection Toggle
+    const cards = document.querySelectorAll('.audit-card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          c.classList.remove('active', 'ring-2', 'ring-primary', 'shadow-md');
+          c.classList.add('shadow-sm');
+          const bar = c.querySelector('.absolute.left-0');
+          if (bar) bar.remove();
+        });
+        card.classList.add('active', 'ring-2', 'ring-primary', 'shadow-md');
+        card.classList.remove('shadow-sm');
+        
+        // Add left accent bar
+        if (!card.querySelector('.absolute.left-0')) {
+          const accentBar = document.createElement('div');
+          accentBar.className = 'absolute left-0 top-0 bottom-0 w-1.5 bg-primary';
+          card.prepend(accentBar);
+        }
+      });
+    });
+
+    // 2. Tab selection
+    const tabs = document.querySelectorAll('.audit-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.className = 'audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap';
+        });
+        tab.className = 'audit-tab px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap shadow-sm';
+      });
+    });
+
+    // 3. Copy JSON payload button
+    const copyBtn = document.getElementById('copyPayloadBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('rawPayloadCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const origText = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[14px] text-tertiary">check</span><span class="text-tertiary font-bold">Copied!</span>';
+          setTimeout(() => {
+            copyBtn.innerHTML = origText;
+          }, 2000);
+        });
+      });
+    }
+
+    // 4. Re-Verify Block against Stanbic Trust Anchor micro-animation
+    const reverifyBtn = document.getElementById('reverifyBtn');
+    if (reverifyBtn) {
+      reverifyBtn.addEventListener('click', () => {
+        const origContent = reverifyBtn.innerHTML;
+        reverifyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary animate-spin">refresh</span><span>Verifying Merkle Tree...</span>';
+        setTimeout(() => {
+          reverifyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span><span class="text-tertiary font-bold">Stanbic Anchor Confirmed</span>';
+          setTimeout(() => {
+            reverifyBtn.innerHTML = origContent;
+          }, 2500);
+        }, 1200);
+      });
+    }
+
+    // 5. Verify Merkle Proofs Top Action
+    const topVerifyBtn = document.getElementById('btnVerifyMerkle');
+    if (topVerifyBtn) {
+      topVerifyBtn.addEventListener('click', () => {
+        topVerifyBtn.classList.add('opacity-75');
+        topVerifyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary animate-spin">rotate_right</span><span>Checking Enclave...</span>';
+        setTimeout(() => {
+          topVerifyBtn.classList.remove('opacity-75');
+          topVerifyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span><span class="text-tertiary font-bold">14,892 Proofs Intact</span>';
+          setTimeout(() => {
+            topVerifyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">token</span><span>Verify Merkle Proofs</span>';
+          }, 3000);
+        }, 1400);
+      });
+    }
+  });
+</script></main></div></body></html>

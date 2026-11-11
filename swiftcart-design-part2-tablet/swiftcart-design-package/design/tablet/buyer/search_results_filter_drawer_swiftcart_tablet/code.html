@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SwiftCart Uganda - Buyer Marketplace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#d5e3fd", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary-container": "#541200", "on-surface-variant": "#5b4039", "on-tertiary-container": "#00311f", "primary-fixed-dim": "#ffb5a0", "on-secondary-fixed-variant": "#3f465c", "on-surface": "#0d1c2f", "on-background": "#0d1c2f", "on-secondary-fixed": "#131b2e", "inverse-on-surface": "#ebf1ff", "tertiary": "#006c49", "error": "#ba1a1a", "primary-fixed": "#ffdbd1", "on-error-container": "#93000a", "tertiary-fixed-dim": "#4edea3", "surface-container": "#e6eeff", "surface": "#f8f9ff", "surface-tint": "#b02f00", "on-tertiary-fixed": "#002113", "on-primary-fixed": "#3b0900", "on-error": "#ffffff", "secondary-container": "#dae2fd", "inverse-primary": "#ffb5a0", "tertiary-fixed": "#6ffbbe", "secondary": "#565e74", "on-primary": "#ffffff", "background": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "surface-container-highest": "#d5e3fd", "surface-dim": "#ccdbf4", "primary-container": "#ff5722", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#dae2fd", "inverse-surface": "#233144", "error-container": "#ffdad6", "tertiary-container": "#00a572", "surface-bright": "#f8f9ff", "outline": "#907067", "on-primary-fixed-variant": "#862200", "surface-container-low": "#eff4ff", "on-secondary-container": "#5c647a", "outline-variant": "#e4beb4", "surface-container-high": "#dde9ff", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem", "space-md": "0.75rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin-desktop": "2rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm" data-path="marketplace-home" href="#"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">SwiftCart</span><span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded">UG</span></a><button class="hidden xl:flex items-center gap-space-xs text-left px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div><p class="font-label-sm text-label-sm text-secondary">Deliver to</p><p class="font-label-md text-label-md text-on-surface truncate max-w-[130px]">Kampala Central</p></div></button></div><div class="flex-1 max-w-2xl mx-space-sm hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg p-1 focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary-container transition-all"><select class="bg-transparent text-secondary font-label-md text-label-md px-space-sm py-2 rounded focus:outline-none cursor-pointer border-r border-outline-variant/30"><option value="all">All Categories</option><option value="electronics">Electronics &amp; Phones</option><option value="supermarket">Groceries &amp; Pantry</option><option value="fashion">Kampala Fashion</option><option value="appliances">Home Appliances</option><option value="hardware">Hardware &amp; Tools</option></select><div class="flex-1 flex items-center px-space-sm gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">search</span><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Search products, brands, local suppliers..." type="text"/></div><button class="p-2 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Search by image"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button><button class="bg-primary-container text-on-primary font-label-lg text-label-lg px-space-lg py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center shrink-0">Search</button></div></div><nav class="flex items-center gap-space-sm shrink-0" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="wishlist" href="#">Wishlist</a><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="verified-stores" href="#">Stores</a><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="buyer-orders" href="#">Orders</a><a class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="notifications" href="#" title="Notifications"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary rounded-full"></span></a><a class="relative flex items-center gap-space-xs px-space-sm py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="shopping-cart" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute -top-1.5 -right-2 bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full min-w-[18px] text-center">3</span></div><span class="hidden xl:inline font-label-lg text-label-lg text-on-surface font-bold">Cart</span></a><div class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-bold tracking-tight">SN</div></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-320px)]"><div class="flex flex-col w-full">
+<!-- Query Bar & Context Strip -->
+<section class="w-full bg-surface-container-lowest shadow-sm pb-space-md pt-space-sm px-margin">
+<div class="w-full max-w-[834px] mx-auto flex flex-col gap-space-xs">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs overflow-x-auto text-secondary py-1 no-scrollbar">
+<a class="font-label-md text-label-md hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home</span>Home
+        </a>
+<span class="material-symbols-outlined text-[13px] opacity-40">chevron_right</span>
+<a class="font-label-md text-label-md hover:text-primary transition-colors whitespace-nowrap" href="#">Electronics &amp; Tech</a>
+<span class="material-symbols-outlined text-[13px] opacity-40">chevron_right</span>
+<a class="font-label-md text-label-md hover:text-primary transition-colors whitespace-nowrap" href="#">Audio</a>
+<span class="material-symbols-outlined text-[13px] opacity-40">chevron_right</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[200px]">Wireless Noise Cancelling Headphones</span>
+</nav>
+<!-- Active Query Header Banner -->
+<div class="flex items-center justify-between gap-space-sm mt-1">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Wireless Noise Cancelling Headphones</h1>
+<span class="bg-primary/10 text-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider font-bold">Kampala Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse inline-block"></span>
+<span class="font-semibold text-on-surface">142 Results</span> found across Kampala vendors &amp; instant logistics hubs
+          </p>
+</div>
+<!-- Escrow Trust Micro Shield Tag -->
+<div class="hidden sm:flex items-center gap-space-xs bg-tertiary/10 text-tertiary px-space-sm py-1.5 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<div class="text-left">
+<p class="font-label-sm text-label-sm font-bold uppercase tracking-wide">SwiftSafe UG</p>
+<p class="font-label-sm text-label-sm opacity-80 leading-none">Escrow Hold</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Dual-Column Tablet Workspace (834px viewport target) -->
+<section class="w-full max-w-[834px] mx-auto px-margin py-space-md">
+<div class="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-space-md items-start">
+<!-- ================= LEFT COLUMN: Persistent Filter Sidebar (260px) ================= -->
+<aside class="flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Header & Reset Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Filters</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-bold uppercase tracking-wider" id="clear-all-btn">
+            Clear All
+          </button>
+</div>
+<!-- Active Filter Chips Matrix -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Applied Parameters:</span>
+<div class="flex flex-wrap gap-1.5" id="active-filter-container">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-label-sm text-label-sm shadow-xs group cursor-pointer hover:bg-error-container hover:text-on-error-container transition-colors">
+              Free Boda Delivery
+              <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-label-sm text-label-sm shadow-xs group cursor-pointer hover:bg-error-container hover:text-on-error-container transition-colors">
+              In Stock in Kampala
+              <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-label-sm text-label-sm shadow-xs group cursor-pointer hover:bg-error-container hover:text-on-error-container transition-colors">
+              Price &lt; UGX 500k
+              <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+</div>
+</div>
+<!-- Section: Price Range Filter -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface font-bold">Price Range (UGX)</label>
+<span class="font-label-sm text-label-sm text-secondary">Local currency</span>
+</div>
+<!-- Dual slider visualization track -->
+<div class="relative w-full h-6 flex items-center px-1">
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="absolute left-[3%] right-[32%] h-full bg-primary-container rounded-full"></div>
+</div>
+<div class="absolute left-[3%] w-4 h-4 bg-surface-container-lowest rounded-full shadow-md border-2 border-primary-container cursor-grab active:cursor-grabbing"></div>
+<div class="absolute right-[32%] w-4 h-4 bg-surface-container-lowest rounded-full shadow-md border-2 border-primary-container cursor-grab active:cursor-grabbing"></div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Min (UGX)</span>
+<input class="w-full bg-transparent font-label-md text-label-md text-on-surface font-bold focus:outline-none" type="text" value="50,000"/>
+</div>
+<div class="bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Max (UGX)</span>
+<input class="w-full bg-transparent font-label-md text-label-md text-on-surface font-bold focus:outline-none" type="text" value="1,500,000"/>
+</div>
+</div>
+</div>
+<!-- Section: Kampala Rapid Delivery -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center justify-between">
+            Kampala Delivery Speed
+            <span class="material-symbols-outlined text-[16px] text-tertiary">electric_moped</span>
+</span>
+<div class="space-y-1.5">
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">1-Hour Boda Express</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 rounded-full font-bold">24</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Same-Day Kampala Metro</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-secondary px-1.5 py-0.5 rounded-full font-bold">88</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Pickup Station Locker</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-secondary px-1.5 py-0.5 rounded-full font-bold">142</span>
+</label>
+</div>
+</div>
+<!-- Section: Verified Brands -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Top Audio Brands</span>
+<div class="space-y-1">
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">SoundCore</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">12</span>
+</label>
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Sony</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">8</span>
+</label>
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">JBL Professional</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">15</span>
+</label>
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Bose</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">6</span>
+</label>
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Oraimo</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">18</span>
+</label>
+<label class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Apple</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">4</span>
+</label>
+</div>
+</div>
+<!-- Section: Seller Tier Verification -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Seller Verification</span>
+<div class="space-y-1.5">
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                Verified Official Brand
+              </span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">storefront</span>
+                Local Kampala Merchant
+              </span>
+</label>
+</div>
+</div>
+<!-- Section: Verified Ratings -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Customer Feedback</span>
+<label class="flex items-center gap-2 py-1 px-1 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container accent-primary-container" name="rating-filter" type="radio"/>
+<div class="flex items-center gap-1">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] opacity-30">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">&amp; above</span>
+</div>
+</label>
+</div>
+<!-- Section: Ugandan Payment Guarantees -->
+<div class="flex flex-col gap-space-xs pt-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Payment Methods</span>
+<div class="space-y-1.5">
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">MTN &amp; Airtel MoMo</span>
+<span class="font-label-sm text-label-sm text-secondary">Zero checkout fees</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Cash on Delivery</span>
+<span class="font-label-sm text-label-sm text-secondary">Within Kampala Ring</span>
+</div>
+</label>
+</div>
+</div>
+</aside>
+<!-- ================= RIGHT COLUMN: Results Grid & Sort Toolbar (530px tablet target) ================= -->
+<main class="flex flex-col gap-space-md min-w-0">
+<!-- Sort & View Micro Toolbar -->
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary font-medium">Sort by:</span>
+<div class="relative inline-block">
+<select class="bg-surface-container-low text-on-surface font-label-md text-label-md font-bold px-3 py-1.5 pr-8 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary-container" id="catalog-sort">
+<option selected="" value="recommended">Recommended</option>
+<option value="price-asc">Price: Low to High</option>
+<option value="newest">Newest Arrivals</option>
+<option value="top-rated">Top Rated by Ugandans</option>
+</select>
+<span class="material-symbols-outlined text-[16px] absolute right-2 top-2 pointer-events-none text-secondary">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<!-- Layout toggle -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="p-1 rounded bg-surface-container-lowest text-primary shadow-xs" title="Grid View">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" title="List View">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+<div class="h-4 w-px bg-surface-container-highest mx-0.5 hidden sm:block"></div>
+<!-- Instant Delivery Pill -->
+<div class="hidden sm:inline-flex items-center gap-1 px-2 py-1 rounded bg-primary-fixed/60 text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+              Fast Boda Mode
+            </div>
+</div>
+</div>
+<!-- ================= PRODUCT CARDS GRID (2 Columns on Tablet) ================= -->
+<div class="grid grid-cols-2 gap-space-sm sm:gap-space-md">
+<!-- Product Card 1: SoundCore Space One ANC -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<!-- Media Container -->
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="SoundCore Space One ANC wireless over-ear headphones in elegant matte midnight black finish, soft memory foam ear cushions, displayed on a clean minimalist studio plinth with subtle ambient rim lighting matching high-tech product catalog imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoD1yyCLBJHsK2dZt6WPZEXjV7wsKrAAswKB_y1gqXCxIT0QZ_b5kv-dOD68oyCtsHNT-qApgEKxB4unctDFbNptEDLnYBUfbjNksuXVAbPbE2IpOdO4AbhdCQeryDhc23T-UIGnaw7ooQPES1UgC_mPzomPxnpqjPGgvn8xBz0LJLB0BYVIJx-UKt8guuhYFxNio7KufDy6lF9GCtQJxV4fX9OF0iCyTGH-20r0K6"/>
+<!-- Discount Badge -->
+<span class="absolute top-2 left-2 bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                -20%
+              </span>
+<!-- Kampala Rapid Delivery Tag -->
+<span class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-xs text-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded shadow-xs font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">electric_moped</span> 1h Boda
+              </span>
+<!-- Wishlist toggle -->
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Card Content Body -->
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<!-- Vendor Badge -->
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary-fixed-dim">verified</span> SoundCore Official
+                  </span>
+</div>
+<!-- Title -->
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  SoundCore Space One ANC
+                </h3>
+<!-- Star Rating -->
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary">(214)</span>
+</div>
+</div>
+<!-- Price & Action Dock -->
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-primary-container">
+                    UGX 248,500
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary line-through">
+                    UGX 310,000
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2: Sony WH-1000XM5 ANC -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Sony WH-1000XM5 noise cancelling premium headphones in platinum silver finish, soft leather headband, precision angled earcups resting on a modern brushed concrete pedestal, studio quality product photography with soft diffusion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR5TWPbUf1Hjc9eQS6mdbjmvz3q7jefMeyeYAJTL_aqSRjVBSWTGroD8uGF80h2hmaT1pIJGZju_m_oaP4aCZFoQKO7Bm_2KoYOvBGLvB-UcRBa7lhkhIBmWQ3TCw5MLhmk4FjS71Nvu-t31wuTUyGSoWihLwy5fI60jt05WBQV8pLAxK0gWXnB_9faI4X_LVx3FO6o-GxrnsCLzEmWluMz5yTgeSvWR6iRm22Rtqw"/>
+<!-- Escrow Certified Badge -->
+<span class="absolute top-2 left-2 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">security</span> Authentic
+              </span>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary">store</span> Victoria Tech Supplies
+                  </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  Sony WH-1000XM5 ANC
+                </h3>
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary">(412)</span>
+</div>
+</div>
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-on-surface">
+                    UGX 1,450,000
+                  </p>
+<p class="font-label-sm text-label-sm text-tertiary font-medium">
+                    Free Kololo / CBD Delivery
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3: JBL Tune 760NC Wireless Over-Ear -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="JBL Tune 760NC deep blue wireless over-ear active noise cancelling headphones, foldable ergonomic hinge design, clean solid neutral studio backdrop with crisp rim light outlining the headphone silhouette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIxQzRFzP7Of-neIhN3htejBhFvx1BwNUUk_V_H1rWdWiywL7FH-zny4P56XrlWHnLMUICeLds0JKM_QkzzwRg6bi3TKmBzGdEp2pBcZXyryDAY2Aq2joqeYDptb0klhB1az-r5_yyGIftFzKVxEFiWfNetvgR0_CHqAs2ZMqMW0kItHstjMmPDniO5M390IhOojeUchiZx4CQ8-soF09LHdqPy7JocjNPm2cXkwmU"/>
+<span class="absolute top-2 left-2 bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                -17%
+              </span>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-primary">local_mall</span> Gadget Central
+                  </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  JBL Tune 760NC Wireless Over-Ear
+                </h3>
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.7</span>
+<span class="font-body-sm text-body-sm text-secondary">(98)</span>
+</div>
+</div>
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-primary-container">
+                    UGX 340,000
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary line-through">
+                    UGX 410,000
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4: Oraimo BoomPop 2 Heavy Bass -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Oraimo BoomPop 2 wireless bass headphones with glowing RGB accent lighting details, sleek metallic accents, urban styled product photography with warm golden hour studio backlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kbrycvVnQQtyq4EPlcbWNVNjWea3mqcXL0UDH31vKa1mhTGH2_3IFIJ9pFn9l_sk94HryvYkLNU9YF6U2VEwVSLjrssDvejZF-418TjQz-eEJ2hfYO0cG9M6K1ZXqFyLHndf3z-j2XpzlKITkMq9OxesuLd_5MPDxcmr42NU4LmuxVwj_4tHXjq8XJh1_k98H28--GFplF1QijX_0IM9ESuL6Py_HtuPv6ct-fjZ"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                Hot Seller
+              </span>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary-fixed-dim">verified</span> Oraimo Official Store
+                  </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  Oraimo BoomPop 2 Heavy Bass
+                </h3>
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.6</span>
+<span class="font-body-sm text-body-sm text-secondary">(530)</span>
+</div>
+</div>
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-on-surface">
+                    UGX 165,000
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary">
+                    Same-day pickup
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 5: SoundCore Life Q30 Hybrid ANC -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="SoundCore Life Q30 hybrid active noise cancelling headphones in jet black with rose gold pivot logo badges, memory foam headband, crisp high key studio lighting showcasing detailed texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaqG2KsYNrWlwFIIqqNCOHJ5f5LnsxS556RGLEHkCpBjmG8agxsoshyGNuXq0n6BqHAOV54hWHhyUljtxz9R0YW126umOnxT_87HiQWAU0naBbsS-mSkiba2NQV3GZiSFLw7_ra65g8vKYb_O6h28VHWuOubR-OKKUB3dBkhEuJMQODAfENVELLDl1Ymijkct--eWiJF98oq5V1ZYpdcsyPonHLzgW0X4fNtur5ZpN"/>
+<!-- Fast Delivery -->
+<span class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-xs text-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded shadow-xs font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">electric_moped</span> 1h Boda
+              </span>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary-fixed-dim">verified</span> SoundCore Uganda Official
+                  </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  SoundCore Life Q30 Hybrid ANC
+                </h3>
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+<span class="font-body-sm text-body-sm text-secondary">(389)</span>
+</div>
+</div>
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-on-surface">
+                    UGX 185,000
+                  </p>
+<p class="font-label-sm text-label-sm text-tertiary font-medium">
+                    Express Dispatch
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 6: Anker Soundcore H30i Wireless On-Ear -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Anker Soundcore H30i ultra-lightweight on-ear wireless foldable headphones in modern pure white with silver metallic headband adjustments, clean bright photographic studio setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe1NBtCyLIqOF6ljicHCRptcJBCGw1aSgdduuVb8_EAxJXpVqWhqLUvLF6pFeSlostREGB4VcUU_UbV-NpF0WsAYB29RfbCALybm8gaKP-AdVBF3_CnrXSB14d6Iq1lvy8bhoXypVVBl9Mwzzzl5xjy2P-qaZXr-zGNXpSrKvQIBMDHR3a4DqDIrTXdpEPih43kLEtRnHEmtvXR3nBjGGbTYA560AUpLx6HSiMo2-F"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                Value Choice
+              </span>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary">store</span> Anker Flagship
+                  </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 leading-snug">
+                  Anker Soundcore H30i Wireless On-Ear
+                </h3>
+<div class="flex items-center gap-1 mt-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.7</span>
+<span class="font-body-sm text-body-sm text-secondary">(144)</span>
+</div>
+</div>
+<div class="pt-space-xs mt-auto flex items-end justify-between">
+<div>
+<p class="font-price-display text-price-display text-on-surface">
+                    UGX 125,000
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary">
+                    MoMo Pay ready
+                  </p>
+</div>
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center justify-center shadow-xs shrink-0" title="Add to Cart">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- ================= PAGINATION & LOCAL PROGRESS ================= -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col items-center gap-space-sm mt-space-xs">
+<!-- Text and Meter -->
+<div class="w-full max-w-sm flex flex-col items-center gap-1">
+<span class="font-body-sm text-body-sm text-secondary">
+              Showing <span class="font-bold text-on-surface">6</span> of <span class="font-bold text-on-surface">142</span> Kampala Products
+            </span>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="bg-primary-container h-full rounded-full" style="width: 4.2%;"></div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full max-w-sm bg-surface-container text-on-surface hover:bg-primary-container hover:text-on-primary font-label-lg text-label-lg py-2.5 px-space-lg rounded-xl transition-all duration-200 flex items-center justify-center gap-2 font-bold shadow-xs active:scale-[0.98]">
+<span>Load More Kampala Products</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<!-- Micro Trust Anchor -->
+<p class="font-label-sm text-label-sm text-secondary text-center flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+            All 142 listings physically verified in Kampala, Entebbe &amp; Wakiso warehouses
+          </p>
+</div>
+</main>
+</div>
+</section>
+<!-- Interactive Filter Logic (Client-side micro interactions) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Clear All chip dismissal trigger
+      const clearBtn = document.getElementById('clear-all-btn');
+      const container = document.getElementById('active-filter-container');
+      
+      if (clearBtn && container) {
+        clearBtn.addEventListener('click', function() {
+          container.innerHTML = '<span class="text-secondary font-label-sm text-label-sm italic">No active filters applied</span>';
+        });
+      }
+
+      // Individual filter chip close actions
+      if (container) {
+        container.addEventListener('click', function(e) {
+          const chip = e.target.closest('span.group');
+          if (chip) {
+            chip.remove();
+            if (container.children.length === 0) {
+              container.innerHTML = '<span class="text-secondary font-label-sm text-label-sm italic">No active filters applied</span>';
+            }
+          }
+        });
+      }
+
+      // Cart micro-feedback animation
+      const cartBtns = document.querySelectorAll('button[title="Add to Cart"]');
+      cartBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const icon = this.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = 'done';
+            this.classList.remove('bg-primary-container');
+            this.classList.add('bg-tertiary');
+            setTimeout(() => {
+              icon.textContent = 'add_shopping_cart';
+              this.classList.add('bg-primary-container');
+              this.classList.remove('bg-tertiary');
+            }, 1200);
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-auto"><div class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-outline-variant/20"><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">verified_user</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Ugandan Buyer Guarantee</h4><p class="font-body-sm text-body-sm text-secondary mt-1">100% genuine merchandise, escrow-protected payments, and vetted regional vendors.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">local_shipping</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Hassle-Free Returns</h4><p class="font-body-sm text-body-sm text-secondary mt-1">7-day doorstep return pickup across Kampala, Entebbe, Wakiso, and Mukono metro.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-secondary-container text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">support_agent</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Help &amp; Support</h4><p class="font-body-sm text-body-sm text-secondary mt-1">Dedicated 24/7 localized support via live toll-free line, WhatsApp, and Kampala help hub.</p></div></div><div class="flex flex-col justify-start"><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Accepted In Uganda</h4><p class="font-body-sm text-body-sm text-secondary mt-1 mb-space-sm">Instant checkout with national mobile wallets and cards:</p></div><div class="flex flex-wrap items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#FFCC00]/20 text-[#6B5500] font-bold">MTN MoMo</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#E40000]/10 text-[#9E0000] font-bold">Airtel Money</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-secondary-container text-on-secondary-fixed font-bold">Visa</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container text-secondary font-bold">Cash on Delivery</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm text-primary font-extrabold tracking-tight">SwiftCart</span><span class="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Lumumba Avenue, Nakasero, Kampala. All rights reserved.</span></div><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="buyer-protection" href="#">Buyer Protection Policy</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="kampala-delivery-rates" href="#">Delivery Rates</a></div></div></div></footer></body></html>

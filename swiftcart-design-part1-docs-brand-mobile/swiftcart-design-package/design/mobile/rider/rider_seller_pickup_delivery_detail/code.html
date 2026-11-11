@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#2b3043", "on-secondary-fixed-variant": "#384377", "surface-cream": "#FFF8F2", "tertiary-container": "#00855b", "primary-container": "#da3700", "on-error-container": "#ffdad6", "primary-fixed": "#ffdbd1", "on-secondary-container": "#a7b2ed", "surface-container-high": "#24293c", "outline-variant": "#5c4039", "inverse-primary": "#b22b00", "secondary-fixed": "#dde1ff", "on-primary": "#611300", "surface-container-highest": "#2f3448", "on-primary-fixed": "#3c0800", "surface-container-lowest": "#080d1f", "surface-dark": "#080D1F", "on-tertiary": "#003824", "primary-fixed-dim": "#ffb5a1", "emerald-escrow": "#10B981", "on-background": "#dde1fb", "secondary": "#b8c3ff", "on-secondary": "#212d5f", "surface-variant": "#2f3448", "amber-warning": "#F59E0B", "surface-tint": "#ffb5a1", "on-tertiary-container": "#f4fff6", "container-dark-low": "#0F172A", "tertiary": "#4edea3", "on-tertiary-fixed-variant": "#005236", "on-tertiary-fixed": "#002113", "background": "#0d1225", "surface-dim": "#0d1225", "surface-container": "#1a1f31", "tertiary-fixed-dim": "#4edea3", "on-surface-variant": "#e5beb4", "action-gradient-start": "#FF8A1F", "on-primary-fixed-variant": "#881f00", "secondary-fixed-dim": "#b8c3ff", "airtel-red": "#ED1C24", "on-surface": "#dde1fb", "action-gradient-end": "#DA3700", "surface": "#0d1225", "tertiary-fixed": "#6ffbbe", "mtn-yellow": "#FFCC00", "secondary-container": "#384377", "on-secondary-fixed": "#091649", "error-container": "#93000a", "on-primary-container": "#fffcff", "outline": "#ac8980", "surface-bright": "#34384c", "on-error": "#690005", "inverse-surface": "#dde1fb", "primary": "#ffb5a1", "surface-container-low": "#161b2d", "container-dark-high": "#1E293B", "error": "#ffb4ab", "danger-penalty": "#EF4444" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-lg": "1rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "code-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "code-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "800"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "price-display": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "800"}], "label-lg": ["15px", {"lineHeight": "20px", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><img alt="swiftcart-logo-icon-only.png" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/d/1XgXo946sF9g60jG6h08oU99B_g3mN0Fm"/><div class="flex flex-col min-w-0 pl-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Rider Seller Pickup Confirmation</h1></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><span class="material-symbols-outlined text-[16px]">verified_user</span><span class="font-label-sm text-label-sm font-bold">SECURE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div class="flex flex-col w-full pb-8">
+<!-- Operational Status Alert Ribbon -->
+<div class="w-full bg-surface-container-high/90 px-margin py-space-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-ping"></span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider truncate">Escrow Locked: UGX 340,000</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-amber-warning">wifi_tethering</span>
+<span class="font-label-sm text-label-sm uppercase">2G Relay Sync OK</span>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-lg mt-space-md">
+<!-- Rider Identity & Task Badge Card -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-action-gradient-start/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative w-12 h-12 rounded-xl bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up warm operational portrait of a professional African delivery boda rider wearing an orange high-visibility reflective jacket and helmet in Kampala Uganda, natural outdoor dusk lighting with soft bokeh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1OaCdCnGs3BnxceNrNct7T3WK2lgOW_0pam9fMhV9s73wBMrKKF_D2NG_djpyrg4AFtJLMZxNuLfnKGpw-6M6xR8dsmejl0W-EKMvORJnrm17f8NpGTDF4Rnvq5MPC7j_KzLYHOaC8U0SQRS6qh4qSc3y_a99YbGqu8UWtO4mLGoNkgnukcomkLqYRiiEwuLLSwaeUgXdULl_umLS-QsDInCofFBhThmGpyn1L5yQ"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-escrow"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Kizito Brian</span>
+<span class="material-symbols-outlined text-[18px] text-emerald-escrow" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-primary font-bold tracking-wider">Bajaj Boxer UEF 842X</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="font-body-sm text-body-sm truncate">Nakasero Stage</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Task Ref</span>
+<span class="font-label-lg text-label-lg text-action-gradient-start font-extrabold bg-surface-container-highest px-2 py-0.5 rounded-lg">#TSK-4082</span>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs mt-space-xs bg-surface-container-highest/40 p-space-xs rounded-lg">
+<div class="flex flex-col items-center justify-center p-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Payout</span>
+<span class="font-label-lg text-label-lg text-tertiary font-bold">UGX 6,500</span>
+</div>
+<div class="flex flex-col items-center justify-center p-1 bg-surface-container/60 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Distance</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">2.4 km</span>
+</div>
+<div class="flex flex-col items-center justify-center p-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Corridor</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Lugogo</span>
+</div>
+</div>
+</section>
+<!-- 5-Step Operational Progress Stepper -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dispatch Progress</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-action-gradient-end/20 text-primary-fixed-dim font-bold">Step 3 of 5</span>
+</div>
+<div class="relative flex flex-col gap-3 pl-2">
+<!-- Vertical connector track line -->
+<div class="absolute left-[19px] top-3 bottom-3 w-0.5 bg-surface-container-highest pointer-events-none"></div>
+<!-- Step 1: Done -->
+<div class="flex items-center gap-space-sm relative z-10">
+<div class="w-6 h-6 rounded-full bg-emerald-escrow text-on-tertiary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div class="flex items-center justify-between flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface-variant line-through truncate">Accept Task</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow">14:02</span>
+</div>
+</div>
+<!-- Step 2: Done -->
+<div class="flex items-center gap-space-sm relative z-10">
+<div class="w-6 h-6 rounded-full bg-emerald-escrow text-on-tertiary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div class="flex items-center justify-between flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface-variant line-through truncate">Arrive at Seller Shop</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow">14:11</span>
+</div>
+</div>
+<!-- Step 3: Active Step -->
+<div class="flex items-center gap-space-sm relative z-10 p-2 -ml-2 rounded-xl bg-surface-container-high shadow-md">
+<div class="w-6 h-6 rounded-full bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white flex items-center justify-center shadow-md animate-pulse">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+</div>
+<div class="flex items-center justify-between flex-1 min-w-0">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-extrabold truncate">Inspect &amp; Verify Package</span>
+<span class="font-body-sm text-body-sm text-primary">In progress at store counter</span>
+</div>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-fixed animate-ping flex-shrink-0"></span>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex items-center gap-space-sm relative z-10 opacity-60">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">two_wheeler</span>
+</div>
+<div class="flex items-center justify-between flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface-variant truncate">En Route to Buyer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+</div>
+<!-- Step 5: Pending -->
+<div class="flex items-center gap-space-sm relative z-10 opacity-60">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">key</span>
+</div>
+<div class="flex items-center justify-between flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface-variant truncate">Buyer Handover &amp; Escrow Release</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">OTP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Seller Pickup Counter Card -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest truncate">Authorized Merchant</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda Official</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Pioneer Mall Stall G-14, Kampala Central</span>
+</div>
+</div>
+<button aria-label="Call Store Contact Proxy" class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary">call</span>
+</button>
+</div>
+<!-- Item Specification & Tamper Seal Lockup -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Order Item Ref</span>
+<span class="font-label-lg text-label-lg text-on-surface font-extrabold truncate">SoundCore Space One ANC</span>
+</div>
+<span class="font-label-md text-label-md px-2.5 py-1 rounded-lg bg-surface-container-highest text-secondary font-mono tracking-wider flex-shrink-0">#SC-ORD-9488</span>
+</div>
+<!-- Physical Seal Verification Pill -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-emerald-escrow" style="font-variation-settings: 'FILL' 1;">security</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-emerald-escrow font-extrabold uppercase tracking-wide">Tamper Seal Intact</span>
+<span class="font-label-md text-label-md font-mono text-on-surface tracking-wider truncate">#TS-88410</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-bold">VERIFIED</span>
+</div>
+</div>
+<!-- Merchant QR Scanner Counter Action -->
+<div class="grid grid-cols-1 gap-space-sm">
+<button class="h-12 w-full rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center gap-space-sm active:scale-98 transition-all hover:bg-surface-bright shadow-sm" id="scan-qr-btn" type="button">
+<span class="material-symbols-outlined text-[22px] text-action-gradient-start">qr_code_scanner</span>
+<span class="font-label-lg text-label-lg font-bold">Scan Merchant Counter QR Code</span>
+</button>
+<!-- Seller Staff Handover Attestation Checkbox State -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container cursor-pointer select-none transition-colors" id="staff-confirm-tile">
+<div class="w-6 h-6 rounded-lg bg-surface-container-highest flex items-center justify-center text-white flex-shrink-0" id="signature-checkbox">
+<span class="material-symbols-outlined text-[16px] hidden" id="check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Merchant Staff Confirmed Handover</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Clerk badge scanned: #CLK-Aisha-04</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Delivery Route Preview -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">navigation</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Route Preview</h3>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[14px] text-amber-warning">schedule</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Est. 8 mins</span>
+</div>
+</div>
+<!-- Static Map Pipeline Anchor -->
+<div class="w-full h-36 bg-cover bg-center rounded-xl relative overflow-hidden flex items-end p-space-sm shadow-inner" data-location="Pioneer Mall to Forest Mall Lugogo Bypass Kampala Uganda" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqC4YvwbxYlyZLHM5VuFDIfHut-p4Lac8lZKunrUyGFSlMg6EgV5SXE7xGVGHPO_cNZkgxzJpwlkQwh25SIkrcXhppd_daaXi1H-vLkFaonYe7ME5_2eeb3HIebELijW5iRe0Fy9MUIzpjDv4W4qGANN1y5OIp9c0-K3KbWLXKAbP4Dgh_qIv-qYyxV1PH7USl8U3cPCzHk-rMj9WT6kbih9Gw90-P4gDlXRPOKLKT')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs text-white">
+<span class="material-symbols-outlined text-[18px] text-action-gradient-start">pin_drop</span>
+<span class="font-label-md text-label-md font-bold truncate">Kampala Road → Jinja Rd → Lugogo</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest/90 text-on-surface font-mono">2.4 KM</span>
+</div>
+</div>
+<!-- Masked Destination Corridor Lockup -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">person_pin_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Customer Destination Corridor</span>
+<span class="font-label-lg text-label-lg text-on-surface font-extrabold truncate">Dennis M. • Forest Mall / Lugogo Bypass</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant flex-shrink-0 pl-1">
+<span class="font-label-sm text-label-sm font-mono tracking-wider">07•• ••• 419</span>
+</div>
+</div>
+</section>
+<!-- Buyer 6-Digit Delivery Code Entry Area -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-tertiary">dialpad</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Escrow Release Code</h3>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Buyer-Side OTP</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Ask buyer for code upon physical delivery inspection at handover. Code releases escrow instantly.
+      </p>
+<!-- 6 Empty Segmented Blank Boxes (Rider cannot see buyer code) -->
+<div class="grid grid-cols-6 gap-2 my-space-xs">
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+<div class="h-13 py-3 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-code-display text-code-display shadow-inner">
+<span class="text-outline-variant font-bold">-</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-[15px] text-outline">info</span>
+<span class="font-label-sm text-label-sm">Keypad will activate upon arrival at Lugogo corridor geo-fence.</span>
+</div>
+</section>
+<!-- Operational Consequence Actions -->
+<section class="flex flex-col gap-space-sm pt-space-xs mb-2">
+<!-- High-Visibility Main Primary Trigger -->
+<button class="w-full h-[54px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white flex items-center justify-center gap-space-sm font-label-lg text-label-lg tracking-wide uppercase shadow-[0_4px_18px_rgba(218,55,0,0.35)] active:scale-98 transition-transform" id="confirm-collected-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+<span>Confirm Package Collected from Seller</span>
+</button>
+<!-- Destructive / Problem Action -->
+<button class="w-full h-11 rounded-xl bg-danger-penalty/10 text-danger-penalty flex items-center justify-center gap-space-xs font-label-md text-label-md active:bg-danger-penalty/20 transition-colors" id="report-issue-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+<span>Report Merchant Issue / Sealed Box Tampered</span>
+</button>
+</section>
+</div>
+</div>
+<script>
+  (function () {
+    var handoverConfirmed = false;
+    var tile = document.getElementById('staff-confirm-tile');
+    var checkbox = document.getElementById('signature-checkbox');
+    var checkIcon = document.getElementById('check-icon');
+    var confirmBtn = document.getElementById('confirm-collected-btn');
+    var scanBtn = document.getElementById('scan-qr-btn');
+
+    if (tile && checkbox && checkIcon) {
+      tile.addEventListener('click', function () {
+        handoverConfirmed = !handoverConfirmed;
+        if (handoverConfirmed) {
+          checkbox.classList.remove('bg-surface-container-highest');
+          checkbox.classList.add('bg-emerald-escrow');
+          checkIcon.classList.remove('hidden');
+          tile.classList.add('bg-emerald-escrow/10');
+        } else {
+          checkbox.classList.add('bg-surface-container-highest');
+          checkbox.classList.remove('bg-emerald-escrow');
+          checkIcon.classList.add('hidden');
+          tile.classList.remove('bg-emerald-escrow/10');
+        }
+      });
+    }
+
+    if (scanBtn) {
+      scanBtn.addEventListener('click', function () {
+        var originalText = scanBtn.innerHTML;
+        scanBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] text-emerald-escrow animate-spin">sync</span><span class="font-label-lg text-label-lg text-emerald-escrow">Barcode Verified: SC-ORD-9488</span>';
+        setTimeout(function () {
+          if (!handoverConfirmed && tile) {
+            tile.click();
+          }
+        }, 600);
+      });
+    }
+
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', function () {
+        if (!handoverConfirmed) {
+          if (tile) {
+            tile.classList.add('bg-amber-warning/20');
+            setTimeout(function () {
+              tile.classList.remove('bg-amber-warning/20');
+            }, 800);
+          }
+          alert('Please tap to confirm Seller Staff Handover verification prior to motorcycle dispatch.');
+          return;
+        }
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">cached</span><span>Locking Handover onto Ledger...</span>';
+        setTimeout(function () {
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>En Route to Dennis M. (Lugogo)</span>';
+          confirmBtn.classList.remove('from-action-gradient-start', 'to-action-gradient-end');
+          confirmBtn.classList.add('bg-emerald-escrow');
+        }, 1000);
+      });
+    }
+  })();
+</script></main></body></html>

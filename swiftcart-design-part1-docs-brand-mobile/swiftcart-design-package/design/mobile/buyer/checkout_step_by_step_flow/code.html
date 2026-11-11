@@ -1,0 +1,468 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#33302c", "on-primary": "#ffffff", "on-primary-container": "#fffcff", "on-primary-fixed": "#3c0800", "error-container": "#ffdad6", "tertiary": "#006947", "on-tertiary-fixed": "#002113", "surface-container-high": "#eee7e1", "primary-container": "#da3700", "outline-variant": "#e5beb4", "on-secondary-fixed": "#091649", "surface-bright": "#fff8f2", "surface-tint": "#b22b00", "error": "#ba1a1a", "tertiary-fixed": "#6ffbbe", "on-secondary-container": "#444f83", "on-primary-fixed-variant": "#881f00", "on-secondary": "#ffffff", "primary-fixed": "#ffdbd1", "inverse-primary": "#ffb5a1", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-container": "#b8c3ff", "on-tertiary-container": "#f4fff6", "surface-container": "#f3ede7", "surface-container-low": "#f9f2ec", "outline": "#907067", "on-error-container": "#93000a", "secondary-fixed": "#dde1ff", "surface-dim": "#dfd9d3", "on-surface-variant": "#5c4039", "on-secondary-fixed-variant": "#384377", "on-surface": "#1e1b18", "background": "#fff8f2", "secondary-fixed-dim": "#b8c3ff", "surface-container-highest": "#e8e1dc", "primary-fixed-dim": "#ffb5a1", "surface": "#fff8f2", "primary": "#ae2a00", "inverse-on-surface": "#f6f0ea", "tertiary-fixed-dim": "#4edea3", "on-background": "#1e1b18", "on-tertiary-fixed-variant": "#005236", "secondary": "#505b90", "surface-variant": "#e8e1dc", "tertiary-container": "#00855b", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "gutter": "0.75rem", "space-lg": "1rem", "space-xs": "0.25rem" }, fontFamily: { "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "currency-code": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, fontSize: { "price-display": ["22px", { "lineHeight": "28px", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "currency-code": ["12px", { "lineHeight": "14px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f2;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-secondary-fixed hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button></div><h1 class="font-headline-sm text-headline-sm text-on-secondary-fixed text-center flex-1">Checkout</h1><div class="flex items-center justify-end w-11"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center rounded-full text-on-secondary-fixed hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-36">
+<!-- Interactive Micro-Notice -->
+<div class="px-margin pt-space-xs pb-space-sm">
+<div class="bg-tertiary-container/10 rounded-xl p-space-md flex items-center justify-between shadow-sm"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary"><span class="material-symbols-outlined text-[16px]">verified_user</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-tertiary">Escrow Protected Checkout</span><span class="font-body-sm text-body-sm text-on-surface-variant">Payments are processed by our secure payment partner.</span></div></div><span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wider uppercase px-2 py-0.5 bg-tertiary-fixed rounded-full text-on-tertiary-fixed">Live</span></div>
+</div>
+<!-- Step Tracker Indicator -->
+<section class="px-margin py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between relative">
+<div class="flex items-center gap-2 z-10">
+<div class="w-6 h-6 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Step 1</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Delivery</span>
+</div>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-primary"></div>
+<div class="flex items-center gap-2 z-10">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_8px_rgba(218,55,0,0.30)]">
+<span class="font-label-sm text-label-sm font-bold">2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Active</span>
+<span class="font-label-md text-label-md text-primary font-bold">Payment</span>
+</div>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-surface-container-highest"></div>
+<div class="flex items-center gap-2 z-10 opacity-50">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="font-label-sm text-label-sm">3</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Step 3</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Confirm</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Delivery Address Section -->
+<section class="px-margin py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Destination</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold">Kampala District</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Joshua Kato</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">+256 772 345 678</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Plot 14, Kira Road, Nakawa Division, Kampala</p>
+<span class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+          Boda rider landmark: Near Kira Road Police Post
+        </span>
+</div>
+<!-- Address Action Bar with Accordion Dropdown -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-10 rounded-lg bg-surface-container text-on-secondary-fixed font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" id="btn-change-address" onclick="toggleDistrictSelector()">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+            Change Address
+          </button>
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" id="btn-add-address" onclick="toggleDistrictSelector()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+            + Add New Address
+          </button>
+</div>
+<!-- District Picker Interactive Panel -->
+<div class="hidden bg-surface-container-high/60 rounded-xl p-space-md flex-col gap-space-xs" id="district-picker">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Select Delivery Sub-Zone</span>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-surface-container-lowest text-on-surface flex items-center justify-between" onclick="selectDistrict(this, 'Kampala Central')">
+<span class="">Kampala Central</span>
+<span class="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>
+</button>
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-primary/10 text-primary font-semibold flex items-center justify-between" onclick="selectDistrict(this, 'Nakawa')">
+<span class="">Nakawa</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-surface-container-lowest text-on-surface flex items-center justify-between" onclick="selectDistrict(this, 'Kololo')">
+<span class="">Kololo</span>
+<span class="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>
+</button>
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-surface-container-lowest text-on-surface flex items-center justify-between" onclick="selectDistrict(this, 'Wakiso')">
+<span class="">Wakiso</span>
+<span class="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>
+</button>
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-surface-container-lowest text-on-surface flex items-center justify-between" onclick="selectDistrict(this, 'Entebbe')">
+<span class="">Entebbe</span>
+<span class="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>
+</button>
+<button class="h-9 px-3 rounded-lg text-left font-body-sm text-body-sm bg-surface-container-lowest text-on-surface flex items-center justify-between" onclick="selectDistrict(this, 'Jinja')">
+<span class="">Jinja</span>
+<span class="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-Vendor Shipping Selection Section -->
+<section class="px-margin py-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Vendor Fulfillment</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Hubs in Order</span>
+</div>
+<!-- Vendor 1 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">headphones</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">SoundCore Official</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 items • Garden City Arcade</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container bg-primary-fixed px-2 py-0.5 rounded-full font-bold">Express Hub</span>
+</div>
+<!-- Option 1: Doorstep -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary/5">
+<input checked="" class="mt-1 accent-primary w-4 h-4" name="shipping-seller-1" onchange="updateFulfillment(1, 5000)" type="radio" value="5000">
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">bolt</span>
+              Swift Express Doorstep
+            </span>
+<span class="font-price-display text-price-display text-on-secondary-fixed">UGX 5,000</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Tomorrow by 2:00 PM via Kampala Express Courier</span>
+</div>
+</label>
+<!-- Option 2: Pickup Station -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary/5">
+<input class="mt-1 accent-primary w-4 h-4" name="shipping-seller-1" onchange="updateFulfillment(1, 2500)" type="radio" value="2500">
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_shipping</span>
+              Pickup: Posta Uganda Central
+            </span>
+<span class="font-price-display text-price-display text-on-secondary-fixed">UGX 2,500</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ready tomorrow at Kampala General Post Office</span>
+</div>
+</label>
+</div>
+<!-- Vendor 2 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">devices_other</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Kikuubo Tech World</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 item • Downtown Plaza</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-bold">Standard</span>
+</div>
+<!-- Option 1: Doorstep -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary/5">
+<input checked="" class="mt-1 accent-primary w-4 h-4" name="shipping-seller-2" onchange="updateFulfillment(2, 3500)" type="radio" value="3500">
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">home</span>
+              Standard Doorstep
+            </span>
+<span class="font-price-display text-price-display text-on-secondary-fixed">UGX 3,500</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Est. 2 business days across Kampala metro</span>
+</div>
+</label>
+<!-- Option 2: Pickup Station -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary/5">
+<input class="mt-1 accent-primary w-4 h-4" name="shipping-seller-2" onchange="updateFulfillment(2, 1500)" type="radio" value="1500">
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">storefront</span>
+              Pickup: Nakawa Market Hub
+            </span>
+<span class="font-price-display text-price-display text-on-secondary-fixed">UGX 1,500</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Collect within 48h from Nakawa Main gate agent</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Payment Method Selection (Mobile Money Priority) -->
+<section class="px-margin py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Payment Method</span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-bold">Instant USSD</span>
+</div>
+<!-- MTN MoMo Option (Selected) -->
+<div class="rounded-xl p-space-md bg-surface-container-low flex flex-col gap-space-sm transition-all shadow-sm" id="method-card-mtn">
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="accent-primary w-4 h-4" name="payment_method" onchange="switchPaymentMethod('mtn')" type="radio" value="mtn">
+<!-- MTN Brand Identity Pill -->
+<div class="px-2.5 py-1 rounded bg-[#FFCC00] text-[#002B49] flex items-center gap-1 font-bold text-[12px] shadow-sm">
+<span class="tracking-tighter">MTN</span>
+<span class="text-[10px] uppercase font-extrabold bg-[#002B49] text-[#FFCC00] px-1 rounded">MoMo</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">MTN Mobile Money</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Fastest</span>
+</label>
+<!-- MTN Input Expansion -->
+<div class="pt-space-xs flex flex-col gap-space-xs" id="mtn-details">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">MoMo Registered Phone</span>
+<div class="flex items-center bg-surface-container-lowest rounded-xl px-space-md h-12 shadow-sm">
+<span class="font-label-lg text-label-lg text-on-secondary-fixed pr-2">+256</span>
+<div class="h-6 w-0.5 bg-surface-container-highest mr-2"></div>
+<input class="bg-transparent font-body-lg text-body-lg text-on-surface w-full focus:outline-none" placeholder="77X XXX XXX" type="tel" value="772 345 678">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant pt-1">
+<span class="material-symbols-outlined text-[15px] text-primary">touch_app</span>
+<span class="font-body-sm text-body-sm">Instant PIN authorization prompt will trigger on this phone</span>
+</div>
+</div>
+</div>
+<!-- Airtel Money Option -->
+<div class="rounded-xl p-space-md bg-surface-container-low flex flex-col gap-space-sm transition-all" id="method-card-airtel">
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="payment_method" onchange="switchPaymentMethod('airtel')" type="radio" value="airtel">
+<!-- Airtel Brand Identity Pill -->
+<div class="px-2.5 py-1 rounded bg-[#E40000] text-white flex items-center gap-1 font-bold text-[12px] shadow-sm">
+<span class="tracking-tight">airtel</span>
+<span class="text-[9px] uppercase font-bold bg-white text-[#E40000] px-1 rounded">Money</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Airtel Money</span>
+</div>
+
+</label>
+<!-- Airtel Input Expansion -->
+<div class="hidden pt-space-xs flex flex-col gap-space-xs" id="airtel-details">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Airtel Registered Phone</span>
+<div class="flex items-center bg-surface-container-lowest rounded-xl px-space-md h-12 shadow-sm">
+<span class="font-label-lg text-label-lg text-on-secondary-fixed pr-2">+256</span>
+<div class="h-6 w-0.5 bg-surface-container-highest mr-2"></div>
+<input class="bg-transparent font-body-lg text-body-lg text-on-surface w-full focus:outline-none" placeholder="75X XXX XXX" type="tel" value="750 123 456">
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Check handset for prompt *185# approval</span>
+</div>
+</div>
+<!-- Card Option -->
+<div class="rounded-xl p-space-md bg-surface-container-low flex flex-col gap-space-sm transition-all" id="method-card-card">
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="payment_method" onchange="switchPaymentMethod('card')" type="radio" value="card">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-extrabold text-[#1A1F71] bg-surface-container px-1.5 py-0.5 rounded">VISA</span>
+<span class="font-label-md text-label-md font-extrabold text-[#EB001B] bg-surface-container px-1.5 py-0.5 rounded">MC</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Visa / Mastercard</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">credit_card</span>
+</label>
+<div class="hidden pt-space-xs text-on-surface-variant font-body-sm text-body-sm" id="card-details">
+          Secured 3D-Secure redirected gateway via Stanbic Bank Uganda.
+        </div>
+</div>
+<!-- Trust Note Pill -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">lock</span>
+<span class="font-body-sm text-body-sm text-on-surface">No merchant gets your money until you approve with your Delivery Code.</span>
+</div>
+</div>
+</section>
+<!-- Voucher Section -->
+<section class="px-margin py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">sell</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface">KAMPALAFIRST</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-1.5 rounded font-bold">Applied</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-bold">-UGX 15,000 First Order Discount</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-error-container hover:text-error transition-colors" onclick="removeVoucher(this)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</section>
+<!-- Order Breakdown Section -->
+<section class="px-margin py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Order Summary</span>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Items Subtotal (3 items)</span>
+<span class="font-label-lg text-label-lg text-on-surface">UGX 380,000</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">Multi-Vendor Delivery</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">info</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface" id="delivery-total-display">UGX 8,500</span>
+</div>
+<div class="flex justify-between items-center text-primary font-medium">
+<span class="">Discount Applied</span>
+<span id="discount-display" class="">-UGX 15,000</span>
+</div>
+<div class="h-0.5 bg-surface-container-highest my-1"></div>
+<div class="flex justify-between items-center pt-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total to Pay</span>
+<span class="font-body-sm text-body-sm text-tertiary">VAT included where applicable</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-secondary-fixed" id="final-total-display">UGX 373,500</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SwiftCart Escrow Guarantee Card -->
+<section class="px-margin py-space-xs mb-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-md shadow-sm"><div class="w-10 h-10 rounded-xl bg-tertiary-container flex-shrink-0 flex items-center justify-center text-on-tertiary shadow-sm"><span class="material-symbols-outlined text-[22px]">shield</span></div><div class="flex flex-col gap-1"><span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1">SwiftCart Escrow Guarantee<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span></span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Escrow Protected: your money is held by SwiftCart until you confirm delivery. Funds are only disbursed to merchants after you inspect your parcel and share the 6-digit code.</p><span class="font-body-sm text-body-sm text-on-surface-variant">Payments are processed by our secure payment partner.</span></div></div>
+</section>
+<!-- Sticky Bottom CTA Bar -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(14,27,77,0.06)] px-margin py-space-md pb-safe">
+<div class="flex items-center justify-between gap-space-md max-w-[390px] mx-auto w-full">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Payable</span>
+<span class="font-price-display text-price-display text-on-secondary-fixed" id="bottom-total-display">UGX 373,500</span>
+</div>
+<button class="flex-1 h-13 min-h-[52px] px-space-md rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(218,55,0,0.30)] active:scale-95 transition-all" id="btn-pay-momo" onclick="triggerCheckout()">
+<span id="cta-label" class="">Place Order &amp; Pay with MoMo</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- Inline Interactive Script -->
+<script>
+  let subtotal = 380000;
+  let deliveryFee1 = 5000;
+  let deliveryFee2 = 3500;
+  let voucherAmount = 15000;
+  let activeMethod = 'mtn';
+
+  function formatUGX(val) {
+    return 'UGX ' + val.toLocaleString('en-US');
+  }
+
+  function updateTotals() {
+    const totalDelivery = deliveryFee1 + deliveryFee2;
+    const finalTotal = subtotal + totalDelivery - voucherAmount;
+
+    const deliveryTotalEl = document.getElementById('delivery-total-display');
+    const finalTotalEl = document.getElementById('final-total-display');
+    const bottomTotalEl = document.getElementById('bottom-total-display');
+
+    if (deliveryTotalEl) deliveryTotalEl.textContent = formatUGX(totalDelivery);
+    if (finalTotalEl) finalTotalEl.textContent = formatUGX(finalTotal);
+    if (bottomTotalEl) bottomTotalEl.textContent = formatUGX(finalTotal);
+  }
+
+  function updateFulfillment(seller, cost) {
+    if (seller === 1) deliveryFee1 = cost;
+    if (seller === 2) deliveryFee2 = cost;
+    updateTotals();
+  }
+
+  function switchPaymentMethod(method) {
+    activeMethod = method;
+    const mtnDetails = document.getElementById('mtn-details');
+    const airtelDetails = document.getElementById('airtel-details');
+    const cardDetails = document.getElementById('card-details');
+    const ctaLabel = document.getElementById('cta-label');
+
+    if (mtnDetails) mtnDetails.classList.toggle('hidden', method !== 'mtn');
+    if (airtelDetails) airtelDetails.classList.toggle('hidden', method !== 'airtel');
+    if (cardDetails) cardDetails.classList.toggle('hidden', method !== 'card');
+
+    if (ctaLabel) {
+      if (method === 'mtn') ctaLabel.textContent = 'Place Order & Pay with MoMo';
+      else if (method === 'airtel') ctaLabel.textContent = 'Place Order & Pay with Airtel';
+      else ctaLabel.textContent = 'Confirm & Pay with Card';
+    }
+  }
+
+  function toggleDistrictSelector() {
+    const picker = document.getElementById('district-picker');
+    if (picker) {
+      picker.classList.toggle('hidden');
+      picker.classList.toggle('flex');
+    }
+  }
+
+  function selectDistrict(buttonEl, districtName) {
+    toggleDistrictSelector();
+  }
+
+  function removeVoucher(btn) {
+    voucherAmount = 0;
+    const voucherContainer = btn.closest('section');
+    if (voucherContainer) {
+      voucherContainer.innerHTML = `
+        <div class="bg-surface-container rounded-xl p-space-sm flex items-center justify-between">
+          <span class="font-body-sm text-body-sm text-on-surface-variant">No voucher code applied</span>
+          <button onclick="location.reload()" class="font-label-sm text-label-sm text-primary font-bold px-2 py-1">Restore</button>
+        </div>
+      `;
+    }
+    const discountDisplay = document.getElementById('discount-display');
+    if (discountDisplay) discountDisplay.textContent = 'UGX 0';
+    updateTotals();
+  }
+
+  function triggerCheckout() {
+    const btn = document.getElementById('btn-pay-momo');
+    if (!btn) return;
+    btn.disabled = true;
+    btn.classList.add('opacity-75');
+    btn.innerHTML = `
+      <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+      <span>Requesting PIN Prompt...</span>
+    `;
+
+    setTimeout(() => {
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+        <span>Prompt Sent to +256 772...</span>
+      `;
+      btn.classList.replace('from-[#FF8A1F]', 'from-tertiary');
+      btn.classList.replace('to-[#DA3700]', 'to-tertiary-container');
+    }, 1500);
+  }
+</script></main>
+
+</body></html>

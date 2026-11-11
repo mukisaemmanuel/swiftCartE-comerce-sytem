@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#ffb5a0", "surface-container-high": "#dde9ff", "primary": "#b02f00", "outline": "#907067", "on-error": "#ffffff", "secondary": "#565e74", "on-surface": "#0d1c2f", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "secondary-fixed": "#dae2fd", "surface-dim": "#ccdbf4", "surface-container": "#e6eeff", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "on-background": "#0d1c2f", "on-tertiary": "#ffffff", "tertiary": "#006c49", "on-primary-fixed": "#3b0900", "error-container": "#ffdad6", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "surface-variant": "#d5e3fd", "on-secondary-fixed-variant": "#3f465c", "background": "#f8f9ff", "inverse-surface": "#233144", "primary-fixed": "#ffdbd1", "primary-fixed-dim": "#ffb5a0", "on-primary-fixed-variant": "#862200", "on-secondary-container": "#5c647a", "on-tertiary-container": "#00311f", "on-surface-variant": "#5b4039", "on-primary-container": "#541200", "surface-bright": "#f8f9ff", "surface-container-highest": "#d5e3fd", "tertiary-container": "#00a572", "primary-container": "#ff5722", "on-primary": "#ffffff", "outline-variant": "#e4beb4", "on-secondary-fixed": "#131b2e", "surface-tint": "#b02f00", "secondary-container": "#dae2fd", "surface-container-low": "#eff4ff", "inverse-on-surface": "#ebf1ff", "error": "#ba1a1a", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "space-md": "0.75rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8f9ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider truncate">SwiftCart Hub</span><span class="flex h-2 w-2 rounded-full bg-tertiary-container animate-pulse"></span></div><span class="font-label-md text-label-md text-on-surface font-semibold truncate">William St Central</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Toggle Torch" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[20px]">flashlight_on</span></button><button aria-label="Toggle Audio Cue" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ml-space-xs shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col w-full bg-surface pt-16 pb-20"><div class="flex flex-col w-full">
+<!-- Toast Notification Bar -->
+<div class="hidden mx-margin mt-space-sm p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-md flex items-center justify-between gap-space-sm animate-pulse" id="statusToast">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px] shrink-0">verified_user</span>
+<span class="font-label-md text-label-md truncate" id="toastMsg">Dispatched to Fraud Arbitration Desk</span>
+</div>
+<button class="text-inverse-on-surface hover:text-on-tertiary-fixed shrink-0" onclick="document.getElementById('statusToast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Quarantine Cage Station Banner -->
+<div class="px-margin pt-space-md pb-space-sm">
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm relative overflow-hidden">
+<!-- Decorative SwiftCart Phoenix Watermark -->
+<div class="absolute -right-4 -bottom-6 w-24 h-24 opacity-10 pointer-events-none text-primary">
+<svg class="w-full h-full" fill="currentColor" viewbox="0 0 100 100">
+<path d="M10,80 Q40,30 85,15 Q65,45 80,60 Q50,60 30,85 Z"></path>
+</svg>
+</div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+            Secure Audit Cage
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-bold">BAY 03</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container bg-tertiary-fixed/30 px-space-xs py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold">T-04 Active</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Quarantine Bay 03</h2>
+<div class="flex items-center gap-space-xs mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">badge</span>
+<span>Sarah Kyomugisha</span>
+<span class="text-secondary font-semibold">(Officer #SEC-412)</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</button>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-md pt-space-xs border-t-0">
+<div class="bg-surface-container-lowest p-space-xs rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Total Locked</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">14</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Parcels</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Frozen Escrow</span>
+<div class="flex items-baseline gap-0.5 mt-0.5">
+<span class="font-label-sm text-label-sm font-bold text-primary">UGX</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">12,450,000</span>
+</div>
+</div>
+</div>
+<!-- Micro Breakdown Chips -->
+<div class="flex items-center gap-space-xs mt-space-xs overflow-x-auto pb-0.5 no-scrollbar">
+<div class="flex items-center gap-1 bg-surface-container-highest px-space-xs py-1 rounded text-on-surface-variant shrink-0 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Merchant Insp: <strong class="text-on-surface">8</strong></span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-space-xs py-1 rounded text-on-surface-variant shrink-0 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>UNBS Hold: <strong class="text-on-surface">3</strong></span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-space-xs py-1 rounded text-on-surface-variant shrink-0 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Write-Off: <strong class="text-on-surface">3</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Incident Spotlight: High-Priority Damaged Item -->
+<div class="px-margin mb-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">warning</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface tracking-tight uppercase">High-Risk Incident Spotlight</h3>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Escrow Frozen</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Item Meta & Merchant Flag -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded font-bold text-on-surface font-mono">AWB #SWIFT-UG-99405</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary font-bold px-1.5 py-0.5 rounded">Rider Refused</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Solar Inverter 3KVA Hybrid Pure Sine</h4>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+            Kikuubo Wholesalers Direct (Vendor #KKB-891)
+          </p>
+</div>
+</div>
+<!-- Critical Flag Reason Box -->
+<div class="bg-error-container/40 p-space-sm rounded-lg mb-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">report</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-error uppercase tracking-wider block">Tamper Protocol Violated</span>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold leading-snug">Crushed outer carton, corner puncture &amp; security tamper tape split prior to customer handover.</p>
+</div>
+</div>
+<!-- Intake Chain of Custody & Logistics Timeline -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-sm grid grid-cols-2 gap-space-xs font-body-sm text-body-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary block">Intake Received</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span> 14:12 EAT Today
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary block">Custody Returned By</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[14px] text-secondary">two_wheeler</span> Brian K. (#RDR-4082)
+          </span>
+</div>
+</div>
+<!-- Escrow Protection Pill -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Stanbic Escrow Guarantee</span>
+<span class="font-price-display text-price-display text-primary font-bold">UGX 1,850,000</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-on-surface font-label-sm text-label-sm font-bold">Safety Locked</span>
+</div>
+<!-- Photographic Proof Gallery -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">photo_camera</span>
+            Audit Proof (3 Angles Logged)
+          </span>
+<button class="text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5" type="button">
+            + Add Angle
+          </button>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Thumbnail 1 -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high aspect-square">
+<img class="w-full h-full object-cover" data-alt="Close up high-angle photo of a heavily compressed corrugated cardboard parcel corner with visible structural dents and torn kraft paper in an industrial logistics sorting facility under fluorescent lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYje623dF0ttPsZ2hZsKq4RX0mYdGMcPyUHPR6U4Y0H71IuILA2j0hVq7p0FS85H1t7QeMOXFiAc5hnh87hBHZB4cuEwBqiO7bGib4uREW7ohMokCSM08LaNZ7WTJr-DTOPbiPCWYlcXV9ksf7KzydWFsMD5OOFlyA3fzlsRnHlN_grQ968TcsO8jKXhOqoTtf8FiOICEbQBloEULGHxxcpb9-c1omB-ttuF7rncX4"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 py-0.2 rounded font-mono">Corner</span>
+</div>
+<!-- Thumbnail 2 -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high aspect-square">
+<img class="w-full h-full object-cover" data-alt="Detailed macro photo of a sliced tamper-evident red holographic security tape seal on an electronic wholesale carton box showing void pattern opened in a warehouse audit setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIWSkxI6XQbtSbp1U84VU0SCHiVz6XkIxrYh_cHUjbvgTBKsaYvpPKwH07793crU5TRHuPtUYeUmVywTh32ZmvBVIlLYyQBBmFsoKidNVy8179p_PSDL83SBBPv_MYGeq71Q_kZUegJTUAo4eIvr-K0IpQ1UNlz7e4kH3lLDpsSAOifBfKWGjHLsyp-ODq7TjNjQkH4mKq4kordZ2NGHh1VCZb9p3vP3iMMEg7Lvpl"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 py-0.2 rounded font-mono">Seal Void</span>
+</div>
+<!-- Thumbnail 3 -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high aspect-square">
+<img class="w-full h-full object-cover" data-alt="Clear overhead crisp photograph of an inverter serial barcode label SWIFT-UG-99405 with manufacturer model sticker and inspection stamp under warehouse audit magnifying lamp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh7U5Im9N6gyf70M-2wfp0eKVWe7D1daF8_0jPnFSoU_ZZLoq-vKjjrB9MzolXRhiU7EA5LN66pPIRBBKo4f2UpHDj04BsJfgy9PBgwKqkifpRpRRKxCr3uzIDhvXGwl2UC7QzJgxK9owD-mmT2i1d-rohO1SCrL08vC_rGQHKnXqKt4Ha6KvzTPIRpzXAetuGR6-XcqGdH3HCEIDDBUqI2z2KlEBl0-WN_BfDNf7I"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 py-0.2 rounded font-mono">SN Code</span>
+</div>
+</div>
+</div>
+<!-- Action Protocol Selector Matrix -->
+<div class="mt-space-md pt-space-sm border-t-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider block mb-space-xs">
+          Select Regulatory Disposition
+        </span>
+<div class="flex flex-col gap-space-xs">
+<!-- Disposition 1 -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between gap-space-sm transition-all group active:scale-[0.99]" onclick="handleDisposition('merchant')" type="button">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px] group-hover:text-on-surface">inventory_2</span>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Accept &amp; Route to Merchant Hold Bin</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Return acceptable; merchant agrees to pick up within 48h</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+<!-- Disposition 2 -->
+<button class="w-full text-left p-space-sm rounded-lg bg-error-container/30 hover:bg-error-container/60 flex items-center justify-between gap-space-sm transition-all group active:scale-[0.99]" onclick="handleDisposition('arbitration')" type="button">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[22px]">policy</span>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Escalate to Fraud &amp; Arbitration Desk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Potential counterfeit or intentional seal manipulation</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+</button>
+<!-- Disposition 3 -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between gap-space-sm transition-all group active:scale-[0.99]" onclick="handleDisposition('insurance')" type="button">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">assured_workload</span>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">Log Insurance Claim (UNBS / Stanbic)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">In-transit courier drop casualty; claim 100% loss payout</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quarantine Inventory Stream -->
+<div class="px-margin mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface tracking-tight uppercase">Audit Stream in Bay 03</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 parcels awaiting disposition review</p>
+</div>
+<button class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
+      </button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Item Card 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">headphones</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed font-bold px-1 rounded">Q-04</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">#SWIFT-UG-88120</span>
+</div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate">SoundCore ANC Pro Wireless</h4>
+<span class="font-body-sm text-body-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Broken Tamper Foil
+            </span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">UGX 320,000</span>
+<button class="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
+            Audit
+          </button>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-error-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">smartphone</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1 rounded">UNBS Alert</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">#SWIFT-UG-77412</span>
+</div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate">Tecno Camon 30 Pro 5G</h4>
+<span class="font-body-sm text-body-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">barcode_scanner</span> Suspected Clone IMEI
+            </span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">UGX 1,150,000</span>
+<button class="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
+            Audit
+          </button>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]">water_drop</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface font-bold px-1 rounded">Q-08</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">#SWIFT-UG-65390</span>
+</div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate">Oraimo Boom Box 40W High Bass</h4>
+<span class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">rainy</span> Rain Soak in Linehaul Transit
+            </span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">UGX 480,000</span>
+<button class="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
+            Audit
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Audit Compliance Note -->
+<div class="px-margin mb-space-md">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px] text-tertiary shrink-0">verified</span>
+<p class="font-body-sm text-body-sm">
+        All parcels scanned into Bay 03 are logged with 256-bit hash records into the UNBS Escrow Ledger. Tamper seals verified by Sarah Kyomugisha.
+      </p>
+</div>
+</div>
+<!-- Sticky Operational Control Bar -->
+<div class="sticky bottom-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-space-sm shadow-md flex flex-col gap-space-xs">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-transform" onclick="triggerLaserScan()" type="button">
+<span class="material-symbols-outlined text-[22px]">barcode_scanner</span>
+<span>Scan New Damaged Parcel into Quarantine</span>
+</button>
+<button class="w-full h-10 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-space-xs hover:bg-surface-container transition-colors" onclick="generateAuditDocket()" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Generate Daily Quarantine Audit Docket (PDF)</span>
+</button>
+</div>
+</div>
+<script>
+  function handleDisposition(type) {
+    const toast = document.getElementById('statusToast');
+    const toastMsg = document.getElementById('toastMsg');
+    
+    if (type === 'arbitration') {
+      toastMsg.textContent = 'Incident SWIFT-UG-99405 routed to Super Admin Arbitration Desk.';
+    } else if (type === 'merchant') {
+      toastMsg.textContent = 'Consigned to Bin Q-11. Merchant pick-up window: 48h active.';
+    } else if (type === 'insurance') {
+      toastMsg.textContent = 'Stanbic In-Transit Damage Claim #CLM-24-8902 generated successfully.';
+    }
+    
+    toast.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  }
+
+  function triggerLaserScan() {
+    const toast = document.getElementById('statusToast');
+    const toastMsg = document.getElementById('toastMsg');
+    toastMsg.textContent = 'Hardware Terminal 04 Optical Barcode Scanner Armed & Ready.';
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 3000);
+  }
+
+  function generateAuditDocket() {
+    const toast = document.getElementById('statusToast');
+    const toastMsg = document.getElementById('toastMsg');
+    toastMsg.textContent = 'Compiling 14 parcels into signed PDF Audit Docket #DOK-04-AUG...';
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 3500);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(13,28,47,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="overview-deck" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-space-xs">Deck</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="inbound-receiving" href="#"><span class="material-symbols-outlined text-[22px]">move_to_inbox</span><span class="font-label-sm text-label-sm mt-space-xs">Inbound</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="sorting-chutes" href="#"><span class="material-symbols-outlined text-[22px]">alt_route</span><span class="font-label-sm text-label-sm mt-space-xs">Sort</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="linehaul-dispatch" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm mt-space-xs">Linehaul</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full transition-colors text-primary font-bold" data-path="hub-inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm mt-space-xs">Staging</span></a></div></nav></body></html>

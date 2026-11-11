@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fff8f2;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","inverse-on-surface":"#f6f0ea","surface-dim":"#dfd9d3","on-background":"#1e1b18","tertiary-fixed":"#6ffbbe","on-surface":"#1e1b18","surface-variant":"#e8e1dc","primary-fixed-dim":"#ffb5a1","secondary-container":"#b8c3ff","inverse-surface":"#33302c","on-tertiary-fixed-variant":"#005236","tertiary-fixed-dim":"#4edea3","on-secondary-fixed":"#091649","error-container":"#ffdad6","inverse-primary":"#ffb5a1","surface-container-highest":"#e8e1dc","on-tertiary-container":"#f4fff6","outline-variant":"#e5beb4","on-secondary-container":"#444f83","on-tertiary-fixed":"#002113","on-secondary-fixed-variant":"#384377","secondary-fixed-dim":"#b8c3ff","primary-container":"#da3700","surface-container-low":"#f9f2ec","on-secondary":"#ffffff","surface-container":"#f3ede7","primary-fixed":"#ffdbd1","tertiary-container":"#00855b","on-error-container":"#93000a","tertiary":"#006947","background":"#fff8f2","surface-container-high":"#eee7e1","secondary-fixed":"#dde1ff","on-primary-container":"#fffcff","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","surface-bright":"#fff8f2","secondary":"#505b90","on-error":"#ffffff","on-primary-fixed-variant":"#881f00","surface":"#fff8f2","outline":"#907067","on-primary-fixed":"#3c0800","surface-tint":"#b22b00","error":"#ba1a1a","on-surface-variant":"#5c4039","primary":"#ae2a00"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","space-lg":"1rem","space-xl":"1.5rem",margin:"1rem",gutter:"0.75rem","space-xs":"0.25rem","space-md":"0.75rem"},fontFamily:{"currency-code":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"currency-code":["12px",{lineHeight:"14px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"12px",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"18px",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",fontWeight:"800"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"700"}],"price-display":["22px",{lineHeight:"28px",fontWeight:"800"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-transform flex-shrink-0" onclick="window.history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-7 w-auto object-contain flex-shrink-0 hidden xs:block" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col min-w-0"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Mobile Money Payment</h1><div class="inline-flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[13px]">verified_user</span><span class="font-label-sm text-label-sm tracking-tight">Swift Escrow Protected</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-tertiary shadow-[0_1px_3px_rgba(0,105,71,0.1)]"><span class="material-symbols-outlined text-[15px]">lock</span><span class="font-label-sm text-label-sm hidden sm:inline">Safe Checkout</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_2px_8px_rgba(218,55,0,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface px-margin pb-safe"><div class="flex flex-col w-full relative">
+<!-- BACKGROUND APP LAYER (Checkout Waiting State) -->
+<div class="flex flex-col gap-space-md w-full filter brightness-[0.82] select-none pointer-events-none pb-28">
+<!-- Real-time Status Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+<span class="font-label-sm text-label-sm text-amber-900 tracking-wide uppercase">Payment Session Active</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+<span id="bg-countdown">01:48</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary relative">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 48 48">
+<circle cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-opacity="0.2" stroke-width="3.5"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125" stroke-dashoffset="35" stroke-linecap="round" stroke-width="3.5"></circle>
+</svg>
+<span class="material-symbols-outlined absolute text-[22px]">contactless</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface leading-snug">Approving UGX 385,000</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Push sent to MTN +256 772 345 678</p>
+</div>
+</div>
+<!-- Live Prompt Tracker Bar -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">cell_tower</span>
+<span class="font-body-sm text-body-sm">USSD channel handshake initiated with MTN Uganda</span>
+</div>
+</div>
+<!-- Order Snapshot Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex gap-3">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0" data-alt="SoundCore Space One ANC Headphones premium matte black packaged in modern electronics retail staging with soft golden studio lighting reflecting Ugandan premium audio shop merchandise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpxcwgfAObwJJJBjulpt9H-aFD4G0PK26tlfySMI6wMOARiYQDaiYS4vYmWKHB_jktiXeYms31gCstmN_pcrbCWPVwh5bhKpfaBGZktieCB-FNXx4uWS4WtyQ77HVVY0GeSXZOsAijS2JyAAB8egX1wz4FNyOS0jX_yI255tKKZPLoFocWJtpNxHYLDbhDukv2SGvpAHavPTom1AWI4mXJOhb7lMMRkvEH6wd3YGAa"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary tracking-wide">ORDER #SWIFT-8942-KLA</span>
+<h2 class="font-label-lg text-label-lg text-on-surface line-clamp-1">SoundCore Space One ANC Headphones</h2>
+<div class="flex items-center gap-1 text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[14px]">store</span>
+<span class="font-body-sm text-body-sm truncate">SoundCore Uganda (Pioneer Mall G-14)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-1 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Payable</span>
+<span class="font-price-display text-price-display text-on-surface">UGX 385,000</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-sm text-label-sm">Escrow Locked</span>
+</div>
+</div>
+</div>
+<!-- Escrow Protection Info Banner -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">lock_clock</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">Swift Safe Escrow Protection</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Your payment will remain safeguarded until you inspect your headphones and hand over the 6-digit release code to the rider.</p>
+</div>
+</div>
+</div>
+<!-- MODAL / USSD SYSTEM OVERLAY LAYER -->
+<div class="fixed inset-0 z-50 flex flex-col justify-center items-center px-4 bg-inverse-surface/65 backdrop-blur-[6px] transition-opacity duration-200" id="ussd-modal">
+<!-- Realistic Native Telecom Carrier USSD Dialog Window -->
+<div class="w-full max-w-[360px] bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-[fadeIn_0.25s_ease-out]">
+<!-- Carrier Header Banner -->
+<div class="bg-[#FFCC00] text-black px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-black text-[#FFCC00] flex items-center justify-center font-headline-sm text-[12px] font-extrabold tracking-tighter">
+            MTN
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md tracking-tight leading-none text-black">Mobile Money (*165#)</span>
+<span class="font-label-sm text-[10px] text-black/75 tracking-tight font-medium">Telecom Push Request • Live</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-black/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px] text-black">encrypted</span>
+<span class="font-label-sm text-[10px] text-black font-semibold uppercase">TLS-SIM</span>
+</div>
+</div>
+<!-- Carrier USSD Content Box -->
+<div class="p-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Verbatim USSD Carrier Prompt Text -->
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-relaxed">
+            SwiftCart Escrow Deposit: Approve payment of UGX 385,000 to <span class="text-primary font-bold">SWIFTCART UGANDA</span> (Ref: ORD-8942)?
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Transaction Fee: <strong>UGX 0</strong></span>
+<span>Tax (Excise): <strong>UGX 0</strong></span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface text-center">
+          Enter your 5-digit MoMo PIN to authorize:
+        </p>
+<!-- PIN Digit Dots Display -->
+<div class="flex justify-center items-center gap-3 py-1">
+<div class="w-4 h-4 rounded-full bg-surface-variant transition-all" id="dot-1"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant transition-all" id="dot-2"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant transition-all" id="dot-3"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant transition-all" id="dot-4"></div>
+<div class="w-4 h-4 rounded-full bg-surface-variant transition-all" id="dot-5"></div>
+</div>
+<!-- Touch Number Pad for USSD Simulation -->
+<div class="grid grid-cols-3 gap-1.5 pt-1">
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('1')" type="button">1</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('2')" type="button">2</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('3')" type="button">3</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('4')" type="button">4</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('5')" type="button">5</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('6')" type="button">6</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('7')" type="button">7</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('8')" type="button">8</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('9')" type="button">9</button>
+<button class="h-11 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center justify-center transition-transform" onclick="clearPinInput()" type="button">CLR</button>
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-headline-sm text-headline-sm flex items-center justify-center transition-transform" onclick="handlePinInput('0')" type="button">0</button>
+<button class="h-11 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm flex items-center justify-center transition-transform" onclick="backspacePinInput()" type="button">
+<span class="material-symbols-outlined text-[20px]">backspace</span>
+</button>
+</div>
+<!-- Security session disclaimer -->
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+<span class="font-label-sm text-label-sm">Secure MoMo Network Keypass</span>
+</div>
+<!-- USSD Dialog Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="w-1/2 h-11 rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg active:scale-95 transition-transform flex items-center justify-center" onclick="dismissDialog()" type="button">
+            Cancel
+          </button>
+<button class="w-1/2 h-11 rounded-xl bg-[#FFCC00] text-black font-label-lg text-label-lg active:scale-95 transition-transform flex items-center justify-center gap-1.5 shadow-md" id="auth-btn" onclick="submitAuth()" type="button">
+<span>Send</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- USSD Quick Reopen Pill (Shown if user clicks away or cancels) -->
+<button class="hidden mt-4 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface shadow-xl flex items-center gap-2 active:scale-95 transition-transform" id="reopen-pill" onclick="showDialog()">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FFCC00]"></span>
+<span class="font-label-md text-label-md">Reopen MTN MoMo Prompt</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- PERSISTENT FALLBACK ACTIONS & GUIDANCE (Anchor Bottom Card) -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest shadow-[0_-4px_24px_rgba(14,27,77,0.08)] px-margin pt-space-md pb-safe rounded-t-2xl max-w-lg mx-auto">
+<div class="flex flex-col gap-space-sm">
+<!-- Action Drawer Trigger / Title -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">help</span>
+<span class="font-label-md text-label-md text-on-surface">Didn't receive the prompt?</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 2 of 2</span>
+</div>
+<!-- Quick Options -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Manual USSD Dial Action -->
+<a class="flex flex-col p-2.5 bg-surface-container-low rounded-xl active:bg-surface-container transition-colors" href="tel:*165*4*4%23">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-primary font-bold">Manual Approval</span>
+<span class="material-symbols-outlined text-[16px]">call</span>
+</div>
+<span class="font-headline-sm text-[13px] text-on-surface mt-0.5">Dial *165*4*4#</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Approve under 'My Approvals'</span>
+</a>
+<!-- Resend MoMo Push Trigger -->
+<button class="flex flex-col p-2.5 bg-surface-container-low rounded-xl text-left active:bg-surface-container transition-colors" id="resend-btn" onclick="resendPrompt()">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Resend Push</span>
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</div>
+<span class="font-headline-sm text-[13px] text-on-surface mt-0.5" id="resend-text">Push in 28s</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Sends new prompt to phone</span>
+</button>
+</div>
+<!-- Alternate Switcher & Safety Note -->
+<div class="flex items-center justify-between pt-1">
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-1" onclick="alert('Switching payment method...')">
+<span class="material-symbols-outlined text-[15px]">swap_horiz</span>
+<span>Switch to Airtel Money or Card</span>
+</button>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm">Swift Escrow Protected</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+    let enteredPin = "";
+    let secondsLeft = 108;
+    let resendCooldown = 28;
+
+    function updateDots() {
+      for (let i = 1; i <= 5; i++) {
+        const dot = document.getElementById(`dot-${i}`);
+        if (i <= enteredPin.length) {
+          dot.className = "w-4 h-4 rounded-full bg-primary scale-110 transition-all";
+        } else {
+          dot.className = "w-4 h-4 rounded-full bg-surface-variant transition-all";
+        }
+      }
+    }
+
+    function handlePinInput(digit) {
+      if (enteredPin.length < 5) {
+        enteredPin += digit;
+        updateDots();
+      }
+      if (enteredPin.length === 5) {
+        document.getElementById('auth-btn').classList.add('ring-2', 'ring-black');
+      }
+    }
+
+    function clearPinInput() {
+      enteredPin = "";
+      updateDots();
+      document.getElementById('auth-btn').classList.remove('ring-2', 'ring-black');
+    }
+
+    function backspacePinInput() {
+      enteredPin = enteredPin.slice(0, -1);
+      updateDots();
+      document.getElementById('auth-btn').classList.remove('ring-2', 'ring-black');
+    }
+
+    function submitAuth() {
+      if (enteredPin.length < 4) {
+        alert("Please enter your complete 5-digit MTN Mobile Money PIN.");
+        return;
+      }
+      const authBtn = document.getElementById('auth-btn');
+      authBtn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Verifying</span>`;
+      
+      setTimeout(() => {
+        const modal = document.getElementById('ussd-modal');
+        modal.innerHTML = `
+          <div class="w-full max-w-[340px] bg-surface-container-lowest rounded-2xl p-space-xl shadow-2xl flex flex-col items-center text-center gap-space-md animate-[fadeIn_0.2s_ease-out]">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-tertiary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="font-headline-sm text-headline-sm text-on-surface">Payment Authorized!</span>
+              <p class="font-body-md text-body-md text-on-surface-variant">UGX 385,000 received into SwiftCart Safe Escrow. Delivery code generated.</p>
+            </div>
+            <div class="w-full bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-on-surface-variant">TxID: MTN-8942-X889</span>
+              <span class="font-label-sm text-label-sm text-tertiary font-bold">STATUS: ESCROW HELD</span>
+            </div>
+            <button onclick="window.location.reload()" class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg active:scale-95 transition-transform">
+              View Order Tracking & Delivery Code
+            </button>
+          </div>
+        `;
+      }, 950);
+    }
+
+    function dismissDialog() {
+      document.getElementById('ussd-modal').classList.add('hidden');
+      document.getElementById('reopen-pill').classList.remove('hidden');
+    }
+
+    function showDialog() {
+      document.getElementById('ussd-modal').classList.remove('hidden');
+      document.getElementById('reopen-pill').classList.add('hidden');
+    }
+
+    function resendPrompt() {
+      if (resendCooldown > 0) return;
+      resendCooldown = 30;
+      showDialog();
+      clearPinInput();
+    }
+
+    // Cooldown and main timer loop
+    setInterval(() => {
+      if (secondsLeft > 0) {
+        secondsLeft--;
+        const m = Math.floor(secondsLeft / 60).toString().padStart(2, '0');
+        const s = (secondsLeft % 60).toString().padStart(2, '0');
+        const bgTimer = document.getElementById('bg-countdown');
+        if (bgTimer) bgTimer.innerText = `${m}:${s}`;
+      }
+
+      if (resendCooldown > 0) {
+        resendCooldown--;
+        const resendText = document.getElementById('resend-text');
+        if (resendText) resendText.innerText = `Push in ${resendCooldown}s`;
+      } else {
+        const resendText = document.getElementById('resend-text');
+        if (resendText) resendText.innerText = 'Tap to Resend';
+      }
+    }, 1000);
+  </script>
+</div></main></body></html>

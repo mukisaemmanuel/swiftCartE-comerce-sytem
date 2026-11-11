@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdbd1", "tertiary-fixed": "#6ffbbe", "container-dark-high": "#1E293B", "tertiary-fixed-dim": "#4edea3", "on-tertiary": "#003824", "primary": "#ffb5a1", "on-surface": "#dde1fb", "surface-bright": "#34384c", "on-background": "#dde1fb", "outline-variant": "#5c4039", "on-secondary-fixed-variant": "#384377", "surface-variant": "#2f3448", "on-primary": "#611300", "container-dark-low": "#0F172A", "background": "#0d1225", "inverse-surface": "#dde1fb", "surface-container": "#1a1f31", "on-secondary-container": "#a7b2ed", "on-primary-container": "#fffcff", "tertiary-container": "#00855b", "surface-cream": "#FFF8F2", "emerald-escrow": "#10B981", "surface-container-lowest": "#080d1f", "surface-dark": "#080D1F", "danger-penalty": "#EF4444", "secondary-fixed": "#dde1ff", "on-tertiary-container": "#f4fff6", "on-surface-variant": "#e5beb4", "secondary": "#b8c3ff", "secondary-fixed-dim": "#b8c3ff", "outline": "#ac8980", "surface-container-highest": "#2f3448", "error-container": "#93000a", "surface-container-high": "#24293c", "secondary-container": "#384377", "primary-fixed-dim": "#ffb5a1", "primary-container": "#da3700", "on-secondary": "#212d5f", "inverse-on-surface": "#2b3043", "on-tertiary-fixed": "#002113", "mtn-yellow": "#FFCC00", "on-primary-fixed": "#3c0800", "action-gradient-end": "#DA3700", "surface-tint": "#ffb5a1", "on-tertiary-fixed-variant": "#005236", "action-gradient-start": "#FF8A1F", "on-primary-fixed-variant": "#881f00", "surface-dim": "#0d1225", "amber-warning": "#F59E0B", "surface-container-low": "#161b2d", "error": "#ffb4ab", "tertiary": "#4edea3", "surface": "#0d1225", "on-error-container": "#ffdad6", "on-error": "#690005", "on-secondary-fixed": "#091649", "inverse-primary": "#b22b00", "airtel-red": "#ED1C24" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-lg": "1rem", "margin": "1rem" }, "fontFamily": { "label-lg": [ "Plus Jakarta Sans" ], "code-display": [ "Plus Jakarta Sans" ], "price-display": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "15px", { "lineHeight": "20px", "fontWeight": "700" } ], "code-display": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" } ], "price-display": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "fontWeight": "800" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface-dark font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-container-dark-low z-50 flex flex-col justify-between shadow-[0_4px_16px_rgba(0,0,0,0.45)]"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7VG2Yr54mjxR9P21ZBLXl6aZZcEwwiQsqIoiHbjiWrRN_LNFoZr3Xf-oe4BYMfP_1qfTYn5uJ5xBW3VXuWgAwlX6icRkGyeKFAms_9Rm8OgiigBM0_2i6WSBH73vih9ThQFvq8o5y5GIB4I5hUu6WDv_mmXgzlxE0fOe2UKPXKDysEMn8jwXwZ0CrcPMXuFluPDfvJv3KwHZHYm_NNC83GpTZCJg33NP-Qabix39nMe0w-t2mb1xZkFE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">SwiftCart</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Admin HQ Uganda</span></div></div><div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">Kampala Central Hub</span></div><span class="font-label-sm text-label-sm text-emerald-escrow bg-emerald-escrow/10 px-space-xs py-0.5 rounded">ONLINE</span></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="seller-applications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">how_to_reg</span><span class="font-label-md text-label-md">Seller Applications</span></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-space-xs py-0.5 rounded-full font-bold">14</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sellers-directory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md text-label-md">Sellers Directory</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="riders-fleet" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">two_wheeler</span><span class="font-label-md text-label-md">Riders Fleet</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="product-moderation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-md text-label-md">Product Moderation</span></div><span class="font-label-sm text-label-sm bg-amber-warning text-surface-dark px-space-xs py-0.5 rounded-full font-bold">8</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="orders-oversight" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Orders Oversight</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="escrow-and-disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shield</span><span class="font-label-md text-label-md">Escrow &amp; Disputes</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payout-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-md text-label-md">Payout Queue</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="platform-settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Platform Settings</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-log" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-md text-label-md">Audit Log</span></div></a></nav><div class="p-space-md bg-surface-container-lowest m-space-sm rounded-xl space-y-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Telecom Core Rails</span><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-mtn-yellow"></span><span class="font-body-sm text-body-sm text-on-surface">MTN MoMo</span></div><span class="font-label-sm text-label-sm text-emerald-escrow">99.9%</span></div><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-airtel-red"></span><span class="font-body-sm text-body-sm text-on-surface">Airtel Money</span></div><span class="font-label-sm text-label-sm text-emerald-escrow">100%</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-container-dark-low/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.45)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-high text-on-surface font-body-sm text-body-sm pl-9 pr-16 py-space-sm rounded-lg placeholder-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search merchants, riders, orders, escrow hashes..." type="text"/><kbd class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded shadow">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md px-space-md py-space-xs bg-surface-container-high rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-mtn-yellow">swap_calls</span><span class="font-label-sm text-label-sm text-on-surface">MTN MoMo Rail</span><span class="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span></div><div class="w-px h-3 bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-airtel-red">swap_calls</span><span class="font-label-sm text-label-sm text-on-surface">Airtel Rail</span><span class="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span></div></div><button aria-label="Theme Mode" class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-danger-penalty ring-2 ring-container-dark-low"></span></button><div class="h-8 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface leading-tight">Kizito Ronald</span><span class="font-label-sm text-label-sm text-primary">Super Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 bg-surface-dark px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Operational Control Surface -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg flex flex-col gap-space-md">
+<!-- Breadcrumb & Status Marker -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span>Admin Operations</span>
+<span class="material-symbols-outlined text-body-sm text-outline">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-bold">Seller Applications &amp; KYC</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-md py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">Live Regulatory Hook: URSB / URA / NIRA Direct Rails</span>
+</div>
+</div>
+<!-- Editorial Header Block -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-extrabold block">Compliance &amp; Onboarding Workbench</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Seller Applications &amp; Business KYC Dossier Review</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Batch Audit Export</span>
+</button>
+<button class="flex items-center gap-space-xs bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Run Bulk Registry Sync</span>
+</button>
+</div>
+</div>
+<!-- Filter Tabs Pill Group -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+        All Applications <span class="ml-1 text-on-surface-variant font-bold">42</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap shadow-sm">
+        Pending Review <span class="ml-1 px-1.5 py-0.5 rounded-full bg-on-primary-container/20 text-on-primary-container font-bold text-label-sm">14</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+        Approved <span class="ml-1 text-on-surface-variant font-bold">24</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+        Request More Info <span class="ml-1 text-amber-warning font-bold">3</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+        Rejected <span class="ml-1 text-danger-penalty font-bold">1</span>
+</button>
+</div>
+<!-- Search & Micro-Filters Bar -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center pt-space-xs">
+<div class="md:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface text-on-surface font-body-sm text-body-sm pl-9 pr-space-md py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search by TIN, URSB Reg #, business name, or director NIN..." type="text"/>
+</div>
+<div class="md:col-span-2">
+<select class="w-full bg-surface text-on-surface font-body-sm text-body-sm px-space-md py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option>All Districts (Kampala Focus)</option>
+<option>Kampala Central</option>
+<option>Nakasero &amp; Kololo</option>
+<option>Wakiso &amp; Entebbe</option>
+<option>Mukono Industrial Area</option>
+<option>Jinja Commercial</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<select class="w-full bg-surface text-on-surface font-body-sm text-body-sm px-space-md py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option>All Categories</option>
+<option>Consumer Electronics</option>
+<option>Groceries &amp; Fresh Food</option>
+<option>Fashion &amp; Apparel</option>
+<option>Solar &amp; Clean Energy</option>
+<option>Health &amp; Pharmaceuticals</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<select class="w-full bg-surface text-on-surface font-body-sm text-body-sm px-space-md py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option>Risk Profile: Any</option>
+<option>Low Risk (A+)</option>
+<option>Moderate Risk (B)</option>
+<option>High Risk / Manual Audit</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Master-Detail Split Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANE: 1/3 Applications Queue (4 cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Applications Queue (14 Pending)</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">tune</span> Sort: Urgency
+        </span>
+</div>
+<!-- Application Card 1: ACTIVE -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-md cursor-pointer transition-all hover:shadow-lg relative overflow-hidden bg-gradient-to-r from-primary/5 via-surface-container-lowest to-surface-container-lowest">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs pl-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Risk: Low (A+)
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4h ago</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">Pending Verification</span>
+</div>
+<div class="pl-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Uganda Tech Gadgets Ltd</h2>
+<p class="font-body-sm text-body-sm text-primary font-bold mt-0.5">Brand: GadgetPoint Kampala</p>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">person</span> Brenda Atuhaire</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">devices</span> Electronics</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-escrow text-[14px]">task_alt</span> URSB Verified
+            </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-escrow text-[14px]">task_alt</span> TIN Match
+            </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-mtn-yellow text-[14px]">cell_tower</span> MoMo Validated
+            </span>
+</div>
+</div>
+</article>
+<!-- Application Card 2 -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm cursor-pointer transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">Risk: Moderate (B)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8h ago</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant font-bold">Docs Uploaded</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Kampala Organic Harvest</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Brand: Nakasero Direct Fresh</p>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">person</span> David Ssempala</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">nutrition</span> Groceries</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-warning">pending</span> KCCA Hygiene Pending
+            </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold">TIN #100281920</span>
+</div>
+</div>
+</article>
+<!-- Application Card 3 -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm cursor-pointer transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-bold">Risk: Low (A)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14h ago</span>
+</div>
+<span class="font-label-sm text-label-sm bg-emerald-escrow/10 text-emerald-escrow px-2 py-0.5 rounded-full font-bold">Biometrics Passed</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Victoria Apparel &amp; Footwear</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Brand: Victoria Trends Jinja</p>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">person</span> Grace Nakato</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">checkroom</span> Fashion &amp; Apparel</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-escrow text-[14px]">fingerprint</span> NIRA 99.8% Match
+            </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">3 Docs</span>
+</div>
+</div>
+</article>
+<!-- Application Card 4 -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm cursor-pointer transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-amber-warning/10 text-amber-warning font-bold">Risk: Review</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1d ago</span>
+</div>
+<span class="font-label-sm text-label-sm bg-amber-warning/10 text-amber-warning px-2 py-0.5 rounded-full font-bold">Awaiting URA</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Pearl Solar Systems</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Brand: Pearl Energy Kampala</p>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">person</span> Moses Kato</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">solar_power</span> Clean Tech</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm bg-amber-warning/10 text-amber-warning px-2 py-0.5 rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> EFRIS Link Pending
+            </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">KCCA Verified</span>
+</div>
+</div>
+</article>
+<!-- Quick Registry Operational Telemetry Pill -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Gov APIs Gateway</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">All Responsive</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center pt-1">
+<div class="bg-surface-container-lowest p-2 rounded-lg">
+<span class="font-label-sm text-label-sm block text-on-surface-variant">URSB API</span>
+<span class="font-label-md text-label-md text-emerald-escrow font-extrabold">214ms</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg">
+<span class="font-label-sm text-label-sm block text-on-surface-variant">URA EFRIS</span>
+<span class="font-label-md text-label-md text-emerald-escrow font-extrabold">180ms</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg">
+<span class="font-label-sm text-label-sm block text-on-surface-variant">NIRA IVS</span>
+<span class="font-label-md text-label-md text-emerald-escrow font-extrabold">340ms</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- RIGHT PANE: 2/3 Detailed Dossier Review & Decision Workbench (8 cols) -->
+<main class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- 1. Application Dossier Master Header -->
+<section class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md pb-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-inner shrink-0">
+<span class="material-symbols-outlined text-[36px]">devices_other</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-black">Uganda Tech Gadgets Ltd</span>
+<span class="font-label-sm text-label-sm bg-emerald-escrow/10 text-emerald-escrow px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Swift Escrow Protected Ready
+                </span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">Trade Storefront: GadgetPoint Kampala</p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span>Application ID: <strong class="text-on-surface font-semibold">SC-APP-2024-0891</strong></span>
+<span>•</span>
+<span>Assigned Examiner: <strong class="text-on-surface font-semibold">Kizito Ronald</strong></span>
+<span>•</span>
+<span>Submittal: <strong>Today, 08:42 EAT</strong></span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Overall System Trust</span>
+<span class="font-price-display text-price-display text-emerald-escrow font-black">98 <span class="text-body-sm font-normal text-on-surface-variant">/ 100</span></span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-bold mt-1">Tier-1 Merchant Grade</span>
+</div>
+</div>
+<!-- Meta Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-md bg-surface-container p-space-md rounded-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">store</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Physical Showroom / HQ</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Shop #12, Pioneer Mall, Kampala Road</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Primary Business Line</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">+256 772 884 192 (MTN Verified)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Authorized Director</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Brenda Atuhaire (Managing Director)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Four-Step Statutory Audit & KYC Check Pipeline -->
+<section class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Statutory Audit &amp; Mandatory KYC Checklist</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Official integration with Republic of Uganda regulatory databases</p>
+</div>
+<span class="font-label-sm text-label-sm bg-emerald-escrow text-surface-container-lowest px-space-sm py-1 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> 4 of 4 Automated Checks Cleared
+          </span>
+</div>
+<div class="space-y-space-md">
+<!-- Step 1: URSB Legal Registration -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-emerald-escrow/10 text-emerald-escrow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Step 1: Legal Registration (URSB)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">100% Active Match</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-space-md gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Reg #: <strong class="text-on-surface">80024918239</strong></span>
+<span>Entity: <strong class="text-on-surface">Private Limited Co.</strong></span>
+<span>Incorporated: <strong class="text-on-surface">14 Mar 2021</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">check_circle</span> Live synchronization with URSB public corporate ledger confirms active legal standing.
+                </p>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between shrink-0 gap-space-xs">
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Certificate_of_Incorporation.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated 09:12 EAT</span>
+</div>
+</div>
+<!-- Step 2: URA EFRIS Tax Compliance -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-emerald-escrow/10 text-emerald-escrow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Step 2: Tax Compliance (URA EFRIS)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">Verified &amp; EFRIS Linked</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-space-md gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>TIN: <strong class="text-on-surface">1009842104</strong></span>
+<span>Fiscal Device: <strong class="text-on-surface">System-to-System</strong></span>
+<span>Clearance Valid: <strong class="text-on-surface">Dec 2025</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">check_circle</span> Automated e-Invoicing enabled for swift VAT escrow disbursement.
+                </p>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between shrink-0 gap-space-xs">
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>URA_TCC_2024_2025.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EFRIS Handshake 200 OK</span>
+</div>
+</div>
+<!-- Step 3: KCCA Local Authority & Physical Premises -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-emerald-escrow/10 text-emerald-escrow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Step 3: Local Authority &amp; Premises (KCCA)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">Physical Audit Cleared</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-space-md gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>License: <strong class="text-on-surface">KCCA/CENTRAL/2024/18290</strong></span>
+<span>Zone: <strong class="text-on-surface">Nakasero Commercial</strong></span>
+<span>Physical Inspection: <strong class="text-on-surface">Showroom Passed</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">check_circle</span> Field Agent #KG-41 verified Pioneer Mall retail store inventory presence.
+                </p>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between shrink-0 gap-space-xs">
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>KCCA_Permit_Proof.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Valid through 31 Dec 2024</span>
+</div>
+</div>
+<!-- Step 4: NIRA Director Biometrics & Identity -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-emerald-escrow/10 text-emerald-escrow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">fingerprint</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Step 4: Director Biometrics &amp; Identity (NIRA)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">99.4% Biometric Face Match</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-space-md gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>National ID: <strong class="text-on-surface">CM8204918293LA</strong></span>
+<span>Registered Name: <strong class="text-on-surface">Brenda Atuhaire</strong></span>
+<span>Sex / DOB: <strong class="text-on-surface">Female • 1989-11-20</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">check_circle</span> Automated selfie liveness &amp; National Identification and Registration Authority ledger match confirmed.
+                </p>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between shrink-0 gap-space-xs">
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">face</span>
+<span>NIRA_NID_Scan.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Liveness Confidence: 99.4%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Proposed Payout Account Validation (MTN MoMo + Stanbic) -->
+<section class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Telecom &amp; Bank Payout Rails Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Designated destination accounts for escrow release cycles</p>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-escrow bg-emerald-escrow/10 px-space-sm py-1 rounded font-bold">2 Verified Channels</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Primary: MTN MoMo Business -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-mtn-yellow/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm bg-mtn-yellow text-surface-dark px-2 py-0.5 rounded font-black tracking-wider uppercase">PRIMARY DISBURSEMENT</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span> KYC Name Match
+                </span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="w-3 h-3 rounded-full bg-mtn-yellow"></span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">MTN MoMo Business Pay</h4>
+</div>
+<div class="space-y-1 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Registered MSISDN:</span>
+<span class="text-on-surface font-bold">+256 772 884 192</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">KYC Holder Name:</span>
+<span class="text-on-surface font-bold">BRENDA ATUHAIRE</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Match Reliability:</span>
+<span class="text-emerald-escrow font-extrabold">100% Exact Name Token Match</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Instant Settlements Enabled</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">Tier-1 MoMo Wallet</span>
+</div>
+</div>
+<!-- Secondary / Backup: Stanbic Bank Uganda -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-black tracking-wider uppercase">BACKUP SWIFT / EFT</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span> Account Active
+                </span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Stanbic Bank Uganda Ltd</h4>
+</div>
+<div class="space-y-1 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Account Number:</span>
+<span class="text-on-surface font-bold">9030 •••• 1824</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Entity Title:</span>
+<span class="text-on-surface font-bold">UGANDA TECH GADGETS LTD</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Branch:</span>
+<span class="text-on-surface font-bold">Crested Towers Branch, Kampala</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>EFT Batched Payout Rail</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">Verified via Bank API</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Compliance Officer Review & Action Deck -->
+<section class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Compliance Officer Determination &amp; Action Deck</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Final regulatory underwriting for merchant onboarding to SwiftCart Uganda</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-emerald-escrow text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface">Daily Payout Cap: <strong>UGX 15,000,000</strong></span>
+</div>
+</div>
+<!-- Compliance Notes Field -->
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1" for="compliance-notes">
+            Statutory Examination Notes <span class="text-on-surface-variant font-normal">(Recorded directly to immutable compliance audit log)</span>
+</label>
+<textarea class="w-full bg-surface-container text-on-surface font-body-sm text-body-sm p-space-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="compliance-notes" rows="3">URSB registration authentic, TIN active on EFRIS. Ready for unconditional onboarding.</textarea>
+</div>
+<!-- Tier & Classification Controls -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md bg-surface-container p-space-md rounded-xl">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Seller Escrow Hold Period</span>
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md p-2 rounded-lg focus:outline-none">
+<option>Standard T+1 (24 Hours post delivery)</option>
+<option>Same-Day Accelerated (T+0)</option>
+<option>High Risk Extended (T+3)</option>
+</select>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Commission Bracket</span>
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md p-2 rounded-lg focus:outline-none">
+<option>Consumer Electronics Standard (6.5%)</option>
+<option>Promotional Volume (4.5%)</option>
+<option>Managed Logistics (8.0%)</option>
+</select>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Storefront Badge Allocation</span>
+<div class="flex items-center gap-space-xs mt-2">
+<label class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-0" type="checkbox"/>
+<span>Verified Merchant</span>
+</label>
+<label class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-0" type="checkbox"/>
+<span>Swift Express</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar (Secondary utility buttons + Primary Orange Approval CTA) -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">help_center</span>
+<span>Request Additional Documents</span>
+</button>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-xl bg-surface-container text-error font-label-md text-label-md hover:bg-error-container hover:text-on-error-container transition-colors shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Reject Application</span>
+</button>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-3.5 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary font-label-lg text-label-lg font-bold shadow-lg hover:opacity-95 transition-all transform active:scale-98 flex items-center justify-center gap-2" onclick="confirmApproval()" type="button">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Approve &amp; Issue Merchant Storefront</span>
+</button>
+</div>
+</section>
+</main>
+</div>
+</div>
+<script>
+  function confirmApproval() {
+    const btn = event.currentTarget;
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Provisioning Storefront & Escrow Rails...</span>';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.classList.remove('from-action-gradient-start', 'to-action-gradient-end');
+      btn.classList.add('bg-emerald-escrow');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Storefront Provisioned & SMS Dispatched</span>';
+    }, 1400);
+  }
+</script></main></div></body></html>

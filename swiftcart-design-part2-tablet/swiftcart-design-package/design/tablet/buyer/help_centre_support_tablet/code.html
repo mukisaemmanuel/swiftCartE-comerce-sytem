@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SwiftCart Uganda - Fast Multi-Vendor Marketplace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#dae2fd","surface-tint":"#b02f00","inverse-surface":"#233144","tertiary-fixed-dim":"#4edea3","on-background":"#0d1c2f","on-error":"#ffffff","on-surface":"#0d1c2f","secondary-fixed-dim":"#bec6e0","on-primary-fixed-variant":"#862200","on-primary-fixed":"#3b0900","on-tertiary-fixed":"#002113","on-primary":"#ffffff","on-secondary":"#ffffff","tertiary":"#006c49","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#3f465c","error":"#ba1a1a","surface-variant":"#d5e3fd","outline-variant":"#e4beb4","on-tertiary":"#ffffff","primary-fixed-dim":"#ffb5a0","tertiary-container":"#00a572","primary-fixed":"#ffdbd1","inverse-on-surface":"#ebf1ff","primary":"#b02f00","surface-container":"#e6eeff","surface-container-low":"#eff4ff","on-primary-container":"#541200","secondary":"#565e74","on-surface-variant":"#5b4039","error-container":"#ffdad6","surface-container-high":"#dde9ff","primary-container":"#ff5722","on-error-container":"#93000a","background":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-secondary-container":"#5c647a","on-secondary-fixed":"#131b2e","on-tertiary-container":"#00311f","secondary-container":"#dae2fd","surface":"#f8f9ff","surface-container-highest":"#d5e3fd","surface-dim":"#ccdbf4","inverse-primary":"#ffb5a0","outline":"#907067","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","margin-desktop":"2rem","space-md":"0.75rem","space-lg":"1.25rem"},"fontFamily":{"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"price-display":["26px",{"lineHeight":"30px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 w-full px-gutter-desktop flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md h-14"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-xs min-h-[48px] px-space-xs" data-path="home" href="#"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight hidden sm:inline-block">SwiftCart</span></a><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest min-h-[48px] shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-secondary uppercase">Deliver to</span><span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[120px]">Kampala Central</span></div><span class="material-symbols-outlined text-secondary text-[16px]">expand_more</span></div></div><div class="flex-1 max-w-xl mx-space-xs hidden sm:flex items-center min-h-[48px] rounded-lg bg-surface-container-lowest px-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><select class="bg-transparent text-secondary font-label-md text-label-md pr-space-xs pl-space-xs py-space-xs border-0 focus:outline-none focus:ring-0 cursor-pointer"><option>All Categories</option><option>Phones &amp; Tablets</option><option>Electronics</option><option>Fashion</option><option>Groceries</option></select><div class="w-px h-6 bg-surface-container mx-space-xs"></div><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none px-space-xs" placeholder="Search products, merchants, brands in Uganda..." type="text"/><button aria-label="Search" class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm min-h-[48px]"><span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span><span>Kampala Same-Day Dispatch</span></div><a aria-label="Wishlist" class="relative flex items-center justify-center min-w-[48px] min-h-[48px] rounded-lg text-secondary hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center">4</span></a><a aria-label="Shopping Cart" class="relative flex items-center justify-center min-w-[48px] min-h-[48px] rounded-lg text-secondary hover:text-on-surface transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center">3</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden md:inline-block font-label-md text-label-md text-on-surface font-semibold">Sarah</span></div></div></div><nav class="flex items-center gap-space-lg overflow-x-auto h-12 border-0" data-active-classes="text-primary font-bold border-b-2 border-primary-container"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="super-deals" href="#">Super Deals</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="phones-and-tablets" href="#">Phones &amp; Tablets</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="electronics-and-audio" href="#">Electronics &amp; Audio</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="fashion" href="#">Fashion</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="home-and-living" href="#">Home &amp; Living</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface whitespace-nowrap min-h-[48px] flex items-center px-space-xs transition-colors" data-path="groceries" href="#">Groceries</a></nav></div></header><main class="w-full pt-28 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Support Workspace: 834px Tablet Layout -->
+<div class="w-full px-gutter md:px-margin-desktop py-space-md">
+<!-- Top Hero Search Banner -->
+<section class="relative rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low shadow-sm p-space-lg mb-space-lg overflow-hidden">
+<!-- Decorative Backdrop Geometry -->
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="absolute right-36 -bottom-16 w-56 h-56 rounded-full bg-tertiary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl">
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">SwiftCart Resolution Desk</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs font-bold">
+          How can we help you today in Uganda?
+        </h1>
+<p class="font-body-md text-body-md text-secondary mb-space-md">
+          Instant answers on mobile money escrow, Kampala boda dispatches, pickup lockers, and merchant guarantees.
+        </p>
+<!-- Search Input with Clear & Action -->
+<div class="relative flex items-center w-full min-h-[48px] bg-surface-container-lowest rounded-lg shadow-sm px-space-md py-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px] mr-space-sm shrink-0">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="faq-search" onkeyup="filterFaqs(this.value)" placeholder="Search orders, escrow questions, boda delivery, returns..." type="text"/>
+<button aria-label="Clear query" class="hidden w-8 h-8 rounded-full hover:bg-surface-container text-secondary flex items-center justify-center shrink-0 transition-colors" id="clear-btn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Popular Quick Chips -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold shrink-0">Trending:</span>
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm flex items-center gap-1" onclick="applyChip('Escrow Release')" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_open</span>
+            Escrow Release
+          </button>
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm flex items-center gap-1" onclick="applyChip('Boda Handover PIN')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">pin</span>
+            Boda Handover PIN
+          </button>
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm flex items-center gap-1" onclick="applyChip('MTN MoMo Failed')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary-container">contactless</span>
+            MTN MoMo Failed
+          </button>
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm" onclick="applyChip('Return Policy')" type="button">
+            Return Policy
+          </button>
+<button class="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm" onclick="applyChip('Hub Pickup')" type="button">
+            Hub Pickup
+          </button>
+</div>
+</div>
+</section>
+<!-- Two-Column Tablet Layout: 58% Left vs 42% Right -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (58% approx 7 cols on 12-col grid) -->
+<div class="md:col-span-7 flex flex-col gap-space-lg">
+<!-- Support Status Quick Strip -->
+<div class="flex items-center justify-between p-space-sm px-space-md rounded-lg bg-tertiary-container/15 text-on-tertiary-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] animate-pulse">check_circle</span>
+<span class="font-label-md text-label-md font-semibold">Kampala Network Systems Live</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">MTN MoMo &amp; Airtel Money: 100% Operational</span>
+</div>
+<!-- FAQ Categories Wrapper -->
+<div class="flex flex-col gap-space-md" id="faq-container">
+<!-- Category 1: Orders & 1-Hour Boda Tracking -->
+<div class="faq-group rounded-xl bg-surface-container-lowest shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Orders &amp; 1-Hour Boda Tracking</h2>
+<p class="font-body-sm text-body-sm text-secondary">City dispatch, live telemetry, and handover verification</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-secondary font-bold">2 Articles</span>
+</div>
+<!-- FAQ Item 1.1 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  How do I share my 6-Digit Delivery Release Code?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+<strong class="text-on-surface">Rule of Thumb:</strong> Only share your 6-digit code with the rider <span class="text-primary font-semibold">AFTER physically inspecting</span> your package and verifying the tamper seal.
+                  </p>
+<p>
+                    Once the boda courier enters this code into the SwiftCart Fleet App, the MTN/Airtel escrow payment transitions from <em>Locked</em> to <em>Completed</em>. If the seal is compromised, decline handover immediately and report via the ticket panel below.
+                  </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Tamper Seal Guarantee Enforced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Item 1.2 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  What if the rider is delayed in Kampala traffic?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+                    All express boda runners are assigned dynamic routing around jam hotspots (Clock Tower, Jinja Road, and Northern Bypass). If your rider is delayed past the guaranteed 60-minute window:
+                  </p>
+<ul class="list-disc pl-5 space-y-1">
+<li>Your account is auto-credited with <strong>UGX 5,000</strong> SwiftCart Delivery Credit.</li>
+<li>Live GPS tracking refreshes every 10 seconds via your order dashboard.</li>
+<li>You may call the rider toll-free directly from the order map view.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 2: Payments & Mobile Money Escrow -->
+<div class="faq-group rounded-xl bg-surface-container-lowest shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Payments &amp; Mobile Money Escrow</h2>
+<p class="font-body-sm text-body-sm text-secondary">Bank of Uganda regulatory framework and MoMo prompts</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-secondary font-bold">2 Articles</span>
+</div>
+<!-- FAQ Item 2.1 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  How does the Bank of Uganda escrow protocol protect me?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+                    Every UGX sent through MTN Mobile Money or Airtel Money is held in a ring-fenced custodial escrow trust regulated under the <em>National Payment Systems Act 2020</em>.
+                  </p>
+<p>
+                    Funds are never transferred to the independent merchant until you confirm inspection of goods via your 6-digit delivery PIN or after a 48-hour inspection period passes without an active dispute.
+                  </p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 2.2 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  My MTN MoMo USSD prompt did not appear, what should I do?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+                    If the automated push prompt times out on your handset:
+                  </p>
+<ol class="list-decimal pl-5 space-y-1">
+<li>Dial <strong>*165#</strong> on your MTN line immediately.</li>
+<li>Select <strong>Option 4 (Payments)</strong> → <strong>Option 6 (Pending Approvals)</strong>.</li>
+<li>Authorize the transaction labeled <em>SwiftCart Uganda Escrow</em>.</li>
+<li>If it fails, tap "Retry Payment" on checkout within 15 minutes.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 3: Returns, Refunds & Damaged Goods -->
+<div class="faq-group rounded-xl bg-surface-container-lowest shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Returns, Refunds &amp; Damaged Goods</h2>
+<p class="font-body-sm text-body-sm text-secondary">Zero-fee return logistics and automated wallet reconciliations</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-secondary font-bold">2 Articles</span>
+</div>
+<!-- FAQ Item 3.1 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  How quickly will my MTN/Airtel wallet be refunded?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+                    Refunds on canceled orders or verified returns are processed via direct API back to the originating mobile money number within <strong>15 to 45 minutes</strong> after return inspection at our William Street Hub.
+                  </p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 3.2 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  Who pays for the boda courier on a return?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+<strong class="text-on-surface">SwiftCart covers 100% of reverse logistics.</strong> You will never be asked to pay the boda courier when returning defective, counterfeit, or misrepresented goods.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 4: Pickup Hubs & Smart Lockers -->
+<div class="faq-group rounded-xl bg-surface-container-lowest shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Pickup Hubs &amp; Smart Lockers</h2>
+<p class="font-body-sm text-body-sm text-secondary">City self-collection spots and opening schedules</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-secondary font-bold">1 Article</span>
+</div>
+<!-- FAQ Item 4.1 -->
+<div class="faq-item pt-space-xs">
+<button class="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" onclick="toggleAccordion(this)" type="button">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
+                  What are the opening hours of the William Street Central Hub?
+                </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pb-space-sm pr-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
+<p>
+                    The William Street Central Hub is open <strong>Monday to Saturday from 07:30 to 20:00</strong>, and <strong>Sundays from 09:00 to 17:00</strong>. Secure self-pickup lockers operate 24/7 with QR access.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Support Tickets Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">confirmation_number</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Your Open Support Tickets</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-bold">1 Active</span>
+</div>
+<!-- Ticket Item -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-md text-label-md font-bold text-on-surface">Ticket #TCK-4921</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-secondary">Audio Pro X10 Wireless</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+                  In Review
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+                "Damaged Headphone Seal upon Boda Handover"
+              </p>
+<div class="flex items-center gap-space-xs text-secondary mt-1">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="font-body-sm text-body-sm">Assigned Lead: Officer Patricia Namubiru (Escrow Claims Desk)</span>
+</div>
+</div>
+<button class="w-full sm:w-auto min-h-[48px] px-space-md py-space-xs rounded-lg bg-on-surface text-surface hover:bg-primary transition-colors font-label-lg text-label-lg shrink-0 flex items-center justify-center gap-1 shadow-sm" onclick="showTicketToast()" type="button">
+<span>View Ticket</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column (42% approx 5 cols on 12-col grid) -->
+<div class="md:col-span-5 flex flex-col gap-space-lg">
+<!-- 1. Direct Contact Channels Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Direct Contact Channels</h3>
+<p class="font-body-sm text-body-sm text-secondary">Priority live channels for shoppers and merchants in Uganda</p>
+</div>
+<!-- Channel A: WhatsApp -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-tertiary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">WhatsApp Instant Support</div>
+<div class="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                    Typical reply in 2 mins
+                  </div>
+</div>
+</div>
+</div>
+<div class="font-body-md text-body-md text-secondary mt-1">
+              +256 700 112 233
+            </div>
+<a class="w-full min-h-[48px] rounded-lg bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors mt-space-xs shadow-sm" href="https://wa.me/256700112233" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Chat on WhatsApp</span>
+</a>
+</div>
+<!-- Channel B: Kampala Toll-Free Hotline -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Kampala Toll-Free Hotline</div>
+<div class="font-body-sm text-body-sm text-secondary">Available 7:00 AM – 10:00 PM Daily</div>
+</div>
+</div>
+</div>
+<div class="font-price-display text-price-display text-primary mt-1 font-bold">
+              0800 220 330
+            </div>
+<a class="w-full min-h-[48px] rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors mt-space-xs shadow-sm" href="tel:0800220330">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span>Call Toll-Free</span>
+</a>
+</div>
+<!-- Channel C: Email Support Desk -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Email Support Desk</span>
+<span class="font-body-sm text-body-sm text-secondary">support@swiftcart.ug • 24h response time</span>
+</div>
+</div>
+<a class="min-h-[48px] px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center shrink-0 transition-colors shadow-sm" href="mailto:support@swiftcart.ug">
+              Compose
+            </a>
+</div>
+</div>
+<!-- 2. SwiftCart Hub Assistance -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">location_city</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Walk-in Help Desk</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container/15 text-tertiary font-bold">Open Today</span>
+</div>
+<!-- Hub Photo Placeholder with rich prompt -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A brightly lit modern customer support walk-in counter inside William Street Arcade Kampala Uganda. A smiling professional Ugandan customer service officer wearing a branded SwiftCart polo shirt assists an urban shopper. The backdrop has clean wood panelling, orange and emerald signage, smart package pickup lockers, and warm ambient sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5EtVviMwc1mAdKE5TgXFsCHq-koJMaNRS8d90zJCE8IfydHyY1tGbPh0TiJEfO3UF0rduycFzNsaOiMeBGo9ISZ6XzfYKDS-BHmpsrBFGbZymNemvOezJOqrhyd6WhZEDh62L7oyk9nacURfmTvmR69YY-IStfkBpcsvMumFyW9-iiopVOrDesptRWaxq2ATUXa4yFBr2deuvLzAc37yaLN0gO5bE6vxLoJjPWXg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary">
+<span class="font-label-md text-label-md font-bold">William Street Central Hub</span>
+<span class="font-label-sm text-label-sm bg-primary-container px-2 py-0.5 rounded text-on-primary">Desk #01</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 text-on-surface">
+<div class="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">pin_drop</span>
+<span>William St Arcade, Ground Floor, Unit G-14, Kampala</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Hub Lead Officer: <strong>Isaac Kato</strong></span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>Mon - Sat: <strong>07:30 - 20:00</strong> | Sun: <strong>09:00 - 17:00</strong></span>
+</div>
+</div>
+<button class="w-full min-h-[48px] rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors mt-space-xs" onclick="showHubMapToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Get Hub Directions (Google Maps)</span>
+</button>
+</div>
+<!-- 3. Official Buyer Protection Pledge -->
+<div class="rounded-xl bg-gradient-to-br from-inverse-surface to-on-background text-inverse-on-surface p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-primary/20 blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed text-[24px]">verified_user</span>
+<span class="font-label-lg text-label-lg text-surface-bright font-bold">Official Buyer Protection Pledge</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-variant/80">
+            Every transaction is backed by our Uganda merchant integrity code and formal digital finance escrow covenants.
+          </p>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<!-- Pledge Item 1 -->
+<div class="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-lowest/10">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px] shrink-0">lock</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-surface-bright">100% Escrow Security</span>
+<span class="font-body-sm text-body-sm text-surface-variant/70">Payment held safely until delivery code handover</span>
+</div>
+</div>
+<!-- Pledge Item 2 -->
+<div class="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-lowest/10">
+<span class="material-symbols-outlined text-primary-fixed text-[20px] shrink-0">handshake</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-surface-bright">Zero Fee Dispute Resolution</span>
+<span class="font-body-sm text-body-sm text-surface-variant/70">SwiftCart mediation panel assigns decisions in &lt; 24h</span>
+</div>
+</div>
+<!-- Pledge Item 3 -->
+<div class="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-lowest/10">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px] shrink-0">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-surface-bright">Bank of Uganda &amp; UCC Compliant</span>
+<span class="font-body-sm text-body-sm text-surface-variant/70">Operated strictly within National Payment System Act</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-surface-variant/60 font-body-sm text-body-sm">
+<span>License: NPS-PSP-2023/048</span>
+<span class="text-tertiary-fixed font-semibold">Active &amp; Certified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback & Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 ease-out max-w-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-2xl p-space-md flex items-center gap-space-sm" id="toast-notification">
+<span class="material-symbols-outlined text-primary-container text-[24px]" id="toast-icon">info</span>
+<span class="font-body-md text-body-md" id="toast-message">Action successful</span>
+</div>
+</div>
+<script>
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isExpanded = !content.classList.contains('hidden');
+
+      if (isExpanded) {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    function applyChip(term) {
+      const searchInput = document.getElementById('faq-search');
+      searchInput.value = term;
+      filterFaqs(term);
+    }
+
+    function clearSearch() {
+      const searchInput = document.getElementById('faq-search');
+      searchInput.value = '';
+      filterFaqs('');
+    }
+
+    function filterFaqs(query) {
+      const clearBtn = document.getElementById('clear-btn');
+      const cleanQuery = query.toLowerCase().trim();
+      const items = document.querySelectorAll('.faq-item');
+      const groups = document.querySelectorAll('.faq-group');
+
+      if (query.trim().length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.material-symbols-outlined');
+
+        if (text.includes(cleanQuery)) {
+          item.classList.remove('hidden');
+          if (cleanQuery.length > 2) {
+            content.classList.remove('hidden');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          }
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      // Hide whole section if no items match
+      groups.forEach(group => {
+        const visibleItems = group.querySelectorAll('.faq-item:not(.hidden)');
+        if (visibleItems.length === 0) {
+          group.classList.add('hidden');
+        } else {
+          group.classList.remove('hidden');
+        }
+      });
+    }
+
+    function showToast(message, iconName = 'info') {
+      const toast = document.getElementById('toast-notification');
+      const msgEl = document.getElementById('toast-message');
+      const iconEl = document.getElementById('toast-icon');
+
+      msgEl.textContent = message;
+      iconEl.textContent = iconName;
+      toast.classList.remove('translate-y-32');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-32');
+      }, 3500);
+    }
+
+    function showTicketToast() {
+      showToast('Opening Ticket #TCK-4921 escalation ledger with Officer Patricia Namubiru...', 'assignment');
+    }
+
+    function showHubMapToast() {
+      showToast('Opening William St Arcade coordinates: 0.3136° N, 32.5811° E', 'directions_bike');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)] mt-auto"><div class="w-full px-gutter-desktop py-space-lg"><div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg"><div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-tertiary text-[22px]">verified_user</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</span><span class="font-body-sm text-body-sm text-secondary">Funds secured until 100% item inspection</span></div></div><div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div class="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary-container text-[22px]">two_wheeler</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</span><span class="font-body-sm text-body-sm text-secondary">Express city hub runner direct to your doorstep</span></div></div><div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary text-[22px]">assignment_return</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</span><span class="font-body-sm text-body-sm text-secondary">Drop off at Oasis Mall, Acacia, or Village Mall</span></div></div></div><div class="flex flex-wrap items-center justify-between gap-space-md pt-space-md"><div class="flex flex-wrap items-center gap-space-md"><a class="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="buyer-protection" href="#">Buyer Protection</a><a class="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="hub-locations" href="#">Hub Locations</a><a class="font-label-md text-label-md text-primary font-bold hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="sell-on-swiftcart" href="#">Sell on SwiftCart</a></div><p class="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer></body></html>

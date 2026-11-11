@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "container-dark-high": "#1E293B", "on-tertiary": "#003824", "on-secondary-fixed": "#091649", "airtel-red": "#ED1C24", "inverse-primary": "#b22b00", "tertiary-fixed-dim": "#4edea3", "outline-variant": "#5c4039", "on-error-container": "#ffdad6", "on-surface-variant": "#e5beb4", "surface-container-lowest": "#080d1f", "on-secondary-fixed-variant": "#384377", "surface-variant": "#2f3448", "tertiary": "#4edea3", "outline": "#ac8980", "on-secondary": "#212d5f", "error": "#ffb4ab", "on-primary-container": "#fffcff", "surface-dark": "#080D1F", "secondary-fixed-dim": "#b8c3ff", "primary-fixed-dim": "#ffb5a1", "surface-dim": "#0d1225", "surface-container-low": "#161b2d", "on-surface": "#dde1fb", "inverse-on-surface": "#2b3043", "danger-penalty": "#EF4444", "emerald-escrow": "#10B981", "background": "#0d1225", "inverse-surface": "#dde1fb", "surface-tint": "#ffb5a1", "on-secondary-container": "#a7b2ed", "on-tertiary-fixed-variant": "#005236", "secondary": "#b8c3ff", "secondary-container": "#384377", "primary": "#ffb5a1", "on-error": "#690005", "on-primary-fixed-variant": "#881f00", "tertiary-container": "#00855b", "surface-container-high": "#24293c", "action-gradient-start": "#FF8A1F", "tertiary-fixed": "#6ffbbe", "action-gradient-end": "#DA3700", "surface-bright": "#34384c", "on-background": "#dde1fb", "on-tertiary-fixed": "#002113", "primary-fixed": "#ffdbd1", "surface-cream": "#FFF8F2", "surface-container": "#1a1f31", "on-primary": "#611300", "on-primary-fixed": "#3c0800", "container-dark-low": "#0F172A", "amber-warning": "#F59E0B", "primary-container": "#da3700", "surface-container-highest": "#2f3448", "surface": "#0d1225", "secondary-fixed": "#dde1ff", "on-tertiary-container": "#f4fff6", "mtn-yellow": "#FFCC00", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "gutter-desktop": "1.5rem", "gutter": "0.75rem", "margin-desktop": "2rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-lg": "1rem", "margin": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "code-display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "code-display": ["20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><aside class="fixed left-0 top-0 bottom-0 w-[72px] bg-container-dark-low z-50 flex flex-col items-center py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-12 w-12 flex items-center justify-center mb-space-md rounded-xl bg-surface-container-high"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/></div><nav class="flex-1 flex flex-col gap-space-xs items-center w-full px-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)]"><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="overview" href="#" title="Overview"><span class="material-symbols-outlined text-[24px]">dashboard</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="orders" href="#" title="Orders"><span class="material-symbols-outlined text-[24px]">receipt_long</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="products" href="#" title="Products"><span class="material-symbols-outlined text-[24px]">inventory_2</span></a><a aria-current="page" class="w-12 h-12 rounded-xl flex items-center justify-center transition-all bg-primary-container text-on-primary-container font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)]" data-path="returns-and-disputes" href="#" title="Returns &amp; Disputes"><span class="material-symbols-outlined text-[24px]">assignment_return</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="wallet" href="#" title="Escrow &amp; Wallet"><span class="material-symbols-outlined text-[24px]">account_balance_wallet</span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="analytics" href="#" title="Analytics"><span class="material-symbols-outlined text-[24px]">monitoring</span></a></nav><div class="flex flex-col gap-space-xs items-center w-full px-space-xs pt-space-xs"><a class="relative w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="notifications" href="#" title="Notifications"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-airtel-red"></span></a><a class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-container-dark-high hover:text-on-surface transition-all" data-path="settings" href="#" title="Settings"><span class="material-symbols-outlined text-[24px]">settings</span></a></div></aside><div class="pl-[72px]"><header class="fixed top-0 left-[72px] right-0 h-16 bg-surface-dark/95 backdrop-blur-xl z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-md min-w-0"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><div class="flex items-center gap-space-xs bg-container-dark-low px-space-md py-1.5 rounded-xl"><span class="material-symbols-outlined text-primary text-[18px]">store</span><div class="flex flex-col min-w-0"><span class="font-label-md text-on-surface truncate">Victoria Tech Supplies</span><span class="font-label-sm text-on-surface-variant truncate">Nakasero Bay Hub #UG-8820</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-space-xs">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-container-dark-low px-space-md py-1.5 rounded-xl w-56"><span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span><span class="font-body-sm text-on-surface-variant select-none">Search orders, SKUs...</span></div><button class="w-9 h-9 rounded-xl bg-container-dark-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-container-dark-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><button class="relative w-9 h-9 rounded-xl bg-container-dark-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-container-dark-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full bg-airtel-red text-on-primary-container font-label-sm flex items-center justify-center px-1">4</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-label-md text-on-primary">VT</div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-md py-space-md flex flex-col gap-space-lg w-full max-w-[1240px] mx-auto">
+<!-- Top Workflow Header Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-container-dark-low p-space-md rounded-xl shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm uppercase tracking-wider text-primary font-bold">Inbound Reverse Logistics</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-amber-warning">local_shipping</span>
+<span class="font-label-sm">Return #RT-309 • In Transit via Boda</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Escrow Shield Active
+          </span>
+</div>
+<h1 class="font-headline-md text-on-surface tracking-tight">Inbound Return Inspection &amp; Acceptance</h1>
+</div>
+<div class="flex items-center gap-space-md self-start lg:self-center">
+<div class="bg-surface-container px-space-md py-2 rounded-lg flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-amber-warning animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Live Dispatch SLA</span>
+<span class="font-label-lg text-amber-warning">Rider Arrival ETA: 12 Mins</span>
+</div>
+</div>
+<div class="bg-surface-container-high px-space-md py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pin_drop</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Arrival Hub</span>
+<span class="font-label-md text-on-surface">Nakasero Bay Hub</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Context Manifest Banner -->
+<div class="bg-container-dark-high rounded-xl p-space-md shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md items-center">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shrink-0">
+<img class="w-12 h-12 object-contain rounded-lg" data-alt="High-end SoundCore Space One active noise cancelling wireless headphones in matte charcoal black folded neatly inside its retail packaging with accessories, shot on a dark industrial surface with high-contrast commercial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2p0zvBF5opt8letDk23u_ke1TI-sp_vxjWvb3J9-bDW2a67FWxodiSFwrho6jP3CIQnbxPQgzz8vKUk3Ro-zrfgR3kT3PSXMb1gYuPwuBku6n4kFuRcFD3qoKMpqKrtGbluVtih6RNcSW0__o_IDEw07HVHHNG-YASDSB-LdY2gVc_N8NW2P7aVm-yKr2WSteJSbMr9cWmkRjiUnj_aXpnrLZRlKFejLiSFB5qiZG"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface-variant uppercase">Order Ref #SC-9488</span>
+<span class="font-label-lg text-on-surface truncate">SoundCore Space One ANC</span>
+<span class="font-price-display text-primary-fixed-dim mt-0.5">UGX 248,500</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-container-dark-low p-space-sm rounded-lg">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface-variant">Courier Assigned</span>
+<span class="font-label-md text-on-surface truncate">Kizito Brian</span>
+<span class="font-body-sm text-on-surface-variant truncate">Bajaj Boxer • #UFE 219K</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-container-dark-low p-space-sm rounded-lg">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface-variant">Origin Point</span>
+<span class="font-label-md text-on-surface truncate">Buyer Kololo Terrace</span>
+<span class="font-body-sm text-on-surface-variant truncate">Buyer: 07•• ••• 123 (Masked)</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-on-surface-variant">Return Reason</span>
+<span class="font-label-md text-primary">Buyer remorse / sealed</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow flex items-center gap-1.5 font-label-md shrink-0">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            UGX Locked
+          </div>
+</div>
+</div>
+</div>
+<!-- Dual Column Inspection Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full items-start">
+<!-- LEFT COLUMN: Physical Verification & Tamper Audit (48% on large screens) -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col gap-space-md w-full">
+<!-- Tamper Bag Security Check -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">security</span>
+<h2 class="font-headline-sm text-on-surface">SwiftCart Tamper Bag Security Check</h2>
+</div>
+<span class="font-label-sm text-emerald-escrow bg-emerald-escrow/10 px-2 py-0.5 rounded-full">Protocol 4.2</span>
+</div>
+<!-- Step 1: Scan Barcode -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Step 1: Inbound Barcode Serial</span>
+<span class="inline-flex items-center gap-1 text-emerald-escrow font-label-sm bg-emerald-escrow/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                Verified Matching Security Serial
+              </span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<div class="flex-1 bg-container-dark-high px-space-md py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-code-display text-on-surface tracking-widest text-[16px]">TB-KLA-8820-91X</span>
+<span class="material-symbols-outlined text-emerald-escrow text-[20px]">qr_code_scanner</span>
+</div>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-container-dark-high text-on-surface font-label-md flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">document_scanner</span>
+                Rescan
+              </button>
+</div>
+</div>
+<!-- Step 2: Seal Condition Toggle -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Step 2: Physical Seal Condition</span>
+<div class="grid grid-cols-2 gap-space-sm" id="seal-toggle-group">
+<button class="h-12 rounded-lg bg-emerald-escrow/15 text-emerald-escrow font-label-lg flex items-center justify-center gap-2 transition-all" id="seal-intact-btn" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_box</span>
+                Intact &amp; Sealed
+              </button>
+<button class="h-12 rounded-lg bg-surface-container-high hover:bg-container-dark-high text-on-surface-variant font-label-lg flex items-center justify-center gap-2 transition-all" id="seal-broken-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">report_problem</span>
+                Broken / Tampered
+              </button>
+</div>
+</div>
+<!-- Step 3: Product Contents Verification -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Step 3: Contents Inventory Manifest</span>
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary-container focus:ring-0 accent-action-gradient-start cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Original Headset Present</span>
+<span class="font-body-sm text-on-surface-variant">SoundCore ANC driver chassis matching serial #SC-ANC-8802</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary-container focus:ring-0 accent-action-gradient-start cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Audio Jack &amp; USB-C Cable Intact</span>
+<span class="font-body-sm text-on-surface-variant">Braided nylon charging cable in original plastic ties</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary-container focus:ring-0 accent-action-gradient-start cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Original Retail Box &amp; Protective Foam</span>
+<span class="font-body-sm text-on-surface-variant">Uncut inner blister tray and bilingual user guide</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- High-Resolution Inspection Photos -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+<h3 class="font-headline-sm text-on-surface">Captured Inspection Evidence</h3>
+</div>
+<span class="font-label-sm text-on-surface-variant">2 Photos Attached</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="relative group rounded-xl overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-36 object-cover transition-transform group-hover:scale-105" data-alt="Close up detailed inspection macro photograph of a transparent tamper-evident security plastic bag with unbroken red holographic micro-print numbered seal TB-KLA-8820-91X, clean laboratory inspection bench in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb7xL4PGbm2YwTknSmxDe5gapF3yoL5jFPodaXdwaxML4F_wu4A3MhbQkhxsA1JshC5bNjvjQrB3oIvzWOp0P2ph8I8HUsCkT5BK2FpFbNURKJn_cP4IHCBNux8mO-3Vu3cmQT3CI9BBm7SF4N5Ot6E_wZgvX3CIC7m7YbBSEGgzW4pZhXjTd4fCiUQccqPM-CjtBpa8L3okE1GjInyfD0s-rLjArfYqSfOPszjGd8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent flex flex-col justify-end p-2.5">
+<span class="font-label-sm text-on-surface truncate">Front_Seal_Inspection.jpg</span>
+<span class="font-body-sm text-tertiary">Verified Tamper Ribbon</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-dark/80 text-[10px] font-label-sm text-on-surface">1.8 MB</div>
+</div>
+<div class="relative group rounded-xl overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-36 object-cover transition-transform group-hover:scale-105" data-alt="Macro photo showing the engraved laser serial number on the inner headband of SoundCore wireless headphones matching official product documentation on dark matte workbench with yellow safety lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqOSAQddGGcOZfH4LCi3QWe4Sx8EUGNPmvW7CtCjqloHwYuL9J8re4yumcO8fXbzgoRjlZxWrk6MBvZLT5eGn85c7hxeo8X1RXaC89RhCVAxTlVuamk5tMplFM8Sc7o0Lsoe_bZHp4ODKswxOPIiOLIU0XnrJ7pQPzfb7CGBa-zC3UTu4Smkena9iIVDV3cgrBur2uNyJb-LW2vIDGyCd-7Iw_UV0M9QOgk4J02Zbk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent flex flex-col justify-end p-2.5">
+<span class="font-label-sm text-on-surface truncate">Serial_Number_Match.jpg</span>
+<span class="font-body-sm text-tertiary">Hardware Hash Aligned</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-dark/80 text-[10px] font-label-sm text-on-surface">2.4 MB</div>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-high hover:bg-container-dark-high text-on-surface font-label-md flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+            Capture Additional Angle (Camera Sync)
+          </button>
+</div>
+<!-- Item Condition Rating -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Physical Condition Grade</span>
+<span class="font-label-sm text-primary">Victoria Tech QA Specs</span>
+</div>
+<div class="grid grid-cols-1 gap-2" id="condition-rating-group">
+<div class="condition-pill p-3 rounded-lg bg-primary-container/20 text-on-primary-container cursor-pointer flex items-center justify-between transition-all" data-grade="A">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-action-gradient-start"></span>
+<div class="flex flex-col">
+<span class="font-label-lg">Like New / Resellable (Grade A)</span>
+<span class="font-body-sm text-on-surface-variant">Immediate shelf reintegration; zero cosmetic marks</span>
+</div>
+</div>
+<span class="font-label-sm font-bold px-2 py-0.5 rounded bg-primary-container text-white">Full Refund</span>
+</div>
+<div class="condition-pill p-3 rounded-lg bg-surface-container-high text-on-surface cursor-pointer flex items-center justify-between transition-all opacity-80 hover:opacity-100" data-grade="B">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-amber-warning"></span>
+<div class="flex flex-col">
+<span class="font-label-lg">Opened Packaging Only (Grade B)</span>
+<span class="font-body-sm text-on-surface-variant">Requires re-shrink wrap; unit untouched</span>
+</div>
+</div>
+<span class="font-label-sm px-2 py-0.5 rounded bg-surface-container text-amber-warning">10% Restock</span>
+</div>
+<div class="condition-pill p-3 rounded-lg bg-surface-container-high text-on-surface cursor-pointer flex items-center justify-between transition-all opacity-80 hover:opacity-100" data-grade="C">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-danger-penalty"></span>
+<div class="flex flex-col">
+<span class="font-label-lg">Damaged / Missing Parts</span>
+<span class="font-body-sm text-on-surface-variant">Accessories absent, scratches, or moisture exposure</span>
+</div>
+</div>
+<span class="font-label-sm px-2 py-0.5 rounded bg-surface-container text-danger-penalty">Dispute Escrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Settlement Determination & Escrow Disposition (52% on large screens) -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col gap-space-md w-full">
+<!-- Escrow Protection Telematics -->
+<div class="bg-container-dark-low rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-escrow text-[22px]">account_balance</span>
+<h2 class="font-headline-sm text-on-surface">Escrow Disposition &amp; Release</h2>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-fixed font-label-sm bg-tertiary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">lock_clock</span>
+              MTN / Airtel Trust Link
+            </div>
+</div>
+<!-- Escrow Balance Overview Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-on-surface-variant uppercase">Current Escrow Balance Locked</span>
+<div class="font-price-display text-emerald-escrow text-[28px] mt-1">UGX 248,500</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-on-surface-variant">Hold Vault ID</span>
+<span class="font-code-display text-on-surface block text-[13px] mt-1">ESC-UG-2024-991</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-emerald-escrow h-full rounded-full" style="width: 100%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm pt-1">
+<span>Protection: SwiftCart Buyer-Merchant Guarantee</span>
+<span class="text-emerald-escrow font-label-sm">Safe to Disburse</span>
+</div>
+</div>
+<!-- Settlement Recommendation Selector -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Recommended Resolution Action</span>
+<div class="flex flex-col gap-2" id="resolution-options">
+<label class="p-3.5 rounded-xl bg-surface-container-high cursor-pointer flex items-start gap-3 transition-all hover:bg-container-dark-high">
+<input checked="" class="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="escrow-resolution" type="radio"/>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-on-surface">Accept Item &amp; Authorize Buyer Escrow Refund</span>
+<span class="font-label-md text-emerald-escrow">UGX 248,500 Refund</span>
+</div>
+<span class="font-body-sm text-on-surface-variant mt-0.5">Physical goods certified Grade A. Buyer refunded to original MTN MoMo wallet within 15 minutes.</span>
+</div>
+</label>
+<label class="p-3.5 rounded-xl bg-surface-container-low cursor-pointer flex items-start gap-3 transition-all hover:bg-container-dark-high opacity-85">
+<input class="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="escrow-resolution" type="radio"/>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-on-surface">Deduct 10% Restocking Fee for Opened Seal</span>
+<span class="font-label-md text-amber-warning">UGX 24,850 Retained</span>
+</div>
+<span class="font-body-sm text-on-surface-variant mt-0.5">Deducts UGX 24,850 compensation credited to Victoria Tech Supplies balance; balance UGX 223,650 returned to buyer.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Hub Re-Stocking Destination -->
+<div class="flex flex-col gap-space-xs pt-1">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Hub Inventory Staging Destination</span>
+<div class="relative">
+<select class="w-full h-12 bg-surface-container-high text-on-surface font-body-md rounded-lg px-space-md pr-10 appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="" value="shelf-b4">Return to Victoria Tech Staging Shelf B4 - Ready for Sale</option>
+<option value="quarantine">Quarantine Bay for Vendor Hardware Testing</option>
+<option value="bulk-warehouse">Central Industrial Warehouse - Namanve Distribution Staging</option>
+<option value="writeoff">Damaged Goods Scrap Quarantine (RTV Protocol)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none text-[22px]">expand_more</span>
+</div>
+</div>
+<!-- Quality Inspector Digital Sign-off -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">QA Inspector Authorization</span>
+<span class="font-label-sm text-emerald-escrow flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Verified Terminal
+              </span>
+</div>
+<div class="flex items-center gap-space-sm bg-container-dark-high p-2.5 rounded-lg">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md shrink-0">
+                MS
+              </div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-on-surface truncate">Michael Sserwadda</span>
+<span class="font-body-sm text-on-surface-variant truncate">Victoria Tech Quality Desk Officer • Staff ID #VT-044</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-primary-fixed-dim font-code-display text-[13px]">
+                PIN: • • • •
+              </div>
+</div>
+</div>
+<!-- Primary Action Deck -->
+<div class="flex flex-col gap-space-sm pt-2">
+<button class="w-full h-[52px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-lg shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:brightness-110 active:scale-[0.99] flex items-center justify-center gap-2 transition-all" id="confirm-inbound-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+              Confirm Inbound Acceptance &amp; Release Resolution
+            </button>
+<button class="w-full h-[48px] rounded-xl bg-danger-penalty/15 hover:bg-danger-penalty/25 text-danger-penalty font-label-md flex items-center justify-center gap-2 transition-all" id="dispute-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+              Report Tamper Violation to Dispute Officer Patricia
+            </button>
+</div>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant font-body-sm pt-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+            Cryptographic ledger stamp will be recorded on SwiftCart Settlement Block #89201
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tamper Condition Pill Interactivity
+  const intactBtn = document.getElementById('seal-intact-btn');
+  const brokenBtn = document.getElementById('seal-broken-btn');
+
+  if (intactBtn && brokenBtn) {
+    intactBtn.addEventListener('click', () => {
+      intactBtn.className = "h-12 rounded-lg bg-emerald-escrow/15 text-emerald-escrow font-label-lg flex items-center justify-center gap-2 transition-all";
+      brokenBtn.className = "h-12 rounded-lg bg-surface-container-high hover:bg-container-dark-high text-on-surface-variant font-label-lg flex items-center justify-center gap-2 transition-all";
+    });
+
+    brokenBtn.addEventListener('click', () => {
+      brokenBtn.className = "h-12 rounded-lg bg-danger-penalty/20 text-danger-penalty font-label-lg flex items-center justify-center gap-2 transition-all";
+      intactBtn.className = "h-12 rounded-lg bg-surface-container-high hover:bg-container-dark-high text-on-surface-variant font-label-lg flex items-center justify-center gap-2 transition-all";
+    });
+  }
+
+  // Condition Rating Selection
+  const pills = document.querySelectorAll('.condition-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.classList.remove('bg-primary-container/20', 'text-on-primary-container');
+        p.classList.add('bg-surface-container-high', 'text-on-surface', 'opacity-80');
+      });
+      pill.classList.remove('bg-surface-container-high', 'opacity-80');
+      pill.classList.add('bg-primary-container/20', 'text-on-primary-container');
+    });
+  });
+
+  // Action Buttons Feedback
+  const confirmBtn = document.getElementById('confirm-inbound-btn');
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      const originalText = confirmBtn.innerHTML;
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">autorenew</span> Disbursing Escrow & Staging...';
+      confirmBtn.disabled = true;
+      setTimeout(() => {
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Return Inspection Sealed & Disbursed!';
+        confirmBtn.classList.remove('from-action-gradient-start', 'to-action-gradient-end');
+        confirmBtn.classList.add('bg-emerald-escrow', 'text-surface-dark');
+      }, 1200);
+    });
+  }
+
+  const disputeBtn = document.getElementById('dispute-btn');
+  if (disputeBtn) {
+    disputeBtn.addEventListener('click', () => {
+      disputeBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">mail</span> Dispatching Ticket to Officer Patricia...';
+      disputeBtn.classList.add('opacity-90');
+      setTimeout(() => {
+        disputeBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">flag</span> Escalation Dispatched #DIS-8840';
+      }, 900);
+    });
+  }
+</script></main></div></body></html>

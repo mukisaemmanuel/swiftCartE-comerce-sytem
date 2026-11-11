@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwiftCart Uganda - Seller Suite Orders</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#00311f",
+            "surface-container-highest": "#d5e3fd",
+            "primary": "#b02f00",
+            "secondary-fixed-dim": "#bec6e0",
+            "surface-variant": "#d5e3fd",
+            "on-surface": "#0d1c2f",
+            "surface-container": "#e6eeff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "on-secondary-container": "#5c647a",
+            "on-tertiary-fixed": "#002113",
+            "surface-tint": "#b02f00",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#dde9ff",
+            "on-primary-fixed": "#3b0900",
+            "outline": "#907067",
+            "outline-variant": "#e4beb4",
+            "surface-dim": "#ccdbf4",
+            "primary-fixed": "#ffdbd1",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#541200",
+            "secondary": "#565e74",
+            "primary-fixed-dim": "#ffb5a0",
+            "tertiary": "#006c49",
+            "primary-container": "#ff5722",
+            "on-tertiary-fixed-variant": "#005236",
+            "tertiary-fixed": "#6ffbbe",
+            "on-primary": "#ffffff",
+            "surface": "#f4f6fc",
+            "on-primary-fixed-variant": "#862200",
+            "on-error": "#ffffff",
+            "secondary-container": "#dae2fd",
+            "background": "#f8f9ff",
+            "secondary-fixed": "#dae2fd",
+            "tertiary-container": "#00a572",
+            "inverse-surface": "#233144",
+            "on-secondary-fixed-variant": "#3f465c",
+            "on-secondary-fixed": "#131b2e",
+            "error": "#ba1a1a",
+            "surface-bright": "#f8f9ff",
+            "inverse-on-surface": "#ebf1ff",
+            "on-background": "#0d1c2f",
+            "on-surface-variant": "#5b4039",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#ffb5a0"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #f4f6fb;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f6fb] text-on-surface min-h-screen flex flex-col">
+<!-- TOP TABLET HEADER -->
+<header class="sticky top-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
+<!-- Top Utility & Identity Bar -->
+<div class="px-5 py-2.5 flex items-center justify-between gap-3 border-b border-slate-100">
+<!-- Store Info & Brand -->
+<div class="flex items-center gap-3 min-w-0">
+<img alt="SwiftCart Uganda" class="h-[38px] w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnfWM4QPQMQeXEk9oIJA67uTn2DjhQ54DLVG0YxlmQQTUVIQz8H7Z_CbO3zJFAgEVrDDxwtYXNe8y_bpD_2sMs725HdKbbpOCUauJCK4jbDfGLAfwMPib0nrzFYqxYcOSZJzyuIRypmVgPFpjxVl6CPT-k5_lNl1wxWt8agPjgtr5gbi0DZy13c4koZoptDjzN9OlHB-bWcxQxjvzAqfgFX4brZX3eVFGhuF9oONNdMPRc6ECwcnzfrQ"/>
+<div class="h-6 w-px bg-slate-200"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-bold text-[15px] text-on-surface tracking-tight truncate">SoundCore Uganda Official</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              Open
+            </span>
+</div>
+<span class="text-[12px] text-secondary font-medium truncate">Pioneer Mall G-14 • Kampala</span>
+</div>
+</div>
+<!-- Quick Metrics & Actions -->
+<div class="flex items-center gap-2.5 flex-shrink-0">
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/90 border border-slate-200/60">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Escrow:</span>
+<span class="text-[13px] font-extrabold text-on-surface">UGX 14,850,000</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 border border-orange-200/70">
+<span class="text-[10px] font-bold text-orange-800 uppercase tracking-wider">Today:</span>
+<span class="text-[13px] font-extrabold text-primary-container">28 Dispatches</span>
+</div>
+<button aria-label="Theme mode" class="w-9 h-9 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[19px]">light_mode</span>
+</button>
+<div class="relative">
+<button aria-label="Notifications" class="w-9 h-9 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[19px]">notifications</span>
+</button>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary-container text-white text-[10px] font-bold flex items-center justify-center shadow-xs">3</span>
+</div>
+<div class="w-9 h-9 rounded-xl bg-primary-container/10 border border-primary-container/30 flex items-center justify-center text-primary-container font-extrabold text-[13px] shadow-xs">
+          SC
+        </div>
+</div>
+</div>
+<!-- Sub-navigation Bar -->
+<nav class="px-5 flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1.5 bg-white text-[13px] font-semibold">
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Overview</a>
+<a class="px-3 py-1.5 rounded-lg bg-primary-container text-white font-bold whitespace-nowrap shadow-xs flex items-center gap-1.5" href="#">
+<span>Orders</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 text-white text-[11px] font-extrabold">6</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Products (48)</a>
+<a class="px-3 py-1.5 rounded-lg text-primary-container hover:bg-orange-50 font-bold whitespace-nowrap transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>+ AI Studio</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Riders &amp; Fleet (4)</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors flex items-center gap-1" href="#">
+<span>Disputes</span>
+<span class="px-1.5 py-0.2 rounded-full bg-red-100 text-red-700 text-[11px] font-bold">1</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Wallet (UGX)</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Analytics</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Discounts &amp; Ads</a>
+<a class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-on-surface hover:bg-slate-100 whitespace-nowrap transition-colors" href="#">Store Profile</a>
+</nav>
+</header>
+<!-- WORKSPACE CONTENT CONTAINER -->
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-4 py-3 flex flex-col gap-3">
+<!-- TOOLBAR: SEARCH & BATCH ACTIONS -->
+<div class="bg-surface-container-lowest rounded-xl p-3 border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[19px]">search</span>
+<input class="w-full h-10 pl-9 pr-24 rounded-lg bg-slate-50 border border-slate-200 text-[13px] font-medium text-on-surface focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-all" placeholder="Search order #, customer, phone..." type="text" value="#SC-ORD-9488"/>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1 text-slate-400">
+<button class="p-1 hover:text-slate-700 transition-colors" title="Scan Barcode or QR">
+<span class="material-symbols-outlined text-[17px]">qr_code_scanner</span>
+</button>
+<span class="px-1.5 py-0.5 rounded bg-slate-200 text-[10px] font-bold text-slate-600">ESC</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+<button class="h-10 px-3.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-[12px] flex items-center gap-1.5 shadow-xs transition-colors">
+<span class="material-symbols-outlined text-[17px] text-slate-500">print</span>
+<span>Print Slips (4)</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-[12px] flex items-center gap-1.5 shadow-xs transition-colors">
+<span class="material-symbols-outlined text-[17px] text-slate-500">group_add</span>
+<span>Batch Assign</span>
+</button>
+<button class="h-10 px-4 rounded-lg bg-primary-container text-white hover:bg-primary font-bold text-[12px] flex items-center gap-1.5 shadow-xs transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[17px]">bolt</span>
+<span>Quick Dispatch</span>
+</button>
+</div>
+</div>
+<!-- FILTER TABS & TELEMETRY STRIP -->
+<div class="flex items-center justify-between gap-3 overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-200/60 text-[12px] font-bold transition-colors">
+          All (42)
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-white text-[12px] font-bold shadow-xs flex items-center gap-1.5">
+<span>Action Required</span>
+<span class="w-4 h-4 rounded-full bg-white text-primary-container text-[10px] font-extrabold flex items-center justify-center">6</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-[12px] font-semibold flex items-center gap-1.5 shadow-xs transition-colors">
+<span>With Courier (8)</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-[12px] font-semibold shadow-xs transition-colors">
+          Delivered / Completed (26)
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-[12px] font-semibold flex items-center gap-1.5 shadow-xs transition-colors">
+<span>Disputed</span>
+<span class="px-1.5 py-0.2 rounded bg-red-100 text-red-700 text-[10px] font-extrabold">1</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-3 text-[12px] font-medium text-slate-500 flex-shrink-0">
+<span class="flex items-center gap-1 text-emerald-700 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> SLA Adherence: 98.4%
+        </span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-600">Avg. Kampala Transit: <strong>32 mins</strong></span>
+</div>
+</div>
+<!-- MASTER-DETAIL 2-COLUMN WORKSPACE (40% / 60%) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3.5 items-start">
+<!-- LEFT STREAM (40% -> col-span-5) -->
+<div class="md:col-span-5 flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Prioritized Fulfillment Stream</span>
+<span class="text-[11px] font-bold text-primary-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> Real-time sync
+          </span>
+</div>
+<!-- Order Card 1 (Active / Selected) -->
+<div class="relative bg-white rounded-xl p-3.5 border-2 border-primary-container shadow-md cursor-pointer transition-all bg-gradient-to-r from-orange-50/50 to-white">
+<div class="absolute -left-[2px] top-3 bottom-3 w-1 rounded-r-md bg-primary-container"></div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-extrabold text-[15px] text-on-surface">#SC-ORD-9488</span>
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px] uppercase">MTN MoMo</span>
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-emerald-600">lock</span> Escrow Guaranteed
+              </span>
+</div>
+<span class="font-extrabold text-[15px] text-on-surface tracking-tight">UGX 388,500</span>
+</div>
+<p class="text-[13px] font-bold text-slate-900 truncate mb-1">
+            SoundCore Space One ANC + Anker 65W GaN (2 items)
+          </p>
+<div class="flex items-center justify-between text-[12px] text-slate-500 mb-2.5">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[15px] text-slate-400">person</span>
+<span class="font-semibold text-slate-800">Dennis Mukasa</span>
+<span class="truncate">• Kololo, Plot 14</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-slate-100 text-[10px] font-bold text-slate-600 flex-shrink-0">SafeBoda Hub</span>
+</div>
+<div class="p-2 rounded-lg bg-orange-100/40 border border-orange-200/50 flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1.5 text-slate-700">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span>Assigned: <strong class="text-slate-900 font-bold">Mukasa Brian</strong></span>
+</div>
+<span class="font-bold text-primary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+              SLA Target: 14 mins
+            </span>
+</div>
+</div>
+<!-- Order Card 2 (Ready to Pack) -->
+<div class="bg-white rounded-xl p-3.5 border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-[14px] text-slate-800">#SC-ORD-9490</span>
+<span class="px-2 py-0.5 rounded bg-red-100 text-red-800 font-extrabold text-[10px] uppercase">Airtel Money</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-semibold">Prep: 6m ago</span>
+</div>
+<span class="font-bold text-[14px] text-slate-900">UGX 280,000</span>
+</div>
+<p class="text-[13px] font-semibold text-slate-800 truncate mb-1">
+            SoundCore Liberty 4 NC Earbuds (Velvet Black)
+          </p>
+<div class="flex items-center justify-between text-[12px] text-slate-500 mb-2.5">
+<span class="truncate">Patricia K. • Nakasero Hill</span>
+<span class="text-emerald-700 font-bold text-[11px]">Vault Funded</span>
+</div>
+<div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-100">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-50 text-orange-700 border border-orange-200 text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Ready to Pack
+            </span>
+<button class="h-7 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-bold flex items-center gap-1 transition-colors">
+<span>Assign Courier</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Order Card 3 (Awaiting Hub Intake) -->
+<div class="bg-white rounded-xl p-3.5 border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-[14px] text-slate-800">#SC-ORD-9494</span>
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px] uppercase">MTN MoMo</span>
+</div>
+<span class="font-bold text-[14px] text-slate-900">UGX 45,000</span>
+</div>
+<p class="text-[13px] font-semibold text-slate-800 truncate mb-1">
+            Anker 30W PowerPort III Nano Adapter
+          </p>
+<div class="flex items-center justify-between text-[12px] text-slate-500 mb-2.5">
+<span class="truncate">Ivan S. • William St Pickup Locker #B12</span>
+<span class="text-slate-500 text-[11px] font-semibold">Prepaid</span>
+</div>
+<div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-100">
+<span class="text-slate-600 text-[11px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-emerald-600">inventory_2</span> Awaiting Hub Intake
+            </span>
+<button class="h-7 px-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-semibold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[13px]">barcode</span>
+<span>Print Barcode</span>
+</button>
+</div>
+</div>
+<!-- Order Card 4 (Settled Handshake) -->
+<div class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all cursor-pointer opacity-95">
+<div class="flex items-start justify-between gap-2 mb-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-[14px] text-slate-800">#SC-ORD-9485</span>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 font-extrabold text-[10px] uppercase">Settled</span>
+</div>
+<span class="font-bold text-[14px] text-slate-900">UGX 315,000</span>
+</div>
+<p class="text-[13px] font-medium text-slate-600 truncate mb-1">
+            SoundCore Motion+ 30W Hi-Res Speaker
+          </p>
+<div class="flex items-center justify-between text-[12px] text-slate-500 pt-1">
+<span>Herbert Z. • Bukoto Kisasi Rd</span>
+<span class="text-emerald-700 text-[11px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> OTP #8921 Passed
+            </span>
+</div>
+</div>
+</div>
+<!-- RIGHT ORDER DETAIL WORKSPACE (60% -> col-span-7) -->
+<div class="md:col-span-7 bg-white rounded-xl p-4 md:p-5 border border-slate-200/90 shadow-sm flex flex-col gap-4">
+<!-- Detail Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+<div>
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<h1 class="text-[20px] font-extrabold text-on-surface tracking-tight">Order #SC-ORD-9488</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">shield</span> UGX 388,500 Frozen in Vault
+              </span>
+</div>
+<p class="text-[12px] text-slate-500">
+              Created Today 14:22 EAT • <span class="font-mono text-slate-700 font-semibold">MTN-MOMO-TX-998124</span> • SafeBoda Direct Hub
+            </p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="h-8 px-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary-container">qr_code</span>
+<span>Seal #SC-TS-4091</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-slate-600">picture_as_pdf</span>
+<span>Waybill PDF</span>
+</button>
+</div>
+</div>
+<!-- Live Courier Telemetry Banner -->
+<div class="p-3 rounded-xl bg-orange-50/70 border border-orange-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">two_wheeler</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-[14px] text-slate-900">Mukasa Brian</span>
+<span class="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-white text-slate-700 border border-slate-200">Bajaj Boxer UEF 842X</span>
+</div>
+<p class="text-[12px] text-slate-600 flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Currently at <strong>Kira Road Corridor</strong> • 34 km/h cruising</span>
+</p>
+</div>
+</div>
+<div class="text-left sm:text-right">
+<div class="text-[18px] font-extrabold text-primary-container tracking-tight">15:30 EAT</div>
+<div class="text-[11px] font-medium text-slate-500">Est. Drop-off (~14 mins left)</div>
+</div>
+</div>
+<!-- High Quality Styled Kampala Route Map Container -->
+<div class="relative w-full rounded-xl overflow-hidden border border-slate-200 bg-slate-100 shadow-inner">
+<div class="w-full h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6ImJQAYKXDqsBX9JvcSsJ3rJuId3XFgujVD7YHqNo-cH4GRvjSJCHCbTziTDg4rle0nZq6TrCX9g-tQihqTzUXJ1EUvs0ZC1ijhvfz1bY3bf1jePdaFdA8HJOAJ8U2NafgEl7nyHFQWIB3t3zwQoL7WduOfhZyXPV9FBrgLOE9grpzO9E7B-yLJPL42PAm9mm4kozDkDSjHJKA1tQhDeNb5qrRDWyqIpfMcT2ZTdg');">
+<!-- Semi-transparent overlay gradients for telemetry readout -->
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/10 to-slate-950/50 flex flex-col justify-between p-3">
+<!-- Top Map Badges -->
+<div class="flex items-center justify-between">
+<div class="px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md shadow-xs flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="text-[11px] font-extrabold text-slate-900 tracking-wide">LIVE GPS: 0.5s POLLING</span>
+</div>
+<div class="px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md shadow-xs text-[11px] font-bold text-slate-800 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">traffic</span>
+<span>Traffic: Moderate at Kamwokya</span>
+</div>
+</div>
+<!-- Bottom Route Points HUD -->
+<div class="flex items-center justify-between text-white text-[12px] bg-slate-950/60 backdrop-blur-md p-2 rounded-lg border border-white/10">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-white flex items-center justify-center font-extrabold text-[10px] shadow">A</div>
+<div>
+<div class="text-[10px] text-slate-300 uppercase font-semibold">Origin</div>
+<div class="font-bold text-[12px]">Pioneer Mall G-14 (Store)</div>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-slate-300">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<div class="w-10 h-0.5 bg-primary-container"></div>
+<span class="material-symbols-outlined text-orange-400 text-[16px]">two_wheeler</span>
+<div class="w-10 h-0.5 bg-slate-400"></div>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+</div>
+<div class="flex items-center gap-2 text-right">
+<div>
+<div class="text-[10px] text-slate-300 uppercase font-semibold">Destination</div>
+<div class="font-bold text-[12px]">Acacia Ave Kololo (Plot 14)</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-extrabold text-[10px] shadow">B</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Fulfillment Milestones Stepper -->
+<div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+<div class="flex items-center justify-between mb-2.5">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Fulfillment Milestones</span>
+<span class="text-[11px] font-bold text-emerald-700 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Escrow Stage 3/4 Complete
+            </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<!-- Step 1 -->
+<div class="p-2.5 rounded-lg bg-white border border-slate-200/70 shadow-2xs">
+<div class="flex items-center justify-between mb-1">
+<span class="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[11px] font-bold">check</span>
+</span>
+<span class="text-[10px] font-semibold text-slate-400">14:22</span>
+</div>
+<div class="text-[12px] font-bold text-slate-800">Paid via MoMo</div>
+<div class="text-[11px] text-slate-500 truncate">UGX 388,500 Frozen</div>
+</div>
+<!-- Step 2 -->
+<div class="p-2.5 rounded-lg bg-white border border-slate-200/70 shadow-2xs">
+<div class="flex items-center justify-between mb-1">
+<span class="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[11px] font-bold">check</span>
+</span>
+<span class="text-[10px] font-semibold text-slate-400">14:31</span>
+</div>
+<div class="text-[12px] font-bold text-slate-800">Packed &amp; Sealed</div>
+<div class="text-[11px] text-slate-500 truncate">#SC-TS-4091</div>
+</div>
+<!-- Step 3 -->
+<div class="p-2.5 rounded-lg bg-white border border-slate-200/70 shadow-2xs">
+<div class="flex items-center justify-between mb-1">
+<span class="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[11px] font-bold">check</span>
+</span>
+<span class="text-[10px] font-semibold text-slate-400">14:48</span>
+</div>
+<div class="text-[12px] font-bold text-slate-800">SafeBoda Intake</div>
+<div class="text-[11px] text-slate-500 truncate">Rider Mukasa B.</div>
+</div>
+<!-- Step 4 (Active) -->
+<div class="p-2.5 rounded-lg bg-orange-50 border border-orange-200 shadow-2xs">
+<div class="flex items-center justify-between mb-1">
+<span class="w-4 h-4 rounded-full bg-primary-container text-white flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-[11px]">near_me</span>
+</span>
+<span class="text-[10px] font-bold text-primary-container">15:30 ETA</span>
+</div>
+<div class="text-[12px] font-bold text-primary-container">Out for Delivery</div>
+<div class="text-[11px] text-orange-800 font-medium truncate">Kira Rd Corridor</div>
+</div>
+</div>
+</div>
+<!-- Dispatched Items Manifest -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Dispatched Items Manifest (2)</span>
+<span class="text-[11px] font-bold text-slate-600">Total Net: 0.85 kg • Insured</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 p-1">
+<img alt="SoundCore Space One ANC" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9yDvHGdmp_XvAHQom2sK06OWJxVK9i9wSmG7HrL_ZQFouEoIKkQeQU7Jrc8J2Fu09K9X4fMyBSC3D81_27Os-ncNhdEduxuX3-D9nj1k6UhAoCXxzd7Bw1DFnrTsEFgDaK4kldXnkIJkmHVZcrL_Bqw6VStqek_cHB4FwSZjUq3XcAweiVnVnSgtfgqoLIxE31pfmmoerOOfJK9U6q9AaQ3dLDQP7XBFs7mfpjGW"/>
+</div>
+<div class="min-w-0">
+<div class="text-[13px] font-bold text-slate-900 truncate">SoundCore Space One ANC Headphones</div>
+<div class="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+<span>Jet Black</span>
+<span>•</span>
+<span class="font-mono text-slate-700 font-semibold">SN-48192-UG-OK</span>
+<span>•</span>
+<span class="text-emerald-700 font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Serial Verified
+                    </span>
+</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<div class="text-[13px] font-extrabold text-slate-900">UGX 248,500</div>
+<div class="text-[11px] text-slate-500">Qty: 1</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 p-1">
+<img alt="Anker 65W GaN Charger" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXY9GjUjIisfVFp0sUkQxEgG-er2TkIIzW3GwfP5Dop3dvLEYzOM75FlqRJ-vDaOSVFh7ojtocCNd4oCqWg1sOwdVBcGZ50YFMXn_axH0Tg9b6XxWO7LRQug1-AoM8agmXoJyPJ7lgBCZ3ew3NA_CCEU5KcNpWZMfoF4JLbkWloVQK1nEQFTbuAjAaV45NfVUV2Vo03pmFjYJ-wUayw6QHRmbnSFk2ColczDJ4rDhv"/>
+</div>
+<div class="min-w-0">
+<div class="text-[13px] font-bold text-slate-900 truncate">Anker 65W GaN Dual-Port Fast Charger</div>
+<div class="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+<span>Arctic White</span>
+<span>•</span>
+<span class="font-mono text-slate-700 font-semibold">SN-GAN65-9011</span>
+<span>•</span>
+<span class="text-emerald-700 font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Serial Logged
+                    </span>
+</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<div class="text-[13px] font-extrabold text-slate-900">UGX 140,000</div>
+<div class="text-[11px] text-slate-500">Qty: 1</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Two-Card Split: Courier & Recipient Details -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Courier Card -->
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Courier Dispatch</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold">Vetted Rider</span>
+</div>
+<div class="flex items-center gap-2.5 mb-2">
+<div class="w-9 h-9 rounded-full bg-orange-100 text-primary-container font-extrabold text-[12px] flex items-center justify-center">
+                  MB
+                </div>
+<div>
+<div class="text-[13px] font-bold text-slate-900">Mukasa Brian</div>
+<div class="text-[11px] text-slate-500">4.92 ★ (1,420 trips) • Helmet #44</div>
+</div>
+</div>
+<div class="text-[11px] text-slate-600 mb-2">
+                Fleet: <strong>SafeBoda Direct Express</strong> • ID: #SB-9812
+              </div>
+</div>
+<div class="flex items-center gap-1.5 pt-2 border-t border-slate-200/60">
+<button class="flex-1 h-8 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-800 text-[11px] font-bold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-slate-600">call</span> Call
+              </button>
+<button class="flex-1 h-8 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-800 text-[11px] font-bold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">chat</span> WhatsApp
+              </button>
+<button class="h-8 px-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors" title="Swap Courier">
+<span class="material-symbols-outlined text-[15px]">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipient Card -->
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Recipient Details</span>
+<span class="px-1.5 py-0.5 rounded bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-blue-600">verified</span> Verified Buyer
+                </span>
+</div>
+<div class="flex items-center gap-2.5 mb-2">
+<div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-extrabold text-[12px] flex items-center justify-center">
+                  DM
+                </div>
+<div>
+<div class="text-[13px] font-bold text-slate-900">Dennis Mukasa</div>
+<div class="text-[11px] text-slate-500">+256 772 ••• 814 (Masked Relay)</div>
+</div>
+</div>
+<div class="text-[11px] text-slate-600 mb-1">
+                Plot 14 Acacia Avenue, Kololo, Kampala
+              </div>
+<div class="p-1.5 rounded bg-white border border-slate-200/60 text-[10px] text-slate-600 italic">
+                "Instruction: Please leave with receptionist Sylvia if I am in a board meeting."
+              </div>
+</div>
+<div class="pt-2 border-t border-slate-200/60">
+<button class="w-full h-8 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-slate-600">shield</span> Message Buyer via SwiftRelay
+              </button>
+</div>
+</div>
+</div>
+<!-- Detail Bottom Action Tray -->
+<div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 border-t border-slate-100">
+<div class="flex items-center gap-2">
+<button class="h-10 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-[12px] font-bold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[17px] text-emerald-700">verified</span>
+<span>Verify Tamper Seal</span>
+</button>
+<button class="h-10 px-3.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 text-[12px] font-bold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[17px]">gavel</span>
+<span>Emergency Hold</span>
+</button>
+</div>
+<button class="h-10 px-5 rounded-xl bg-primary-container hover:bg-primary text-white text-[12px] font-extrabold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">pin</span>
+<span>Request Delivery OTP Handshake</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- MODERN FOOTER -->
+<footer class="w-full bg-white border-t border-slate-200/80 py-3 mt-4">
+<div class="w-full max-w-[1280px] mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+<div class="flex items-center gap-3 flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Gateway Latency: <strong>28ms</strong></span>
+</div>
+<span>•</span>
+<span>William St Central Hub: <strong>99.8% Online</strong></span>
+<span>•</span>
+<span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold">Bank of Uganda Escrow Regulated</span>
+</div>
+<div>
+<span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span>
+</div>
+</div>
+</footer>
+</body></html>

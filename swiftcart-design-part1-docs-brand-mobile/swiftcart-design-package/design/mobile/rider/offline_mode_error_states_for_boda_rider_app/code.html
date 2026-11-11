@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#ffb5a1", "secondary-fixed": "#dde1ff", "on-surface-variant": "#5c4039", "surface-container-low": "#f9f2ec", "on-primary": "#ffffff", "on-surface": "#1e1b18", "on-primary-fixed-variant": "#881f00", "surface-tint": "#b22b00", "on-tertiary-container": "#f4fff6", "outline-variant": "#e5beb4", "tertiary-fixed": "#6ffbbe", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "tertiary-container": "#00855b", "on-tertiary-fixed-variant": "#005236", "surface": "#fff8f2", "on-primary-fixed": "#3c0800", "outline": "#907067", "on-secondary": "#ffffff", "secondary-fixed-dim": "#b8c3ff", "error": "#ba1a1a", "primary-fixed": "#ffdbd1", "primary": "#ae2a00", "on-secondary-fixed-variant": "#384377", "surface-variant": "#e8e1dc", "surface-container": "#f3ede7", "on-error": "#ffffff", "on-secondary-fixed": "#091649", "surface-dim": "#dfd9d3", "surface-container-highest": "#e8e1dc", "primary-container": "#da3700", "background": "#fff8f2", "tertiary-fixed-dim": "#4edea3", "secondary-container": "#b8c3ff", "on-tertiary-fixed": "#002113", "inverse-primary": "#ffb5a1", "on-background": "#1e1b18", "surface-bright": "#fff8f2", "error-container": "#ffdad6", "on-primary-container": "#fffcff", "on-secondary-container": "#444f83", "surface-container-high": "#eee7e1", "secondary": "#505b90", "inverse-surface": "#33302c", "tertiary": "#006947", "inverse-on-surface": "#f6f0ea" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "space-md": "0.75rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "currency-code": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }], "price-display": ["22px", { "lineHeight": "28px", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "currency-code": ["12px", { "lineHeight": "14px", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(14,27,77,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col"><span class="font-label-sm text-primary tracking-wide uppercase">SwiftCart Ops</span><h1 class="font-headline-sm text-on-surface tracking-tight leading-none truncate max-w-[170px]">Boda Offline Error</h1></div></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Prominent Sticky Offline Alert Banner -->
+<section class="sticky top-0 z-40 bg-surface-container-high/95 backdrop-blur-md px-margin py-3 shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+</span>
+<span class="font-label-lg text-error uppercase tracking-wider">No Cellular Connection • Offline Mode Active</span>
+</div>
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-transform" id="retry-btn" onclick="triggerRetryPulse()">
+<span class="material-symbols-outlined text-[16px] text-primary transition-transform" id="retry-icon">sync</span>
+<span class="font-label-sm text-primary">Retry</span>
+</button>
+</div>
+<p class="font-body-sm text-on-surface-variant leading-tight">
+        Using cached manifests &amp; offline cryptographic OTP. Telemetry queued (<span class="font-label-sm text-on-surface">4 events</span>). Next sync probe in <span class="font-label-sm text-primary" id="sync-timer">42s</span>.
+      </p>
+</div>
+</section>
+<div class="px-margin flex flex-col gap-4 mt-3">
+<!-- Active Rider Micro Badge -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-3 rounded-xl shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-on-surface">Kizito Brian</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm">Bajaj UEF 842X</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Lugogo Bypass • Return Escort</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">satellite_alt</span> GPS Lock
+        </span>
+<span class="font-label-sm text-on-surface-variant mt-0.5">Satellites: 9/12</span>
+</div>
+</div>
+<!-- Active Offline Mission Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm uppercase">
+<span class="material-symbols-outlined text-[14px]">assignment_return</span>
+            Reverse Delivery #RET-4819
+          </div>
+<h2 class="font-headline-sm text-on-surface mt-1">Pioneer Mall G-14</h2>
+<p class="font-body-sm text-on-surface-variant">SoundCore Uganda • Central Kampala</p>
+</div>
+<div class="text-right">
+<span class="font-price-display text-primary leading-none">2.4</span>
+<span class="font-label-sm text-on-surface block uppercase">KM Left</span>
+</div>
+</div>
+<!-- Vector Map Offline Preview -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-high flex flex-col justify-end p-3">
+<svg class="absolute inset-0 w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 360 176">
+<!-- Stylized road grid -->
+<rect fill="#f3ede7" height="176" width="360"></rect>
+<path d="M-10 40 Q 90 60 180 30 T 370 70" stroke="#dfd9d3" stroke-linecap="round" stroke-width="12"></path>
+<path d="M40 -10 Q 60 80 120 180" stroke="#dfd9d3" stroke-linecap="round" stroke-width="8"></path>
+<path d="M220 -10 L 260 186" stroke="#dfd9d3" stroke-linecap="round" stroke-width="7"></path>
+<path d="M110 176 L 370 20" stroke="#dfd9d3" stroke-linecap="round" stroke-width="14"></path>
+<!-- Route Line (Lugogo Bypass -> Yusuf Lule -> Kampala Rd) -->
+<path class="animate-pulse" d="M 45 130 C 110 115, 140 85, 190 75 S 270 45, 305 35" id="route-path" stroke="#da3700" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="5"></path>
+<!-- Rider Marker -->
+<circle cx="45" cy="130" fill="#505b90" r="8"></circle>
+<circle cx="45" cy="130" fill="#ffffff" r="4"></circle>
+<!-- Destination Flag -->
+<circle cx="305" cy="35" fill="#00855b" r="9"></circle>
+<circle cx="305" cy="35" fill="#ffffff" r="4"></circle>
+</svg>
+<!-- Dynamic Route Waypoint Tag -->
+<div class="relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-2 rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface">Cached Route: Lugogo → Yusuf Lule → Kampala Rd</span>
+<span class="font-body-sm text-on-surface-variant">Map cached at 4:02 PM • Device satellite lock active</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">cloud_done</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-on-surface">Turn-by-turn guidance continuing without active cellular carrier.</span>
+</div>
+</section>
+<!-- Offline Cryptographic Handover Verification Widget -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">offline_pin</span>
+<h3 class="font-label-lg text-on-surface">Verify Handover Offline</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm">
+          SHA-256 Vault
+        </span>
+</div>
+<p class="font-body-sm text-on-surface-variant">
+        Request the Merchant / Customer 4-digit token. Validated locally via pre-loaded manifest seeds.
+      </p>
+<!-- Token Entry Cells -->
+<div class="flex justify-between items-center gap-2 my-1">
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-headline-md text-on-surface shadow-inner">
+          8
+        </div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-headline-md text-on-surface shadow-inner">
+          4
+        </div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-headline-md text-on-surface shadow-inner">
+          9
+        </div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-headline-md text-on-surface shadow-inner">
+          2
+        </div>
+</div>
+<!-- Token Status Notification -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-tertiary">Cryptographic Key Match: Valid (SoundCore Return Auth)</span>
+<p class="font-body-sm text-on-surface-variant">
+            Zero-network token confirmed. Signature receipt will automatically dispatch once MTN/Airtel reconnects.
+          </p>
+</div>
+</div>
+</section>
+<!-- Queued Actions & Sync Manager Drawer -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">inventory_2</span>
+<h3 class="font-label-lg text-on-surface">Local Encrypted Queue (4 Items)</h3>
+</div>
+<span class="font-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant">
+          Auto-Pushed
+        </span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface truncate">Buyer Tamper Seal Photo</span>
+<span class="font-body-sm text-on-surface-variant truncate">RET-4819_seal.jpg • 1.2 MB</span>
+</div>
+</div>
+<span class="font-label-sm text-error uppercase shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Queued
+          </span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">draw</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface truncate">Alex Kato Doorstep Sig</span>
+<span class="font-body-sm text-on-surface-variant truncate">sig_8492.dat • SHA-256 Sign</span>
+</div>
+</div>
+<span class="font-label-sm text-tertiary uppercase shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Encrypted
+          </span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface truncate">GPS Waypoint Telemetry</span>
+<span class="font-body-sm text-on-surface-variant truncate">Lugogo_JinjaRd_KM2.1 (8 pts)</span>
+</div>
+</div>
+<span class="font-label-sm text-secondary uppercase shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">database</span> Logged
+          </span>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">barcode_scanner</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-on-surface truncate">Bag Seal Barcode Scan</span>
+<span class="font-body-sm text-on-surface-variant truncate">RET-4819-UG-PIONEER</span>
+</div>
+</div>
+<span class="font-label-sm text-tertiary uppercase shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Verified
+          </span>
+</div>
+</div>
+</section>
+<!-- Network Diagnostic & Field Fallback Tools -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[20px]">cell_tower</span>
+<h3 class="font-label-lg text-on-surface">Network Diagnostics &amp; Lugogo Corridor Fallbacks</h3>
+</div>
+<!-- Dual SIM State -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface">SIM 1: MTN</span>
+<span class="material-symbols-outlined text-[16px] text-error">signal_cellular_nodata</span>
+</div>
+<span class="font-label-sm text-error">Searching...</span>
+<span class="font-body-sm text-on-surface-variant">Jinja Rd Cell Down</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface">SIM 2: Airtel</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">signal_cellular_1_bar</span>
+</div>
+<span class="font-label-sm text-secondary">2G Edge Available</span>
+<button class="mt-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm active:scale-95 text-left" onclick="switchDataCarrier()">
+            Switch Carrier
+          </button>
+</div>
+</div>
+<!-- USSD Fallback Action -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">dialpad</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface">USSD Emergency Signal</span>
+<span class="font-body-sm text-on-surface-variant">Push return token via GSM voice channel</span>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary font-label-sm active:scale-95" href="tel:*165*88%23">
+          *165*88#
+        </a>
+</div>
+<!-- Toll-free Dispatch Call -->
+<a class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low active:bg-surface-container-high transition-colors" href="tel:+256800220800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">phone_in_talk</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface">SwiftOps Dispatch Radio Hotline</span>
+<span class="font-body-sm text-on-surface-variant">+256 800 220 800 (Toll-Free)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+</a>
+</section>
+</div>
+<!-- Sticky Bottom Handover Action Bar -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/90 backdrop-blur-xl p-margin z-50 shadow-[0_-4px_20px_rgba(14,27,77,0.06)]">
+<div class="flex flex-col gap-2 max-w-lg mx-auto">
+<div class="flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]">sync_saved_locally</span>
+<span class="font-body-sm text-on-surface-variant">
+          Delivery proof will auto-upload when corridor connection restores.
+        </span>
+</div>
+<button class="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg shadow-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-transform" id="complete-handover-btn" onclick="simulateComplete()">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Proceed with Offline Store Handover</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let countdown = 45;
+  const timerElement = document.getElementById('sync-timer');
+  const retryBtn = document.getElementById('retry-btn');
+  const retryIcon = document.getElementById('retry-icon');
+
+  setInterval(() => {
+    countdown = countdown > 1 ? countdown - 1 : 45;
+    if (timerElement) {
+      timerElement.textContent = countdown + 's';
+    }
+  }, 1000);
+
+  function triggerRetryPulse() {
+    if (retryIcon) {
+      retryIcon.classList.add('rotate-180');
+      setTimeout(() => retryIcon.classList.remove('rotate-180'), 400);
+    }
+    countdown = 45;
+    if (timerElement) {
+      timerElement.textContent = 'Probing...';
+      setTimeout(() => {
+        timerElement.textContent = '45s';
+      }, 1200);
+    }
+  }
+
+  function switchDataCarrier() {
+    alert("Switching primary packet radio to SIM 2 (Airtel Uganda 2G). Initializing USSD data tunnels...");
+  }
+
+  function simulateComplete() {
+    const btn = document.getElementById('complete-handover-btn');
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Handover Stored Locally...`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span> Complete (Cached in Storage)`;
+      btn.classList.remove('from-primary', 'to-primary-container');
+      btn.classList.add('bg-tertiary');
+    }, 1000);
+  }
+</script></main></body></html>

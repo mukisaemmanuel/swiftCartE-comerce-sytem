@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#dde1fb",
+          "primary-fixed-dim": "#ffb5a1",
+          "error": "#ffb4ab",
+          "surface-dark": "#080D1F",
+          "surface-container-low": "#161b2d",
+          "surface-cream": "#FFF8F2",
+          "surface-container-highest": "#2f3448",
+          "surface-container-lowest": "#080d1f",
+          "surface-variant": "#2f3448",
+          "on-background": "#dde1fb",
+          "surface-tint": "#ffb5a1",
+          "secondary": "#b8c3ff",
+          "primary": "#ffb5a1",
+          "on-secondary-container": "#a7b2ed",
+          "mtn-yellow": "#FFCC00",
+          "surface-container": "#1a1f31",
+          "amber-warning": "#F59E0B",
+          "on-error-container": "#ffdad6",
+          "secondary-fixed-dim": "#b8c3ff",
+          "outline-variant": "#5c4039",
+          "emerald-escrow": "#10B981",
+          "secondary-container": "#384377",
+          "primary-container": "#da3700",
+          "on-primary-fixed-variant": "#881f00",
+          "airtel-red": "#ED1C24",
+          "outline": "#ac8980",
+          "on-error": "#690005",
+          "on-primary": "#611300",
+          "error-container": "#93000a",
+          "container-dark-low": "#0F172A",
+          "surface-bright": "#34384c",
+          "surface": "#0d1225",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-secondary-fixed-variant": "#384377",
+          "tertiary": "#4edea3",
+          "on-secondary-fixed": "#091649",
+          "tertiary-fixed": "#6ffbbe",
+          "surface-container-high": "#24293c",
+          "on-tertiary-container": "#f4fff6",
+          "on-secondary": "#212d5f",
+          "on-tertiary-fixed-variant": "#005236",
+          "surface-dim": "#0d1225",
+          "action-gradient-start": "#FF8A1F",
+          "background": "#0d1225",
+          "inverse-surface": "#dde1fb",
+          "on-tertiary": "#003824",
+          "secondary-fixed": "#dde1ff",
+          "on-primary-fixed": "#3c0800",
+          "danger-penalty": "#EF4444",
+          "primary-fixed": "#ffdbd1",
+          "inverse-on-surface": "#2b3043",
+          "inverse-primary": "#b22b00",
+          "tertiary-container": "#00855b",
+          "on-primary-container": "#fffcff",
+          "container-dark-high": "#1E293B",
+          "action-gradient-end": "#DA3700",
+          "on-tertiary-fixed": "#002113",
+          "on-surface-variant": "#e5beb4"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "1.5rem",
+          "gutter": "0.75rem",
+          "space-lg": "1rem",
+          "space-md": "0.75rem",
+          "margin-desktop": "2rem",
+          "gutter-desktop": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin": "1rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "price-display": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "code-display": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "fontWeight": "800"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "price-display": [
+            "24px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "code-display": [
+            "20px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.15em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] bg-surface-container-lowest"><div class="flex flex-col gap-space-lg"><div class="px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVpBWIs5XQ28bVfOoWV3C7pdQ80vQZpy6zIAHeikBdjWhpkpINET7f_7jTqi9yGUGQU7hEikd_KrJ8jOB5WTRyPGCJK0jRZfRk8tAZCig7uiDyQB5vkMC8Foerea2SW4duJ91S2CBaA3I1hGkdqcDWEiDHMWibEcL91CBSqwcLyep42BbI5j6KR3UiSgJeMw2bttPzBUS60Jl3yLrd6vx44QwltEgeQsMed6ZVlt_CaeJirRyNhYreCg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-extrabold">SwiftCart</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Hub Ops Portal</span></div></div></div><div class="mx-space-lg px-space-md py-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">Station 04 Online</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold">UG-KLA</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-label-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="station-overview" href="#"><span class="material-symbols-outlined text-[20px]">hub</span>Station Overview</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inbound-intake-&amp;-scan" href="#"><span class="material-symbols-outlined text-[20px]">barcode_scanner</span>Inbound Intake &amp; Scan</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rider-dispatch-&amp;-staging" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>Rider Dispatch &amp; Staging</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="storage-&amp;-aging-matrix" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span>Storage &amp; Aging Matrix</a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-label-md" data-path="line-haul-manifests" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span>Line-Haul Manifests</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customer-pickup" href="#"><span class="material-symbols-outlined text-[20px]">countertops</span>Customer Pickup</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="damaged-&amp;-quarantine-bay" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span>Damaged &amp; Quarantine Bay</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="returns-&amp;-rto" href="#"><span class="material-symbols-outlined text-[20px]">replay</span>Returns &amp; RTO</a></nav></div><div class="px-space-lg flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Ledger Custody</span><span class="material-symbols-outlined text-emerald-escrow text-[16px]">verified_user</span></div><span class="font-label-md text-label-md text-on-surface">UGX 48,250,000</span><span class="font-body-sm text-body-sm text-tertiary">Escrow Locked Active</span></div><div class="text-center"><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 SwiftCart Uganda Logistics</span></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-16 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] bg-surface-container-lowest"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVpBWIs5XQ28bVfOoWV3C7pdQ80vQZpy6zIAHeikBdjWhpkpINET7f_7jTqi9yGUGQU7hEikd_KrJ8jOB5WTRyPGCJK0jRZfRk8tAZCig7uiDyQB5vkMC8Foerea2SW4duJ91S2CBaA3I1hGkdqcDWEiDHMWibEcL91CBSqwcLyep42BbI5j6KR3UiSgJeMw2bttPzBUS60Jl3yLrd6vx44QwltEgeQsMed6ZVlt_CaeJirRyNhYreCg"/><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-md text-label-md text-on-surface font-bold">Kampala Central Hub #04 - William St</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-emerald-escrow text-[16px]">conveyor_belt</span><span class="font-label-sm text-label-sm text-on-surface">Belt #2 Speed:</span><span class="font-label-sm text-label-sm text-emerald-escrow font-bold">1.4 m/s (Nominal)</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-tertiary text-[16px]">qr_code_scanner</span><span class="font-label-sm text-label-sm text-on-surface">Honeywell Xenon 1950g</span><span class="font-label-sm text-label-sm text-emerald-escrow font-bold">Ready</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span><span class="font-code-display text-label-md text-on-surface font-bold tracking-wider">14:38:09 EAT</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold">Brian Mukasa</span><span class="font-label-sm text-label-sm text-primary font-bold">Hub Lead Supervisor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Status & Incident Strip -->
+<div class="w-full bg-surface-container-lowest px-space-xl py-space-sm flex flex-wrap items-center justify-between gap-y-2">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Line-Haul Trunk Network:</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4 Main Corridors Operational</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>•</span>
+<span class="text-tertiary">Jinja/Eastern (Active)</span>
+<span>•</span>
+<span class="text-secondary">Mbarara/Western (Active)</span>
+<span>•</span>
+<span class="text-on-surface">Gulu/Northern (Active)</span>
+<span>•</span>
+<span class="text-on-surface-variant">Masaka/Southern (Standby)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">lock</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold tracking-wide uppercase">Seal Integrity: 100% Breaches: 0</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-0.5 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Namanve Weighbridge Telemetry:</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">Synced 4m ago</span>
+</div>
+</div>
+</div>
+<!-- KPI / Stats Summary Banner -->
+<div class="p-space-xl pb-space-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today's Transits</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trucks Sched.</span>
+</div>
+<div class="flex items-center gap-space-xs text-[11px] font-label-sm">
+<span class="text-emerald-escrow font-bold">8 Arrived</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-amber-warning font-bold">3 In-Transit</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-primary font-bold">1 Loading</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">rv_hookup</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Transferred Parcels</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">3,420</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">+18.4%</span>
+</div>
+<div class="w-36 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-escrow h-full rounded-full w-4/5"></div>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-emerald-escrow">
+<span class="material-symbols-outlined text-[26px]">inventory_2</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Bay Loading Utilization</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">75%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 of 4 Docks</span>
+</div>
+<div class="flex items-center gap-space-xs text-[11px] font-label-sm text-on-surface-variant">
+<span>Dock 1: Free</span>
+<span>•</span>
+<span class="text-primary">Dock 2 &amp; 3: Busy</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">dock</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Security Wire Seals</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-emerald-escrow font-extrabold tracking-tight">100%</span>
+<span class="font-label-sm text-label-sm text-tertiary">Verified Intact</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>0 Breaches / Quarantine: 0</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-emerald-escrow">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Main Split Console Area -->
+<div class="px-space-xl pb-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: 35% Width (4/12 cols on desktop) -->
+<section class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Section Header & Switcher -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">queue_play_next</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Transit Manifests</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-extrabold">4 Active</span>
+</div>
+<!-- Filter Toggle -->
+<div class="grid grid-cols-2 p-1 rounded-lg bg-surface-container-low">
+<button class="py-2 px-space-sm rounded font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface font-bold shadow-sm flex items-center justify-center gap-1" id="tab-inbound">
+<span class="material-symbols-outlined text-[16px] text-tertiary">move_to_inbox</span>
+            Inbound Trunk (3)
+          </button>
+<button class="py-2 px-space-sm rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-outbound">
+<span class="material-symbols-outlined text-[16px]">outbox</span>
+            Outbound Trunk (1)
+          </button>
+</div>
+<!-- Search / Barcode Filter -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-colors" placeholder="Scan or type Manifest # / Plate..." type="text"/>
+</div>
+</div>
+<!-- Manifest Cards List -->
+<div class="flex flex-col gap-space-sm">
+<!-- CARD 1: Selected / Highlighted -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md relative overflow-hidden transition-all cursor-pointer ring-1 ring-primary/20">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-gradient-to-b from-action-gradient-start to-action-gradient-end"></div>
+<div class="pl-2 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-display text-label-lg font-extrabold text-on-surface tracking-normal">#MNF-JIN-KLA-1082</span>
+<span class="px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Verified
+                </span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">Dock 2 Active</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Jinja Main Hub</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+<span class="text-primary font-bold">Kampala Central #04</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-low p-2 rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Vehicle &amp; Plate</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Isuzu 7-Ton | UBA 441Z</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Driver Custody</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Samuel Waiswa</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">inventory_2</span>
+<span class="font-label-md text-label-md text-on-surface font-extrabold">240 Parcels</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(4 Master Bags)</span>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">Docked 14:15 EAT</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Loading at Dock 3 -->
+<div class="bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-display text-label-lg font-bold text-on-surface tracking-normal">#MNF-KLA-MBR-0941</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">Loading</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Dock 3 Bay</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Kampala Central</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+<span class="text-secondary font-bold">Mbarara Western Hub</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Fuso Fighter • UBH 812L</span>
+<span>Driver: David Mukasa</span>
+</div>
+<!-- Staging Progress Bar -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Staged for Trunk Departure</span>
+<span class="text-on-surface font-bold">310 / 350 Parcels (88%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-primary h-full rounded-full w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: In-Transit Karuma -->
+<div class="bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-display text-label-lg font-bold text-on-surface tracking-normal">#MNF-GUL-KLA-0419</span>
+<span class="px-2 py-0.5 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">near_me</span> In-Transit
+                </span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-amber-warning">ETA 16:30</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Gulu Northern Hub</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+<span class="text-on-surface font-semibold">Kampala Central</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Tata LPT • UBF 904K</span>
+<span>Simon Okello</span>
+</div>
+<div class="flex items-center justify-between text-body-sm pt-1 bg-surface-container-low px-2 py-1 rounded">
+<span class="text-on-surface-variant flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">location_on</span> Karuma Bridge Trunk Point
+              </span>
+<span class="font-label-md text-label-md text-on-surface font-bold">185 Parcels</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: Scheduled Departure -->
+<div class="bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-display text-label-lg font-bold text-on-surface tracking-normal">#MNF-KLA-MSK-0773</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">Standby</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dep: 17:00</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Kampala Central</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+<span class="text-on-surface font-semibold">Masaka Sub-Hub</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Toyota Dyna • UAZ 219P</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">140 Parcels</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Operations Panel -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Hub Quick Execution</span>
+<button class="w-full h-[48px] rounded-lg bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+          Create New Outbound Manifest
+        </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-[44px] rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md font-bold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">dock</span>
+            Dock Vehicle at Bay
+          </button>
+<button class="h-[44px] rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md font-bold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">badge</span>
+            Driver Sign-In
+          </button>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: 65% Width (8/12 cols on desktop) -->
+<section class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Selected Manifest Dossier Banner -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-md flex flex-col gap-space-md">
+<!-- Header Info Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[32px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-display text-price-display font-extrabold text-on-surface tracking-wider">#MNF-JIN-KLA-1082</span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Arrived &amp; Unloading
+                </span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Jinja Eastern Trunk Corridor ➔ Kampala Central Hub #04 Dock 02</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-bold hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">history</span>
+              Audit Trail
+            </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-bold hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">print</span>
+              Print Summary
+            </button>
+</div>
+</div>
+<!-- Security Wire Seal & Cargo Environment Card -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<!-- Wire Seal -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Container Wire Seal</span>
+<span class="material-symbols-outlined text-emerald-escrow text-[18px]">verified</span>
+</div>
+<span class="font-code-display text-label-lg font-extrabold text-on-surface">#SEAL-UG-998412-B</span>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-emerald-escrow font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span>
+              Verified by Sup. Brian Mukasa
+            </div>
+</div>
+<!-- Cargo Temp / Humidity -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cargo Environment</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">thermostat</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">22°C</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 54% RH</span>
+</div>
+<span class="font-body-sm text-body-sm text-emerald-escrow">Optimal (Dry Goods &amp; Tech)</span>
+</div>
+<!-- Odometer & Weighbridge -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Weighbridge Clearance</span>
+<span class="material-symbols-outlined text-primary text-[18px]">scale</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-extrabold">Ticket #WB-44109</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Namanve Scale: 8,420 kg Gross</span>
+</div>
+</div>
+<!-- Consignment Distribution Breakdown -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Consignment Routing Allocation (240 Total Parcels)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Manifest Mass: 143.5 kg</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kampala Central (Final)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">160</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-bold">66.7%</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transit Entebbe Int'l</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">45</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-bold">18.8%</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transit Mukono Hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">35</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-tertiary font-bold">14.5%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Bags Manifest Intake Table -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">format_list_bulleted</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Master Bag Intakes</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">(4 Sealed Units in Trunk)</span>
+</div>
+<!-- Rapid Scan Input Emulation -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-2 px-space-md py-1.5 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-emerald-escrow text-[18px]">barcode_scanner</span>
+<input class="bg-transparent font-code-display text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none w-44" id="bag-scanner-input" placeholder="Scan Bag Barcode..." type="text"/>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors font-bold" onclick="simulateScan()">
+              Scan
+            </button>
+</div>
+</div>
+<!-- Freight Master Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Master Bag ID</th>
+<th class="py-space-sm px-space-md">Units</th>
+<th class="py-space-sm px-space-md">Origin Station</th>
+<th class="py-space-sm px-space-md">Corridor Route</th>
+<th class="py-space-sm px-space-md">Gross Wt</th>
+<th class="py-space-sm px-space-md">Seal Check</th>
+<th class="py-space-sm px-space-md rounded-r-lg text-right">Intake Progress</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/30 font-body-md text-body-md">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+<span class="font-code-display text-label-md text-on-surface font-extrabold">BAG-JIN-014</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface font-bold">25 Parcels</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Jinja Main Hub</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium">Nakasero / Kololo</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">34.2 kg</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span> Intact
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2.5 py-1 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-extrabold">
+                    25 / 25 Scanned
+                  </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+<span class="font-code-display text-label-md text-on-surface font-extrabold">BAG-JIN-015</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface font-bold">30 Parcels</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Jinja Main Hub</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium">Nakawa Industrial</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">41.0 kg</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span> Intact
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2.5 py-1 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-extrabold">
+                    30 / 30 Scanned
+                  </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+<span class="font-code-display text-label-md text-on-surface font-extrabold">BAG-JIN-016</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface font-bold">28 Parcels</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Jinja Main Hub</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium">Central CBD</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">38.5 kg</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span> Intact
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2.5 py-1 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-extrabold">
+                    28 / 28 Scanned
+                  </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+<span class="font-code-display text-label-md text-on-surface font-extrabold">BAG-JIN-017</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface font-bold">20 Parcels</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Jinja Main Hub</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium">Entebbe Linehaul</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-body-sm text-on-surface">29.8 kg</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span> Intact
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2.5 py-1 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-extrabold">
+                    20 / 20 Scanned
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Driver Digital Handover Attestation Section -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Line-Haul Handover Verification &amp; Signatures</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">encrypted</span> Cryptographic Key #KLA-04-VERIFIED
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Driver Box -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">airline_seat_recline_normal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Line-Haul Transit Driver</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Samuel Waiswa • ID: 882910</span>
+<span class="font-body-sm text-body-sm text-emerald-escrow font-semibold">Signed via Handheld Xenon (14:22:04)</span>
+</div>
+</div>
+<!-- Supervisor Box -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Receiving Hub Supervisor</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Brian Mukasa • Kampala Central #04</span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">Attestation Approved</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Manifest Closure Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-2">
+<button class="h-[48px] px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-bold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+              Print Consignment Receipt
+            </button>
+<button class="h-[48px] px-space-md rounded-lg bg-danger-penalty/15 text-danger-penalty hover:bg-danger-penalty/25 font-label-md text-label-md font-bold transition-all flex items-center gap-2" onclick="flagDiscrepancyModal()">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+              Flag Transit Discrepancy
+            </button>
+</div>
+<button class="h-[52px] px-space-xl rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_18px_rgba(218,55,0,0.35)] active:scale-98 transition-all flex items-center gap-2" id="btn-accept-manifest" onclick="finalizeManifestHandover()">
+<span class="material-symbols-outlined text-[22px]">check_box</span>
+            Sign &amp; Accept Line-Haul Manifest
+          </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Toast Notification Emulation -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-high text-on-surface px-space-lg py-space-md rounded-xl shadow-2xl flex items-center gap-space-md" id="operation-toast">
+<div class="w-8 h-8 rounded-full bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface" id="toast-title">Handover Accepted</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Manifest #MNF-JIN-KLA-1082 transferred to internal dispatch.</span>
+</div>
+</div>
+</div>
+<script>
+  function showToast(title, desc, icon = 'verified', isError = false) {
+    const toast = document.getElementById('operation-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastTitle.textContent = title;
+    toastDesc.textContent = desc;
+    toastIcon.textContent = icon;
+
+    if (isError) {
+      toastIcon.parentElement.className = 'w-8 h-8 rounded-full bg-danger-penalty/20 text-danger-penalty flex items-center justify-center';
+    } else {
+      toastIcon.parentElement.className = 'w-8 h-8 rounded-full bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center';
+    }
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 3800);
+  }
+
+  function simulateScan() {
+    const input = document.getElementById('bag-scanner-input');
+    const val = input.value.trim() || 'BAG-JIN-018';
+    showToast('Master Bag Verified', 'Scanned ' + val + ' successfully. Integrity seal green.');
+    input.value = '';
+  }
+
+  function finalizeManifestHandover() {
+    const btn = document.getElementById('btn-accept-manifest');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Processing Cryptographic Closure...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[22px]">check_circle</span> Manifest Handover Completed';
+      btn.className = 'h-[52px] px-space-xl rounded-xl bg-emerald-escrow text-on-surface-dark font-label-lg text-label-lg font-bold shadow-lg transition-all flex items-center gap-2';
+      showToast('Line-Haul Custody Accepted', 'Truck unloaded. Parcels released into Kampala Central staging ledger.', 'done_all');
+    }, 900);
+  }
+
+  function flagDiscrepancyModal() {
+    showToast('Discrepancy Portal Active', 'Opened Damaged & Quarantine Bay ticket for Line-Haul review.', 'report_problem', true);
+  }
+
+  // Filter Toggle Handling
+  const btnInbound = document.getElementById('tab-inbound');
+  const btnOutbound = document.getElementById('tab-outbound');
+
+  btnInbound.addEventListener('click', () => {
+    btnInbound.className = 'py-2 px-space-sm rounded font-label-md text-label-md transition-all bg-surface-container-highest text-on-surface font-bold shadow-sm flex items-center justify-center gap-1';
+    btnOutbound.className = 'py-2 px-space-sm rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+  });
+
+  btnOutbound.addEventListener('click', () => {
+    btnOutbound.className = 'py-2 px-space-sm rounded font-label-md text-label-md transition-all bg-surface-container-highest text-on-surface font-bold shadow-sm flex items-center justify-center gap-1';
+    btnInbound.className = 'py-2 px-space-sm rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+  });
+</script></main></div></body></html>

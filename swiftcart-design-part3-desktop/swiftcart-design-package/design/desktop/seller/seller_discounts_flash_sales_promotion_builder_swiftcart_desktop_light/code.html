@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#e8e1dc", "on-primary-fixed-variant": "#881f00", "surface-container": "#f3ede7", "surface-container-high": "#eee7e1", "on-error-container": "#93000a", "secondary-container": "#b8c3ff", "on-error": "#ffffff", "on-background": "#1e1b18", "tertiary-fixed-dim": "#4edea3", "on-primary-fixed": "#3c0800", "surface": "#fff8f2", "background": "#fff8f2", "tertiary-container": "#00855b", "inverse-on-surface": "#f6f0ea", "primary-container": "#da3700", "on-tertiary": "#ffffff", "surface-variant": "#e8e1dc", "on-secondary-fixed-variant": "#384377", "on-surface": "#1e1b18", "error-container": "#ffdad6", "primary-fixed": "#ffdbd1", "surface-bright": "#fff8f2", "surface-dim": "#dfd9d3", "on-secondary-fixed": "#091649", "outline": "#907067", "outline-variant": "#e5beb4", "inverse-surface": "#33302c", "tertiary": "#006947", "secondary-fixed": "#dde1ff", "on-tertiary-container": "#f4fff6", "inverse-primary": "#ffb5a1", "error": "#ba1a1a", "surface-tint": "#b22b00", "on-tertiary-fixed-variant": "#005236", "primary": "#ae2a00", "on-surface-variant": "#5c4039", "secondary-fixed-dim": "#b8c3ff", "secondary": "#505b90", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-container-low": "#f9f2ec", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a1", "surface-container-lowest": "#ffffff", "on-primary-container": "#fffcff", "on-tertiary-fixed": "#002113", "on-secondary-container": "#444f83" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-lg": "1rem", "margin": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "currency-code": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-sm": ["10px", {"lineHeight": "12px", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "currency-code": ["12px", {"lineHeight": "14px", "fontWeight": "700"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "800"}], "price-display": ["22px", {"lineHeight": "28px", "fontWeight": "800"}], "label-lg": ["14px", {"lineHeight": "18px", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm"><img alt="SwiftCart Merchant Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SwiftCart</span><span class="ml-auto bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">Merchant</span></div><div class="px-space-md py-space-sm mx-space-md mb-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-[0_1px_4px_rgba(14,27,77,0.03)]"><div class="flex items-center gap-space-sm min-w-0"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[18px]">verified</span></div><div class="min-w-0"><p class="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span> Kampala Hub</p></div></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div><nav class="px-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#">Overview</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><span>Orders</span><span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#"><span>Products &amp; Inventory</span><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">2 Low</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#"><span>Riders &amp; Logistics</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">6 Active</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#"><span>Returns &amp; Disputes</span><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">1 Case</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#">Wallet &amp; Payouts</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#">Analytics &amp; Heatmaps</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#">Discounts &amp; Ads</a></nav></div><div class="p-space-md border-t border-surface-container-high space-y-1"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#">Store Profile &amp; KYC</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></nav><div class="mt-space-md p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-[18px]">shield</span><span class="font-label-sm text-label-sm text-on-surface-variant">Swift Escrow Protected</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">lock</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-10 pr-12 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_2px_rgba(14,27,77,0.02)]" placeholder="Search orders, SKU, customer phone (+256)..." type="search"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.04)]"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">MTN &amp; Airtel Rails Active</span></div><button aria-label="Theme Toggle (Light Active)" class="w-9 h-9 rounded-xl bg-surface-container-lowest text-primary hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" title="Light Mode Active" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><button aria-label="Notifications (3 unread)" class="relative w-9 h-9 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] leading-[18px] text-center font-bold ring-2 ring-surface-container-lowest shadow-sm">3</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight">Kizito Ronald</span><span class="font-label-sm text-label-sm text-on-surface-variant">Store General Manager</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md text-label-md">KR</div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Live Network Ad Exchange Ticker -->
+<div class="w-full bg-surface-container px-space-xl py-space-xs text-on-surface-variant flex items-center justify-between shadow-sm overflow-hidden select-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-extrabold shrink-0">Live Ad Node</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">
+        Kampala Central Ad Node: High bid competition active. Flash sale slots refreshing in real-time.
+        <span class="mx-space-xs text-outline/40">|</span>
+<span class="text-on-surface-variant font-label-md text-label-md">MTN-Uganda Ads FastPath Active</span>
+<span class="mx-space-xs text-outline/40">|</span>
+<span class="text-tertiary font-label-md text-label-md">Airtel Money Escrow Sync Ready</span>
+</p>
+</div>
+<div class="hidden xl:flex items-center gap-space-md shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg. Ad CPC: <span class="text-on-surface font-bold">UGX 145</span></span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-lowest px-2 py-0.5 rounded-full shadow-sm">Auction Latency: 18ms</span>
+</div>
+</div>
+<div class="px-space-xl py-space-lg space-y-space-lg max-w-[1600px] w-full mx-auto">
+<!-- Header & Breadcrumbs Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md pb-space-xs">
+<div class="space-y-1">
+<nav class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span class="hover:text-primary transition-colors cursor-pointer">Merchant Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Business &amp; Finance</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Discounts &amp; Ads</span>
+</nav>
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Discounts, Flash Deals &amp; Promotions</h1>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">KLA-Q4 Corridor</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Create high-converting promotions, configure Kampala Flash Sales, and monitor ROAS across dynamic corridors.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-10 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-xl font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.01]" type="button">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span>Campaign Guidelines &amp; SLA</span>
+</button>
+<button class="h-10 px-space-lg bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary rounded-xl font-label-lg text-label-lg flex items-center gap-2 shadow-[0_4px_14px_rgba(218,55,0,0.30)] transition-all transform active:scale-95" id="open-builder-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Create New Campaign</span>
+</button>
+</div>
+</div>
+<!-- Top KPI Performance Summary Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Active Campaigns</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">4 Running</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-surface-container-low px-1.5 py-0.5 rounded-full">+1 Scheduled</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2 Flash Sales • 1 Voucher • 1 SafeBoda Bogo</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span>Total Pipeline</span>
+<span class="font-bold text-on-surface">7 Campaigns Created</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Attributed Revenue</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-code text-currency-code text-on-surface-variant">UGX</span>
+<span class="font-price-display text-price-display text-on-surface">16,840,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+            +32.1% of total monthly gross GMV
+          </p>
+</div>
+<div class="mt-space-md space-y-1">
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 32.1%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Promo Share of Store GMV</span>
+<span class="font-bold text-on-surface">32.1% Target</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Blended Promotion ROAS</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">auto_graph</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary-container">4.6x</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-surface-container-low px-2 py-0.5 rounded-full">High Efficiency</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spend: UGX 3,660,869 • +0.8x vs last cycle</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span>Target Benchmark</span>
+<span class="font-bold text-tertiary">3.5x (+31% Outperform)</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Total Vouchers Redeemed</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">642 Claims</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Claim Rate: 71.3%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Avg basket lift: <span class="font-bold text-on-surface">+UGX 42,000</span></p>
+</div>
+<div class="mt-space-md space-y-1">
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 85%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>642 of 750 Authorized</span>
+<span class="font-bold text-primary">85.6% Cap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace Two-Column Split (62% / 38%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Campaign Manager & Pipeline (7 cols / ~58-62%) -->
+<div class="lg:col-span-7 xl:col-span-8 space-y-space-md">
+<!-- Control Strip: Filter Tabs + Search -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 w-full sm:w-auto overflow-x-auto">
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container transition-all shrink-0" type="button">
+              All Campaigns (7)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm bg-primary-container text-on-primary-container shadow-sm font-bold shrink-0" type="button">
+              Active (4)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container transition-all shrink-0" type="button">
+              Scheduled (2)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container transition-all shrink-0" type="button">
+              Expired (1)
+            </button>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-on-surface-variant text-[16px]">search</span>
+<input class="w-full h-8 pl-8 pr-3 rounded-lg bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search campaign, SKU, code..." type="text"/>
+</div>
+<button class="h-8 px-2.5 bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface font-label-sm text-label-sm flex items-center gap-1 shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filter</span>
+</button>
+</div>
+</div>
+<!-- CAMPAIGN CARD 1: Flash Deal (High Energy Orange Accent) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] p-space-lg hover:shadow-md transition-all space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-extrabold tracking-wider uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                FLASH DEAL
+              </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Ends in 2d 14h 22m
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-space-sm py-0.5 rounded-md flex items-center gap-1 self-start sm:self-auto font-semibold">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+              Live Traffic Boost Active
+            </span>
+</div>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-space-md">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="SoundCore Space One active noise cancelling wireless over ear obsidian black headphones displayed in a studio setting with soft warm orange side lighting, crisp product photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpgHfM3V0IBH440-8o22hPqRTK9orApo2X3w5U_KnJFpxefKqZRXO2NpiSpLmV6dRgtuzWDjvgxce4K6YgkbaVm0srbxxNbBjdOtuyqiefa_YeItt21JQbEbLVFSqQPGiYb5nv8KouGNXotjlmzddADbT4kSgCpGOvNGcKP2jv_6d8jSLLkmwbPPhpmkw2zqU7K6gvhbsf0OX0MzLkmPT6EFmTD_0s4GUqa02GeM1I"/>
+<span class="absolute bottom-1 right-1 bg-primary text-on-primary font-label-sm text-[9px] px-1 rounded font-bold">-10%</span>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Kampala Tech Week Mega Sale</h2>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">SoundCore Space One ANC (Obsidian) • SKU: SC-SP1-BLK</p>
+<div class="flex items-baseline gap-2 pt-0.5">
+<span class="font-label-md text-label-md text-primary font-bold">10% OFF</span>
+<span class="font-label-lg text-label-lg text-on-surface font-extrabold">UGX 306,000</span>
+<span class="font-body-sm text-body-sm text-outline line-through">UGX 340,000</span>
+</div>
+</div>
+<div class="w-full md:w-56 bg-surface-container-low p-space-sm rounded-xl space-y-1.5 shrink-0">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Budget Velocity</span>
+<span class="font-bold text-on-surface">84% Utilized</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 84%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>UGX 1.0M spent</span>
+<span>Cap: 1.2M</span>
+</div>
+</div>
+</div>
+<!-- Flash metrics grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Attributed GMV</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">UGX 9,450,000</p>
+<span class="font-label-sm text-[10px] text-tertiary">31 orders fulfilled</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Realized ROAS</span>
+<p class="font-label-md text-label-md font-bold text-tertiary mt-0.5">7.8x</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">+2.1x over bench</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MTN Ads Clickthrough</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">5.14% CTR</p>
+<span class="font-label-sm text-[10px] text-tertiary">Top 5% of Hub</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SafeBoda Conversion</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">92.4%</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Same-day arrival</span>
+</div>
+</div>
+<!-- Stock quota bar -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Flash Quota Depletion</span>
+<span class="font-bold text-primary">84 / 100 units claimed (16 units left)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+<!-- Card actions bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">date_range</span>
+              Active: Oct 20 – Oct 27, 2025
+            </span>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+                View Analytics
+              </button>
+<button class="px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-all" type="button">
+                Pause Campaign
+              </button>
+<button class="px-space-md py-1 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:opacity-95 transition-all" type="button">
+                Edit Promotion
+              </button>
+</div>
+</div>
+</div>
+<!-- CAMPAIGN CARD 2: Store Voucher (Secondary / Indigo Styling) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] p-space-lg hover:shadow-md transition-all space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-extrabold tracking-wider uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">confirmation_number</span>
+                STORE VOUCHER
+              </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Verified Buyer Exclusive
+              </span>
+</div>
+<div class="flex items-center gap-1.5 self-start sm:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Coupon Code:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono font-bold text-on-surface tracking-wider text-body-sm select-all">SOUNDKLA15</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" title="Copy code" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="space-y-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">SoundCore Flagship Launch Voucher</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              15% OFF Entire Cart • Minimum Order Value: <span class="font-bold text-on-surface">UGX 200,000</span> • Automatically applied at MTN &amp; Airtel checkout.
+            </p>
+</div>
+<!-- Metrics bar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Claims &amp; Redemptions</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">214 / 300</p>
+<span class="font-label-sm text-[10px] text-tertiary">71% conversion rate</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Attributed Cart GMV</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">UGX 4,200,000</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Avg Basket: UGX 260K</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Audience</span>
+<p class="font-label-md text-label-md font-bold text-secondary mt-0.5">Kampala + Wakiso</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Direct MoMo Push</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Redemption Allowance</span>
+<span class="font-bold text-secondary">214 of 300 claims taken | 86 remaining</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 71.3%"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">event</span>
+              Active: Oct 15 – Nov 05, 2025
+            </span>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+                View Details
+              </button>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" type="button">
+                Manage Caps
+              </button>
+</div>
+</div>
+</div>
+<!-- CAMPAIGN CARD 3: Logistics Subsidy (Green / SafeBoda) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] p-space-lg hover:shadow-md transition-all space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-extrabold tracking-wider uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">two_wheeler</span>
+                LOGISTICS SUBSIDY
+              </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">handshake</span>
+                Corridor Co-Pay Active
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-space-sm py-0.5 rounded-md self-start sm:self-auto font-bold">
+              +41% East Kampala Corridors
+            </span>
+</div>
+<div class="space-y-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bugolobi &amp; Kololo SafeBoda Free Delivery Subsidy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Delivery Fee Co-Payment • Merchant covers: <span class="font-bold text-on-surface">UGX 2,000</span> • SwiftCart Platform covers: <span class="font-bold text-tertiary">UGX 1,500</span> • Consumer pays: <span class="font-bold text-tertiary">UGX 0</span>.
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Subsidized Trips</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">388 Boda Runs</p>
+<span class="font-label-sm text-[10px] text-tertiary">Avg 22 mins SLA</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Merchant Outlay</span>
+<p class="font-label-md text-label-md font-bold text-primary mt-0.5">UGX 776,000</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Generated UGX 3.19M</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Corridor Geo-fence</span>
+<p class="font-label-md text-label-md font-bold text-on-surface mt-0.5">Central &amp; East</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Bugolobi, Kololo, Nakasero</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Geofence: <strong>Bugolobi, Kololo, Nakasero &amp; Lugogo Bypass</strong></span>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+                Adjust Geo-Fence
+              </button>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" type="button">
+                Corridor Heatmap
+              </button>
+</div>
+</div>
+</div>
+<!-- Geo-targeting Intelligence Box -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-1 max-w-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kampala Prime Flash Windows</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Lunch-hour orders (12:00 – 14:30) in Nakasero &amp; Kololo peak with highest basket sizes when paired with 30-min guaranteed Boda express delivery.
+            </p>
+</div>
+<!-- Mini timeline viz -->
+<div class="flex items-center gap-1.5 shrink-0 bg-surface-container-lowest p-2 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded">08h</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded">10h</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold px-2 py-0.5 rounded animate-pulse">12h - 14h PEAK</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded">16h</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded">18h</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Instant Promotion Builder Form (~38-42%) -->
+<div class="lg:col-span-5 xl:col-span-4 space-y-space-md">
+<!-- Interactive Builder Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(14,27,77,0.06)] p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Instant Flash Deal Builder</h2>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full font-bold">V4 Engine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Deploy high-velocity flash offers directly into consumer feed carousels.
+              </p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">flash_on</span>
+</div>
+<form class="space-y-space-md" id="promo-builder-form" onsubmit="event.preventDefault(); handleDeployPromo();">
+<!-- 1. Promotion Type Segmented Cards -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">1. Select Mechanism</label>
+<div class="grid grid-cols-1 gap-2">
+<!-- Option 1: Selected -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<div class="flex items-center gap- space-sm">
+<input checked="" class="w-4 h-4 text-primary-container focus:ring-primary-container accent-primary-container" name="promo_type" type="radio" value="flash"/>
+<div class="ml-2">
+<span class="font-label-md text-label-md text-on-surface block font-bold">Flash Sale (Countdown)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Timed badge with limited stock counter</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+</label>
+<!-- Option 2 -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container accent-primary-container" name="promo_type" type="radio" value="voucher"/>
+<div class="ml-2">
+<span class="font-label-md text-label-md text-on-surface block font-bold">Order Threshold Voucher</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">e.g. Save UGX 20K on 150K spend</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">sell</span>
+</label>
+<!-- Option 3 -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container accent-primary-container" name="promo_type" type="radio" value="delivery"/>
+<div class="ml-2">
+<span class="font-label-md text-label-md text-on-surface block font-bold">Free Boda Delivery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Merchant + Platform shared subsidy</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">moped</span>
+</label>
+</div>
+</div>
+<!-- 2. Target Product SKU Dropdown -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block" for="sku-select">2. Target Product SKU</label>
+<div class="relative">
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none outline-none focus:ring-2 focus:ring-primary-container transition-all cursor-pointer" id="sku-select">
+<option selected="" value="space-one">SoundCore Space One ANC (Obsidian) - UGX 340,000</option>
+<option value="q45">SoundCore Space Q45 Ultra (Navy) - UGX 480,000</option>
+<option value="liberty4">SoundCore Liberty 4 NC Earbuds - UGX 260,000</option>
+<option value="flare2">SoundCore Flare 2 360° Speaker - UGX 195,000</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<span>Base Retail: <strong class="text-on-surface">UGX 340,000</strong></span>
+<span class="text-tertiary font-bold">Current Hub Stock: 42 Units</span>
+</div>
+</div>
+<!-- 3. Discount Percentage & Dynamic Calculation -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">3. Discount Percentage</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative">
+<span class="absolute left-3 top-3 font-bold text-on-surface-variant font-label-md text-label-md">%</span>
+<input class="w-full h-11 pl-8 pr-3 rounded-xl bg-surface-container-low text-on-surface font-headline-sm text-headline-sm outline-none focus:ring-2 focus:ring-primary-container" id="discount-input" max="60" min="1" oninput="updatePricingCalculation(this.value)" type="number" value="10"/>
+</div>
+<div class="bg-surface-container-low px-space-md py-1.5 rounded-xl flex flex-col justify-center">
+<span class="font-label-sm text-[10px] uppercase text-on-surface-variant">New Customer Price</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold" id="calculated-price">UGX 306,000</div>
+</div>
+</div>
+<!-- Safe Margin Guardrail Chip -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">format_image_left</span>
+<span>Margin Guardrail: <strong class="text-tertiary">19.4% retained net margin</strong> [PASSED]</span>
+</div>
+</div>
+<!-- 4. Flash Deal Window Pickers -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">4. Campaign Window</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block mb-1">Start Date</span>
+<input class="w-full h-10 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" type="date" value="2025-10-25"/>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block mb-1">End Date</span>
+<input class="w-full h-10 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" type="date" value="2025-10-29"/>
+</div>
+</div>
+<label class="flex items-center gap-2 mt-1.5 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Display countdown ticker on product page</span>
+</label>
+</div>
+<!-- 5. Placement Booster Box (Featured Add-on) -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-2">
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input checked="" class="w-4 h-4 mt-0.5 text-primary-container accent-primary-container" type="checkbox"/>
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md text-on-surface font-bold block">Featured Search Placement</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Top-of-search Category Pin + Home screen carousel prominence (+UGX 50,000 / day).
+                  </p>
+</div>
+</label>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1 px-1">
+<span class="text-on-surface-variant">Estimated Extra Reach:</span>
+<span class="font-bold text-tertiary">+14,500 Kampala Buyers</span>
+</div>
+</div>
+<!-- Primary Submission CTA Button -->
+<div class="space-y-space-xs pt-space-xs">
+<button class="w-full h-12 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(218,55,0,0.30)] transition-all transform active:scale-95" id="deploy-btn" type="submit">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span>Launch Campaign to Storefront</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-on-surface-variant">
+                Escrow deduction auto-calculates after campaign completion.
+              </p>
+</div>
+</form>
+</div>
+<!-- Corridor Growth Insight Alert -->
+<div class="p-space-lg rounded-xl bg-surface-container-high space-y-space-sm shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+<h3 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">Flash Velocity Insight</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Flash sales paired with SafeBoda 45-minute delivery tags see <strong class="text-on-surface">3.2x higher conversion</strong> in Kampala Central during the 12:00 – 14:00 lunch rush.
+          </p>
+<div class="flex items-center gap-space-sm pt-1">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of a friendly Ugandan SafeBoda motorcycle delivery courier wearing an orange helmet and safety jacket in Kampala, smiling with confidence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33fwPjNR73MyvBMgZer6e9oFDINoXjuwUjjxBLZYBMTh6ff5WvjymzT7EM92zQ-y8x8ulH7vNuamrw-7nr00QdBeEezhUCErxduECTIpZ0B5B9ZmcfFyY2ay3HJHDS5LZAscWD9dT0yrMeNeIcFTGtSg1LBcRGa3HW9zR2bqz3-zFE6nWEosBPJMPoeKyao8J-K3LUJq8xP2KAJ_yHfcbTFRJqvu9IKkuO_vmEDIL"/>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-bold block truncate">SafeBoda Kampala Express</span>
+<span class="font-label-sm text-label-sm text-tertiary">98.4% SLA Delivery Guarantee</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function updatePricingCalculation(pct) {
+      var base = 340000;
+      var discount = Math.max(1, Math.min(60, Number(pct) || 0));
+      var newPrice = Math.round(base * (1 - discount / 100));
+      var formatted = new Intl.NumberFormat('en-US').format(newPrice);
+      var priceEl = document.getElementById('calculated-price');
+      if (priceEl) {
+        priceEl.textContent = 'UGX ' + formatted;
+      }
+    }
+
+    function handleDeployPromo() {
+      var btn = document.getElementById('deploy-btn');
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Publishing to Kampala Rails...</span>';
+        setTimeout(function() {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Flash Deal Live on SwiftCart!</span>';
+          btn.classList.remove('bg-primary-container');
+          btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+          setTimeout(function() {
+            btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">rocket_launch</span><span>Launch Campaign to Storefront</span>';
+            btn.classList.add('bg-primary-container');
+            btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+          }, 3000);
+        }, 1200);
+      }
+    }
+
+    document.getElementById('open-builder-btn')?.addEventListener('click', function() {
+      var skuSelect = document.getElementById('sku-select');
+      if (skuSelect) {
+        skuSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        skuSelect.focus();
+      }
+    });
+  </script>
+</div></main></div></body></html>

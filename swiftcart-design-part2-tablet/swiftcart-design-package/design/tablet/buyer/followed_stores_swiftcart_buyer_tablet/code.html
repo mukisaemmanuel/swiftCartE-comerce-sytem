@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SwiftCart Uganda - Buyer Marketplace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#d5e3fd", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary-container": "#541200", "on-surface-variant": "#5b4039", "on-tertiary-container": "#00311f", "primary-fixed-dim": "#ffb5a0", "on-secondary-fixed-variant": "#3f465c", "on-surface": "#0d1c2f", "on-background": "#0d1c2f", "on-secondary-fixed": "#131b2e", "inverse-on-surface": "#ebf1ff", "tertiary": "#006c49", "error": "#ba1a1a", "primary-fixed": "#ffdbd1", "on-error-container": "#93000a", "tertiary-fixed-dim": "#4edea3", "surface-container": "#e6eeff", "surface": "#f8f9ff", "surface-tint": "#b02f00", "on-tertiary-fixed": "#002113", "on-primary-fixed": "#3b0900", "on-error": "#ffffff", "secondary-container": "#dae2fd", "inverse-primary": "#ffb5a0", "tertiary-fixed": "#6ffbbe", "secondary": "#565e74", "on-primary": "#ffffff", "background": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "surface-container-highest": "#d5e3fd", "surface-dim": "#ccdbf4", "primary-container": "#ff5722", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#dae2fd", "inverse-surface": "#233144", "error-container": "#ffdad6", "tertiary-container": "#00a572", "surface-bright": "#f8f9ff", "outline": "#907067", "on-primary-fixed-variant": "#862200", "surface-container-low": "#eff4ff", "on-secondary-container": "#5c647a", "outline-variant": "#e4beb4", "surface-container-high": "#dde9ff", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem", "space-md": "0.75rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin-desktop": "2rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm" data-path="marketplace-home" href="#"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">SwiftCart</span><span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded">UG</span></a><button class="hidden xl:flex items-center gap-space-xs text-left px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div><p class="font-label-sm text-label-sm text-secondary">Deliver to</p><p class="font-label-md text-label-md text-on-surface truncate max-w-[130px]">Kampala Central</p></div></button></div><div class="flex-1 max-w-2xl mx-space-sm hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg p-1 focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary-container transition-all"><select class="bg-transparent text-secondary font-label-md text-label-md px-space-sm py-2 rounded focus:outline-none cursor-pointer border-r border-outline-variant/30"><option value="all">All Categories</option><option value="electronics">Electronics &amp; Phones</option><option value="supermarket">Groceries &amp; Pantry</option><option value="fashion">Kampala Fashion</option><option value="appliances">Home Appliances</option><option value="hardware">Hardware &amp; Tools</option></select><div class="flex-1 flex items-center px-space-sm gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">search</span><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Search products, brands, local suppliers..." type="text"/></div><button class="p-2 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Search by image"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button><button class="bg-primary-container text-on-primary font-label-lg text-label-lg px-space-lg py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center shrink-0">Search</button></div></div><nav class="flex items-center gap-space-sm shrink-0" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="wishlist" href="#">Wishlist</a><a aria-current="page" class="hidden lg:inline-flex items-center px-space-sm py-2 transition-colors bg-surface-container text-primary font-bold rounded-lg" data-path="verified-stores" href="#">Stores</a><a class="hidden lg:inline-flex items-center px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="buyer-orders" href="#">Orders</a><a class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="notifications" href="#" title="Notifications"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary rounded-full"></span></a><a class="relative flex items-center gap-space-xs px-space-sm py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="shopping-cart" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute -top-1.5 -right-2 bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full min-w-[18px] text-center">3</span></div><span class="hidden xl:inline font-label-lg text-label-lg text-on-surface font-bold">Cart</span></a><div class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-bold tracking-tight">SN</div></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-320px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-[834px] mx-auto px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- Header & Subtitle Context -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-extrabold">Verified Kampala Sellers</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-space-sm py-0.5 rounded-full bg-surface-container">
+          8 Active Subscriptions
+        </span>
+</div>
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Followed Stores (8 Verified Merchants)
+        </h1>
+<p class="font-body-sm text-body-sm text-secondary leading-snug">
+          Stay updated on flash discounts, new inventory arrivals, and direct escrow sales from top Kampala vendors.
+        </p>
+</div>
+</div>
+<!-- Live Search & Category Filter Pills -->
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full flex items-center bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none pl-space-xs" id="storeSearchInput" placeholder="Search followed stores, brands, or Nakasero shops..." type="text"/>
+<button class="shrink-0 text-secondary hover:text-on-surface p-1 rounded-lg transition-colors" title="Filter by District">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none" id="categoryFilterContainer">
+<button class="filter-tab active-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-on-surface text-surface transition-all shadow-sm" data-category="all">
+          All Stores
+        </button>
+<button class="filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="official">
+          Official Brands
+        </button>
+<button class="filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="electronics">
+          Electronics
+        </button>
+<button class="filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="supermarkets">
+          Supermarkets
+        </button>
+<button class="filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="fashion">
+          Fashion
+        </button>
+</div>
+</div>
+<!-- 2-Column Followed Stores Grid (Tablet 834px Optimized) -->
+<div class="grid grid-cols-2 gap-space-md" id="followedGrid">
+<!-- Store Card 1: SoundCore Uganda Official -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow relative overflow-hidden" data-category="official electronics">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-container/10 via-transparent to-transparent pointer-events-none rounded-bl-full"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="SoundCore audio logo icon with polished metallic acoustics headphone monogram against vibrant modern studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUg4GLUW8lIl2_1TLFZx7h-gCoTEZSr8KfRCUH3opbpxXgj56s4mpEjzPWjvTQfP9ZDtPJQ9gG7QwG_0xjVnLi40RdesXChOiqxb2nm7UmhtcuarUuvD_1683zKoF_9oEp7thrpcgy69BG-tW9KMlY1vzKFT-bmr_6tH95Zx7T1eL2YXhH4quazakYIm2Cfv5hK9AvVRglMTzjKgGwjJJss_LMDFSL5HOinLkWzNbE"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore UG</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Official Gold
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Nakasero Hub</span>
+</div>
+</div>
+</div>
+<!-- Follow State Button -->
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<!-- Merchant Vitals & Fulfillment -->
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9 <span class="text-secondary font-normal">(1.4k)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Fulfill Rate</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">99.4%</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Avg Transit</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">2-hr KLA</p>
+</div>
+</div>
+<!-- Active Promotional Voucher Tag -->
+<div class="flex items-center gap-1 px-space-xs py-1 rounded bg-primary-container/10 text-on-primary-container">
+<span class="material-symbols-outlined text-[15px] text-primary shrink-0">local_activity</span>
+<span class="font-label-sm text-label-sm truncate font-semibold">UGX 15,000 OFF over UGX 150,000</span>
+</div>
+<!-- Featured Product Thumbnails Row -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Featured Catalog</span>
+<div class="grid grid-cols-3 gap-1.5">
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Soundcore Space One ANC over-ear headphones matte black studio commercial product photography clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb5LTz9Om6bo7I-6Ybovhq4_KMg_vQOMQQazvWnSCG4XcInNUfo0jwsJnhTa2TRZIOthEOUb4GhezsNr4J8_JrVohlhjAe7o8uu30huqORo7ju0PI2gyWD_5ga0_wQrDGSgX8b8bkVARBnE_LhX-HSUzzFCP0-LYHZ4Trmj_ZtXmOhJKaf79Pl0nEnKOyU0ldjjTFtd2BULlKV97qWVHvtOKScmfbvMg7DJFTuvvdX"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">Space One ANC</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 248,500</p>
+</div>
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Soundcore Liberty 4 NC wireless earbuds in charging case navy blue studio commercial backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARRe8KYALUHWoJ6-orFZUvkJHAayh8OOdvbqX0b8WhUY04VQF3lRBW1gwGzbaBIGyxppAMJ9yFfEo_daypKPVqU9i7iisQJmpDEkUS1IzFNGpLVVrJH6YHaYnVoDwQICnKIHfdAt8j0zEEAcHDvbU1n1kq1Ng2IxV9p-c0Bx_G7M9A6WyShZHBf-ZfGGVwrwghfixbXuSprU4V8-96g-qhR-N-dSrfK1TM-YpkGgHJ"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">Liberty 4 NC</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 280,000</p>
+</div>
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Soundcore Motion Plus rugged outdoor waterproof bluetooth speaker studio angle shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaC00GLXDU0uR2gAqDe5XKBONh_bzS0f5QGJvjZSBsE-GBEbpopjLc0OcOWozGL7pEG3t-X_BXEOWXMDxYLef7WA6U47FC0SbpkM1wVsGBpeL5dHr2Mjl5AQgZniZp0AxqWaCgjA8-OD5G0jcd0ny5619UZiVBtkiA27qeEDQCaODtDc49odsA0R7RT2PeSeWJf6El54EtLH8IGrGo3mUqAG2t3Vdq0GgSzi572KmY"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">Motion+</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 315,000</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between border-t-0">
+<span class="font-label-sm text-label-sm text-secondary">48 Active Products</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Store Card 2: Anker Flagship Uganda -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow relative overflow-hidden" data-category="official electronics">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Anker official blue electronic lightning bolt emblem on premium hardware packaging background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmpsfqd8s9kR46ZwoZdSGYs98xW1RQVCBylMP9unxbyGpsSuqRoCn2l4IK_Ac48CMKM6vVL9zf7Xmc3zuzgvXy_Hpl5ncBfWmOGkGDWcACS5pqKSL_YRwiskxVl6n99N6zLFGjS3qlL4OWRk_CvbKYBVDiUVJFLVX6IbXgt_i3rRLTDSl65f8y5fowPrKSxglZypvqH9PHpgrohohfd-NDTJItvwvwUJmPjgpZ_xEx"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Anker Flagship</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Official Gold
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Nakawa Ind.</span>
+</div>
+</div>
+</div>
+<!-- Follow State Button -->
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<!-- Merchant Vitals & Fulfillment -->
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.8 <span class="text-secondary font-normal">(920)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Stock Status</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">Kampala Hub</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Warranty</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">18-Month</p>
+</div>
+</div>
+<!-- Active Promotional Voucher Tag -->
+<div class="flex items-center gap-1 px-space-xs py-1 rounded bg-tertiary-container/15 text-tertiary">
+<span class="material-symbols-outlined text-[15px] shrink-0">two_wheeler</span>
+<span class="font-label-sm text-label-sm truncate font-semibold">FREE Boda Delivery across Central Kampala</span>
+</div>
+<!-- Featured Product Thumbnails Row -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Featured Catalog</span>
+<div class="grid grid-cols-3 gap-1.5">
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Anker Nano II 65W GaN wall fast charger sleek compact black cube plug on clean wooden desk surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5b2CgdRVDrBI2wgDoDz6SKeWW8EA2LCl8MpwxM8ZX1NwsXCSIh4_Yns6P8OEcYSMGi0YIMIwpiTFWjm8Zznx3lhME3D_kQxlbHti7X8Ycvf4uWL1ryUX3RmkM8WO1fG5r-ZRR4C5afmSQfThJWtgo1iNMGsLeG0ao6e_Vo-G3lazHFs7SrA2ABmjXVkcrWsDcj4R872KIAyeNeboEb7KKhVXsqYwzy-uPh0-th90s"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">65W GaN Plug</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 115,000</p>
+</div>
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Anker PowerCore 20000mAh external battery power bank textured dark matte casing with LED indicators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCARCekDuCVC_j_4yu233OmHEzuvUFdcqALDXYLJqNvqiRILucLD6IQPCsd3eVxbk4eUxqaNq5lcyY6I8oGYqTeearGoFAlzDo-7G27cKHDR9DZiqXhcXWca2--hbMKU7Ntyrh687TJTKWhMh0j3n-6GDoKvlscEkPdHJYVA_BOXhm9L5roGW8T-jYyFvIYk717H2I6BJiBJEoRPjLYvfxAkkqtRnCFwyMOA0y9SPZ8"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">PowerCore 20k</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 180,000</p>
+</div>
+<div class="flex flex-col bg-surface-container-low rounded-lg p-1 group">
+<div class="aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Anker PowerLine III braided USB-C fast charging cable coiled neatly on neutral minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClK4cg3oAwfUju59MD_qoLiCiPV4AAEYa0VCFz_xmj6BPoWYHXE50GBJ18zPKPqZoVVWFrDiKWD-OTojWBQteEvuRHLPnlmnf5vtgtJAHubw5cgRaVvgSTQqvKGSsr-397RE9U1GPyh_pUzVjwpL4fshjP6yxz0w6fPJFRcdRY_apkBTDkSyc9Fe67s5QNZoDLj4DULVVZycZUlC4c86NWpRA5Zwj6FUkdwrObJqhV"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface truncate mt-1">Braided C-to-C</p>
+<p class="font-label-md text-label-md text-primary font-bold">UGX 45,000</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">64 Products Live</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Store Card 3: Kampala Phone Hub -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow" data-category="electronics">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Kampala Phone Hub storefront logo featuring phone outline with neon amber highlights on charcoal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8_YNQKY0ilJ3rO7X82WJ2aKos1twhTo4nwdZbyiGyxFWmTD0UzqmYbTBJ3SjPVGYTVvNmXC9M_7PZs9EKlfs4u10dX5A36XRkPd0L0iLxh5IovMRERQDFd-0aAm2lSAFkx0Mv_unTojTzK6Ban5Q6A7SFU_r_X5E1U-U3V2B2F8JRqn9bTFjxYdvsK8PjXWb-gkYkxBjumN3R5zCvyAf5dcFcFZUbhpozMCLu2Siv"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Kampala Phone Hub</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+                    Silver Verified
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Kikuubo / Downtown</span>
+</div>
+</div>
+</div>
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.7 <span class="text-secondary font-normal">(810)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Authenticity</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">100% Tested</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Inventory</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">112 Items</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Specializes in genuine phone cases, tempered sapphire screens, MagSafe accessories, and certified replacement displays.
+          </p>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Spigen Cases</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Baseus Cables</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">OLED Panels</span>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Same-day Downtown Pickup</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Store Card 4: Victoria Tech Supplies -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow" data-category="official electronics">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Victoria Tech Supplies Kampala modern geometric laptop chip emblem on royal deep slate graphic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhr1pJAnvM9gAC0Vl_bLeabYQi8cjAkKroic1bKKICQEmzJpy5epzjo-2W6or5CIr3Z1WYOBA7V7dxvDpHWcLlORmm4G61Kx9PhWRKOWiDivQJCDZxNTM5WnuxetC38jMdElhWPgODkhR9e9PFP3zmTgcgxVMl7frrMly6veB4ApGufTP4DdoCoGg9GSssMgVMYNuSgzJETBddBg4HLHOWWfRTNLst2GE45G6eafhm"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Victoria Tech</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Official Gold
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Jinja Road</span>
+</div>
+</div>
+</div>
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.8 <span class="text-secondary font-normal">(430)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Escrow Direct</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">Active</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">IT Tier</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">Commercial</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Top authorized enterprise hardware supplier. Business laptops, NVMe SSDs, Sony studio acoustics, and Dell monitors.
+          </p>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">Flash: UGX 40,000 off Dell XPS</span>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">92 IT Units in Stock</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Store Card 5: EcoMart Supermarket Kololo -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow" data-category="supermarkets">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="EcoMart Supermarket organic green leaf leaf grocery basket illustration crisp branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAto9D13e8SUJ2z7WH0ssxiZ-QNWml8vp39uy5g4hNYIq-bvZKZfWDLpFyKE-zEwNv2B29isY3YxT__JVEeY-QKYxntsRkXiz_WdQjbLyLvraX4-Ephn9pH__psV_jzvarJIIDU_Rg2uqcOSboDW0Teauxo8AzzbmdlvBZWJ_9y03MPcnVZB_Ex-teCmaNR91iyC8Om_VoplyuotVdnoIFsIFX5rFi1yxwVDX1bJe6v"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">EcoMart Kololo</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check_circle</span>
+                    Verified Merchant
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Kololo</span>
+</div>
+</div>
+</div>
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9 <span class="text-secondary font-normal">(3.1k)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Fresh Delivery</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">Instant Van</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Catalog</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">1.8k Lines</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Fresh organic produce, dairy, bakery delicacies, and premium imported home pantry items delivered chilled.
+          </p>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-container/15 text-tertiary font-bold">Express: Under 45 Mins in Kololo</span>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Cold-chain insulated pack</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Store Card 6: Apple Authorized Reseller Uganda -->
+<div class="store-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow relative overflow-hidden" data-category="official electronics">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Apple Authorized Reseller official silver chrome badge on premium minimalist white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8zDeDZfuhpsjqX6-SJ0dRFxbE6oNhMCg37R9Qeso6gbhgP--oU5FxDr_5KUm3Nv8_A5PHRtxsuGImKxPmfgJfuMAooMxlOVd4YdKqODL2_Wrg_2zapLy8YSsKn8UUNm46UsbipTDkYodLJx_P1i54w98Ai6_xOU9_oqQJMQHx1PpZkQUANU81-77w-yOeQAmQHDW4a3KNup756Zi5AYVBMmT1MxMLx13kulkecnq"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Apple Reseller UG</h2>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Official Gold
+                  </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Acacia Mall</span>
+</div>
+</div>
+</div>
+<button class="follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors" data-following="true">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+              Following
+            </button>
+</div>
+<div class="grid grid-cols-3 gap-1 py-1.5 px-space-xs bg-surface-container-low rounded-lg text-center">
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Rating</p>
+<p class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-[#F59E0B]" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9 <span class="text-secondary font-normal">(1.9k)</span>
+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Coverage</p>
+<p class="font-label-md text-label-md text-tertiary font-extrabold">AppleCare+</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">Status</p>
+<p class="font-label-md text-label-md text-on-surface font-bold">Authorized</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Direct Apple factory warranty in Uganda. iPhone 16 Pro models, M3 Pro MacBooks, iPads, and genuine MagSafe chargers.
+          </p>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Acacia Mall Walk-in or Swift Delivery</span>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">100% Guaranteed Serial Valid</span>
+<a class="font-label-md text-label-md text-primary hover:text-on-surface-variant font-bold flex items-center gap-0.5" href="#">
+            Visit Store <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Escrow Protection Trust Bar -->
+<div class="w-full bg-surface-container-high rounded-xl p-space-md flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/15 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SwiftCart Escrow Lock Guaranteed</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Funds to followed merchants are strictly held in MTN MoMo / Airtel Escrow until you inspect and sign upon doorstep delivery.
+          </p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-extrabold whitespace-nowrap px-space-sm py-1 bg-surface-container-lowest rounded-lg shadow-xs">
+        100% Protected
+      </span>
+</div>
+<!-- Recommendations Section: Recommended Verified Stores to Follow -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recommended Verified Stores to Follow</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Curated for your shopping habits</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Recommended 1: Pearl Organic Grocers -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Pearl Organic Grocers fresh basket icon Ugandan market farm produce modern flat minimalist logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUsi9BmcpAMrQSXxAGQ4bH0mEYqYKbyRGQJNvazNrhVxF7Z98Zk9u0d8is_mcGKBZSqRVF1EWNPKnNX_ykZhgYWQ1kdPWGvEfblJAIkJSu7PRXhwTkHhXJ7eBckZUupQke-VojcSuNsAhMB3W5BAMOzrD_fGHmZChjZCv1i4UZjYbIrMS-VujRQHp3azlq8n5AnGfjHNXAGjVZ5LJH5YYIZwutkqLnQnrsrK7Yw2re"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Pearl Organic Grocers</h3>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.9
+                    </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">• Bugolobi Market Area</span>
+</div>
+</div>
+</div>
+<button class="rec-follow-btn shrink-0 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+                Follow
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mt-1">
+              Farm-fresh fruits, Mukono vanilla, Bugisu Arabica whole beans, and artisanal Ugandan cheese.
+            </p>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Boda Direct in 35m
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">156 items</span>
+</div>
+</div>
+<!-- Recommended 2: Nile Fabric & Apparel Hub -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-md hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nile Fabric and Apparel modern geometric pattern textile brand crest Kampala high fashion atelier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_K50idcqbcKyJOUlXEdRN6sMI5sjo7tyk6j9gplwjwDuJne_hAiwGbBlURKf2G6P5qVD-eSw9PGlPUWTxfMUHJhGL6aHwc8oJaqL8pwEkIlvBHshuxU7pqiEHrByswXZU6wG-qNIkm8U5Uizt5qBrLpJ_vM5M8l0vLUmii43S-dF5yqtHN3f2JXnpZgsA5CqVyoP-hPqAhW_e9BepXpoabC5guNS0e4eM9HDeGtdE"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Nile Fabric &amp; Apparel</h3>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.8
+                    </span>
+<span class="font-label-sm text-label-sm text-secondary truncate">• Garden City Kampala</span>
+</div>
+</div>
+</div>
+<button class="rec-follow-btn shrink-0 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+                Follow
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mt-1">
+              Premium tailored Ugandan linen shirts, authentic Kitenge prints, and contemporary African street silhouettes.
+            </p>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Custom Sizing Available
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">84 designs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Vanilla Interaction Script -->
+<script>
+    (function initFollowedStores() {
+      // Follow / Unfollow toggles on active followed store cards
+      const followToggles = document.querySelectorAll('.follow-toggle-btn');
+      followToggles.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isFollowing = this.getAttribute('data-following') === 'true';
+          if (isFollowing) {
+            this.setAttribute('data-following', 'false');
+            this.className = 'follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 hover:opacity-90 transition-all';
+            this.innerHTML = '<span class="material-symbols-outlined text-[14px]">person_add</span> Follow';
+          } else {
+            this.setAttribute('data-following', 'true');
+            this.className = 'follow-toggle-btn shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors';
+            this.innerHTML = '<span class="material-symbols-outlined text-[14px] text-tertiary">check</span> Following';
+          }
+        });
+      });
+
+      // Recommended Store follow button transitions
+      const recBtns = document.querySelectorAll('.rec-follow-btn');
+      recBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.className = 'rec-follow-btn shrink-0 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 transition-all';
+          this.innerHTML = '<span class="material-symbols-outlined text-[15px] text-tertiary">check</span> Following';
+        });
+      });
+
+      // Category tab filtering
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const storeCards = document.querySelectorAll('.store-card');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          filterTabs.forEach(t => {
+            t.className = 'filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all';
+          });
+          this.className = 'filter-tab shrink-0 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-on-surface text-surface transition-all shadow-sm';
+
+          const targetCategory = this.getAttribute('data-category');
+          storeCards.forEach(card => {
+            const cardCategories = card.getAttribute('data-category') || '';
+            if (targetCategory === 'all' || cardCategories.includes(targetCategory)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Realtime text search within followed stores
+      const searchInput = document.getElementById('storeSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const query = this.value.toLowerCase().trim();
+          storeCards.forEach(card => {
+            const textContent = card.innerText.toLowerCase();
+            if (!query || textContent.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-auto"><div class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-outline-variant/20"><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">verified_user</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Ugandan Buyer Guarantee</h4><p class="font-body-sm text-body-sm text-secondary mt-1">100% genuine merchandise, escrow-protected payments, and vetted regional vendors.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">local_shipping</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Hassle-Free Returns</h4><p class="font-body-sm text-body-sm text-secondary mt-1">7-day doorstep return pickup across Kampala, Entebbe, Wakiso, and Mukono metro.</p></div></div><div class="flex items-start gap-space-md"><div class="p-space-sm rounded-lg bg-secondary-container text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">support_agent</span></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Help &amp; Support</h4><p class="font-body-sm text-body-sm text-secondary mt-1">Dedicated 24/7 localized support via live toll-free line, WhatsApp, and Kampala help hub.</p></div></div><div class="flex flex-col justify-start"><div><h4 class="font-headline-sm text-headline-sm text-on-surface">Accepted In Uganda</h4><p class="font-body-sm text-body-sm text-secondary mt-1 mb-space-sm">Instant checkout with national mobile wallets and cards:</p></div><div class="flex flex-wrap items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#FFCC00]/20 text-[#6B5500] font-bold">MTN MoMo</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-[#E40000]/10 text-[#9E0000] font-bold">Airtel Money</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-secondary-container text-on-secondary-fixed font-bold">Visa</span><span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container text-secondary font-bold">Cash on Delivery</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm text-primary font-extrabold tracking-tight">SwiftCart</span><span class="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Lumumba Avenue, Nakasero, Kampala. All rights reserved.</span></div><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="buyer-protection" href="#">Buyer Protection Policy</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="kampala-delivery-rates" href="#">Delivery Rates</a></div></div></div></footer></body></html>

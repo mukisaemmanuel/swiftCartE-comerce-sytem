@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#2b3043", "on-secondary-fixed-variant": "#384377", "surface-cream": "#FFF8F2", "tertiary-container": "#00855b", "primary-container": "#da3700", "on-error-container": "#ffdad6", "primary-fixed": "#ffdbd1", "on-secondary-container": "#a7b2ed", "surface-container-high": "#24293c", "outline-variant": "#5c4039", "inverse-primary": "#b22b00", "secondary-fixed": "#dde1ff", "on-primary": "#611300", "surface-container-highest": "#2f3448", "on-primary-fixed": "#3c0800", "surface-container-lowest": "#080d1f", "surface-dark": "#080D1F", "on-tertiary": "#003824", "primary-fixed-dim": "#ffb5a1", "emerald-escrow": "#10B981", "on-background": "#dde1fb", "secondary": "#b8c3ff", "on-secondary": "#212d5f", "surface-variant": "#2f3448", "amber-warning": "#F59E0B", "surface-tint": "#ffb5a1", "on-tertiary-container": "#f4fff6", "container-dark-low": "#0F172A", "tertiary": "#4edea3", "on-tertiary-fixed-variant": "#005236", "on-tertiary-fixed": "#002113", "background": "#0d1225", "surface-dim": "#0d1225", "surface-container": "#1a1f31", "tertiary-fixed-dim": "#4edea3", "on-surface-variant": "#e5beb4", "action-gradient-start": "#FF8A1F", "on-primary-fixed-variant": "#881f00", "secondary-fixed-dim": "#b8c3ff", "airtel-red": "#ED1C24", "on-surface": "#dde1fb", "action-gradient-end": "#DA3700", "surface": "#0d1225", "tertiary-fixed": "#6ffbbe", "mtn-yellow": "#FFCC00", "secondary-container": "#384377", "on-secondary-fixed": "#091649", "error-container": "#93000a", "on-primary-container": "#fffcff", "outline": "#ac8980", "surface-bright": "#34384c", "on-error": "#690005", "inverse-surface": "#dde1fb", "primary": "#ffb5a1", "surface-container-low": "#161b2d", "container-dark-high": "#1E293B", "error": "#ffb4ab", "danger-penalty": "#EF4444" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-lg": "1rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "code-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "code-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "800"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "price-display": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "800"}], "label-lg": ["15px", {"lineHeight": "20px", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><img alt="swiftcart-logo-icon-only.png" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/d/1XgXo946sF9g60jG6h08oU99B_g3mN0Fm"/><div class="flex flex-col min-w-0 pl-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Admin Order Detail</h1></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><span class="material-symbols-outlined text-[16px]">verified_user</span><span class="font-label-sm text-label-sm font-bold">SECURE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div class="flex flex-col w-full pb-10 space-y-4 px-margin">
+<!-- Offline / High-Sync Resilience Ribbon -->
+<div class="w-full bg-surface-container-high text-on-surface rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center space-x-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-escrow opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-escrow"></span>
+</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider">Telematics Active</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Kampala Central Corridor</span>
+</div>
+<div class="flex items-center space-x-1 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px] text-primary">sync</span>
+<span class="font-label-sm text-label-sm text-primary">0.4s sync</span>
+</div>
+</div>
+<!-- Admin Clearance & Context Lockup -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm shadow-inner">
+        SK
+      </div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Sarah K.</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary-fixed-dim">ADM-104</span>
+</div>
+<div class="flex items-center space-x-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-amber-warning">shield_person</span>
+<span class="font-label-sm text-label-sm">Level 2 Oversight Privilege</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Order Target</span>
+<span class="font-headline-sm text-headline-sm text-primary-fixed">#SC-9488</span>
+</div>
+</div>
+<!-- Escrow Vault Protected Status Banner -->
+<div class="bg-gradient-to-r from-emerald-escrow/20 via-surface-container-low to-emerald-escrow/10 rounded-xl p-space-md shadow-lg flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-lg bg-emerald-escrow/20 flex items-center justify-center text-emerald-escrow">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-emerald-escrow tracking-wide uppercase">In Transit • Escrow Vault Protected</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Cryptographic Buyer Code Handover Required</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-escrow text-on-tertiary font-label-sm text-label-sm">LOCKED</span>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-sm flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Total Vault Collateral</span>
+<span class="font-price-display text-price-display text-emerald-escrow">UGX 253,500</span>
+</div>
+</div>
+<!-- Multi-Party Dossier Segment -->
+<div class="flex flex-col space-y-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Operational Entities Dossier</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Verified Parties</span>
+</div>
+<!-- Buyer Dossier -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dennis M.</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Buyer (Account Tier 1)</span>
+</div>
+</div>
+<div class="flex items-center space-x-1 bg-emerald-escrow/10 text-emerald-escrow px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span class="font-label-sm text-label-sm">KYC Approved</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="bg-surface-container rounded-lg p-space-xs px-space-sm">
+<span class="font-label-sm text-label-sm text-outline block">Destination Geo</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate block">Nakasero / Lugogo Hub</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-xs px-space-sm flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-outline block">Masked Comms Relay</span>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-secondary font-medium tracking-wide">07••••••123</span>
+<button class="w-6 h-6 rounded-md bg-secondary/10 text-secondary flex items-center justify-center" title="Proxy Call Relay">
+<span class="material-symbols-outlined text-[14px]">call</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Seller Dossier -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-action-gradient-start flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<div>
+<div class="flex items-center space-x-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">SoundCore Uganda Official</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">#SLR-0412</span>
+</div>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Pioneer Mall, Kampala CBD</span>
+</div>
+</div>
+<div class="flex items-center space-x-1 bg-emerald-escrow/10 text-emerald-escrow px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span class="font-label-sm text-label-sm">Merchant</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Escrow Payable Holdback</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold">UGX 248,500</span>
+</div>
+</div>
+<!-- Rider Dossier -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-amber-warning flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+</div>
+<div>
+<div class="flex items-center space-x-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Kizito Brian</span>
+<span class="font-label-sm text-label-sm text-amber-warning">#RDR-UG-4082</span>
+</div>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Nakasero Stage Squad</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">Active En Route</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container rounded-lg p-space-xs px-space-sm">
+<span class="font-label-sm text-label-sm text-outline block">Fleet Hardware</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate block">Bajaj Boxer • UEF 842X</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-xs px-space-sm">
+<span class="font-label-sm text-label-sm text-outline block">Transit Liability</span>
+<span class="font-body-md text-body-md text-emerald-escrow font-medium block">Underwritten 100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Location Snapshot -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Courier GPS Track</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow flex items-center space-x-1">
+<span class="material-symbols-outlined text-[12px]">satellite_alt</span>
+<span>Acacia Mall Node</span>
+</span>
+</div>
+<div class="w-full h-32 bg-surface-container-high rounded-lg relative overflow-hidden flex items-end p-2.5 shadow-inner" data-location="Acacia Mall, Kampala, Uganda" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAymAmRw9jAPOJnhAwYZ1yQVKbYh3kDh8zQY5aKSWXNr9jtxwJcxB2fmCQjr67285OHZ2NsiYIE2pr2qkHW-Kzmf29nNYq9TGVqKhMWsIMAhd_ByYMEee5-tfsCtLYnz0ffS-NUy1NDFfayeTUxEhIcVTvCALRhM0ly9OePj26u-dtRgBSOosRSe7eCCC9JrClCi4jXFD15JXC_Eg5zMm6BWhhwj8LZyCMKYY0I8Fyg')">
+<div class="bg-surface-dark/85 backdrop-blur-md rounded-lg p-2 w-full flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-action-gradient-start text-[18px]">near_me</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Acacia Ave Corridor (Speed: 28 km/h)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">ETA 8m</span>
+</div>
+</div>
+</div>
+<!-- Escrow & Payment Rail Synchronization Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-mtn-yellow text-[20px]">payments</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Payment Rail Breakdown</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-mtn-yellow/15 text-mtn-yellow font-bold">MTN MoMo Escrow</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Channel Settlement Ref</span>
+<span class="font-code-display text-label-md text-secondary tracking-normal">#TXN-884920</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Escrow Total Ingested</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">UGX 253,500</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Platform Fee (5%)</span>
+<span class="font-body-md text-body-md text-error font-medium">- UGX 12,425</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Boda Logistics Disburse</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">- UGX 5,000</span>
+</div>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<div class="flex items-center justify-between pt-0.5">
+<div>
+<span class="font-label-md text-label-md text-emerald-escrow block font-bold">Net Merchant Payable</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Disburses on OTP match</span>
+</div>
+<span class="font-price-display text-price-display text-emerald-escrow">UGX 236,075</span>
+</div>
+</div>
+</div>
+<!-- Audit & Dispatch Timeline -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Dispatch Telemetry Timeline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EAT (UTC+3)</span>
+</div>
+<div class="relative pl-6 space-y-3.5 before:content-[''] before:absolute before:left-2.5 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-surface-container-highest">
+<!-- Item 1 -->
+<div class="relative flex items-start space-x-3">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-emerald-escrow"></span>
+<div class="flex-1 bg-surface-container p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">14:24</span>
+<span class="font-label-sm text-label-sm text-outline">Device ID: APP-AND-09</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-0.5">Order placed by buyer Dennis M. via SwiftCart Client</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative flex items-start space-x-3">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-emerald-escrow"></span>
+<div class="flex-1 bg-surface-container p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">14:25</span>
+<span class="font-label-sm text-label-sm text-mtn-yellow font-bold">MTN Webhook OK</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-0.5">MoMo payment cleared into SwiftCart Escrow Vault directly</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative flex items-start space-x-3">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-emerald-escrow"></span>
+<div class="flex-1 bg-surface-container p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">15:10</span>
+<span class="font-label-sm text-label-sm text-outline">NFC Handshake</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-0.5">Package handed to courier Kizito Brian at Pioneer Mall</span>
+</div>
+</div>
+<!-- Item 4 (Current) -->
+<div class="relative flex items-start space-x-3">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-action-gradient-start ring-2 ring-primary-container/40"></span>
+<div class="flex-1 bg-surface-container-high p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">15:28</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">LIVE RADAR</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-0.5">In transit near Acacia Mall corridor heading toward destination</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Dispatch Preview Toggle -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<span class="font-label-lg text-label-lg text-on-surface">Auto-Dispatch Notifications</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="notify-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-escrow"></div>
+</label>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Push alerts will trigger to Sarah K. (#ADM-104) upon courier OTP clearance or geofence deviation.</span>
+</div>
+<!-- Admin Internal Notes & Interventions -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Internal Administrative Ledger</span>
+<span class="font-label-sm text-label-sm text-secondary">Encrypted Audit Logs</span>
+</div>
+<!-- Notes Log Display -->
+<div class="space-y-2" id="notes-list">
+<div class="bg-surface-container rounded-lg p-space-xs px-space-sm text-left">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Sarah K. (Ops Staff)</span>
+<span class="font-label-sm text-label-sm text-outline">15:15</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Boda driver confirmed high-value packaging sealed with tamper evident tape.</p>
+</div>
+</div>
+<!-- Textarea for note addition -->
+<div class="space-y-2 pt-1">
+<textarea class="w-full bg-surface-container-high rounded-xl p-space-sm font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none shadow-inner resize-none" id="admin-note-input" placeholder="Record operational observations, geofence notes..." rows="2"></textarea>
+<button class="w-full h-11 rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center space-x-1 transition-colors" id="add-note-btn">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Add Internal Note</span>
+</button>
+</div>
+<div class="h-px bg-surface-container my-2"></div>
+<!-- Intervention Triggers (Role Security Level 2) -->
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider block">Admin Interventions</span>
+<div class="grid grid-cols-1 gap-2">
+<!-- Flag Compliance -->
+<button class="h-12 rounded-xl bg-amber-warning/15 hover:bg-amber-warning/25 text-amber-warning font-label-md text-label-md flex items-center justify-between px-space-md transition-all active:scale-[0.99]" id="btn-flag-review">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Flag for Compliance Review</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<!-- Reassign Courier -->
+<button class="h-12 rounded-xl bg-surface-container-high hover:bg-surface-bright text-secondary font-label-md text-label-md flex items-center justify-between px-space-md transition-all active:scale-[0.99]" id="btn-reassign">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px]">swap_driving_apps_wheel</span>
+<span>Reassign Boda Courier</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<!-- Emergency Dispatch Hold (Destructive Action) -->
+<button class="h-12 rounded-xl bg-error-container/40 hover:bg-error-container/60 text-error font-label-md text-label-md flex items-center justify-between px-space-md transition-all active:scale-[0.99]" id="btn-dispatch-hold">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Emergency Dispatch Hold</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error/20 text-error font-bold uppercase">HALT VAULT</span>
+</button>
+</div>
+</div>
+<!-- Operational Feedback Toast Container -->
+<div class="hidden fixed bottom-6 inset-x-6 z-50 bg-surface-container-highest p-space-sm rounded-xl shadow-2xl flex items-center justify-between transition-all" id="action-toast">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]" id="toast-icon">info</span>
+<span class="font-label-md text-label-md text-on-surface" id="toast-msg">Action registered in ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">SECURE</span>
+</div>
+</div>
+<script>
+  (function() {
+    const noteInput = document.getElementById('admin-note-input');
+    const addNoteBtn = document.getElementById('add-note-btn');
+    const notesList = document.getElementById('notes-list');
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-msg');
+    const toastIcon = document.getElementById('toast-icon');
+
+    function showToast(message, iconName, colorClass) {
+      toastMsg.innerText = message;
+      toastIcon.innerText = iconName;
+      toastIcon.className = `material-symbols-outlined text-[20px] ${colorClass}`;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2600);
+    }
+
+    if (addNoteBtn && noteInput) {
+      addNoteBtn.addEventListener('click', () => {
+        const text = noteInput.value.trim();
+        if (!text) return;
+
+        const newNote = document.createElement('div');
+        newNote.className = 'bg-surface-container rounded-lg p-space-xs px-space-sm text-left';
+        newNote.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-primary-fixed-dim">Sarah K. (You)</span>
+            <span class="font-label-sm text-label-sm text-outline">Just now</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface mt-0.5">${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+        `;
+        notesList.prepend(newNote);
+        noteInput.value = '';
+        showToast('Internal note appended to audit trail', 'verified', 'text-emerald-escrow');
+      });
+    }
+
+    const flagBtn = document.getElementById('btn-flag-review');
+    if (flagBtn) {
+      flagBtn.addEventListener('click', () => {
+        showToast('Compliance flag logged for #SC-9488', 'flag', 'text-amber-warning');
+      });
+    }
+
+    const reassignBtn = document.getElementById('btn-reassign');
+    if (reassignBtn) {
+      reassignBtn.addEventListener('click', () => {
+        showToast('Rider re-routing pool broadcasted', 'alt_route', 'text-secondary');
+      });
+    }
+
+    const holdBtn = document.getElementById('btn-dispatch-hold');
+    if (holdBtn) {
+      holdBtn.addEventListener('click', () => {
+        showToast('EMERGENCY HOLD: Escrow disbursement frozen', 'block', 'text-error');
+      });
+    }
+  })();
+</script></main></body></html>

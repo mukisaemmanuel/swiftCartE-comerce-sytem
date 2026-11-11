@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#e5beb4", "tertiary-container": "#00855b", "error-container": "#ffdad6", "on-primary-container": "#fffcff", "primary-container": "#da3700", "on-tertiary-fixed-variant": "#005236", "on-tertiary-container": "#f4fff6", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-tertiary-fixed": "#002113", "primary-fixed-dim": "#ffb5a1", "surface-dim": "#dfd9d3", "primary": "#ae2a00", "tertiary-fixed": "#6ffbbe", "surface-bright": "#fff8f2", "surface-container-high": "#eee7e1", "on-error-container": "#93000a", "on-secondary-fixed": "#091649", "surface-tint": "#b22b00", "on-secondary": "#ffffff", "surface-container": "#f3ede7", "on-primary-fixed": "#3c0800", "secondary-fixed": "#dde1ff", "surface-variant": "#e8e1dc", "on-secondary-fixed-variant": "#384377", "secondary-fixed-dim": "#b8c3ff", "on-surface": "#1e1b18", "inverse-primary": "#ffb5a1", "tertiary": "#006947", "on-error": "#ffffff", "background": "#fff8f2", "on-primary-fixed-variant": "#881f00", "on-surface-variant": "#5c4039", "outline": "#907067", "surface-container-highest": "#e8e1dc", "on-background": "#1e1b18", "on-secondary-container": "#444f83", "secondary": "#505b90", "inverse-surface": "#33302c", "surface": "#fff8f2", "secondary-container": "#b8c3ff", "surface-container-lowest": "#ffffff", "primary-fixed": "#ffdbd1", "surface-container-low": "#f9f2ec", "inverse-on-surface": "#f6f0ea", "tertiary-fixed-dim": "#4edea3", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "space-lg": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1rem", "space-xs": "0.25rem", "gutter": "0.75rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "price-display": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "currency-code": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "price-display": [ "22px", { "lineHeight": "28px", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "12px", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "18px", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "700" } ], "currency-code": [ "12px", { "lineHeight": "14px", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7VG2Yr54mjxR9P21ZBLXl6aZZcEwwiQsqIoiHbjiWrRN_LNFoZr3Xf-oe4BYMfP_1qfTYn5uJ5xBW3VXuWgAwlX6icRkGyeKFAms_9Rm8OgiigBM0_2i6WSBH73vih9ThQFvq8o5y5GIB4I5hUu6WDv_mmXgzlxE0fOe2UKPXKDysEMn8jwXwZ0CrcPMXuFluPDfvJv3KwHZHYm_NNC83GpTZCJg33NP-Qabix39nMe0w-t2mb1xZkFE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">SwiftCart</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-bold">Admin Console</span></div></div><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase font-bold">HQ</span></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Operations</span><nav class="space-y-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders-oversight" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Orders Oversight</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="riders-fleet" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span><span>Riders Fleet</span></a></nav></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Vendors &amp; Catalog</span><nav class="space-y-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.25)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seller-applications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assignment_ind</span><span>Seller Applications</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">New</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sellers-directory" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Sellers Directory</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="product-moderation" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Product Moderation</span></a></nav></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Fintech &amp; Escrow</span><nav class="space-y-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.25)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="escrow-and-disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shield_lock</span><span>Escrow &amp; Disputes</span></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Escrow</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="payout-queue" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Payout Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overpayments-and-refunds" href="#"><span class="material-symbols-outlined text-[20px]">currency_exchange</span><span>Overpayments &amp; Refunds</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="commission-rates" href="#"><span class="material-symbols-outlined text-[20px]">percent</span><span>Commission Rates</span></a></nav></div><div class="space-y-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Administration</span><nav class="space-y-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Platform Settings</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-all bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.25)]" data-path="users-and-roles" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span>Users &amp; Roles</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="homepage-and-ads" href="#"><span class="material-symbols-outlined text-[20px]">view_carousel</span><span>Homepage &amp; Ads</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span>Audit Log</span></a></nav></div></div><div class="p-space-md bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-bold">System Mesh v2.4</span><span class="font-body-sm text-body-sm text-on-surface-variant">All Nodes Synced</span></div></div><span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md rounded-xl outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search orders, escrow ID, MTN/Airtel MSISDN, vendors..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-[16px] text-tertiary">location_on</span><span class="font-label-sm text-label-sm text-on-surface font-bold">Kampala Central Hub</span><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div><div class="hidden lg:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface font-bold">MTN MoMo</span><span class="font-label-sm text-label-sm text-tertiary">99.98%</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface font-bold">Airtel Money</span><span class="font-label-sm text-label-sm text-tertiary">100%</span></div></div><div class="h-6 w-px bg-surface-variant"></div><button aria-label="Toggle Light/Dark Theme" class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button aria-label="Notifications" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-bold">Kizito Ronald</span><span class="font-label-sm text-label-sm text-primary font-bold">Super Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 min-h-screen bg-background w-full px-space-lg py-space-lg"><div class="flex flex-col w-full relative">
+<!-- Top Breadcrumbs -->
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant mb-space-sm">
+<span>Admin Operations</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span>Governance</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-primary font-bold">Users &amp; Roles</span>
+</div>
+<!-- Header Section with Distinct Visual Weight -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Staff Users &amp; Role Governance</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+          Super Admin Privileges Active
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Manage administrative access, enforce role-based access control (RBAC), and authorize privileged role escalations across SwiftCart Uganda.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto shrink-0">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span>
+        Export Staff Audit Ledger
+      </button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_4px_14px_rgba(218,55,0,0.30)] hover:scale-[1.02] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+        + Invite New Staff Member
+      </button>
+</div>
+</div>
+<!-- KPI Row (4 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-lg">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Total Staff Accounts</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">28 Active Staff</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">domain</span>
+        Admin HQ &amp; Kampala Hubs
+      </div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Super Admins</span>
+<div class="font-headline-md text-headline-md text-primary mt-1">3 Officers</div>
+</div>
+<div class="p-2.5 rounded-xl bg-primary-fixed text-primary">
+<span class="material-symbols-outlined text-[22px]">admin_panel_settings</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">key</span>
+        Dual-key consensus required for root
+      </div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Pending Invitations</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">2 Pending</div>
+</div>
+<div class="p-2.5 rounded-xl bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+        URSB &amp; Security clearance submitted
+      </div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Security Health</span>
+<div class="font-headline-md text-headline-md text-tertiary mt-1">100% 2FA Enforced</div>
+</div>
+<div class="p-2.5 rounded-xl bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+        Hardware token / FIDO2 biometric
+      </div>
+</div>
+</div>
+<!-- Master Staff Directory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Controls Bar -->
+<div class="p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm rounded-lg outline-none focus:ring-2 focus:ring-primary-container" placeholder="Filter by name, ID or station..." type="text"/>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-xs hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          Filter Roles
+        </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm self-end md:self-auto">
+<span>Showing <strong class="text-on-surface">5</strong> of 28 records</span>
+<div class="h-4 w-px bg-surface-variant mx-1"></div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-bold">Kampala Sector</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg font-bold">Staff Member</th>
+<th class="py-3 px-space-md font-bold">Current Role</th>
+<th class="py-3 px-space-md font-bold">Assigned Station</th>
+<th class="py-3 px-space-md font-bold">2FA Method</th>
+<th class="py-3 px-space-md font-bold">Status</th>
+<th class="py-3 px-space-lg font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-none text-on-surface font-body-md text-body-md">
+<!-- Row 1: Kizito Ronald -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                  KR
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Kizito Ronald</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Root Keyholder">shield</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">kizito.r@swiftcart.ug • <span class="font-bold text-on-surface">ADM-001</span></span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">military_tech</span>
+                Super Admin
+              </span>
+</td>
+<td class="py-4 px-space-md font-body-md text-body-md">
+              Kampala HQ Nakasero
+            </td>
+<td class="py-4 px-space-md">
+<div class="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">token</span>
+                FIDO2 Hardware Key
+              </div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Audit Profile">
+<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Patricia Namubiru (Escalation Target) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                  PN
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Patricia Namubiru</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary-container font-label-sm text-[9px] uppercase tracking-wider font-extrabold">Escalation Pending</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">patricia.n@swiftcart.ug • <span class="font-bold text-on-surface">ADM-004</span></span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">gavel</span>
+                Lead Arbitration Officer
+              </span>
+</td>
+<td class="py-4 px-space-md font-body-md text-body-md">
+              Nakasero Desk
+            </td>
+<td class="py-4 px-space-md">
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">smartphone</span>
+                App TOTP
+              </div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-xs">
+                Modify Role
+              </button>
+</td>
+</tr>
+<!-- Row 3: Sarah Auma -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                  SA
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Sarah Auma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">sarah.a@swiftcart.ug • <span class="font-bold text-on-surface">ADM-012</span></span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-tertiary">payments</span>
+                Financial Operations
+              </span>
+</td>
+<td class="py-4 px-space-md font-body-md text-body-md">
+              Stanbic Escrow Desk
+            </td>
+<td class="py-4 px-space-md">
+<div class="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">token</span>
+                Hardware Key
+              </div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: David Ssemwogerere -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                  DS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">David Ssemwogerere</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">david.s@swiftcart.ug • <span class="font-bold text-on-surface">ADM-018</span></span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">inventory_2</span>
+                Catalog Review Lead
+              </span>
+</td>
+<td class="py-4 px-space-md font-body-md text-body-md">
+              Nakasero
+            </td>
+<td class="py-4 px-space-md">
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">smartphone</span>
+                App TOTP
+              </div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Brian Mukasa -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                  BM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Brian Mukasa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">brian.m@swiftcart.ug • <span class="font-bold text-on-surface">ADM-022</span></span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">local_shipping</span>
+                Hub Logistics Supervisor
+              </span>
+</td>
+<td class="py-4 px-space-md font-body-md text-body-md">
+              William St Hub #04
+            </td>
+<td class="py-4 px-space-md">
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">smartphone</span>
+                App TOTP
+              </div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="px-space-lg py-3 bg-surface-container-low flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span>Rows per page: <strong>10</strong></span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest font-bold text-on-surface shadow-xs">1</span>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ACTIVE CENTERED MODAL DIALOG OVERLAY: Role Escalation -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/50 backdrop-blur-sm" id="role-modal">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(14,27,77,0.16)] flex flex-col max-h-[942px] overflow-y-auto animate-in fade-in zoom-in duration-200">
+<!-- Modal Header -->
+<div class="px-space-xl pt-space-lg pb-space-md flex items-start justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">security_update_warning</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Privileged Access Escalation</h2>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">High Security Clearance Action</span>
+</div>
+</div>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="document.getElementById('role-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Warning Callout Banner -->
+<div class="mx-space-xl mt-space-md p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col font-body-sm text-body-sm">
+<strong class="font-label-md text-label-md text-on-error-container">High-Consequence Action:</strong>
+<span>Promoting to Super Admin grants unrestricted access to Bank of Uganda statutory escrow accounts, live telecom API settlement nodes, and merchant blacklist execution.</span>
+</div>
+</div>
+<!-- Modal Body Content -->
+<div class="p-space-xl space-y-space-lg">
+<!-- User Context Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Target Staff Officer</span>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Patricia Namubiru</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">ADM-004</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Current: Lead Arbitration Officer</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Target Escalation Role</span>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+<span class="font-headline-sm text-headline-sm font-extrabold">Super Admin</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Root consensus authority enabled</span>
+</div>
+</div>
+<!-- Capability Grants Accordion/List -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Privileges Being Granted:</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">power_settings_new</span>
+<span>Emergency System Killswitch</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">key</span>
+<span>Telecom Root Key Rotation</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+<span>Escrow Pool Manual Override</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span>Platform Fee Schedule Edits</span>
+</div>
+</div>
+</div>
+<!-- Step 1: Mandatory Reason -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface font-bold">
+            Step 1: Statutory Reason for Role Escalation <span class="text-primary">*</span>
+</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Appointed Interim Chief Compliance Officer per Board Resolution BR-2025-09"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logged in the immutable URSB compliance and governance audit trail.</span>
+</div>
+<!-- Step 2: 2-Step Dual Authorization -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md text-on-surface font-bold">
+              Step 2: Dual Super Admin Consensus Protocol
+            </label>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Dual-Key Required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Master Password -->
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Supervisory Master Password</span>
+<div class="relative">
+<input class="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl outline-none focus:ring-2 focus:ring-primary-container" type="password" value="••••••••••••••••"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px] cursor-pointer">visibility</span>
+</div>
+</div>
+<!-- OTP Verification -->
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Kizito Ronald (FIDO2 / 6-digit OTP)</span>
+<div class="relative">
+<input class="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-headline-sm text-headline-sm tracking-wider rounded-xl outline-none focus:ring-2 focus:ring-primary-container" maxlength="7" placeholder="e.g. 849 201" type="text" value="849 201"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-tertiary text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Secondary Super Admin (A. Kato - ADM-002) signed via automated push token.</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-end gap-space-md">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="document.getElementById('role-modal').classList.add('hidden')">
+          Cancel &amp; Dismiss
+        </button>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_4px_14px_rgba(218,55,0,0.30)] hover:scale-[1.02] active:scale-[0.98] transition-transform" onclick="document.getElementById('role-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+          Authorize &amp; Commit Role Elevation
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#ebf1ff", "surface-variant": "#d5e3fd", "secondary-container": "#dae2fd", "error": "#ba1a1a", "background": "#f8f9ff", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "surface-container": "#e6eeff", "inverse-primary": "#ffb5a0", "primary-fixed": "#ffdbd1", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#ff5722", "inverse-surface": "#233144", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#131b2e", "on-primary-container": "#541200", "secondary": "#565e74", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "surface-container-highest": "#d5e3fd", "on-secondary": "#ffffff", "on-secondary-container": "#5c647a", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2fd", "on-primary-fixed-variant": "#862200", "on-error-container": "#93000a", "outline-variant": "#e4beb4", "tertiary-container": "#00a572", "surface-container-high": "#dde9ff", "on-error": "#ffffff", "surface-dim": "#ccdbf4", "on-surface": "#0d1c2f", "on-tertiary-container": "#00311f", "surface-tint": "#b02f00", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a0", "outline": "#907067", "tertiary": "#006c49", "surface": "#f8f9ff", "on-background": "#0d1c2f", "on-surface-variant": "#5b4039", "secondary-fixed-dim": "#bec6e0", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-md": "0.75rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Locked Dispatches</h1></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">routine</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex-1 w-full px-margin pt-space-md pb-space-lg"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Critical Protocol Header Banner -->
+<div class="rounded-xl bg-error-container text-on-error-container p-4 shadow-md relative overflow-hidden">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[24px]">lock_clock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Protocol Alert Level 1</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-error-container shadow-sm font-semibold">Live Guard</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm leading-tight text-on-error-container mt-0.5">
+          3 Dispatches Currently Locked
+        </h2>
+<p class="font-body-sm text-body-sm text-on-error-container opacity-90 mt-1">
+          Escrow vaults and courier digital handover channels are suspended pending staff operational sign-off.
+        </p>
+</div>
+</div>
+</div>
+<!-- Operational Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar -mx-margin px-margin">
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+<span>All Locked (3)</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_invoke</span>
+<span>OTP Failed (2)</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">wrong_location</span>
+<span>Rider Deviation (1)</span>
+</button>
+<button class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Resolved (29)</span>
+</button>
+</div>
+<!-- Incident Card 1 (High Priority / PIN Lock) -->
+<div class="rounded-xl bg-surface-container-lowest text-on-surface p-4 shadow-sm flex flex-col space-y-3 relative overflow-hidden">
+<!-- Header Block -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-error shrink-0 animate-ping"></span>
+<div class="truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">#SC-9915</span>
+<span class="block font-body-sm text-body-sm text-secondary truncate">Nakawa Division • Sector 4B</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
+<span class="font-price-display text-price-display text-primary">UGX 520,000</span>
+</div>
+</div>
+<!-- Reason Pill -->
+<div class="rounded-lg bg-error-container text-on-error-container p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0">password</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-bold leading-snug">
+          3 Consecutive Failed Delivery Release Code Attempts
+        </p>
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">Handover Blocked • Vault Frozen</span>
+</div>
+</div>
+<!-- Detailed Context Breakdown -->
+<div class="rounded-lg bg-surface-container-low p-3 space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">smartphone</span> Parcel Unit:
+        </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[190px]">Samsung Galaxy A54 (128GB)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sports_motorsports</span> Assigned Courier:
+        </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Okello John (ID #OK-419)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Current Status:
+        </span>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> At Dropoff Point
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary bg-surface-container-lowest p-2 rounded-lg leading-relaxed">
+<span class="font-bold text-on-surface">Telemetry Note:</span> Courier arrived 14:18. Customer provided 3 invalid 6-digit verification codes. Automated anti-theft escrow lock initiated.
+      </p>
+</div>
+<!-- Interactive Intervention Drawer -->
+<div class="space-y-2 pt-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block font-semibold">
+        Intervention Protocols
+      </span>
+<!-- Primary Action: Bypass & SMS -->
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm active:scale-[0.98] transition-transform" onclick="triggerAction(this, 'Bypass Code Sent to Buyer +256 701...')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+<span class="text-left font-bold">Unlock &amp; Send Carrier SMS PIN</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+<!-- Secondary Action: Return to Hub -->
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-[0.98] transition-transform" onclick="triggerAction(this, 'Routed to Central Hub (William St)')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">warehouse</span>
+<span class="text-left">Reroute to Central William St Hub</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">alt_route</span>
+</button>
+<!-- Danger Escalation Action -->
+<button class="w-full flex items-center justify-between p-2.5 rounded-lg bg-surface-container text-error font-label-md text-label-md active:scale-[0.98] transition-transform" onclick="toggleDisputeNotes(this)" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Cancel &amp; Escalate to Dispute Desk</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<!-- Hidden Note Form for Dispute Desk -->
+<div class="hidden rounded-lg bg-surface-container-low p-3 space-y-2" id="dispute-box-9915">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold block" for="admin-note">Mandatory Incident Reason Note</label>
+<textarea class="w-full rounded-lg bg-surface-container-lowest p-2 font-body-sm text-body-sm text-on-surface outline-none resize-none" id="admin-note" placeholder="Detail reason for manual dispute freeze..." rows="2"></textarea>
+<button class="w-full py-2 bg-error text-on-error rounded-lg font-label-md text-label-md font-bold" onclick="submitEscalation(this)" type="button">
+          Confirm Escalation Freeze
+        </button>
+</div>
+</div>
+</div>
+<!-- Incident Card 2 (High Priority / Signal Lost) -->
+<div class="rounded-xl bg-surface-container-lowest text-on-surface p-4 shadow-sm flex flex-col space-y-3 relative overflow-hidden">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>
+<div class="truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">#SC-9884</span>
+<span class="block font-body-sm text-body-sm text-secondary truncate">Bwaise / Kawempe Corridor</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
+<span class="font-price-display text-price-display text-primary">UGX 1,480,000</span>
+</div>
+</div>
+<!-- Reason Pill -->
+<div class="rounded-lg bg-error-container text-on-error-container p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0">gps_off</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-bold leading-snug">
+          Rider GPS Signal Lost for &gt;45 Mins
+        </p>
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">High-Value Cargo • Geofence Severed</span>
+</div>
+</div>
+<!-- Telemetry & Location Overview -->
+<div class="rounded-lg bg-surface-container-low p-3 space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span> Cargo Items:
+        </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[200px]">Solar Inverter + Li-Ion Pack</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">badge</span> Stage Association:
+        </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bwaise Stage #4 Boda Union</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">history</span> Last Ping:
+        </span>
+<span class="font-label-md text-label-md text-error font-semibold">47 mins ago • Nabweru Jct</span>
+</div>
+</div>
+<!-- Actions for Stage & Alarm -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-transform text-center space-y-1" onclick="triggerAction(this, 'Dialing Stage 4 Chairperson...')" type="button">
+<span class="material-symbols-outlined text-[22px] text-primary">call</span>
+<span class="font-bold leading-tight">Call Stage Chair</span>
+<span class="text-label-sm font-label-sm text-secondary">Direct Dispatch Link</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md active:scale-95 transition-transform text-center space-y-1 shadow-sm" onclick="triggerAction(this, 'Loud Masked Alarm Sent to Handset')" type="button">
+<span class="material-symbols-outlined text-[22px]">notification_important</span>
+<span class="font-bold leading-tight">Masked Phone Alert</span>
+<span class="text-label-sm font-label-sm opacity-90">Override Silence State</span>
+</button>
+</div>
+</div>
+<!-- Incident Card 3 (Route Deviation Flag) -->
+<div class="rounded-xl bg-surface-container-lowest text-on-surface p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0"></span>
+<div class="truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">#SC-9760</span>
+<span class="block font-body-sm text-body-sm text-secondary truncate">Entebbe Road • Kajjansi</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
+<span class="font-price-display text-price-display text-on-surface">UGX 195,000</span>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container text-on-surface p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">navigation</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-bold leading-snug">
+          Corridor Deviation: 3.4km off Authorized Route
+        </p>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Speed: 14 km/h • Moving South</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<div class="leading-none">
+<span class="font-label-md text-label-md font-bold block text-on-surface">Mugisha Dan</span>
+<span class="font-label-sm text-label-sm text-secondary">Rider Tier: Standard</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-transform flex items-center gap-1" onclick="triggerAction(this, 'Geofence warning pinged to courier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">near_me</span>
+<span>Re-ping Route</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 left-4 right-4 bg-inverse-surface text-inverse-on-surface p-3 rounded-xl shadow-xl flex items-center justify-between gap-3 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none z-50" id="action-toast">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md truncate" id="toast-text">Protocol dispatched successfully.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant shrink-0">Just now</span>
+</div>
+</div>
+<script>
+  function triggerAction(btn, message) {
+    const originalText = btn.innerHTML;
+    btn.classList.add('opacity-75', 'pointer-events-none');
+    showToast(message);
+    setTimeout(() => {
+      btn.classList.remove('opacity-75', 'pointer-events-none');
+    }, 1200);
+  }
+
+  function toggleDisputeNotes(btn) {
+    const box = document.getElementById('dispute-box-9915');
+    if (box.classList.contains('hidden')) {
+      box.classList.remove('hidden');
+      btn.querySelector('.material-symbols-outlined:last-child').innerText = 'expand_less';
+    } else {
+      box.classList.add('hidden');
+      btn.querySelector('.material-symbols-outlined:last-child').innerText = 'expand_more';
+    }
+  }
+
+  function submitEscalation(btn) {
+    const textarea = document.getElementById('admin-note');
+    if (!textarea.value.trim()) {
+      showToast('Please type an incident note before freezing');
+      textarea.focus();
+      return;
+    }
+    showToast('Escalated to Dispute Desk: Case SC-9915-D');
+    textarea.value = '';
+    document.getElementById('dispute-box-9915').classList.add('hidden');
+  }
+
+  function showToast(text) {
+    const toast = document.getElementById('action-toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = text;
+    toast.classList.remove('translate-y-32', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-32', 'opacity-0');
+    }, 3200);
+  }
+</script></div></main></body></html>

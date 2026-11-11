@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#00855b", "on-tertiary-container": "#f4fff6", "tertiary-fixed-dim": "#4edea3", "on-primary-fixed-variant": "#881f00", "action-gradient-start": "#FF8A1F", "tertiary": "#4edea3", "outline": "#ac8980", "error-container": "#93000a", "secondary-fixed-dim": "#b8c3ff", "surface-variant": "#2f3448", "on-secondary-container": "#a7b2ed", "on-primary-container": "#fffcff", "primary-fixed": "#ffdbd1", "on-secondary-fixed": "#091649", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a1", "on-tertiary-fixed": "#002113", "container-dark-low": "#0F172A", "on-tertiary-fixed-variant": "#005236", "surface": "#0d1225", "action-gradient-end": "#DA3700", "surface-dim": "#0d1225", "on-secondary": "#212d5f", "amber-warning": "#F59E0B", "outline-variant": "#5c4039", "surface-tint": "#ffb5a1", "secondary": "#b8c3ff", "secondary-fixed": "#dde1ff", "on-surface-variant": "#e5beb4", "on-background": "#dde1fb", "mtn-yellow": "#FFCC00", "surface-cream": "#FFF8F2", "surface-dark": "#080D1F", "on-error-container": "#ffdad6", "on-surface": "#dde1fb", "surface-container-highest": "#2f3448", "background": "#0d1225", "container-dark-high": "#1E293B", "danger-penalty": "#EF4444", "surface-container-low": "#161b2d", "primary": "#ffb5a1", "on-secondary-fixed-variant": "#384377", "airtel-red": "#ED1C24", "inverse-on-surface": "#2b3043", "emerald-escrow": "#10B981", "error": "#ffb4ab", "on-primary": "#611300", "on-tertiary": "#003824", "surface-container": "#1a1f31", "on-primary-fixed": "#3c0800", "on-error": "#690005", "inverse-primary": "#b22b00", "surface-bright": "#34384c", "surface-container-high": "#24293c", "primary-container": "#da3700", "secondary-container": "#384377", "surface-container-lowest": "#080d1f", "inverse-surface": "#dde1fb" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin": "1rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "price-display": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "code-display": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "price-display": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "700" } ], "code-display": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "800" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "fontWeight": "800" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "label-lg": [ "15px", { "lineHeight": "20px", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface-dark font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-surface z-50 flex flex-col justify-between py-space-md border-r border-surface-container-highest/60 select-none"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between pb-space-sm border-b border-surface-container-highest/40"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-action-gradient-start text-[20px]">electric_moped</span><span class="font-label-lg text-label-lg tracking-wider text-on-surface uppercase">SwiftCart</span></div><span class="px-1.5 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm uppercase font-bold tracking-tight">Uganda</span></div><nav class="flex flex-col gap-space-sm px-space-sm overflow-y-auto" data-active-classes="bg-surface-container-high text-on-surface font-label-md font-bold rounded-lg border-l-2 border-action-gradient-start"><div class="px-space-sm pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-wider font-bold">Daily Operations</span></div><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">dashboard</span><span class="font-body-md text-body-md">Overview</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">shopping_bag</span><span class="font-body-md text-body-md">Orders</span></div><span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">14 Pending</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">inventory_2</span><span class="font-body-md text-body-md">Products &amp; Inventory</span></div><span class="px-1.5 py-0.5 rounded-full bg-amber-warning/15 text-amber-warning font-label-sm text-label-sm font-bold">2 Low</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">two_wheeler</span><span class="font-body-md text-body-md">Riders &amp; Logistics</span></div><span class="px-1.5 py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">6 Active</span></a><div class="px-space-sm pt-space-xs mt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-wider font-bold">Post-Purchase</span></div><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-danger-penalty group-hover:text-error">warning</span><span class="font-body-md text-body-md">Returns &amp; Disputes</span></div><span class="px-1.5 py-0.5 rounded-full bg-danger-penalty/15 text-danger-penalty font-label-sm text-label-sm font-bold">1 Case</span></a><div class="px-space-sm pt-space-xs mt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-wider font-bold">Business &amp; Finance</span></div><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">account_balance_wallet</span><span class="font-body-md text-body-md">Wallet &amp; Payouts</span></div><span class="font-label-sm text-label-sm text-tertiary font-bold">14.8M</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">bar_chart</span><span class="font-body-md text-body-md">Analytics &amp; Heatmaps</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">local_offer</span><span class="font-body-md text-body-md">Discounts &amp; Ads</span></div></a><div class="px-space-sm pt-space-xs mt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-wider font-bold">Settings</span></div><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">storefront</span><span class="font-body-md text-body-md">Store Profile &amp; KYC</span></div><span class="material-symbols-outlined text-emerald-escrow text-[16px]">verified</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings-notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[19px] text-on-surface-variant group-hover:text-on-surface">settings</span><span class="font-body-md text-body-md">Settings</span></div></a></nav></div><div class="px-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-highest/40 flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-bold leading-tight">Kampala Hub Node</span><span class="font-label-sm text-label-sm text-on-surface-variant/70">Direct Escrow Active</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">lock</span></div></div></aside><div class="pl-60 min-h-screen bg-surface-dark flex flex-col"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 px-space-xl flex items-center justify-between border-b border-surface-container-highest/60"><div class="flex items-center gap-space-md"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="px-2 py-0.5 rounded bg-surface-container-high text-action-gradient-start font-label-sm text-label-sm font-bold uppercase tracking-widest">Seller Portal</span><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant pl-space-sm border-l border-surface-container-highest/60"><span class="material-symbols-outlined text-emerald-escrow text-[18px]">verified</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">SoundCore Uganda Official</span><span class="font-label-sm text-label-sm text-on-surface-variant/80">URSB Verified • Nakasero Flagship</span></div></div></div><div class="flex items-center gap-space-lg"><div class="relative hidden md:block w-72"><span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 bg-surface-container-low rounded-lg pl-9 pr-3 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-container-highest/50" placeholder="Search SKU, Order ID, Rider..." type="text"/></div><div class="flex items-center gap-space-sm"><div class="flex items-center p-1 rounded-lg bg-surface-container-low border border-surface-container-highest/50"><button class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[15px]">dark_mode</span>Dark</button><button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[15px]">light_mode</span>Light</button></div><button class="relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors border border-surface-container-highest/50" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-airtel-red ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-surface-container-highest/60"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">KR</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-escrow ring-2 ring-surface"></span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Kizito Ronald</span><span class="font-label-sm text-label-sm text-on-surface-variant/70">Store Manager</span></div></div></div></div></header><main class="relative pt-16 flex-1 w-full px-space-xl py-space-lg bg-surface-dark"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Breadcrumb & Workflow Header Bar -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<div class="flex items-center gap-2">
+<span class="hover:text-on-surface transition-colors cursor-pointer">Merchant Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-on-surface transition-colors cursor-pointer">Products &amp; Inventory</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Add New Product</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant/70 normal-case">
+<span class="material-symbols-outlined text-[16px] text-emerald-escrow">cloud_done</span>
+<span>Auto-saved 14s ago • Kampala Hub Cloud</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Add New Product to Store Catalog</h1>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-action-gradient-start/20 to-action-gradient-end/20 text-action-gradient-start font-label-sm text-label-sm font-bold tracking-wider uppercase border border-action-gradient-start/30">
+<span class="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span>
+          AI Accelerated Flow
+        </div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[17px]">drafts</span>
+          Save Draft
+        </button>
+<button class="px-space-md py-2 rounded-xl bg-danger-penalty/10 hover:bg-danger-penalty/20 text-danger-penalty font-label-md text-label-md transition-all flex items-center gap-1.5 border border-danger-penalty/20" type="button">
+<span class="material-symbols-outlined text-[17px]">close</span>
+          Discard Flow
+        </button>
+</div>
+</div>
+</div>
+<!-- 5-Step Progress Bar Navigation -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Step 01: Completed -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container/40 hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold tracking-wider">STEP 01</span>
+<span class="w-5 h-5 rounded-full bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Photos &amp; Media</span>
+<span class="font-body-sm text-body-sm text-emerald-escrow/90">4 High-res uploaded</span>
+<div class="w-full h-1 bg-emerald-escrow rounded-full mt-1"></div>
+</div>
+<!-- Step 02: Active -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-high shadow-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-action-gradient-start to-action-gradient-end"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-action-gradient-start font-bold tracking-wider">STEP 02 • ACTIVE</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">In Studio</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">AI Photo Studio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Refining market lighting</span>
+<div class="w-full h-1 bg-gradient-to-r from-action-gradient-start to-action-gradient-end rounded-full mt-1"></div>
+</div>
+<!-- Step 03: Queued -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container/20 opacity-75">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60 font-bold tracking-wider">STEP 03</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/40">lock</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Description &amp; SEO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70">Specs &amp; Luganda hooks</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1"></div>
+</div>
+<!-- Step 04: Queued -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container/20 opacity-75">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60 font-bold tracking-wider">STEP 04</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/40">lock</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Catalog &amp; Pricing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70">UGX tiers &amp; MoMo escrow</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1"></div>
+</div>
+<!-- Step 05: Queued -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container/20 opacity-75">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60 font-bold tracking-wider">STEP 05</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/40">lock</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Preview &amp; Launch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70">Kampala live dispatch</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1"></div>
+</div>
+</div>
+</div>
+<!-- Main Split Layout (Studio Workspace Left + AI Assistant Panel Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center Column (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Main Studio Viewport Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-xl relative overflow-hidden">
+<!-- Card Header Info -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-gradient-start text-[22px]">auto_fix_high</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">SwiftCart Visual Engine Studio</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Item: SoundCore Space One ANC Headphones • File: <span class="font-code-display text-xs text-primary font-bold">IMG_8824_Kikuubo.jpg</span></p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+              URSB CATALOG QUALITY: 99.4% PASS
+            </span>
+<div class="flex items-center bg-surface-container rounded-lg p-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 transition-all" id="toggle-split-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">splitscreen</span>
+                Split Slider
+              </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-all" id="toggle-side-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">view_column</span>
+                Side-by-Side
+              </button>
+</div>
+</div>
+</div>
+<!-- Studio Presets Toolbar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-action-gradient-start/15 text-action-gradient-start font-label-sm text-label-sm font-bold flex items-center gap-1.5 shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Instant Pure White Background
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1.5 shrink-0 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">wb_incandescent</span>
+            Studio Softbox Lighting
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1.5 shrink-0 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+            Kampala Lifestyle Stage
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1.5 shrink-0 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">crop_square</span>
+            Auto 1:1 Aspect Ratio
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1.5 shrink-0 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Advanced Tweak
+          </button>
+</div>
+<!-- Interactive Split-Slider Canvas Viewport -->
+<div class="relative w-full h-[380px] bg-surface-container-lowest rounded-xl overflow-hidden select-none group" id="comparison-container">
+<!-- Background Layer: AI Cleaned Studio Image (Right side reveal) -->
+<div class="absolute inset-0 flex items-center justify-center bg-[#0B0F19]">
+<!-- Cleaned Product Render with studio soft drop-shadow -->
+<img class="w-full h-full object-contain p-6" data-alt="Professional studio product shot of SoundCore Space One matte black over-ear noise-cancelling headphones resting on an immaculate pure white background with subtle natural contact shadow, ultra-clean edges, premium consumer electronic catalog styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCupU5TesqVeJRVIvKwzkVYC2s4S2HhuVlniajZrw2-b5Ty5h67D54vfiYrUmJnMW23mU48VDmmedtd65Ltb_neAJjjm8v0iYJHOgtaIgp6osiEBpBWS_ZinOnd39g-UFhT9V7KrSQsb6MSMAv9kgEN5Qdy4--QvLz5iCJuXSGvWhuiYWMh_vNJOKGC02ACirsRrYF1muXFptgL7y5T3JjAYQOmHHDyPPEaWsWZxW6R"/>
+<!-- Pill Indicator Clean -->
+<div class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-surface-dark/80 backdrop-blur-md text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-md">
+<span class="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+              SWIFT STUDIO AI CLEANED
+            </div>
+</div>
+<!-- Foreground Layer: Raw Phone Snapshot (Clipped via draggable split) -->
+<div class="absolute inset-0 z-10 overflow-hidden" id="raw-layer" style="width: 50%;">
+<div class="w-full h-full relative" style="width: 760px; min-width: 600px;">
+<!-- Raw Market snapshot with noisy background -->
+<img class="w-full h-full object-contain p-6 filter brightness-95" data-alt="Raw amateur smartphone photo of SoundCore Space One black headphones placed on a dusty wooden shelf inside a bustling Kampala Kikuubo wholesale electronics shop with messy wires, cardboard boxes and fluorescent market lighting in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqPh6TTsR69sWRgDHedJYLXcWN6x403r_EX5U4rX7QriimMTBVyK_4q7BS-A_UNNicdG-YPfCIPDc4lSqi6wcmOD_U_M2-1SemTlk_H3WAjE7HxEGE5GTP0d6t9gMDCuAgQa6jNxi-zgpLE0BODP8owJn5cKmc42wIJDOc_L9zUcoiRZxDglGRyMPWgSG4h2NLEv9s9MitdBQJW-Ss-naO8HVZcFTLsnmj-wwsNPj"/>
+<!-- Pill Indicator Raw -->
+<div class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface-dark/80 backdrop-blur-md text-amber-warning font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-md">
+<span class="w-2 h-2 rounded-full bg-amber-warning"></span>
+                RAW PHONE SNAPSHOT (KIKUUBO STALL)
+              </div>
+</div>
+</div>
+<!-- Centered Draggable Slider Divider -->
+<div class="absolute top-0 bottom-0 z-30 flex items-center justify-center cursor-ew-resize pointer-events-none" id="slider-handle" style="left: 50%; transform: translateX(-50%);">
+<div class="w-0.5 h-full bg-action-gradient-start shadow-[0_0_12px_rgba(255,138,31,0.8)]"></div>
+<div class="absolute w-10 h-10 rounded-full bg-surface-container-high border-2 border-action-gradient-start text-action-gradient-start flex items-center justify-center shadow-2xl pointer-events-auto">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</div>
+</div>
+<!-- Bottom Micro-Instruction Overlay -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-surface-dark/90 backdrop-blur-sm text-on-surface-variant font-label-sm text-label-sm pointer-events-none flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-action-gradient-start">swap_horiz</span>
+            Drag slider to inspect artifact removal &amp; matte edge refinement
+          </div>
+</div>
+<!-- Processed Angle Variations Thumbnail Strip (4/4 Completed) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Catalog Variations (4 Angles Captured)</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold">4/4 Processing Complete</span>
+</div>
+<div class="grid grid-cols-4 gap-space-sm">
+<!-- Variation 1: Active Front Hero -->
+<div class="relative bg-surface-container p-2 rounded-xl flex items-center gap-space-sm cursor-pointer shadow-md">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="High quality clean hero frontal view of SoundCore Space One headphones on studio isolated background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_qkkB9nHR1aTRI7OydXAtJRartZ-8DwP-3SrBdLiNDAUH9yE1SzUCZrJeoBKFwZ4Tog-98_pTGB1jCjW9jgqbrJRYd458iBEyoTJHNnkaWE0bRFlz3lHXfxTiQAzMa28plWBV9E1AgupjPbhG0Qys5j_ACVk-Zorhm9qv7Eht5r3hxgdDjbEkVa7FbOGc_Fx_uulIkrpq7esEMwytGC4aDLrldg1kk8zKpu1uw1S"/>
+</div>
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Front Hero</span>
+<span class="font-body-sm text-[11px] text-emerald-escrow font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check</span> Ready
+                </span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70">Main Catalog</span>
+</div>
+<div class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-action-gradient-start"></div>
+</div>
+<!-- Variation 2: Angle 45 -->
+<div class="relative bg-surface-container/60 hover:bg-surface-container p-2 rounded-xl flex items-center gap-space-sm cursor-pointer transition-all">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Three quarter angled view of black noise-cancelling headphones isolated on white catalog background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhRwZVxlveWRsMIK3enBEAl1u0ltBzm_r9Q4oAZaztYSA4OLPadSpaVdHT1aEVc3ox4Hec6BFfiwXxgq7rDIp7ThXVPBQp9NmW5A7xYGm5vBJlccaMFGhKA_qojS0b5u-Eo3ak2XIwZa15KtNpYUxC5kEFl1Gi3vW5nBaKJKsY0kuVgDycIC-EZCNMV2QpsYymjUPj84nOqbUzFu-T1WKSUaLbtEjbfuQkPvaQBYU7"/>
+</div>
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Angle 45°</span>
+<span class="font-body-sm text-[11px] text-emerald-escrow font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check</span> Ready
+                </span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70">Perspective</span>
+</div>
+</div>
+<!-- Variation 3: Ear Cups Detail -->
+<div class="relative bg-surface-container/60 hover:bg-surface-container p-2 rounded-xl flex items-center gap-space-sm cursor-pointer transition-all">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Macro close-up shot of cushioned plush leatherette ear cups and active noise cancellation mic grilles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPT6TQWdRu5FtP4Hf33VCGi3VWlunbpBClr_f3mNTMeyKtzlPP-T8R0Dvs_qtLX0kDUbZJkJ8nU8dgchfTawu_qDwnk5C-K0BxjrFyAntED-_8zG1z8mwXZrAUG0BvA2nSNSKvuHLnp4zofxCBy3TQv4Et_6i3kWdB6CjU8WNUN6p9Kt-wpfyRj2IV7ahwjHQu3PlVBNy_t3-E15vkpVcMY8WZvY3C0ZlhxX0EllHt"/>
+</div>
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Ear Cups Detail</span>
+<span class="font-body-sm text-[11px] text-emerald-escrow font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check</span> Ready
+                </span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70">Texture Shot</span>
+</div>
+</div>
+<!-- Variation 4: Retail Box -->
+<div class="relative bg-surface-container/60 hover:bg-surface-container p-2 rounded-xl flex items-center gap-space-sm cursor-pointer transition-all">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Clean retail packaging box of SoundCore Space One headphones showing authentic security seals and Anker branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghMSJJVzlRTHmLSp99i-8kMtcB4q4JTAWV06uc_4oQphVhFg1rAiSDWb5KnA2rM0VjsRKflM-fM47W-JM955ktTi0EZIhpgRvQ-iuutqJI1vhvEnpeJOy0MZ-GeZJ5BQMuFBu8lA4vFxMPOymIkbN0eNJf5eGhIInDI1XyYZJ8ws77MCUlYcHo-mASscYZTL-McbvvzZBY2qoHz2yRr4klW264FWuyhfJgNgGugsP"/>
+</div>
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Retail Box</span>
+<span class="font-body-sm text-[11px] text-emerald-escrow font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check</span> Ready
+                </span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70">URSB Package</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Deep Inspection & Telemetry Metrics Badges -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-3">
+<span class="w-9 h-9 rounded-lg bg-emerald-escrow/10 text-emerald-escrow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">lens_blur</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase">Edge Segmentation</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Alpha Channel 99.8%</span>
+<span class="font-body-sm text-[11px] text-emerald-escrow">Zero fringe artifacts detected</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-3">
+<span class="w-9 h-9 rounded-lg bg-action-gradient-start/10 text-action-gradient-start flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase">Color Fidelity</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">D65 Calibrated</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Accurate Matte Jet Black tone</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-3">
+<span class="w-9 h-9 rounded-lg bg-secondary-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 uppercase">Catalog Compliance</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">SwiftCart Express Ready</span>
+<span class="font-body-sm text-[11px] text-tertiary">Eligible for Same-Day Prime tag</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar Column (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- AI Catalog Assistant Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-gradient-start text-[20px]">psychology</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">AI Catalog Assistant</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-action-gradient-start/15 text-action-gradient-start font-label-sm text-label-sm font-bold uppercase">Vision v4.2</span>
+</div>
+<!-- Vision Detection Results -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 uppercase tracking-wider font-bold">Detected Metadata</span>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant/60">Item Category</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Over-Ear ANC Bluetooth</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant/60">Brand Match</span>
+<span class="font-label-md text-label-md text-emerald-escrow font-bold flex items-center gap-1">
+                SoundCore by Anker
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant/60">Variant Tone</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Matte Jet Black</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant/60">Hardware Specs</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">LDAC • 40mm Bio-Diaphragm</span>
+</div>
+</div>
+</div>
+<!-- Hyper-Local Kampala SEO Tags -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 uppercase tracking-wider font-bold">Hyper-Local Kampala SEO Tags</span>
+<button class="font-label-sm text-label-sm text-action-gradient-start hover:underline flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[13px]">add</span> Suggest More
+            </button>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1" id="seo-tag-container">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm group hover:bg-surface-container-high transition-all">
+              #KampalaTechDelivery
+              <span class="material-symbols-outlined text-[13px] text-on-surface-variant hover:text-danger-penalty cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm group hover:bg-surface-container-high transition-all">
+              #ANC_HeadphonesUganda
+              <span class="material-symbols-outlined text-[13px] text-on-surface-variant hover:text-danger-penalty cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm group hover:bg-surface-container-high transition-all">
+              #SafeBodaExpressElectronics
+              <span class="material-symbols-outlined text-[13px] text-on-surface-variant hover:text-danger-penalty cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm group hover:bg-surface-container-high transition-all">
+              #SoundCoreSpaceOneOriginal
+              <span class="material-symbols-outlined text-[13px] text-on-surface-variant hover:text-danger-penalty cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm group hover:bg-surface-container-high transition-all">
+              #KampalaCommuterHeadset
+              <span class="material-symbols-outlined text-[13px] text-on-surface-variant hover:text-danger-penalty cursor-pointer">close</span>
+</span>
+</div>
+</div>
+<!-- Physical Inventory Staging Allocation -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 uppercase tracking-wider font-bold">Physical Inventory Staging</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Total: 35 Units</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-emerald-escrow">warehouse</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Nakasero Flagship Hub</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/70">Central Kampala • Zone A</span>
+</div>
+</div>
+<div class="w-20">
+<input class="w-full bg-surface-container-low text-right font-price-display text-sm text-on-surface font-bold py-1 px-2 rounded border border-surface-container-highest/60 focus:outline-none focus:ring-1 focus:ring-action-gradient-start" type="number" value="25"/>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-action-gradient-start">store</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Kololo Outpost Stock</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/70">Express Rider Drop • Zone B</span>
+</div>
+</div>
+<div class="w-20">
+<input class="w-full bg-surface-container-low text-right font-price-display text-sm text-on-surface font-bold py-1 px-2 rounded border border-surface-container-highest/60 focus:outline-none focus:ring-1 focus:ring-action-gradient-start" type="number" value="10"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust & Escrow Guarantee Callout -->
+<div class="p-space-sm rounded-lg bg-emerald-escrow/10 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-escrow text-[18px] shrink-0 mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-emerald-escrow leading-snug">
+            Images validated against Swift Escrow Authenticity Guarantees. Counterfeit penalties apply per URSB marketplace guideline.
+          </p>
+</div>
+</div>
+<!-- Bottom Step Execution Dock -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-xl">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Step 2 Status</span>
+<span class="font-label-sm text-label-sm text-emerald-escrow font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Ready to Proceed
+          </span>
+</div>
+<!-- Primary Action Trigger -->
+<button class="w-full h-[52px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end hover:brightness-110 active:scale-[0.98] text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_4px_18px_rgba(218,55,0,0.35)] transition-all" type="button">
+          Proceed to Step 3: AI Description &amp; Specs
+          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2 pt-1">
+<button class="w-1/2 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            Back to Step 1
+          </button>
+<button class="w-1/2 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+            Save &amp; Pause
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Split Slider Interactive Behavior
+  (function() {
+    const container = document.getElementById('comparison-container');
+    const rawLayer = document.getElementById('raw-layer');
+    const handle = document.getElementById('slider-handle');
+    let isDragging = false;
+
+    if (!container || !rawLayer || !handle) return;
+
+    function updateSlider(clientX) {
+      const rect = container.getBoundingClientRect();
+      let pos = (clientX - rect.left) / rect.width;
+      if (pos < 0.05) pos = 0.05;
+      if (pos > 0.95) pos = 0.95;
+
+      const percentage = pos * 100;
+      rawLayer.style.width = percentage + '%';
+      handle.style.left = percentage + '%';
+    }
+
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      updateSlider(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      updateSlider(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch Support for Mobile / Touch Laptops
+    container.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      if (e.touches[0]) updateSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging || !e.touches[0]) return;
+      updateSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+  })();
+</script></main></div></body></html>

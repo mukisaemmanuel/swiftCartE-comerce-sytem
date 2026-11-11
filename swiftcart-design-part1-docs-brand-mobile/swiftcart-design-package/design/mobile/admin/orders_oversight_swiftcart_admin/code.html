@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#ebf1ff", "surface-variant": "#d5e3fd", "secondary-container": "#dae2fd", "error": "#ba1a1a", "background": "#f8f9ff", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "surface-container": "#e6eeff", "inverse-primary": "#ffb5a0", "primary-fixed": "#ffdbd1", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#ff5722", "inverse-surface": "#233144", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#131b2e", "on-primary-container": "#541200", "secondary": "#565e74", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "surface-container-highest": "#d5e3fd", "on-secondary": "#ffffff", "on-secondary-container": "#5c647a", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2fd", "on-primary-fixed-variant": "#862200", "on-error-container": "#93000a", "outline-variant": "#e4beb4", "tertiary-container": "#00a572", "surface-container-high": "#dde9ff", "on-error": "#ffffff", "surface-dim": "#ccdbf4", "on-surface": "#0d1c2f", "on-tertiary-container": "#00311f", "surface-tint": "#b02f00", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a0", "outline": "#907067", "tertiary": "#006c49", "surface": "#f8f9ff", "on-background": "#0d1c2f", "on-surface-variant": "#5b4039", "secondary-fixed-dim": "#bec6e0", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-md": "0.75rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" onclick="document.getElementById('admin-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col ml-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider leading-none">Uganda Staff</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[130px]">SwiftCart Admin</span></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">routine</span></button><button class="w-11 h-11 relative flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-primary-container rounded-full"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop" onclick="document.getElementById('admin-drawer').classList.add('-translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 left-0 bottom-0 w-[310px] max-w-[85vw] bg-surface-container-lowest z-50 -translate-x-full transition-transform duration-300 ease-out flex flex-col pt-safe pb-safe shadow-[0_16px_36px_-6px_rgba(15,23,42,0.14)]" id="admin-drawer"><div class="p-space-lg bg-surface-container-low"><div class="flex items-start justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">PN</div><div><h2 class="font-label-lg text-label-lg text-on-surface leading-tight">Patricia Namubiru</h2><p class="font-body-sm text-body-sm text-secondary">Operations Lead</p></div></div><button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-variant" onclick="document.getElementById('admin-drawer').classList.add('-translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-space-md flex items-center justify-between"><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary mr-1.5"></span>Admin (Read/Decide Only)</span><span class="font-label-sm text-label-sm text-secondary">KLA HQ</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Overview</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px] text-primary">dashboard</span><span class="font-body-md text-body-md">Overview</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Sellers</p><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="seller-applications-kyc" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">badge</span><span class="font-body-md text-body-md">Seller Applications &amp; KYC</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">14</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="sellers-directory" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">storefront</span><span class="font-body-md text-body-md">Sellers Directory</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Riders</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="riders-couriers" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">two_wheeler</span><span class="font-body-md text-body-md">Riders (Couriers)</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Orders</p><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">shopping_cart_checkout</span><span class="font-body-md text-body-md">Orders</span></div><span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">189</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Products</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="product-moderation" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">fact_check</span><span class="font-body-md text-body-md">Product Moderation</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Payments</p><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="escrow-disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">gavel</span><span class="font-body-md text-body-md">Escrow &amp; Disputes</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">6</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="payout-queue" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">payments</span><span class="font-body-md text-body-md">Payout Queue</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="overpayments-refunds" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">currency_exchange</span><span class="font-body-md text-body-md">Overpayments &amp; Refunds</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="commission" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">percent</span><span class="font-body-md text-body-md">Commission</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Logistics</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="locked-dispatches" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">local_shipping</span><span class="font-body-md text-body-md">Locked Dispatches</span></a></div><div class="space-y-space-xs"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">Storefront</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="homepage-ads" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">campaign</span><span class="font-body-md text-body-md">Homepage &amp; Ads</span></a></div><div class="space-y-space-xs pb-space-sm"><p class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-secondary">System</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">manage_history</span><span class="font-body-md text-body-md">Audit Log</span></a></div></div><div class="p-space-md bg-surface-container-low flex items-center justify-between"><span class="font-body-sm text-body-sm text-secondary">v2.4.1 (UG-Cluster)</span><button class="text-error font-label-sm text-label-sm flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">logout</span>Exit</button></div></aside><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="px-margin pt-space-md pb-space-xs flex items-center justify-between"><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">Orders</h1><span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Live MTN/Airtel</span></div><div class="flex-1 w-full px-margin"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Search & Quick Filter Bar -->
+<div class="flex flex-col space-y-space-sm">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3.5 text-secondary text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-10 rounded-xl bg-surface-container-high text-on-surface placeholder:text-secondary font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="Search by Order #SC-..., Merchant, or District" type="text"/>
+<button class="absolute right-2.5 w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Horizontal Category Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 no-scrollbar">
+<button class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm">All (189)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Processing (24)</button>
+<button class="px-space-md py-1.5 rounded-full bg-tertiary-container text-on-tertiary font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+        In Transit (42)
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Escrow Held (189)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Delivered (117)</button>
+<button class="px-space-md py-1.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flag</span> Flagged (6)
+      </button>
+</div>
+</div>
+<!-- Priority Dispatch Card: Detailed Inspection (#SC-9941) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Header Ribbon -->
+<div class="p-space-md bg-surface-container-low flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider">#SC-9941</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+            In Transit
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface" title="Print Dispatch Waybill">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface" title="Copy Link">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Escrow Money Badge -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-tertiary/10">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-bold">Escrow Custody Active</span>
+<span class="font-body-sm text-body-sm text-on-surface">MTN MoMo Prepaid (Escrow ID: #ESC-4019)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 365,000</span>
+</div>
+</div>
+</div>
+<!-- ZERO-TRUST GUARDRAIL BANNER -->
+<div class="px-space-md py-space-sm bg-inverse-surface text-inverse-on-surface flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">security</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed font-bold">Zero-Trust Operational Guardrail</span>
+<p class="font-body-sm text-body-sm leading-tight text-surface-variant">
+          6-digit delivery release OTP is <span class="text-surface-bright font-bold">NEVER visible</span> to Admin, Support, or William St. Hub. Exclusively verified in-person between customer <strong class="text-surface-bright">Ronald K.</strong> and courier at handover.
+        </p>
+</div>
+</div>
+<div class="p-space-md space-y-space-lg">
+<!-- Parties Involved: 3-Way Triangulation -->
+<div class="flex flex-col space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Parties Involved</span>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Merchant Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Kikuubo Sound Hub</span>
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Shop B-14, Equatorial Mall</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Merchant</span>
+</div>
+<!-- Customer Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_pin_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Ronald K.</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Nakawa Division • Phone: 07••••••492</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Buyer</span>
+</div>
+<!-- Courier Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Kizito Brian</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Bajaj Boxer • Reg: UEF 842X</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm">Dispatched</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package Itemized Content -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Consignment Manifest</span>
+<span class="font-label-sm text-label-sm text-secondary">2 unique items</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Black premium SoundCore Space One active noise cancelling wireless headphones resting on retail packaging against a clean minimal studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDfuJZzr8D1ofLbhi_WhKrrFqjH26NvBpICEvDDVttVd3kRc2aMbcB0WViuz6cEvZe6kSxIvgsfT5b8Yc9joP8cfK4OWOVHbkeANbIG4JO_To9zcA_6ux9EprVuCN3zaXHypQv4aKG0sDU0Kj-Har0n1sjXMWPUo5ph1knPr_c_Rvfq7hsga-EsgY-J_3ZLXirDUDZN8Bo0KXkxaEpe81Q_1-EDFvKbehRWMpRjzxx"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">SoundCore Space One ANC</span>
+<span class="font-body-sm text-body-sm text-secondary">Qty: 1 • Color: Jet Black</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">UGX 280,000</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Compact white Baseus 65W GaN fast charger wall plug adapter with multiple USB ports placed on a dark sleek architectural desk surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp3qDdg3epcafSQWArnc-RMHe7iS2wSFEdahvf7pVh8UQ8gk64sfsIzMPLosxof-ifxueFcRDTHjHmjJJjf9pjlU_WTJi7unEbc-lvdMh-_89RKKjqV4n7-_SvBGdqGxp9nKxSruP-GA5Kje8_hiT07NVFxsEE5ux_Y4QGx9wGxtSghF_vZhvNkj73DCNsohsq93rU1u-aSjJPRr2Jn3h-zznVyjDf5EOd_IUU3Ybh"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Baseus 65W GaN Fast Charger</span>
+<span class="font-body-sm text-body-sm text-secondary">Qty: 1 • Dual Type-C</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface font-bold">UGX 85,000</span>
+</div>
+</div>
+</div>
+<!-- Order Fee Breakdown -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 space-y-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-secondary">
+<span>Items Subtotal</span>
+<span>UGX 365,000</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-secondary">
+<span>Standard Courier (SwiftBoda Zone 2)</span>
+<span class="text-tertiary font-medium">Free Promo</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface font-bold pt-1">
+<span>Total Value In Escrow</span>
+<span class="text-primary font-extrabold">UGX 365,000</span>
+</div>
+</div>
+</div>
+<!-- Visual Audit Progression Timeline -->
+<div class="flex flex-col space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Immutable Audit Trail</span>
+<div class="relative pl-6 space-y-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0.5 w-3.5 h-3.5 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary text-[10px]">check</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Order Placed &amp; Escrow Funded</span>
+<span class="font-label-sm text-label-sm text-secondary">10:14 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Auto-approved via MTN Mobile Money Instant Push (Trans ID: #MOM-88319).</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0.5 w-3.5 h-3.5 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary text-[10px]">check</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Merchant Packed &amp; Tagged</span>
+<span class="font-label-sm text-label-sm text-secondary">10:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Kikuubo Sound Hub confirmed packaging. Barcode SC-9941 applied.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0.5 w-3.5 h-3.5 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary text-[10px]">check</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Hub Intake Scanned</span>
+<span class="font-label-sm text-label-sm text-secondary">11:05 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Kampala William Street Logistics Node (Operator: J. Mugisha).</p>
+</div>
+<!-- Step 4 (Current) -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0.5 w-3.5 h-3.5 rounded-full bg-primary-container flex items-center justify-center animate-bounce">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Boda Courier Dispatched</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">11:20 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Courier Kizito Brian is moving toward Nakawa (ETA 18 mins). Real-time GPS sync pinged 4 mins ago.</p>
+</div>
+<!-- Step 5 (Pending) -->
+<div class="relative opacity-50">
+<div class="absolute -left-[27px] top-0.5 w-3.5 h-3.5 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface">Delivery &amp; Escrow Release</span>
+<span class="font-label-sm text-label-sm text-secondary">Awaiting OTP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Staff Operational Actions Section -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Administrative Controls</span>
+<!-- Staff Internal Notes -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">sticky_note_2</span>
+<span class="font-label-md text-label-md font-bold">Internal Ops Log</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Staff Only</span>
+</div>
+<!-- Previous Note History -->
+<div class="space-y-space-xs" id="notes-container">
+<div class="p-2 rounded bg-surface-container text-on-surface">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Patricia Namubiru (Lead)</span>
+<span class="font-label-sm text-label-sm">11:12 AM</span>
+</div>
+<p class="font-body-sm text-body-sm mt-0.5">Customer requested call before rider reaches shell gas station Nakawa. Rider informed.</p>
+</div>
+</div>
+<!-- Add Note Form -->
+<div class="flex flex-col space-y-1.5 pt-1">
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-secondary font-body-sm text-body-sm focus:outline-none focus:ring-0 resize-none shadow-sm" id="staff-note-input" placeholder="Write internal memo regarding this dispatch..." rows="2"></textarea>
+<div class="flex items-center justify-end">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="addStaffNote()" type="button">
+<span class="material-symbols-outlined text-[16px]">add_comment</span>
+                Add Note
+              </button>
+</div>
+</div>
+</div>
+<!-- Danger Action: Freeze / Audit Trigger -->
+<div class="pt-space-xs">
+<button class="w-full h-11 rounded-xl bg-error-container text-on-error-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs hover:bg-error/20 active:scale-[0.99] transition-all shadow-sm" onclick="openAuditModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+            Flag Order for Audit / Freeze Dispatch
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Order Preview Card (#SC-9938) -->
+<div class="flex flex-col space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Other Active Queue Orders</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">View all 189</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col space-y-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider">#SC-9938</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Processing
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">UGX 120,000</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Neat arrangement of organic Ugandan shea butter cosmetics in minimalist amber glass jars on a bright natural wood tabletop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwPDbIpRpgREKwDojMBic-iYeZx2l-MP4jb2po08a2WhiFv8uxF6YfAfRp-n3ipbXRjkSDaxQ8wEwqYTTFRfPcvwT9Dum0nBT9QucHARl2Uu8hcUsSyDmZocTL_Xmlye9ypX9wGy5bUC-oMJMxcQaxvwyvI0oSMPEqQZE3AmjhaYWCRSfXXNfsapvmxHeB0vDPBUqpW6lLagkgpCcGKMF_W9KPx-DizWzEM03ZqVae"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Kampala Organic Shea Butter (2x 500ml)</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Merchant: Nile Heritage Naturals • Buyer: Agnes M. (Entebbe)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm text-secondary">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold">Escrow Secured: Airtel Money</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-0.5">
+          Inspect <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Audit & Freeze Danger Modal Dialog -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="audit-modal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl shadow-2xl p-space-lg flex flex-col space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-secondary flex items-center justify-center hover:bg-surface-variant" onclick="closeAuditModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Freeze Dispatch &amp; Audit #SC-9941?</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+          This immediately alerts rider Kizito Brian to pause delivery, halts MTN MoMo escrow release, and flags the transaction for fraud investigation.
+        </p>
+</div>
+<!-- Reason Selector -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Investigation Reason</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Suspected Identity Fraud / Stolen MoMo Account</option>
+<option>Seller Stock Discrepancy Reported</option>
+<option>Delivery Route Deviation Detected</option>
+<option>Buyer Request for Cancellation in Transit</option>
+<option>Manual Review Flagged by Supervisor</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-1 h-11 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold" onclick="closeAuditModal()" type="button">
+          Cancel
+        </button>
+<button class="flex-1 h-11 rounded-xl bg-error text-on-error font-label-md text-label-md font-bold shadow-md" onclick="confirmAuditFreeze()" type="button">
+          Freeze Order
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openAuditModal() {
+    const modal = document.getElementById('audit-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeAuditModal() {
+    const modal = document.getElementById('audit-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function confirmAuditFreeze() {
+    closeAuditModal();
+    alert('Dispatch halted. Rider Kizito Brian and Merchant notified. Escrow #ESC-4019 locked.');
+  }
+
+  function addStaffNote() {
+    const input = document.getElementById('staff-note-input');
+    const container = document.getElementById('notes-container');
+    const noteText = input.value.trim();
+
+    if (!noteText) return;
+
+    const newNote = document.createElement('div');
+    newNote.className = 'p-2 rounded bg-surface-container text-on-surface animate-fade-in';
+    newNote.innerHTML = `
+      <div class="flex items-center justify-between text-secondary">
+        <span class="font-label-sm text-label-sm font-bold text-on-surface">Patricia Namubiru (Lead)</span>
+        <span class="font-label-sm text-label-sm">Just now</span>
+      </div>
+      <p class="font-body-sm text-body-sm mt-0.5">${noteText}</p>
+    `;
+
+    container.appendChild(newNote);
+    input.value = '';
+  }
+</script></div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.06)]" data-active-classes="text-primary-container font-bold"><div class="h-16 px-space-xs grid grid-cols-5 items-center"><a class="flex flex-col items-center justify-center gap-0.5 py-1 text-secondary transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm leading-none">Overview</span></a><a class="flex flex-col items-center justify-center gap-0.5 py-1 text-secondary transition-colors relative" data-path="seller-applications-kyc" href="#"><span class="material-symbols-outlined text-[22px]">how_to_reg</span><span class="font-label-sm text-label-sm leading-none">KYC</span><span class="absolute top-1 right-3 w-2 h-2 rounded-full bg-primary-container"></span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 py-1 transition-colors text-primary-container font-bold" data-path="orders" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm leading-none">Orders</span></a><a class="flex flex-col items-center justify-center gap-0.5 py-1 text-secondary transition-colors" data-path="escrow-disputes" href="#"><span class="material-symbols-outlined text-[22px]">shield_with_heart</span><span class="font-label-sm text-label-sm leading-none">Disputes</span></a><a class="flex flex-col items-center justify-center gap-0.5 py-1 text-secondary transition-colors" data-path="payout-queue" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm leading-none">Payouts</span></a></div></nav></body></html>

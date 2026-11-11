@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#ebf1ff", "surface-variant": "#d5e3fd", "secondary-container": "#dae2fd", "error": "#ba1a1a", "background": "#f8f9ff", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "surface-container": "#e6eeff", "inverse-primary": "#ffb5a0", "primary-fixed": "#ffdbd1", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#ff5722", "inverse-surface": "#233144", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#131b2e", "on-primary-container": "#541200", "secondary": "#565e74", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "surface-container-highest": "#d5e3fd", "on-secondary": "#ffffff", "on-secondary-container": "#5c647a", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2fd", "on-primary-fixed-variant": "#862200", "on-error-container": "#93000a", "outline-variant": "#e4beb4", "tertiary-container": "#00a572", "surface-container-high": "#dde9ff", "on-error": "#ffffff", "surface-dim": "#ccdbf4", "on-surface": "#0d1c2f", "on-tertiary-container": "#00311f", "surface-tint": "#b02f00", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a0", "outline": "#907067", "tertiary": "#006c49", "surface": "#f8f9ff", "on-background": "#0d1c2f", "on-surface-variant": "#5b4039", "secondary-fixed-dim": "#bec6e0", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-md": "0.75rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Homepage &amp; Ads</h1></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">routine</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex-1 w-full px-margin pt-space-md pb-space-lg"><div class="flex flex-col w-full pb-10 space-y-5">
+<!-- Top Operational Banner / Live Pulse -->
+<div class="bg-surface-container-high rounded-xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center space-x-3">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+<span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Storefront Engine v4.2</p>
+<p class="font-body-sm text-body-sm text-secondary">Kampala Hub: 18.4k Live Shoppers</p>
+</div>
+</div>
+<div class="flex items-center space-x-1.5 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Synced</span>
+</div>
+</div>
+<!-- Segmented Navigation Tabs -->
+<div class="flex p-1 bg-surface-container rounded-xl overflow-x-auto no-scrollbar space-x-1">
+<button class="flex-1 min-w-[100px] py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center space-x-1" id="tab-banners" onclick="switchTab('banners')" type="button">
+<span>Hero Banners</span>
+<span class="bg-on-primary/20 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm text-on-primary">3</span>
+</button>
+<button class="flex-1 min-w-[110px] py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-secondary hover:text-on-surface flex items-center justify-center space-x-1" id="tab-categories" onclick="switchTab('categories')" type="button">
+<span>Categories</span>
+<span class="bg-surface-container-high px-1.5 py-0.2 rounded-full font-label-sm text-label-sm text-on-surface-variant">6</span>
+</button>
+<button class="flex-1 min-w-[110px] py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-secondary hover:text-on-surface flex items-center justify-center space-x-1" id="tab-sponsored" onclick="switchTab('sponsored')" type="button">
+<span>Ads Boosts</span>
+<span class="bg-surface-container-high px-1.5 py-0.2 rounded-full font-label-sm text-label-sm text-on-surface-variant">4</span>
+</button>
+</div>
+<!-- SECTION 1: HERO CAROUSEL CURATOR -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">view_carousel</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hero Carousel Manager</h2>
+</div>
+<button class="flex items-center space-x-1 bg-surface-container text-primary font-label-md text-label-md px-2.5 py-1.5 rounded-lg active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Slide</span>
+</button>
+</div>
+<!-- Draggable Carousel Cards Container -->
+<div class="flex flex-col space-y-3" id="carousel-list">
+<!-- Card 1 (Active) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm transition-all flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center space-x-2.5">
+<div class="cursor-grab active:cursor-grabbing p-1 text-secondary-container bg-surface-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">drag_indicator</span>
+</div>
+<div class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Vibrant studio photograph of premium matte black over-ear wireless headphones with neon orange accent lighting, promoting audio flash deals for tech week in clean commercial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ny8S1Asd021N5o5quMFt5vz_u0pcYjwzlAiiZuNx3f-3l8i0z7x4_lJDqxNHKf79XHgFq8LZOzNkfQ3bhAH17FXtFlK0xnWFUyp6NgO_sKnNN_k6gvq082q6ElgmWqkbUBYigfsTx-hQxwOThMhmqy0QV2-ROpigbKCAXutlv55oymqbK5c31B-laRZtAFPo39BUlVexb2-a8PutY_rEOFwk226prB8PTs9eEmZU"/>
+<span class="absolute bottom-0.5 right-0.5 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 rounded">#1</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Active</span>
+<span class="font-body-sm text-body-sm text-secondary">• Ends Nov 30</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Super Tech Week - 40% Audio</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Target: Electronics • Priority High</p>
+</div>
+</div>
+<!-- Toggle Active Switch -->
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" onchange="updatePreviewSlide(0, this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-2 border-none bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">touch_app</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CTR: 8.6% (4,290 taps)</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Edit Schedule" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Mobile Preview" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/20 rounded transition-colors" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 (Active) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm transition-all flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center space-x-2.5">
+<div class="cursor-grab active:cursor-grabbing p-1 text-secondary-container bg-surface-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">drag_indicator</span>
+</div>
+<div class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Bustling modern African commercial wholesale trade center scene showing stacked packaging and logistics workers handling quick deliveries with bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNAkNJmaXz1ByfkRMrr-OFPh2dmJEMNifaIOp2DLhQ8Wzv3yHx_4YPCfv8erTEpKpJtPB0qRmc68-RU2rAvErWL1yn2bdDlOzaq-kMFFj0exWNZvkFh7IOZQ7OmBLCOSSc7sT1GyPlxve-_1NZMUuySo2IyWG6ncbjKXVAGaLSHV5fpSC_uN-d8W-4-S6_BpvvwJ_emYJo68pAZVNmZe6mBnRfxWLETpXswER7ASWH"/>
+<span class="absolute bottom-0.5 right-0.5 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 rounded">#2</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Active</span>
+<span class="font-body-sm text-body-sm text-secondary">• Evergreen</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Kikuubo Wholesalers Direct</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Bulk Tier 1 • 15% Merchant Rebate</p>
+</div>
+</div>
+<!-- Toggle Active Switch -->
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" onchange="updatePreviewSlide(1, this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">touch_app</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CTR: 11.2% (7,840 taps)</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Edit Schedule" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Mobile Preview" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/20 rounded transition-colors" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 (Draft / Scheduled) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm transition-all flex flex-col space-y-3 opacity-90">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center space-x-2.5">
+<div class="cursor-grab active:cursor-grabbing p-1 text-secondary-container bg-surface-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">drag_indicator</span>
+</div>
+<div class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Fast-moving motorcycle courier rider with bright orange SwiftCart delivery cargo box zipping through warm sunny urban avenue with speed trail graphics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX-2_qLm4nV3E_7chodutsDj7Rq5fteCSnU4KW1r-I4OKCCvmm30m2xkPmZPqXfmjWot_vKlK5OHiX1Zm87gT6qchhWHDBj1APNJck4MjFUO15cnzSpzqWQHs3IDUNkm86ZHxgJl38iKJ-t_pySV5ix3ekPLDcbeXm-0aTZPo1V32sPi1v9BC9aClwntTeKK4aZP1JJKNwqMQPeGzuxwFtWuJD_nX0jTtYnoxt8Lm5"/>
+<span class="absolute bottom-0.5 right-0.5 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 rounded">#3</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Draft</span>
+<span class="font-body-sm text-body-sm text-primary">• Launches Dec 1</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">SwiftExpress Boda Free Delivery</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Holiday Campaign • Kampala Metro</p>
+</div>
+</div>
+<!-- Toggle Draft Switch -->
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input class="sr-only peer" onchange="updatePreviewSlide(2, this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scheduled: 00:01 EAT</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Edit Schedule" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" title="Mobile Preview" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-primary-container hover:bg-primary-fixed rounded transition-colors" title="Publish Early" type="button">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: LIVE STOREFRONT MINI-WINDOW (iPhone Bezel Simulation) -->
+<section class="flex flex-col space-y-2.5">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">phone_iphone</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live Storefront Mini-Window</h2>
+</div>
+<div class="flex items-center space-x-1 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase">Synchronized</span>
+</div>
+</div>
+<!-- Phone Frame Device Shell -->
+<div class="relative mx-auto w-full max-w-[340px] bg-inverse-surface p-3 rounded-[32px] shadow-xl">
+<!-- Island pill -->
+<div class="w-20 h-4 bg-inverse-surface mx-auto mb-2 rounded-full flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest/20 mr-2"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest/40"></div>
+</div>
+<!-- Inside Phone Viewport -->
+<div class="bg-surface rounded-[22px] overflow-hidden flex flex-col p-2.5 space-y-2.5">
+<!-- Mock App Header -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-1">
+<span class="font-price-display text-[16px] text-primary-container tracking-tight font-extrabold">SwiftCart</span>
+<span class="bg-primary text-on-primary font-label-sm text-[9px] px-1 rounded uppercase">Live</span>
+</div>
+<div class="flex items-center space-x-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">search</span>
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</div>
+</div>
+<!-- Dynamic Storefront Live Hero Preview -->
+<div class="relative w-full h-32 rounded-xl overflow-hidden shadow-sm" id="mini-preview-banner">
+<img class="w-full h-full object-cover" data-alt="High contrast commercial banner display for tech deals featuring sleek matte headphones on warm vibrant orange gradient background with 40% off typography overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD64v2qby_WU5l-0xwBcEjtDC7qTnhJqi77FQ5GujWByHPQPc70HBVle4rXCe0JnyNQ9P4sl1wa6BrnG_3WAwqRZmoZLYa3cPJ_x9xhRuLDg9INKMo50FfJH3vpc9a0KwzBw4DLQJ9ktfY9eoUBcXDwaYGIVh_jGzkgXz1Ea6s0fCZSW89uU-qP9rRql-NaZSj3xVfqhcYuQ8wRtvA_kjDZZGeLu7-7dLpAuAqc6DmO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-2.5">
+<span class="bg-primary-container text-on-primary font-label-sm text-[9px] px-1.5 py-0.5 rounded w-max">MEGA SALE</span>
+<p class="font-headline-sm text-[13px] leading-tight text-inverse-on-surface font-bold mt-0.5" id="mini-banner-title">Super Tech Week - Up to 40% Audio</p>
+<div class="flex items-center space-x-1 mt-1">
+<span class="w-4 h-1 rounded-full bg-primary-container"></span>
+<span class="w-1.5 h-1 rounded-full bg-surface-container-lowest/60"></span>
+<span class="w-1.5 h-1 rounded-full bg-surface-container-lowest/60"></span>
+</div>
+</div>
+</div>
+<!-- Quick Mock Feed In Mobile Shell -->
+<div class="grid grid-cols-3 gap-1.5 pt-1">
+<div class="bg-surface-container rounded-lg p-1.5 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-primary-container">headphones</span>
+<span class="font-label-sm text-[9px] text-on-surface truncate mt-0.5">Audio</span>
+</div>
+<div class="bg-surface-container rounded-lg p-1.5 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-tertiary">inventory_2</span>
+<span class="font-label-sm text-[9px] text-on-surface truncate mt-0.5">Wholesale</span>
+</div>
+<div class="bg-surface-container rounded-lg p-1.5 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-secondary">moped</span>
+<span class="font-label-sm text-[9px] text-on-surface truncate mt-0.5">Express</span>
+</div>
+</div>
+</div>
+<!-- Home bar indicator -->
+<div class="w-24 h-1 bg-surface-container-lowest/40 mx-auto mt-2 rounded-full"></div>
+</div>
+</section>
+<!-- SECTION 3: SPONSORED ADS MODERATION DECK -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">campaign</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sponsored Ads Moderation</h2>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">1 Audit Required</span>
+</div>
+<!-- Active High-Volume Sponsored Campaign Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col space-y-3.5">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center space-x-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Crisp close-up studio shot of metallic silver premium wireless earphone charging case with glowing LED battery indicator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9tuOIHOcJffAxL7XD98f8XsfJ5tNROxKzvNuNd9IJD44oSnAJOjZSZEwRpLkrat53VjDgpINPDdnYvL5IDgLI7hmmsElTGGwuQRpA1SZjrLr5UU6ZP0wLuB77VoZxUOd9kGPwseZ5h81OGvIP1ImqRhKgxbPq1XVhnRUZo4yZ93TVugm3OOVsthFCE07LGZ_VJ9ecuIOpdO7nq-eHM-IegKxhzBOQZGmABQK3xG0J"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">Top 3 Search</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold" id="ad-status-badge">Running</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold truncate">SoundCore Space One ANC Boost</h3>
+<div class="flex items-center space-x-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">storefront</span>
+<span class="font-body-sm text-body-sm truncate">Kikuubo Sound Hub</span>
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<!-- Active Pause Switch -->
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="ad-toggle" onchange="toggleAdStatus(this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<!-- Financial & Bidding Stats Grid -->
+<div class="grid grid-cols-2 gap-2.5 bg-surface-container-low p-3 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Daily Budget</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-extrabold">UGX 15,000<span class="font-body-sm text-body-sm text-secondary font-normal">/day</span></span>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 72%;"></div>
+</div>
+<span class="font-body-sm text-[10px] text-secondary mt-1">72% spent today</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Cost Per Click (CPC)</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-extrabold">UGX 412 <span class="font-body-sm text-body-sm text-tertiary">Avg</span></span>
+<div class="flex items-center space-x-1 mt-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-label-sm text-[11px]">+3.2x ROAS Metric</span>
+</div>
+<span class="font-body-sm text-[10px] text-secondary mt-1">Bid ceiling: UGX 500</span>
+</div>
+</div>
+<!-- Ad Placement & Targeting Pills -->
+<div class="flex flex-wrap gap-1.5 items-center">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">pin_drop</span>
+<span>Uganda Central (All)</span>
+</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">tag</span>
+<span>Audio • Over-Ear • Tech</span>
+</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-tertiary font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">policy</span>
+<span>Trust Score: 98%</span>
+</span>
+</div>
+<!-- Admin Actions Cluster -->
+<div class="flex items-center space-x-2 pt-1">
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md py-2.5 rounded-lg active:scale-98 transition-transform flex items-center justify-center space-x-1.5" onclick="triggerAuditToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Audit Compliance</span>
+</button>
+<button class="flex-1 bg-primary-container text-on-primary font-label-lg text-label-lg py-2.5 rounded-lg active:scale-98 transition-transform flex items-center justify-center space-x-1.5 shadow-sm" onclick="quickEditBid()" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Adjust Bid</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Feedback Pill / Status Toast -->
+<div class="hidden fixed bottom-6 left-4 right-4 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-2xl flex items-center justify-between z-50 transition-opacity" id="status-toast">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Storefront updated successfully</span>
+</div>
+<button class="text-inverse-on-surface/70 hover:text-inverse-on-surface" onclick="document.getElementById('status-toast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  function switchTab(tabId) {
+    const tabs = ['banners', 'categories', 'sponsored'];
+    tabs.forEach(t => {
+      const el = document.getElementById('tab-' + t);
+      if (!el) return;
+      if (t === tabId) {
+        el.className = "flex-1 min-w-[100px] py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center space-x-1";
+      } else {
+        el.className = "flex-1 min-w-[100px] py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-secondary hover:text-on-surface flex items-center justify-center space-x-1";
+      }
+    });
+
+    showToast("Switched to " + tabId.charAt(0).toUpperCase() + tabId.slice(1) + " deck", "view_kanban");
+  }
+
+  function updatePreviewSlide(slideIndex, isChecked) {
+    const titleEl = document.getElementById('mini-banner-title');
+    const titles = [
+      "Super Tech Week - Up to 40% Audio",
+      "Kikuubo Wholesalers Direct Bulk Hub",
+      "SwiftExpress Same-Day Free Boda"
+    ];
+    if (isChecked && titleEl) {
+      titleEl.innerText = titles[slideIndex];
+      showToast("Live Mobile Preview updated to Slide #" + (slideIndex + 1), "phone_iphone");
+    } else {
+      showToast("Slide #" + (slideIndex + 1) + " state modified", "tune");
+    }
+  }
+
+  function toggleAdStatus(isChecked) {
+    const badge = document.getElementById('ad-status-badge');
+    if (isChecked) {
+      badge.innerText = "Running";
+      badge.className = "font-label-sm text-label-sm text-tertiary font-bold";
+      showToast("Campaign approved & live in Top 3 search", "campaign");
+    } else {
+      badge.innerText = "Paused";
+      badge.className = "font-label-sm text-label-sm text-secondary font-bold";
+      showToast("Campaign paused by admin moderation", "pause_circle");
+    }
+  }
+
+  function triggerAuditToast() {
+    showToast("Merchant Sound Hub compliant with SwiftCart SLA", "verified");
+  }
+
+  function quickEditBid() {
+    showToast("Bid modal queued for UGX 412 CPC", "edit");
+  }
+
+  function showToast(msg, icon) {
+    const toast = document.getElementById('status-toast');
+    const msgEl = document.getElementById('toast-message');
+    const iconEl = document.getElementById('toast-icon');
+    if (!toast) return;
+    msgEl.innerText = msg;
+    if (icon) iconEl.innerText = icon;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 2800);
+  }
+</script></div></main></body></html>

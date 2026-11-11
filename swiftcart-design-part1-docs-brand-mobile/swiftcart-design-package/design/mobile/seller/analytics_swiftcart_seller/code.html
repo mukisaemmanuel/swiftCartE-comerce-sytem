@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>SwiftCart Seller Hub</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f8f9ff", "on-background": "#0d1c2f", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "surface-container-highest": "#d5e3fd", "on-primary-fixed-variant": "#862200", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#b02f00", "surface-container-lowest": "#ffffff", "on-primary-container": "#541200", "on-secondary-fixed-variant": "#3f465c", "surface-container": "#e6eeff", "outline": "#907067", "surface": "#f8f9ff", "secondary-fixed": "#dae2fd", "on-secondary-container": "#5c647a", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "primary": "#b02f00", "surface-container-high": "#dde9ff", "outline-variant": "#e4beb4", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "inverse-on-surface": "#ebf1ff", "primary-container": "#ff5722", "error-container": "#ffdad6", "on-surface-variant": "#5b4039", "on-surface": "#0d1c2f", "on-primary-fixed": "#3b0900", "tertiary": "#006c49", "inverse-primary": "#ffb5a0", "surface-bright": "#f8f9ff", "error": "#ba1a1a", "surface-dim": "#ccdbf4", "inverse-surface": "#233144", "primary-fixed": "#ffdbd1", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#005236", "tertiary-container": "#00a572", "secondary-container": "#dae2fd", "surface-variant": "#d5e3fd", "primary-fixed-dim": "#ffb5a0", "surface-container-low": "#eff4ff", "secondary": "#565e74", "on-tertiary-container": "#00311f", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "margin-desktop": "2rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><h1 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Analytics</h1></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="document.documentElement.classList.toggle('dark')"><span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-gutter pb-space-xl space-y-space-lg text-on-surface">
+<!-- Interactive Date Range Selector Pills -->
+<section aria-label="Date Range Filters" class="pt-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-xs -mx-gutter px-gutter">
+<button class="h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all active:scale-95" type="button">
+        Today
+      </button>
+<button class="h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all active:scale-95" type="button">
+        Yesterday
+      </button>
+<button class="h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-primary text-on-primary shadow-sm transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px] mr-1.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        Last 7 Days
+      </button>
+<button class="h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all active:scale-95" type="button">
+        Last 30 Days
+      </button>
+<button class="h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px] mr-1">date_range</span>
+        Custom Range
+      </button>
+</div>
+</section>
+<!-- Live Snapshot Banner (Human Delight & Health Check) -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Store Velocity is High</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ahead of 88% of tech merchants this week</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm">
+        Live Synced
+      </span>
+</div>
+</section>
+<!-- Core Metric Cards (2x2 Grid with Mini Sparklines) -->
+<section aria-label="Key Performance Indicators" class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Store Metrics</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">vs. prev 7 days</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Gross Revenue -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Gross Revenue</span>
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+</div>
+<div class="my-space-xs">
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">UGX 14.25M</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">UGX 14,250,000</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">arrow_upward</span>
+            +22.8%
+          </span>
+<!-- Inline Sparkline 1 -->
+<svg aria-hidden="true" class="w-14 h-5 text-tertiary shrink-0" fill="none" viewbox="0 0 56 20">
+<path d="M1 17L10 13L19 15L28 9L37 11L46 4L55 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2: Completed Orders -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Completed Orders</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+</div>
+<div class="my-space-xs">
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">86</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Total packages delivered</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">add</span>
+            14 orders
+          </span>
+<!-- Inline Sparkline 2 -->
+<svg aria-hidden="true" class="w-14 h-5 text-tertiary shrink-0" fill="none" viewbox="0 0 56 20">
+<path d="M1 18L10 14L19 16L28 10L37 7L46 9L55 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 3: Store Conversion Rate -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Conversion Rate</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">ads_click</span>
+</div>
+<div class="my-space-xs">
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">4.8%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Market Avg: 4.2%</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">arrow_upward</span>
+            +0.6% bench
+          </span>
+<!-- Inline Sparkline 3 -->
+<svg aria-hidden="true" class="w-14 h-5 text-tertiary shrink-0" fill="none" viewbox="0 0 56 20">
+<path d="M1 15L10 16L19 12L28 13L37 8L46 6L55 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 4: Return Rate -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Return Rate</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">assignment_return</span>
+</div>
+<div class="my-space-xs">
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">1.2%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 item disputed</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5" style="font-variation-settings: 'FILL' 1;">check</span>
+            &lt; 2.0% bench
+          </span>
+<!-- Inline Sparkline 4 (stable/healthy) -->
+<svg aria-hidden="true" class="w-14 h-5 text-tertiary shrink-0" fill="none" viewbox="0 0 56 20">
+<path d="M1 8L10 9L19 7L28 10L37 8L46 11L55 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Low-Data Chart 1: Daily Revenue Trend (3G Optimized Bar Chart) -->
+<section aria-label="Daily Revenue Trend" class="rounded-xl bg-surface-container p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Daily Revenue Trend</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Peak velocity on weekends</p>
+</div>
+<span class="inline-flex items-center px-space-xs py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+        UGX Millions
+      </span>
+</div>
+<!-- Pure CSS/SVG High-Contrast Bar Visual -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-7 gap-space-xs items-end h-32 px-1">
+<!-- Monday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.1M</span>
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary-container transition-all" style="height: 28%;"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">M</span>
+</div>
+<!-- Tuesday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.4M</span>
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary-container transition-all" style="height: 36%;"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">T</span>
+</div>
+<!-- Wednesday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.6M</span>
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary-container transition-all" style="height: 42%;"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">W</span>
+</div>
+<!-- Thursday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.8M</span>
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary-container transition-all" style="height: 48%;"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">T</span>
+</div>
+<!-- Friday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.4M</span>
+<div class="w-full bg-primary-container/80 rounded-t hover:bg-primary transition-all" style="height: 64%;"></div>
+<span class="font-label-md text-label-md text-on-surface font-bold">F</span>
+</div>
+<!-- Saturday (Peak Highlight) -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-primary font-bold">3.9M</span>
+<div class="w-full bg-primary rounded-t shadow-sm" style="height: 100%;"></div>
+<span class="font-label-md text-label-md text-primary font-bold">S</span>
+</div>
+<!-- Sunday -->
+<div class="flex flex-col items-center gap-1 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.0M</span>
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary-container transition-all" style="height: 52%;"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">S</span>
+</div>
+</div>
+</div>
+<!-- Plain-language human contextual caption -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0">tips_and_updates</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">Saturday had highest sales</strong> driven by Weekend Electronics Flash Sale.
+      </p>
+</div>
+</section>
+<!-- Low-Data Chart 2: Views vs Orders Conversion Funnel -->
+<section aria-label="Conversion Funnel" class="rounded-xl bg-surface-container p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Customer Funnel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Discovery to completion pipeline</p>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">Top 5% Flow</span>
+</div>
+<!-- Funnel Visualization Layers -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Step 1: Store Visits -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
+            Store Visits
+          </span>
+<span class="text-on-surface font-bold">18,400</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Step 2: Added to Cart -->
+<div class="space-y-1 pl-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shopping_cart</span>
+            Added to Cart
+          </span>
+<div class="text-right">
+<span class="text-on-surface font-bold">2,140</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm ml-1">(11.6%)</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 11.6%;"></div>
+</div>
+</div>
+<!-- Step 3: Completed Orders -->
+<div class="space-y-1 pl-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+            Completed Orders
+          </span>
+<div class="text-right">
+<span class="text-on-surface font-bold">86</span>
+<span class="text-tertiary font-label-sm text-label-sm ml-1 font-bold">(4.8%)</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 4.8%;"></div>
+</div>
+</div>
+</div>
+<!-- Plain-language action insight caption -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">campaign</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">12% cart abandonments</strong> could be converted using exit-intent vouchers.
+      </p>
+</div>
+</section>
+<!-- Top Selling Products Leaderboard -->
+<section aria-label="Top Selling Products" class="rounded-xl bg-surface-container p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Top Selling Products</h3>
+<button class="h-10 px-space-sm rounded-full font-label-md text-label-md text-primary font-semibold flex items-center hover:bg-surface-container-high transition-colors active:scale-95" type="button">
+        View All
+        <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shrink-0">
+          1
+        </div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="SoundCore Space One active noise cancelling wireless headphones, sleek matte black finish, clean minimal commercial product studio shot on pure dark background, soft rim lighting, premium tech packaging vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOT-kyjBXkSc6-oS48F7n5UX96HQ_wKbeQsHxYH9k9m6plTDvpPWmU9X9sDHndshqkgfKSEpZb4qiqESK2J1iIoGMljyxhJr_uhZdpp3rxaPZfrV6DbycGq2CtW-flJFrAxJL7Ed9bVyXCoYZ2EF9nEVrCR5WaddRdCEE0XG2RZNOZo54_78fAe72J-nVHzAtFrTA2scg02Flgp5S633H9ules60zxk5rwNI8XX6RC"/>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">SoundCore Space One</p>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">34 Units sold</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">UGX 11,730,000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0" title="High Momentum">local_fire_department</span>
+</div>
+<!-- Item 2 -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center shrink-0">
+          2
+        </div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Baseus 65W GaN Charger compact wall adapter with multiple USB-C ports, deep slate grey housing with subtle orange accent, modern electronics product photography, crisp directional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvoWfOktCYERbp6N5ZfI8fQs5IvozsJIFkMwt9bj4J4aPZud9kLeIoW7HpR575lzP4vlwl6G-LSA9WNW0j2YpNo0E0FFYWl-vSxIF_0Cm44H7FNJ-IT4SkfI-iTX8XsfILGhQernMPL25QMoXaMcQYU1DtG3Om2Rg2Bwo_Ml8siXo62fkC4ny0ffiU0s8RO0tVMipvvcJ-lDO35VNAFNFXY_q14eXcwgBvKlFBvgH"/>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Baseus 65W GaN Charger</p>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">28 Units sold</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">UGX 2,380,000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">trending_flat</span>
+</div>
+<!-- Item 3 -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center shrink-0">
+          3
+        </div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Anker 20W Fast Plug power adapter, clean gloss finish, ergonomic compact wall socket adapter for smartphone charging, isolated commercial studio lighting against dark slate canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH7XGcWw-WPnwfuYJQ15LLe_TmfYorsnhE5mWgxohFreCdVEfh9VatSBdbJMi5GmZB-ukmTtkIwL0ZAkYhnFkhscxaAtms3WJI6oCmv2KUOmsRQ2iKrP1YLLMeQqV-q3GIaSeO5OKmxwxDmwM6GCsoaT3kAPpW_kBk-Zz5xbG30MHX6q1Tm_2tbMMUOqiMBFoxk_-xq73K8ougeOLGMxzoRaKDIUGwbWUxXb5DSj8q"/>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Anker 20W Fast Plug</p>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">24 Units sold</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">UGX 1,080,000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">trending_flat</span>
+</div>
+</div>
+</section>
+<!-- Customer Geography Breakdown -->
+<section aria-label="Customer Geography Breakdown" class="rounded-xl bg-surface-container p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Customer Geography</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deliveries across Uganda</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary bg-surface-container-highest px-space-xs py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+        Same-Day Ready
+      </div>
+</div>
+<!-- Segmented Proportional Visual Strip -->
+<div class="w-full h-3.5 rounded-full overflow-hidden flex bg-surface-container-highest">
+<div class="h-full bg-primary" style="width: 64%;" title="Kampala 64%"></div>
+<div class="h-full bg-primary-container" style="width: 21%;" title="Wakiso 21%"></div>
+<div class="h-full bg-secondary" style="width: 9%;" title="Mukono 9%"></div>
+<div class="h-full bg-secondary-fixed-dim" style="width: 4%;" title="Entebbe 4%"></div>
+<div class="h-full bg-outline" style="width: 2%;" title="Other 2%"></div>
+</div>
+<!-- Clear Region Legend with High Readability -->
+<div class="space-y-space-xs pt-space-xs">
+<!-- Kampala -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Kampala Metropolitan</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">64%</span>
+</div>
+<!-- Wakiso -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Wakiso District</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">21%</span>
+</div>
+<!-- Mukono -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Mukono</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">9%</span>
+</div>
+<!-- Entebbe -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Entebbe Corridor</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4%</span>
+</div>
+<!-- Other -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-outline shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Other Upcountry Regions</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">2%</span>
+</div>
+</div>
+</section>
+<!-- Tactical Merchant Action Dock (48px targets) -->
+<section class="pt-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-12 w-full rounded-full bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs hover:bg-surface-container-highest transition-all active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+        Export CSV
+      </button>
+<button class="h-12 w-full rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs hover:bg-primary transition-all active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">local_offer</span>
+        Run Campaign
+      </button>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for the date pills
+  document.querySelectorAll('section[aria-label="Date Range Filters"] button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('section[aria-label="Date Range Filters"] button').forEach(b => {
+        b.className = 'h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all active:scale-95';
+        const icon = b.querySelector('.material-symbols-outlined');
+        if (icon && icon.textContent.includes('check_circle')) {
+          icon.remove();
+        }
+      });
+      button.className = 'h-12 px-space-md shrink-0 rounded-full font-label-md text-label-md flex items-center justify-center bg-primary text-on-primary shadow-sm transition-all active:scale-95';
+      if (!button.querySelector('.material-symbols-outlined')) {
+        const checkIcon = document.createElement('span');
+        checkIcon.className = 'material-symbols-outlined text-[16px] mr-1.5';
+        checkIcon.style.fontVariationSettings = "'FILL' 1";
+        checkIcon.textContent = 'check_circle';
+        button.prepend(checkIcon);
+      }
+    });
+  });
+</script></main></body></html>

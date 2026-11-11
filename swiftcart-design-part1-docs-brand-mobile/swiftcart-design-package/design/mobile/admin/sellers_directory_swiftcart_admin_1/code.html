@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#ebf1ff", "surface-variant": "#d5e3fd", "secondary-container": "#dae2fd", "error": "#ba1a1a", "background": "#f8f9ff", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "surface-container": "#e6eeff", "inverse-primary": "#ffb5a0", "primary-fixed": "#ffdbd1", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#ff5722", "inverse-surface": "#233144", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#131b2e", "on-primary-container": "#541200", "secondary": "#565e74", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "surface-container-highest": "#d5e3fd", "on-secondary": "#ffffff", "on-secondary-container": "#5c647a", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2fd", "on-primary-fixed-variant": "#862200", "on-error-container": "#93000a", "outline-variant": "#e4beb4", "tertiary-container": "#00a572", "surface-container-high": "#dde9ff", "on-error": "#ffffff", "surface-dim": "#ccdbf4", "on-surface": "#0d1c2f", "on-tertiary-container": "#00311f", "surface-tint": "#b02f00", "tertiary-fixed": "#6ffbbe", "primary-fixed-dim": "#ffb5a0", "outline": "#907067", "tertiary": "#006c49", "surface": "#f8f9ff", "on-background": "#0d1c2f", "on-surface-variant": "#5b4039", "secondary-fixed-dim": "#bec6e0", "primary": "#b02f00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-md": "0.75rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="swiftcart-logo-icon-only.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Sellers Directory</h1></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">routine</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex-1 w-full px-margin pt-space-md pb-space-lg"><div class="flex flex-col w-full space-y-space-md">
+<!-- Search & Tactical Query Bar -->
+<div class="relative w-full">
+<div class="bg-surface-container-low rounded-xl p-space-xs shadow-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline ml-space-xs text-[22px]">search</span>
+<input class="bg-transparent flex-1 py-space-sm text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none" id="sellerSearchInput" placeholder="Search store name, ID or URA TIN..." type="text"/>
+<button aria-label="Filter presets" class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Scroll Filter Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-margin px-margin scrollbar-none">
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shrink-0 active:scale-95 transition-all shadow-sm" data-filter="all">
+      All (142)
+    </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all" data-filter="active">
+      Active (128)
+    </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md shrink-0 active:scale-95 transition-all" data-filter="suspended">
+      Suspended (6)
+    </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all" data-filter="kampala">
+      Kampala Central
+    </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all" data-filter="nakawa">
+      Nakawa
+    </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all" data-filter="mukono">
+      Mukono
+    </button>
+</div>
+<!-- Summary Metric Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Merchant Network Health</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">98.1% Good Standing</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary bg-surface-container-low px-2 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span> Live Sync
+      </span>
+</div>
+</div>
+<!-- CARD 1: SoundCore Uganda Official (Expanded / Deep Audit View) -->
+<div class="seller-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md relative overflow-hidden" data-region="kampala" data-status="active">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-primary/5 rounded-full pointer-events-none"></div>
+<!-- Seller Title & Micro-Badges -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm bg-surface-container" data-alt="Modern audio flagship retail store in downtown Kampala with sleek neon accent lighting and premium audio accessories neatly organized on modern oak shelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCazQw5sLNDqMEwdMBwRNmrITBT41MHYj2xHVN5UTkZ5Um1Cc_aqBoqgu4mJ5hRiGQ6aIkk37-45k2MLGMtV9s4oj8pPDPXac76Xzh9_hKdg58nXzUMo_eZ-Olexf_7sNpuceTEs8SITiWlNUbrQqbSTR8MEG8Iy6X-kI_ZOzxQrxOSQomztjV6y1DUDRHCuGKK6aeJVKvjLvmknuTLoOVlAIWINMEQwuBhpBvumGpj"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+</div>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda Official</h2>
+</div>
+<p class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="text-on-surface-variant font-label-md">#VND-8821</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[12px] text-outline">location_on</span> Kikuubo Lane
+          </p>
+</div>
+</div>
+<span class="bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full shrink-0 font-bold">
+        Tier 2 Verified
+      </span>
+</div>
+<!-- Credibility & Longevity Row -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface-container-low rounded-lg px-space-md py-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.8</span>
+<span class="text-secondary font-label-sm text-label-sm">(1,240 reviews)</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Joined Mar 2024
+      </div>
+</div>
+<!-- Core Business Metrics Bento Strip -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block leading-tight">Total Sales GMV</span>
+<span class="font-headline-sm text-headline-sm text-primary block mt-1 tracking-tight">UGX 184.2M</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +14.2% MoM
+        </span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block leading-tight">Active Listings</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1 tracking-tight">34 SKUs</span>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">All in stock</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block leading-tight">Disputes</span>
+<span class="font-headline-sm text-headline-sm text-tertiary block mt-1 tracking-tight">3 Resolved</span>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">100% merchant win</span>
+</div>
+</div>
+<!-- Escrow Health Progress Block -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-space-xs">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">health_and_safety</span> Escrow Settlement Reliability
+        </span>
+<span class="font-label-md text-label-md text-tertiary">99.4% Flawless Completion</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 99.4%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary pt-0.5">
+        Average disbursement clearing window: <strong class="text-on-surface">18 minutes post-delivery confirmation</strong>.
+      </p>
+</div>
+<!-- Quick Ops Actions -->
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<button class="h-10 rounded-lg bg-surface-container text-on-surface flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high active:scale-95 transition-all" onclick="alert('Redirecting to Public Catalog for SoundCore Uganda Official')" type="button">
+<span class="material-symbols-outlined text-[16px]">storefront</span> Storefront
+      </button>
+<button class="h-10 rounded-lg bg-surface-container text-on-surface flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high active:scale-95 transition-all" onclick="window.open('tel:+256700123456')" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">phone_forwarded</span> WhatsApp
+      </button>
+<button class="h-10 rounded-lg bg-surface-container text-on-surface flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high active:scale-95 transition-all" onclick="openAuditModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">policy</span> Logs
+      </button>
+</div>
+<!-- Danger Staff Trigger: Suspend Seller -->
+<div class="pt-1">
+<button class="w-full h-11 rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg flex items-center justify-center gap-space-xs active:scale-98 transition-transform shadow-xs" onclick="openSuspendDrawer('SoundCore Uganda Official', '#VND-8821')" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span>
+        Suspend Merchant Access
+      </button>
+</div>
+</div>
+<!-- CARD 2: Kampala Phone Hub (Suspended State) -->
+<div class="seller-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md relative overflow-hidden" data-region="kampala" data-status="suspended">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover grayscale opacity-80 bg-surface-container" data-alt="Electronics store specializing in mobile phones and communication accessories with tempered glass displays and inventory drawers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHArySk6XZ4GI22P2r5BbAVljoJYjXFRtpkiYTRF_qPuWuStV9l9XdbiCrsSISv7-x_2A2SVT5UE9rtAgj9h_7ypGndZALOeVHx5Wq8wvx76fYuJ5RyyhE9pAuBVG-iXTPzV2KgZTv3lqnY7YBwdKix7KsDZgpcHgphN3bRuvWsH5a7ZASWq8ESQ-lvhfzLFIIiLmJ12yQDtgFLrvaiEqPMgM6YzGhPpDlU-75-rop"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error text-on-error flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+</div>
+</div>
+<div class="min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Kampala Phone Hub</h2>
+<p class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="text-on-surface-variant font-label-md">#VND-9102</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[12px] text-outline">location_on</span> Pioneer Mall, Nakasero
+          </p>
+</div>
+</div>
+<span class="bg-error text-on-error font-label-sm text-label-sm px-2.5 py-1 rounded-full shrink-0 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pause_circle</span> Suspended
+      </span>
+</div>
+<!-- Suspension Notice Box -->
+<div class="bg-error-container/40 p-space-md rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-on-error-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+        Suspension Reason on File:
+      </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+        "High rate of canceled dispatches during evening peak (8 SLA breaches logged over 48 hours)."
+      </p>
+<div class="text-secondary font-label-sm text-label-sm pt-1 flex items-center justify-between">
+<span>Actioned by: Admin Sarah N.</span>
+<span>Expires in: 4 days</span>
+</div>
+</div>
+<!-- Key Frozen Metrics -->
+<div class="grid grid-cols-2 gap-space-xs text-on-surface">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Pending Escrow Hold</span>
+<span class="font-headline-sm text-headline-sm text-error block mt-0.5">UGX 12,450,000</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Frozen Catalog Items</span>
+<span class="font-headline-sm text-headline-sm text-secondary block mt-0.5">19 SKUs Locked</span>
+</div>
+</div>
+<!-- Reinstate Trigger -->
+<button class="w-full h-11 rounded-lg bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-space-xs active:scale-98 transition-transform shadow-xs" onclick="openReinstateDialog('Kampala Phone Hub', '#VND-9102')" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+      Reinstate Seller Storefront
+    </button>
+</div>
+<!-- CARD 3: Victoria Beauty Importers (Active Normal View) -->
+<div class="seller-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm" data-region="nakawa" data-status="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container shadow-sm" data-alt="Cosmetics and beauty supplies distribution showroom with polished white counter displays and orderly branded skin care bottles in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbm4M3Y40ZJaHMZm5o4hd318hkpLu1gd0kvJOmj9gQB20YxaySi674_Wsi9Lb30jBxKSuv1hvEVXM-ROYrxFgSK21X7oKM-N94cE77swfdyBtfxSEQGNc2X8PayhXgnWvoxR7tOHKwK8FyTA_xbnxabqphqimlcWhenZ8z20x5ii5JB7Hv5GXuY7_R7_ioporFfDPNZCc_HCavWPnGuTonzjgPpc7ctsI353JMagb9"/>
+<div class="min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Victoria Beauty Importers</h2>
+<p class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="text-on-surface-variant font-label-md">#VND-7744</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[12px] text-outline">location_on</span> Nakawa Industrial Area
+          </p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full shrink-0 font-bold">
+        Tier 1 Registered
+      </span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-secondary block">GMV Total</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">UGX 42.0M</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-secondary block">Rating</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center justify-center gap-0.5">
+          4.7 <span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-secondary block">Live Status</span>
+<span class="font-label-lg text-label-lg text-tertiary font-bold">Active</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm">
+<span class="text-secondary">URA TIN: 1002998341 (Valid)</span>
+<button class="text-primary font-label-md text-label-md flex items-center gap-0.5 active:opacity-75" onclick="alert('Showing Quick Details for Victoria Beauty Importers')" type="button">
+        Manage Merchant <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bottom Empty State / End of Feed Delight Notice -->
+<div class="bg-surface-container-low rounded-xl p-space-md text-center space-y-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container/15 text-primary mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">local_police</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">SwiftCart Escrow &amp; Merchant Integrity</p>
+<p class="font-body-sm text-body-sm text-secondary">
+      All automated dispatch audits recalculate hourly. Suspended accounts lose checkout gateway integration immediately.
+    </p>
+</div>
+<!-- SUSPEND SELLER BOTTOM SHEET (Modal Triggered by Danger Button) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/60 backdrop-blur-xs flex items-end justify-center p-0 transition-opacity" id="suspendModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-xl space-y-space-md max-h-[795px] overflow-y-auto">
+<!-- Modal Header Handle -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-1.5 rounded-full bg-surface-variant mb-space-sm"></div>
+<div class="w-full flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Suspend Merchant</h3>
+<p class="font-label-sm text-label-sm text-secondary" id="suspendTargetName">Loading seller target...</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center" onclick="closeSuspendDrawer()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Suspension Duration Selection -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Select Penalty Duration</label>
+<div class="grid grid-cols-3 gap-space-xs">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="suspend_duration" type="radio" value="7"/>
+<div class="p-space-sm rounded-lg bg-surface-container text-center peer-checked:bg-error peer-checked:text-on-error text-body-md font-label-md transition-colors">
+              7 Days
+            </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="suspend_duration" type="radio" value="30"/>
+<div class="p-space-sm rounded-lg bg-surface-container text-center peer-checked:bg-error peer-checked:text-on-error text-body-md font-label-md transition-colors">
+              30 Days
+            </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="suspend_duration" type="radio" value="indefinite"/>
+<div class="p-space-sm rounded-lg bg-surface-container text-center peer-checked:bg-error peer-checked:text-on-error text-body-md font-label-md transition-colors">
+              Indefinite
+            </div>
+</label>
+</div>
+</div>
+<!-- Mandatory Reason Input -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="suspensionReasonInput">
+<span>Mandatory Reason for Record</span>
+<span class="font-label-sm text-label-sm text-error">* Required</span>
+</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none" id="suspensionReasonInput" placeholder="E.g., Dispatched counterfeit accessories, persistent SLA dispatch timeout, customer harassment report..." rows="3"></textarea>
+<p class="font-body-sm text-body-sm text-secondary">This explanation will be logged to Uganda HQ compliance archive and SMS notified to the merchant.</p>
+</div>
+<!-- Compliance Checkbox -->
+<label class="flex items-start gap-space-sm p-space-xs cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded text-error accent-error cursor-pointer" id="complianceCheckbox" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+          I confirm that frozen orders will route to the SwiftCart Escrow buffer and the merchant payout cycle will halt.
+        </span>
+</label>
+<!-- Action Confirmation Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-12 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg active:scale-95 transition-transform" onclick="closeSuspendDrawer()" type="button">
+          Cancel
+        </button>
+<button class="h-12 rounded-lg bg-error text-on-error font-label-lg text-label-lg flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-md" id="confirmSuspendBtn" onclick="handleExecuteSuspension()" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+          Confirm Freeze
+        </button>
+</div>
+</div>
+</div>
+<!-- REINSTATE SELLER DIALOG -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/60 backdrop-blur-xs flex items-center justify-center p-margin transition-opacity" id="reinstateModal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl space-y-space-md text-center">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 text-tertiary mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">store</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Reinstate Merchant Store?</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1" id="reinstateTargetName">
+          Storefront listings will immediately relist across the Kampala Central marketplace catalog.
+        </p>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-11 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md active:scale-95 transition-transform" onclick="closeReinstateDialog()" type="button">
+          Keep Suspended
+        </button>
+<button class="h-11 rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md active:scale-95 transition-transform font-bold" onclick="handleExecuteReinstatement()" type="button">
+          Reinstate Now
+        </button>
+</div>
+</div>
+</div>
+<!-- AUDIT LOG MODAL -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/60 backdrop-blur-xs flex items-end justify-center p-0 transition-opacity" id="auditModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-xl space-y-space-md max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Store Audit Trail</h3>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center" onclick="closeAuditModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm text-body-sm font-body-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary mb-1">
+<span>22 May 2024 • 14:32 EAT</span>
+<span class="text-tertiary font-bold">Passed</span>
+</div>
+<p class="text-on-surface font-label-md text-label-md">Tier 2 Physical Onsite Verification</p>
+<p class="text-secondary text-body-sm mt-0.5">Field agent David Mukasa inspected warehouse at Kikuubo Lane. 100% genuine inventory audit.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary mb-1">
+<span>11 Apr 2024 • 09:10 EAT</span>
+<span class="text-secondary font-bold">Settled</span>
+</div>
+<p class="text-on-surface font-label-md text-label-md">Customer Packaging Dispute #DP-092</p>
+<p class="text-secondary text-body-sm mt-0.5">Buyer claimed broken seal. CCTV footage reviewed; manufacturer tamper strip confirmed intact prior to handover.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary mb-1">
+<span>01 Mar 2024 • 11:00 EAT</span>
+<span class="text-primary font-bold">Onboarded</span>
+</div>
+<p class="text-on-surface font-label-md text-label-md">URA TIN Validation &amp; Bank Linking</p>
+<p class="text-secondary text-body-sm mt-0.5">Stanbic Bank UG Escrow merchant account tied and tested via UGX 5,000 micro-deposit.</p>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg" onclick="closeAuditModal()" type="button">
+        Close Audit History
+      </button>
+</div>
+</div>
+</div>
+<script>
+  let activeTargetStore = '';
+  let activeTargetId = '';
+
+  // Suspension Drawer Logic
+  function openSuspendDrawer(name, id) {
+    activeTargetStore = name;
+    activeTargetId = id;
+    const nameEl = document.getElementById('suspendTargetName');
+    if (nameEl) nameEl.textContent = `${name} (${id})`;
+    const modal = document.getElementById('suspendModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeSuspendDrawer() {
+    const modal = document.getElementById('suspendModal');
+    if (modal) modal.classList.add('hidden');
+    const reasonInput = document.getElementById('suspensionReasonInput');
+    if (reasonInput) reasonInput.value = '';
+    const compBox = document.getElementById('complianceCheckbox');
+    if (compBox) compBox.checked = false;
+  }
+
+  function handleExecuteSuspension() {
+    const reason = document.getElementById('suspensionReasonInput').value.trim();
+    const isChecked = document.getElementById('complianceCheckbox').checked;
+
+    if (!reason) {
+      alert('Mandatory Requirement: Please provide an explicit reason for this merchant suspension.');
+      return;
+    }
+
+    if (!isChecked) {
+      alert('Please check the confirmation box acknowledging escrow settlement freeze.');
+      return;
+    }
+
+    const duration = document.querySelector('input[name="suspend_duration"]:checked')?.value || '7';
+    alert(`Success: ${activeTargetStore} has been placed under administrative freeze for ${duration === 'indefinite' ? 'an Indefinite period' : duration + ' days'}. Reason logged: "${reason}"`);
+    closeSuspendDrawer();
+  }
+
+  // Reinstatement Dialog Logic
+  function openReinstateDialog(name, id) {
+    activeTargetStore = name;
+    activeTargetId = id;
+    const nameEl = document.getElementById('reinstateTargetName');
+    if (nameEl) nameEl.textContent = `Are you sure you want to lift all restrictions for ${name} (${id})? Live listing synching will resume.`;
+    const modal = document.getElementById('reinstateModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeReinstateDialog() {
+    const modal = document.getElementById('reinstateModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function handleExecuteReinstatement() {
+    alert(`Merchant ${activeTargetStore} has been successfully reinstated. Notifications dispatched to merchant portal.`);
+    closeReinstateDialog();
+  }
+
+  // Audit Log Modal Logic
+  function openAuditModal() {
+    const modal = document.getElementById('auditModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeAuditModal() {
+    const modal = document.getElementById('auditModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  // Interactive Quick Filters
+  document.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Toggle pill styles
+      document.querySelectorAll('.filter-pill').forEach(b => {
+        b.classList.remove('bg-inverse-surface', 'text-inverse-on-surface');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      this.classList.add('bg-inverse-surface', 'text-inverse-on-surface');
+
+      const filterVal = this.getAttribute('data-filter');
+      const cards = document.querySelectorAll('.seller-card');
+
+      cards.forEach(card => {
+        if (filterVal === 'all') {
+          card.classList.remove('hidden');
+        } else if (filterVal === 'active' || filterVal === 'suspended') {
+          if (card.getAttribute('data-status') === filterVal) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        } else {
+          // Region based filters
+          if (card.getAttribute('data-region') === filterVal) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+
+  // Simple live search filter
+  const searchInput = document.getElementById('sellerSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.seller-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  }
+</script></div></main></body></html>

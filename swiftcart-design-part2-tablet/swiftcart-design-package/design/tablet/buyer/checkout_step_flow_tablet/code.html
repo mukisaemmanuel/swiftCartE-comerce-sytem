@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#e6eeff", "on-secondary-container": "#5c647a", "surface-container-high": "#dde9ff", "on-primary-container": "#541200", "on-error": "#ffffff", "error-container": "#ffdad6", "background": "#f8f9ff", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005236", "surface-container-low": "#eff4ff", "primary-container": "#ff5722", "tertiary-fixed": "#6ffbbe", "on-secondary": "#ffffff", "on-primary-fixed": "#3b0900", "on-tertiary-container": "#00311f", "on-primary-fixed-variant": "#862200", "surface-tint": "#b02f00", "on-surface-variant": "#5b4039", "secondary-container": "#dae2fd", "primary": "#b02f00", "on-surface": "#0d1c2f", "secondary": "#565e74", "tertiary": "#006c49", "secondary-fixed-dim": "#bec6e0", "secondary-fixed": "#dae2fd", "surface-variant": "#d5e3fd", "on-secondary-fixed": "#131b2e", "surface-container-highest": "#d5e3fd", "surface": "#f8f9ff", "surface-dim": "#ccdbf4", "on-tertiary": "#ffffff", "tertiary-container": "#00a572", "on-secondary-fixed-variant": "#3f465c", "outline-variant": "#e4beb4", "inverse-surface": "#233144", "primary-fixed": "#ffdbd1", "outline": "#907067", "on-primary": "#ffffff", "on-background": "#0d1c2f", "primary-fixed-dim": "#ffb5a0", "tertiary-fixed-dim": "#4edea3", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "inverse-primary": "#ffb5a0", "inverse-on-surface": "#ebf1ff", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-xl": "2rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "price-display": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.05)]"><div class="h-16 max-w-6xl mx-auto px-4 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="swiftcart-logo-final.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCjAcvdaZiKkpvrsIEDJdNqFPP2mR7z86JyiiyRWU-QgfgyjdC5U2REfBXddN0Fq24bOakZlP5aWwQ_md4j7SSzMLMjlnPgqFsoO8xfuKjH3oGmqoKUgnj1UZ15jlpbabufjIdK5yofvFHwiHzyTJocxHmW2aqOwlPK5s7wuHaIRtDALWJTwm5J6btfIleEGZV9V0ppMT1WKbwgg5McN85trXKm1OPcLPMJUobYGhRaQWZZGOX-LIR2RNw"/><span class="font-headline-sm text-headline-sm font-bold text-on-surface">SwiftCart</span><span class="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded bg-surface-container text-secondary font-bold tracking-wider">Checkout</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-tertiary font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[18px]">verified</span><span>Bank of Uganda &amp; MoMo Escrow Protected</span></div><div class="flex items-center gap-3"><a class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-[18px]">contact_support</span><span class="hidden sm:inline">Live Support</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 flex flex-col"><div class="flex flex-col w-full">
+<!-- Progress Stepper Header -->
+<div class="w-full bg-surface-container-lowest shadow-sm py-4 px-6 mb-6">
+<div class="max-w-5xl mx-auto flex items-center justify-between">
+<!-- Step 1 -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-surface-container-lowest flex items-center justify-center font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Step 1</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Delivery Address</span>
+</div>
+</div>
+<div class="h-[2px] flex-1 mx-4 bg-tertiary-container/30"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-md text-label-md shadow-sm ring-4 ring-primary-fixed">
+<span>2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">In Progress</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Delivery Method</span>
+</div>
+</div>
+<div class="h-[2px] flex-1 mx-4 bg-surface-container-high"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-3 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-secondary flex items-center justify-center font-label-md text-label-md">
+<span>3</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Upcoming</span>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">Payment Method</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tablet Split Container (834px target: ~62% Left, ~38% Right) -->
+<div class="w-full max-w-6xl mx-auto px-4 pb-12">
+<div class="flex flex-col md:flex-row gap-6 items-start">
+<!-- LEFT COLUMN: Checkout Configuration Steps (62%) -->
+<div class="w-full md:w-[62%] flex flex-col gap-6 min-w-0">
+<!-- Step 1: Confirmed Delivery Address (Collapsed) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-5 relative overflow-hidden transition-all duration-200">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary"></div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dennis Mukasa</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-md text-body-md font-semibold text-secondary">+256 772 123 456</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Kololo Verified Pin
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Plot 14 Acacia Avenue, Kololo (Opposite Acacia Mall), Kampala Central
+                </p>
+<div class="flex items-center gap-1.5 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">info</span>
+<span class="italic">"Call on arrival at the security gate. Leave with receptionist if unavailable."</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+</section>
+<!-- Step 2: Delivery Speed Options (Expanded Active) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-5 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-primary-container"></div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-surface-container-lowest font-label-sm text-label-sm font-bold flex items-center justify-center">2</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Select Delivery Option</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded font-semibold uppercase tracking-wide">
+              Kampala Fast Dispatch
+            </span>
+</div>
+<div class="space-y-3">
+<!-- Option A: Selected Boda Express -->
+<label class="group relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-low shadow-sm transition-all">
+<input checked="" class="mt-1 w-5 h-5 accent-primary shrink-0" name="delivery_method" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-extrabold text-on-surface">1-Hour Boda Express Delivery</span>
+<span class="bg-primary-container text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span> FASTEST
+                    </span>
+</div>
+<span class="font-headline-sm text-headline-sm font-black text-primary">UGX 5,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                  Delivered by <strong class="text-on-surface font-semibold">16:45 today</strong> by vetted SwiftRider Boda courier with live GPS tracking &amp; phone updates.
+                </p>
+<div class="flex items-center gap-3 mt-2.5 pt-2 bg-surface-container/60 rounded-lg px-2.5 py-1.5">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> Escrow Transit Insurance Included
+                  </div>
+<span class="text-secondary">•</span>
+<span class="font-label-sm text-label-sm text-secondary">Rider code handoff</span>
+</div>
+</div>
+</label>
+<!-- Option B: Central Hub Pickup -->
+<label class="group relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<input class="mt-1 w-5 h-5 accent-primary shrink-0" name="delivery_method" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">SwiftCart William St Central Hub Collection</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                      FREE
+                    </span>
+</div>
+<span class="font-headline-sm text-headline-sm font-black text-tertiary">UGX 0</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                  Ready in 30 mins at William St Hub #04 (Near Church House). Open till 20:00.
+                </p>
+<div class="mt-2">
+<button class="text-primary font-label-md text-label-md font-bold hover:underline inline-flex items-center gap-1" type="button">
+<span>Change Hub Station</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</label>
+<!-- Option C: Scheduled Delivery -->
+<label class="group relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<input class="mt-1 w-5 h-5 accent-primary shrink-0" name="delivery_method" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Scheduled Next-Day Delivery</span>
+<span class="font-headline-sm text-headline-sm font-black text-on-surface">UGX 3,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                  Select delivery slot: <strong class="text-on-surface">Tomorrow 09:00 - 12:00</strong>. Standard consolidation from industrial warehouse.
+                </p>
+</div>
+</label>
+</div>
+</section>
+<!-- Step 3: Payment Method Selection -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-5 relative overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-on-surface text-surface-container-lowest font-label-sm text-label-sm font-bold flex items-center justify-center">3</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Payment Method Selection</h2>
+</div>
+<span class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">lock</span> Uganda Escrow Secured
+            </span>
+</div>
+<div class="space-y-3">
+<!-- Payment 1: MTN MoMo (Selected) -->
+<label class="block p-4 rounded-xl cursor-pointer bg-surface-container-low transition-all relative overflow-hidden">
+<div class="flex items-start gap-3.5">
+<input checked="" class="mt-1 w-5 h-5 accent-primary shrink-0" name="payment_channel" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-[#ffcc00] text-black font-extrabold text-[12px] tracking-tight">MTN MoMo</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">MTN Mobile Money</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary px-2 py-0.5 rounded bg-tertiary-fixed/40">USSD *165# Instant</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1.5">
+                    Instant escrow lock prompt will be triggered to Dennis M. (<strong class="text-on-surface">+256 772 123 456</strong>).
+                  </p>
+<div class="mt-3 p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Funds held in SwiftCart Vault until code release</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">0% Surcharge</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Payment 2: Airtel Money -->
+<label class="block p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<div class="flex items-start gap-3.5">
+<input class="mt-1 w-5 h-5 accent-primary shrink-0" name="payment_channel" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-[#e60000] text-white font-extrabold text-[12px] tracking-tight">Airtel</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Airtel Money</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">USSD *185#</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    Pay securely using Airtel Money PIN prompt on your registered Airtel SIM.
+                  </p>
+</div>
+</div>
+</label>
+<!-- Payment 3: Credit/Debit Card -->
+<label class="block p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<div class="flex items-start gap-3.5">
+<input class="mt-1 w-5 h-5 accent-primary shrink-0" name="payment_channel" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="flex gap-1">
+<span class="px-2 py-0.5 rounded bg-inverse-surface text-surface-container-lowest font-label-sm text-label-sm font-extrabold">VISA</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-extrabold">MC</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Credit / Debit Card</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">3D Secure Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    Supports Stanbic, Absa, Centenary Bank &amp; standard international cards.
+                  </p>
+</div>
+</div>
+</label>
+<!-- Payment 4: Cash on Collection -->
+<label class="block p-4 rounded-xl cursor-not-allowed bg-surface-container-lowest opacity-60">
+<div class="flex items-start gap-3.5">
+<input class="mt-1 w-5 h-5 accent-primary shrink-0 cursor-not-allowed" disabled="" name="payment_channel" type="radio"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">store</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">Cash on Collection at Central Hub</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-semibold">Hub Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    Available solely when "SwiftCart William St Central Hub" is selected as delivery method.
+                  </p>
+</div>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Sticky Order Review & Escrow Guarantee (38%) -->
+<div class="w-full md:w-[38%] shrink-0 flex flex-col gap-5 sticky top-20">
+<!-- Order Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-3 border-b-0">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Order Summary</h3>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container text-secondary">
+              2 Vendors • 3 Items
+            </span>
+</div>
+<!-- Items Mini Gallery Preview -->
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-low shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High resolution commercial studio product photography of professional wireless Bluetooth earbuds in sleek matte black charging case resting on polished surface with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHm122YPhHwAASfatXvrXHawYCcCyABr4AZgeXEkyWBkntrtyTa1cY0AVWaDXAs63BqKr6_reK6f6c_cRAyHsqmYfxQ9qf575MSzvBvPhRu2g9Mk6oZDk51MrVp-7bcjHfUk1BjR16I_hR0aL3fghbR748-6J2LqNfUviKzevlFi_ixHc0JCZtbrSUwEyIydUrpnk6fyOf84J-D5jqPnQMRNtqydXFRST5StjK3_1_"/>
+<span class="absolute bottom-0 right-0 bg-inverse-surface/85 text-surface-container-lowest font-label-sm text-label-sm px-1 rounded-tl font-bold">1x</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="bg-inverse-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2 rounded">Official</span>
+<p class="font-label-md text-label-md font-bold text-on-surface truncate">Sony WF-1000XM5 ANC Earbuds</p>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Anker Tech Kampala</p>
+<p class="font-label-md text-label-md font-extrabold text-on-surface mt-0.5">UGX 245,000</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-low shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Commercial tech photography of an ultra-slim 20000mAh fast charge power bank with digital LED battery percentage display and braided orange cables on slate table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbw3Av27lFtQzO76v840x8HOJUeDmumk6BPphxodSLTIx49yGMtYwdF74SBXRZlOdflynz2gF_1O2gaikDCdnPyDsBlENLGIbuq64MAQHbWBgYPAUnl8MhRIRgcXNB4tu8pO6mUoNRkUg4jdPWdjmTBfsCITKGMQOGoY1I536fc7OS0kaoH9kNR4y9sfnVMS9yoTc5UKZKzkmuliAGNc-HNFPHgdz1GpGMPlGwORU7"/>
+<span class="absolute bottom-0 right-0 bg-inverse-surface/85 text-surface-container-lowest font-label-sm text-label-sm px-1 rounded-tl font-bold">2x</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Verified</span>
+<p class="font-label-md text-label-md font-bold text-on-surface truncate">Baseus 65W GaN Fast Charger</p>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Simba Telecom Direct</p>
+<p class="font-label-md text-label-md font-extrabold text-on-surface mt-0.5">UGX 153,500 <span class="font-body-sm text-body-sm font-normal text-secondary">(76,750 ea)</span></p>
+</div>
+</div>
+</div>
+<!-- Price Calculation Breakdown -->
+<div class="space-y-2 pt-3 bg-surface-container-low/70 -mx-5 px-5 py-4">
+<div class="flex items-center justify-between font-body-md text-body-md text-secondary">
+<span>Items Total (3)</span>
+<span class="font-semibold text-on-surface">UGX 398,500</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-tertiary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+                Kampala Flash Promo
+              </span>
+<span class="font-bold">-UGX 15,000</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">two_wheeler</span>
+                Express Boda Transit
+              </span>
+<span class="font-semibold text-on-surface">UGX 5,000</span>
+</div>
+<div class="h-[1px] bg-outline-variant/30 my-2"></div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Total Payable</span>
+<span class="font-label-sm text-label-sm text-secondary">All Uganda taxes &amp; VAT included</span>
+</div>
+<div class="text-right">
+<span class="font-price-display text-price-display font-black text-primary">UGX 388,500</span>
+</div>
+</div>
+</div>
+<!-- Escrow Guarantee Vault Card -->
+<div class="p-3.5 rounded-xl bg-surface-container text-on-surface space-y-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary text-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-tertiary uppercase tracking-wide">
+                SwiftCart Escrow Vault
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-snug">
+              Your payment is strictly locked in safe escrow until Dennis inspects the items and provides the secret <strong class="text-on-surface font-semibold">6-digit handover OTP</strong> to the courier.
+            </p>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full h-13 py-3.5 px-4 rounded-xl bg-primary-container hover:bg-primary transition-all duration-150 text-surface-container-lowest font-headline-sm text-headline-sm font-extrabold shadow-lg shadow-primary-container/30 flex items-center justify-center gap-2 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+<span>Pay UGX 388,500 with MTN MoMo</span>
+</button>
+<!-- Under-button assurance & terms -->
+<div class="flex flex-col items-center gap-1.5 pt-1 text-center">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">security</span>
+<span>100% Money-Back Escrow Guarantee • Instant USSD Prompt</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary text-[11px]">
+              By proceeding, you agree to the <a class="text-primary hover:underline" href="#">SwiftCart Buyer Protection Terms</a>.
+            </p>
+</div>
+</div>
+<!-- Escrow Trust Shield Banner -->
+<div class="rounded-xl p-4 bg-surface-container-high/60 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Inspected Delivery Protocol</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+              Not what Dennis ordered? Return immediately with the rider at zero extra expense.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction for smooth option selection highlight
+  document.querySelectorAll('input[name="delivery_method"]').forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      document.querySelectorAll('input[name="delivery_method"]').forEach((r) => {
+        const parent = r.closest('label');
+        if (parent) {
+          parent.classList.remove('bg-surface-container-low', 'shadow-sm');
+          parent.classList.add('bg-surface-container-lowest');
+        }
+      });
+      const selectedParent = e.target.closest('label');
+      if (selectedParent) {
+        selectedParent.classList.remove('bg-surface-container-lowest');
+        selectedParent.classList.add('bg-surface-container-low', 'shadow-sm');
+      }
+    });
+  });
+
+  document.querySelectorAll('input[name="payment_channel"]').forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      document.querySelectorAll('input[name="payment_channel"]').forEach((r) => {
+        const parent = r.closest('label');
+        if (parent && !r.disabled) {
+          parent.classList.remove('bg-surface-container-low', 'shadow-sm');
+          parent.classList.add('bg-surface-container-lowest');
+        }
+      });
+      const selectedParent = e.target.closest('label');
+      if (selectedParent) {
+        selectedParent.classList.remove('bg-surface-container-lowest');
+        selectedParent.classList.add('bg-surface-container-low', 'shadow-sm');
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low py-4 shadow-[0_-1px_6px_rgba(15,23,42,0.02)]"><div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left"><div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span><span>256-Bit SSL Encrypted Kampala Commerce Protocol</span></div><p class="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda. Guaranteed Safe Delivery.</p></div></footer></body></html>

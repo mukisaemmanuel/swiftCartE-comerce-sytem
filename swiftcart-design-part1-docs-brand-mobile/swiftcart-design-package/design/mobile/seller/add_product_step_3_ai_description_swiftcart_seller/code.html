@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>SwiftCart Seller Hub</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f8f9ff", "on-background": "#0d1c2f", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "surface-container-highest": "#d5e3fd", "on-primary-fixed-variant": "#862200", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#b02f00", "surface-container-lowest": "#ffffff", "on-primary-container": "#541200", "on-secondary-fixed-variant": "#3f465c", "surface-container": "#e6eeff", "outline": "#907067", "surface": "#f8f9ff", "secondary-fixed": "#dae2fd", "on-secondary-container": "#5c647a", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "primary": "#b02f00", "surface-container-high": "#dde9ff", "outline-variant": "#e4beb4", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "inverse-on-surface": "#ebf1ff", "primary-container": "#ff5722", "error-container": "#ffdad6", "on-surface-variant": "#5b4039", "on-surface": "#0d1c2f", "on-primary-fixed": "#3b0900", "tertiary": "#006c49", "inverse-primary": "#ffb5a0", "surface-bright": "#f8f9ff", "error": "#ba1a1a", "surface-dim": "#ccdbf4", "inverse-surface": "#233144", "primary-fixed": "#ffdbd1", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#005236", "tertiary-container": "#00a572", "secondary-container": "#dae2fd", "surface-variant": "#d5e3fd", "primary-fixed-dim": "#ffb5a0", "surface-container-low": "#eff4ff", "secondary": "#565e74", "on-tertiary-container": "#00311f", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "margin-desktop": "2rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "price-display": ["26px", { lineHeight: "30px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "800" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}#seller-drawer{transition:transform 0.28s cubic-bezier(0.4,0,0.2,1);}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Go back or close" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="if(window.history.length&gt;1){window.history.back()}else{window.location.hash='products'}"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><button aria-label="Open seller menu" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" id="drawer-trigger" onclick="document.getElementById('seller-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex flex-col ml-1"><span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight truncate max-w-[150px] min-[380px]:max-w-[190px]">Product Add Step 3 Ai Description &amp; Copywriter</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">SwiftCart Hub</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">3</span></button><button aria-label="Toggle Light and Dark Mode" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="document.documentElement.classList.toggle('dark')"><span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop" onclick="document.getElementById('seller-drawer').classList.add('-translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 bottom-0 left-0 z-50 w-[310px] max-w-[85vw] bg-surface-container-lowest text-on-surface shadow-[0_16px_36px_-6px_rgba(15,23,42,0.18)] -translate-x-full flex flex-col pt-safe pb-safe overflow-hidden" id="seller-drawer"><div class="p-gutter flex items-start justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="swiftcart-logo-icon-only.png" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAm0GeJBgKGLgrgfDY9oxbva5enFGchrPr1_hnWMrDCVnL6ZbwzDJZitBHpLFrgTZrn-qY2zQ-WrYaR9pTgNYqhGnTGm8hngs0YRU1VvCfuznHA6B5VC7detClkF9sxCZfcUxfM6du9m9IdNsoKCbS1FPSmm6uASwFAy992vzwAh-542_dO6AB7U8oPI96sQCizee9pRXnvZiZp3aGgXLbaI1t14JS5y31i54bBISDAfJ5OZAeCYmIyHBs"/><div class="flex flex-col"><span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Kikuubo Sound &amp; Gadgets Hub</span><div class="flex items-center gap-1 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary-container inline-block"></span><span class="font-label-sm text-label-sm text-tertiary font-bold tracking-tight uppercase">Verified Seller</span><span class="font-label-sm text-label-sm text-on-secondary-container font-semibold ml-1">• UGX</span></div></div></div><button aria-label="Close Menu" class="w-11 h-11 -mr-2 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95" onclick="document.getElementById('seller-drawer').classList.add('-translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="flex-1 overflow-y-auto px-gutter py-space-md space-y-space-md"><div class="space-y-space-xs"><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Operations</span><nav class="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">local_mall</span><span>Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="riders" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span><span>Riders</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="returns-and-disputes" href="#"><span class="material-symbols-outlined text-[20px]">assignment_return</span><span>Returns &amp; Disputes</span></a></nav></div><div class="space-y-space-xs"><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Catalog</span><nav class="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="product-add-step-1-photos" href="#"><span class="material-symbols-outlined text-[20px]">add_photo_alternate</span><span>Add Product Flow</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="discounts-and-ads" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Discounts &amp; Ads</span></a></nav></div><div class="space-y-space-xs"><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Financials</span><nav class="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="wallet-and-payouts" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Wallet &amp; Payouts</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Analytics</span></a></nav></div><div class="space-y-space-xs"><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Store</span><nav class="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="store-profile" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Store Profile</span></a></nav></div></div><div class="p-gutter bg-surface-container-low space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="help-and-support" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Help &amp; Support</span></a><button class="w-full flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-error hover:bg-error-container/20 font-label-md text-label-md transition-colors"><span class="material-symbols-outlined text-[20px]">logout</span><span>Log Out</span></button></div></aside><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Stepper Progress Widget -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm">3</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Step 3 of 5: AI Copywriter</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Vision-Synced
+      </span>
+</div>
+<!-- Stepper Track -->
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<div class="h-1.5 rounded-full bg-tertiary-container"></div>
+<div class="h-1.5 rounded-full bg-tertiary-container"></div>
+<div class="h-1.5 rounded-full bg-primary-container"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm pt-0.5">
+<span class="text-tertiary font-bold">1. Media</span>
+<span class="text-tertiary font-bold">2. Studio</span>
+<span class="text-primary font-bold">3. Copy</span>
+<span>4. Pricing</span>
+<span>5. Review</span>
+</div>
+</div>
+<!-- AI Copywriter Vision Header Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Write My Description</h2>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">Vision v3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Reads uploaded photo features and category to generate optimized marketplace copy tailored for Kampala buyers.
+        </p>
+</div>
+</div>
+<!-- Uploaded Photos Thumbnail Ribbon -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-lg overflow-x-auto">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Close-up commercial product shot of modern matte black over-ear ANC headphones with plush protein leather earcups, isolated on clean minimalist studio background, soft warm cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0aIpAV1Xmc9NXYwUY63v2sW2FjVkxWgUMDpvAr98A_0Jj8ONVrV3GL6-AlLNGtNm8x_L0Xv77wQnC1DndzdPc1EKEzTIJ-oiCC_KuuYaZnWOqgHLruU7BFDY-aTcbdWho9012WsKvnc1stig2UlYOTtjQkJcap2q-eoYrA8ScGziNin-Sj_vf2Zq_ALvWBfQA9ol6RfQPwdCGH7dkpcQMZ4yrT-h2fKJ-YRwBANJ4"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-[8px] text-center">Hero</span>
+</div>
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Side profile view of premium wireless noise cancelling headphones highlighting metallic pivot hinges and textured matte headband, clean studio light, modern commercial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhC_k0UzabkxPWNVjLYMyEoUUc_kWYQ1FmJm0nOqHgsMIXu-2_PNPQhh8EV5b18aQ3kqjzMflD5Cd05n-ChKVCTMC1ZRQkJPQeG2IvVgzEt97umkGbfsT0UlOLirhoJ5TM5wn7bAsB_FuZNMSmW_NizJ8sBtkBpz1_NfbctbZO3Bv2nCEkQOQIXPNKsqNwdaHiIT2ctpvNApt4wiDj8CcwGAKE_mj9QCMuRrm93wgJ"/>
+</div>
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Detailed macro shot of USB-C fast charging port and tactile volume control buttons on sleek audio gear, soft high-contrast ambient studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJOBfmn5qHevLagQ-3PG7I3RNFrCdadwJunfeoGy9cigXpAYSoczhqbIt7aTQodUdFP6AjWGR-57BYJpkNeg2-GNMsQcrk0kqr66xX0QKF2pLiXulhHTMH_GCzBfDSuL6wDKqn_v-LoQYWfOsOVV_-HDWi94kswDLpx1g3IYw70yxzRJlyUMRKsefax_z9WhEQEgOJcAfXJ21KDJx_SVEPedg0pwyxFsZ6BAokoCJ"/>
+</div>
+<div class="flex flex-col justify-center px-space-xs min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Detected in Kikuubo:</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Over-Ear ANC Headset • Black • USB-C</span>
+</div>
+</div>
+</div>
+<!-- Customization Controls: Tone & Language -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<!-- Tone Selector -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold">Copy Tone Style</label>
+<span class="font-label-sm text-label-sm text-on-secondary-container">Optimized for buyer mindset</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs" id="tone-selector">
+<button class="tone-pill flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface text-left font-label-sm text-label-sm transition-all shadow-sm" onclick="selectTone(this)" type="button">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+<span class="font-bold">Simple (Kikuubo Direct)</span>
+</div>
+</button>
+<button class="tone-pill flex items-center justify-between px-space-sm py-2 rounded-lg bg-primary text-on-primary text-left font-label-sm text-label-sm transition-all shadow-sm" onclick="selectTone(this)" type="button">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-bold">Professional (Official Store)</span>
+</div>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="tone-pill flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface text-left font-label-sm text-label-sm transition-all shadow-sm" onclick="selectTone(this)" type="button">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">bolt</span>
+<span class="font-bold">Persuasive (Flash Deal)</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Language Selector -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Copywriting Language</label>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">language</span>
+<span>English (Default)</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold opacity-90" type="button">
+<span>Luganda</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] font-extrabold uppercase">Beta Soon</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Generated Fields Section -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Generated Product Copy</span>
+<button class="flex items-center gap-1 text-primary hover:text-on-primary-container font-label-sm text-label-sm font-bold transition-transform active:rotate-180" onclick="triggerRegenerate(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Re-craft Copy</span>
+</button>
+</div>
+<!-- 1. Product Title Field -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary" for="product-title">
+          1. Product Title
+        </label>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-tertiary" id="title-counter">58/100</span>
+<button aria-label="Copy Title" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" onclick="copyField('product-title', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-space-sm font-label-lg text-label-lg font-bold leading-snug resize-none outline-none focus:bg-surface-container-lowest shadow-inner transition-colors" id="product-title" maxlength="100" oninput="updateCharCount(this)" rows="2">Sony WH-1000XM4 Wireless Noise-Cancelling Headphones - Black</textarea>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check_circle</span>
+        High conversion title structure: Brand + Model + Core Feature + Color
+      </p>
+</div>
+<!-- 2. Short Summary / Hook Description -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary" for="product-hook">
+          2. Short Summary / Hook
+        </label>
+<button aria-label="Copy Hook" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" onclick="copyField('product-hook', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-space-sm font-body-md text-body-md leading-relaxed resize-none outline-none focus:bg-surface-container-lowest shadow-inner transition-colors" id="product-hook" rows="3">Experience pure acoustic isolation in noisy Kampala traffic and busy workspaces. Features industry-leading Active Noise Cancellation, 30-hour nonstop battery, and crystal-clear voice clarity for business calls and seamless travel.</textarea>
+<span class="font-label-sm text-label-sm text-on-secondary-container">Appears above the fold before the instant checkout button.</span>
+</div>
+<!-- 3. Feature Bullet Points (4 items) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">
+          3. Key Bullet Points (4 Highlights)
+        </label>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">speed</span> Quick Read
+        </span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md outline-none" type="text" value="Dual Noise Sensor technology with HD Noise Cancelling Processor QN1"/>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md outline-none" type="text" value="Up to 30-hour battery life with quick charging (10 min charge = 5 hours playback)"/>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md outline-none" type="text" value="Touch sensor controls to pause, skip tracks, and answer incoming calls instantly"/>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md outline-none" type="text" value="Multipoint connection: Seamlessly switch between phone and laptop audio"/>
+</div>
+</div>
+</div>
+<!-- 4. Search Keywords / Tags -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">
+          4. Search Keywords &amp; Tags
+        </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap × to remove</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1" id="tag-cloud">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>ANC headphones</span>
+<button class="text-on-surface-variant hover:text-error" onclick="this.parentElement.remove()" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Wireless audio Kampala</span>
+<button class="text-on-surface-variant hover:text-error" onclick="this.parentElement.remove()" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Bluetooth 5.3</span>
+<button class="text-on-surface-variant hover:text-error" onclick="this.parentElement.remove()" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Sony Original</span>
+<button class="text-on-surface-variant hover:text-error" onclick="this.parentElement.remove()" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Over Ear Gaming</span>
+<button class="text-on-surface-variant hover:text-error" onclick="this.parentElement.remove()" type="button">×</button>
+</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold active:scale-95" onclick="addNewTag()" type="button">
+<span class="material-symbols-outlined text-[13px]">add</span> Add Tag
+        </button>
+</div>
+</div>
+</div>
+<!-- Required Attention Section (Unverified Vision Attributes) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-start gap-space-sm bg-primary-fixed/30 p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">warning</span>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg font-bold text-on-primary-fixed">Required Attention</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+          Fields AI could not reliably verify from photos. Complete these 3 items before moving to Pricing.
+        </p>
+</div>
+</div>
+<div class="space-y-space-md">
+<!-- Unverified Item 1: Dimensions -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Size / Dimensions</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">info</span> Please confirm
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block font-label-sm text-[10px] text-secondary">Length (cm)</span>
+<input class="w-full text-center bg-transparent font-label-md text-label-md font-bold text-on-surface outline-none" id="dim-l" type="number" value="18.5"/>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block font-label-sm text-[10px] text-secondary">Width (cm)</span>
+<input class="w-full text-center bg-transparent font-label-md text-label-md font-bold text-on-surface outline-none" id="dim-w" type="number" value="7.8"/>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block font-label-sm text-[10px] text-secondary">Weight (g)</span>
+<input class="w-full text-center bg-transparent font-label-md text-label-md font-bold text-on-surface outline-none" id="dim-wt" type="number" value="254"/>
+</div>
+</div>
+</div>
+<!-- Unverified Item 2: Shell Material -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Shell &amp; Earpad Material</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">info</span> Please confirm
+          </span>
+</div>
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md p-space-sm rounded-lg outline-none cursor-pointer" id="material-select">
+<option selected="" value="protein-leather">Protein Leather &amp; Matte Polymer Plastic</option>
+<option value="genuine-leather">Genuine Leather &amp; Brushed Aluminum</option>
+<option value="breathable-mesh">Breathable Fabric Mesh &amp; ABS</option>
+<option value="other">Other Synthetic Blend</option>
+</select>
+</div>
+<!-- Unverified Item 3: Warranty Duration -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Warranty &amp; Guarantee</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">info</span> Please confirm
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-space-sm bg-surface-container-low rounded-lg cursor-pointer">
+<input checked="" class="accent-primary-container w-4 h-4" name="warranty" type="radio"/>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">12 Months Official</span>
+</label>
+<label class="flex items-center gap-2 p-space-sm bg-surface-container-low rounded-lg cursor-pointer">
+<input class="accent-primary-container w-4 h-4" name="warranty" type="radio"/>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">6 Months Kikuubo Store</span>
+</label>
+<label class="flex items-center gap-2 p-space-sm bg-surface-container-low rounded-lg cursor-pointer">
+<input class="accent-primary-container w-4 h-4" name="warranty" type="radio"/>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">7 Days Replacement</span>
+</label>
+<label class="flex items-center gap-2 p-space-sm bg-surface-container-low rounded-lg cursor-pointer">
+<input class="accent-primary-container w-4 h-4" name="warranty" type="radio"/>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">No Warranty / As Is</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons (Sticky ergonomic layout) -->
+<div class="pt-space-xs space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="w-1/3 py-3.5 px-2 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold active:scale-95 transition-all text-center truncate" onclick="manualFallbackPrompt()" type="button">
+        Skip / Manual
+      </button>
+<button class="w-2/3 py-3.5 px-4 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-all" onclick="proceedToPricing()" type="button">
+<span>Next: Pricing &amp; Stock</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary">Autosaved to drafts • You can edit any field later</span>
+</div>
+</div>
+</div>
+<script>
+  function updateCharCount(el) {
+    const counter = document.getElementById('title-counter');
+    const length = el.value.length;
+    counter.innerText = length + '/100';
+    if (length > 90) {
+      counter.className = 'font-label-sm text-label-sm font-bold text-error';
+    } else {
+      counter.className = 'font-label-sm text-label-sm font-bold text-tertiary';
+    }
+  }
+
+  function selectTone(btn) {
+    const pills = document.querySelectorAll('.tone-pill');
+    pills.forEach(p => {
+      p.className = 'tone-pill flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface text-left font-label-sm text-label-sm transition-all shadow-sm';
+      const check = p.querySelector('.material-symbols-outlined:last-child');
+      if (check && check.innerText === 'check') check.remove();
+    });
+    btn.className = 'tone-pill flex items-center justify-between px-space-sm py-2 rounded-lg bg-primary text-on-primary text-left font-label-sm text-label-sm transition-all shadow-sm';
+    const checkSpan = document.createElement('span');
+    checkSpan.className = 'material-symbols-outlined text-[14px]';
+    checkSpan.innerText = 'check';
+    btn.appendChild(checkSpan);
+  }
+
+  function copyField(elementId, btn) {
+    const val = document.getElementById(elementId).value;
+    navigator.clipboard?.writeText(val);
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const prev = icon.innerText;
+    icon.innerText = 'done';
+    setTimeout(() => { icon.innerText = prev; }, 1500);
+  }
+
+  function triggerRegenerate(btn) {
+    btn.classList.add('animate-spin');
+    setTimeout(() => {
+      btn.classList.remove('animate-spin');
+      const title = document.getElementById('product-title');
+      title.value = "Sony WH-1000XM4 Noise Cancelling Bluetooth Headphones - Kampala Special";
+      updateCharCount(title);
+    }, 600);
+  }
+
+  function addNewTag() {
+    const tag = prompt("Enter search keyword tag:");
+    if (tag && tag.trim().length > 0) {
+      const container = document.getElementById('tag-cloud');
+      const span = document.createElement('span');
+      span.className = 'inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm';
+      span.innerHTML = `<span>${tag.trim()}</span><button type="button" onclick="this.parentElement.remove()" class="text-on-surface-variant hover:text-error">×</button>`;
+      container.insertBefore(span, container.lastElementChild);
+    }
+  }
+
+  function manualFallbackPrompt() {
+    alert("Switched to Manual Entry mode. All AI generated draft fields retained.");
+  }
+
+  function proceedToPricing() {
+    const l = document.getElementById('dim-l').value;
+    const w = document.getElementById('dim-w').value;
+    if (!l || !w) {
+      alert("Please ensure the unverified dimensions are confirmed before proceeding.");
+      return;
+    }
+    window.location.hash = 'product-pricing-stock';
+  }
+</script></main></body></html>
