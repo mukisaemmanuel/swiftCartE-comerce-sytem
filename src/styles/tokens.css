@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Brand palette */
+  --color-brand-orange-start: #FF8A1F;
+  --color-brand-orange-end: #DA3700;
+  --color-brand-navy: #0E1B4D;
+  --color-brand-cream: #FFF8F2;
+  
+  /* Status semantics */
+  --color-status-success: #10B981;
+  --color-status-warning: #F59E0B;
+  --color-status-danger: #EF4444;
+  --color-status-info: #3B82F6;
+  
+  /* Telecoms */
+  --color-momo-mtn: #FFCC00;
+  --color-momo-airtel: #ED1C24;
+}
+
+:root {
+  /* Core brand tokens */
+  --brand-orange-start: #FF8A1F;
+  --brand-orange-end: #DA3700;
+  --brand-gradient: linear-gradient(135deg, #FF8A1F 0%, #DA3700 100%);
+  --brand-navy: #0E1B4D;
+  --brand-cream: #FFF8F2;
+  --brand-cream-surface: #FFFFFF;
+
+  /* Status tokens */
+  --status-success: #10B981;
+  --status-success-bg: #ECFDF5;
+  --status-warning: #F59E0B;
+  --status-warning-bg: #FFFBEB;
+  --status-danger: #EF4444;
+  --status-danger-bg: #FEF2F2;
+
+  /* Touch & Typography Rules */
+  --min-touch-target: 48px;
+  --min-body-font: 14px;
+
+  /* Dashboard tokens (Dark by default) */
+  --d-bg: #080D1F;
+  --d-surface: #0D1225;
+  --d-surface-container: #161B2D;
+  --d-surface-container-high: #1E2538;
+  --d-surface-container-highest: #2F3448;
+  --d-border: rgba(255, 255, 255, 0.09);
+  --d-border-strong: #2F3448;
+  --d-text-primary: #F8FAFC;
+  --d-text-secondary: #94A3B8;
+  --d-text-muted: #64748B;
+  --d-sidebar-bg: #090E20;
+  --d-sidebar-active: rgba(255, 138, 31, 0.15);
+  --d-sidebar-text: #94A3B8;
+  --d-sidebar-text-active: #FF8A1F;
+  --d-header-bg: #0D1225;
+  --d-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+/* Dashboard Light Mode (toggled per user preference) */
+[data-theme="light"],
+.theme-light {
+  --d-bg: #F8FAFC;
+  --d-surface: #FFFFFF;
+  --d-surface-container: #F1F5F9;
+  --d-surface-container-high: #E2E8F0;
+  --d-surface-container-highest: #CBD5E1;
+  --d-border: #E2E8F0;
+  --d-border-strong: #CBD5E1;
+  --d-text-primary: #0F172A;
+  --d-text-secondary: #475569;
+  --d-text-muted: #94A3B8;
+  --d-sidebar-bg: #FFFFFF;
+  --d-sidebar-active: #FFF3EB;
+  --d-sidebar-text: #475569;
+  --d-sidebar-text-active: #DA3700;
+  --d-header-bg: #FFFFFF;
+  --d-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Material Symbols icon helper */
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* Accessibility: 48px minimum touch target utility */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Enforce 14px minimum body text */
+body, button, input, select, textarea {
+  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
