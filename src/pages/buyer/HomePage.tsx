@@ -22,7 +22,7 @@ const BANNERS = [
     id: 2,
     image: '/placeholders/banner-2.svg',
     title: 'Nakasero Flagship Sale',
-    subtitle: 'Verified Ugandan Merchants â€¢ Payment Held in Safe Escrow',
+    subtitle: 'Verified Ugandan Merchants • Payment Held in Safe Escrow',
     link: '/store-page-soundcore-official-1',
   },
   {
@@ -90,27 +90,49 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
   return (
     <div className="flex flex-col gap-8 pb-12">
-      {/* 1. HERO BANNER SLIDER (Dots only, no arrows per build rules) */}
-      <section className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm aspect-[21/9] min-h-[180px] max-h-[380px] bg-slate-900">
+      {/* 1. HERO BANNER SLIDER (Dots only, no arrows per build rules; padding and wrap for 360px, 390px, 430px) */}
+      <section className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm min-h-[170px] sm:min-h-[220px] md:min-h-[260px] bg-slate-900">
         {BANNERS.map((banner, index) => (
           <div
             key={banner.id}
-            className={`absolute inset-0 transition-opacity duration-500 cursor-pointer ${
+            className={`absolute inset-0 transition-opacity duration-500 cursor-pointer overflow-hidden ${
               index === currentBanner ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
             onClick={() => onNavigate(banner.link)}
           >
+            {/* Background graphic */}
             <img
               src={banner.image}
-              alt={banner.title}
-              className="w-full h-full object-cover"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+
+            {/* Banner text with explicit left/right padding and wrapping */}
+            <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 py-5 sm:py-8 max-w-[85%] sm:max-w-xl text-left">
+              <span className="text-[10px] sm:text-[12px] font-extrabold tracking-wider text-orange-400 uppercase mb-1">
+                Kampala Super Deals
+              </span>
+              <h2 className="text-[18px] sm:text-[26px] md:text-[34px] font-extrabold text-white leading-tight break-words">
+                {banner.title}
+              </h2>
+              <p className="text-[12px] sm:text-[14px] text-white/90 line-clamp-2 mt-1 sm:mt-1.5 leading-snug">
+                {banner.subtitle}
+              </p>
+              <div className="mt-2.5 sm:mt-3">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white/20 backdrop-blur-xs text-white text-[11px] sm:text-[12px] font-bold">
+                  Shop Now
+                  <span className="material-symbols-rounded text-[14px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
           </div>
         ))}
 
         {/* Dots Navigation (NO arrows per specification) */}
-        <div className="absolute bottom-3 left-0 right-0 z-20 flex items-center justify-center gap-2">
+        <div className="absolute bottom-2.5 left-0 right-0 z-20 flex items-center justify-center gap-2">
           {BANNERS.map((_, index) => (
             <button
               key={index}

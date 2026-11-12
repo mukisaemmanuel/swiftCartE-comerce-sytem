@@ -41,8 +41,8 @@ describe('Quality Gate: Shared Components Smoke Tests', () => {
   });
 
   it('renders VerifiedBadge', () => {
-    render(<VerifiedBadge label="URSB Verified" />);
-    expect(screen.getByText('URSB Verified')).toBeInTheDocument();
+    render(<VerifiedBadge label="Verified Merchant" />);
+    expect(screen.getByText('Verified Merchant')).toBeInTheDocument();
   });
 
   it('renders ProductCard with title and price', () => {

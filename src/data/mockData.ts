@@ -7,6 +7,12 @@ import type {
   Address,
   Order,
   Notification,
+  User,
+  SavedPaymentMethod,
+  Voucher,
+  ReturnRequest,
+  Dispute,
+  SellerApplication,
 } from '../domain/types';
 import {
   ORDER_STATUS,
@@ -14,7 +20,9 @@ import {
   ESCROW_STATUS,
   SELLER_STATUS,
   PRODUCT_STATUS,
+  RETURN_STATUS,
 } from '../../shared/statuses';
+import { DEFAULT_RETURN_WINDOW_DAYS } from '../../shared/constants';
 
 export const MOCK_CATEGORIES: Category[] = [
   {
@@ -133,7 +141,7 @@ export const MOCK_SELLERS: Seller[] = [
     bannerUrl: '/placeholders/store-banner.svg',
     followerCount: 2450,
     productCount: 48,
-    bio: 'Official authorized distributor of premium audio gadgets in Uganda. Nakasero service centre with 12-month local replacement warranty.',
+    bio: 'Specialist seller of premium audio gadgets and headphones in Uganda, with a Nakasero service and support desk.',
     dispatchSpeedHours: 2,
   },
   {
@@ -609,6 +617,66 @@ export const MOCK_ADDRESSES: Address[] = [
   },
 ];
 
+export const MOCK_USER: User = {
+  id: 'user-ug-101',
+  fullName: 'Mukisa Emmanuel',
+  email: 'emmanuel.mukisa@swiftcart.ug',
+  phoneNumber: '+256 772 123456',
+  avatarUrl: '/placeholders/avatar.svg',
+  isVerified: true,
+  createdAt: '2024-01-15',
+};
+
+export const MOCK_PAYMENT_METHODS: SavedPaymentMethod[] = [
+  {
+    id: 'pm-mtn-1',
+    type: 'mtn_momo',
+    phoneNumber: '+256 772 123456',
+    accountName: 'Mukisa Emmanuel',
+    isDefault: true,
+  },
+  {
+    id: 'pm-airtel-1',
+    type: 'airtel_money',
+    phoneNumber: '+256 701 987654',
+    accountName: 'Mukisa Emmanuel',
+    isDefault: false,
+  },
+  {
+    id: 'pm-card-1',
+    type: 'card',
+    cardLast4: '4821',
+    cardBrand: 'Visa',
+    accountName: 'Mukisa Emmanuel',
+    isDefault: false,
+  },
+];
+
+export const MOCK_VOUCHERS: Voucher[] = [
+  {
+    code: 'SWIFT10',
+    discountType: 'percentage',
+    discountValue: 10,
+    minOrderAmount: 50000,
+    maxDiscount: 50000,
+    expiryDate: '2025-12-31',
+  },
+  {
+    code: 'KAMPALAFREE',
+    discountType: 'fixed',
+    discountValue: 5000,
+    minOrderAmount: 80000,
+    expiryDate: '2025-12-31',
+  },
+  {
+    code: 'WELCOME20',
+    discountType: 'fixed',
+    discountValue: 20000,
+    minOrderAmount: 150000,
+    expiryDate: '2025-12-31',
+  },
+];
+
 export const MOCK_ORDERS: Order[] = [
   {
     id: 'order-1001',
@@ -635,6 +703,81 @@ export const MOCK_ORDERS: Order[] = [
     deliveryType: 'boda',
     deliveryAddress: MOCK_ADDRESSES[0],
     handoverCode: '482910', // 6-digit delivery OTP (buyer side only)
+    returnWindowDays: DEFAULT_RETURN_WINDOW_DAYS,
+    timeline: [
+      {
+        status: ORDER_STATUS.PENDING,
+        timestamp: '10 Nov, 09:30 AM',
+        title: 'Order Placed',
+        description: 'Order received and waiting for payment verification.',
+      },
+      {
+        status: ORDER_STATUS.PAID,
+        timestamp: '10 Nov, 09:32 AM',
+        title: 'Payment Confirmed & Held in Escrow',
+        description: 'Payment secured safely by SwiftCart Escrow.',
+      },
+      {
+        status: ORDER_STATUS.CONFIRMED,
+        timestamp: '10 Nov, 10:15 AM',
+        title: 'Merchant Accepted Order',
+        description: 'Soundcore Uganda Flagship is packing your items in Nakasero.',
+      },
+    ],
+  },
+  {
+    id: 'order-1003',
+    orderNumber: 'SWIFT-UG-2024-9140',
+    status: ORDER_STATUS.OUT_FOR_DELIVERY,
+    paymentStatus: PAYMENT_STATUS.PAID,
+    escrowStatus: ESCROW_STATUS.HELD_IN_ESCROW,
+    createdAt: '2024-11-11T08:00:00Z',
+    items: [
+      {
+        productId: 'prod-infinix-hot-40-pro',
+        productTitle: 'Infinix Hot 40 Pro 256GB ROM + 8GB RAM',
+        productImage: '/placeholders/phones.svg',
+        variantName: 'Starlit Black, 256GB',
+        price: 685000,
+        quantity: 1,
+        sellerId: 'seller-kampala-tech',
+        sellerName: 'Kampala Tech Hub',
+      },
+    ],
+    subtotal: 685000,
+    shippingFee: 6000,
+    total: 691000,
+    deliveryType: 'boda',
+    deliveryAddress: MOCK_ADDRESSES[0],
+    handoverCode: '518294',
+    rider: {
+      name: 'Kato Denis',
+      phone: '+256 782 554433',
+      bikePlate: 'UFB 214K',
+      rating: 4.9,
+      avatarUrl: '/placeholders/avatar.svg',
+    },
+    returnWindowDays: DEFAULT_RETURN_WINDOW_DAYS,
+    timeline: [
+      {
+        status: ORDER_STATUS.PAID,
+        timestamp: '11 Nov, 08:05 AM',
+        title: 'Payment Secured',
+        description: 'Held safely in SwiftCart Escrow.',
+      },
+      {
+        status: ORDER_STATUS.PROCESSING,
+        timestamp: '11 Nov, 08:30 AM',
+        title: 'Dispatched to Express Boda',
+        description: 'Package picked up from Kampala Tech Hub.',
+      },
+      {
+        status: ORDER_STATUS.OUT_FOR_DELIVERY,
+        timestamp: '11 Nov, 09:10 AM',
+        title: 'Out for Delivery',
+        description: 'Rider Kato Denis (UFB 214K) is en route to Lumumba Avenue.',
+      },
+    ],
   },
   {
     id: 'order-1002',
@@ -660,8 +803,75 @@ export const MOCK_ORDERS: Order[] = [
     deliveryType: 'pickup',
     pickupStation: MOCK_PICKUP_STATIONS[0],
     handoverCode: '721094',
+    returnWindowDays: DEFAULT_RETURN_WINDOW_DAYS,
+    reviewSubmitted: false,
+    timeline: [
+      {
+        status: ORDER_STATUS.PAID,
+        timestamp: '04 Nov, 02:18 PM',
+        title: 'Payment Secured in Escrow',
+        description: 'Paid via MTN MoMo.',
+      },
+      {
+        status: ORDER_STATUS.SHIPPED,
+        timestamp: '05 Nov, 09:00 AM',
+        title: 'Transferred to Pickup Station',
+        description: 'Arrived at Kampala GPO Posta Hub.',
+      },
+      {
+        status: ORDER_STATUS.DELIVERED,
+        timestamp: '05 Nov, 04:30 PM',
+        title: 'Delivered / Collected',
+        description: 'Collected by buyer. Escrow funds released to merchant.',
+      },
+    ],
   },
 ];
+
+export const MOCK_RETURNS: ReturnRequest[] = [
+  {
+    id: 'ret-101',
+    orderId: 'order-1002',
+    orderNumber: 'SWIFT-UG-2024-7822',
+    reason: 'Defective item',
+    details: 'One glass jar had a cracked seal upon inspection at collection.',
+    photos: ['/placeholders/groceries.svg'],
+    status: RETURN_STATUS.APPROVED,
+    refundAmount: 32000,
+    createdAt: '2024-11-06T10:00:00Z',
+    resolutionDate: '2024-11-07T11:30:00Z',
+  },
+];
+
+export const MOCK_DISPUTES: Dispute[] = [
+  {
+    id: 'disp-201',
+    orderId: 'order-1001',
+    orderNumber: 'SWIFT-UG-2024-8901',
+    reason: 'Delivery Delay',
+    description: 'Merchant took longer than 48 hours to confirm dispatch.',
+    evidencePhotos: ['/placeholders/headphones.svg'],
+    status: 'UNDER_REVIEW',
+    createdAt: '2024-11-11T12:00:00Z',
+  },
+];
+
+export const MOCK_SELLER_APPLICATION: SellerApplication = {
+  id: 'app-901',
+  storeName: 'Pearl Tech Solutions',
+  category: 'Phones & Tablets',
+  contactName: 'Mukisa Emmanuel',
+  email: 'emmanuel.mukisa@swiftcart.ug',
+  phoneNumber: '+256 772 123456',
+  district: 'Kampala',
+  physicalAddress: 'Shop 12, Pioneer Mall, Kampala Road',
+  nationalIdNumber: 'CM98021102A1BC',
+  payoutMethod: 'mtn_momo',
+  payoutAccount: '+256 772 123456',
+  accountHolderName: 'Mukisa Emmanuel',
+  status: 'UNDER_REVIEW',
+  submittedAt: '2024-11-12T10:00:00Z',
+};
 
 export const MOCK_NOTIFICATIONS: Notification[] = [
   {
@@ -681,6 +891,15 @@ export const MOCK_NOTIFICATIONS: Notification[] = [
     timestamp: '1 day ago',
     read: true,
     type: 'promo',
+  },
+  {
+    id: 'notif-3',
+    title: 'Order Out for Delivery',
+    message:
+      'Rider Kato Denis is delivering Order SWIFT-UG-2024-9140. Have your 6-digit delivery code ready.',
+    timestamp: '3 hours ago',
+    read: false,
+    type: 'order',
   },
 ];
 

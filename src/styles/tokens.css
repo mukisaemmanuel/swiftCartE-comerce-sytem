@@ -108,6 +108,15 @@
   justify-content: center;
 }
 
+/* Rule 5: Make icon text invisible until the icon font has loaded so ligature names are never shown as words */
+html:not(.fonts-loaded) .material-symbols-rounded {
+  color: transparent !important;
+  user-select: none;
+}
+html.fonts-loaded .material-symbols-rounded {
+  color: inherit;
+}
+
 /* Enforce 14px minimum body text */
 body, button, input, select, textarea {
   font-size: 14px;

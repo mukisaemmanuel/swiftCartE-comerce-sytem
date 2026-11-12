@@ -259,9 +259,9 @@ describe('Stage 1 Quality Gate: Storefront Screen Render Tests', () => {
       expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument();
     });
 
-    // Check mandatory payment protection copy from docs/BUILD-RULES.md
+    // Check mandatory payment protection copy from docs/BUILD-RULES.md (may appear in banner and order summary)
     expect(
-      screen.getByText(/Your payment is held safely by SwiftCart until you confirm delivery\./i)
-    ).toBeInTheDocument();
+      screen.getAllByText(/Your payment is held safely by SwiftCart until you confirm delivery\./i).length
+    ).toBeGreaterThanOrEqual(1);
   });
 });

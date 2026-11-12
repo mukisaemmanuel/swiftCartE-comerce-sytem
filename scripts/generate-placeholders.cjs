@@ -9,35 +9,35 @@ if (!fs.existsSync(targetDir)) {
 function makeSvg(title, bg1, bg2, iconText) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad_${title.replace(/[^a-zA-Z0-9]/g, '_')}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${bg1}" />
       <stop offset="100%" stop-color="${bg2}" />
     </linearGradient>
   </defs>
-  <rect width="600" height="600" fill="url(#grad)" rx="24" />
+  <rect width="600" height="600" fill="url(#grad_${title.replace(/[^a-zA-Z0-9]/g, '_')})" rx="24" />
   <circle cx="300" cy="270" r="100" fill="#ffffff" fill-opacity="0.15" />
   <text x="300" y="295" font-family="'Plus Jakarta Sans', sans-serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">${iconText}</text>
   <text x="300" y="440" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">${title}</text>
-  <text x="300" y="480" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.8" text-anchor="middle">SwiftCart Uganda Verified</text>
+  <text x="300" y="480" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.8" text-anchor="middle">SwiftCart Uganda</text>
 </svg>`;
 }
 
 function makeBannerSvg(title, subtitle, bg1, bg2) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="bgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgrad_${title.replace(/[^a-zA-Z0-9]/g, '_')}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${bg1}" />
       <stop offset="100%" stop-color="${bg2}" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="480" fill="url(#bgrad)" rx="24" />
+  <rect width="1200" height="480" fill="url(#bgrad_${title.replace(/[^a-zA-Z0-9]/g, '_')})" rx="24" />
   <circle cx="1050" cy="240" r="180" fill="#ffffff" fill-opacity="0.12" />
   <circle cx="950" cy="120" r="80" fill="#ffffff" fill-opacity="0.08" />
-  <text x="80" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="2">KAMPALA SUPER DEALS</text>
-  <text x="80" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="52" font-weight="800" fill="#ffffff">${title}</text>
-  <text x="80" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="500" fill="#ffffff" fill-opacity="0.9">${subtitle}</text>
-  <rect x="80" y="360" width="220" height="54" rx="14" fill="#ffffff" />
-  <text x="190" y="394" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="${bg2}" text-anchor="middle">Shop Deals Now</text>
+  <text x="80" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="2">KAMPALA SUPER DEALS</text>
+  <text x="80" y="230" font-family="'Plus Jakarta Sans', sans-serif" font-size="48" font-weight="800" fill="#ffffff">${title}</text>
+  <text x="80" y="290" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.9">${subtitle}</text>
+  <rect x="80" y="340" width="220" height="54" rx="14" fill="#ffffff" />
+  <text x="190" y="374" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="${bg2}" text-anchor="middle">Shop Deals Now</text>
 </svg>`;
 }
 
@@ -49,14 +49,18 @@ const placeholders = [
   { file: 'beauty.svg', title: 'Health & Beauty', bg1: '#EC4899', bg2: '#BE185D', icon: '✨' },
   { file: 'groceries.svg', title: 'Fresh Supermarket', bg1: '#F59E0B', bg2: '#D97706', icon: '🛒' },
   { file: 'headphones.svg', title: 'Space One Wireless', bg1: '#0E1B4D', bg2: '#1E293B', icon: '🎵' },
+  { file: 'product-audio.svg', title: 'SoundCore Audio', bg1: '#0E1B4D', bg2: '#DA3700', icon: '🎧' },
   { file: 'smartwatch.svg', title: 'Ultra Smartwatch', bg1: '#0284C7', bg2: '#0369A1', icon: '⌚' },
   { file: 'laptop.svg', title: 'SwiftBook Pro M3', bg1: '#475569', bg2: '#1E293B', icon: '💻' },
   { file: 'shoes.svg', title: 'Running Sneakers', bg1: '#EA580C', bg2: '#9A3412', icon: '👟' },
   { file: 'avatar.svg', title: 'Swift Merchant', bg1: '#FF8A1F', bg2: '#0E1B4D', icon: '🏪' },
+  { file: 'store-logo.svg', title: 'Verified Store', bg1: '#FF8A1F', bg2: '#0E1B4D', icon: '🏬' },
+  { file: 'product.svg', title: 'Verified Product', bg1: '#0E1B4D', bg2: '#475569', icon: '📦' },
+  { file: 'placeholder-neutral.svg', title: 'SwiftCart Product', bg1: '#E2E8F0', bg2: '#94A3B8', icon: '🛍️' },
 ];
 
 placeholders.forEach((p) => {
-  fs.writeFileSync(path.join(targetDir, p.file), makeSvg(p.title, p.bg1, p.bg2, p.icon));
+  fs.writeFileSync(path.join(targetDir, p.file), makeSvg(p.title, p.bg1, p.bg2, p.icon), 'utf8');
 });
 
 const banners = [
@@ -70,7 +74,7 @@ const banners = [
   {
     file: 'banner-2.svg',
     title: 'Nakasero Flagship Sale',
-    subtitle: 'Verified Ugandan Merchants â€¢ Payment Held in Safe Escrow',
+    subtitle: 'Verified Ugandan Merchants • Payment Held in Safe Escrow',
     bg1: '#0E1B4D',
     bg2: '#1E293B',
   },
@@ -84,15 +88,14 @@ const banners = [
   {
     file: 'store-banner.svg',
     title: 'Soundcore Uganda Flagship',
-    subtitle: 'Official Audio Store â€¢ URSB Registered Nakasero Merchant',
+    subtitle: 'Audio Specialist • Nakasero Central Merchant',
     bg1: '#0E1B4D',
     bg2: '#3B82F6',
   },
 ];
 
 banners.forEach((b) => {
-  fs.writeFileSync(path.join(targetDir, b.file), makeBannerSvg(b.title, b.subtitle, b.bg1, b.bg2));
+  fs.writeFileSync(path.join(targetDir, b.file), makeBannerSvg(b.title, b.subtitle, b.bg1, b.bg2), 'utf8');
 });
 
-console.log('Generated placeholder SVGs in public/placeholders/');
-
+console.log(`Generated ${placeholders.length + banners.length} placeholder SVGs in public/placeholders/`);

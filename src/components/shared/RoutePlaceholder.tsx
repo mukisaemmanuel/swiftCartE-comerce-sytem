@@ -28,7 +28,7 @@ export const RoutePlaceholder: React.FC<RoutePlaceholderProps> = ({
   const currentRoleStyle = roleColors[route.role] || roleColors.buyer;
 
   return (
-    <div className="flex flex-col gap-6 max-w-5xl mx-auto py-2">
+    <div data-testid="route-placeholder" className="flex flex-col gap-6 max-w-5xl mx-auto py-2">
       {/* Header Banner */}
       <div className="p-6 rounded-2xl bg-[var(--d-surface)] border border-[var(--d-border)] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export const RoutePlaceholder: React.FC<RoutePlaceholderProps> = ({
             {route.name}
           </h1>
           <p className="text-[14px] text-[var(--d-text-secondary)]">
-            Stage 0 Interactive Route Placeholder â€¢ Design reference links mapped below
+            Stage 0 Interactive Route Placeholder • Design reference links mapped below
           </p>
         </div>
 

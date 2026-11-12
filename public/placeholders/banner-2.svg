@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="bgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgrad_Nakasero_Flagship_Sale" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0E1B4D" />
       <stop offset="100%" stop-color="#1E293B" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="480" fill="url(#bgrad)" rx="24" />
+  <rect width="1200" height="480" fill="url(#bgrad_Nakasero_Flagship_Sale)" rx="24" />
   <circle cx="1050" cy="240" r="180" fill="#ffffff" fill-opacity="0.12" />
   <circle cx="950" cy="120" r="80" fill="#ffffff" fill-opacity="0.08" />
-  <text x="80" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="2">KAMPALA SUPER DEALS</text>
-  <text x="80" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="52" font-weight="800" fill="#ffffff">Nakasero Flagship Sale</text>
-  <text x="80" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="500" fill="#ffffff" fill-opacity="0.9">Verified Ugandan Merchants â€¢ Payment Held in Safe Escrow</text>
-  <rect x="80" y="360" width="220" height="54" rx="14" fill="#ffffff" />
-  <text x="190" y="394" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1E293B" text-anchor="middle">Shop Deals Now</text>
+  <text x="80" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="2">KAMPALA SUPER DEALS</text>
+  <text x="80" y="230" font-family="'Plus Jakarta Sans', sans-serif" font-size="48" font-weight="800" fill="#ffffff">Nakasero Flagship Sale</text>
+  <text x="80" y="290" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.9">Verified Ugandan Merchants • Payment Held in Safe Escrow</text>
+  <rect x="80" y="340" width="220" height="54" rx="14" fill="#ffffff" />
+  <text x="190" y="374" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1E293B" text-anchor="middle">Shop Deals Now</text>
 </svg>

@@ -98,11 +98,11 @@ export const StorePage: React.FC<StorePageProps> = ({
               <span className="font-bold text-amber-600 flex items-center gap-1">
                 ★ {seller.rating.toFixed(1)} ({seller.reviewCount} reviews)
               </span>
-              <span className="text-slate-300">â€¢</span>
+              <span className="text-slate-300">•</span>
               <span>
                 <strong>{seller.followerCount.toLocaleString()}</strong> followers
               </span>
-              <span className="text-slate-300">â€¢</span>
+              <span className="text-slate-300">•</span>
               <span className="text-emerald-600 font-semibold flex items-center gap-1">
                 <span className="material-symbols-rounded text-[16px]">bolt</span>
                 Dispatches in ~{seller.dispatchSpeedHours || 2}h

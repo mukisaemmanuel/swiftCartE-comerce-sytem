@@ -4,7 +4,69 @@ import type {
   EscrowStatus,
   SellerStatus,
   ProductStatus,
+  ReturnStatus,
 } from '../../shared/statuses';
+
+export interface User {
+  id: string;
+  fullName: string;
+  email?: string;
+  phoneNumber: string;
+  avatarUrl?: string;
+  isVerified?: boolean;
+  createdAt?: string;
+}
+
+export interface SavedPaymentMethod {
+  id: string;
+  type: 'mtn_momo' | 'airtel_money' | 'card';
+  phoneNumber?: string;
+  cardLast4?: string;
+  cardBrand?: string;
+  accountName?: string;
+  isDefault?: boolean;
+}
+
+export interface ReturnRequest {
+  id: string;
+  orderId: string;
+  orderNumber: string;
+  reason: string;
+  details: string;
+  photos: string[];
+  status: ReturnStatus;
+  refundAmount: number;
+  createdAt: string;
+  resolutionDate?: string;
+}
+
+export interface Dispute {
+  id: string;
+  orderId: string;
+  orderNumber: string;
+  reason: string;
+  description: string;
+  evidencePhotos: string[];
+  status: 'OPEN' | 'UNDER_REVIEW' | 'RESOLVED_BUYER' | 'RESOLVED_SELLER';
+  createdAt: string;
+}
+
+export interface SellerApplication {
+  id?: string;
+  storeName: string;
+  category: string;
+  contactName: string;
+  email: string;
+  phoneNumber: string;
+  district: string;
+  physicalAddress: string;
+  nationalIdNumber: string;
+  payoutMethod: 'mtn_momo' | 'airtel_money' | 'bank';
+  payoutAccount: string;
+  accountHolderName: string;
+  status: 'PENDING' | 'UNDER_REVIEW' | 'APPROVED' | 'REJECTED';
+  submittedAt: string;
+}
 
 export interface ProductVariant {
   id: string;
@@ -156,6 +218,21 @@ export interface OrderItem {
   sellerName: string;
 }
 
+export interface OrderTimelineEvent {
+  status: OrderStatus;
+  timestamp: string;
+  title: string;
+  description: string;
+}
+
+export interface OrderRider {
+  name: string;
+  phone: string;
+  bikePlate: string;
+  rating: number;
+  avatarUrl?: string;
+}
+
 export interface Order {
   id: string;
   orderNumber: string;
@@ -171,6 +248,11 @@ export interface Order {
   deliveryAddress?: Address;
   pickupStation?: PickupStation;
   handoverCode?: string; // 6 digits, shown on buyer side only
+  idempotencyKey?: string;
+  timeline?: OrderTimelineEvent[];
+  rider?: OrderRider;
+  returnWindowDays?: number;
+  reviewSubmitted?: boolean;
 }
 
 export interface Notification {

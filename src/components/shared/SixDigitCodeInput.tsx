@@ -1,87 +1,67 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 export interface SixDigitCodeInputProps {
-  onComplete?: (code: string) => void;
-  onChange?: (code: string) => void;
+  value?: string;
+  onChange?: (val: string) => void;
   disabled?: boolean;
-  className?: string;
-  hasError?: boolean;
+  autoFocus?: boolean;
+  error?: boolean;
 }
 
 export const SixDigitCodeInput: React.FC<SixDigitCodeInputProps> = ({
-  onComplete,
-  onChange,
+  value = '',
+  onChange = () => {},
   disabled = false,
-  className = '',
-  hasError = false,
+  autoFocus = true,
+  error = false,
 }) => {
-  // Always starts with 6 empty boxes. Never displays a pre-filled code.
-  const [digits, setDigits] = useState<string[]>(['', '', '', '', '', '']);
-  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
+  const safeValue = value || '';
+  const digits = Array.from({ length: 6 }, (_, i) => safeValue[i] || '');
 
-  const handleDigitChange = (index: number, value: string) => {
-    // Only accept numeric input
-    const cleanValue = value.replace(/\D/g, '');
-    const char = cleanValue.slice(-1); // Take the latest single digit
+  useEffect(() => {
+    if (autoFocus && inputsRef.current[0]) {
+      inputsRef.current[0]?.focus();
+    }
+  }, [autoFocus]);
 
+  const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+    const char = e.target.value.replace(/\D/g, '').slice(-1);
     const newDigits = [...digits];
     newDigits[index] = char;
-    setDigits(newDigits);
+    const combined = newDigits.join('').slice(0, 6);
+    onChange(combined);
 
-    const fullCode = newDigits.join('');
-    onChange?.(fullCode);
-
-    // Auto-advance focus
     if (char && index < 5) {
-      inputRefs.current[index + 1]?.focus();
-    }
-
-    if (fullCode.length === 6 && !newDigits.includes('')) {
-      onComplete?.(fullCode);
+      inputsRef.current[index + 1]?.focus();
     }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Backspace' && !digits[index] && index > 0) {
-      // Move to previous box on backspace if current is empty
-      inputRefs.current[index - 1]?.focus();
+    if (e.key === 'Backspace') {
+      if (!digits[index] && index > 0) {
+        inputsRef.current[index - 1]?.focus();
+      }
     }
   };
 
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
-    const pasteData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 6);
-    if (!pasteData) return;
-
-    const newDigits = ['', '', '', '', '', ''];
-    for (let i = 0; i < pasteData.length; i++) {
-      newDigits[i] = pasteData[i];
-    }
-    setDigits(newDigits);
-
-    const fullCode = newDigits.join('');
-    onChange?.(fullCode);
-
-    // Focus either next empty box or the last box
-    const nextIndex = Math.min(pasteData.length, 5);
-    inputRefs.current[nextIndex]?.focus();
-
-    if (pasteData.length === 6) {
-      onComplete?.(pasteData);
+    const pasted = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 6);
+    if (pasted) {
+      onChange(pasted);
+      const nextIdx = Math.min(pasted.length, 5);
+      inputsRef.current[nextIdx]?.focus();
     }
   };
 
   return (
-    <div
-      className={`flex items-center justify-center gap-2 sm:gap-3 ${className}`}
-      role="group"
-      aria-label="6-digit delivery handover verification code"
-    >
-      {digits.map((digit, index) => (
+    <div className="flex items-center justify-between gap-2 max-w-sm mx-auto">
+      {digits.map((digit, idx) => (
         <input
-          key={index}
+          key={idx}
           ref={(el) => {
-            inputRefs.current[index] = el;
+            inputsRef.current[idx] = el;
           }}
           type="text"
           inputMode="numeric"
@@ -89,20 +69,17 @@ export const SixDigitCodeInput: React.FC<SixDigitCodeInputProps> = ({
           maxLength={1}
           value={digit}
           disabled={disabled}
-          onChange={(e) => handleDigitChange(index, e.target.value)}
-          onKeyDown={(e) => handleKeyDown(index, e)}
+          onChange={(e) => handleChange(idx, e)}
+          onKeyDown={(e) => handleKeyDown(idx, e)}
           onPaste={handlePaste}
-          className={`w-12 h-14 sm:w-14 sm:h-16 text-center text-[22px] font-bold rounded-2xl bg-[var(--d-surface-container)] border transition-all select-none
-            focus:outline-none focus:ring-2 focus:ring-[#FF8A1F]
-            disabled:opacity-50 disabled:cursor-not-allowed
-            ${
-              hasError
-                ? 'border-rose-500 text-rose-500'
-                : 'border-[var(--d-border)] text-[var(--d-text-primary)]'
-            }
-          `}
-          aria-label={`Digit ${index + 1} of 6`}
-          autoComplete="off"
+          className={`w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold rounded-xl border-2 transition-all outline-none focus:ring-4 ${
+            error
+              ? 'border-red-400 focus:border-red-500 focus:ring-red-100 bg-red-50 text-red-900'
+              : digit
+              ? 'border-[#FF8A1F] bg-white text-[#0E1B4D] focus:ring-orange-100'
+              : 'border-slate-200 bg-white text-[#0E1B4D] focus:border-[#FF8A1F] focus:ring-orange-100'
+          }`}
+          aria-label={`Digit ${idx + 1} of 6`}
         />
       ))}
     </div>
@@ -110,4 +87,3 @@ export const SixDigitCodeInput: React.FC<SixDigitCodeInputProps> = ({
 };
 
 export default SixDigitCodeInput;
-
