@@ -100,3 +100,4 @@ export const PAYOUT_STATUS = {
   PAID: 'PAID',
 } as const;
 export type PayoutStatus = (typeof PAYOUT_STATUS)[keyof typeof PAYOUT_STATUS];
+

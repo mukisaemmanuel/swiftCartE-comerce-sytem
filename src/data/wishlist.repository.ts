@@ -112,3 +112,4 @@ export class MockWishlistRepository implements WishlistRepository {
     return nowFollowed;
   }
 }
+

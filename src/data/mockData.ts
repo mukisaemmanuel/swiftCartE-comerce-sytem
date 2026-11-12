@@ -683,3 +683,4 @@ export const MOCK_NOTIFICATIONS: Notification[] = [
     type: 'promo',
   },
 ];
+

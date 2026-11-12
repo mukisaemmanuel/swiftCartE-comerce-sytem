@@ -155,3 +155,4 @@ export class MockCatalogRepository implements CatalogRepository {
     return newReview;
   }
 }
+

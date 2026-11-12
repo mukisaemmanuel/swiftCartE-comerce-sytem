@@ -95,3 +95,4 @@ banners.forEach((b) => {
 });
 
 console.log('Generated placeholder SVGs in public/placeholders/');
+

@@ -55,3 +55,4 @@ export class MockAccountRepository implements AccountRepository {
     if (notif) notif.read = true;
   }
 }
+
