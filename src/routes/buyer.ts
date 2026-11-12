@@ -2,6 +2,85 @@ import type { RouteDefinition } from './types';
 
 export const buyerRoutes: RouteDefinition[] = [
   {
+    path: "/",
+    name: "Home",
+    role: "buyer",
+    designFiles: {
+      mobile: "design/mobile/buyer/home_swiftcart_marketplace_2",
+      all: [
+        "design/mobile/buyer/home_swiftcart_marketplace_2",
+        "design/mobile/buyer/home_swiftcart_marketplace_3",
+        "design/desktop/buyer/home_swiftcart_marketplace_1",
+      ],
+    },
+  },
+  {
+    path: "/cart",
+    name: "Shopping Cart",
+    role: "buyer",
+    designFiles: {
+      mobile: "design/mobile/buyer/cart_multi_vendor_grouped",
+      all: [
+        "design/mobile/buyer/cart_multi_vendor_grouped",
+        "design/tablet/buyer/cart_multi_vendor",
+      ],
+    },
+  },
+  {
+    path: "/wishlist",
+    name: "Wishlist",
+    role: "buyer",
+    designFiles: {
+      tablet: "design/tablet/buyer/wishlist_swiftcart_buyer_tablet",
+      all: ["design/tablet/buyer/wishlist_swiftcart_buyer_tablet"],
+    },
+  },
+  {
+    path: "/search",
+    name: "Search & Results",
+    role: "buyer",
+    designFiles: {
+      mobile: "design/mobile/buyer/search_experience_swiftcart_uganda",
+      all: [
+        "design/mobile/buyer/search_experience_swiftcart_uganda",
+        "design/desktop/buyer/search_results_1",
+      ],
+    },
+  },
+  {
+    path: "/product-detail",
+    name: "Product Detail",
+    role: "buyer",
+    designFiles: {
+      mobile: "design/mobile/buyer/product_detail_soundcore_space_one_2",
+      all: [
+        "design/mobile/buyer/product_detail_soundcore_space_one_2",
+        "design/desktop/buyer/product_detail_soundcore_space_one_1",
+      ],
+    },
+  },
+  {
+    path: "/store-page",
+    name: "Store Page",
+    role: "buyer",
+    designFiles: {
+      desktop: "design/desktop/buyer/store_page_soundcore_official_1",
+      all: ["design/desktop/buyer/store_page_soundcore_official_1"],
+    },
+  },
+  {
+    path: "/followed-stores",
+    name: "Followed Stores",
+    role: "buyer",
+    designFiles: {
+      mobile: "design/mobile/buyer/followed_stores_swiftcart_uganda_1",
+      all: [
+        "design/mobile/buyer/followed_stores_swiftcart_uganda_1",
+        "design/tablet/buyer/followed_stores_buyer",
+      ],
+    },
+  },
+  {
     path: "/account",
     name: "Account",
     role: "buyer",

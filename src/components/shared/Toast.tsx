@@ -3,11 +3,12 @@ import React, { useEffect } from 'react';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
 export interface ToastProps {
-  id: string;
+  id?: string;
   message: string;
   type?: ToastType;
   duration?: number;
-  onDismiss: (id: string) => void;
+  onDismiss?: (id: string) => void;
+  onClose?: () => void;
 }
 
 const typeConfig: Record<ToastType, { icon: string; bg: string; text: string; border: string }> = {
@@ -38,26 +39,32 @@ const typeConfig: Record<ToastType, { icon: string; bg: string; text: string; bo
 };
 
 export const Toast: React.FC<ToastProps> = ({
-  id,
+  id = 'toast-default',
   message,
   type = 'info',
   duration = 4000,
   onDismiss,
+  onClose,
 }) => {
+  const handleClose = () => {
+    if (onDismiss) onDismiss(id);
+    if (onClose) onClose();
+  };
+
   useEffect(() => {
     if (duration > 0) {
       const timer = setTimeout(() => {
-        onDismiss(id);
+        handleClose();
       }, duration);
       return () => clearTimeout(timer);
     }
-  }, [id, duration, onDismiss]);
+  }, [id, duration, onDismiss, onClose]);
 
   const config = typeConfig[type];
 
   return (
     <div
-      className={`flex items-center gap-3 p-4 rounded-xl border shadow-xl backdrop-blur-md max-w-md w-full animate-slideIn ${config.bg} ${config.text} ${config.border}`}
+      className={`fixed top-4 right-4 z-50 flex items-center gap-3 p-4 rounded-xl border shadow-xl backdrop-blur-md max-w-md w-full animate-slideIn ${config.bg} ${config.text} ${config.border}`}
       role="status"
       aria-live="polite"
     >
@@ -67,7 +74,7 @@ export const Toast: React.FC<ToastProps> = ({
       <p className="text-[14px] font-medium leading-snug flex-1">{message}</p>
       <button
         type="button"
-        onClick={() => onDismiss(id)}
+        onClick={handleClose}
         className="touch-target p-1.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center -mr-2"
         aria-label="Dismiss notification"
       >
@@ -78,4 +85,3 @@ export const Toast: React.FC<ToastProps> = ({
 };
 
 export default Toast;
-

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { CartProvider } from './context/CartContext';
 import { allRoutes, findRouteByPath } from './routes';
 import type { RouteDefinition, UserRole } from './routes/types';
 import DevRoleSwitcher from './components/dev/DevRoleSwitcher';
@@ -147,23 +148,25 @@ export const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <Suspense
-        fallback={
-          <div className="min-h-screen flex items-center justify-center bg-[var(--d-bg)] text-[var(--d-text-primary)]">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-10 border-4 border-[#FF8A1F] border-t-transparent rounded-full animate-spin" />
-              <span className="text-[14px] font-semibold text-[var(--d-text-secondary)]">
-                Loading SwiftCart Portal...
-              </span>
+      <CartProvider>
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center bg-[var(--d-bg)] text-[var(--d-text-primary)]">
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-10 h-10 border-4 border-[#FF8A1F] border-t-transparent rounded-full animate-spin" />
+                <span className="text-[14px] font-semibold text-[var(--d-text-secondary)]">
+                  Loading SwiftCart Portal...
+                </span>
+              </div>
             </div>
-          </div>
-        }
-      >
-        {renderRoleView()}
-      </Suspense>
+          }
+        >
+          {renderRoleView()}
+        </Suspense>
 
-      {/* Mock Role Switcher (DEV only) */}
-      <DevRoleSwitcher currentRole={userRole} onRoleChange={handleRoleChange} />
+        {/* Mock Role Switcher (DEV only) */}
+        <DevRoleSwitcher currentRole={userRole} onRoleChange={handleRoleChange} />
+      </CartProvider>
     </ThemeProvider>
   );
 };
