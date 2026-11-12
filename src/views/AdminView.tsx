@@ -31,3 +31,4 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, onNavigate }) => {
 };
 
 export default AdminView;
+

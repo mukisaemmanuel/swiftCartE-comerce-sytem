@@ -29,3 +29,4 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
 };
 
 export default SellerView;
+

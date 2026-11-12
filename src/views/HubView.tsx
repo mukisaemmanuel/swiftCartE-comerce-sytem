@@ -28,3 +28,4 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
 };
 
 export default HubView;
+

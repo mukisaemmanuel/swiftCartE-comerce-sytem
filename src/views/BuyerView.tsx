@@ -69,3 +69,4 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
 };
 
 export default BuyerView;
+
