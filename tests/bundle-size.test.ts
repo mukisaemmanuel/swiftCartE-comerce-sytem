@@ -51,3 +51,4 @@ describe('Production bundle size checks', () => {
     expect(oversizedAssets).toHaveLength(0);
   });
 });
+

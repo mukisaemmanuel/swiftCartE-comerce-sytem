@@ -134,3 +134,4 @@ export class MockSellerWalletRepository implements ISellerWalletRepository {
     return newTx;
   }
 }
+

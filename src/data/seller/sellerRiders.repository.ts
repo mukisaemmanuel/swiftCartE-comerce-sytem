@@ -67,3 +67,4 @@ export class MockSellerRidersRepository implements ISellerRidersRepository {
     return newRider;
   }
 }
+

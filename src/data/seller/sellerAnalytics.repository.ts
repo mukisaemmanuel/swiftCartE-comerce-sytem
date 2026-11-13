@@ -46,3 +46,4 @@ export class MockSellerAnalyticsRepository implements ISellerAnalyticsRepository
     return { ...MOCK_ANALYTICS };
   }
 }
+

@@ -82,3 +82,4 @@ export class MockSellerDiscountsRepository implements ISellerDiscountsRepository
     return updated;
   }
 }
+

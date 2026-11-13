@@ -68,3 +68,4 @@ describe('Icon availability and integrity', () => {
     expect(missingIcons).toHaveLength(0);
   });
 });
+

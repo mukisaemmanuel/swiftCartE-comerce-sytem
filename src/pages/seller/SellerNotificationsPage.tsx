@@ -149,3 +149,4 @@ export const SellerNotificationsPage: React.FC<SellerNotificationsPageProps> = (
 };
 
 export default SellerNotificationsPage;
+
