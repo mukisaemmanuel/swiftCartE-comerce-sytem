@@ -119,14 +119,9 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
 
       {/* 2. SIDEBAR / DRAWER */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-[var(--d-sidebar-bg)] border-r border-[var(--d-border)] transition-all duration-300
-          /* Mobile Drawer: hidden offscreen unless opened */
-          ${isMobileDrawerOpen ? 'translate-x-0 w-72' : '-translate-x-full md:translate-x-0'}
-          /* Tablet Collapsible Rail */
-          ${isTabletRailCollapsed ? 'md:w-20' : 'md:w-64'}
-          /* Desktop Fixed Sidebar */
-          lg:w-64
-        `}
+        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-[var(--d-sidebar-bg)] border-r border-[var(--d-border)] transition-all duration-300 ${
+          isMobileDrawerOpen ? 'translate-x-0 w-72' : '-translate-x-full md:translate-x-0'
+        } ${isTabletRailCollapsed ? 'md:w-20' : 'md:w-64'} lg:w-64`}
       >
         {/* Drawer Header: Logo + Close Button (Carefully positioned to never overlap logo or menu items) */}
         <div className="h-16 px-4 flex items-center justify-between border-b border-[var(--d-border)] shrink-0">
@@ -238,12 +233,9 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
 
       {/* 3. MAIN CONTENT AREA */}
       <div
-        className={`flex-1 flex flex-col min-w-0 transition-all duration-300
-          /* Offset for sidebar */
-          md:pl-64
-          ${isTabletRailCollapsed ? 'md:pl-20' : 'md:pl-64'}
-          lg:pl-64
-        `}
+        className={`flex-1 flex flex-col min-w-0 transition-all duration-300 md:pl-64 ${
+          isTabletRailCollapsed ? 'md:pl-20' : 'md:pl-64'
+        } lg:pl-64`}
       >
         {/* TOP BAR */}
         <header className="sticky top-0 z-30 h-16 bg-[var(--d-header-bg)] border-b border-[var(--d-border)] px-4 lg:px-8 flex items-center justify-between gap-4">

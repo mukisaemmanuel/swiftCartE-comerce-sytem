@@ -1,18 +1,59 @@
 import React from 'react';
-import DashboardShell from '../components/dashboard/DashboardShell';
 import type { RouteDefinition } from '../routes/types';
+import { useDashboardTheme } from '../context/ThemeContext';
 
-import SellerOverviewPage from '../pages/seller/SellerOverviewPage';
-import SellerOrdersPage from '../pages/seller/SellerOrdersPage';
-import SellerProductsPage from '../pages/seller/SellerProductsPage';
-import SellerAddProductPage from '../pages/seller/SellerAddProductPage';
-import SellerRidersPage from '../pages/seller/SellerRidersPage';
-import SellerReturnsPage from '../pages/seller/SellerReturnsPage';
-import SellerWalletPage from '../pages/seller/SellerWalletPage';
-import SellerAnalyticsPage from '../pages/seller/SellerAnalyticsPage';
-import SellerDiscountsPage from '../pages/seller/SellerDiscountsPage';
-import SellerProfileKycPage from '../pages/seller/SellerProfileKycPage';
-import SellerNotificationsPage from '../pages/seller/SellerNotificationsPage';
+// Converted Seller Mockup Screens
+import {
+  AddProductStep1PhotosSeller,
+  AddProductStep2AiPhotoStudioSeller,
+  AddProductStep3AiDescriptionSeller,
+  AddProductStep4CatalogDetailsSeller,
+  AddProductStep5BuyerPreviewSubmitSeller,
+  AnalyticsSeller,
+  AssignRiderBottomSheetModalSeller,
+  DiscountsAdsSeller,
+  EditExistingProductSeller,
+  InviteCourierBottomSheetModalSeller,
+  MerchantReturnInspectionAcceptance,
+  OrdersSeller,
+  OverviewSeller,
+  ProductsSeller,
+  ReturnsDisputesSeller,
+  RidersSeller,
+  SellerDisputeResponse1,
+  SellerDisputeResponse2,
+  SellerNotifications,
+  SellerOrderDetailSeller,
+  StoreProfileSeller,
+  SellerAddProductWithAiStudio,
+  SellerAnalyticsPerformanceHeatmaps1,
+  SellerAnalyticsPerformanceHeatmaps2,
+  SellerApplicationsKycVerification,
+  SellerDiscountsFlashSalesPromotionBuilder1,
+  SellerDiscountsFlashSalesPromotionBuilder2,
+  SellerDisputeResponse,
+  SellerEditProductWithAiStudio,
+  SellerInboundReturnTamperInspection,
+  SellerNotificationsCenter,
+  SellerOrdersMasterDetail2,
+  SellerOverviewDashboard,
+  SellerOverviewDashboard1,
+  SellerOverviewDashboard2,
+  SellerProductsBatchPricing,
+  SellerProductsBulkPriceUpdate,
+  SellerRidersFleetLogistics,
+  SellerWalletPayouts,
+  SellerAddProduct5StepAiFlow,
+  SellerAnalyticsPerformanceHeatmaps,
+  SellerApplicationsKyc,
+  SellerDiscountsFlashSalesPromotionBuilder,
+  SellerEditExistingProduct,
+  SellerOrdersMasterDetail,
+  SellerOverview,
+  SellerReturnsDisputesConsole,
+  SellerStoreProfileKyc,
+  SellerWalletAutomatedPayouts,
+} from '../mockups/seller';
 
 export interface SellerViewProps {
   route: RouteDefinition;
@@ -20,167 +61,75 @@ export interface SellerViewProps {
 }
 
 export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => {
-  const p = route.path;
+  const path = route.path.toLowerCase().replace(/\/$/, '') || '/seller';
+  const { theme } = useDashboardTheme();
 
-  const renderContent = () => {
-    // 1. Overview
-    if (
-      p === '/seller' ||
-      p === '/seller/overview' ||
-      p === '/seller/overview-seller' ||
-      p === '/seller/seller-overview' ||
-      p === '/seller/seller-overview-dashboard' ||
-      p === '/seller/seller-overview-dashboard-1' ||
-      p === '/seller/seller-overview-dashboard-2'
-    ) {
-      return <SellerOverviewPage onNavigate={onNavigate} />;
-    }
+  const handleAction = (action: string, payload?: unknown) => {
+    console.log('[SellerAction]', action, payload);
+  };
 
-    // 2. Orders
-    if (
-      p === '/seller/orders' ||
-      p === '/seller/orders-seller' ||
-      p === '/seller/seller-orders-master-detail' ||
-      p === '/seller/seller-orders-master-detail-2' ||
-      p === '/seller/seller-order-detail-seller' ||
-      p === '/seller/assign-rider-bottom-sheet-modal-seller'
-    ) {
-      return <SellerOrdersPage onNavigate={onNavigate} />;
-    }
-
-    // 3. Products
-    if (
-      p === '/seller/products' ||
-      p === '/seller/products-seller' ||
-      p === '/seller/seller-products-batch-pricing' ||
-      p === '/seller/seller-products-bulk-price-update'
-    ) {
-      return <SellerProductsPage onNavigate={onNavigate} />;
-    }
-
-    // 4. Add / Edit Product
-    if (p === '/seller/add-product-step-1-photos-seller') {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={1} />;
-    }
-    if (
-      p === '/seller/add-product-step-2-ai-photo-studio-seller' ||
-      p === '/seller/seller-add-product-with-ai-studio'
-    ) {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={2} />;
-    }
-    if (p === '/seller/add-product-step-3-ai-description-seller') {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={3} />;
-    }
-    if (p === '/seller/add-product-step-4-catalog-details-seller') {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={4} />;
-    }
-    if (p === '/seller/add-product-step-5-buyer-preview-submit-seller') {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={5} />;
-    }
-    if (
-      p === '/seller/add-product' ||
-      p === '/seller/seller-add-product-5-step-ai-flow'
-    ) {
-      return <SellerAddProductPage onNavigate={onNavigate} initialStep={1} />;
-    }
-    if (
-      p === '/seller/edit-existing-product-seller' ||
-      p === '/seller/seller-edit-product-with-ai-studio' ||
-      p === '/seller/seller-edit-existing-product'
-    ) {
-      return <SellerAddProductPage onNavigate={onNavigate} editMode={true} />;
+  const renderActiveScreen = () => {
+    if (path === '/seller/add-product-step-1-photos-seller') return <AddProductStep1PhotosSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/add-product-step-2-ai-photo-studio-seller') return <AddProductStep2AiPhotoStudioSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/add-product-step-3-ai-description-seller') return <AddProductStep3AiDescriptionSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/add-product-step-4-catalog-details-seller') return <AddProductStep4CatalogDetailsSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/add-product-step-5-buyer-preview-submit-seller') return <AddProductStep5BuyerPreviewSubmitSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/analytics-seller') return <AnalyticsSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/assign-rider-bottom-sheet-modal-seller') return <AssignRiderBottomSheetModalSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/discounts-ads-seller') return <DiscountsAdsSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/edit-existing-product-seller') return <EditExistingProductSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/invite-courier-bottom-sheet-modal-seller') return <InviteCourierBottomSheetModalSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/merchant-return-inspection-acceptance') return <MerchantReturnInspectionAcceptance onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/orders-seller') return <OrdersSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/overview-seller') return <OverviewSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/products-seller') return <ProductsSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/returns-disputes-seller') return <ReturnsDisputesSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/riders-seller') return <RidersSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-dispute-response-1') return <SellerDisputeResponse1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-dispute-response-2') return <SellerDisputeResponse2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-notifications') return <SellerNotifications onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-order-detail-seller') return <SellerOrderDetailSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/store-profile-seller') return <StoreProfileSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-add-product-with-ai-studio') return <SellerAddProductWithAiStudio onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-analytics-performance-heatmaps-1') return <SellerAnalyticsPerformanceHeatmaps1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-analytics-performance-heatmaps-2') return <SellerAnalyticsPerformanceHeatmaps2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-applications-kyc-verification') return <SellerApplicationsKycVerification onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-1') return <SellerDiscountsFlashSalesPromotionBuilder1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-2') return <SellerDiscountsFlashSalesPromotionBuilder2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-dispute-response') return <SellerDisputeResponse onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-edit-product-with-ai-studio') return <SellerEditProductWithAiStudio onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-inbound-return-tamper-inspection') return <SellerInboundReturnTamperInspection onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-notifications-center') return <SellerNotificationsCenter onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-orders-master-detail-2') return <SellerOrdersMasterDetail2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard') return <SellerOverviewDashboard onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard-1') return <SellerOverviewDashboard1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard-2') return <SellerOverviewDashboard2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-products-batch-pricing') return <SellerProductsBatchPricing onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-products-bulk-price-update') return <SellerProductsBulkPriceUpdate onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-riders-fleet-logistics') return <SellerRidersFleetLogistics onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-wallet-payouts') return <SellerWalletPayouts onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-add-product-5-step-ai-flow') return <SellerAddProduct5StepAiFlow onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-analytics-performance-heatmaps') return <SellerAnalyticsPerformanceHeatmaps onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-applications-kyc') return <SellerApplicationsKyc onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-discounts-flash-sales-promotion-builder') return <SellerDiscountsFlashSalesPromotionBuilder onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-edit-existing-product') return <SellerEditExistingProduct onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-orders-master-detail') return <SellerOrdersMasterDetail onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview') return <SellerOverview onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-returns-disputes-console') return <SellerReturnsDisputesConsole onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-store-profile-kyc') return <SellerStoreProfileKyc onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-wallet-automated-payouts') return <SellerWalletAutomatedPayouts onNavigate={onNavigate} onAction={handleAction} />;
+    // Fallbacks for generic /seller or /seller/overview routes
+    if (path === '/seller' || path === '/seller/overview') {
+      return <OverviewSeller onNavigate={onNavigate} onAction={handleAction} />;
     }
 
-    // 5. Riders
-    if (
-      p === '/seller/riders' ||
-      p === '/seller/riders-seller' ||
-      p === '/seller/seller-riders-fleet-logistics' ||
-      p === '/seller/invite-courier-bottom-sheet-modal-seller'
-    ) {
-      return <SellerRidersPage onNavigate={onNavigate} />;
-    }
-
-    // 6. Returns & Disputes
-    if (
-      p === '/seller/returns' ||
-      p === '/seller/returns-disputes-seller' ||
-      p === '/seller/merchant-return-inspection-acceptance' ||
-      p === '/seller/seller-inbound-return-tamper-inspection' ||
-      p === '/seller/seller-returns-disputes-console' ||
-      p === '/seller/seller-dispute-response-1' ||
-      p === '/seller/seller-dispute-response-2' ||
-      p === '/seller/seller-dispute-response'
-    ) {
-      return <SellerReturnsPage onNavigate={onNavigate} />;
-    }
-
-    // 7. Wallet & Payouts
-    if (
-      p === '/seller/wallet' ||
-      p === '/seller/seller-wallet-payouts' ||
-      p === '/seller/seller-wallet-automated-payouts'
-    ) {
-      return <SellerWalletPage onNavigate={onNavigate} />;
-    }
-
-    // 8. Analytics
-    if (
-      p === '/seller/analytics' ||
-      p === '/seller/analytics-seller' ||
-      p === '/seller/seller-analytics-performance-heatmaps' ||
-      p === '/seller/seller-analytics-performance-heatmaps-1' ||
-      p === '/seller/seller-analytics-performance-heatmaps-2'
-    ) {
-      return <SellerAnalyticsPage onNavigate={onNavigate} />;
-    }
-
-    // 9. Discounts & Ads
-    if (
-      p === '/seller/discounts' ||
-      p === '/seller/discounts-ads-seller' ||
-      p === '/seller/seller-discounts-flash-sales-promotion-builder' ||
-      p === '/seller/seller-discounts-flash-sales-promotion-builder-1' ||
-      p === '/seller/seller-discounts-flash-sales-promotion-builder-2'
-    ) {
-      return <SellerDiscountsPage onNavigate={onNavigate} />;
-    }
-
-    // 10. Store Profile & KYC
-    if (
-      p === '/seller/profile' ||
-      p === '/seller/store-profile-seller' ||
-      p === '/seller/seller-store-profile-kyc' ||
-      p === '/seller/seller-applications-kyc' ||
-      p === '/seller/seller-applications-kyc-verification'
-    ) {
-      return <SellerProfileKycPage onNavigate={onNavigate} />;
-    }
-
-    // 11. Notifications
-    if (
-      p === '/seller/notifications' ||
-      p === '/seller/seller-notifications' ||
-      p === '/seller/seller-notifications-center'
-    ) {
-      return <SellerNotificationsPage onNavigate={onNavigate} />;
-    }
-
-    // Default fallback to Overview
-    return <SellerOverviewPage onNavigate={onNavigate} />;
+    return <OverviewSeller onNavigate={onNavigate} onAction={handleAction} />;
   };
 
   return (
-    <DashboardShell
-      role="seller"
-      currentPath={route.path}
-      onNavigate={onNavigate}
-      title={route.name}
-      userName="Nakasero Flagship Store"
-      userEmail="seller@nakasero.ug"
-    >
-      {renderContent()}
-    </DashboardShell>
+    <div className={`min-h-screen w-full flex flex-col ${theme === 'dark' ? 'bg-[#0f172a] text-[#f9fafb]' : 'bg-[#f8fafc] text-[#0f172a]'}`}>
+      {renderActiveScreen()}
+    </div>
   );
 };
 

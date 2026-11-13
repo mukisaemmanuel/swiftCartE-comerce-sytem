@@ -58,15 +58,7 @@ export const SheetDialog: React.FC<SheetDialogProps> = ({
           - Desktop: Center Dialog (rounded-2xl, max-w-lg)
       */}
       <div
-        className={`relative z-10 w-full bg-[var(--d-surface)] text-[var(--d-text-primary)] border border-[var(--d-border)] shadow-2xl flex flex-col overflow-hidden transition-all
-          /* Mobile Bottom Sheet */
-          rounded-t-3xl max-h-[85vh]
-          /* Tablet Side Sheet */
-          md:rounded-none md:max-w-md md:h-full md:max-h-full md:border-l md:border-y-0 md:border-r-0
-          /* Desktop Center Dialog */
-          lg:rounded-2xl lg:h-auto lg:max-h-[90vh] lg:max-w-xl lg:border
-          ${className}
-        `}
+        className={`relative z-10 w-full bg-[var(--d-surface)] text-[var(--d-text-primary)] border border-[var(--d-border)] shadow-2xl flex flex-col overflow-hidden transition-all rounded-t-3xl max-h-[85vh] md:rounded-none md:max-w-md md:h-full md:max-h-full md:border-l md:border-y-0 md:border-r-0 lg:rounded-2xl lg:h-auto lg:max-h-[90vh] lg:max-w-xl lg:border ${className}`}
       >
         {/* Mobile Pull Handle */}
         <div className="md:hidden flex justify-center pt-3 pb-1">

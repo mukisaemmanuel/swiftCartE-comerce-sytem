@@ -1,0 +1,25 @@
+// Auto-generated responsive container for SellerOrderDetailSeller
+import React from 'react';
+import useBreakpoint from '../../../hooks/useBreakpoint';
+import Mobile from './Mobile';
+
+export interface SellerOrderDetailSellerProps {
+  onNavigate?: (path: string) => void;
+  onAction?: (action: string, payload?: unknown) => void;
+}
+
+export const SellerOrderDetailSeller: React.FC<SellerOrderDetailSellerProps> = (props) => {
+  const breakpoint = useBreakpoint();
+
+  if (breakpoint === 'mobile') {
+    return <Mobile {...props} />;
+  }
+
+  if (breakpoint === 'tablet') {
+    return <Mobile {...props} />;
+  }
+
+  return <Mobile {...props} />;
+};
+
+export default SellerOrderDetailSeller;

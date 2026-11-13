@@ -47,13 +47,14 @@ export const App: React.FC = () => {
 
   const activeRoute = pathToView(currentPath);
 
-  // User role state (in DEV, defaults to route's role for easy inspection)
-  const [userRole, setUserRole] = useState<UserRole>(() => {
-    if (import.meta.env.DEV && activeRoute.role) {
-      return activeRoute.role;
+  // User role state (defaults to route's role for direct screen inspection)
+  const [userRole, setUserRole] = useState<UserRole>(() => activeRoute.role || 'buyer');
+
+  useEffect(() => {
+    if (activeRoute.role && activeRoute.role !== userRole) {
+      setUserRole(activeRoute.role);
     }
-    return 'buyer';
-  });
+  }, [activeRoute.role, userRole]);
 
   // Handle browser back/forward buttons
   useEffect(() => {

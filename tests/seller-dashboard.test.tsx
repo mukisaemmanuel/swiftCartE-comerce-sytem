@@ -2,9 +2,9 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { SellerView } from '../src/views/SellerView';
-import { SellerOrdersPage } from '../src/pages/seller/SellerOrdersPage';
-import { SellerWalletPage } from '../src/pages/seller/SellerWalletPage';
-import { SellerAddProductPage } from '../src/pages/seller/SellerAddProductPage';
+import { SellerOrdersPage } from '../src/legacy/seller/SellerOrdersPage';
+import { SellerWalletPage } from '../src/legacy/seller/SellerWalletPage';
+import { SellerAddProductPage } from '../src/legacy/seller/SellerAddProductPage';
 import { sellerRoutes } from '../src/routes/seller';
 import { ThemeProvider } from '../src/context/ThemeContext';
 

@@ -13,6 +13,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
   const assetBase = import.meta.env.VITE_ASSET_BASE ?? '';
   const [searchQuery, setSearchQuery] = useState('');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [bannerSlide, setBannerSlide] = useState(0);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
   return (
     <div className="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative w-full overflow-x-hidden">
@@ -37,7 +38,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart Logo" className="h-8 w-auto object-contain flex-shrink-0" src={`${assetBase}/images/5a64f0678ce9c9ba.webp`} /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><Icon name="location_on" className="text-primary text-[14px]" /><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Deliver to Alex</span></div><button className="flex items-center gap-space-xs text-left group" onClick={() => alertToast('Action triggered')}><span className="font-label-md text-label-md text-on-surface font-bold truncate">Lagos / NY</span><Icon name="keyboard_arrow_down" className="text-on-surface-variant text-[14px] group-hover:text-primary transition-colors" /></button></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" className="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container transition-colors text-on-surface" onClick={() => alertToast('Action triggered')}><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="User Profile" className="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src={`${assetBase}/images/8c1af1850934fb96.webp`} /></button></div></div></header><main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full">
+      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart Logo" className="h-8 w-auto object-contain flex-shrink-0" src={`${assetBase}/brand/logo-full.png`} /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><Icon name="location_on" className="text-primary text-[14px]" /><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Deliver to Alex</span></div><button className="flex items-center gap-space-xs text-left group" onClick={() => alertToast('Action triggered')}><span className="font-label-md text-label-md text-on-surface font-bold truncate">Lagos / NY</span><Icon name="keyboard_arrow_down" className="text-on-surface-variant text-[14px] group-hover:text-primary transition-colors" /></button></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" className="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container transition-colors text-on-surface" onClick={() => alertToast('Action triggered')}><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="User Profile" className="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src={`${assetBase}/images/8c1af1850934fb96.webp`} /></button></div></div></header><main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full">
 
 <section className="px-margin pt-space-sm pb-space-xs">
 <div className="relative flex items-center bg-surface-container-low rounded-xl shadow-sm focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all duration-200">
@@ -74,49 +75,9 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <section className="px-margin py-space-sm relative group/hero" id="hero-carousel-section">
 
 <div className="relative overflow-hidden rounded-2xl shadow-md bg-inverse-surface">
-<div className="flex w-full transition-transform duration-500 ease-out" id="hero-carousel-track">
+<div className="flex w-full transition-transform duration-500 ease-out" id="hero-carousel-track" style={{ transform: `translateX(-${bannerSlide * 100}%)` }}>
 
-<div className="w-full flex-shrink-0 relative overflow-hidden bg-gradient-to-r from-primary via-primary-container to-surface-tint text-on-primary p-4 min-h-[185px] flex flex-col justify-between select-none">
-<div className="absolute -right-6 -bottom-6 w-40 h-40 rounded-full bg-surface-container-lowest/20 blur-2xl pointer-events-none"></div>
-<div className="absolute top-0 right-1/4 w-24 h-24 rounded-full bg-surface-container-lowest/15 blur-xl pointer-events-none"></div>
-
-<div className="relative z-10 flex items-center justify-between gap-2">
-<div className="inline-flex items-center gap-1.5 bg-surface-container-lowest/20 backdrop-blur-md px-2.5 py-1 rounded-full text-on-primary">
-<Icon name="bolt" className="text-[14px] text-surface-container-lowest" />
-<span className="font-label-sm text-label-sm uppercase tracking-wide font-extrabold">MEGA SHOPPING FESTIVAL</span>
-</div>
-<div className="inline-flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface shadow-sm">
-<Icon name="schedule" className="text-[13px] text-primary-container" />
-<span className="font-label-sm text-label-sm font-bold tracking-tight">Ends in 08:42:15</span>
-</div>
-</div>
-
-<div className="relative z-10 my-2 max-w-[85%]">
-<div className="inline-block bg-inverse-surface/30 backdrop-blur-sm text-on-primary font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 tracking-wider uppercase">
-            Exclusive Global Super Deals
-          </div>
-<h2 className="font-headline-lg-mobile text-headline-lg-mobile font-extrabold leading-tight tracking-tight drop-shadow-sm text-on-primary">
-            Mega Brand Sale • Up to 70% Off
-          </h2>
-<p className="font-body-sm text-body-sm text-on-primary/90 mt-1 font-medium leading-snug line-clamp-1">
-            Top Global Flagship Brands • Free Express Delivery in 24h
-          </p>
-</div>
-
-<div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-surface-container-lowest/15">
-<div className="flex items-center gap-2 flex-wrap">
-<button className="bg-surface-container-lowest text-primary hover:bg-surface-container-low font-label-md text-label-md px-3.5 py-1.5 rounded-full shadow-sm font-extrabold flex items-center gap-1.5 active:scale-95 transition-transform" onClick={() => alertToast('Action triggered')}>
-<span className="">Shop Deals Now</span>
-<Icon name="arrow_forward" className="text-[16px]" />
-</button>
-<div className="inline-flex items-center gap-1 bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface px-2.5 py-1 rounded-full">
-<Icon name="confirmation_number" className="text-primary-container text-[12px]" />
-<span className="font-label-sm text-[10px] font-bold tracking-tight">+ UGX 50,000 Off with Code <span className="text-primary-container font-extrabold underline">SWIFT50</span></span>
-</div>
-</div>
-</div>
-</div>
-
+{/* Slide 1: Super Tech Week with Interactive Video Preview */}
 <div className="w-full flex-shrink-0 relative overflow-hidden bg-gradient-to-r from-[#1e1b4b] via-[#312e81] to-primary text-on-primary p-4 min-h-[185px] flex flex-col justify-between select-none">
 <div className="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-tertiary-container/25 blur-2xl pointer-events-none"></div>
 <div className="absolute bottom-0 right-1/3 w-28 h-28 rounded-full bg-primary-container/20 blur-xl pointer-events-none"></div>
@@ -200,59 +161,53 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 </div>
 
-<div className="w-full flex-shrink-0 relative overflow-hidden bg-gradient-to-r from-[#9a3412] via-[#ea580c] to-[#c2410c] text-on-primary p-4 min-h-[185px] flex flex-col justify-between select-none">
-<div className="absolute -left-6 -bottom-6 w-36 h-36 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
-<div className="absolute top-0 right-10 w-28 h-28 rounded-full bg-surface-container-lowest/20 blur-xl pointer-events-none"></div>
+{/* Slide 2: Mega Brand Sale */}
+<div className="w-full flex-shrink-0 relative overflow-hidden bg-gradient-to-r from-primary via-primary-container to-surface-tint text-on-primary p-4 min-h-[185px] flex flex-col justify-between select-none">
+<div className="absolute -right-6 -bottom-6 w-40 h-40 rounded-full bg-surface-container-lowest/20 blur-2xl pointer-events-none"></div>
+<div className="absolute top-0 right-1/4 w-24 h-24 rounded-full bg-surface-container-lowest/15 blur-xl pointer-events-none"></div>
 
 <div className="relative z-10 flex items-center justify-between gap-2">
 <div className="inline-flex items-center gap-1.5 bg-surface-container-lowest/20 backdrop-blur-md px-2.5 py-1 rounded-full text-on-primary">
-<Icon name="backpack" className="text-[14px] text-primary-fixed" />
-<span className="font-label-sm text-label-sm uppercase tracking-wide font-extrabold">COMMUTE &amp; TRAVEL DROP</span>
+<Icon name="bolt" className="text-[14px] text-surface-container-lowest" />
+<span className="font-label-sm text-label-sm uppercase tracking-wide font-extrabold">MEGA SHOPPING FESTIVAL</span>
 </div>
 <div className="inline-flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface shadow-sm">
-<Icon name="local_shipping" className="text-[13px] text-primary-fixed" />
-<span className="font-label-sm text-label-sm font-bold tracking-tight">Guaranteed 3-Day</span>
+<Icon name="schedule" className="text-[13px] text-primary-container" />
+<span className="font-label-sm text-label-sm font-bold tracking-tight">Ends in 08:42:15</span>
 </div>
 </div>
 
 <div className="relative z-10 my-2 max-w-[85%]">
 <div className="inline-block bg-inverse-surface/30 backdrop-blur-sm text-on-primary font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 tracking-wider uppercase">
-            Nordic Tech &amp; Urban Gear
+            Exclusive Global Super Deals
           </div>
 <h2 className="font-headline-lg-mobile text-headline-lg-mobile font-extrabold leading-tight tracking-tight drop-shadow-sm text-on-primary">
-            Fashion &amp; Commute • From $14.99
+            Mega Brand Sale • Up to 70% Off
           </h2>
 <p className="font-body-sm text-body-sm text-on-primary/90 mt-1 font-medium leading-snug line-clamp-1">
-            Waterproof roll-top bags, thermal flasks &amp; athletic shoes
+            Top Global Flagship Brands • Free Express Delivery in 24h
           </p>
 </div>
 
 <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-surface-container-lowest/15">
 <div className="flex items-center gap-2 flex-wrap">
 <button className="bg-surface-container-lowest text-primary hover:bg-surface-container-low font-label-md text-label-md px-3.5 py-1.5 rounded-full shadow-sm font-extrabold flex items-center gap-1.5 active:scale-95 transition-transform" onClick={() => alertToast('Action triggered')}>
-<span className="">Claim 40% Off</span>
+<span className="">Shop Deals Now</span>
 <Icon name="arrow_forward" className="text-[16px]" />
 </button>
 <div className="inline-flex items-center gap-1 bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface px-2.5 py-1 rounded-full">
-<Icon name="loyalty" className="text-primary-fixed text-[12px]" />
-<span className="font-label-sm text-[10px] font-bold tracking-tight">Code <span className="text-primary-fixed font-extrabold underline">URBAN40</span></span>
-</div>
+<Icon name="confirmation_number" className="text-primary-container text-[12px]" />
+<span className="font-label-sm text-[10px] font-bold tracking-tight">+ UGX 50,000 Off with Code <span className="text-primary-container font-extrabold underline">SWIFT50</span></span>
 </div>
 </div>
 </div>
 </div>
 
-<button aria-label="Previous slide" className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-inverse-surface/50 backdrop-blur-md text-inverse-on-surface flex items-center justify-center opacity-70 hover:opacity-100 hover:bg-inverse-surface/80 transition-all z-20 active:scale-90" id="hero-carousel-prev" onClick={() => alertToast('Action triggered')}>
-<Icon name="chevron_left" className="text-[18px]" />
-</button>
-<button aria-label="Next slide" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-inverse-surface/50 backdrop-blur-md text-inverse-on-surface flex items-center justify-center opacity-70 hover:opacity-100 hover:bg-inverse-surface/80 transition-all z-20 active:scale-90" id="hero-carousel-next" onClick={() => alertToast('Action triggered')}>
-<Icon name="chevron_right" className="text-[18px]" />
-</button>
+</div>
 
 <div className="absolute bottom-2.5 right-3.5 z-20 flex items-center gap-1.5 bg-inverse-surface/60 backdrop-blur-md px-2 py-1 rounded-full" id="hero-carousel-dots">
-<button aria-label="Go to slide 1" className="carousel-dot h-1.5 rounded-full transition-all duration-300 w-5 bg-surface-container-lowest" data-index="0" type="button" onClick={() => alertToast('Action triggered')}></button>
-<button aria-label="Go to slide 2" className="carousel-dot h-1.5 rounded-full transition-all duration-300 w-1.5 bg-surface-container-lowest/50" data-index="1" type="button" onClick={() => alertToast('Action triggered')}></button>
-<button aria-label="Go to slide 3" className="carousel-dot h-1.5 rounded-full transition-all duration-300 w-1.5 bg-surface-container-lowest/50" data-index="2" type="button" onClick={() => alertToast('Action triggered')}></button>
+<button aria-label="Go to slide 1" className={`carousel-dot h-1.5 rounded-full transition-all duration-300 ${bannerSlide === 0 ? 'w-5 bg-surface-container-lowest' : 'w-1.5 bg-surface-container-lowest/50'}`} data-index="0" type="button" onClick={() => setBannerSlide(0)}></button>
+<button aria-label="Go to slide 2" className={`carousel-dot h-1.5 rounded-full transition-all duration-300 ${bannerSlide === 1 ? 'w-5 bg-surface-container-lowest' : 'w-1.5 bg-surface-container-lowest/50'}`} data-index="1" type="button" onClick={() => setBannerSlide(1)}></button>
 </div>
 </div>
 

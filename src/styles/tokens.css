@@ -1,5 +1,10 @@
 @import "tailwindcss" source(none);
-@source "../**/*.{ts,tsx}";
+@source "../views/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../mockups/buyer/*/*.tsx";
+@source "../mockups/seller/*/*.tsx";
+@source "../App.tsx";
+@source "../main.tsx";
 @source "../../index.html";
 
 @theme {
