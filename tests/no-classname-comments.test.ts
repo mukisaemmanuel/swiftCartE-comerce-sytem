@@ -41,3 +41,4 @@ describe('JSX className Props Hygiene', () => {
     expect(offendingFiles).toEqual([]);
   });
 });
+

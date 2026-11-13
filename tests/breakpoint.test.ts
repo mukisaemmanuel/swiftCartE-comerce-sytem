@@ -22,3 +22,4 @@ describe('useBreakpoint Logic', () => {
     expect(getBreakpoint(1920)).toBe('desktop');
   });
 });
+
