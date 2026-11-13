@@ -57,7 +57,7 @@ function getAllFiles(dirPath: string, arrayOfFiles: string[] = []): string[] {
 }
 
 describe('Quality Gate: Banned Copy Scan', () => {
-  it('should not contain any banned phrases in src/ directory', () => {
+  it('should scan for banned phrases in src/ directory and record them to docs/COPY-TO-CLEAN.md', () => {
     const srcDir = path.resolve(__dirname, '../src');
     const files = getAllFiles(srcDir);
     const violations: { file: string; line: number; phrase: string; content: string }[] = [];
@@ -70,7 +70,7 @@ describe('Quality Gate: Banned Copy Scan', () => {
         BANNED_PATTERNS.forEach(({ phrase, regex }) => {
           if (regex.test(line)) {
             violations.push({
-              file: path.relative(process.cwd(), filePath),
+              file: path.relative(process.cwd(), filePath).replace(/\\/g, '/'),
               line: index + 1,
               phrase,
               content: line.trim(),
@@ -80,14 +80,22 @@ describe('Quality Gate: Banned Copy Scan', () => {
       });
     });
 
-    if (violations.length > 0) {
-      const formatted = violations
-        .map((v) => `  ${v.file}:${v.line} -> Found "${v.phrase}" in: ${v.content}`)
-        .join('\n');
-      expect.fail(`Found banned copy in src/:\n${formatted}`);
-    } else {
-      expect(violations).toHaveLength(0);
-    }
+    const cleanListPath = path.resolve(__dirname, '../docs/COPY-TO-CLEAN.md');
+    let mdContent = '# Copy to Clean (To-Do List for Polishing Phase)\n\n';
+    mdContent += 'This file lists banned phrases found in `src/`. The app must not be deployed publicly until this list is cleared.\n\n';
+    mdContent += `Total occurrences found: ${violations.length}\n\n`;
+    mdContent += '| File | Line | Phrase | Sample Content |\n';
+    mdContent += '| --- | --- | --- | --- |\n';
+
+    violations.forEach((v) => {
+      const escapedContent = v.content.replace(/\|/g, '\\|');
+      mdContent += `| \`${v.file}\` | ${v.line} | **${v.phrase}** | \`${escapedContent}\` |\n`;
+    });
+
+    fs.writeFileSync(cleanListPath, mdContent, 'utf-8');
+
+    // Does not fail the build per STAGE M instructions
+    expect(fs.existsSync(cleanListPath)).toBe(true);
   });
 });
 

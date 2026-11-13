@@ -3,11 +3,12 @@ const path = require('path');
 
 function walk(dir) {
   let files = [];
+  if (!fs.existsSync(dir)) return files;
   for (const item of fs.readdirSync(dir)) {
     const full = path.join(dir, item);
     if (fs.statSync(full).isDirectory()) {
       files = files.concat(walk(full));
-    } else if (full.endsWith('.ts') || full.endsWith('.tsx')) {
+    } else if (full.endsWith('.ts') || full.endsWith('.tsx') || full.endsWith('.html')) {
       files.push(full);
     }
   }
@@ -15,51 +16,50 @@ function walk(dir) {
 }
 
 const icons = new Set();
-for (const file of walk('src')) {
+const filledIcons = new Set();
+
+const allSourceFiles = walk('src');
+
+for (const file of allSourceFiles) {
   const content = fs.readFileSync(file, 'utf8');
-  // match <span className="material-symbols-rounded...">name</span>
-  const regex = /material-symbols-rounded[^>]*>([a-z0-9_]+)<\/span>/g;
+  // match <span class="material-symbols-outlined...">name</span>
+  const regexOutlined = /material-symbols-outlined[^>]*>([\s\S]*?)<\/span>/g;
   let match;
-  while ((match = regex.exec(content)) !== null) {
-    icons.add(match[1]);
+  while ((match = regexOutlined.exec(content)) !== null) {
+    const fullTag = match[0];
+    const name = match[1].trim();
+    if (name && !name.includes('<') && !name.includes('${') && name.length < 50) {
+      icons.add(name);
+      if (/font-variation-settings:\s*['"]?[^'"]*FILL[^'"]*1/i.test(fullTag)) {
+        filledIcons.add(name);
+      }
+    }
   }
+
+  // match <span className="material-symbols-rounded...">name</span>
+  const regexRounded = /material-symbols-rounded[^>]*>([\s\S]*?)<\/span>/g;
+  while ((match = regexRounded.exec(content)) !== null) {
+    const fullTag = match[0];
+    const name = match[1].trim();
+    if (name && !name.includes('<') && !name.includes('${') && name.length < 50) {
+      icons.add(name);
+      if (/font-variation-settings:\s*['"]?[^'"]*FILL[^'"]*1/i.test(fullTag)) {
+        filledIcons.add(name);
+      }
+    }
+  }
+
   // match icon: 'name' or icon: "name"
   const iconPropRegex = /icon:\s*['"]([a-z0-9_]+)['"]/g;
   while ((match = iconPropRegex.exec(content)) !== null) {
     icons.add(match[1]);
   }
   // match Icon name="name"
-  const iconCompRegex = /<Icon\s+name=['"]([a-z0-9_]+)['"]/g;
+  const iconCompRegex = /<Icon\s+[^>]*name=['"]([a-z0-9_]+)['"]/g;
   while ((match = iconCompRegex.exec(content)) !== null) {
     icons.add(match[1]);
   }
 }
-
-// Add common dashboard icons needed for seller dashboard
-const extraIcons = [
-  'trending_up', 'trending_down', 'upload', 'download', 'content_copy',
-  'visibility', 'visibility_off', 'star', 'star_half', 'star_outline',
-  'more_vert', 'dark_mode', 'light_mode', 'help', 'help_outline',
-  'account_circle', 'photo_camera', 'image', 'auto_fix_high',
-  'auto_awesome', 'palette', 'magic_button', 'content_paste',
-  'print', 'share', 'reply', 'thumb_up', 'thumb_down',
-  'expand_more', 'expand_less', 'open_in_new', 'arrow_drop_down',
-  'arrow_upward', 'arrow_downward', 'sort', 'filter_alt',
-  'bar_chart', 'pie_chart', 'show_chart', 'sell', 'discount',
-  'badge', 'verified', 'verified_user', 'admin_panel_settings',
-  'description', 'receipt', 'local_shipping', 'inventory_2',
-  'support_agent', 'call', 'mail', 'phone', 'location_city',
-  'check_box', 'check_box_outline_blank', 'radio_button_checked', 'radio_button_unchecked',
-  'cancel', 'warning', 'info', 'error', 'pending', 'sync', 'replay',
-  'crop', 'tune', 'camera_alt', 'sparkles', 'psychology', 'upload_file'
-];
-
-for (const icon of extraIcons) {
-  icons.add(icon);
-}
-
-const sorted = Array.from(icons).sort();
-console.log('Found', sorted.length, 'icons:');
 
 const aliases = {
   smartphone: 'deskphone',
@@ -78,45 +78,128 @@ const aliases = {
   phonelink_ring: 'ring_volume',
   favorite_border: 'favorite',
   local_offer: 'sell',
+  bookmark_border: 'bookmark',
+  delete_outline: 'delete',
+  radio_button_checked: 'check_circle',
+  radio_button_unchecked: 'circle',
+  check_box_outline_blank: 'check_box',
+  hourglass_disabled: 'hourglass_empty',
+  pin_invoke: 'pin_drop',
+  explore_off: 'explore',
+  location_pin: 'location_on',
+  home_pin: 'home',
+  storefront: 'store',
+  lock_person: 'lock',
+  mark_chat_read: 'chat',
+  shield_locked: 'shield_lock',
+  shield_with_heart: 'shield',
+  photo_size_select_actual: 'photo_library',
+  tv_displays: 'tv',
+  soup_kitchen: 'kitchen',
+  vital_signs: 'ecg_heart',
+  access_time: 'schedule',
+  ad_units: 'devices',
+  assessment: 'analytics',
+  auto_graph: 'show_chart',
+  brightness_high: 'wb_sunny',
+  delivery_dining: 'two_wheeler',
+  gpp_good: 'verified_user',
+  gps_fixed: 'my_location',
+  gps_off: 'location_off',
+  gshield: 'shield',
+  insights: 'trending_up',
+  local_grocery_store: 'shopping_cart',
+  lock_outline: 'lock',
+  mobile_friendly: 'smartphone',
+  monetization_on: 'attach_money',
+  new_releases: 'campaign',
+  offline_bolt: 'bolt',
+  phone_android: 'smartphone',
+  phone_iphone: 'smartphone',
+  phonelink_erase: 'phone_disabled',
+  phonelink_lock: 'lock',
+  pixel_4_4xl_4a_5_5a_5g: 'smartphone',
+  query_builder: 'schedule',
+  report_problem: 'warning',
+  security_update_good: 'security',
+  security_update_warning: 'security',
+  send_to_mobile: 'send',
+  stay_current_portrait: 'smartphone',
+  textsms: 'sms',
+  tips_and_updates: 'lightbulb',
 };
 
 const svgDir = path.join(__dirname, '../node_modules/@material-symbols/svg-400/rounded');
 const iconPaths = {};
+const iconFillPaths = {};
 const missing = [];
+
+const sorted = Array.from(icons).sort();
 
 for (const icon of sorted) {
   const targetName = aliases[icon] || icon;
   const svgFile = path.join(svgDir, `${targetName}.svg`);
+  const fillSvgFile = path.join(svgDir, `${targetName}-fill.svg`);
+
   if (fs.existsSync(svgFile)) {
     const svgContent = fs.readFileSync(svgFile, 'utf8');
     const pathMatch = svgContent.match(/<path\s+d="([^"]+)"/);
     if (pathMatch) {
       iconPaths[icon] = pathMatch[1];
-      // Also ensure the targetName itself is in iconPaths if it was aliased
       if (!iconPaths[targetName]) {
         iconPaths[targetName] = pathMatch[1];
       }
-    } else {
-      console.warn(`No path d found in ${targetName}.svg`);
     }
   } else {
-    missing.push(icon);
+    // Try to find if any file matches
+    const testFiles = fs.readdirSync(svgDir).filter(f => f.startsWith(targetName));
+    if (testFiles.length > 0) {
+      const fallbackFile = path.join(svgDir, testFiles[0]);
+      const svgContent = fs.readFileSync(fallbackFile, 'utf8');
+      const pathMatch = svgContent.match(/<path\s+d="([^"]+)"/);
+      if (pathMatch) {
+        iconPaths[icon] = pathMatch[1];
+      }
+    } else {
+      missing.push(icon);
+    }
+  }
+
+  // Check fill version
+  if (fs.existsSync(fillSvgFile)) {
+    const svgContent = fs.readFileSync(fillSvgFile, 'utf8');
+    const pathMatch = svgContent.match(/<path\s+d="([^"]+)"/);
+    if (pathMatch) {
+      iconFillPaths[icon] = pathMatch[1];
+      if (!iconFillPaths[targetName]) {
+        iconFillPaths[targetName] = pathMatch[1];
+      }
+    }
   }
 }
 
-console.log('Successfully found SVGs for', Object.keys(iconPaths).length, 'icons');
 if (missing.length > 0) {
-  console.log('Missing SVGs:', missing);
+  console.warn(`Missing SVGs for ${missing.length} icons:`, missing.join(', '));
+  // Use a generic placeholder path for missing icons so code never crashes
+  const defaultPath = iconPaths['help'] || iconPaths['circle'] || 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z';
+  missing.forEach(icon => {
+    iconPaths[icon] = defaultPath;
+  });
 }
 
-// Write src/components/shared/icons-data.ts
-const code = `// Auto-generated SVG path definitions from @material-symbols/svg-400 (rounded)
-// Generated by scripts/extract-icons.cjs - DO NOT EDIT MANUALLY
-
+const outTs = `// Auto-generated by scripts/extract-icons.cjs
+// Total icons: ${Object.keys(iconPaths).length}
 export const ICON_PATHS: Record<string, string> = ${JSON.stringify(iconPaths, null, 2)};
+export { ICON_PATHS_FILL } from './icons-fill-data';
 
 export type IconName = keyof typeof ICON_PATHS;
 `;
 
-fs.writeFileSync(path.join(__dirname, '../src/components/shared/icons-data.ts'), code, 'utf8');
-console.log('Written src/components/shared/icons-data.ts');
+const outFillTs = `// Auto-generated by scripts/extract-icons.cjs
+// Total filled icons: ${Object.keys(iconFillPaths).length}
+export const ICON_PATHS_FILL: Record<string, string> = ${JSON.stringify(iconFillPaths, null, 2)};
+`;
+
+fs.writeFileSync(path.join(__dirname, '../src/components/shared/icons-data.ts'), outTs, 'utf8');
+fs.writeFileSync(path.join(__dirname, '../src/components/shared/icons-fill-data.ts'), outFillTs, 'utf8');
+console.log(`Generated icons-data.ts with ${Object.keys(iconPaths).length} icons and icons-fill-data.ts (${Object.keys(iconFillPaths).length} filled)!`);

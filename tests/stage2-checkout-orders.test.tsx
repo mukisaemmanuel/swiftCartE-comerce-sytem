@@ -1,11 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MockOrdersRepository } from '../src/data/orders.repository';
-import CheckoutPage from '../src/pages/buyer/CheckoutPage';
-import OrderConfirmationPage from '../src/pages/buyer/OrderConfirmationPage';
-import OrderDetailPage from '../src/pages/buyer/OrderDetailPage';
-import OrderTrackingPage from '../src/pages/buyer/OrderTrackingPage';
-import MyOrdersPage from '../src/pages/buyer/MyOrdersPage';
+import CheckoutPage from '../src/legacy/buyer/CheckoutPage';
+import OrderConfirmationPage from '../src/legacy/buyer/OrderConfirmationPage';
+import OrderDetailPage from '../src/legacy/buyer/OrderDetailPage';
+import OrderTrackingPage from '../src/legacy/buyer/OrderTrackingPage';
+import MyOrdersPage from '../src/legacy/buyer/MyOrdersPage';
 import { CartProvider } from '../src/context/CartContext';
 import { DELIVERY_OTP_LENGTH } from '../shared/constants';
 

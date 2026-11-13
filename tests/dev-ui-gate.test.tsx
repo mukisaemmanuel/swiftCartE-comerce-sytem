@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import PaymentWaitingPage from '../src/pages/buyer/PaymentWaitingPage';
+import PaymentWaitingPage from '../src/legacy/buyer/PaymentWaitingPage';
 
 describe('DEV-Only UI Guard', () => {
   it('does NOT render simulation buttons or Idempotency Key in production mode (DEV=false)', () => {

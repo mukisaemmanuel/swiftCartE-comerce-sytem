@@ -1,51 +1,62 @@
 import React from 'react';
-import AppHeader from '../components/buyer/AppHeader';
-import BottomTabBar, { type BuyerTab } from '../components/buyer/BottomTabBar';
-import Footer from '../components/buyer/Footer';
-import RoutePlaceholder from '../components/shared/RoutePlaceholder';
 import type { RouteDefinition } from '../routes/types';
-import { buyerRoutes } from '../routes/buyer';
 import { useCart } from '../hooks/useCart';
 import { useWishlist } from '../hooks/useWishlist';
 
-// Buyer Storefront Pages (Stage 1)
-import HomePage from '../pages/buyer/HomePage';
-import CategoriesPage from '../pages/buyer/CategoriesPage';
-import SearchPage from '../pages/buyer/SearchPage';
-import ProductDetailPage from '../pages/buyer/ProductDetailPage';
-import StorePage from '../pages/buyer/StorePage';
-import FollowedStoresPage from '../pages/buyer/FollowedStoresPage';
-import WishlistPage from '../pages/buyer/WishlistPage';
-import CartPage from '../pages/buyer/CartPage';
-
-// Buyer Checkout & Orders Pages (Stage 2 PART A)
-import CheckoutPage from '../pages/buyer/CheckoutPage';
-import PickupStationChooserPage from '../pages/buyer/PickupStationChooserPage';
-import DeliveryAddressesPage from '../pages/buyer/DeliveryAddressesPage';
-import PaymentMethodsPage from '../pages/buyer/PaymentMethodsPage';
-import PaymentWaitingPage from '../pages/buyer/PaymentWaitingPage';
-import OrderConfirmationPage from '../pages/buyer/OrderConfirmationPage';
-import MyOrdersPage from '../pages/buyer/MyOrdersPage';
-import OrderDetailPage from '../pages/buyer/OrderDetailPage';
-import OrderTrackingPage from '../pages/buyer/OrderTrackingPage';
-import OrderDeliveredPage from '../pages/buyer/OrderDeliveredPage';
-import ReturnsDisputesPage from '../pages/buyer/ReturnsDisputesPage';
-import ScanQrHandoverPage from '../pages/buyer/ScanQrHandoverPage';
-
-// Buyer Auth & Account Pages (Stage 2 PART B)
-import SignInPage from '../pages/buyer/SignInPage';
-import RegisterPage from '../pages/buyer/RegisterPage';
-import ForgotPasswordPage from '../pages/buyer/ForgotPasswordPage';
-import PhoneVerificationPage from '../pages/buyer/PhoneVerificationPage';
-import AccountPage from '../pages/buyer/AccountPage';
-import VouchersPage from '../pages/buyer/VouchersPage';
-import NotificationsPage from '../pages/buyer/NotificationsPage';
-import HelpCentrePage from '../pages/buyer/HelpCentrePage';
-import TermsPrivacyPage from '../pages/buyer/TermsPrivacyPage';
-import SplashPage from '../pages/buyer/SplashPage';
-import BecomeSellerPage from '../pages/buyer/BecomeSellerPage';
-import SellerApplicationStatusPage from '../pages/buyer/SellerApplicationStatusPage';
-import EmptyErrorSuitePage from '../pages/buyer/EmptyErrorSuitePage';
+// Converted Mockup Screens
+import {
+  Home,
+  HomeAlt,
+  Cart,
+  Wishlist,
+  Search,
+  SearchAlt,
+  ProductDetail,
+  ProductDetailAlt,
+  Categories,
+  CategoriesAlt,
+  Store,
+  FollowedStores,
+  FollowedStoresAlt,
+  Checkout,
+  CheckoutDeliveryCode,
+  PaymentWaiting,
+  DeliveryAddresses,
+  PaymentMethods,
+  PaymentMethodsAlt,
+  OrderConfirmation,
+  MyOrders,
+  OrderDetail,
+  OrderTracking,
+  LiveRiderTracking,
+  OrderDelivered,
+  PickupStations,
+  ReturnsDisputes,
+  EscrowDisputeReturn,
+  DisputeEvidence,
+  DisputePhotos,
+  ScanQr,
+  SignIn,
+  SignInAlt,
+  Register,
+  PhoneVerification,
+  PhoneVerificationAlt,
+  ForgotPassword,
+  Account,
+  Vouchers,
+  Notifications,
+  NotificationsAlt,
+  HelpCentre,
+  TermsPrivacy,
+  PrivacyPolicy,
+  BecomeSeller,
+  SellerApplicationStatus,
+  EmptyErrorSuite,
+  SplashFirstOpen,
+  SplashWelcome,
+  AddMobileMoney,
+  MtnMomoUssd,
+} from '../mockups/buyer';
 
 export interface BuyerViewProps {
   route: RouteDefinition;
@@ -53,48 +64,33 @@ export interface BuyerViewProps {
 }
 
 export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
-  const { cart } = useCart();
-  const { wishlist } = useWishlist();
+  const { addItem } = useCart();
+  const { toggleWishlist } = useWishlist();
 
-  // Extract query params if present in window.location.search
-  const searchParams = typeof window !== 'undefined'
-    ? new URLSearchParams(window.location.search)
-    : new URLSearchParams();
-
-  const productIdParam = searchParams.get('id') || undefined;
-  const sellerIdParam = searchParams.get('sellerId') || undefined;
-  const searchQueryParam = searchParams.get('q') || undefined;
-  const categoryParam = searchParams.get('cat') || undefined;
-
-  // Map current route to tab if applicable
-  let currentTab: BuyerTab = 'home';
-  if (route.path === '/categories' || route.path.includes('categories')) {
-    currentTab = 'categories';
-  } else if (route.path.startsWith('/cart')) {
-    currentTab = 'cart';
-  } else if (route.path.startsWith('/wishlist')) {
-    currentTab = 'wishlist';
-  } else if (route.path.startsWith('/account')) {
-    currentTab = 'account';
-  }
-
-  const handleTabChange = (tab: BuyerTab) => {
-    switch (tab) {
-      case 'home':
-        onNavigate('/');
-        break;
-      case 'categories':
-        onNavigate('/categories');
-        break;
-      case 'cart':
-        onNavigate('/cart');
-        break;
-      case 'wishlist':
-        onNavigate('/wishlist');
-        break;
-      case 'account':
-        onNavigate('/account');
-        break;
+  const handleAction = (action: string, payload?: unknown) => {
+    const p = payload as { id?: string; quantity?: number } | undefined;
+    if (action === 'add-to-cart') {
+      const defaultProduct = {
+        id: 'prod_soundcore_space_one',
+        title: 'Soundcore Space One ANC Wireless Headphones',
+        slug: 'soundcore-space-one',
+        price: 380000,
+        originalPrice: 420000,
+        sellerId: 'store_anker_ug',
+        sellerName: 'Anker Official Store UG',
+        isSellerVerified: true,
+        categoryId: 'cat_audio',
+        categoryName: 'Audio & Headphones',
+        rating: 4.8,
+        reviewCount: 142,
+        images: ['/images/product-audio.svg'],
+        inStock: true,
+        description: 'Adaptive Active Noise Cancelling headphones',
+        specifications: {},
+      };
+      addItem(defaultProduct, undefined, p?.quantity || 1);
+    } else if (action === 'wishlist') {
+      toggleWishlist(p?.id || 'prod_soundcore_space_one');
     }
   };
 
@@ -102,255 +98,164 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
     const path = route.path;
 
     // 1. Home
-    if (path === '/' || path === '/-alt' || path.startsWith('/home')) {
-      return <HomePage onNavigate={onNavigate} />;
-    }
+    if (path === '/') return <Home onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/-alt' || path === '/home-marketplace-2') return <HomeAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/home')) return <Home onNavigate={onNavigate} onAction={handleAction} />;
 
     // 2. Categories
-    if (
-      path === '/categories' ||
-      path.startsWith('/categories-mega') ||
-      path === '/search-categories'
-    ) {
-      return <CategoriesPage onNavigate={onNavigate} />;
+    if (path === '/categories') return <Categories onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/categories-mega-directory-2') return <CategoriesAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/categories') || path === '/search-categories') {
+      return <Categories onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 3. Search & Results
-    if (
-      path === '/search' ||
-      path === '/search-experience' ||
-      path.startsWith('/search-results')
-    ) {
-      return (
-        <SearchPage
-          initialQuery={searchQueryParam}
-          initialCategory={categoryParam}
-          onNavigate={onNavigate}
-        />
-      );
-    }
+    if (path === '/search' || path === '/search-experience') return <Search onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/search-results-2') return <SearchAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/search')) return <Search onNavigate={onNavigate} onAction={handleAction} />;
 
     // 4. Product Detail
+    if (path === '/product-detail-soundcore-space-one-2') return <ProductDetailAlt onNavigate={onNavigate} onAction={handleAction} />;
     if (path.startsWith('/product-detail') || path.startsWith('/product')) {
-      return (
-        <ProductDetailPage
-          productId={productIdParam}
-          onNavigate={onNavigate}
-        />
-      );
+      return <ProductDetail onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 5. Store Page
     if (path.startsWith('/store-page') || path.startsWith('/store')) {
-      return (
-        <StorePage
-          sellerId={sellerIdParam}
-          onNavigate={onNavigate}
-        />
-      );
+      return <Store onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 6. Followed Stores
-    if (path.startsWith('/followed-stores')) {
-      return <FollowedStoresPage onNavigate={onNavigate} />;
-    }
+    if (path === '/followed-stores-2') return <FollowedStoresAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/followed-stores')) return <FollowedStores onNavigate={onNavigate} onAction={handleAction} />;
 
     // 7. Wishlist
-    if (path.startsWith('/wishlist')) {
-      return <WishlistPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/wishlist')) return <Wishlist onNavigate={onNavigate} onAction={handleAction} />;
 
     // 8. Cart
-    if (path.startsWith('/cart')) {
-      return <CartPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/cart')) return <Cart onNavigate={onNavigate} onAction={handleAction} />;
 
     // 9. Checkout Flow
-    if (path.startsWith('/checkout-step') || path === '/checkout') {
-      return <CheckoutPage onNavigate={onNavigate} />;
-    }
+    if (path === '/checkout-delivery-code') return <CheckoutDeliveryCode onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/checkout')) return <Checkout onNavigate={onNavigate} onAction={handleAction} />;
 
     // 10. Pickup Station Chooser
-    if (path.startsWith('/pickup-station')) {
-      return <PickupStationChooserPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/pickup-station')) return <PickupStations onNavigate={onNavigate} onAction={handleAction} />;
 
     // 11. Delivery Addresses
-    if (path.startsWith('/delivery-addresses')) {
-      return <DeliveryAddressesPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/delivery-addresses')) return <DeliveryAddresses onNavigate={onNavigate} onAction={handleAction} />;
 
     // 12. Payment Methods & Add Mobile Money Sheet
-    if (path.startsWith('/payment-methods') || path === '/add-money-bottom-sheet') {
-      return <PaymentMethodsPage onNavigate={onNavigate} />;
+    if (path === '/add-money-bottom-sheet' || path === '/add-mobile-money-bottom-sheet') {
+      return <AddMobileMoney onNavigate={onNavigate} onAction={handleAction} />;
     }
+    if (path === '/payment-methods-2') return <PaymentMethodsAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/payment-methods')) return <PaymentMethods onNavigate={onNavigate} onAction={handleAction} />;
 
     // 13. Payment Waiting / USSD PIN Prompt
-    if (
-      path === '/checkout-one-flow-payment-waiting' ||
-      path.startsWith('/mtn-momo-ussd')
-    ) {
-      return <PaymentWaitingPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/mtn-momo-ussd')) return <MtnMomoUssd onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/checkout-one-flow-payment-waiting') return <PaymentWaiting onNavigate={onNavigate} onAction={handleAction} />;
 
     // 14. Order Confirmation & Delivery Handover Code
-    if (
-      path === '/order-confirmation-delivery-code' ||
-      path === '/checkout-delivery-code'
-    ) {
-      return <OrderConfirmationPage onNavigate={onNavigate} />;
+    if (path.startsWith('/order-confirmation')) {
+      return <OrderConfirmation onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 15. My Orders List
-    if (path === '/my-orders') {
-      return <MyOrdersPage onNavigate={onNavigate} />;
-    }
+    if (path === '/my-orders' || path === '/orders') return <MyOrders onNavigate={onNavigate} onAction={handleAction} />;
 
     // 16. Order Detail
-    if (path === '/my-orders-order-detail') {
-      return <OrderDetailPage onNavigate={onNavigate} />;
+    if (path === '/my-orders-order-detail' || path.startsWith('/order-detail')) {
+      return <OrderDetail onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 17. Order Tracking & Live Boda Map
-    if (
-      path.startsWith('/order-tracking') ||
-      path.startsWith('/live-rider-tracking') ||
-      path.startsWith('/live-boda-rider')
-    ) {
-      return <OrderTrackingPage onNavigate={onNavigate} />;
+    if (path.startsWith('/live-rider-tracking') || path.startsWith('/live-boda-rider')) {
+      return <LiveRiderTracking onNavigate={onNavigate} onAction={handleAction} />;
+    }
+    if (path.startsWith('/order-tracking')) {
+      return <OrderTracking onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 18. Order Delivered & Review Modal
-    if (path.startsWith('/order-delivered')) {
-      return <OrderDeliveredPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/order-delivered')) return <OrderDelivered onNavigate={onNavigate} onAction={handleAction} />;
 
     // 19. Returns & Escrow Disputes
-    if (
-      path === '/returns-disputes' ||
-      path === '/escrow-dispute-return-request' ||
-      path === '/dispute-evidence-form' ||
-      path === '/submit-dispute-photos'
-    ) {
-      return <ReturnsDisputesPage onNavigate={onNavigate} />;
+    if (path === '/returns-disputes') return <ReturnsDisputes onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/escrow-dispute-return-request' || path === '/escrow-dispute') {
+      return <EscrowDisputeReturn onNavigate={onNavigate} onAction={handleAction} />;
+    }
+    if (path === '/dispute-evidence-form' || path === '/dispute-evidence') {
+      return <DisputeEvidence onNavigate={onNavigate} onAction={handleAction} />;
+    }
+    if (path === '/submit-dispute-photos' || path === '/dispute-photos') {
+      return <DisputePhotos onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 20. Scan QR Handover
-    if (path === '/scan-qr-handover') {
-      return <ScanQrHandoverPage onNavigate={onNavigate} />;
-    }
+    if (path === '/scan-qr-handover') return <ScanQr onNavigate={onNavigate} onAction={handleAction} />;
 
     // 21. Auth: Sign In
-    if (
-      path === '/sign-in-buyer' ||
-      path === '/sign-in-register' ||
-      path === '/sign-in-1' ||
-      path === '/sign-in-2'
-    ) {
-      return <SignInPage onNavigate={onNavigate} />;
-    }
+    if (path === '/sign-in-2') return <SignInAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/sign-in')) return <SignIn onNavigate={onNavigate} onAction={handleAction} />;
 
     // 22. Auth: Register
-    if (path === '/register-buyer' || path === '/register-2') {
-      return <RegisterPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/register')) return <Register onNavigate={onNavigate} onAction={handleAction} />;
 
     // 23. Auth: Forgot Password
-    if (path === '/forgot-password-buyer') {
-      return <ForgotPasswordPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/forgot-password')) return <ForgotPassword onNavigate={onNavigate} onAction={handleAction} />;
 
     // 24. Auth: Phone Verification
-    if (
-      path.startsWith('/phone-verification')
-    ) {
-      return <PhoneVerificationPage onNavigate={onNavigate} />;
+    if (path === '/phone-verification-2') return <PhoneVerificationAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/phone-verification')) {
+      return <PhoneVerification onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 25. Account Profile
     if (path === '/account' || path === '/buyer-account-profile') {
-      return <AccountPage onNavigate={onNavigate} />;
+      return <Account onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 26. Vouchers
-    if (path === '/vouchers-discounts') {
-      return <VouchersPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/vouchers')) return <Vouchers onNavigate={onNavigate} onAction={handleAction} />;
 
     // 27. Notifications
-    if (
-      path === '/notifications' ||
-      path === '/notifications-buyer' ||
-      path === '/messages-notifications'
-    ) {
-      return <NotificationsPage onNavigate={onNavigate} />;
-    }
+    if (path === '/messages-notifications') return <NotificationsAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/notifications')) return <Notifications onNavigate={onNavigate} onAction={handleAction} />;
 
     // 28. Help Centre & Support
-    if (path.startsWith('/help-centre')) {
-      return <HelpCentrePage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/help-centre')) return <HelpCentre onNavigate={onNavigate} onAction={handleAction} />;
 
     // 29. Terms & Privacy Policy
-    if (
-      path === '/terms-of-service-privacy' ||
-      path === '/privacy-policy-buyer' ||
-      path === '/privacy-policy-terms-buyer'
-    ) {
-      return <TermsPrivacyPage onNavigate={onNavigate} />;
-    }
+    if (path.startsWith('/privacy-policy')) return <PrivacyPolicy onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/terms')) return <TermsPrivacy onNavigate={onNavigate} onAction={handleAction} />;
 
     // 30. Splash / Welcome
-    if (path.startsWith('/splash')) {
-      return <SplashPage onNavigate={onNavigate} />;
-    }
+    if (path === '/splash-first-open') return <SplashFirstOpen onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/splash')) return <SplashWelcome onNavigate={onNavigate} onAction={handleAction} />;
 
     // 31. Become a Seller (4 Steps)
-    if (path === '/become-a-seller-4-steps') {
-      return <BecomeSellerPage onNavigate={onNavigate} />;
+    if (path.startsWith('/become-a-seller') || path === '/become-seller') {
+      return <BecomeSeller onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 32. Seller Application Status
-    if (path === '/seller-application-status') {
-      return <SellerApplicationStatusPage onNavigate={onNavigate} />;
+    if (path.startsWith('/seller-application-status')) {
+      return <SellerApplicationStatus onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 33. Empty & Error States Suite
-    if (path === '/empty-error-states-suite') {
-      return <EmptyErrorSuitePage onNavigate={onNavigate} />;
+    if (path.startsWith('/empty-error-states')) {
+      return <EmptyErrorSuite onNavigate={onNavigate} onAction={handleAction} />;
     }
 
-    // Fallback: ONLY for routes outside buyer scope
-    return (
-      <RoutePlaceholder
-        route={route}
-        onNavigate={onNavigate}
-        siblingRoutes={buyerRoutes}
-      />
-    );
+    // Fallback: Default to Home screen
+    return <Home onNavigate={onNavigate} onAction={handleAction} />;
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF8F2] text-[#0E1B4D] flex flex-col pb-20 md:pb-0">
-      <AppHeader
-        cartCount={cart.totalQuantity}
-        wishlistCount={wishlist.length}
-        onNavigate={onNavigate}
-        onSearch={(query) => onNavigate(`/search?q=${encodeURIComponent(query)}`)}
-      />
-
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {renderActiveScreen()}
-      </main>
-
-      <Footer onNavigate={onNavigate} />
-
-      <BottomTabBar
-        currentTab={currentTab}
-        onTabChange={handleTabChange}
-        cartCount={cart.totalQuantity}
-        wishlistCount={wishlist.length}
-      />
+    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
+      {renderActiveScreen()}
     </div>
   );
 };

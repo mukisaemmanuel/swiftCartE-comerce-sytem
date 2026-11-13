@@ -1,8 +1,13 @@
 # SwiftCart build rules (read before building any screen)
 
-The files in design/ are VISUAL REFERENCES ONLY (layout, spacing, colour, components).
-They are Tailwind-CDN HTML exports, not production code. Rebuild every screen as real React
-components. Never copy text, names or numbers from the mockups.
+Copy the mockups exactly. Do not change text, layout or features. Wording and
+feature clean-ups are a later phase.
+
+The mockups in design/ are to be reproduced EXACTLY: same layout, spacing,
+colours, fonts, sizes, text, sample data, numbers, icons, images, header,
+sidebar, bottom bar and features that are visible in the mockup. Do not redesign,
+simplify, rename, reword, reorder or "improve" anything. Polishing, wording
+changes and removing unwanted features come LATER in a separate phase.
 
 ## Banned copy (a test must fail the build if any of these appear in src/)
 Bank of Uganda, BoU, NPS, Stanbic (as custody/escrow), regulated, statutory, HSM, enclave,

@@ -1,20 +1,22 @@
 import React from 'react';
-import { ICON_PATHS, IconName } from './icons-data';
+import { ICON_PATHS, ICON_PATHS_FILL, IconName } from './icons-data';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: IconName | string;
   size?: number | string;
+  filled?: boolean;
   className?: string;
 }
 
 export const Icon: React.FC<IconProps> = ({
   name,
   size,
+  filled = false,
   className = '',
   style,
   ...rest
 }) => {
-  const path = ICON_PATHS[name];
+  const path = filled ? (ICON_PATHS_FILL[name] || ICON_PATHS[name]) : ICON_PATHS[name];
   const dimensionProps = size
     ? { width: size, height: size }
     : { width: '1em', height: '1em' };

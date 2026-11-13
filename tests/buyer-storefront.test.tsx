@@ -9,14 +9,14 @@ import {
 import type { CartItem, Voucher } from '../src/domain/types';
 
 // Storefront Pages
-import HomePage from '../src/pages/buyer/HomePage';
-import CategoriesPage from '../src/pages/buyer/CategoriesPage';
-import SearchPage from '../src/pages/buyer/SearchPage';
-import ProductDetailPage from '../src/pages/buyer/ProductDetailPage';
-import StorePage from '../src/pages/buyer/StorePage';
-import FollowedStoresPage from '../src/pages/buyer/FollowedStoresPage';
-import WishlistPage from '../src/pages/buyer/WishlistPage';
-import CartPage from '../src/pages/buyer/CartPage';
+import HomePage from '../src/legacy/buyer/HomePage';
+import CategoriesPage from '../src/legacy/buyer/CategoriesPage';
+import SearchPage from '../src/legacy/buyer/SearchPage';
+import ProductDetailPage from '../src/legacy/buyer/ProductDetailPage';
+import StorePage from '../src/legacy/buyer/StorePage';
+import FollowedStoresPage from '../src/legacy/buyer/FollowedStoresPage';
+import WishlistPage from '../src/legacy/buyer/WishlistPage';
+import CartPage from '../src/legacy/buyer/CartPage';
 
 describe('Stage 1 Quality Gate: Buyer Domain, Totals & Seller Grouping', () => {
   const sampleItems: CartItem[] = [
