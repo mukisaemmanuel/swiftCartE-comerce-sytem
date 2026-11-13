@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../shared/Icon';
 
 export interface StarRatingProps {
   rating: number; // 0 to 5
@@ -31,13 +32,12 @@ export const StarRating: React.FC<StarRatingProps> = ({
           const half = !filled && i < clampedRating && clampedRating - i >= 0.5;
 
           return (
-            <span
+            <Icon
               key={i}
-              className={`material-symbols-rounded ${iconSize} leading-none`}
+              name={filled ? 'star' : half ? 'star_half' : 'star'}
+              className={`${iconSize} leading-none ${!filled && !half ? 'opacity-30' : ''}`}
               aria-hidden="true"
-            >
-              {filled ? 'star' : half ? 'star_half' : 'star'}
-            </span>
+            />
           );
         })}
       </div>

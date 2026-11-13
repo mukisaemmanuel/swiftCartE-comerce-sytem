@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
+import { Icon } from '../../components/shared/Icon';
 
 export interface RegisterPageProps {
   onNavigate: (path: string) => void;
@@ -42,7 +43,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onNavigate }) => {
       <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl max-w-md w-full space-y-6">
         <div className="text-center space-y-2">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FF8A1F] to-[#DA3700] text-white flex items-center justify-center mx-auto shadow-md">
-            <span className="material-symbols-rounded text-3xl">person_add</span>
+            <Icon name="person_add" className="text-3xl" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
             Create Account
@@ -54,7 +55,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onNavigate }) => {
 
         {errorMsg && (
           <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium flex items-center gap-2">
-            <span className="material-symbols-rounded text-base shrink-0">error</span>
+            <Icon name="error" className="text-base shrink-0" />
             <span>{errorMsg}</span>
           </div>
         )}
@@ -142,7 +143,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onNavigate }) => {
             className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md transition-opacity flex items-center justify-center gap-2 min-h-[48px]"
           >
             <span>{isLoading ? 'Creating Account...' : 'Continue to Verification'}</span>
-            <span className="material-symbols-rounded text-lg">arrow_forward</span>
+            <Icon name="arrow_forward" className="text-lg" />
           </button>
         </form>
 

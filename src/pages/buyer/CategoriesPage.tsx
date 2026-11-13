@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useCategories, useProducts } from '../../hooks/useCatalog';
 import Skeleton from '../../components/shared/Skeleton';
+import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface CategoriesPageProps {
   onNavigate: (path: string) => void;
@@ -62,8 +64,8 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
                 }`}
               >
                 <div className="w-10 h-10 rounded-full bg-white p-1 mb-1 border border-slate-200/60 shadow-xs flex items-center justify-center">
-                  <img
-                    src={cat.imageUrl || '/placeholders/phones.svg'}
+                  <SafeImage
+                    src={cat.imageUrl}
                     alt={cat.name}
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -91,7 +93,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
                     {selectedCategory.itemCount} items available
                   </span>
                 </div>
-                <span className="material-symbols-rounded text-[22px]">chevron_right</span>
+                <Icon name="chevron_right" className="text-[22px]" />
               </div>
 
               {/* Subcategories Pills */}
@@ -130,7 +132,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
                           onClick={() => onNavigate(`/product-detail-soundcore-space-one-2?id=${p.id}`)}
                           className="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-slate-200 shadow-xs cursor-pointer"
                         >
-                          <img
+                          <SafeImage
                             src={p.images[0]}
                             alt={p.title}
                             className="w-16 h-16 rounded-lg object-cover bg-slate-50 shrink-0"
@@ -165,8 +167,8 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
             {/* Header */}
             <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
               <div className="w-14 h-14 rounded-2xl bg-orange-100 p-1 border border-orange-200 shrink-0">
-                <img
-                  src={cat.imageUrl || '/placeholders/phones.svg'}
+                <SafeImage
+                  src={cat.imageUrl}
                   alt={cat.name}
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -198,9 +200,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
                       className="w-full flex items-center justify-between text-left text-[14px] text-slate-600 hover:text-[#DA3700] hover:bg-orange-50/60 p-1.5 rounded-lg transition-colors group"
                     >
                       <span>{sub.name}</span>
-                      <span className="material-symbols-rounded text-[16px] text-slate-300 group-hover:text-[#DA3700]">
-                        chevron_right
-                      </span>
+                      <Icon name="chevron_right" className="text-[16px] text-slate-300 group-hover:text-[#DA3700]" />
                     </button>
                   </li>
                 ))}
@@ -214,7 +214,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ onNavigate }) =>
               className="touch-target w-full py-2.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#DA3700] font-bold text-[14px] text-center transition-colors flex items-center justify-center gap-1.5"
             >
               <span>Explore {cat.name}</span>
-              <span className="material-symbols-rounded text-[18px]">arrow_forward</span>
+              <Icon name="arrow_forward" className="text-[18px]" />
             </button>
           </div>
         ))}

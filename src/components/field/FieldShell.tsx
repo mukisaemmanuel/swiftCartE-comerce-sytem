@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../brand/Logo';
 import { useDashboardTheme } from '../../context/ThemeContext';
 import OfflineBanner from '../shared/OfflineBanner';
+import { Icon } from '../shared/Icon';
 
 export type FieldRole = 'rider' | 'hub';
 
@@ -103,9 +104,10 @@ export const FieldShell: React.FC<FieldShellProps> = ({
             className="touch-target p-2 rounded-xl text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
-            <span className="material-symbols-rounded text-[22px]">
-              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-            </span>
+            <Icon
+              name={theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              className="text-[22px]"
+            />
           </button>
         </div>
       </header>
@@ -138,14 +140,9 @@ export const FieldShell: React.FC<FieldShellProps> = ({
                 aria-current={isActive ? 'page' : undefined}
               >
                 <div className="relative flex items-center justify-center">
-                  <span
-                    className={`material-symbols-rounded text-[24px] ${
+                  <Icon name={tab.icon} className={`text-[24px] ${
                       isActive ? 'font-bold' : ''
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {tab.icon}
-                  </span>
+                    }`} aria-hidden="true" />
 
                   {tab.badge && (
                     <span className="absolute -top-1 -right-2 px-1.5 py-0.2 rounded-full text-[11px] font-bold bg-[#ED1C24] text-white min-w-[18px] text-center">

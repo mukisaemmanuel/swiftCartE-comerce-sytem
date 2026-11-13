@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Icon } from '../../components/shared/Icon';
 
 export interface TermsPrivacyPageProps {
   onNavigate: (path: string) => void;
@@ -16,7 +17,7 @@ export const TermsPrivacyPage: React.FC<TermsPrivacyPageProps> = ({ onNavigate }
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -30,9 +31,7 @@ export const TermsPrivacyPage: React.FC<TermsPrivacyPageProps> = ({ onNavigate }
 
       {/* Prominent Disclaimer */}
       <div className="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 sm:p-5 flex items-start gap-3 text-amber-900">
-        <span className="material-symbols-rounded text-amber-600 text-2xl shrink-0">
-          gavel
-        </span>
+        <Icon name="gavel" className="text-amber-600 text-2xl shrink-0" />
         <div className="text-xs sm:text-sm">
           <strong className="font-extrabold block mb-0.5">
             Legal Notice: Draft document - to be reviewed by a lawyer before live launch

@@ -6,6 +6,7 @@ import VerifiedBadge from '../../components/buyer/VerifiedBadge';
 import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
 import { useCart } from '../../hooks/useCart';
+import { Icon } from '../../components/shared/Icon';
 
 export interface StorePageProps {
   sellerId?: string;
@@ -88,9 +89,7 @@ export const StorePage: React.FC<StorePageProps> = ({
             </div>
 
             <p className="text-[13px] sm:text-[14px] text-slate-500 flex items-center gap-1.5 mt-0.5">
-              <span className="material-symbols-rounded text-[16px] text-slate-400">
-                location_on
-              </span>
+              <Icon name="location_on" className="text-[16px] text-slate-400" />
               <span>{seller.location}</span>
             </p>
 
@@ -104,7 +103,7 @@ export const StorePage: React.FC<StorePageProps> = ({
               </span>
               <span className="text-slate-300">•</span>
               <span className="text-emerald-600 font-semibold flex items-center gap-1">
-                <span className="material-symbols-rounded text-[16px]">bolt</span>
+                <Icon name="bolt" className="text-[16px]" />
                 Dispatches in ~{seller.dispatchSpeedHours || 2}h
               </span>
             </div>
@@ -122,9 +121,10 @@ export const StorePage: React.FC<StorePageProps> = ({
                 : 'bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white shadow-sm hover:opacity-95'
             }`}
           >
-            <span className="material-symbols-rounded text-[18px]">
-              {isFollowed ? 'check' : 'favorite'}
-            </span>
+            <Icon
+              name={isFollowed ? 'check' : 'favorite'}
+              className="text-[18px]"
+            />
             <span>{isFollowed ? 'Following' : 'Follow Store'}</span>
           </button>
         </div>
@@ -161,9 +161,7 @@ export const StorePage: React.FC<StorePageProps> = ({
 
         {activeTab === 'products' && (
           <div className="relative w-full sm:w-64">
-            <span className="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
-              search
-            </span>
+            <Icon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]" />
             <input
               type="text"
               value={storeSearch}

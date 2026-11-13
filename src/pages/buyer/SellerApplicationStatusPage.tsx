@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAccount } from '../../hooks/useAccount';
+import { Icon } from '../../components/shared/Icon';
 
 export interface SellerApplicationStatusPageProps {
   onNavigate: (path: string) => void;
@@ -17,7 +18,7 @@ export const SellerApplicationStatusPage: React.FC<SellerApplicationStatusPagePr
     contactName: 'Mukisa Emmanuel',
     phoneNumber: '+256 772 123456',
     status: 'UNDER_REVIEW',
-    submittedAt: '2024-11-12T10:00:00Z',
+    submittedAt: new Date(Date.now() - 86400000).toISOString(),
   };
 
   return (
@@ -26,9 +27,7 @@ export const SellerApplicationStatusPage: React.FC<SellerApplicationStatusPagePr
         {/* Status Graphic */}
         <div className="space-y-3">
           <div className="w-20 h-20 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-md">
-            <span className="material-symbols-rounded text-4xl animate-pulse">
-              hourglass_top
-            </span>
+            <Icon name="hourglass_top" className="text-4xl animate-pulse" />
           </div>
           <span className="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
             Application Under Review
@@ -67,9 +66,7 @@ export const SellerApplicationStatusPage: React.FC<SellerApplicationStatusPagePr
 
         {/* Next Steps Card */}
         <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-left flex items-start gap-3 text-blue-900 text-xs sm:text-sm">
-          <span className="material-symbols-rounded text-blue-600 text-xl shrink-0 mt-0.5">
-            info
-          </span>
+          <Icon name="info" className="text-blue-600 text-xl shrink-0 mt-0.5" />
           <div>
             <strong className="block font-bold mb-0.5">What happens next?</strong>
             Our Kampala merchant team will call or SMS your registered phone to confirm your shop inventory and provide your merchant dashboard login credentials.

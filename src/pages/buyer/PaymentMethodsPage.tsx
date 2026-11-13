@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAccount } from '../../hooks/useAccount';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
+import { Icon } from '../../components/shared/Icon';
 
 export interface PaymentMethodsPageProps {
   onNavigate: (path: string) => void;
@@ -53,7 +54,7 @@ export const PaymentMethodsPage: React.FC<PaymentMethodsPageProps> = ({ onNaviga
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -69,7 +70,7 @@ export const PaymentMethodsPage: React.FC<PaymentMethodsPageProps> = ({ onNaviga
           onClick={() => setIsSheetOpen(true)}
           className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 transition-opacity flex items-center gap-1.5 shadow-xs shrink-0 min-h-[44px]"
         >
-          <span className="material-symbols-rounded text-lg">add</span>
+          <Icon name="add" className="text-lg" />
           <span>Add Mobile Money</span>
         </button>
       </div>
@@ -148,7 +149,7 @@ export const PaymentMethodsPage: React.FC<PaymentMethodsPageProps> = ({ onNaviga
                     className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                     aria-label="Delete method"
                   >
-                    <span className="material-symbols-rounded text-lg">delete</span>
+                    <Icon name="delete" className="text-lg" />
                   </button>
                 </div>
               </div>
@@ -166,7 +167,7 @@ export const PaymentMethodsPage: React.FC<PaymentMethodsPageProps> = ({ onNaviga
               className="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center hover:bg-slate-200"
               aria-label="Close"
             >
-              <span className="material-symbols-rounded text-lg">close</span>
+              <Icon name="close" className="text-lg" />
             </button>
 
             <h2 className="text-xl font-extrabold text-[#0E1B4D] mb-2">

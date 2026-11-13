@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Icon } from './Icon';
 
 export interface Column<T> {
   key: string;
@@ -64,9 +65,7 @@ export function DataTable<T>({
         <div className="p-4 border-b border-[var(--d-border)] flex flex-wrap items-center justify-between gap-3">
           {searchFilter && (
             <div className="relative flex-1 min-w-[220px] max-w-md">
-              <span className="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-[var(--d-text-muted)] pointer-events-none">
-                search
-              </span>
+              <Icon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-[var(--d-text-muted)] pointer-events-none" />
               <input
                 type="text"
                 value={searchQuery}
@@ -84,7 +83,7 @@ export function DataTable<T>({
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--d-text-muted)] hover:text-[var(--d-text-primary)]"
                   aria-label="Clear search"
                 >
-                  <span className="material-symbols-rounded text-[18px]">close</span>
+                  <Icon name="close" className="text-[18px]" />
                 </button>
               )}
             </div>
@@ -154,9 +153,7 @@ export function DataTable<T>({
               <tr>
                 <td colSpan={columns.length} className="p-8 text-center text-[var(--d-text-muted)]">
                   <div className="flex items-center justify-center gap-2">
-                    <span className="material-symbols-rounded animate-spin text-[24px]">
-                      progress_activity
-                    </span>
+                    <Icon name="progress_activity" className="animate-spin text-[24px]" />
                     <span>Loading data...</span>
                   </div>
                 </td>
@@ -165,9 +162,7 @@ export function DataTable<T>({
               <tr>
                 <td colSpan={columns.length} className="p-8 text-center text-[var(--d-text-muted)]">
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="material-symbols-rounded text-[36px] text-slate-500">
-                      inbox
-                    </span>
+                    <Icon name="inbox" className="text-[36px] text-slate-500" />
                     <span>{emptyMessage}</span>
                   </div>
                 </td>
@@ -214,7 +209,7 @@ export function DataTable<T>({
               className="touch-target px-3 py-1.5 rounded-lg border border-[var(--d-border)] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[var(--d-surface-container)] transition-colors"
               aria-label="Previous Page"
             >
-              <span className="material-symbols-rounded text-[18px]">chevron_left</span>
+              <Icon name="chevron_left" className="text-[18px]" />
             </button>
             <span className="px-3 py-1 font-bold text-[var(--d-text-primary)]">
               {page} / {totalPages}
@@ -226,7 +221,7 @@ export function DataTable<T>({
               className="touch-target px-3 py-1.5 rounded-lg border border-[var(--d-border)] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[var(--d-surface-container)] transition-colors"
               aria-label="Next Page"
             >
-              <span className="material-symbols-rounded text-[18px]">chevron_right</span>
+              <Icon name="chevron_right" className="text-[18px]" />
             </button>
           </div>
         </div>

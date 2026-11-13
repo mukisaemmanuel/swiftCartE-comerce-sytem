@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
+import { Icon } from '../../components/shared/Icon';
 
 export interface ForgotPasswordPageProps {
   onNavigate: (path: string) => void;
@@ -32,7 +33,7 @@ export const ForgotPasswordPage: React.FC<ForgotPasswordPageProps> = ({ onNaviga
       <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl max-w-md w-full space-y-6">
         <div className="text-center space-y-2">
           <div className="w-14 h-14 rounded-2xl bg-orange-100 text-[#DA3700] flex items-center justify-center mx-auto shadow-sm">
-            <span className="material-symbols-rounded text-3xl">lock_reset</span>
+            <Icon name="lock_reset" className="text-3xl" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
             Reset Password
@@ -74,9 +75,7 @@ export const ForgotPasswordPage: React.FC<ForgotPasswordPageProps> = ({ onNaviga
           </form>
         ) : (
           <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-3">
-            <span className="material-symbols-rounded text-4xl text-emerald-600">
-              mark_email_read
-            </span>
+            <Icon name="mark_email_read" className="text-4xl text-emerald-600" />
             <h3 className="font-bold text-base text-emerald-900">Code Dispatched!</h3>
             <p className="text-xs text-emerald-800">
               We sent a 6-digit reset code to <span className="font-bold">{identifier}</span>. Check your SMS messages.

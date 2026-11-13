@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../brand/Logo';
 import { useDashboardTheme } from '../../context/ThemeContext';
+import { Icon } from '../shared/Icon';
 
 export type DashboardRole = 'seller' | 'admin' | 'super-admin';
 
@@ -150,7 +151,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
             className="md:hidden touch-target p-2 rounded-xl text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors"
             aria-label="Close navigation drawer"
           >
-            <span className="material-symbols-rounded text-[22px]">close</span>
+            <Icon name="close" className="text-[22px]" />
           </button>
 
           {/* Tablet rail collapse/expand toggle button */}
@@ -160,9 +161,10 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
             className="hidden md:flex lg:hidden touch-target p-1.5 rounded-lg text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors"
             aria-label={isTabletRailCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
-            <span className="material-symbols-rounded text-[20px]">
-              {isTabletRailCollapsed ? 'chevron_right' : 'chevron_left'}
-            </span>
+            <Icon
+              name={isTabletRailCollapsed ? 'chevron_right' : 'chevron_left'}
+              className="text-[20px]"
+            />
           </button>
         </div>
 
@@ -192,9 +194,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
                 title={item.label}
                 aria-current={isActive ? 'page' : undefined}
               >
-                <span className="material-symbols-rounded text-[22px] shrink-0" aria-hidden="true">
-                  {item.icon}
-                </span>
+                <Icon name={item.icon} className="text-[22px] shrink-0" aria-hidden="true" />
 
                 <span
                   className={`truncate text-left flex-1 ${
@@ -255,7 +255,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
               className="md:hidden touch-target p-2 rounded-xl text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors"
               aria-label="Open navigation menu"
             >
-              <span className="material-symbols-rounded text-[24px]">menu</span>
+              <Icon name="menu" className="text-[24px]" />
             </button>
 
             {/* Current View Title */}
@@ -273,7 +273,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
               className="touch-target p-2 rounded-xl text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors flex items-center gap-2"
               aria-label="Open search dialog"
             >
-              <span className="material-symbols-rounded text-[22px]">search</span>
+              <Icon name="search" className="text-[22px]" />
               <span className="hidden xl:inline text-[14px] text-[var(--d-text-muted)] pr-2">
                 Quick Search...
               </span>
@@ -287,9 +287,10 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              <span className="material-symbols-rounded text-[22px]">
-                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-              </span>
+              <Icon
+                name={theme === 'dark' ? 'light_mode' : 'dark_mode'}
+                className="text-[22px]"
+              />
             </button>
 
             {/* Notifications Button */}
@@ -298,7 +299,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
               className="touch-target p-2 rounded-xl text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] hover:bg-[var(--d-surface-container)] transition-colors relative"
               aria-label={`Notifications (${notificationCount} unread)`}
             >
-              <span className="material-symbols-rounded text-[22px]">notifications</span>
+              <Icon name="notifications" className="text-[22px]" />
               {notificationCount > 0 && (
                 <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#ED1C24] ring-2 ring-[var(--d-header-bg)]" />
               )}
@@ -324,9 +325,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
             <div className="relative z-10 w-full max-w-2xl bg-[var(--d-surface)] rounded-2xl border border-[var(--d-border)] shadow-2xl overflow-hidden flex flex-col">
               {/* Search Input Bar */}
               <div className="p-4 border-b border-[var(--d-border)] flex items-center gap-3">
-                <span className="material-symbols-rounded text-[24px] text-[#FF8A1F]">
-                  search
-                </span>
+                <Icon name="search" className="text-[24px] text-[#FF8A1F]" />
                 <input
                   type="text"
                   autoFocus
@@ -342,7 +341,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
                   className="touch-target px-3 py-1.5 rounded-lg bg-[var(--d-surface-container)] hover:bg-[var(--d-surface-container-high)] text-[var(--d-text-primary)] text-[14px] font-semibold transition-colors flex items-center gap-1"
                   aria-label="Close search overlay"
                 >
-                  <span className="material-symbols-rounded text-[18px]">close</span>
+                  <Icon name="close" className="text-[18px]" />
                   <span>ESC</span>
                 </button>
               </div>
@@ -363,9 +362,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({
                       }}
                       className="touch-target flex items-center gap-2.5 p-2.5 rounded-xl bg-[var(--d-surface-container)] hover:bg-[var(--d-surface-container-high)] text-[var(--d-text-primary)] transition-colors text-left"
                     >
-                      <span className="material-symbols-rounded text-[20px] text-[#FF8A1F]">
-                        {item.icon}
-                      </span>
+                      <Icon name={item.icon} className="text-[20px] text-[#FF8A1F]" />
                       <span className="font-medium truncate">{item.label}</span>
                     </button>
                   ))}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface AccountPageProps {
   onNavigate: (path: string) => void;
@@ -96,7 +97,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ onNavigate }) => {
                 {user?.fullName || 'Mukisa Emmanuel'}
               </h1>
               <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
-                <span className="material-symbols-rounded text-xs">verified</span>
+                <Icon name="verified" className="text-xs" />
                 <span>Verified Buyer</span>
               </span>
             </div>
@@ -113,7 +114,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ onNavigate }) => {
           onClick={handleSignOut}
           className="px-4 py-2 rounded-xl border border-slate-200 text-slate-600 font-bold text-xs hover:bg-slate-50 transition-colors flex items-center gap-1.5 shrink-0"
         >
-          <span className="material-symbols-rounded text-base">logout</span>
+          <Icon name="logout" className="text-base" />
           <span>Sign Out</span>
         </button>
       </div>
@@ -130,7 +131,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ onNavigate }) => {
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${item.color} group-hover:scale-105 transition-transform`}
               >
-                <span className="material-symbols-rounded text-2xl">{item.icon}</span>
+                <Icon name={item.icon} className="text-2xl" />
               </div>
               <div>
                 <h3 className="font-bold text-sm sm:text-base text-[#0E1B4D] group-hover:text-[#FF8A1F] transition-colors">
@@ -141,9 +142,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ onNavigate }) => {
                 </p>
               </div>
             </div>
-            <span className="material-symbols-rounded text-slate-300 group-hover:text-[#FF8A1F] group-hover:translate-x-1 transition-all">
-              chevron_right
-            </span>
+            <Icon name="chevron_right" className="text-slate-300 group-hover:text-[#FF8A1F] group-hover:translate-x-1 transition-all" />
           </div>
         ))}
       </div>

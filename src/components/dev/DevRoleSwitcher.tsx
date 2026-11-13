@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { UserRole } from '../../routes/types';
+import { Icon } from '../shared/Icon';
 
 export interface DevRoleSwitcherProps {
   currentRole: UserRole;
@@ -56,13 +57,11 @@ export const DevRoleSwitcher: React.FC<DevRoleSwitcherProps> = ({
                   }`}
                 >
                   <div className="flex items-center gap-2">
-                    <span className="material-symbols-rounded text-[18px]">
-                      {r.icon}
-                    </span>
+                    <Icon name={r.icon} className="text-[18px]" />
                     <span>{r.label}</span>
                   </div>
                   {isSelected && (
-                    <span className="material-symbols-rounded text-[16px]">check</span>
+                    <Icon name="check" className="text-[16px]" />
                   )}
                 </button>
               );
@@ -80,9 +79,10 @@ export const DevRoleSwitcher: React.FC<DevRoleSwitcherProps> = ({
       >
         <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
         <span>ROLE: {currentRole}</span>
-        <span className="material-symbols-rounded text-[16px]">
-          {isExpanded ? 'expand_more' : 'tune'}
-        </span>
+        <Icon
+          name={isExpanded ? 'expand_more' : 'tune'}
+          className="text-[16px]"
+        />
       </button>
     </aside>
   );

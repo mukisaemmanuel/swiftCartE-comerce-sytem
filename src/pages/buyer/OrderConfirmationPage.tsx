@@ -2,6 +2,7 @@ import React from 'react';
 import { useOrders } from '../../hooks/useOrders';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface OrderConfirmationPageProps {
   onNavigate: (path: string) => void;
@@ -27,9 +28,7 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
         {/* Success Header */}
         <div className="text-center space-y-3">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
-            <span className="material-symbols-rounded text-3xl sm:text-4xl">
-              check_circle
-            </span>
+            <Icon name="check_circle" className="text-3xl sm:text-4xl" />
           </div>
           <div>
             <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
@@ -39,7 +38,7 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
               Thank You for Your Order!
             </h1>
             <p className="text-sm text-slate-500 mt-1 font-mono">
-              Order Number: <span className="font-bold text-[#0E1B4D]">{order?.orderNumber || 'SWIFT-UG-2024-8901'}</span>
+              Order Number: <span className="font-bold text-[#0E1B4D]">{order?.orderNumber || 'SWIFT-UG-8901'}</span>
             </p>
           </div>
         </div>
@@ -47,7 +46,7 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
         {/* 6-Digit Delivery Handover Code Box (BUYER SIDE ONLY) */}
         <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-[#FF8A1F] rounded-2xl p-6 text-center space-y-3">
           <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#DA3700] uppercase tracking-wider">
-            <span className="material-symbols-rounded text-base">pin</span>
+            <Icon name="pin" className="text-base" />
             <span>Your Delivery Handover Code</span>
           </div>
 
@@ -77,9 +76,10 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
               Delivery Method
             </span>
             <span className="text-sm font-bold text-[#0E1B4D] flex items-center gap-1.5">
-              <span className="material-symbols-rounded text-base text-[#FF8A1F]">
-                {order?.deliveryType === 'boda' ? 'two_wheeler' : 'storefront'}
-              </span>
+              <Icon
+                name={order?.deliveryType === 'boda' ? 'two_wheeler' : 'storefront'}
+                className="text-base text-[#FF8A1F]"
+              />
               <span>{order?.deliveryType === 'boda' ? 'Express Boda Delivery' : 'Pickup Station'}</span>
             </span>
           </div>
@@ -125,14 +125,14 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
             onClick={() => onNavigate(`/my-orders-order-detail?id=${order?.id || 'order-1001'}`)}
             className="flex-1 py-4 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md flex items-center justify-center gap-2 min-h-[48px]"
           >
-            <span className="material-symbols-rounded">local_shipping</span>
+            <Icon name="local_shipping" />
             <span>Track Order & Delivery</span>
           </button>
           <button
             onClick={() => onNavigate('/')}
             className="flex-1 py-4 rounded-xl border border-slate-200 text-[#0E1B4D] font-bold text-sm hover:bg-slate-50 transition-colors flex items-center justify-center gap-2 min-h-[48px]"
           >
-            <span className="material-symbols-rounded">storefront</span>
+            <Icon name="storefront" />
             <span>Continue Shopping</span>
           </button>
         </div>

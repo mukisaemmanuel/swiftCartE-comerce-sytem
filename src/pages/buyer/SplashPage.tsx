@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../../components/shared/Icon';
 
 export interface SplashPageProps {
   onNavigate: (path: string) => void;
@@ -11,7 +12,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
         {/* Brand Hero */}
         <div className="space-y-4">
           <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#FF8A1F] to-[#DA3700] text-white flex items-center justify-center mx-auto shadow-xl">
-            <span className="material-symbols-rounded text-4xl">shopping_cart</span>
+            <Icon name="shopping_cart" className="text-4xl" />
           </div>
 
           <div>
@@ -28,7 +29,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
         <div className="space-y-4 text-left">
           <div className="p-4 rounded-2xl bg-orange-50/70 border border-orange-100 flex items-start gap-3.5">
             <div className="w-10 h-10 rounded-xl bg-[#FF8A1F] text-white flex items-center justify-center shrink-0">
-              <span className="material-symbols-rounded text-xl">security</span>
+              <Icon name="security" className="text-xl" />
             </div>
             <div>
               <h3 className="font-bold text-sm text-[#0E1B4D]">Escrow Payment Protection</h3>
@@ -40,7 +41,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
 
           <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100 flex items-start gap-3.5">
             <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
-              <span className="material-symbols-rounded text-xl">two_wheeler</span>
+              <Icon name="two_wheeler" className="text-xl" />
             </div>
             <div>
               <h3 className="font-bold text-sm text-[#0E1B4D]">Express Boda & Station Hubs</h3>
@@ -52,7 +53,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
 
           <div className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-start gap-3.5">
             <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-              <span className="material-symbols-rounded text-xl">verified</span>
+              <Icon name="verified" className="text-xl" />
             </div>
             <div>
               <h3 className="font-bold text-sm text-[#0E1B4D]">Verified Ugandan Merchants</h3>
@@ -70,7 +71,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
             className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-base hover:opacity-95 shadow-lg transition-opacity flex items-center justify-center gap-2 min-h-[48px]"
           >
             <span>Start Shopping Now</span>
-            <span className="material-symbols-rounded text-lg">arrow_forward</span>
+            <Icon name="arrow_forward" className="text-lg" />
           </button>
 
           <button

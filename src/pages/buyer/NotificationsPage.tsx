@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAccount } from '../../hooks/useAccount';
+import { Icon } from '../../components/shared/Icon';
 
 export interface NotificationsPageProps {
   onNavigate: (path: string) => void;
@@ -24,7 +25,7 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -97,9 +98,10 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
                   : 'bg-orange-50 text-[#FF8A1F]'
               }`}
             >
-              <span className="material-symbols-rounded text-xl">
-                {item.type === 'order' ? 'local_shipping' : 'campaign'}
-              </span>
+              <Icon
+                name={item.type === 'order' ? 'local_shipping' : 'campaign'}
+                className="text-xl"
+              />
             </div>
 
             <div className="flex-1 min-w-0">

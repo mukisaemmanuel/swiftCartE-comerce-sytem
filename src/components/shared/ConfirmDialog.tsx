@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Icon } from './Icon';
 
 export interface ConfirmDialogProps {
   isOpen: boolean;
@@ -60,9 +61,11 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                 : 'bg-amber-500/10 text-amber-500'
             }`}
           >
-            <span className="material-symbols-rounded text-[28px]" aria-hidden="true">
-              {isDangerous ? 'warning' : 'info'}
-            </span>
+            <Icon
+              name={isDangerous ? 'warning' : 'info'}
+              className="text-[28px]"
+              aria-hidden="true"
+            />
           </div>
 
           <div className="flex flex-col gap-1.5 flex-1">
@@ -128,9 +131,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
             } disabled:cursor-not-allowed`}
           >
             {isLoading && (
-              <span className="material-symbols-rounded animate-spin text-[18px]">
-                progress_activity
-              </span>
+              <Icon name="progress_activity" className="animate-spin text-[18px]" />
             )}
             <span>{actionLabel}</span>
           </button>

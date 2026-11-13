@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Icon } from '../../components/shared/Icon';
 
 export interface EmptyErrorSuitePageProps {
   onNavigate: (path: string) => void;
@@ -19,7 +20,7 @@ export const EmptyErrorSuitePage: React.FC<EmptyErrorSuitePageProps> = ({ onNavi
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -61,7 +62,7 @@ export const EmptyErrorSuitePage: React.FC<EmptyErrorSuitePageProps> = ({ onNavi
         {activeState === 'empty_cart' && (
           <div className="max-w-md mx-auto space-y-4">
             <div className="w-20 h-20 rounded-full bg-orange-100 text-[#FF8A1F] flex items-center justify-center mx-auto shadow-sm">
-              <span className="material-symbols-rounded text-4xl">remove_shopping_cart</span>
+              <Icon name="remove_shopping_cart" className="text-4xl" />
             </div>
             <h2 className="text-2xl font-extrabold text-[#0E1B4D]">Your Cart is Empty</h2>
             <p className="text-xs sm:text-sm text-slate-500">
@@ -80,7 +81,7 @@ export const EmptyErrorSuitePage: React.FC<EmptyErrorSuitePageProps> = ({ onNavi
         {activeState === 'empty_search' && (
           <div className="max-w-md mx-auto space-y-4">
             <div className="w-20 h-20 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
-              <span className="material-symbols-rounded text-4xl">search_off</span>
+              <Icon name="search_off" className="text-4xl" />
             </div>
             <h2 className="text-2xl font-extrabold text-[#0E1B4D]">No Products Found</h2>
             <p className="text-xs sm:text-sm text-slate-500">
@@ -118,7 +119,7 @@ export const EmptyErrorSuitePage: React.FC<EmptyErrorSuitePageProps> = ({ onNavi
         {activeState === 'offline' && (
           <div className="max-w-md mx-auto space-y-4">
             <div className="w-20 h-20 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
-              <span className="material-symbols-rounded text-4xl">wifi_off</span>
+              <Icon name="wifi_off" className="text-4xl" />
             </div>
             <h2 className="text-2xl font-extrabold text-[#0E1B4D]">You're Offline</h2>
             <p className="text-xs sm:text-sm text-slate-500">
@@ -140,7 +141,7 @@ export const EmptyErrorSuitePage: React.FC<EmptyErrorSuitePageProps> = ({ onNavi
         {activeState === 'payment_failed' && (
           <div className="max-w-md mx-auto space-y-4">
             <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto">
-              <span className="material-symbols-rounded text-4xl">cancel</span>
+              <Icon name="cancel" className="text-4xl" />
             </div>
             <h2 className="text-2xl font-extrabold text-[#0E1B4D]">Payment Failed</h2>
             <p className="text-xs sm:text-sm text-slate-500">

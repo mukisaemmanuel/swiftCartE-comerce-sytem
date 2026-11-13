@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export interface EmptyStateProps {
   icon?: string;
@@ -22,9 +23,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
       className={`flex flex-col items-center justify-center p-8 text-center max-w-md mx-auto ${className}`}
     >
       <div className="w-16 h-16 rounded-2xl bg-orange-500/10 text-[#FF8A1F] flex items-center justify-center mb-4">
-        <span className="material-symbols-rounded text-[36px]" aria-hidden="true">
-          {icon}
-        </span>
+        <Icon name={icon} className="text-[36px]" aria-hidden="true" />
       </div>
 
       <h3 className="text-[18px] font-bold text-[var(--d-text-primary)] mb-2">

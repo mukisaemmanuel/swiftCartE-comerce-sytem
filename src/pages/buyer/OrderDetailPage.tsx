@@ -3,6 +3,7 @@ import { useOrders } from '../../hooks/useOrders';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
 import StaticMapPlaceholder from '../../components/shared/StaticMapPlaceholder';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface OrderDetailPageProps {
   onNavigate: (path: string) => void;
@@ -30,11 +31,11 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back to Orders"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#0E1B4D]">
-              Order {order?.orderNumber || 'SWIFT-UG-2024'}
+              Order {order?.orderNumber || 'SWIFT-UG-8901'}
             </h1>
             <p className="text-xs text-slate-500">
               Placed on {order ? new Date(order.createdAt).toLocaleDateString() : 'Recent'}
@@ -48,7 +49,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
               onClick={() => onNavigate(`/order-tracking-delivery-code?id=${order.id}`)}
               className="px-4 py-2 rounded-xl bg-[#0E1B4D] text-white font-bold text-xs hover:bg-slate-800 transition-colors flex items-center gap-1 min-h-[40px]"
             >
-              <span className="material-symbols-rounded text-base">near_me</span>
+              <Icon name="near_me" className="text-base" />
               <span>Live Boda Map</span>
             </button>
           )}
@@ -58,7 +59,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
       {/* 6-Digit Handover Code Card (BUYER SIDE ONLY) */}
       <div className="bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-[#FF8A1F] rounded-2xl p-5 sm:p-6 text-center space-y-2 shadow-xs">
         <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#DA3700] uppercase tracking-wider">
-          <span className="material-symbols-rounded text-base">verified</span>
+          <Icon name="verified" className="text-base" />
           <span>Delivery Handover Code</span>
         </div>
         <div className="flex items-center justify-center gap-2 py-1">
@@ -83,7 +84,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
           {/* Order Progress Timeline */}
           <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs">
             <h2 className="text-base font-bold text-[#0E1B4D] mb-4 flex items-center gap-2">
-              <span className="material-symbols-rounded text-[#FF8A1F]">timeline</span>
+              <Icon name="timeline" className="text-[#FF8A1F]" />
               <span>Order Journey</span>
             </h2>
 
@@ -123,7 +124,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
           {/* Static Tracking Map Graphic */}
           <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs">
             <h2 className="text-base font-bold text-[#0E1B4D] mb-3 flex items-center gap-2">
-              <span className="material-symbols-rounded text-[#FF8A1F]">location_on</span>
+              <Icon name="location_on" className="text-[#FF8A1F]" />
               <span>Delivery Routing (Kampala)</span>
             </h2>
             <StaticMapPlaceholder
@@ -208,7 +209,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
               onClick={() => onNavigate(`/escrow-dispute-return-request?orderId=${order?.id || 'order-1001'}`)}
               className="w-full py-3 rounded-xl border border-slate-200 text-[#0E1B4D] font-bold text-xs sm:text-sm hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5 min-h-[44px]"
             >
-              <span className="material-symbols-rounded text-base">assignment_return</span>
+              <Icon name="assignment_return" className="text-base" />
               <span>Request Return / Refund</span>
             </button>
 
@@ -216,7 +217,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
               onClick={() => onNavigate(`/dispute-evidence-form?orderId=${order?.id || 'order-1001'}`)}
               className="w-full py-3 rounded-xl border border-red-200 text-red-600 font-bold text-xs sm:text-sm hover:bg-red-50 transition-colors flex items-center justify-center gap-1.5 min-h-[44px]"
             >
-              <span className="material-symbols-rounded text-base">gavel</span>
+              <Icon name="gavel" className="text-base" />
               <span>Open Escrow Dispute</span>
             </button>
           </div>

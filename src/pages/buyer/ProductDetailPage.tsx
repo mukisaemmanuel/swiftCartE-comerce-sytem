@@ -9,6 +9,7 @@ import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
 import SheetDialog from '../../components/shared/SheetDialog';
 import { MOCK_PICKUP_STATIONS } from '../../data/mockData';
+import { Icon } from '../../components/shared/Icon';
 
 export interface ProductDetailPageProps {
   productId?: string;
@@ -114,7 +115,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           className="fixed top-20 right-4 z-50 p-4 rounded-2xl bg-[#0E1B4D] text-white shadow-2xl flex items-center gap-3 border border-orange-500/50 animate-slideIn"
           role="status"
         >
-          <span className="material-symbols-rounded text-emerald-400">check_circle</span>
+          <Icon name="check_circle" className="text-emerald-400" />
           <div>
             <div className="font-bold text-[14px]">Added to Cart</div>
             <div className="text-[12px] text-slate-300">
@@ -165,13 +166,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               className="touch-target absolute top-4 right-4 w-11 h-11 rounded-full bg-white/90 backdrop-blur-md shadow-md flex items-center justify-center text-slate-400 hover:text-rose-500 transition-colors"
               aria-label={inWishlist ? 'Remove from wishlist' : 'Save to wishlist'}
             >
-              <span
-                className={`material-symbols-rounded text-[24px] ${
+              <Icon name="favorite" className={`text-[24px] ${
                   inWishlist ? 'text-rose-500 fill-current font-bold' : ''
-                }`}
-              >
-                favorite
-              </span>
+                }`} />
             </button>
           </div>
 
@@ -250,7 +247,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <StarRating rating={product.rating} reviewCount={product.reviewCount} />
               <span className="text-slate-300">|</span>
               <span className="text-[13px] font-semibold text-emerald-600 flex items-center gap-1">
-                <span className="material-symbols-rounded text-[16px]">check_circle</span>
+                <Icon name="check_circle" className="text-[16px]" />
                 In Stock &amp; Ready for Delivery
               </span>
             </div>
@@ -307,7 +304,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           <div className="p-5 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col gap-4">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <h3 className="font-extrabold text-[16px] text-[#0E1B4D] flex items-center gap-2">
-                <span className="material-symbols-rounded text-[#FF8A1F]">local_shipping</span>
+                <Icon name="local_shipping" className="text-[#FF8A1F]" />
                 Fulfillment in Uganda
               </h3>
               <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
@@ -355,7 +352,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
                 <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-center justify-between text-[14px]">
                   <div className="flex items-center gap-2">
-                    <span className="material-symbols-rounded text-emerald-600">schedule</span>
+                    <Icon name="schedule" className="text-emerald-600" />
                     <span>
                       Est. Arrival: <strong>{estimate.time}</strong>
                     </span>
@@ -393,9 +390,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
             {/* Payment Protection Trust Notice */}
             <div className="pt-2 border-t border-slate-100 flex items-center gap-2.5 text-[13px] text-slate-600">
-              <span className="material-symbols-rounded text-emerald-600 text-[20px] shrink-0">
-                shield
-              </span>
+              <Icon name="shield" className="text-emerald-600 text-[20px] shrink-0" />
               <span>
                 Your payment is held safely by SwiftCart until you confirm delivery with the 6-digit handover code.
               </span>
@@ -431,7 +426,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               onClick={handleAddToCart}
               className="touch-target flex-1 h-12 rounded-xl bg-orange-100 hover:bg-orange-200 text-[#DA3700] font-bold text-[15px] transition-colors flex items-center justify-center gap-2 border border-orange-300"
             >
-              <span className="material-symbols-rounded text-[20px]">add_shopping_cart</span>
+              <Icon name="add_shopping_cart" className="text-[20px]" />
               <span>Add to Cart</span>
             </button>
 

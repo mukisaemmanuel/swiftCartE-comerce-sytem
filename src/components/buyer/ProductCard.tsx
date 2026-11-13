@@ -2,6 +2,7 @@ import React from 'react';
 import PriceUGX from './PriceUGX';
 import StarRating from './StarRating';
 import VerifiedBadge from './VerifiedBadge';
+import { Icon } from '../shared/Icon';
 
 export interface ProductCardProps {
   id: string;
@@ -56,7 +57,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-slate-300">
-            <span className="material-symbols-rounded text-[48px]">shopping_bag</span>
+            <Icon name="shopping_bag" className="text-[48px]" />
             <span className="text-[14px] text-slate-400 mt-1">Product Photo</span>
           </div>
         )}
@@ -108,9 +109,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             className="touch-target min-w-[48px] min-h-[48px] px-3 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] hover:opacity-95 text-white font-semibold text-[14px] flex items-center justify-center shadow-sm disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             aria-label={`Add ${title} to cart`}
           >
-            <span className="material-symbols-rounded text-[20px]" aria-hidden="true">
-              add_shopping_cart
-            </span>
+            <Icon name="add_shopping_cart" className="text-[20px]" aria-hidden="true" />
           </button>
         </div>
       </div>

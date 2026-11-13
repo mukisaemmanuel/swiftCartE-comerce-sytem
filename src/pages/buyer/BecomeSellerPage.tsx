@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAccount } from '../../hooks/useAccount';
+import { Icon } from '../../components/shared/Icon';
 
 export interface BecomeSellerPageProps {
   onNavigate: (path: string) => void;
@@ -104,7 +105,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -345,9 +346,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
                       : 'border-slate-200'
                   }`}
                 >
-                  <span className="material-symbols-rounded text-lg text-[#0E1B4D]">
-                    account_balance
-                  </span>
+                  <Icon name="account_balance" className="text-lg text-[#0E1B4D]" />
                   <span>Bank Payout</span>
                 </button>
               </div>
@@ -446,7 +445,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
               className="px-6 py-2.5 rounded-xl bg-[#0E1B4D] text-white font-bold text-xs hover:bg-slate-800 transition-colors flex items-center gap-1.5 min-h-[44px]"
             >
               <span>Next Step</span>
-              <span className="material-symbols-rounded text-base">arrow_forward</span>
+              <Icon name="arrow_forward" className="text-base" />
             </button>
           ) : (
             <button
@@ -455,7 +454,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
               onClick={handleSubmit}
               className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md flex items-center gap-2 min-h-[48px]"
             >
-              <span className="material-symbols-rounded">send</span>
+              <Icon name="send" />
               <span>{isSubmitting ? 'Submitting...' : 'Submit Application'}</span>
             </button>
           )}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import SixDigitCodeInput from '../../components/shared/SixDigitCodeInput';
+import { Icon } from '../../components/shared/Icon';
 
 export interface PhoneVerificationPageProps {
   onNavigate: (path: string) => void;
@@ -60,7 +61,7 @@ export const PhoneVerificationPage: React.FC<PhoneVerificationPageProps> = ({
       <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl max-w-md w-full space-y-6 text-center">
         <div className="space-y-2">
           <div className="w-16 h-16 rounded-2xl bg-orange-100 text-[#DA3700] flex items-center justify-center mx-auto shadow-sm">
-            <span className="material-symbols-rounded text-3xl">sms</span>
+            <Icon name="sms" className="text-3xl" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
             Verify Phone Number
@@ -78,9 +79,7 @@ export const PhoneVerificationPage: React.FC<PhoneVerificationPageProps> = ({
 
         {success ? (
           <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-emerald-900 space-y-2">
-            <span className="material-symbols-rounded text-4xl text-emerald-600">
-              check_circle
-            </span>
+            <Icon name="check_circle" className="text-4xl text-emerald-600" />
             <h3 className="font-bold text-base">Phone Verified!</h3>
             <p className="text-xs text-emerald-700">Redirecting to your account dashboard...</p>
           </div>
@@ -99,7 +98,7 @@ export const PhoneVerificationPage: React.FC<PhoneVerificationPageProps> = ({
               className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md transition-opacity flex items-center justify-center gap-2 disabled:opacity-50 min-h-[48px]"
             >
               <span>{isLoading ? 'Verifying...' : 'Confirm & Verify'}</span>
-              <span className="material-symbols-rounded text-lg">check</span>
+              <Icon name="check" className="text-lg" />
             </button>
           </form>
         )}

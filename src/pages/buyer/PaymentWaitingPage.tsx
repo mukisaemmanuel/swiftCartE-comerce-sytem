@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useOrders } from '../../hooks/useOrders';
+import { Icon } from '../../components/shared/Icon';
 
 export interface PaymentWaitingPageProps {
   onNavigate: (path: string) => void;
@@ -67,9 +68,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
             <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
               <div className="absolute inset-0 rounded-full bg-orange-400/20 animate-ping"></div>
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FF8A1F] to-[#DA3700] text-white flex items-center justify-center shadow-lg">
-                <span className="material-symbols-rounded text-3xl animate-bounce">
-                  phonelink_ring
-                </span>
+                <Icon name="phonelink_ring" className="text-3xl animate-bounce" />
               </div>
             </div>
 
@@ -87,9 +86,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
 
             {/* Countdown Badge */}
             <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-2xl text-xs font-bold text-slate-700">
-              <span className="material-symbols-rounded text-base text-[#FF8A1F]">
-                hourglass_top
-              </span>
+              <Icon name="hourglass_top" className="text-base text-[#FF8A1F]" />
               <span>Prompt expires in: {countdown}s</span>
             </div>
 
@@ -98,15 +95,17 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
               <div className="flex justify-between text-slate-600">
                 <span>Order Reference</span>
                 <span className="font-bold text-[#0E1B4D]">
-                  {currentOrder?.orderNumber || 'SWIFT-UG-2024'}
+                  {currentOrder?.orderNumber || 'SWIFT-UG-8901'}
                 </span>
               </div>
-              <div className="flex justify-between text-slate-600">
-                <span>Idempotency Key</span>
-                <span className="font-mono text-slate-500 truncate max-w-[200px]">
-                  {idempotencyKey}
-                </span>
-              </div>
+              {import.meta.env.DEV && (
+                <div className="flex justify-between text-slate-600">
+                  <span>Idempotency Key</span>
+                  <span className="font-mono text-slate-500 truncate max-w-[200px]">
+                    {idempotencyKey}
+                  </span>
+                </div>
+              )}
               <div className="flex justify-between text-slate-600">
                 <span>Security</span>
                 <span className="font-bold text-emerald-700">
@@ -115,30 +114,32 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
               </div>
             </div>
 
-            {/* Testing Actions */}
-            <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                type="button"
-                onClick={handleSimulateSuccess}
-                className="px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-colors shadow-sm min-h-[44px]"
-              >
-                Simulate PIN Entered (Approve)
-              </button>
-              <button
-                type="button"
-                onClick={handleSimulateFailed}
-                className="px-5 py-3 rounded-xl border border-slate-300 text-slate-600 font-bold text-sm hover:bg-slate-50 transition-colors min-h-[44px]"
-              >
-                Simulate Failed / Cancelled
-              </button>
-            </div>
+            {/* Testing Actions (DEV ONLY) */}
+            {import.meta.env.DEV && (
+              <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  type="button"
+                  onClick={handleSimulateSuccess}
+                  className="px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-colors shadow-sm min-h-[44px]"
+                >
+                  Simulate PIN Entered (Approve)
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSimulateFailed}
+                  className="px-5 py-3 rounded-xl border border-slate-300 text-slate-600 font-bold text-sm hover:bg-slate-50 transition-colors min-h-[44px]"
+                >
+                  Simulate Failed / Cancelled
+                </button>
+              </div>
+            )}
           </div>
         )}
 
         {status === 'success' && (
           <div className="space-y-6 py-6 animate-in zoom-in duration-300">
             <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
-              <span className="material-symbols-rounded text-4xl">check_circle</span>
+              <Icon name="check_circle" className="text-4xl" />
             </div>
             <div>
               <h2 className="text-2xl font-extrabold text-[#0E1B4D]">
@@ -157,7 +158,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
         {status === 'failed' && (
           <div className="space-y-6 py-4 animate-in fade-in duration-300">
             <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto shadow-md">
-              <span className="material-symbols-rounded text-4xl">error</span>
+              <Icon name="error" className="text-4xl" />
             </div>
             <div>
               <h2 className="text-2xl font-extrabold text-[#0E1B4D]">
@@ -173,7 +174,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
                 onClick={handleRetrySameOrder}
                 className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md flex items-center justify-center gap-2 min-h-[48px]"
               >
-                <span className="material-symbols-rounded text-lg">refresh</span>
+                <Icon name="refresh" className="text-lg" />
                 <span>Retry Payment (Same Order)</span>
               </button>
               <button

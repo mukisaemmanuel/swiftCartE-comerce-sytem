@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export interface KpiCardProps {
   title: string;
@@ -31,9 +32,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
         </span>
         {icon && (
           <div className="p-2.5 rounded-xl bg-orange-500/10 text-[#FF8A1F] flex items-center justify-center">
-            <span className="material-symbols-rounded text-[22px]" aria-hidden="true">
-              {icon}
-            </span>
+            <Icon name={icon} className="text-[22px]" aria-hidden="true" />
           </div>
         )}
       </div>
@@ -53,9 +52,10 @@ export const KpiCard: React.FC<KpiCardProps> = ({
                     : 'text-rose-500 bg-rose-500/10'
                 }`}
               >
-                <span className="material-symbols-rounded text-[16px]">
-                  {change.isPositive ? 'trending_up' : 'trending_down'}
-                </span>
+                <Icon
+                  name={change.isPositive ? 'trending_up' : 'trending_down'}
+                  className="text-[16px]"
+                />
                 {change.value}
               </span>
             )}

@@ -4,7 +4,9 @@ import ProductCard from '../../components/buyer/ProductCard';
 import VerifiedBadge from '../../components/buyer/VerifiedBadge';
 import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
+import SafeImage from '../../components/shared/SafeImage';
 import { useCart } from '../../hooks/useCart';
+import { Icon } from '../../components/shared/Icon';
 
 export interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -92,44 +94,45 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
     <div className="flex flex-col gap-8 pb-12">
       {/* 1. HERO BANNER SLIDER (Dots only, no arrows per build rules; padding and wrap for 360px, 390px, 430px) */}
       <section className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm min-h-[170px] sm:min-h-[220px] md:min-h-[260px] bg-slate-900">
-        {BANNERS.map((banner, index) => (
-          <div
-            key={banner.id}
-            className={`absolute inset-0 transition-opacity duration-500 cursor-pointer overflow-hidden ${
-              index === currentBanner ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-            }`}
-            onClick={() => onNavigate(banner.link)}
-          >
-            {/* Background graphic */}
-            <img
-              src={banner.image}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover"
-              loading={index === 0 ? 'eager' : 'lazy'}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        {BANNERS.map((banner, index) => {
+          if (index !== currentBanner) return null;
+          return (
+            <div
+              key={banner.id}
+              className="absolute inset-0 cursor-pointer overflow-hidden z-10 animate-fadeIn"
+              onClick={() => onNavigate(banner.link)}
+            >
+              {/* Background graphic */}
+              <img
+                src={banner.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading={index === 0 ? 'eager' : 'lazy'}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
-            {/* Banner text with explicit left/right padding and wrapping */}
-            <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 py-5 sm:py-8 max-w-[85%] sm:max-w-xl text-left">
-              <span className="text-[10px] sm:text-[12px] font-extrabold tracking-wider text-orange-400 uppercase mb-1">
-                Kampala Super Deals
-              </span>
-              <h2 className="text-[18px] sm:text-[26px] md:text-[34px] font-extrabold text-white leading-tight break-words">
-                {banner.title}
-              </h2>
-              <p className="text-[12px] sm:text-[14px] text-white/90 line-clamp-2 mt-1 sm:mt-1.5 leading-snug">
-                {banner.subtitle}
-              </p>
-              <div className="mt-2.5 sm:mt-3">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white/20 backdrop-blur-xs text-white text-[11px] sm:text-[12px] font-bold">
-                  Shop Now
-                  <span className="material-symbols-rounded text-[14px]">arrow_forward</span>
+              {/* Banner text with explicit left/right padding and wrapping */}
+              <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 py-5 sm:py-8 max-w-[85%] sm:max-w-xl text-left">
+                <span className="text-[10px] sm:text-[12px] font-extrabold tracking-wider text-orange-400 uppercase mb-1">
+                  Kampala Super Deals
                 </span>
+                <h2 className="text-[18px] sm:text-[26px] md:text-[34px] font-extrabold text-white leading-tight break-words">
+                  {banner.title}
+                </h2>
+                <p className="text-[12px] sm:text-[14px] text-white/90 line-clamp-2 mt-1 sm:mt-1.5 leading-snug">
+                  {banner.subtitle}
+                </p>
+                <div className="mt-2.5 sm:mt-3">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white/20 backdrop-blur-xs text-white text-[11px] sm:text-[12px] font-bold">
+                    Shop Now
+                    <Icon name="arrow_forward" className="text-[14px]" />
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
 
         {/* Dots Navigation (NO arrows per specification) */}
         <div className="absolute bottom-2.5 left-0 right-0 z-20 flex items-center justify-center gap-2">
@@ -156,7 +159,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#0E1B4D]">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-            <span className="material-symbols-rounded text-[24px]">verified_user</span>
+            <Icon name="verified_user" className="text-[24px]" />
           </div>
           <div>
             <h4 className="font-bold text-[15px] leading-tight text-emerald-950">
@@ -208,11 +211,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   className="flex flex-col items-center gap-2 shrink-0 group focus:outline-none"
                 >
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-orange-50 border border-orange-200/70 p-1 flex items-center justify-center overflow-hidden group-hover:scale-105 group-hover:border-[#FF8A1F] transition-all shadow-sm">
-                    <img
-                      src={cat.imageUrl || '/placeholders/phones.svg'}
+                    <SafeImage
+                      src={cat.imageUrl}
                       alt={cat.name}
                       className="w-full h-full object-cover rounded-full"
-                      loading="lazy"
                     />
                   </div>
                   <span className="text-[13px] sm:text-[14px] font-semibold text-[#0E1B4D] text-center max-w-[80px] line-clamp-1 group-hover:text-[#DA3700]">
@@ -227,9 +229,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-rounded text-[#ED1C24] text-[24px]">
-              local_fire_department
-            </span>
+            <Icon name="local_fire_department" className="text-[#ED1C24] text-[24px]" />
             <h2 className="text-[20px] font-extrabold text-[#0E1B4D] tracking-tight">
               Trending Kampala Deals
             </h2>
@@ -443,9 +443,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   className="w-full flex items-center justify-between text-left font-bold text-[15px] text-[#0E1B4D] hover:text-[#DA3700] transition-colors py-1"
                 >
                   <span>{faq.q}</span>
-                  <span className="material-symbols-rounded text-[20px] text-slate-400">
-                    {isOpen ? 'expand_less' : 'expand_more'}
-                  </span>
+                  <Icon
+                    name={isOpen ? 'expand_less' : 'expand_more'}
+                    className="text-[20px] text-slate-400"
+                  />
                 </button>
                 {isOpen && (
                   <p className="mt-2 text-[14px] text-slate-600 leading-relaxed pr-6 animate-fadeIn">

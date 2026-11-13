@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAccount } from '../../hooks/useAccount';
+import { Icon } from '../../components/shared/Icon';
 
 export interface VouchersPageProps {
   onNavigate: (path: string) => void;
@@ -26,7 +27,7 @@ export const VouchersPage: React.FC<VouchersPageProps> = ({ onNavigate }) => {
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -61,9 +62,7 @@ export const VouchersPage: React.FC<VouchersPageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF8A1F] flex items-center justify-center shrink-0">
-                <span className="material-symbols-rounded text-2xl">
-                  confirmation_number
-                </span>
+                <Icon name="confirmation_number" className="text-2xl" />
               </div>
             </div>
 
@@ -86,9 +85,10 @@ export const VouchersPage: React.FC<VouchersPageProps> = ({ onNavigate }) => {
                 onClick={() => handleCopy(voucher.code)}
                 className="flex-1 py-2.5 rounded-xl border border-slate-200 text-[#0E1B4D] font-bold text-xs hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5"
               >
-                <span className="material-symbols-rounded text-base">
-                  {copiedCode === voucher.code ? 'check' : 'content_copy'}
-                </span>
+                <Icon
+                  name={copiedCode === voucher.code ? 'check' : 'content_copy'}
+                  className="text-base"
+                />
                 <span>{copiedCode === voucher.code ? 'Copied!' : 'Copy Code'}</span>
               </button>
               <button
@@ -97,7 +97,7 @@ export const VouchersPage: React.FC<VouchersPageProps> = ({ onNavigate }) => {
                 className="flex-1 py-2.5 rounded-xl bg-[#0E1B4D] text-white font-bold text-xs hover:bg-slate-800 transition-colors flex items-center justify-center gap-1"
               >
                 <span>Use in Cart</span>
-                <span className="material-symbols-rounded text-sm">arrow_forward</span>
+                <Icon name="arrow_forward" className="text-sm" />
               </button>
             </div>
           </div>

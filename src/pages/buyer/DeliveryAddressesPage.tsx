@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAccount } from '../../hooks/useAccount';
 import type { Address } from '../../domain/types';
+import { Icon } from '../../components/shared/Icon';
 
 export interface DeliveryAddressesPageProps {
   onNavigate: (path: string) => void;
@@ -103,7 +104,7 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -119,7 +120,7 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
           onClick={openAddModal}
           className="px-4 py-2.5 rounded-xl bg-[#0E1B4D] text-white font-bold text-sm hover:bg-slate-800 transition-colors flex items-center gap-1.5 shadow-xs shrink-0 min-h-[44px]"
         >
-          <span className="material-symbols-rounded text-lg">add</span>
+          <Icon name="add" className="text-lg" />
           <span className="hidden sm:inline">Add New Address</span>
           <span className="sm:hidden">Add</span>
         </button>
@@ -129,9 +130,7 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
       <div className="space-y-4">
         {addresses.length === 0 ? (
           <div className="bg-white rounded-2xl p-8 border border-slate-200 text-center">
-            <span className="material-symbols-rounded text-4xl text-slate-300 mb-2">
-              location_off
-            </span>
+            <Icon name="location_off" className="text-4xl text-slate-300 mb-2" />
             <p className="text-slate-500 text-sm">No saved addresses found.</p>
             <button
               onClick={openAddModal}
@@ -153,7 +152,7 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#FF8A1F] flex items-center justify-center shrink-0">
-                    <span className="material-symbols-rounded">home_pin</span>
+                    <Icon name="home_pin" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
@@ -187,14 +186,14 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
                     className="p-2 text-slate-500 hover:text-[#0E1B4D] hover:bg-slate-100 rounded-lg transition-colors"
                     aria-label="Edit address"
                   >
-                    <span className="material-symbols-rounded text-lg">edit</span>
+                    <Icon name="edit" className="text-lg" />
                   </button>
                   <button
                     onClick={() => deleteAddress(addr.id)}
                     className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                     aria-label="Delete address"
                   >
-                    <span className="material-symbols-rounded text-lg">delete</span>
+                    <Icon name="delete" className="text-lg" />
                   </button>
                 </div>
               </div>
@@ -223,7 +222,7 @@ export const DeliveryAddressesPage: React.FC<DeliveryAddressesPageProps> = ({
               className="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center hover:bg-slate-200"
               aria-label="Close modal"
             >
-              <span className="material-symbols-rounded text-lg">close</span>
+              <Icon name="close" className="text-lg" />
             </button>
 
             <h2 className="text-xl font-extrabold text-[#0E1B4D] mb-4">

@@ -24,6 +24,16 @@ import {
 } from '../../shared/statuses';
 import { DEFAULT_RETURN_WINDOW_DAYS } from '../../shared/constants';
 
+const daysAgo = (days: number, hours = 0): string => {
+  const d = new Date(Date.now() - days * 86400000 - hours * 3600000);
+  return d.toISOString();
+};
+
+const dateOnlyDaysAgo = (days: number): string => {
+  const d = new Date(Date.now() - days * 86400000);
+  return d.toISOString().split('T')[0];
+};
+
 export const MOCK_CATEGORIES: Category[] = [
   {
     id: 'phones',
@@ -204,7 +214,7 @@ export const MOCK_SELLERS: Seller[] = [
     isVerified: true,
     rating: 4.8,
     reviewCount: 220,
-    joinedDate: '2024-01-15',
+    joinedDate: dateOnlyDaysAgo(120),
     status: SELLER_STATUS.ACTIVE,
     avatarUrl: '/placeholders/avatar.svg',
     followerCount: 1350,
@@ -221,7 +231,7 @@ export const MOCK_SELLERS: Seller[] = [
     isVerified: false,
     rating: 4.5,
     reviewCount: 68,
-    joinedDate: '2024-03-01',
+    joinedDate: dateOnlyDaysAgo(60),
     status: SELLER_STATUS.ACTIVE,
     avatarUrl: '/placeholders/avatar.svg',
     followerCount: 320,
@@ -624,7 +634,7 @@ export const MOCK_USER: User = {
   phoneNumber: '+256 772 123456',
   avatarUrl: '/placeholders/avatar.svg',
   isVerified: true,
-  createdAt: '2024-01-15',
+  createdAt: daysAgo(180),
 };
 
 export const MOCK_PAYMENT_METHODS: SavedPaymentMethod[] = [
@@ -680,11 +690,11 @@ export const MOCK_VOUCHERS: Voucher[] = [
 export const MOCK_ORDERS: Order[] = [
   {
     id: 'order-1001',
-    orderNumber: 'SWIFT-UG-2024-8901',
+    orderNumber: 'SWIFT-UG-8901',
     status: ORDER_STATUS.CONFIRMED,
     paymentStatus: PAYMENT_STATUS.PAID,
     escrowStatus: ESCROW_STATUS.HELD_IN_ESCROW,
-    createdAt: '2024-11-10T09:30:00Z',
+    createdAt: daysAgo(2, 4),
     items: [
       {
         productId: 'prod-soundcore-space-one',
@@ -707,19 +717,19 @@ export const MOCK_ORDERS: Order[] = [
     timeline: [
       {
         status: ORDER_STATUS.PENDING,
-        timestamp: '10 Nov, 09:30 AM',
+        timestamp: '2 days ago',
         title: 'Order Placed',
         description: 'Order received and waiting for payment verification.',
       },
       {
         status: ORDER_STATUS.PAID,
-        timestamp: '10 Nov, 09:32 AM',
+        timestamp: '2 days ago',
         title: 'Payment Confirmed & Held in Escrow',
         description: 'Payment secured safely by SwiftCart Escrow.',
       },
       {
         status: ORDER_STATUS.CONFIRMED,
-        timestamp: '10 Nov, 10:15 AM',
+        timestamp: '1 day ago',
         title: 'Merchant Accepted Order',
         description: 'Soundcore Uganda Flagship is packing your items in Nakasero.',
       },
@@ -727,11 +737,11 @@ export const MOCK_ORDERS: Order[] = [
   },
   {
     id: 'order-1003',
-    orderNumber: 'SWIFT-UG-2024-9140',
+    orderNumber: 'SWIFT-UG-9140',
     status: ORDER_STATUS.OUT_FOR_DELIVERY,
     paymentStatus: PAYMENT_STATUS.PAID,
     escrowStatus: ESCROW_STATUS.HELD_IN_ESCROW,
-    createdAt: '2024-11-11T08:00:00Z',
+    createdAt: daysAgo(1, 2),
     items: [
       {
         productId: 'prod-infinix-hot-40-pro',
@@ -761,19 +771,19 @@ export const MOCK_ORDERS: Order[] = [
     timeline: [
       {
         status: ORDER_STATUS.PAID,
-        timestamp: '11 Nov, 08:05 AM',
+        timestamp: '1 day ago',
         title: 'Payment Secured',
         description: 'Held safely in SwiftCart Escrow.',
       },
       {
         status: ORDER_STATUS.PROCESSING,
-        timestamp: '11 Nov, 08:30 AM',
+        timestamp: '1 day ago',
         title: 'Dispatched to Express Boda',
         description: 'Package picked up from Kampala Tech Hub.',
       },
       {
         status: ORDER_STATUS.OUT_FOR_DELIVERY,
-        timestamp: '11 Nov, 09:10 AM',
+        timestamp: '3 hours ago',
         title: 'Out for Delivery',
         description: 'Rider Kato Denis (UFB 214K) is en route to Lumumba Avenue.',
       },
@@ -781,11 +791,11 @@ export const MOCK_ORDERS: Order[] = [
   },
   {
     id: 'order-1002',
-    orderNumber: 'SWIFT-UG-2024-7822',
+    orderNumber: 'SWIFT-UG-7822',
     status: ORDER_STATUS.DELIVERED,
     paymentStatus: PAYMENT_STATUS.PAID,
     escrowStatus: ESCROW_STATUS.RELEASED,
-    createdAt: '2024-11-04T14:15:00Z',
+    createdAt: daysAgo(8, 5),
     items: [
       {
         productId: 'prod-nile-organic-honey',
@@ -808,19 +818,19 @@ export const MOCK_ORDERS: Order[] = [
     timeline: [
       {
         status: ORDER_STATUS.PAID,
-        timestamp: '04 Nov, 02:18 PM',
+        timestamp: '8 days ago',
         title: 'Payment Secured in Escrow',
         description: 'Paid via MTN MoMo.',
       },
       {
         status: ORDER_STATUS.SHIPPED,
-        timestamp: '05 Nov, 09:00 AM',
+        timestamp: '7 days ago',
         title: 'Transferred to Pickup Station',
         description: 'Arrived at Kampala GPO Posta Hub.',
       },
       {
         status: ORDER_STATUS.DELIVERED,
-        timestamp: '05 Nov, 04:30 PM',
+        timestamp: '6 days ago',
         title: 'Delivered / Collected',
         description: 'Collected by buyer. Escrow funds released to merchant.',
       },
@@ -832,14 +842,14 @@ export const MOCK_RETURNS: ReturnRequest[] = [
   {
     id: 'ret-101',
     orderId: 'order-1002',
-    orderNumber: 'SWIFT-UG-2024-7822',
+    orderNumber: 'SWIFT-UG-7822',
     reason: 'Defective item',
     details: 'One glass jar had a cracked seal upon inspection at collection.',
     photos: ['/placeholders/groceries.svg'],
     status: RETURN_STATUS.APPROVED,
     refundAmount: 32000,
-    createdAt: '2024-11-06T10:00:00Z',
-    resolutionDate: '2024-11-07T11:30:00Z',
+    createdAt: daysAgo(6, 2),
+    resolutionDate: daysAgo(5, 1),
   },
 ];
 
@@ -847,12 +857,12 @@ export const MOCK_DISPUTES: Dispute[] = [
   {
     id: 'disp-201',
     orderId: 'order-1001',
-    orderNumber: 'SWIFT-UG-2024-8901',
+    orderNumber: 'SWIFT-UG-8901',
     reason: 'Delivery Delay',
     description: 'Merchant took longer than 48 hours to confirm dispatch.',
     evidencePhotos: ['/placeholders/headphones.svg'],
     status: 'UNDER_REVIEW',
-    createdAt: '2024-11-11T12:00:00Z',
+    createdAt: daysAgo(1, 1),
   },
 ];
 
@@ -870,7 +880,7 @@ export const MOCK_SELLER_APPLICATION: SellerApplication = {
   payoutAccount: '+256 772 123456',
   accountHolderName: 'Mukisa Emmanuel',
   status: 'UNDER_REVIEW',
-  submittedAt: '2024-11-12T10:00:00Z',
+  submittedAt: daysAgo(1, 3),
 };
 
 export const MOCK_NOTIFICATIONS: Notification[] = [
@@ -878,7 +888,7 @@ export const MOCK_NOTIFICATIONS: Notification[] = [
     id: 'notif-1',
     title: 'Order Confirmed & Escrow Protected',
     message:
-      'Your payment for Order SWIFT-UG-2024-8901 is safely held in SwiftCart Escrow. The merchant is preparing your package.',
+      'Your payment for Order SWIFT-UG-8901 is safely held in SwiftCart Escrow. The merchant is preparing your package.',
     timestamp: '2 hours ago',
     read: false,
     type: 'order',
@@ -896,7 +906,7 @@ export const MOCK_NOTIFICATIONS: Notification[] = [
     id: 'notif-3',
     title: 'Order Out for Delivery',
     message:
-      'Rider Kato Denis is delivering Order SWIFT-UG-2024-9140. Have your 6-digit delivery code ready.',
+      'Rider Kato Denis is delivering Order SWIFT-UG-9140. Have your 6-digit delivery code ready.',
     timestamp: '3 hours ago',
     read: false,
     type: 'order',

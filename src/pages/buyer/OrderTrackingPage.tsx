@@ -2,6 +2,7 @@ import React from 'react';
 import { useOrders } from '../../hooks/useOrders';
 import StaticMapPlaceholder from '../../components/shared/StaticMapPlaceholder';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
+import { Icon } from '../../components/shared/Icon';
 
 export interface OrderTrackingPageProps {
   onNavigate: (path: string) => void;
@@ -37,14 +38,14 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
             className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <div>
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#0E1B4D]">
               Live Order Tracking
             </h1>
             <p className="text-xs text-slate-500 font-mono">
-              {order?.orderNumber || 'SWIFT-UG-2024-9140'} · Express Boda
+              {order?.orderNumber || 'SWIFT-UG-9140'} · Express Boda
             </p>
           </div>
         </div>
@@ -59,7 +60,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
       <div className="bg-[#0E1B4D] text-white rounded-3xl p-5 sm:p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1 mb-1">
-            <span className="material-symbols-rounded text-sm">key</span>
+            <Icon name="key" className="text-sm" />
             <span>Delivery Verification Code</span>
           </span>
           <h3 className="text-base sm:text-lg font-bold">
@@ -85,7 +86,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
       {/* Map Display */}
       <div className="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xs space-y-4">
         <h2 className="text-sm font-bold text-[#0E1B4D] flex items-center gap-1.5">
-          <span className="material-symbols-rounded text-[#FF8A1F]">two_wheeler</span>
+          <Icon name="two_wheeler" className="text-[#FF8A1F]" />
           <span>Boda Rider GPS Route (Kampala Central)</span>
         </h2>
         <StaticMapPlaceholder
@@ -99,7 +100,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
       <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4 w-full sm:w-auto">
           <div className="w-14 h-14 rounded-2xl bg-orange-100 border border-orange-200 flex items-center justify-center text-[#FF8A1F] font-bold text-xl shrink-0">
-            <span className="material-symbols-rounded text-3xl">sports_motorsports</span>
+            <Icon name="sports_motorsports" className="text-3xl" />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -111,9 +112,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5 flex items-center gap-1">
-              <span className="material-symbols-rounded text-sm text-amber-500 fill-current">
-                star
-              </span>
+              <Icon name="star" className="text-sm text-amber-500 fill-current" />
               <span className="font-bold text-slate-700">{rider.rating} Rating</span>
               <span className="text-slate-300">·</span>
               <span>SwiftCart Verified Rider</span>
@@ -126,7 +125,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
             href={`tel:${rider.phone.replace(/\s+/g, '')}`}
             className="flex-1 sm:flex-initial px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs sm:text-sm hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 shadow-xs min-h-[44px]"
           >
-            <span className="material-symbols-rounded text-lg">call</span>
+            <Icon name="call" className="text-lg" />
             <span>Call Rider</span>
           </a>
 
@@ -134,7 +133,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
             onClick={() => onNavigate(`/scan-qr-handover?id=${order?.id}`)}
             className="px-4 py-3 rounded-xl border border-slate-200 text-[#0E1B4D] font-bold text-xs sm:text-sm hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5 min-h-[44px]"
           >
-            <span className="material-symbols-rounded text-lg">qr_code</span>
+            <Icon name="qr_code" className="text-lg" />
             <span className="hidden sm:inline">Show QR</span>
           </button>
         </div>

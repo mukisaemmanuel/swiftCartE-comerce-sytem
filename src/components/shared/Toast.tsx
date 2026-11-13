@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Icon } from './Icon';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
@@ -68,9 +69,7 @@ export const Toast: React.FC<ToastProps> = ({
       role="status"
       aria-live="polite"
     >
-      <span className="material-symbols-rounded text-[22px] shrink-0" aria-hidden="true">
-        {config.icon}
-      </span>
+      <Icon name={config.icon} className="text-[22px] shrink-0" aria-hidden="true" />
       <p className="text-[14px] font-medium leading-snug flex-1">{message}</p>
       <button
         type="button"
@@ -78,7 +77,7 @@ export const Toast: React.FC<ToastProps> = ({
         className="touch-target p-1.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center -mr-2"
         aria-label="Dismiss notification"
       >
-        <span className="material-symbols-rounded text-[18px]">close</span>
+        <Icon name="close" className="text-[18px]" />
       </button>
     </div>
   );

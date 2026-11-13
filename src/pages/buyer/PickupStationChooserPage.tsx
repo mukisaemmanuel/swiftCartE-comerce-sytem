@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { usePickupStations } from '../../hooks/useOrders';
 import StaticMapPlaceholder from '../../components/shared/StaticMapPlaceholder';
+import { Icon } from '../../components/shared/Icon';
 
 export interface PickupStationChooserPageProps {
   onNavigate: (path: string) => void;
@@ -27,7 +28,7 @@ export const PickupStationChooserPage: React.FC<PickupStationChooserPageProps> =
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -87,7 +88,7 @@ export const PickupStationChooserPage: React.FC<PickupStationChooserPageProps> =
                             : 'bg-slate-100 text-slate-600'
                         }`}
                       >
-                        <span className="material-symbols-rounded">storefront</span>
+                        <Icon name="storefront" />
                       </div>
                       <div>
                         <h3 className="font-bold text-[#0E1B4D] text-sm sm:text-base">
@@ -98,13 +99,11 @@ export const PickupStationChooserPage: React.FC<PickupStationChooserPageProps> =
                         </p>
                         <div className="flex items-center gap-3 mt-2 text-xs text-slate-600">
                           <span className="flex items-center gap-1">
-                            <span className="material-symbols-rounded text-sm text-slate-400">
-                              schedule
-                            </span>
+                            <Icon name="schedule" className="text-sm text-slate-400" />
                             {station.operatingHours}
                           </span>
                           <span className="flex items-center gap-1 font-semibold text-emerald-700">
-                            <span className="material-symbols-rounded text-sm">bolt</span>
+                            <Icon name="bolt" className="text-sm" />
                             Ready in {station.estimatedDays} day{station.estimatedDays > 1 ? 's' : ''}
                           </span>
                         </div>
@@ -129,7 +128,7 @@ export const PickupStationChooserPage: React.FC<PickupStationChooserPageProps> =
         <div className="lg:col-span-5 space-y-4">
           <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
             <h2 className="text-sm font-bold text-[#0E1B4D] mb-3 flex items-center gap-2">
-              <span className="material-symbols-rounded text-[#FF8A1F]">map</span>
+              <Icon name="map" className="text-[#FF8A1F]" />
               <span>Station Map Location</span>
             </h2>
 
@@ -153,7 +152,7 @@ export const PickupStationChooserPage: React.FC<PickupStationChooserPageProps> =
                   onClick={() => onNavigate('/checkout-step-by-step-flow')}
                   className="mt-4 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 transition-opacity shadow-md flex items-center justify-center gap-2 min-h-[48px]"
                 >
-                  <span className="material-symbols-rounded">check_circle</span>
+                  <Icon name="check_circle" />
                   <span>Confirm Selected Station</span>
                 </button>
               </div>

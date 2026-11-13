@@ -4,6 +4,7 @@ import { useAccount } from '../../hooks/useAccount';
 import { useOrders } from '../../hooks/useOrders';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface CheckoutPageProps {
   onNavigate: (path: string) => void;
@@ -96,7 +97,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back to Cart"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -131,9 +132,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="material-symbols-rounded text-2xl text-[#FF8A1F]">
-                    two_wheeler
-                  </span>
+                  <Icon name="two_wheeler" className="text-2xl text-[#FF8A1F]" />
                   <span className="font-extrabold text-sm text-[#0E1B4D]">
                     UGX 5,000
                   </span>
@@ -154,9 +153,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="material-symbols-rounded text-2xl text-[#0E1B4D]">
-                    storefront
-                  </span>
+                  <Icon name="storefront" className="text-2xl text-[#0E1B4D]" />
                   <span className="font-extrabold text-sm text-[#0E1B4D]">
                     UGX 3,500
                   </span>
@@ -262,7 +259,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
                 </div>
                 <div className="flex-1">
                   <div className="font-bold text-sm text-[#0E1B4D]">MTN MoMo</div>
-                  <div className="text-xs text-slate-500">Pay instant via *165# USSD prompt</div>
+                  <div className="text-xs text-slate-500">You will get a prompt on your phone to approve the payment.</div>
                 </div>
               </label>
 
@@ -285,7 +282,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
                 </div>
                 <div className="flex-1">
                   <div className="font-bold text-sm text-[#0E1B4D]">Airtel Money</div>
-                  <div className="text-xs text-slate-500">Pay instant via *185# USSD prompt</div>
+                  <div className="text-xs text-slate-500">You will get a prompt on your phone to approve the payment.</div>
                 </div>
               </label>
 
@@ -304,7 +301,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
                   className="text-[#FF8A1F] focus:ring-orange-400 w-4 h-4"
                 />
                 <div className="w-8 h-8 rounded-lg bg-[#0E1B4D] text-white flex items-center justify-center shrink-0">
-                  <span className="material-symbols-rounded text-lg">credit_card</span>
+                  <Icon name="credit_card" className="text-lg" />
                 </div>
                 <div className="flex-1">
                   <div className="font-bold text-sm text-[#0E1B4D]">Visa / Mastercard</div>
@@ -353,9 +350,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
               {cart.sellerGroups.map((group) => (
                 <div key={group.sellerId} className="pt-3 first:pt-0">
                   <div className="flex items-center gap-2 mb-2 text-xs font-bold text-slate-600">
-                    <span className="material-symbols-rounded text-sm text-[#FF8A1F]">
-                      storefront
-                    </span>
+                    <Icon name="storefront" className="text-sm text-[#FF8A1F]" />
                     <span>{group.sellerName}</span>
                   </div>
                   <div className="space-y-2.5">
@@ -443,7 +438,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onNavigate }) => {
               onClick={handlePlaceOrder}
               className="mt-6 w-full py-4 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-base hover:opacity-95 transition-opacity shadow-md flex items-center justify-center gap-2 disabled:opacity-50 min-h-[48px]"
             >
-              <span className="material-symbols-rounded">lock</span>
+              <Icon name="lock" />
               <span>
                 {isSubmitting
                   ? 'Processing Order...'

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../shared/Icon';
 
 export type BuyerTab = 'home' | 'categories' | 'cart' | 'wishlist' | 'account';
 
@@ -44,14 +45,9 @@ export const BottomTabBar: React.FC<BottomTabBarProps> = ({
               aria-current={isActive ? 'page' : undefined}
             >
               <div className="relative flex items-center justify-center">
-                <span
-                  className={`material-symbols-rounded text-[24px] ${
+                <Icon name={tab.icon} className={`text-[24px] ${
                     isActive ? 'font-bold' : ''
-                  }`}
-                  aria-hidden="true"
-                >
-                  {tab.icon}
-                </span>
+                  }`} aria-hidden="true" />
 
                 {tab.count !== undefined && tab.count > 0 && (
                   <span className="absolute -top-1.5 -right-2 px-1.5 py-0.2 rounded-full text-[11px] font-bold bg-[#ED1C24] text-white min-w-[18px] text-center">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export interface StaticMapPlaceholderProps {
   riderLocation?: string;
@@ -113,7 +114,7 @@ export const StaticMapPlaceholder: React.FC<StaticMapPlaceholderProps> = ({
       </div>
 
       <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-xl shadow-md text-xs text-slate-700 border border-slate-100 flex items-center gap-2">
-        <span className="material-symbols-rounded text-base text-[#DA3700]">location_on</span>
+        <Icon name="location_on" className="text-base text-[#DA3700]" />
         <span className="font-medium truncate max-w-[220px]">{destination}</span>
       </div>
     </div>

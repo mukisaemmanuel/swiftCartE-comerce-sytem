@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../shared/Icon';
 
 export interface VerifiedBadgeProps {
   label?: string;
@@ -20,14 +21,9 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({
       } ${className}`}
       title="Verified Business"
     >
-      <span
-        className={`material-symbols-rounded text-emerald-600 ${
+      <Icon name="verified" className={`text-emerald-600 ${
           isSm ? 'text-[14px]' : 'text-[16px]'
-        }`}
-        aria-hidden="true"
-      >
-        verified
-      </span>
+        }`} aria-hidden="true" />
       <span>{label}</span>
     </span>
   );

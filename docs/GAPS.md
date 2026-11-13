@@ -17,10 +17,10 @@ Features visible in UI mockups or storefront flows that require backend implemen
 - **Requirement:** Backend validation endpoint and coupon ledger database in Express/Firestore.
 - **Current Front-end State:** Client-side mock repository supporting `SWIFT10` (10% off) and `FREESHIP` (UGX 5,000 off) with local state recalculation.
 
-## 4. AI Photo & Description Helper
+## 4. AI Photo & Description Studio
 - **Description:** Automated merchant product description generation, category classification, and image background cleanup for Ugandan arcade stalls and merchants.
-- **Requirement:** Gemini API multimodal vision and text generation endpoints hosted in Firebase Cloud Functions.
-- **Current Front-end State:** Placeholder SVG images and mock product catalog.
+- **Requirement:** AI photo cleanup and description generation needs the Gemini API backend hosted in Firebase Cloud Functions (`describeProduct` vision prompt and background segmentation pipeline).
+- **Current Front-end State:** 5-step listing flow with client-side before/after canvas slider, tone chips, and local mock repository with daily quota tracking.
 
 ## 5. Payments & Escrow Processing
 - **Description:** Payments use Pesapal (MTN MoMo, Airtel Money, Visa/Mastercard); webhook and escrow handled by the backend ported from the previous project.
@@ -36,3 +36,13 @@ Features visible in UI mockups or storefront flows that require backend implemen
 - **Description:** 6-digit delivery authentication code shared by the buyer upon physical package receipt and entered by the rider to confirm delivery and trigger escrow release.
 - **Requirement:** Secure cryptographically random code generation by the backend upon payment confirmation, with rate-limited verification.
 - **Current Front-end State:** Marked as mock data in buyer order confirmation and order detail; never visible to riders, sellers, or admins.
+
+## 8. Real KYC Document Upload & Verification
+- **Description:** Secure storage and verification of sensitive merchant identity documents (Ugandan National ID front/back, trading license/registration certificate).
+- **Requirement:** Real KYC upload needs a dedicated Firebase Cloud Storage bucket with restrictive security rules (write-only for authenticated seller, read-only for admin moderators) and backend encryption at rest.
+- **Current Front-end State:** Document upload UI with status chips (`NOT_STARTED`, `UNDER_REVIEW`, `APPROVED`, `REJECTED`) and simulated upload handlers in MockSellerStoreRepository.
+
+## 9. Automated Mobile Money Payouts & Disbursements
+- **Description:** Automated seller wallet withdrawals to MTN MoMo and Airtel Money accounts in integer UGX.
+- **Requirement:** Withdrawals need the payout disbursement backend integrated with Pesapal Payouts or MTN & Airtel Open API with balance checks, fee deduction, and reconciliation callbacks.
+- **Current Front-end State:** Seller wallet with available/escrow balances, transaction ledgers, withdrawal modal validation (blocks if amount exceeds balance), and ConfirmDialog gate.

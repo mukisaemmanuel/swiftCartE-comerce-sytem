@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
+import { Icon } from '../../components/shared/Icon';
 
 export interface SignInPageProps {
   onNavigate: (path: string) => void;
@@ -34,7 +35,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
         {/* Brand Logo & Header */}
         <div className="text-center space-y-2">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FF8A1F] to-[#DA3700] text-white flex items-center justify-center mx-auto shadow-md">
-            <span className="material-symbols-rounded text-3xl">shopping_bag</span>
+            <Icon name="shopping_bag" className="text-3xl" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
             Welcome Back
@@ -46,7 +47,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
 
         {(localError || error) && (
           <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium flex items-center gap-2">
-            <span className="material-symbols-rounded text-base shrink-0">error</span>
+            <Icon name="error" className="text-base shrink-0" />
             <span>{localError || error}</span>
           </div>
         )}
@@ -57,9 +58,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
               Ugandan Phone Number or Email
             </label>
             <div className="relative">
-              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-rounded text-slate-400 text-lg">
-                person
-              </span>
+              <Icon name="person" className="absolute left-3.5 top-1/2 -translate-y-1/2  text-slate-400 text-lg" />
               <input
                 type="text"
                 required
@@ -85,9 +84,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
               </button>
             </div>
             <div className="relative">
-              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-rounded text-slate-400 text-lg">
-                lock
-              </span>
+              <Icon name="lock" className="absolute left-3.5 top-1/2 -translate-y-1/2  text-slate-400 text-lg" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 required
@@ -102,9 +99,10 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
                 className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-                <span className="material-symbols-rounded text-lg">
-                  {showPassword ? 'visibility_off' : 'visibility'}
-                </span>
+                <Icon
+                  name={showPassword ? 'visibility_off' : 'visibility'}
+                  className="text-lg"
+                />
               </button>
             </div>
           </div>
@@ -115,7 +113,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
             className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md transition-opacity flex items-center justify-center gap-2 min-h-[48px]"
           >
             <span>{isLoading ? 'Signing In...' : 'Sign In'}</span>
-            <span className="material-symbols-rounded text-lg">arrow_forward</span>
+            <Icon name="arrow_forward" className="text-lg" />
           </button>
         </form>
 

@@ -4,6 +4,7 @@ import { CartProvider } from './context/CartContext';
 import { allRoutes, findRouteByPath } from './routes';
 import type { RouteDefinition, UserRole } from './routes/types';
 import DevRoleSwitcher from './components/dev/DevRoleSwitcher';
+import { Icon } from './components/shared/Icon';
 
 // Code-split (lazy) views per role
 const BuyerView = lazy(() => import('./views/BuyerView'));
@@ -110,7 +111,7 @@ export const App: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center p-6 bg-[var(--d-bg)] text-[var(--d-text-primary)]">
           <div className="max-w-md w-full p-8 rounded-2xl bg-[var(--d-surface)] border border-[var(--d-border)] text-center shadow-xl flex flex-col items-center gap-4">
             <div className="w-16 h-16 rounded-full bg-rose-500/10 text-rose-500 flex items-center justify-center">
-              <span className="material-symbols-rounded text-[32px]">lock</span>
+              <Icon name="lock" className="text-[32px]" />
             </div>
             <h2 className="text-[20px] font-bold">Access Restricted</h2>
             <p className="text-[14px] text-[var(--d-text-secondary)]">

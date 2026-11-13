@@ -5,6 +5,7 @@ import VerifiedBadge from '../../components/buyer/VerifiedBadge';
 import EmptyState from '../../components/shared/EmptyState';
 import Skeleton from '../../components/shared/Skeleton';
 import Toast from '../../components/shared/Toast';
+import { Icon } from '../../components/shared/Icon';
 
 export interface CartPageProps {
   onNavigate: (path: string) => void;
@@ -104,7 +105,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
             onClick={clearCart}
             className="touch-target px-4 py-2 rounded-xl text-[13px] font-semibold text-slate-500 hover:text-rose-600 hover:bg-rose-50 transition-colors self-start sm:self-center flex items-center gap-1.5"
           >
-            <span className="material-symbols-rounded text-[18px]">delete_sweep</span>
+            <Icon name="delete_sweep" className="text-[18px]" />
             <span>Clear Cart</span>
           </button>
         )}
@@ -112,9 +113,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
 
       {/* PAYMENT PROTECTION TRUST BANNER */}
       <div className="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200/70 flex items-center gap-2.5 text-emerald-800 text-[13px]">
-        <span className="material-symbols-rounded text-emerald-600 text-[20px] flex-shrink-0">
-          security
-        </span>
+        <Icon name="security" className="text-emerald-600 text-[20px] flex-shrink-0" />
         <span className="leading-snug font-medium">
           Your payment is held safely by SwiftCart until you confirm delivery.
         </span>
@@ -156,9 +155,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
                   {/* Vendor Group Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-100 gap-2">
                     <div className="flex items-center gap-2">
-                      <span className="material-symbols-rounded text-[22px] text-[#DA3700]">
-                        storefront
-                      </span>
+                      <Icon name="storefront" className="text-[22px] text-[#DA3700]" />
                       <h2
                         onClick={() => onNavigate(`/store-page?sellerId=${group.sellerId}`)}
                         className="text-[16px] font-bold text-[#0E1B4D] hover:text-[#DA3700] transition-colors cursor-pointer"
@@ -221,7 +218,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
                               className="touch-target w-8 h-8 rounded-lg bg-white shadow-xs flex items-center justify-center text-slate-700 hover:text-slate-900 active:scale-95 transition-all"
                             >
-                              <span className="material-symbols-rounded text-[16px]">remove</span>
+                              <Icon name="remove" className="text-[16px]" />
                             </button>
 
                             <span className="w-10 text-center font-bold text-[14px] text-[#0E1B4D]">
@@ -237,7 +234,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
                                 item.quantity >= item.maxStock ? 'opacity-40 cursor-not-allowed' : ''
                               }`}
                             >
-                              <span className="material-symbols-rounded text-[16px]">add</span>
+                              <Icon name="add" className="text-[16px]" />
                             </button>
                           </div>
 
@@ -267,9 +264,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
                   {/* Boda Dispatch strip per seller */}
                   <div className="mt-2 bg-[#FFF8F2] border border-orange-200/60 rounded-2xl p-3.5 flex items-center justify-between text-[13px]">
                     <div className="flex items-center gap-2 text-slate-700">
-                      <span className="material-symbols-rounded text-[#FF8A1F] text-[18px]">
-                        two_wheeler
-                      </span>
+                      <Icon name="two_wheeler" className="text-[#FF8A1F] text-[18px]" />
                       <span>Swift Express Boda Dispatch from {group.sellerName}</span>
                     </div>
                     <span className="font-bold text-[#0E1B4D]">UGX 5,000</span>
@@ -283,9 +278,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
               <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col gap-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="material-symbols-rounded text-[20px] text-slate-400">
-                      bookmark
-                    </span>
+                    <Icon name="bookmark" className="text-[20px] text-slate-400" />
                     <h2 className="text-[17px] font-bold text-[#0E1B4D]">
                       Saved For Later ({savedItems.length})
                     </h2>
@@ -341,9 +334,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
             <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-rounded text-[#FF8A1F] text-[20px]">
-                    sell
-                  </span>
+                  <Icon name="sell" className="text-[#FF8A1F] text-[20px]" />
                   <h3 className="text-[16px] font-bold text-[#0E1B4D]">
                     Promo & Vouchers
                   </h3>
@@ -357,9 +348,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
               {cart.appliedVoucher ? (
                 <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <span className="material-symbols-rounded text-emerald-600 text-[22px]">
-                      check_circle
-                    </span>
+                    <Icon name="check_circle" className="text-emerald-600 text-[22px]" />
                     <div className="flex flex-col">
                       <span className="text-[14px] font-bold text-emerald-900 tracking-wider">
                         {cart.appliedVoucher.code}
@@ -475,9 +464,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
 
               {/* PAYMENT PROTECTION COPY FROM BUILD-RULES.MD */}
               <div className="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200/70 flex items-start gap-2.5 text-emerald-800 text-[13px]">
-                <span className="material-symbols-rounded text-emerald-600 text-[20px] flex-shrink-0 mt-0.5">
-                  security
-                </span>
+                <Icon name="security" className="text-emerald-600 text-[20px] flex-shrink-0 mt-0.5" />
                 <span className="leading-snug">
                   Your payment is held safely by SwiftCart until you confirm delivery.
                 </span>
@@ -491,7 +478,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
                 className="touch-target w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] hover:opacity-95 text-white font-bold text-[15px] shadow-md shadow-orange-500/20 active:scale-98 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 <span>Proceed to Checkout</span>
-                <span className="material-symbols-rounded text-[20px]">arrow_forward</span>
+                <Icon name="arrow_forward" className="text-[20px]" />
               </button>
             </div>
           </div>
@@ -512,7 +499,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
             className="touch-target px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-[14px] shadow-sm flex items-center gap-1.5 active:scale-95 transition-all"
           >
             <span>Checkout</span>
-            <span className="material-symbols-rounded text-[18px]">arrow_forward</span>
+            <Icon name="arrow_forward" className="text-[18px]" />
           </button>
         </div>
       )}

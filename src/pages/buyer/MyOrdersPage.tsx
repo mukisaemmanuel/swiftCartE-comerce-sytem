@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useOrders } from '../../hooks/useOrders';
 import type { Order } from '../../domain/types';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface MyOrdersPageProps {
   onNavigate: (path: string) => void;
@@ -47,14 +48,14 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
       case 'DELIVERED':
         return (
           <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <span className="material-symbols-rounded text-sm">check_circle</span>
+            <Icon name="check_circle" className="text-sm" />
             <span>Delivered</span>
           </span>
         );
       case 'OUT_FOR_DELIVERY':
         return (
           <span className="bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 animate-pulse">
-            <span className="material-symbols-rounded text-sm">two_wheeler</span>
+            <Icon name="two_wheeler" className="text-sm" />
             <span>Out for Delivery</span>
           </span>
         );
@@ -62,7 +63,7 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
       case 'PROCESSING':
         return (
           <span className="bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <span className="material-symbols-rounded text-sm">inventory_2</span>
+            <Icon name="inventory_2" className="text-sm" />
             <span>Processing</span>
           </span>
         );
@@ -70,7 +71,7 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
       case 'DISPUTED':
         return (
           <span className="bg-purple-100 text-purple-900 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <span className="material-symbols-rounded text-sm">gavel</span>
+            <Icon name="gavel" className="text-sm" />
             <span>{status === 'DISPUTED' ? 'Disputed' : 'Return Requested'}</span>
           </span>
         );
@@ -92,7 +93,7 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back to Account"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -104,48 +105,52 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* Status Tabs */}
-      <div className="flex items-center gap-2 border-b border-slate-200 pb-3 mb-6 overflow-x-auto no-scrollbar">
-        <button
-          onClick={() => setActiveTab('all')}
-          className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
-            activeTab === 'all'
-              ? 'bg-[#0E1B4D] text-white'
-              : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          All Orders ({orders.length})
-        </button>
-        <button
-          onClick={() => setActiveTab('in_progress')}
-          className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
-            activeTab === 'in_progress'
-              ? 'bg-[#0E1B4D] text-white'
-              : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          In Progress
-        </button>
-        <button
-          onClick={() => setActiveTab('delivered')}
-          className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
-            activeTab === 'delivered'
-              ? 'bg-[#0E1B4D] text-white'
-              : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          Delivered
-        </button>
-        <button
-          onClick={() => setActiveTab('returns')}
-          className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
-            activeTab === 'returns'
-              ? 'bg-[#0E1B4D] text-white'
-              : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          Returns & Disputes
-        </button>
+      {/* Status Tabs with Horizontal Scroll & Edge Fade */}
+      <div className="relative mb-6">
+        <div className="flex items-center gap-2 border-b border-slate-200 pb-3 overflow-x-auto scrollbar-none scroll-smooth pr-6">
+          <button
+            onClick={() => setActiveTab('all')}
+            className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
+              activeTab === 'all'
+                ? 'bg-[#0E1B4D] text-white shadow-xs'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            All Orders ({orders.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('in_progress')}
+            className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
+              activeTab === 'in_progress'
+                ? 'bg-[#0E1B4D] text-white shadow-xs'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            In Progress
+          </button>
+          <button
+            onClick={() => setActiveTab('delivered')}
+            className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
+              activeTab === 'delivered'
+                ? 'bg-[#0E1B4D] text-white shadow-xs'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            Delivered
+          </button>
+          <button
+            onClick={() => setActiveTab('returns')}
+            className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
+              activeTab === 'returns'
+                ? 'bg-[#0E1B4D] text-white shadow-xs'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            Returns & Disputes
+          </button>
+        </div>
+        {/* Subtle Right edge fade to indicate more scrollable content on small viewports */}
+        <div className="pointer-events-none absolute right-0 top-0 bottom-3 w-8 bg-gradient-to-l from-[#FFF8F2] to-transparent sm:hidden" />
       </div>
 
       {/* Orders List */}
@@ -154,9 +159,7 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
           <div className="p-12 text-center text-slate-500">Loading your orders...</div>
         ) : filteredOrders.length === 0 ? (
           <div className="bg-white rounded-3xl p-10 border border-slate-200 text-center space-y-3">
-            <span className="material-symbols-rounded text-5xl text-slate-300">
-              shopping_bag
-            </span>
+            <Icon name="shopping_bag" className="text-5xl text-slate-300" />
             <h3 className="text-lg font-bold text-[#0E1B4D]">No orders found</h3>
             <p className="text-sm text-slate-500 max-w-sm mx-auto">
               You haven't placed any orders in this category yet.
@@ -226,7 +229,7 @@ export const MyOrdersPage: React.FC<MyOrdersPageProps> = ({ onNavigate }) => {
                       onClick={() => onNavigate(`/order-tracking-delivery-code?id=${order.id}`)}
                       className="px-4 py-2 rounded-xl bg-[#0E1B4D] text-white font-bold text-xs hover:bg-slate-800 transition-colors flex items-center gap-1 min-h-[38px]"
                     >
-                      <span className="material-symbols-rounded text-base">near_me</span>
+                      <Icon name="near_me" className="text-base" />
                       <span>Live Track</span>
                     </button>
                   )}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useOrders } from '../../hooks/useOrders';
 import PaymentProtectionNotice from '../../components/shared/PaymentProtectionNotice';
+import { Icon } from '../../components/shared/Icon';
 
 export interface ReturnsDisputesPageProps {
   onNavigate: (path: string) => void;
@@ -67,7 +68,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
           className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors"
           aria-label="Back"
         >
-          <span className="material-symbols-rounded">arrow_back</span>
+          <Icon name="arrow_back" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#0E1B4D]">
@@ -126,7 +127,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
                   Return Case #RET-101
                 </span>
                 <h3 className="text-base font-extrabold text-[#0E1B4D] mt-0.5">
-                  Order SWIFT-UG-2024-7822
+                  Order SWIFT-UG-7822
                 </h3>
               </div>
               <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
@@ -264,7 +265,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
                 onClick={() => setReturnPhotos((prev) => [...prev, '/placeholders/product.svg'])}
                 className="w-16 h-16 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400 hover:border-[#FF8A1F] hover:text-[#FF8A1F] transition-colors text-xs font-bold"
               >
-                <span className="material-symbols-rounded text-lg">add_a_photo</span>
+                <Icon name="add_a_photo" className="text-lg" />
                 <span>Add</span>
               </button>
             </div>
@@ -285,7 +286,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
       {activeTab === 'dispute' && (
         <form onSubmit={handleDisputeSubmit} className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
           <div className="flex items-center gap-2 text-red-600">
-            <span className="material-symbols-rounded text-2xl">gavel</span>
+            <Icon name="gavel" className="text-2xl" />
             <h2 className="text-lg font-extrabold text-[#0E1B4D]">
               Open SwiftCart Escrow Dispute
             </h2>
@@ -356,7 +357,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
                 onClick={() => setDisputePhotos((prev) => [...prev, '/placeholders/product.svg'])}
                 className="w-16 h-16 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400 hover:border-[#FF8A1F] hover:text-[#FF8A1F] text-xs font-bold"
               >
-                <span className="material-symbols-rounded text-lg">attach_file</span>
+                <Icon name="attach_file" className="text-lg" />
                 <span>Upload</span>
               </button>
             </div>

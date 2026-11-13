@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useOrders } from '../../hooks/useOrders';
 import SafeImage from '../../components/shared/SafeImage';
+import { Icon } from '../../components/shared/Icon';
 
 export interface OrderDeliveredPageProps {
   onNavigate: (path: string) => void;
@@ -43,7 +44,7 @@ export const OrderDeliveredPage: React.FC<OrderDeliveredPageProps> = ({ onNaviga
         {/* Delivered Trophy Graphic */}
         <div className="space-y-3">
           <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
-            <span className="material-symbols-rounded text-4xl">inventory</span>
+            <Icon name="inventory" className="text-4xl" />
           </div>
           <span className="bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
             Delivered & Completed
@@ -94,13 +95,9 @@ export const OrderDeliveredPage: React.FC<OrderDeliveredPageProps> = ({ onNaviga
                     className="p-1 text-amber-400 hover:scale-110 transition-transform"
                     aria-label={`${star} star`}
                   >
-                    <span
-                      className={`material-symbols-rounded text-3xl sm:text-4xl ${
+                    <Icon name="star" className={`text-3xl sm:text-4xl ${
                         star <= rating ? 'fill-current' : 'text-slate-200'
-                      }`}
-                    >
-                      star
-                    </span>
+                      }`} />
                   </button>
                 ))}
               </div>
@@ -125,15 +122,13 @@ export const OrderDeliveredPage: React.FC<OrderDeliveredPageProps> = ({ onNaviga
               disabled={isSubmitting}
               className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-white font-bold text-sm hover:opacity-95 shadow-md flex items-center justify-center gap-2 min-h-[48px]"
             >
-              <span className="material-symbols-rounded">rate_review</span>
+              <Icon name="rate_review" />
               <span>{isSubmitting ? 'Posting Review...' : 'Submit Review'}</span>
             </button>
           </form>
         ) : (
           <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-emerald-900 space-y-2">
-            <span className="material-symbols-rounded text-3xl text-emerald-600">
-              favorite
-            </span>
+            <Icon name="favorite" className="text-3xl text-emerald-600" />
             <h3 className="font-bold text-base">Thank you for your feedback!</h3>
             <p className="text-xs text-emerald-800">
               Your verified review helps other Ugandan shoppers make confident choices.

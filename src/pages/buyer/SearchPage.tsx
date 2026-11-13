@@ -5,6 +5,7 @@ import SheetDialog from '../../components/shared/SheetDialog';
 import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
 import { useCart } from '../../hooks/useCart';
+import { Icon } from '../../components/shared/Icon';
 
 export interface SearchPageProps {
   initialQuery?: string;
@@ -167,9 +168,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
         {/* Search input field */}
         <div className="relative flex-1 max-w-lg">
-          <span className="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">
-            search
-          </span>
+          <Icon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]" />
           <input
             type="search"
             value={query}
@@ -184,7 +183,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({
               className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
               aria-label="Clear search"
             >
-              <span className="material-symbols-rounded text-[18px]">close</span>
+              <Icon name="close" className="text-[18px]" />
             </button>
           )}
         </div>
@@ -197,7 +196,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({
             onClick={() => setIsMobileFilterOpen(true)}
             className="lg:hidden touch-target px-3.5 py-2 rounded-xl bg-orange-50 text-[#DA3700] border border-orange-200 text-[14px] font-bold flex items-center gap-1.5"
           >
-            <span className="material-symbols-rounded text-[18px]">filter_list</span>
+            <Icon name="filter_list" className="text-[18px]" />
             <span>Filters {activeChips.length > 0 ? `(${activeChips.length})` : ''}</span>
           </button>
 
@@ -240,7 +239,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({
                 className="hover:opacity-75 focus:outline-none"
                 aria-label={`Remove filter ${chip.label}`}
               >
-                <span className="material-symbols-rounded text-[14px]">close</span>
+                <Icon name="close" className="text-[14px]" />
               </button>
             </span>
           ))}

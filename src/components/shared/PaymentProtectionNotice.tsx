@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export interface PaymentProtectionNoticeProps {
   className?: string;
@@ -14,9 +15,7 @@ export const PaymentProtectionNotice: React.FC<PaymentProtectionNoticeProps> = (
       <div
         className={`bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl px-4 py-3 flex items-center gap-3 text-sm font-medium ${className}`}
       >
-        <span className="material-symbols-rounded text-emerald-600 shrink-0 text-xl">
-          verified_user
-        </span>
+        <Icon name="verified_user" className="text-emerald-600 shrink-0 text-xl" />
         <p className="leading-snug">
           Your payment is held safely by SwiftCart until you confirm delivery.
         </p>
@@ -29,7 +28,7 @@ export const PaymentProtectionNotice: React.FC<PaymentProtectionNoticeProps> = (
       className={`bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200/80 rounded-2xl p-4 flex items-start gap-3 text-sm text-emerald-950 shadow-xs ${className}`}
     >
       <div className="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-xs">
-        <span className="material-symbols-rounded text-2xl">security</span>
+        <Icon name="security" className="text-2xl" />
       </div>
       <div>
         <h4 className="font-bold text-emerald-900 text-sm mb-0.5 flex items-center gap-1.5">

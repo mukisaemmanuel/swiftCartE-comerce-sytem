@@ -1,5 +1,6 @@
 import React from 'react';
 import { useOrders } from '../../hooks/useOrders';
+import { Icon } from '../../components/shared/Icon';
 
 export interface ScanQrHandoverPageProps {
   onNavigate: (path: string) => void;
@@ -26,10 +27,10 @@ export const ScanQrHandoverPage: React.FC<ScanQrHandoverPageProps> = ({ onNaviga
             className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-100"
             aria-label="Back"
           >
-            <span className="material-symbols-rounded">arrow_back</span>
+            <Icon name="arrow_back" />
           </button>
           <span className="font-mono text-xs font-bold text-slate-500">
-            {order?.orderNumber || 'SWIFT-UG-2024-9140'}
+            {order?.orderNumber || 'SWIFT-UG-9140'}
           </span>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Icon } from './Icon';
 
 export interface SheetDialogProps {
   isOpen: boolean;
@@ -92,9 +93,7 @@ export const SheetDialog: React.FC<SheetDialogProps> = ({
             className="touch-target p-2 rounded-xl hover:bg-[var(--d-surface-container)] text-[var(--d-text-secondary)] hover:text-[var(--d-text-primary)] transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center -mr-2 -mt-2"
             aria-label="Close dialog"
           >
-            <span className="material-symbols-rounded text-[22px]" aria-hidden="true">
-              close
-            </span>
+            <Icon name="close" className="text-[22px]" aria-hidden="true" />
           </button>
         </div>
 

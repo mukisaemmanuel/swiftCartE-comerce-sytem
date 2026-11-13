@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Icon } from './Icon';
 
 export interface OfflineBannerProps {
   className?: string;
@@ -27,9 +28,7 @@ export const OfflineBanner: React.FC<OfflineBannerProps> = ({ className = '' }) 
       className={`w-full bg-[#ED1C24] text-white px-4 py-2.5 flex items-center justify-center gap-2.5 text-[14px] font-semibold shadow-md sticky top-0 z-50 ${className}`}
       role="alert"
     >
-      <span className="material-symbols-rounded text-[20px] animate-pulse" aria-hidden="true">
-        wifi_off
-      </span>
+      <Icon name="wifi_off" className="text-[20px] animate-pulse" aria-hidden="true" />
       <span>
         You are currently offline. Actions will sync automatically when network reconnects.
       </span>

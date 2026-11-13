@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../brand/Logo';
+import { Icon } from '../shared/Icon';
 
 export interface AppHeaderProps {
   cartCount?: number;
@@ -75,9 +76,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
             className="absolute right-1 w-8 h-8 rounded-lg text-slate-500 hover:text-[#0E1B4D] flex items-center justify-center transition-colors"
             aria-label="Submit Search"
           >
-            <span className="material-symbols-rounded text-[20px]" aria-hidden="true">
-              search
-            </span>
+            <Icon name="search" className="text-[20px]" aria-hidden="true" />
           </button>
         </form>
 
@@ -88,9 +87,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
           className="touch-target relative w-11 h-11 flex items-center justify-center rounded-xl hover:bg-white/15 transition-colors text-white shrink-0"
           aria-label={`Shopping cart with ${cartCount} items`}
         >
-          <span className="material-symbols-rounded text-[24px]" aria-hidden="true">
-            shopping_cart
-          </span>
+          <Icon name="shopping_cart" className="text-[24px]" aria-hidden="true" />
           {cartCount > 0 && (
             <span className="absolute top-1 right-1 px-1.5 py-0.2 rounded-full text-[10px] font-extrabold bg-[#0E1B4D] text-white min-w-[18px] text-center shadow-xs">
               {cartCount}
@@ -134,9 +131,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
               className="touch-target absolute right-1 h-9 w-10 rounded-lg bg-[#0E1B4D] hover:bg-[#1E2B58] text-white flex items-center justify-center transition-colors"
               aria-label="Submit Search"
             >
-              <span className="material-symbols-rounded text-[20px]" aria-hidden="true">
-                search
-              </span>
+              <Icon name="search" className="text-[20px]" aria-hidden="true" />
             </button>
           </form>
 
@@ -149,9 +144,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
               className="touch-target flex items-center gap-1.5 px-3 py-1.5 rounded-xl hover:bg-white/15 transition-colors relative text-white"
               aria-label={`Wishlist with ${wishlistCount} items`}
             >
-              <span className="material-symbols-rounded text-[24px]" aria-hidden="true">
-                favorite
-              </span>
+              <Icon name="favorite" className="text-[24px]" aria-hidden="true" />
               <span className="text-[14px] font-medium">Wishlist</span>
               {wishlistCount > 0 && (
                 <span className="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full text-[11px] font-bold bg-[#0E1B4D] text-white min-w-[18px] text-center">
@@ -167,9 +160,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
               className="touch-target flex items-center gap-1.5 px-3 py-1.5 rounded-xl hover:bg-white/15 transition-colors relative text-white"
               aria-label={`Shopping cart with ${cartCount} items`}
             >
-              <span className="material-symbols-rounded text-[24px]" aria-hidden="true">
-                shopping_cart
-              </span>
+              <Icon name="shopping_cart" className="text-[24px]" aria-hidden="true" />
               <span className="text-[14px] font-medium">Cart</span>
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full text-[11px] font-bold bg-[#0E1B4D] text-white min-w-[18px] text-center">
@@ -185,9 +176,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
               className="touch-target flex items-center gap-1.5 px-3 py-1.5 rounded-xl hover:bg-white/15 transition-colors text-white"
               aria-label={userName ? `Account of ${userName}` : 'Sign in to account'}
             >
-              <span className="material-symbols-rounded text-[24px]" aria-hidden="true">
-                account_circle
-              </span>
+              <Icon name="account_circle" className="text-[24px]" aria-hidden="true" />
               <span className="text-[14px] font-medium max-w-[110px] truncate">
                 {userName || 'Account'}
               </span>
@@ -214,13 +203,9 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                 aria-expanded={showAllCategories}
                 aria-haspopup="true"
               >
-                <span className="material-symbols-rounded text-[20px]" aria-hidden="true">
-                  menu
-                </span>
+                <Icon name="menu" className="text-[20px]" aria-hidden="true" />
                 <span>All Categories</span>
-                <span className="material-symbols-rounded text-[18px]" aria-hidden="true">
-                  arrow_drop_down
-                </span>
+                <Icon name="arrow_drop_down" className="text-[18px]" aria-hidden="true" />
               </button>
 
               {/* Hover Mega Panel */}
@@ -240,9 +225,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                       }}
                       className="touch-target w-full px-4 py-2.5 text-left text-[14px] hover:bg-orange-50 hover:text-[#DA3700] flex items-center gap-3 transition-colors"
                     >
-                      <span className="material-symbols-rounded text-[20px] text-slate-400" aria-hidden="true">
-                        {cat.icon}
-                      </span>
+                      <Icon name={cat.icon} className="text-[20px] text-slate-400" aria-hidden="true" />
                       <span className="font-medium">{cat.name}</span>
                     </button>
                   ))}
@@ -262,9 +245,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                     isActive ? 'text-[#FF8A1F] border-b-2 border-[#FF8A1F]' : 'text-white/90'
                   }`}
                 >
-                  <span className="material-symbols-rounded text-[18px] opacity-75" aria-hidden="true">
-                    {cat.icon}
-                  </span>
+                  <Icon name={cat.icon} className="text-[18px] opacity-75" aria-hidden="true" />
                   <span>{cat.name}</span>
                 </button>
               );

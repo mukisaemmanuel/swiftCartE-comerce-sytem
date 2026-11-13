@@ -8,6 +8,7 @@ import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
 import Toast from '../../components/shared/Toast';
 import type { Product } from '../../domain/types';
+import { Icon } from '../../components/shared/Icon';
 
 export interface WishlistPageProps {
   onNavigate: (path: string) => void;
@@ -82,7 +83,7 @@ export const WishlistPage: React.FC<WishlistPageProps> = ({ onNavigate }) => {
               onClick={handleMoveAllToCart}
               className="touch-target px-4 py-2.5 rounded-xl bg-[#FF8A1F] hover:bg-[#DA3700] text-white text-[13px] font-bold shadow-sm transition-colors flex items-center gap-1.5"
             >
-              <span className="material-symbols-rounded text-[18px]">shopping_cart</span>
+              <Icon name="shopping_cart" className="text-[18px]" />
               <span>Move All to Cart</span>
             </button>
             <button
@@ -142,7 +143,7 @@ export const WishlistPage: React.FC<WishlistPageProps> = ({ onNavigate }) => {
                   onClick={() => removeFromWishlist(item.id)}
                   className="touch-target absolute top-2.5 right-2.5 w-9 h-9 rounded-full bg-white/95 text-rose-500 hover:bg-rose-50 shadow-sm flex items-center justify-center transition-colors"
                 >
-                  <span className="material-symbols-rounded text-[20px]">favorite</span>
+                  <Icon name="favorite" className="text-[20px]" />
                 </button>
               </div>
 
@@ -186,7 +187,7 @@ export const WishlistPage: React.FC<WishlistPageProps> = ({ onNavigate }) => {
                       : 'bg-[#FF8A1F] hover:bg-[#DA3700] text-white active:scale-98'
                   }`}
                 >
-                  <span className="material-symbols-rounded text-[18px]">add_shopping_cart</span>
+                  <Icon name="add_shopping_cart" className="text-[18px]" />
                   <span>{!item.inStock ? 'Out of Stock' : 'Move to Cart'}</span>
                 </button>
               </div>

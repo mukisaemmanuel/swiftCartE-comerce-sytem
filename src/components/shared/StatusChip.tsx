@@ -1,13 +1,32 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export type StatusVariant = 'success' | 'warning' | 'danger' | 'info' | 'neutral';
 
 export interface StatusChipProps {
-  label: string;
+  label?: string;
+  status?: string;
   variant?: StatusVariant;
   icon?: string;
   className?: string;
   size?: 'sm' | 'md';
+}
+
+function deriveVariantFromStatus(status: string): StatusVariant {
+  const s = status.toUpperCase();
+  if (['DELIVERED', 'APPROVED', 'ACTIVE', 'PAID', 'SUCCESSFUL', 'RELEASED', 'RECEIVED_RESALEABLE'].includes(s)) {
+    return 'success';
+  }
+  if (['PENDING', 'PROCESSING', 'UNDER_REVIEW', 'DRAFT', 'READY_FOR_PICKUP', 'REQUESTED'].includes(s)) {
+    return 'warning';
+  }
+  if (['CANCELLED', 'REJECTED', 'FAILED', 'BANNED', 'SUSPENDED', 'RECEIVED_DAMAGED', 'DISPUTED'].includes(s)) {
+    return 'danger';
+  }
+  if (['SHIPPED', 'IN_TRANSIT', 'OUT_FOR_DELIVERY', 'ASSIGNED', 'OPEN'].includes(s)) {
+    return 'info';
+  }
+  return 'neutral';
 }
 
 const variantStyles: Record<StatusVariant, { bg: string; text: string; border: string; dot: string }> = {
@@ -45,12 +64,15 @@ const variantStyles: Record<StatusVariant, { bg: string; text: string; border: s
 
 export const StatusChip: React.FC<StatusChipProps> = ({
   label,
-  variant = 'neutral',
+  status,
+  variant,
   icon,
   className = '',
   size = 'md',
 }) => {
-  const styles = variantStyles[variant];
+  const displayLabel = label || (status ? status.replace(/_/g, ' ') : '');
+  const displayVariant = variant || (status ? deriveVariantFromStatus(status) : 'neutral');
+  const styles = variantStyles[displayVariant];
   const isSm = size === 'sm';
 
   return (
@@ -62,13 +84,11 @@ export const StatusChip: React.FC<StatusChipProps> = ({
       } ${className}`}
     >
       {icon ? (
-        <span className="material-symbols-rounded text-[16px]" aria-hidden="true">
-          {icon}
-        </span>
+        <Icon name={icon} className="text-[16px]" aria-hidden="true" />
       ) : (
         <span className={`w-1.5 h-1.5 rounded-full ${styles.dot}`} aria-hidden="true" />
       )}
-      <span>{label}</span>
+      <span>{displayLabel}</span>
     </span>
   );
 };

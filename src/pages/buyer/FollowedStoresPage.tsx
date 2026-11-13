@@ -7,6 +7,7 @@ import PriceUGX from '../../components/buyer/PriceUGX';
 import Skeleton from '../../components/shared/Skeleton';
 import EmptyState from '../../components/shared/EmptyState';
 import type { Seller, Product } from '../../domain/types';
+import { Icon } from '../../components/shared/Icon';
 
 export interface FollowedStoresPageProps {
   onNavigate: (path: string) => void;
@@ -70,9 +71,7 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
 
         {/* Search inside followed stores */}
         <div className="relative w-full md:w-72">
-          <span className="material-symbols-rounded absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">
-            search
-          </span>
+          <Icon name="search" className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]" />
           <input
             type="text"
             value={searchQuery}
@@ -125,9 +124,7 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
         {/* Instant Deal Alerts micro-toggle */}
         <div className="flex items-center justify-between sm:justify-end gap-3 bg-white px-4 py-2 rounded-2xl border border-slate-200 shadow-xs">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-rounded text-orange-500 text-[20px]">
-              notifications_active
-            </span>
+            <Icon name="notifications_active" className="text-orange-500 text-[20px]" />
             <span className="text-[13px] font-medium text-slate-700">Instant Deal Alerts</span>
           </div>
           <button
@@ -195,7 +192,7 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
                         </h2>
                         {seller.isOfficialStore ? (
                           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold">
-                            <span className="material-symbols-rounded text-[14px]">verified</span>
+                            <Icon name="verified" className="text-[14px]" />
                             Official Store
                           </span>
                         ) : seller.isVerified ? (
@@ -205,9 +202,7 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
 
                       <div className="flex items-center gap-3 text-[13px] text-slate-500 mt-1 flex-wrap">
                         <span className="flex items-center gap-1">
-                          <span className="material-symbols-rounded text-[15px] text-[#DA3700]">
-                            location_on
-                          </span>
+                          <Icon name="location_on" className="text-[15px] text-[#DA3700]" />
                           {seller.location}, {seller.district}
                         </span>
                         <span>•</span>
@@ -231,9 +226,10 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
                           : 'bg-[#FF8A1F] text-white hover:bg-[#DA3700]'
                       }`}
                     >
-                      <span className="material-symbols-rounded text-[18px]">
-                        {isFollowed ? 'check' : 'person_add'}
-                      </span>
+                      <Icon
+                        name={isFollowed ? 'check' : 'person_add'}
+                        className="text-[18px]"
+                      />
                       <span>{isFollowed ? 'Following' : 'Follow'}</span>
                     </button>
 
@@ -243,7 +239,7 @@ export const FollowedStoresPage: React.FC<FollowedStoresPageProps> = ({ onNaviga
                       className="touch-target px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#0E1B4D] text-[13px] font-bold flex items-center gap-1 transition-colors"
                     >
                       <span>Visit Store</span>
-                      <span className="material-symbols-rounded text-[16px]">chevron_right</span>
+                      <Icon name="chevron_right" className="text-[16px]" />
                     </button>
                   </div>
                 </div>

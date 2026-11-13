@@ -27,6 +27,22 @@ export const getRoutesByRole = (role: UserRole): RouteDefinition[] => {
   return allRoutes.filter((r) => r.role === role);
 };
 
+const SELLER_ALIASES: Record<string, string> = {
+  '/seller': '/seller/overview-seller',
+  '/seller/overview': '/seller/overview-seller',
+  '/seller/orders': '/seller/orders-seller',
+  '/seller/products': '/seller/products-seller',
+  '/seller/riders': '/seller/riders-seller',
+  '/seller/wallet': '/seller/seller-wallet-payouts',
+  '/seller/analytics': '/seller/analytics-seller',
+  '/seller/discounts': '/seller/discounts-ads-seller',
+  '/seller/returns': '/seller/returns-disputes-seller',
+  '/seller/profile': '/seller/store-profile-seller',
+  '/seller/notifications': '/seller/seller-notifications',
+  '/seller/add-product': '/seller/add-product-step-1-photos-seller',
+};
+
 export const findRouteByPath = (path: string): RouteDefinition | undefined => {
-  return allRoutes.find((r) => r.path === path);
+  const targetPath = SELLER_ALIASES[path] || path;
+  return allRoutes.find((r) => r.path === targetPath);
 };

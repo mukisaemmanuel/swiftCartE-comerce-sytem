@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { RouteDefinition } from '../../routes/types';
+import { Icon } from './Icon';
 
 export interface RoutePlaceholderProps {
   route: RouteDefinition;
@@ -88,9 +89,7 @@ export const RoutePlaceholder: React.FC<RoutePlaceholderProps> = ({
             <div className="p-5 rounded-2xl bg-[var(--d-surface)] border border-[var(--d-border)] flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-[var(--d-text-primary)] font-bold">
-                  <span className="material-symbols-rounded text-[20px] text-[#FF8A1F]">
-                    smartphone
-                  </span>
+                  <Icon name="smartphone" className="text-[20px] text-[#FF8A1F]" />
                   <span>Mobile Mockup</span>
                 </div>
                 {mobile ? (
@@ -112,9 +111,7 @@ export const RoutePlaceholder: React.FC<RoutePlaceholderProps> = ({
             <div className="p-5 rounded-2xl bg-[var(--d-surface)] border border-[var(--d-border)] flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-[var(--d-text-primary)] font-bold">
-                  <span className="material-symbols-rounded text-[20px] text-[#FF8A1F]">
-                    tablet
-                  </span>
+                  <Icon name="tablet" className="text-[20px] text-[#FF8A1F]" />
                   <span>Tablet Mockup</span>
                 </div>
                 {tablet ? (
@@ -136,9 +133,7 @@ export const RoutePlaceholder: React.FC<RoutePlaceholderProps> = ({
             <div className="p-5 rounded-2xl bg-[var(--d-surface)] border border-[var(--d-border)] flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-[var(--d-text-primary)] font-bold">
-                  <span className="material-symbols-rounded text-[20px] text-[#FF8A1F]">
-                    desktop_windows
-                  </span>
+                  <Icon name="desktop_windows" className="text-[20px] text-[#FF8A1F]" />
                   <span>Desktop Mockup</span>
                 </div>
                 {desktop ? (
