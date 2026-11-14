@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useDashboardTheme } from './context/ThemeContext';
 import { CartProvider } from './context/CartContext';
 import { allRoutes, findRouteByPath } from './routes';
 import type { RouteDefinition, UserRole } from './routes/types';
@@ -35,6 +35,24 @@ export const pathToView = (pathname: string): RouteDefinition => {
 // Router helper: map route definition to pathname
 export const viewToPath = (route: RouteDefinition): string => {
   return route.path;
+};
+
+const ThemeSync: React.FC<{ role?: UserRole }> = ({ role }) => {
+  const { theme } = useDashboardTheme();
+
+  useEffect(() => {
+    if (role === 'buyer') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.classList.toggle('light', theme === 'light');
+    }
+  }, [role, theme]);
+
+  return null;
 };
 
 export const App: React.FC = () => {
@@ -160,6 +178,7 @@ export const App: React.FC = () => {
 
   return (
     <ThemeProvider>
+      <ThemeSync role={activeRoute.role} />
       <CartProvider>
         <Suspense
           fallback={

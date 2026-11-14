@@ -204,8 +204,12 @@ export function convertMobileHtmlToReact(
       }
     });
 
-    // Header hamburger button injection
-    if (hasSidebar) {
+    // Header hamburger button injection (only if header does not already have a drawer/menu button)
+    const hasExistingMenuButton =
+      $(
+        'header button[id*="drawer"], header button[aria-label*="menu" i], header button:has(span:contains("menu")), header button:has(i:contains("menu"))'
+      ).length > 0;
+    if (hasSidebar && !hasExistingMenuButton) {
       $('header').first().each((_, el) => {
         const firstDiv = $(el).children().first();
         if (firstDiv.length > 0) {
@@ -219,7 +223,9 @@ export function convertMobileHtmlToReact(
     // Ensure header has a sun/moon toggle if none exists
     const hasExistingToggle =
       $('.theme-toggle-btn').length > 0 ||
-      $('span:contains("dark_mode"), span:contains("light_mode")').length > 0;
+      $(
+        'header button[title*="theme" i], header button[aria-label*="theme" i], header button[aria-label*="mode" i], header button:has(span:contains("dark_mode")), header button:has(span:contains("light_mode")), header button:has(span:contains("routine"))'
+      ).length > 0;
     if (!hasExistingToggle) {
       $('header').first().each((_, el) => {
         const lastDiv = $(el).children().last();
@@ -242,7 +248,7 @@ export function convertMobileHtmlToReact(
       alt.includes('swiftcart') ||
       src.includes('swiftcart')
     ) {
-      if (alt.includes('icon') || src.includes('icon')) {
+      if (alt.includes('icon') || src.includes('icon') || isMobile) {
         $(el).attr('src', '/brand/swiftcart-logo-icon.png');
       } else if (isDashboard) {
         $(el).attr('src', '/brand/swiftcart-logo-white.png');

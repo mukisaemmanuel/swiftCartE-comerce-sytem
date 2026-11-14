@@ -5,6 +5,7 @@ import { useDashboardTheme } from '../context/ThemeContext';
 // Converted Admin Mockup Screens
 import {
   AdminOrderDetailOversight,
+  AdminOrderDetailOversightLight,
   AuditLogSwiftcartAdmin1,
   AuditLogSwiftcartAdmin2,
   CommissionRatesEarningsSwiftcartAdmin,
@@ -16,6 +17,7 @@ import {
   OrdersOversightSwiftcartAdmin,
   OverpaymentsRefundsSwiftcartAdmin,
   OverviewSwiftcartAdmin,
+  OverviewSwiftcartAdminDark,
   PayoutQueueSwiftcartAdmin,
   ProductModerationSwiftcartAdmin,
   RidersCouriersSwiftcartAdmin,
@@ -28,6 +30,7 @@ import {
   AuditLogSwiftcartSuperAdmin,
   DangerZoneRoleChangeSwiftcartSuperAdmin,
   OverviewSwiftcartSuperAdmin,
+  OverviewSwiftcartSuperAdminDark,
   PlatformSettingsSwiftcartSuperAdmin,
   UsersRolesSwiftcartSuperAdmin,
 } from '../mockups/super-admin';
@@ -46,7 +49,28 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, onNavigate }) => {
   };
 
   const renderActiveScreen = () => {
-    if (path === '/admin/admin-order-detail-oversight') return <AdminOrderDetailOversight onNavigate={onNavigate} onAction={handleAction} />;
+    const renderAdminOverview = () =>
+      theme === 'dark' ? (
+        <OverviewSwiftcartAdminDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />
+      );
+
+    const renderSuperAdminOverview = () =>
+      theme === 'dark' ? (
+        <OverviewSwiftcartSuperAdminDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />
+      );
+
+    const renderAdminOrderDetail = () =>
+      theme === 'dark' ? (
+        <AdminOrderDetailOversight onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <AdminOrderDetailOversightLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+
+    if (path === '/admin/admin-order-detail-oversight') return renderAdminOrderDetail();
     if (path === '/admin/audit-log-admin-1') return <AuditLogSwiftcartAdmin1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/audit-log-admin-2') return <AuditLogSwiftcartAdmin2 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/commission-rates-earnings-admin') return <CommissionRatesEarningsSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
@@ -57,49 +81,49 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, onNavigate }) => {
     if (path === '/admin/locked-dispatches-admin') return <LockedDispatchesSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/orders-oversight-admin') return <OrdersOversightSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/overpayments-refunds-admin') return <OverpaymentsRefundsSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/overview-admin') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/admin/overview-admin') return renderAdminOverview();
     if (path === '/admin/payout-queue-admin') return <PayoutQueueSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/product-moderation-admin') return <ProductModerationSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/riders-couriers-admin') return <RidersCouriersSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/sellers-directory-admin-1') return <SellersDirectorySwiftcartAdmin1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/sellers-directory-admin-2') return <SellersDirectorySwiftcartAdmin2 onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/audit-log-security-ledger') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/homepage-ads-management') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/locked-dispatches-pin-overrides') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/orders-oversight-detail') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/overpayments-refunds') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/payout-queue-commission-matrix') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/product-moderation-catalog-review') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/riders-fleet-directory') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/sellers-directory-with-freeze-drawer') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/admin-command-overview') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/commission-rates-fee-matrix') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/orders-oversight-master-detail') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/overpayments-refunds-console') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/payout-queue-telecom-settlements') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/riders-fleet-operations-live-dispatch') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/sellers-directory-account-governance') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/admin/audit-log-security-ledger') return renderAdminOverview();
+    if (path === '/admin/homepage-ads-management') return renderAdminOverview();
+    if (path === '/admin/locked-dispatches-pin-overrides') return renderAdminOverview();
+    if (path === '/admin/orders-oversight-detail') return renderAdminOverview();
+    if (path === '/admin/overpayments-refunds') return renderAdminOverview();
+    if (path === '/admin/payout-queue-commission-matrix') return renderAdminOverview();
+    if (path === '/admin/product-moderation-catalog-review') return renderAdminOverview();
+    if (path === '/admin/riders-fleet-directory') return renderAdminOverview();
+    if (path === '/admin/sellers-directory-with-freeze-drawer') return renderAdminOverview();
+    if (path === '/admin/admin-command-overview') return renderAdminOverview();
+    if (path === '/admin/commission-rates-fee-matrix') return renderAdminOverview();
+    if (path === '/admin/orders-oversight-master-detail') return renderAdminOverview();
+    if (path === '/admin/overpayments-refunds-console') return renderAdminOverview();
+    if (path === '/admin/payout-queue-telecom-settlements') return renderAdminOverview();
+    if (path === '/admin/riders-fleet-operations-live-dispatch') return renderAdminOverview();
+    if (path === '/admin/sellers-directory-account-governance') return renderAdminOverview();
     if (path === '/super-admin/audit-log-super-admin') return <AuditLogSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/super-admin/danger-zone-role-change-super-admin') return <DangerZoneRoleChangeSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/overview-super-admin') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/super-admin/overview-super-admin') return renderSuperAdminOverview();
     if (path === '/super-admin/platform-settings-super-admin') return <PlatformSettingsSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/super-admin/users-roles-super-admin') return <UsersRolesSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/admin-super-admin-command-overview') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/platform-settings-fee-matrix') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/super-admin-operational-overview') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/users-roles-with-role-change') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin/users-roles-management-super-admin') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin' || path === '/admin/overview') return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/super-admin' || path === '/super-admin/overview') return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/super-admin/admin-super-admin-command-overview') return renderSuperAdminOverview();
+    if (path === '/super-admin/platform-settings-fee-matrix') return renderSuperAdminOverview();
+    if (path === '/super-admin/super-admin-operational-overview') return renderSuperAdminOverview();
+    if (path === '/super-admin/users-roles-with-role-change') return renderSuperAdminOverview();
+    if (path === '/super-admin/users-roles-management-super-admin') return renderSuperAdminOverview();
+    if (path === '/admin' || path === '/admin/overview') return renderAdminOverview();
+    if (path === '/super-admin' || path === '/super-admin/overview') return renderSuperAdminOverview();
 
     if (route.role === 'super-admin') {
-      return <OverviewSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;
+      return renderSuperAdminOverview();
     }
-    return <OverviewSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    return renderAdminOverview();
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col ${theme === 'dark' ? 'bg-[#0f172a] text-[#f9fafb]' : 'bg-[#f8fafc] text-[#0f172a]'}`}>
+    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
       {renderActiveScreen()}
     </div>
   );

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type ConsoleMessage } from '@playwright/test';
 import { allRoutes, UserRole } from '../../src/routes';
 
 test.describe('Dashboard Shell Responsive Phone Quality Gate (390x844)', () => {
@@ -25,7 +25,7 @@ test.describe('Dashboard Shell Responsive Phone Quality Gate (390x844)', () => {
       for (const route of uniqueRoutes) {
         console.log(`[${role}] Testing route: ${route.path}`);
         const consoleErrors: string[] = [];
-        const errorHandler = (msg: any) => {
+        const errorHandler = (msg: ConsoleMessage) => {
           if (msg.type() === 'error') {
             consoleErrors.push(msg.text());
           }

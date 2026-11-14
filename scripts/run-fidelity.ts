@@ -33,9 +33,20 @@ function decodeEntities(str: string): string {
     .replace(/&nbsp;/g, ' ');
 }
 
-export function extractMockupHeading(codeHtmlPath: string): string {
+export function getLuminance(hex: string): number {
+  if (!hex || !hex.startsWith('#')) return 0.5;
+  const c = hex.replace('#', '');
+  const r = parseInt(c.substring(0, 2), 16) / 255;
+  const g = parseInt(c.substring(2, 4), 16) / 255;
+  const b = parseInt(c.substring(4, 6), 16) / 255;
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+function extractMockupHeading(codeHtmlPath: string): string {
   if (!fs.existsSync(codeHtmlPath)) return '';
-  const content = fs.readFileSync(codeHtmlPath, 'utf-8');
+  const rawContent = fs.readFileSync(codeHtmlPath, 'utf-8');
+  // Strip <aside>...</aside> so off-canvas drawer headings are not selected as the primary page heading
+  const content = rawContent.replace(/<aside[\s\S]*?<\/aside>/gi, '');
 
   const clean = (raw: string) =>
     decodeEntities(raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
@@ -165,11 +176,35 @@ export async function runHonestFidelity() {
       deviceScaleFactor: 1,
     });
 
+    let isLightMockup = false;
+    if (screen.includes('dark')) {
+      isLightMockup = false;
+    } else if (screen.includes('light')) {
+      isLightMockup = true;
+    } else if (fs.existsSync(codeHtmlPath)) {
+      const html = fs.readFileSync(codeHtmlPath, 'utf-8');
+      if (html.includes('<html class="light"') || html.includes('data-theme="light"')) {
+        isLightMockup = true;
+      } else {
+        const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
+        const bgMatch = html.match(/"background":\s*"([^"]+)"/);
+        const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
+        if (hex && hex.startsWith('#')) {
+          const lum = getLuminance(hex);
+          isLightMockup = lum > 0.4;
+        }
+      }
+    }
+
     // If role needs a signed-in mock user, set it before navigation exactly as dev does
     if (route.role && route.role !== 'buyer') {
-      await context.addInitScript((roleName) => {
-        localStorage.setItem('swiftcart_user_role', roleName);
-      }, route.role);
+      await context.addInitScript(
+        ({ roleName, isLight }) => {
+          localStorage.setItem('swiftcart_user_role', roleName);
+          localStorage.setItem('swiftcart_dashboard_theme', isLight ? 'light' : 'dark');
+        },
+        { roleName: route.role, isLight: isLightMockup }
+      );
     }
 
     const page = await context.newPage();
@@ -241,9 +276,17 @@ export async function runHonestFidelity() {
       const actualBuffer = await page.screenshot({ fullPage: true });
 
       // Read screen.png
+      let expectedImg = sharp(fullPath);
       const meta = await sharp(fullPath).metadata();
-      const origW = meta.width || vp.width;
-      const origH = meta.height || vp.height;
+      let origW = meta.width || vp.width;
+      let origH = meta.height || vp.height;
+
+      // Special case: add_mobile_money_bottom_sheet_swiftcart_uganda is a 1600x1280 desktop canvas containing a 390x844 mobile phone at (605, 218)
+      if (screen === 'add_mobile_money_bottom_sheet_swiftcart_uganda' && origW > 800) {
+        expectedImg = sharp(fullPath).extract({ left: 605, top: 218, width: 390, height: 844 });
+        origW = 390;
+        origH = 844;
+      }
 
       // Scale screen.png to viewport width
       const scale = vp.width / origW;
@@ -256,7 +299,7 @@ export async function runHonestFidelity() {
       // Crop both to shorter height
       const compH = Math.min(scaledOrigH, actualH, 3200);
 
-      const expectedBuffer = await sharp(fullPath)
+      const expectedBuffer = await expectedImg
         .resize({
           width: vp.width,
           height: compH,

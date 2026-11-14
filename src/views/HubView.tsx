@@ -10,10 +10,11 @@ import {
   HubIntakeStationSwiftcartWorkHub,
   HubSortingStationSwiftcartWorkHub,
   HubStorageAgingMatrixSwiftcartHub,
+  HubStorageAgingMatrixSwiftcartHubLight,
   IntakeSwiftcartHubAgent,
   LineHaulTransitManifestCreationSwiftcartHubAgent,
   MoreSwiftcartHubAgent,
-  OverviewSwiftcartHubAgent,
+  OverviewSwiftcartHubAgentDark,
   OverviewSwiftcartHubAgentLightMode,
   PickupSwiftcartHubAgent,
   RegionalLinehaulTransitHandoverSwiftcartWorkHub,
@@ -37,16 +38,30 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
   };
 
   const renderActiveScreen = () => {
+    const renderOverview = () =>
+      theme === 'dark' ? (
+        <OverviewSwiftcartHubAgentDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <OverviewSwiftcartHubAgentLightMode onNavigate={onNavigate} onAction={handleAction} />
+      );
+
+    const renderStorageAging = () =>
+      theme === 'dark' ? (
+        <HubStorageAgingMatrixSwiftcartHub onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubStorageAgingMatrixSwiftcartHubLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+
     if (path === '/hub/courier-bag-qr-scan-confirmation-modal-work-hub') return <CourierBagQrScanConfirmationModalSwiftcartWorkHub onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/damaged-parcel-quarantine-bay-intake-hub-agent') return <DamagedParcelQuarantineBayIntakeSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-intake-sorting-station-work-hub') return <HubIntakeSortingStationSwiftcartWorkHub onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-intake-station-work-hub') return <HubIntakeStationSwiftcartWorkHub onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-sorting-station-work-hub') return <HubSortingStationSwiftcartWorkHub onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-storage-aging-matrix-hub') return <HubStorageAgingMatrixSwiftcartHub onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-storage-aging-matrix-hub') return renderStorageAging();
     if (path === '/hub/intake-hub-agent') return <IntakeSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/line-haul-transit-manifest-creation-hub-agent') return <LineHaulTransitManifestCreationSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/more-hub-agent') return <MoreSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/overview-hub-agent') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/overview-hub-agent') return renderOverview();
     if (path === '/hub/overview-hub-agent-light-mode') return <OverviewSwiftcartHubAgentLightMode onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/pickup-hub-agent') return <PickupSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/regional-linehaul-transit-handover-work-hub') return <RegionalLinehaulTransitHandoverSwiftcartWorkHub onNavigate={onNavigate} onAction={handleAction} />;
@@ -54,34 +69,34 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
     if (path === '/hub/rider-dispatch-courier-bag-staging-hub-agent') return <RiderDispatchCourierBagStagingSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/scan-hub-agent') return <ScanSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/swiftcart-work-hub-shared-system-components') return <SwiftcartWorkHubSharedSystemComponentsDarkLight onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-damaged-goods-quarantine-bay') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-intake-high-speed-barcode-scanner') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-line-haul-transit-manifest-handover') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-pickup-handover-console') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-returns-quarantine-bay') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-rider-dispatch-courier-staging') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-station-command-overview') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-station-command-overview-1') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-station-command-overview-2') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-station-settings-shift-handover') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-storage-aging-matrix') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/rider-profile-support-hub') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/delivery-addresses-hubs') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-customer-pickup-handover-console') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-inbound-intake-barcode-scan') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-line-haul-transit-manifest') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-returns-rto-bay') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub' || path === '/hub/overview') return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-damaged-goods-quarantine-bay') return renderOverview();
+    if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return renderOverview();
+    if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return renderOverview();
+    if (path === '/hub/hub-intake-high-speed-barcode-scanner') return renderOverview();
+    if (path === '/hub/hub-line-haul-transit-manifest-handover') return renderOverview();
+    if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return renderOverview();
+    if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return renderOverview();
+    if (path === '/hub/hub-pickup-handover-console') return renderOverview();
+    if (path === '/hub/hub-returns-quarantine-bay') return renderOverview();
+    if (path === '/hub/hub-rider-dispatch-courier-staging') return renderOverview();
+    if (path === '/hub/hub-station-command-overview') return renderOverview();
+    if (path === '/hub/hub-station-command-overview-1') return renderOverview();
+    if (path === '/hub/hub-station-command-overview-2') return renderOverview();
+    if (path === '/hub/hub-station-settings-shift-handover') return renderOverview();
+    if (path === '/hub/hub-storage-aging-matrix') return renderOverview();
+    if (path === '/hub/rider-profile-support-hub') return renderOverview();
+    if (path === '/hub/delivery-addresses-hubs') return renderOverview();
+    if (path === '/hub/hub-customer-pickup-handover-console') return renderOverview();
+    if (path === '/hub/hub-inbound-intake-barcode-scan') return renderOverview();
+    if (path === '/hub/hub-line-haul-transit-manifest') return renderOverview();
+    if (path === '/hub/hub-returns-rto-bay') return renderOverview();
+    if (path === '/hub' || path === '/hub/overview') return renderOverview();
 
-    return <OverviewSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
+    return renderOverview();
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col ${theme === 'dark' ? 'bg-[#0f172a] text-[#f9fafb]' : 'bg-[#f8fafc] text-[#0f172a]'}`}>
+    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
       {renderActiveScreen()}
     </div>
   );

@@ -17,6 +17,7 @@ import {
   RiderMapSwiftcartRider,
   RiderReturnPickupSwiftcartRider,
   RiderSellerPickupDeliveryDetail,
+  RiderSellerPickupDeliveryDetailLight,
 } from '../mockups/rider';
 
 export interface RiderViewProps {
@@ -46,12 +47,19 @@ export const RiderView: React.FC<RiderViewProps> = ({ route, onNavigate }) => {
         <OverviewSwiftcartRider onNavigate={onNavigate} onAction={handleAction} />
       );
 
+    const renderPickupDeliveryDetail = () =>
+      theme === 'dark' ? (
+        <RiderSellerPickupDeliveryDetail onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <RiderSellerPickupDeliveryDetailLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+
     if (path === '/rider/overview-rider') return renderOverview();
     if (path === '/rider/profile-support-rider') return <ProfileSupportSwiftcartRider onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-code-locked-security') return <RiderCodeLockedSwiftcartSecurity onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-map-rider') return <RiderMapSwiftcartRider onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-return-pickup-rider') return <RiderReturnPickupSwiftcartRider onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/rider/rider-seller-pickup-delivery-detail') return <RiderSellerPickupDeliveryDetail onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/rider/rider-seller-pickup-delivery-detail') return renderPickupDeliveryDetail();
     if (path === '/rider/rider-deliveries-master-detail') return renderOverview();
     if (path === '/rider/rider-delivery-task-execution-code-entry') return renderOverview();
     if (path === '/rider/rider-failed-delivery-code-locked-state') return renderOverview();
@@ -69,7 +77,7 @@ export const RiderView: React.FC<RiderViewProps> = ({ route, onNavigate }) => {
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col ${theme === 'dark' ? 'bg-[#0f172a] text-[#f9fafb]' : 'bg-[#f8fafc] text-[#0f172a]'}`}>
+    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
       {renderActiveScreen()}
     </div>
   );

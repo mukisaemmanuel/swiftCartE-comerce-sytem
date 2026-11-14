@@ -24,6 +24,7 @@ import {
   SellerDisputeResponseSwiftcartUganda2,
   SellerNotificationsSwiftcart,
   SellerOrderDetailSwiftcartSeller,
+  SellerOrderDetailSwiftcartSellerLight,
   StoreProfileSwiftcartSeller,
 } from '../mockups/seller';
 
@@ -59,8 +60,15 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
     if (path === '/seller/riders-seller') return <RidersSwiftcartSeller onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-dispute-response-1') return <SellerDisputeResponseSwiftcartUganda1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-dispute-response-2') return <SellerDisputeResponseSwiftcartUganda2 onNavigate={onNavigate} onAction={handleAction} />;
+    const renderSellerOrderDetail = () =>
+      theme === 'dark' ? (
+        <SellerOrderDetailSwiftcartSeller onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <SellerOrderDetailSwiftcartSellerLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+
     if (path === '/seller/seller-notifications') return <SellerNotificationsSwiftcart onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-order-detail-seller') return <SellerOrderDetailSwiftcartSeller onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-order-detail-seller') return renderSellerOrderDetail();
     if (path === '/seller/store-profile-seller') return <StoreProfileSwiftcartSeller onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-add-product-with-ai-studio') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-analytics-performance-heatmaps-1') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
@@ -96,7 +104,7 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col ${theme === 'dark' ? 'bg-[#0f172a] text-[#f9fafb]' : 'bg-[#f8fafc] text-[#0f172a]'}`}>
+    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
       {renderActiveScreen()}
     </div>
   );
