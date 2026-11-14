@@ -1,8 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../views/**/*.{ts,tsx}";
 @source "../components/**/*.{ts,tsx}";
-@source "../mockups/buyer/*/*.tsx";
-@source "../mockups/seller/*/*.tsx";
+@source "../mockups/**/*.{ts,tsx}";
 @source "../App.tsx";
 @source "../main.tsx";
 @source "../../index.html";
@@ -257,5 +256,30 @@
   }
   .pt-safe {
     padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  aside[id*="drawer"], aside#seller-drawer, aside#admin-drawer, aside#app-drawer-panel {
+    transition: transform 0.25s ease-out;
+  }
+  aside[id*="drawer"].translate-x-0,
+  aside#seller-drawer.translate-x-0,
+  aside#admin-drawer.translate-x-0,
+  aside#app-drawer-panel.translate-x-0,
+  aside.\!translate-x-0 {
+    transform: translateX(0) !important;
+  }
+  aside[id*="drawer"].-translate-x-full,
+  aside#seller-drawer.-translate-x-full,
+  aside#admin-drawer.-translate-x-full,
+  aside#app-drawer-panel.-translate-x-full {
+    transform: translateX(-100%);
+  }
+  @media (min-width: 1024px) {
+    aside[id*="drawer"].lg\:translate-x-0,
+    aside#seller-drawer.lg\:translate-x-0,
+    aside#admin-drawer.lg\:translate-x-0,
+    aside#app-drawer-panel.lg\:translate-x-0 {
+      transform: translateX(0);
+    }
   }
 }

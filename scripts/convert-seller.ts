@@ -140,25 +140,101 @@ export function convertSellerHtmlToReact(
   const htmlContent = fs.readFileSync(htmlPath, 'utf8');
   const $ = cheerio.load(htmlContent, { xml: false });
 
-  // Remove scripts, meta, title, etc.
-  $('script').remove();
-  $('meta').remove();
-  $('link[rel="stylesheet"]').remove();
-  $('title').remove();
+  // 1. Remove scripts, meta, link, title
+  $('script, meta, link[rel="stylesheet"], title').remove();
+
+  // 2. Pre-process Cheerio DOM for Shell & Fidelity Rules
+
+  // Rule 4: Exactly ONE sun/moon toggle in top bar; remove duplicate Dark/Light pill
+  $('button').each((_, el) => {
+    const text = $(el).text().trim().toLowerCase();
+    if (text === 'dark' || text === 'light') {
+      const parent = $(el).parent();
+      const parentText = parent.text().toLowerCase();
+      if (parentText.includes('dark') && parentText.includes('light')) {
+        parent.replaceWith(
+          `<button type="button" class="theme-toggle-btn w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors border border-surface-container-highest/50" aria-label="Toggle Theme" title="Toggle Theme"><span class="material-symbols-outlined text-[20px]">theme_toggle_placeholder</span></button>`
+        );
+      }
+    }
+  });
+
+  // Rule 5: Replace broken logo
+  $('img').each((_, el) => {
+    const alt = ($(el).attr('alt') || '').toLowerCase();
+    const src = ($(el).attr('src') || '').toLowerCase();
+    if (alt.includes('logo') || src.includes('logo') || alt.includes('swiftcart') || src.includes('swiftcart')) {
+      if (alt.includes('icon') || src.includes('icon')) {
+        $(el).attr('src', '/brand/swiftcart-logo-icon.png');
+      } else {
+        $(el).attr('src', '/brand/logo-full.png');
+      }
+      $(el).attr('alt', 'SwiftCart');
+    }
+  });
+
+  // Rule 1: Responsive Sidebar and Margins
+  // Aside: hide on mobile by default, open on drawerOpen
+  let hasSidebar = false;
+  $('aside').each((_, el) => {
+    const cls = $(el).attr('class') || '';
+    if (cls.includes('w-60') || cls.includes('fixed left-0')) {
+      hasSidebar = true;
+      $(el).attr(
+        'class',
+        cls.replace(/\bfixed\b/, 'fixed z-50').replace(/\bselect-none\b/, 'select-none seller-aside-drawer')
+      );
+      // Prepend close button on mobile
+      $(el).prepend(
+        `<div class="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" class="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined text-[20px]">close</span></button></div>`
+      );
+    }
+  });
+
+  // Main wrapper: change pl-60 to pl-0 lg:pl-60
+  $('*').each((_, el) => {
+    const cls = $(el).attr('class') || '';
+    if (cls.includes('pl-60')) {
+      $(el).attr('class', cls.replace(/\bpl-60\b/g, 'pl-0 lg:pl-60'));
+    }
+    if (cls.includes('left-60')) {
+      $(el).attr('class', cls.replace(/\bleft-60\b/g, 'left-0 lg:left-60'));
+    }
+  });
+
+  // Header: add hamburger button for mobile drawer
+  if (hasSidebar) {
+    $('header').first().each((_, el) => {
+      const firstDiv = $(el).children().first();
+      if (firstDiv.length > 0) {
+        firstDiv.prepend(
+          `<button type="button" class="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]">menu</span></button>`
+        );
+      }
+    });
+  }
+
+  // Navigation: Overview not Dashboard
+  $('a, span, h1, h2, h3, h4').each((_, el) => {
+    const text = $(el).text().trim();
+    if (text === 'Dashboard' && ($(el).is('span') || $(el).is('a'))) {
+      $(el).text('Overview');
+    }
+  });
 
   const ctx = {
-    hasIcon: false,
+    hasIcon: true,
     hasAssetBase: false,
     hasNavigate: false,
     hasAction: false,
-    hasThemeToggle: false,
+    hasThemeToggle: true,
+    hasSidebar,
   };
 
   function processNode(node: any): string {
     if (node.type === 'text') {
       const text = node.data;
       if (!text || text.trim() === '') return text;
-      // Escape JSX specials
       return text
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -168,12 +244,10 @@ export function convertSellerHtmlToReact(
     }
 
     if (node.type === 'comment') return '';
-
     if (node.type !== 'tag') return '';
 
     const tagName = node.name.toLowerCase();
 
-    // Skip html, head, body wrapper tags but process children
     if (['html', 'head', 'body'].includes(tagName)) {
       return (node.children || []).map(processNode).join('');
     }
@@ -193,8 +267,10 @@ export function convertSellerHtmlToReact(
       (className.includes('material-symbols-outlined') ||
         className.includes('material-symbols-rounded'))
     ) {
-      ctx.hasIcon = true;
       const iconName = $(node).text().trim();
+      if (iconName === 'theme_toggle_placeholder') {
+        return `{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}`;
+      }
       const styleAttr = $(node).attr('style') || '';
       const isFilled =
         /FILL['"]?\s*:\s*1|font-variation-settings:\s*['"][^'"]*FILL[^'"]*1/i.test(styleAttr);
@@ -270,25 +346,39 @@ export function convertSellerHtmlToReact(
         continue;
       }
 
+      // Sidebar drawer responsive classes
+      if (key === 'className' && val.includes('seller-aside-drawer')) {
+        const baseClass = val.replace(/seller-aside-drawer/g, '').trim();
+        attrMap.set(
+          key,
+          `className={\`${baseClass} \${drawerOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'} transition-transform duration-200 \${theme === 'dark' ? 'bg-[#0d1225] border-[#2f3448]/60' : 'bg-white border-slate-200'}\`}`
+        );
+        continue;
+      }
+
       const escapedVal = val.replace(/"/g, '&quot;');
       attrMap.set(key, `${key}="${escapedVal}"`);
     }
 
     // Interactivity: buttons and links
-    if (tagName === 'button' || tagName === 'a') {
+    if (className.includes('sidebar-hamburger-btn')) {
+      attrMap.set('onClick', 'onClick={() => setDrawerOpen(true)}');
+    } else if (className.includes('sidebar-close-btn')) {
+      attrMap.set('onClick', 'onClick={() => setDrawerOpen(false)}');
+    } else if (className.includes('theme-toggle-btn')) {
+      attrMap.set('onClick', 'onClick={() => toggleTheme()}');
+    } else if (tagName === 'button' || tagName === 'a') {
       const text = $(node).text().toLowerCase();
       const aria = (attribs['aria-label'] || '').toLowerCase();
       const btnTitle = (attribs['title'] || '').toLowerCase();
       const combo = `${text} ${aria} ${btnTitle}`;
 
-      // Check if theme toggle
       if (
         combo.includes('dark_mode') ||
         combo.includes('light_mode') ||
         combo.includes('sun') ||
         combo.includes('moon')
       ) {
-        ctx.hasThemeToggle = true;
         attrMap.set('onClick', 'onClick={() => toggleTheme()}');
       } else if (!attrMap.has('onClick')) {
         // Seller navigation routes
@@ -365,12 +455,11 @@ export function convertSellerHtmlToReact(
   const renderedChildren = targetNodes.map(processNode).join('\n');
 
   const importList: string[] = ["import React, { useState } from 'react';"];
-  if (ctx.hasIcon) {
-    const iconRel = isIndividualScreen
-      ? '../../../../components/shared/Icon'
-      : '../../../components/shared/Icon';
-    importList.push(`import Icon from '${iconRel}';`);
-  }
+  const iconRel = isIndividualScreen
+    ? '../../../../components/shared/Icon'
+    : '../../../components/shared/Icon';
+  importList.push(`import Icon from '${iconRel}';`);
+
   const themeRel = isIndividualScreen
     ? '../../../../context/ThemeContext'
     : '../../../context/ThemeContext';
@@ -387,7 +476,8 @@ export interface ${componentName}Props {
 export const ${componentName}: React.FC<${componentName}Props> = (props) => {
   ${ctx.hasNavigate ? 'const onNavigate = props.onNavigate;' : ''}
   ${ctx.hasAction ? 'const onAction = props.onAction;' : ''}
-  const { theme${ctx.hasThemeToggle ? ', toggleTheme' : ''} } = useDashboardTheme();
+  const { theme, toggleTheme } = useDashboardTheme();
+  const [drawerOpen, setDrawerOpen] = useState(false);
   ${ctx.hasAssetBase ? "const assetBase = '';" : ''}
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
@@ -397,6 +487,12 @@ export const ${componentName}: React.FC<${componentName}Props> = (props) => {
         <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-[100] bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium animate-fade-in">
           {toastMessage}
         </div>
+      )}
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+        />
       )}
       ${renderedChildren}
     </div>
@@ -563,30 +659,19 @@ export const ${compName}: React.FC<${compName}Props> = (props) => {
 
 export default ${compName};
 `;
-
     fs.writeFileSync(path.join(screenDir, 'index.tsx'), indexContent, 'utf8');
   }
 
-  // 3. Update docs/MISSING-SIZES.md
-  let missingDoc = '\n## Seller Screens Missing Sizes\n\n';
-  missingDoc += '| Screen | Role | Available Sizes | Missing Sizes | Fallback Rule |\n';
-  missingDoc += '| --- | --- | --- | --- | --- |\n';
+  // Update src/mockups/seller/index.ts exports
+  const exportLines = sellerRoutes
+    .map((r) => pascalCase(r.path) || 'SellerOverview')
+    .map((comp) => `export { default as ${comp} } from './${comp}';`)
+    .join('\n');
 
-  for (const item of missingSizesLog) {
-    missingDoc += `| **${item.screen}** | seller | ${item.available.join(', ')} | ${item.missing.join(', ')} | nearest available |\n`;
-  }
-
-  fs.appendFileSync(path.resolve('docs/MISSING-SIZES.md'), missingDoc, 'utf8');
-  console.log(`Updated docs/MISSING-SIZES.md with seller entries.`);
-
-  // 4. Generate src/mockups/seller/index.ts
-  let exportCode = `// Auto-generated exports for Seller mockups\n\n`;
-  for (const r of sellerRoutes) {
-    const compName = pascalCase(r.path) || 'SellerOverview';
-    exportCode += `export { ${compName} } from './${compName}';\n`;
-  }
-  fs.writeFileSync(path.join(baseOutDir, 'index.ts'), exportCode, 'utf8');
-  console.log(`Saved src/mockups/seller/index.ts with 49 exports.`);
+  fs.writeFileSync(path.join(baseOutDir, 'index.ts'), exportLines + '\n', 'utf8');
+  console.log(`Generated canonical components and exports for 49 seller screens.`);
 }
 
-runSellerConversion();
+if (process.argv[1]?.includes('convert-seller')) {
+  runSellerConversion();
+}

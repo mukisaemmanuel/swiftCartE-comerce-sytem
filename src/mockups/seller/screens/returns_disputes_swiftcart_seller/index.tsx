@@ -12,6 +12,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
   const onNavigate = props.onNavigate;
   
   const { theme, toggleTheme } = useDashboardTheme();
+  void theme;
+  void toggleTheme;
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const assetBase = '';
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
@@ -22,7 +25,13 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0" onClick={() => alertToast('Action triggered')}><Icon name="arrow_back_ios_new" className="text-[24px]" /></button><img alt="swiftcart-logo-icon-only.png" className="h-8 w-auto object-contain shrink-0" src={`${assetBase}/images/73a64f43e1bfb68c.webp`} /><h1 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Returns And Disputes</h1></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="font-label-sm text-label-sm font-bold text-on-primary">KG</span></div></div></div></header>
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+        />
+      )}
+      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0" onClick={() => alertToast('Action triggered')}><Icon name="arrow_back_ios_new" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Returns And Disputes</h1></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="font-label-sm text-label-sm font-bold text-on-primary">KG</span></div></div></div></header>
 <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter py-space-sm gap-space-md text-on-surface">
 
 <div className="w-full rounded-xl bg-surface-container-highest/60 p-space-sm flex items-start gap-space-sm shadow-sm backdrop-blur-sm">

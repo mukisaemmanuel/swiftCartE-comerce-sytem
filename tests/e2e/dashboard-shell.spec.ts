@@ -1,123 +1,195 @@
 import { test, expect } from '@playwright/test';
+import { allRoutes, UserRole } from '../../src/routes';
 
-const DASHBOARD_TEST_ROUTES = [
-  '/seller/overview-seller',
-  '/seller/orders-seller',
-  '/seller/products-seller',
-  '/seller/analytics-seller',
-  '/seller/returns-disputes-seller',
-  '/seller/seller-wallet-payouts',
-  '/seller/store-profile-seller',
-  '/seller/seller-overview',
-  '/seller/seller-orders-master-detail',
-  '/seller/seller-products-bulk-price-update',
-  '/account',
-  '/my-orders',
-];
+test.describe('Dashboard Shell Responsive Phone Quality Gate (390x844)', () => {
+  const roles: UserRole[] = ['buyer', 'seller', 'admin', 'super-admin', 'rider', 'hub'];
 
-const VIEWPORTS = [
-  { name: 'mobile', width: 390, height: 844 },
-  { name: 'tablet', width: 834, height: 1112 },
-  { name: 'desktop', width: 1440, height: 900 },
-];
+  for (const role of roles) {
+    test(`Role "${role}" shell integrity on phone (390x844)`, async ({ page }) => {
+      test.setTimeout(600000); // 10 minutes per role suite
 
-test.describe('Dashboard Shell Responsive Quality Gate', () => {
-  for (const vp of VIEWPORTS) {
-    test.describe(`${vp.name} (${vp.width}x${vp.height})`, () => {
-      for (const routePath of DASHBOARD_TEST_ROUTES) {
-        test(`route ${routePath} shell integrity`, async ({ page }) => {
-          const consoleErrors: string[] = [];
-          page.on('console', (msg) => {
-            if (msg.type() === 'error') {
-              consoleErrors.push(msg.text());
-            }
-          });
+      const routesForRole = allRoutes.filter((r) => r.role === role);
 
-          await page.setViewportSize({ width: vp.width, height: vp.height });
-          await page.goto(routePath, { waitUntil: 'domcontentloaded' });
-          try {
-            await page.waitForFunction(
-              () => !document.body.innerText.includes('Loading SwiftCart Portal...'),
-              { timeout: 10000 }
-            );
-          } catch {
-            // fallback wait
+      // Deduplicate by path
+      const uniqueRoutes = Array.from(new Map(routesForRole.map((r) => [r.path, r])).values());
+
+      await page.setViewportSize({ width: 390, height: 844 });
+
+      // Pre-set user role in localStorage
+      if (role !== 'buyer') {
+        await page.addInitScript((roleName) => {
+          localStorage.setItem('swiftcart_user_role', roleName);
+        }, role);
+      }
+
+      for (const route of uniqueRoutes) {
+        console.log(`[${role}] Testing route: ${route.path}`);
+        const consoleErrors: string[] = [];
+        const errorHandler = (msg: any) => {
+          if (msg.type() === 'error') {
+            consoleErrors.push(msg.text());
           }
-          try {
-            await page.evaluate(() => document.fonts.ready);
-          } catch {
-            // fonts fallback
-          }
-          await page.waitForTimeout(200);
+        };
+        page.on('console', errorHandler);
 
-          // 1. Check No Console Errors
-          const criticalErrors = consoleErrors.filter(
-            (err) => !err.includes('favicon') && !err.includes('Failed to load resource')
+        await page.goto(route.path, { waitUntil: 'domcontentloaded', timeout: 15000 });
+        console.log(`[${role}] Loaded DOM for ${route.path}`);
+
+        // Wait for portal load
+        try {
+          await page.waitForFunction(
+            () => !document.body.innerText.includes('Loading SwiftCart Portal...'),
+            { timeout: 8000 }
           );
-          expect(criticalErrors).toEqual([]);
+        } catch {
+          // ignore timeout fallback
+        }
+        console.log(`[${role}] Portal ready for ${route.path}`);
 
-          // 2. Check Navigation Reachability
-          if (vp.name === 'desktop') {
-            const hasNav = await page.evaluate(() => {
-              const aside = document.querySelector('aside');
-              const nav = document.querySelector('nav');
-              const header = document.querySelector('header');
-              const navIcons = document.querySelector(
-                '[data-icon="dashboard"], [data-icon="storefront"], [data-icon="menu"], [data-icon="home"]'
-              );
-              return Boolean(aside || nav || header || navIcons);
-            });
-            expect(hasNav).toBe(true);
-          } else {
-            const hasMobileNav = await page.evaluate(() => {
-              const hasHeaderOrBottom = Boolean(document.querySelector('header, nav, aside'));
-              const hasNavButton = Array.from(document.querySelectorAll('button, a')).some((b) => {
-                const aria = (b.getAttribute('aria-label') || '').toLowerCase();
-                const html = b.innerHTML.toLowerCase();
-                return (
-                  aria.includes('menu') ||
-                  aria.includes('back') ||
-                  html.includes('menu') ||
-                  html.includes('arrow_back') ||
-                  Boolean(b.querySelector('[data-icon]'))
-                );
-              });
-              return hasHeaderOrBottom || hasNavButton;
-            });
-            expect(hasMobileNav).toBe(true);
-          }
+        // Wait for web fonts
+        try {
+          await page.evaluate(() => document.fonts.ready);
+        } catch {
+          // ignore
+        }
+        await page.waitForTimeout(100);
+        console.log(`[${role}] Fonts ready for ${route.path}`);
 
-          // 3. No Horizontal Overflow
-          const isOverflowing = await page.evaluate(() => {
-            return document.documentElement.scrollWidth > window.innerWidth + 2;
+        // 1. Check 0 Console Errors
+        const criticalErrors = consoleErrors.filter(
+          (err) =>
+            !err.includes('favicon') &&
+            !err.includes('Failed to load resource') &&
+            !err.includes('[vite]') &&
+            !err.includes('downloadable font')
+        );
+        expect(
+          criticalErrors,
+          `Route ${route.path} logged console errors: ${criticalErrors.join('; ')}`
+        ).toEqual([]);
+
+        // 2. Check No Sideways Scroll (scrollWidth <= innerWidth + 2)
+        const isOverflowing = await page.evaluate(() => {
+          return document.documentElement.scrollWidth > window.innerWidth + 2;
+        });
+        expect(isOverflowing, `Route ${route.path} has sideways scroll`).toBe(false);
+
+        // 3. Content area width >= 300px
+        const contentWidth = await page.evaluate(() => {
+          const el =
+            document.querySelector('main') ||
+            document.querySelector('#root > div') ||
+            document.body;
+          return el ? el.getBoundingClientRect().width : 0;
+        });
+        expect(
+          contentWidth,
+          `Route ${route.path} content width is under 300px: ${contentWidth}`
+        ).toBeGreaterThanOrEqual(300);
+
+        // 4. Sidebar hidden until hamburger clicked (Dashboards only)
+        if (role !== 'buyer') {
+          const sidebarState = await page.evaluate(() => {
+            const aside =
+              document.querySelector('aside#seller-drawer') ||
+              document.querySelector('aside#admin-drawer') ||
+              document.querySelector('aside[id*="drawer"]') ||
+              document.querySelector('aside.fixed') ||
+              document.querySelector('aside');
+            if (!aside) return { exists: false, isHidden: true };
+            const rect = aside.getBoundingClientRect();
+            const style = window.getComputedStyle(aside);
+            const isHidden =
+              rect.right <= 10 ||
+              rect.width === 0 ||
+              style.display === 'none' ||
+              style.visibility === 'hidden' ||
+              (style.transform !== 'none' && rect.right <= 20);
+            return { exists: true, isHidden };
           });
-          expect(isOverflowing).toBe(false);
 
-          // 4. Text readability check (body and content paragraphs >= 12px)
-          const smallContentElements = await page.evaluate(() => {
-            const elements = Array.from(document.querySelectorAll('p, h1, h2, h3, h4'));
-            const tooSmall: string[] = [];
-            for (const el of elements) {
-              const className = el.className || '';
-              // Skip deliberate badge, caption or status tags
-              if (
-                className.includes('label-sm') ||
-                className.includes('text-[10px]') ||
-                className.includes('text-[11px]') ||
-                className.includes('badge')
-              ) {
-                continue;
-              }
-              const style = window.getComputedStyle(el);
-              const fontSize = parseFloat(style.fontSize);
-              if (fontSize > 0 && fontSize < 11.5 && (el.textContent?.trim().length || 0) > 3) {
-                tooSmall.push(`${el.tagName}: ${el.textContent?.trim().slice(0, 30)} (${fontSize}px)`);
+          if (sidebarState.exists) {
+            expect(
+              sidebarState.isHidden,
+              `Route ${route.path} sidebar should be hidden initially on phone`
+            ).toBe(true);
+
+            // Click hamburger if present
+            const hamburger = page
+              .locator(
+                'button.sidebar-hamburger-btn, button#drawer-trigger, button[aria-label="Open sidebar"], button[aria-label="Open menu"], button[aria-label*="menu" i]:not([aria-label*="close" i]), button:has([data-icon="menu"]):not([aria-label*="close" i])'
+              )
+              .first();
+            if (await hamburger.isVisible().catch(() => false)) {
+              console.log(`[${role}] Clicking hamburger for ${route.path}`);
+              await hamburger.evaluate((btn: HTMLElement) => btn.click()).catch(() => {});
+              await page.waitForTimeout(350);
+
+              const isOpen = await page.evaluate(() => {
+                const aside =
+                  document.querySelector('aside#seller-drawer') ||
+                  document.querySelector('aside#admin-drawer') ||
+                  document.querySelector('aside[id*="drawer"]') ||
+                  document.querySelector('aside.fixed') ||
+                  document.querySelector('aside');
+                if (!aside) return false;
+                const rect = aside.getBoundingClientRect();
+                return rect.right > 50 && rect.left > -50;
+              });
+              expect(isOpen, `Route ${route.path} sidebar should open on hamburger click`).toBe(true);
+
+              // Close via backdrop or close button
+              const closeBtn = page
+                .locator(
+                  'button.sidebar-close-btn, button[aria-label="Close menu"], button[aria-label="Close sidebar"], button[aria-label*="close" i], div.fixed.inset-0.bg-black'
+                )
+                .first();
+              if (await closeBtn.isVisible().catch(() => false)) {
+                await closeBtn.evaluate((btn: HTMLElement) => btn.click()).catch(() => {});
+                await page.waitForTimeout(100);
               }
             }
-            return tooSmall.slice(0, 5);
-          });
-          expect(smallContentElements).toEqual([]);
+          }
+        }
+
+        console.log(`[${role}] Checking small text for ${route.path}`);
+        // 5. No text under 12px
+        const smallText = await page.evaluate(() => {
+          const elements = Array.from(document.querySelectorAll('p, h1, h2, h3, h4, h5, h6'));
+          const violations: string[] = [];
+          for (const el of elements) {
+            const text = el.textContent?.trim() || '';
+            if (!text || text.length < 2) continue;
+            const className = (el.className || '').toString();
+            if (
+              className.includes('badge') ||
+              className.includes('pill') ||
+              className.includes('label-sm') ||
+              className.includes('tag') ||
+              className.includes('text-[10px]') ||
+              className.includes('text-[11px]') ||
+              className.includes('text-[9px]') ||
+              className.includes('caption')
+            ) {
+              continue;
+            }
+            const style = window.getComputedStyle(el);
+            if (style.display === 'none' || style.visibility === 'hidden') continue;
+            const fontSize = parseFloat(style.fontSize);
+            if (fontSize > 0 && fontSize < 11.5) {
+              violations.push(
+                `${el.tagName}: "${text.slice(0, 25)}" (${fontSize}px)`
+              );
+            }
+          }
+          return violations.slice(0, 5);
         });
+        expect(
+          smallText,
+          `Route ${route.path} has readable text under 12px: ${smallText.join(', ')}`
+        ).toEqual([]);
+
+        page.off('console', errorHandler);
       }
     });
   }

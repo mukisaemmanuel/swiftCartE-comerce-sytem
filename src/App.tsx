@@ -47,12 +47,22 @@ export const App: React.FC = () => {
 
   const activeRoute = pathToView(currentPath);
 
-  // User role state (defaults to route's role for direct screen inspection)
-  const [userRole, setUserRole] = useState<UserRole>(() => activeRoute.role || 'buyer');
+  // User role state (defaults to active route's role so direct screen inspection always works)
+  const [userRole, setUserRole] = useState<UserRole>(() => {
+    if (activeRoute.role) return activeRoute.role;
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('swiftcart_user_role') as UserRole;
+      if (stored) return stored;
+    }
+    return 'buyer';
+  });
 
   useEffect(() => {
     if (activeRoute.role && activeRoute.role !== userRole) {
       setUserRole(activeRoute.role);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('swiftcart_user_role', activeRoute.role);
+      }
     }
   }, [activeRoute.role, userRole]);
 
@@ -74,11 +84,11 @@ export const App: React.FC = () => {
       setCurrentPath(newPath);
       window.scrollTo(0, 0);
 
-      // In DEV: auto-align role when clicking into a role-specific screen
-      if (import.meta.env.DEV) {
-        const targetRoute = pathToView(newPath);
-        if (targetRoute.role && targetRoute.role !== userRole) {
-          setUserRole(targetRoute.role);
+      const targetRoute = pathToView(newPath);
+      if (targetRoute.role && targetRoute.role !== userRole) {
+        setUserRole(targetRoute.role);
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('swiftcart_user_role', targetRoute.role);
         }
       }
     }

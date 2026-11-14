@@ -12,7 +12,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
   const onNavigate = props.onNavigate;
   
   const { theme, toggleTheme } = useDashboardTheme();
-  const assetBase = '';
+  void theme;
+  void toggleTheme;
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
   return (
@@ -22,11 +25,17 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           {toastMessage}
         </div>
       )}
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+        />
+      )}
       <aside className="w-[72px] shrink-0 bg-[#080d1f] border-r border-[#1e2742] flex flex-col items-center justify-between py-4 fixed inset-y-0 left-0 z-50 shadow-xl">
     <div className="flex flex-col items-center gap-6 w-full">
       
       <a href="#" className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-container to-action-gradient-start flex items-center justify-center p-2 shadow-md hover:brightness-110 transition-all" title="SwiftCart Seller Hub" onClick={() => alertToast('Action triggered')}>
-        <img alt="SwiftCart" className="w-full h-full object-contain filter brightness-200" src={`${assetBase}/images/95ec767b02525811.webp`} />
+        <img alt="SwiftCart" className="w-full h-full object-contain filter brightness-200" src="/brand/logo-full.png" />
       </a>
 
       

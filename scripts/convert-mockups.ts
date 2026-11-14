@@ -12,7 +12,7 @@ export function styleStringToJsx(styleStr: string): string {
   if (!styleStr || !styleStr.trim()) return '{}';
 
   // Replace remote images in style if any
-  let processedStyle = styleStr.replace(
+  const processedStyle = styleStr.replace(
     /url\(['"]?(https?:\/\/[^\s'")]+)['"]?\)/g,
     (_, url) => {
       const cleanUrl = url.replace(/[;,\.\)]+$/, '');
@@ -33,7 +33,6 @@ export function styleStringToJsx(styleStr: string): string {
     const rawKey = decl.slice(0, colonIdx).trim();
     const rawVal = decl.slice(colonIdx + 1).trim();
 
-    // Convert CSS property to camelCase
     let key = rawKey;
     if (key.startsWith('-ms-')) {
       key = 'ms' + key.slice(4).replace(/-([a-z])/g, (_, c) => c.toUpperCase());
@@ -47,7 +46,6 @@ export function styleStringToJsx(styleStr: string): string {
   return JSON.stringify(styleObj);
 }
 
-// Map of SVG and HTML attributes that need camelCase in JSX
 const ATTR_MAP: Record<string, string> = {
   class: 'className',
   for: 'htmlFor',
@@ -79,172 +77,247 @@ const ATTR_MAP: Record<string, string> = {
   'fill-opacity': 'fillOpacity',
   'stop-color': 'stopColor',
   'stop-opacity': 'stopOpacity',
-  'clip-path': 'clipPath',
   viewbox: 'viewBox',
-  'xlink:href': 'xlinkHref',
-  'xmlns:xlink': 'xmlnsXlink',
+  preserveaspectratio: 'preserveAspectRatio',
 };
 
-// SVG element tag casing map for JSX
-const SVG_TAG_MAP: Record<string, string> = {
+const BOOLEAN_ATTRS = new Set([
+  'disabled',
+  'checked',
+  'required',
+  'multiple',
+  'autofocus',
+  'readonly',
+  'readOnly',
+  'hidden',
+  'selected',
+  'open',
+  'defer',
+  'async',
+  'loop',
+  'muted',
+  'autoplay',
+]);
+
+const TAG_MAP: Record<string, string> = {
   lineargradient: 'linearGradient',
   radialgradient: 'radialGradient',
   clippath: 'clipPath',
-  textpath: 'textPath',
   foreignobject: 'foreignObject',
-  fedropshadow: 'feDropShadow',
-  fegaussianblur: 'feGaussianBlur',
-  feoffset: 'feOffset',
-  fecolormatrix: 'feColorMatrix',
-  femerge: 'feMerge',
-  femergenode: 'feMergeNode',
+  textpath: 'textPath',
 };
 
-// Void tags in HTML
-const VOID_TAGS = new Set([
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'link',
-  'meta',
-  'param',
-  'source',
-  'track',
-  'wbr',
-]);
-
-// Numeric JSX attributes that require number type in React
 const NUMERIC_ATTRS = new Set([
-  'maxLength',
-  'minLength',
+  'tabIndex',
   'colSpan',
   'rowSpan',
-  'tabIndex',
+  'maxLength',
+  'minLength',
+  'size',
   'rows',
   'cols',
   'span',
+  'start',
+  'high',
+  'low',
+  'optimum',
 ]);
 
-// Boolean HTML attributes in JSX
-const BOOLEAN_ATTRS = new Set([
-  'checked',
-  'disabled',
-  'readonly',
-  'readOnly',
-  'required',
-  'multiple',
-  'selected',
-  'autofocus',
-  'autoFocus',
-  'autoplay',
-  'controls',
-  'loop',
-  'muted',
-  'default',
-  'open',
-  'hidden',
-  'novalidate',
-]);
-
-export interface ConversionContext {
-  hasIcon: boolean;
-  hasAssetBase: boolean;
-  hasSearchQuery: boolean;
-  hasDrawer: boolean;
-  hasModal: boolean;
-  hasToast: boolean;
-  hasNavigate: boolean;
-  hasAction: boolean;
+export function toPascalCase(str: string): string {
+  return str
+    .replace(/^[^a-zA-Z0-9]+/, '')
+    .split(/[-_]+/)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join('');
 }
 
-// Convert a Cheerio DOM node to JSX string
-export function domNodeToJsx(
-  $: cheerio.CheerioAPI,
-  node: any,
-  role: string,
-  screenName: string,
-  size: string,
-  ctx: ConversionContext
+export function convertMobileHtmlToReact(
+  htmlPath: string,
+  componentName: string,
+  role: string
 ): string {
-  if (node.type === 'text') {
-    let text = node.data || '';
-    if (!text.trim()) {
-      return text;
+  const htmlContent = fs.readFileSync(htmlPath, 'utf8');
+  const $ = cheerio.load(htmlContent, { xml: false });
+
+  // 1. Remove scripts, meta, external font stylesheets, title
+  $('script, meta, link[rel="stylesheet"], title').remove();
+
+  const isDashboard = role !== 'buyer';
+
+  // 2. Dashboard Specific AST Adjustments
+  let hasSidebar = false;
+  if (isDashboard) {
+    // Duplicate Dark/Light pill replacement
+    $('button, div, span').each((_, el) => {
+      const text = $(el).text().trim().toLowerCase();
+      if (text === 'dark' || text === 'light') {
+        const parent = $(el).parent();
+        const parentText = parent.text().toLowerCase();
+        if (parentText.includes('dark') && parentText.includes('light')) {
+          parent.replaceWith(
+            `<button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50" aria-label="Toggle Theme" title="Toggle Theme"><span class="material-symbols-outlined text-[20px]">theme_toggle_placeholder</span></button>`
+          );
+        }
+      }
+    });
+
+    // Overview not Dashboard
+    $('a, span, h1, h2, h3, h4, p, div').each((_, el) => {
+      if ($(el).children().length === 0) {
+        const text = $(el).text().trim();
+        if (text === 'Dashboard') {
+          $(el).text('Overview');
+        }
+      }
+    });
+
+    // Aside / Sidebar detection & transformation
+    $('aside').each((_, el) => {
+      hasSidebar = true;
+      const cls = ($(el).attr('class') || '')
+        .replace(/-translate-x-full/g, '')
+        .replace(/\btranslate-x-0\b/g, '')
+        .trim();
+      $(el).attr(
+        'class',
+        `${cls} fixed z-50 select-none dashboard-aside-drawer`
+      );
+      // Prepend close button for mobile if not present
+      if ($(el).find('.sidebar-close-btn').length === 0) {
+        $(el).prepend(
+          `<div class="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" class="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined text-[20px]">close</span></button></div>`
+        );
+      }
+    });
+
+    // Content area adjustments: pl-60 -> pl-0 lg:pl-60, left-60 -> left-0 lg:left-60
+    $('*').each((_, el) => {
+      const cls = $(el).attr('class') || '';
+      if (cls.includes('pl-60')) {
+        $(el).attr('class', cls.replace(/\bpl-60\b/g, 'pl-0 lg:pl-60'));
+      }
+      if (cls.includes('left-60')) {
+        $(el).attr('class', cls.replace(/\bleft-60\b/g, 'left-0 lg:left-60'));
+      }
+      if (cls.includes('ml-60')) {
+        $(el).attr('class', cls.replace(/\bml-60\b/g, 'ml-0 lg:ml-60'));
+      }
+    });
+
+    // Header hamburger button injection
+    if (hasSidebar) {
+      $('header').first().each((_, el) => {
+        const firstDiv = $(el).children().first();
+        if (firstDiv.length > 0) {
+          firstDiv.prepend(
+            `<button type="button" class="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]">menu</span></button>`
+          );
+        }
+      });
     }
-    // Escape JSX special chars in text
-    return text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/\{/g, '&#123;')
-      .replace(/\}/g, '&#125;');
+
+    // Ensure header has a sun/moon toggle if none exists
+    const hasExistingToggle =
+      $('.theme-toggle-btn').length > 0 ||
+      $('span:contains("dark_mode"), span:contains("light_mode")').length > 0;
+    if (!hasExistingToggle) {
+      $('header').first().each((_, el) => {
+        const lastDiv = $(el).children().last();
+        if (lastDiv.length > 0) {
+          lastDiv.prepend(
+            `<button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme"><span class="material-symbols-outlined text-[20px]">theme_toggle_placeholder</span></button>`
+          );
+        }
+      });
+    }
   }
 
-  if (node.type === 'comment') {
-    return ''; // Drop HTML comments per requirements
-  }
+  // 3. Logo Replacement (Never show broken image)
+  $('img').each((_, el) => {
+    const alt = ($(el).attr('alt') || '').toLowerCase();
+    const src = ($(el).attr('src') || '').toLowerCase();
+    if (
+      alt.includes('logo') ||
+      src.includes('logo') ||
+      alt.includes('swiftcart') ||
+      src.includes('swiftcart')
+    ) {
+      if (alt.includes('icon') || src.includes('icon')) {
+        $(el).attr('src', '/brand/swiftcart-logo-icon.png');
+      } else if (isDashboard) {
+        $(el).attr('src', '/brand/swiftcart-logo-white.png');
+      } else {
+        $(el).attr('src', '/brand/logo-full.png');
+      }
+      $(el).attr('alt', 'SwiftCart');
+    }
+  });
 
-  if (node.type === 'tag') {
-    let tagName = node.tagName.toLowerCase();
-    if (SVG_TAG_MAP[tagName]) {
-      tagName = SVG_TAG_MAP[tagName];
+  const ctx = {
+    hasIcon: true,
+    hasNavigate: false,
+    hasAction: false,
+    hasSidebar,
+  };
+
+  function processNode(node: any): string {
+    if (node.type === 'text') {
+      const text = node.data;
+      if (!text || text.trim() === '') return text;
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/{/g, '&#123;')
+        .replace(/}/g, '&#125;');
     }
 
-    // Drop scripts, meta, link (handled globally)
-    if (tagName === 'script' || tagName === 'meta' || tagName === 'link') {
-      return '';
-    }
+    if (node.type === 'comment') return '';
+    if (node.type !== 'tag') return '';
 
-    // Embed style tags cleanly
+    const tagName = node.name.toLowerCase();
+
+    // Style tag
     if (tagName === 'style') {
       const cssText = $(node).text();
-      // Remove @import for google fonts
       const cleanedCss = cssText.replace(/@import\s+url\([^)]+\);?/g, '');
       return `<style dangerouslySetInnerHTML={{ __html: \`${cleanedCss
         .replace(/`/g, '\\`')
         .replace(/\\/g, '\\\\')}\` }} />`;
     }
 
-    // Material Symbols icon <span> replacement
+    // Material Symbols replacement
     const className = $(node).attr('class') || '';
     if (
       tagName === 'span' &&
       (className.includes('material-symbols-outlined') ||
-        className.includes('material-symbols-rounded'))
+        className.includes('material-symbols-rounded') ||
+        className.includes('material-icons'))
     ) {
-      ctx.hasIcon = true;
-      const iconName = $(node).text().trim();
-      const styleAttr = $(node).attr('style') || '';
+      let iconName = $(node).text().trim();
+      if (iconName === 'theme_toggle_placeholder') {
+        return `{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}`;
+      }
       const isFilled =
         /FILL['"]?\s*:\s*1|font-variation-settings:\s*['"][^'"]*FILL[^'"]*1/i.test(
-          styleAttr
+          $(node).attr('style') || ''
         );
-
       let cleanClass = className
         .replace(/material-symbols-(outlined|rounded)/g, '')
+        .replace(/material-icons/g, '')
         .trim();
-
       return `<Icon name="${iconName}" ${isFilled ? 'filled ' : ''}${
         cleanClass ? `className="${cleanClass}" ` : ''
       }/>`;
     }
 
-    // Build attributes using Map to eliminate duplicates
     const attrMap = new Map<string, string>();
     const attribs = node.attribs || {};
-
-    let isSearchInput = false;
 
     for (const [rawKey, rawVal] of Object.entries(attribs)) {
       let key = rawKey.toLowerCase();
       let val = rawVal as string;
 
-      // Drop inline html events like onsubmit, onclick
       if (key.startsWith('on')) {
         if (key === 'onsubmit') {
           attrMap.set('onSubmit', `onSubmit={(e) => e.preventDefault()}`);
@@ -252,816 +325,247 @@ export function domNodeToJsx(
         continue;
       }
 
-      if (ATTR_MAP[rawKey]) {
-        key = ATTR_MAP[rawKey];
-      } else if (ATTR_MAP[key]) {
-        key = ATTR_MAP[key];
+      if (ATTR_MAP[rawKey]) key = ATTR_MAP[rawKey];
+      else if (ATTR_MAP[key]) key = ATTR_MAP[key];
+
+      if (key === 'readonly' || key === 'readOnly') {
+        attrMap.set('readOnly', 'readOnly={true}');
+        continue;
       }
 
-      // Check boolean attributes in JSX
+      if (key === 'contenteditable' || key === 'contentEditable') {
+        attrMap.set('contentEditable', `contentEditable={${val !== 'false'}}`);
+        continue;
+      }
+
       if (BOOLEAN_ATTRS.has(key)) {
         attrMap.set(key, `${key}={true}`);
         continue;
       }
 
-      // Check numeric attributes in JSX
       if (NUMERIC_ATTRS.has(key) && !isNaN(Number(val)) && val.trim() !== '') {
         attrMap.set(key, `${key}={${Number(val)}}`);
         continue;
       }
 
-      // Check image src
       if (key === 'src') {
         if (val.startsWith('http://') || val.startsWith('https://')) {
-          ctx.hasAssetBase = true;
           const hash = getUrlHash(val.replace(/[;,\.\)]+$/, ''));
-          attrMap.set(key, `src={\`\${assetBase}/images/${hash}.webp\`}`);
+          attrMap.set(key, `src="/images/${hash}.webp"`);
           continue;
         }
       }
 
-      // Check inline style
       if (key === 'style') {
         const styleJsx = styleStringToJsx(val);
         attrMap.set(key, `style={${styleJsx}}`);
         continue;
       }
 
-      // Handle search inputs
-      if (
-        tagName === 'input' &&
-        (attribs.type === 'search' ||
-          (attribs.placeholder && /search/i.test(attribs.placeholder)))
-      ) {
-        isSearchInput = true;
+      // Sidebar drawer responsive classes
+      if (key === 'className' && val.includes('dashboard-aside-drawer')) {
+        const baseClass = val
+          .replace(/dashboard-aside-drawer/g, '')
+          .replace(/-translate-x-full/g, '')
+          .replace(/\btranslate-x-0\b/g, '')
+          .trim();
+        attrMap.set(
+          key,
+          `className={\`${baseClass} \${drawerOpen ? 'translate-x-0 !translate-x-0' : '-translate-x-full lg:translate-x-0'} transition-transform duration-200 \${theme === 'dark' ? 'bg-[#0d1225] border-[#2f3448]/60' : 'bg-white border-slate-200'}\`}`
+        );
+        continue;
       }
 
-      // Escape quotes in string attribute values
       const escapedVal = val.replace(/"/g, '&quot;');
       attrMap.set(key, `${key}="${escapedVal}"`);
     }
 
-    // Wire interactivity for buttons and links
-    if (tagName === 'button' || tagName === 'a') {
+    // Interactivity: buttons & links
+    if (className.includes('sidebar-hamburger-btn') || attribs['id'] === 'drawer-trigger') {
+      attrMap.set('onClick', 'onClick={() => setDrawerOpen(true)}');
+    } else if (className.includes('sidebar-close-btn')) {
+      attrMap.set('onClick', 'onClick={() => setDrawerOpen(false)}');
+    } else if (className.includes('theme-toggle-btn')) {
+      attrMap.set('onClick', 'onClick={() => toggleTheme()}');
+    } else if (tagName === 'button' || tagName === 'a') {
       const text = $(node).text().toLowerCase();
       const aria = (attribs['aria-label'] || '').toLowerCase();
       const btnTitle = (attribs['title'] || '').toLowerCase();
       const combo = `${text} ${aria} ${btnTitle}`;
 
-      if (!attrMap.has('onClick')) {
-        if (combo.includes('cart')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}`
-          );
-        } else if (combo.includes('checkout')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/checkout'); }}`
-          );
-        } else if (combo.includes('wishlist') || combo.includes('favorite')) {
-          ctx.hasNavigate = true;
-          ctx.hasAction = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/wishlist'); onAction?.('wishlist'); }}`
-          );
-        } else if (
-          combo.includes('sign in') ||
-          combo.includes('login') ||
-          combo.includes('log in')
-        ) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/sign-in'); }}`
-          );
-        } else if (
-          combo.includes('register') ||
-          combo.includes('create account') ||
-          combo.includes('sign up')
-        ) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/register'); }}`
-          );
-        } else if (combo.includes('orders') || combo.includes('my orders')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/orders'); }}`
-          );
-        } else if (combo.includes('account') || combo.includes('profile')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}`
-          );
-        } else if (
-          combo.includes('categories') ||
-          combo.includes('category')
-        ) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/categories'); }}`
-          );
-        } else if (combo.includes('add to cart')) {
-          ctx.hasAction = true;
-          ctx.hasToast = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onAction?.('add-to-cart'); alertToast('Added to cart'); }}`
-          );
-        } else if (combo.includes('track') || combo.includes('tracking')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}`
-          );
-        } else if (combo.includes('help') || combo.includes('support')) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}`
-          );
-        } else if (
-          combo.includes('voucher') ||
-          combo.includes('coupon') ||
-          combo.includes('discount')
-        ) {
-          ctx.hasNavigate = true;
-          attrMap.set(
-            'onClick',
-            `onClick={(e) => { e.preventDefault(); onNavigate?.('/vouchers'); }}`
-          );
-        } else if (
-          combo.includes('filter') ||
-          combo.includes('drawer') ||
-          combo.includes('menu')
-        ) {
-          ctx.hasDrawer = true;
-          attrMap.set('onClick', `onClick={() => setDrawerOpen((prev) => !prev)}`);
-        } else if (
-          combo.includes('close') ||
-          combo.includes('cancel') ||
-          combo.includes('dismiss')
-        ) {
-          ctx.hasDrawer = true;
-          ctx.hasModal = true;
-          attrMap.set(
-            'onClick',
-            `onClick={() => { setDrawerOpen(false); setModalOpen(false); }}`
-          );
-        } else {
-          ctx.hasToast = true;
-          attrMap.set('onClick', `onClick={() => alertToast('Action triggered')}`);
-        }
+      if (
+        combo.includes('dark_mode') ||
+        combo.includes('light_mode') ||
+        combo.includes('sun') ||
+        combo.includes('moon')
+      ) {
+        attrMap.set('onClick', 'onClick={() => toggleTheme()}');
+      } else if (
+        hasSidebar &&
+        (aria.includes('close') ||
+          text.includes('close') ||
+          $(node).find('span:contains("close")').length > 0 ||
+          $(node).closest('aside').length > 0)
+      ) {
+        attrMap.set('onClick', 'onClick={() => setDrawerOpen(false)}');
+      } else if (
+        hasSidebar &&
+        (aria.includes('menu') ||
+          aria.includes('drawer') ||
+          $(node).find('span:contains("menu")').length > 0 ||
+          $(node).find('i:contains("menu")').length > 0)
+      ) {
+        attrMap.set('onClick', 'onClick={() => setDrawerOpen(true)}');
       }
     }
 
-    if (isSearchInput) {
-      ctx.hasSearchQuery = true;
-      ctx.hasNavigate = true;
-      attrMap.set('value', `value={searchQuery}`);
-      attrMap.set('onChange', `onChange={(e) => setSearchQuery(e.target.value)}`);
-      attrMap.set(
-        'onKeyDown',
-        `onKeyDown={(e) => { if (e.key === 'Enter') onNavigate?.('/search?q=' + encodeURIComponent(searchQuery)); }}`
-      );
+    const attrsString = Array.from(attrMap.values()).join(' ');
+    const childrenStr = (node.children || []).map(processNode).join('');
+
+    const voidTags = new Set([
+      'area',
+      'base',
+      'br',
+      'col',
+      'embed',
+      'hr',
+      'img',
+      'input',
+      'link',
+      'meta',
+      'param',
+      'source',
+      'track',
+      'wbr',
+    ]);
+
+    const finalTagName = TAG_MAP[tagName] || tagName;
+
+    if (voidTags.has(finalTagName)) {
+      return `<${finalTagName}${attrsString ? ' ' + attrsString : ''} />`;
     }
 
-    const attrs = Array.from(attrMap.values());
-    const attrString = attrs.length > 0 ? ' ' + attrs.join(' ') : '';
-
-    // Handle void elements
-    if (VOID_TAGS.has(tagName)) {
-      return `<${tagName}${attrString} />`;
-    }
-
-    // Child nodes
-    const children = (node.children || [])
-      .map((child: any) => domNodeToJsx($, child, role, screenName, size, ctx))
-      .join('');
-
-    return `<${tagName}${attrString}>${children}</${tagName}>`;
+    return `<${finalTagName}${attrsString ? ' ' + attrsString : ''}>${childrenStr}</${finalTagName}>`;
   }
 
-  return '';
-}
-
-export function convertHtmlFileToReactComponent(
-  htmlPath: string,
-  componentName: string,
-  role: string,
-  screenName: string,
-  size: string,
-  isNestedScreen = false
-): string {
-  const content = fs.readFileSync(htmlPath, 'utf8');
-  const $ = cheerio.load(content);
-
-  // Extract body or main container
   const body = $('body');
-  const bodyClass = body.attr('class') || '';
-  const bodyStyle = body.attr('style') || '';
+  const targetNodes =
+    body.length > 0 ? body.children().toArray() : $.root().children().toArray();
+  const renderedChildren = targetNodes.map(processNode).join('\n');
 
-  // Extract custom head styles
-  let headStyles = '';
-  $('head style').each((_, el) => {
-    const text = $(el).text();
-    if (
-      !text.includes('Plus Jakarta Sans') &&
-      !text.includes('Material Symbols')
-    ) {
-      headStyles += text + '\n';
-    }
-  });
+  const importList: string[] = [
+    hasSidebar
+      ? "import React, { useState } from 'react';"
+      : "import React from 'react';",
+  ];
+  importList.push(`import Icon from '../../../components/shared/Icon';`);
 
-  const ctx: ConversionContext = {
-    hasIcon: false,
-    hasAssetBase: false,
-    hasSearchQuery: false,
-    hasDrawer: false,
-    hasModal: false,
-    hasToast: false,
-    hasNavigate: false,
-    hasAction: false,
-  };
-
-  // Convert children of body
-  let bodyJsx = '';
-  body.children().each((_, child) => {
-    bodyJsx += domNodeToJsx($, child, role, screenName, size, ctx);
-  });
-
-  const bodyStyleJsx = bodyStyle
-    ? ` style={${styleStringToJsx(bodyStyle)}}`
-    : '';
-
-  const iconImportPath = isNestedScreen
-    ? '../../../../components/shared/Icon'
-    : '../../../components/shared/Icon';
-
-  const needsSearchQuery = bodyJsx.includes('searchQuery');
-  const needsDrawer = bodyJsx.includes('drawerOpen') || bodyJsx.includes('setDrawerOpen');
-  const needsModal = bodyJsx.includes('modalOpen') || bodyJsx.includes('setModalOpen');
-  const needsToast = bodyJsx.includes('alertToast');
-  const needsAssetBase = bodyJsx.includes('assetBase');
-  const needsNavigate = bodyJsx.includes('onNavigate');
-  const needsAction = bodyJsx.includes('onAction');
-  const needsIcon = ctx.hasIcon || bodyJsx.includes('<Icon ');
-
-  const useStateHooks: string[] = [];
-  if (needsSearchQuery) {
-    useStateHooks.push(`  const [searchQuery, setSearchQuery] = useState('');`);
-  }
-  if (needsDrawer) {
-    useStateHooks.push(`  const [, setDrawerOpen] = useState(false);`);
-  }
-  if (needsModal) {
-    useStateHooks.push(`  const [, setModalOpen] = useState(false);`);
-  }
-  if (needsToast) {
-    useStateHooks.push(
-      `  const [toastMessage, setToastMessage] = useState<string | null>(null);\n  const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };`
-    );
+  if (isDashboard) {
+    importList.push(`import { useDashboardTheme } from '../../../context/ThemeContext';`);
   }
 
-  const importUseState = useStateHooks.length > 0 ? ', { useState }' : '';
-  const importIcon = needsIcon ? `import Icon from '${iconImportPath}';\n` : '';
-  const assetBaseDecl = needsAssetBase
-    ? `  const assetBase = import.meta.env.VITE_ASSET_BASE ?? '';\n`
-    : '';
-  const navDecl = needsNavigate ? `  const onNavigate = props.onNavigate;\n` : '';
-  const actDecl = needsAction ? `  const onAction = props.onAction;\n` : '';
-  const propsArg = needsNavigate || needsAction ? 'props' : '_props';
+  const componentCode = `// Auto-generated from ${htmlPath.replace(/\\/g, '/')}
+${importList.join('\n')}
 
-  return `// Auto-generated from ${htmlPath.replace(/\\/g, '/')}
-import React${importUseState} from 'react';
-${importIcon}
 export interface ${componentName}Props {
   onNavigate?: (path: string) => void;
   onAction?: (action: string, payload?: unknown) => void;
 }
 
-export const ${componentName}: React.FC<${componentName}Props> = (${propsArg}) => {
-${navDecl}${actDecl}${assetBaseDecl}${useStateHooks.join('\n')}
+export const ${componentName}: React.FC<${componentName}Props> = (props) => {
+  const onNavigate = props.onNavigate;
+  const onAction = props.onAction;
+  void onNavigate;
+  void onAction;
+  void Icon;
+  ${isDashboard ? 'const { theme, toggleTheme } = useDashboardTheme();\n  void theme;\n  void toggleTheme;' : ''}
+  ${hasSidebar ? 'const [drawerOpen, setDrawerOpen] = useState(false);' : ''}
+
   return (
-    <div className="${bodyClass} relative w-full overflow-x-hidden"${bodyStyleJsx}>
-      ${
-        headStyles
-          ? `<style dangerouslySetInnerHTML={{ __html: \`${headStyles
-              .replace(/`/g, '\\`')
-              .replace(/\\/g, '\\\\')}\` }} />`
-          : ''
-      }
-      ${
-        needsToast
-          ? `{toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-[100] bg-surface-dark text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium animate-fade-in">
-          {toastMessage}
-        </div>
-      )}`
-          : ''
-      }
-      ${bodyJsx}
+    <div className="relative w-full overflow-x-hidden min-h-screen">
+      ${hasSidebar ? `{drawerOpen && <div className="fixed inset-0 bg-black/60 z-40 lg:hidden" onClick={() => setDrawerOpen(false)} />}` : ''}
+      ${renderedChildren}
     </div>
   );
 };
 
 export default ${componentName};
 `;
+
+  return componentCode;
 }
 
-// Canonical screen definitions for buyer
-export const BUYER_SCREEN_MAPPINGS = [
-  {
-    name: 'Home',
-    mobile: 'home_swiftcart_marketplace_2',
-    desktop: 'home_marketplace_swiftcart_desktop_1',
-  },
-  {
-    name: 'HomeAlt',
-    mobile: 'home_swiftcart_marketplace_3',
-    desktop: 'home_marketplace_swiftcart_desktop_2',
-  },
-  {
-    name: 'Cart',
-    mobile: 'cart_multi_vendor_grouped',
-    tablet: 'cart_multi_vendor_tablet',
-    desktop: 'cart_multi_vendor_desktop',
-  },
-  {
-    name: 'Wishlist',
-    tablet: 'wishlist_swiftcart_buyer_tablet',
-  },
-  {
-    name: 'Search',
-    mobile: 'search_experience_swiftcart_uganda',
-    tablet: 'search_results_filter_drawer_swiftcart_tablet',
-    desktop: 'search_results_swiftcart_desktop_1',
-  },
-  {
-    name: 'SearchAlt',
-    tablet: 'search_categories_swiftcart_tablet',
-    desktop: 'search_results_swiftcart_desktop_2',
-  },
-  {
-    name: 'ProductDetail',
-    mobile: 'product_detail_soundcore_space_one_2',
-    tablet: 'product_detail_soundcore_space_one_tablet',
-    desktop: 'product_detail_soundcore_space_one_desktop_1',
-  },
-  {
-    name: 'ProductDetailAlt',
-    desktop: 'product_detail_soundcore_space_one_desktop_2',
-  },
-  {
-    name: 'Categories',
-    mobile: 'categories_swiftcart_uganda',
-    tablet: 'search_categories_swiftcart_tablet',
-    desktop: 'categories_mega_directory_swiftcart_desktop_1',
-  },
-  {
-    name: 'CategoriesAlt',
-    desktop: 'categories_mega_directory_swiftcart_desktop_2',
-  },
-  {
-    name: 'Store',
-    desktop: 'store_page_soundcore_uganda_official_desktop_1',
-  },
-  {
-    name: 'FollowedStores',
-    mobile: 'followed_stores_swiftcart_uganda_1',
-    tablet: 'followed_stores_swiftcart_buyer_tablet',
-  },
-  {
-    name: 'FollowedStoresAlt',
-    mobile: 'followed_stores_swiftcart_uganda_2',
-  },
-  {
-    name: 'Checkout',
-    mobile: 'checkout_step_by_step_flow',
-    tablet: 'checkout_step_flow_tablet',
-    desktop: 'checkout_step_flow_desktop',
-  },
-  {
-    name: 'CheckoutDeliveryCode',
-    mobile: 'checkout_delivery_code_swiftcart',
-  },
-  {
-    name: 'PaymentWaiting',
-    mobile: 'checkout_one_flow_payment_waiting',
-    tablet: 'mtn_momo_ussd_pin_prompt_tablet',
-    desktop: 'mtn_momo_ussd_pin_prompt_desktop',
-  },
-  {
-    name: 'DeliveryAddresses',
-    mobile: 'delivery_addresses_swiftcart_uganda',
-    tablet: 'delivery_addresses_vouchers_tablet',
-  },
-  {
-    name: 'PaymentMethods',
-    mobile: 'payment_methods_swiftcart_uganda_1',
-    tablet: 'mtn_momo_ussd_pin_prompt_tablet',
-    desktop: 'mtn_momo_ussd_pin_prompt_desktop',
-  },
-  {
-    name: 'PaymentMethodsAlt',
-    mobile: 'payment_methods_swiftcart_uganda_2',
-  },
-  {
-    name: 'OrderConfirmation',
-    mobile: 'order_confirmation_delivery_code',
-    tablet: 'order_confirmation_delivery_code_tablet',
-    desktop: 'order_confirmation_delivery_code_desktop',
-  },
-  {
-    name: 'MyOrders',
-    mobile: 'my_orders_swiftcart_uganda',
-    tablet: 'my_orders_order_detail_tablet',
-    desktop: 'my_orders_order_detail_desktop',
-  },
-  {
-    name: 'OrderDetail',
-    mobile: 'my_orders_order_detail_swiftcart',
-    tablet: 'my_orders_order_detail_tablet',
-    desktop: 'my_orders_order_detail_desktop',
-  },
-  {
-    name: 'OrderTracking',
-    mobile: 'order_tracking_delivery_code_swiftcart_uganda',
-    tablet: 'order_tracking_milestone_timeline_tablet',
-    desktop: 'live_boda_rider_tracking_desktop',
-  },
-  {
-    name: 'LiveRiderTracking',
-    mobile: 'live_rider_tracking_boda_map_swiftcart_uganda',
-    tablet: 'live_boda_rider_tracking_tablet',
-    desktop: 'live_boda_rider_tracking_desktop',
-  },
-  {
-    name: 'OrderDelivered',
-    mobile: 'order_delivered_completed',
-    desktop: 'order_delivered_write_review_desktop',
-  },
-  {
-    name: 'PickupStations',
-    mobile: 'pickup_station_chooser_swiftcart',
-    tablet: 'pickup_station_chooser_tablet',
-    desktop: 'pickup_station_chooser_desktop',
-  },
-  {
-    name: 'ReturnsDisputes',
-    mobile: 'returns_disputes_swiftcart_uganda',
-    tablet: 'escrow_dispute_return_request_tablet',
-  },
-  {
-    name: 'EscrowDisputeReturn',
-    mobile: 'escrow_dispute_return_request_swiftcart_uganda',
-    tablet: 'escrow_dispute_return_request_tablet',
-  },
-  {
-    name: 'DisputeEvidence',
-    mobile: 'dispute_evidence_form_swiftcart_uganda',
-  },
-  {
-    name: 'DisputePhotos',
-    mobile: 'submit_dispute_photos_swiftcart',
-  },
-  {
-    name: 'ScanQr',
-    mobile: 'scan_qr_handover_swiftcart_uganda',
-  },
-  {
-    name: 'SignIn',
-    mobile: 'sign_in_swiftcart_buyer',
-    tablet: 'sign_in_register_swiftcart_tablet',
-    desktop: 'sign_in_swiftcart_desktop_1',
-  },
-  {
-    name: 'SignInAlt',
-    desktop: 'sign_in_swiftcart_desktop_2',
-  },
-  {
-    name: 'Register',
-    mobile: 'sign_in_register_swiftcart_uganda',
-    tablet: 'register_swiftcart_buyer_tablet',
-    desktop: 'register_swiftcart_desktop_2',
-  },
-  {
-    name: 'PhoneVerification',
-    mobile: 'phone_verification_buyer_auth_swiftcart',
-    tablet: 'phone_verification_swiftcart_buyer_tablet',
-    desktop: 'phone_verification_swiftcart_desktop_1',
-  },
-  {
-    name: 'PhoneVerificationAlt',
-    desktop: 'phone_verification_swiftcart_desktop_2',
-  },
-  {
-    name: 'ForgotPassword',
-    mobile: 'forgot_password_swiftcart_buyer',
-  },
-  {
-    name: 'Account',
-    mobile: 'account_swiftcart_uganda',
-    tablet: 'buyer_account_profile_tablet',
-  },
-  {
-    name: 'Vouchers',
-    mobile: 'vouchers_discounts_swiftcart_uganda',
-    tablet: 'delivery_addresses_vouchers_tablet',
-  },
-  {
-    name: 'Notifications',
-    mobile: 'notifications_swiftcart_buyer',
-    tablet: 'notifications_swiftcart_buyer_tablet',
-    desktop: 'notifications_swiftcart_desktop',
-  },
-  {
-    name: 'NotificationsAlt',
-    mobile: 'messages_notifications_swiftcart_uganda',
-  },
-  {
-    name: 'HelpCentre',
-    mobile: 'help_centre_support_swiftcart_uganda',
-    tablet: 'help_centre_support_tablet',
-    desktop: 'help_centre_faq_swiftcart_desktop',
-  },
-  {
-    name: 'TermsPrivacy',
-    mobile: 'terms_of_service_privacy_swiftcart',
-    tablet: 'privacy_policy_terms_swiftcart_buyer_tablet',
-    desktop: 'terms_of_service_privacy_swiftcart_desktop',
-  },
-  {
-    name: 'PrivacyPolicy',
-    mobile: 'privacy_policy_swiftcart_buyer',
-    tablet: 'privacy_policy_terms_swiftcart_buyer_tablet',
-    desktop: 'terms_of_service_privacy_swiftcart_desktop',
-  },
-  {
-    name: 'BecomeSeller',
-    tablet: 'become_a_seller_4_steps_swiftcart_tablet',
-  },
-  {
-    name: 'SellerApplicationStatus',
-    mobile: 'seller_application_status',
-    tablet: 'seller_application_status_swiftcart_tablet',
-  },
-  {
-    name: 'EmptyErrorSuite',
-    mobile: 'empty_error_states_suite_swiftcart',
-  },
-  {
-    name: 'SplashFirstOpen',
-    mobile: 'splash_first_open_swiftcart_uganda',
-  },
-  {
-    name: 'SplashWelcome',
-    mobile: 'splash_welcome_swiftcart_uganda',
-    tablet: 'splash_welcome_swiftcart_tablet',
-  },
-  {
-    name: 'AddMobileMoney',
-    mobile: 'add_mobile_money_bottom_sheet_swiftcart_uganda',
-  },
-  {
-    name: 'MtnMomoUssd',
-    mobile: 'mtn_momo_ussd_165_pin_prompt',
-    tablet: 'mtn_momo_ussd_pin_prompt_tablet',
-    desktop: 'mtn_momo_ussd_pin_prompt_desktop',
-  },
-];
+export async function runConversionPipeline() {
+  console.log('--- Starting Complete Mobile Screen Conversion for All Roles ---');
 
-export function runConversionPipeline() {
-  console.log('Starting exact mockup conversion pipeline for Buyer role...');
+  const roles = ['buyer', 'seller', 'admin', 'super-admin', 'rider', 'hub'];
+  let totalConverted = 0;
 
-  const baseOutDir = path.resolve('src/mockups/buyer');
-  const screensOutDir = path.join(baseOutDir, 'screens');
+  for (const role of roles) {
+    const roleMobileDir = path.resolve('design/mobile', role);
+    if (!fs.existsSync(roleMobileDir)) continue;
 
-  if (!fs.existsSync(screensOutDir)) {
-    fs.mkdirSync(screensOutDir, { recursive: true });
-  }
+    const baseOutDir = path.resolve('src/mockups', role);
+    if (!fs.existsSync(baseOutDir)) fs.mkdirSync(baseOutDir, { recursive: true });
 
-  // 1. Convert EVERY individual screen folder in design/<size>/buyer/<screen>
-  const sizes = ['mobile', 'tablet', 'desktop'] as const;
-  const convertedScreenFolders: { size: string; folder: string; path: string }[] = [];
+    const folders = fs
+      .readdirSync(roleMobileDir)
+      .filter((f) => fs.statSync(path.join(roleMobileDir, f)).isDirectory());
 
-  for (const size of sizes) {
-    const dir = path.resolve(`design/${size}/buyer`);
-    if (!fs.existsSync(dir)) continue;
+    console.log(`Role [${role}]: converting ${folders.length} screen folders...`);
 
-    const folders = fs.readdirSync(dir);
+    const exportedComponents: { name: string; folder: string }[] = [];
+
     for (const folder of folders) {
-      const codeHtmlPath = path.join(dir, folder, 'code.html');
-      if (fs.existsSync(codeHtmlPath)) {
-        const destDir = path.join(screensOutDir, folder);
-        if (!fs.existsSync(destDir)) {
-          fs.mkdirSync(destDir, { recursive: true });
-        }
-        const componentCode = convertHtmlFileToReactComponent(
-          codeHtmlPath,
-          'Screen',
-          'buyer',
-          folder,
-          size,
-          true
-        );
-        fs.writeFileSync(path.join(destDir, 'index.tsx'), componentCode, 'utf8');
-        convertedScreenFolders.push({ size, folder, path: codeHtmlPath });
+      const codeHtmlPath = path.join(roleMobileDir, folder, 'code.html');
+      if (!fs.existsSync(codeHtmlPath)) {
+        console.warn(`Missing code.html in ${codeHtmlPath}`);
+        continue;
       }
-    }
-  }
 
-  console.log(
-    `Converted ${convertedScreenFolders.length} individual screen folders (mobile/tablet/desktop).`
-  );
-
-  // 2. Generate canonical responsive screen components
-  const missingSizesLog: {
-    screen: string;
-    missing: string[];
-    available: string[];
-  }[] = [];
-
-  for (const mapping of BUYER_SCREEN_MAPPINGS) {
-    const screenDir = path.join(baseOutDir, mapping.name);
-    if (!fs.existsSync(screenDir)) {
-      fs.mkdirSync(screenDir, { recursive: true });
-    }
-
-    const available: string[] = [];
-    const missing: string[] = [];
-
-    // Mobile
-    if (mapping.mobile) {
-      const codePath = path.resolve(
-        `design/mobile/buyer/${mapping.mobile}/code.html`
-      );
-      if (fs.existsSync(codePath)) {
-        const code = convertHtmlFileToReactComponent(
-          codePath,
-          'Mobile',
-          'buyer',
-          mapping.name,
-          'mobile'
-        );
-        fs.writeFileSync(path.join(screenDir, 'Mobile.tsx'), code, 'utf8');
-        available.push('mobile');
-      } else {
-        missing.push('mobile');
+      const compName = toPascalCase(folder);
+      const screenOutDir = path.join(baseOutDir, compName);
+      if (!fs.existsSync(screenOutDir)) {
+        fs.mkdirSync(screenOutDir, { recursive: true });
       }
-    } else {
-      missing.push('mobile');
-    }
 
-    // Tablet
-    if (mapping.tablet) {
-      const codePath = path.resolve(
-        `design/tablet/buyer/${mapping.tablet}/code.html`
-      );
-      if (fs.existsSync(codePath)) {
-        const code = convertHtmlFileToReactComponent(
-          codePath,
-          'Tablet',
-          'buyer',
-          mapping.name,
-          'tablet'
-        );
-        fs.writeFileSync(path.join(screenDir, 'Tablet.tsx'), code, 'utf8');
-        available.push('tablet');
-      } else {
-        missing.push('tablet');
-      }
-    } else {
-      missing.push('tablet');
-    }
+      // Generate Mobile.tsx
+      const reactCode = convertMobileHtmlToReact(codeHtmlPath, compName, role);
+      fs.writeFileSync(path.join(screenOutDir, 'Mobile.tsx'), reactCode, 'utf8');
 
-    // Desktop
-    if (mapping.desktop) {
-      const codePath = path.resolve(
-        `design/desktop/buyer/${mapping.desktop}/code.html`
-      );
-      if (fs.existsSync(codePath)) {
-        const code = convertHtmlFileToReactComponent(
-          codePath,
-          'Desktop',
-          'buyer',
-          mapping.name,
-          'desktop'
-        );
-        fs.writeFileSync(path.join(screenDir, 'Desktop.tsx'), code, 'utf8');
-        available.push('desktop');
-      } else {
-        missing.push('desktop');
-      }
-    } else {
-      missing.push('desktop');
-    }
+      // Generate index.tsx
+      const indexCode = `import React from 'react';
+import Mobile from './Mobile';
 
-    if (missing.length > 0) {
-      missingSizesLog.push({
-        screen: mapping.name,
-        missing,
-        available,
-      });
-    }
-
-    // Generate responsive index.tsx with fallback to nearest available size
-    const imports: string[] = [];
-    if (available.includes('mobile')) {
-      imports.push(`import Mobile from './Mobile';`);
-    }
-    if (available.includes('tablet')) {
-      imports.push(`import Tablet from './Tablet';`);
-    }
-    if (available.includes('desktop')) {
-      imports.push(`import Desktop from './Desktop';`);
-    }
-
-    const getRenderFor = (target: 'mobile' | 'tablet' | 'desktop'): string => {
-      if (target === 'mobile') {
-        if (available.includes('mobile')) return '<Mobile {...props} />';
-        if (available.includes('tablet')) return '<Tablet {...props} />';
-        if (available.includes('desktop')) return '<Desktop {...props} />';
-      }
-      if (target === 'tablet') {
-        if (available.includes('tablet')) return '<Tablet {...props} />';
-        if (available.includes('desktop')) return '<Desktop {...props} />';
-        if (available.includes('mobile')) return '<Mobile {...props} />';
-      }
-      if (target === 'desktop') {
-        if (available.includes('desktop')) return '<Desktop {...props} />';
-        if (available.includes('tablet')) return '<Tablet {...props} />';
-        if (available.includes('mobile')) return '<Mobile {...props} />';
-      }
-      return 'null';
-    };
-
-    const indexContent = `// Auto-generated responsive container for ${mapping.name}
-import React from 'react';
-import useBreakpoint from '../../../hooks/useBreakpoint';
-${imports.join('\n')}
-
-export interface ${mapping.name}Props {
+export interface ${compName}Props {
   onNavigate?: (path: string) => void;
   onAction?: (action: string, payload?: unknown) => void;
 }
 
-export const ${mapping.name}: React.FC<${mapping.name}Props> = (props) => {
-  const breakpoint = useBreakpoint();
-
-  if (breakpoint === 'mobile') {
-    return ${getRenderFor('mobile')};
-  }
-
-  if (breakpoint === 'tablet') {
-    return ${getRenderFor('tablet')};
-  }
-
-  return ${getRenderFor('desktop')};
+export const ${compName}: React.FC<${compName}Props> = (props) => {
+  return <Mobile {...props} />;
 };
 
-export default ${mapping.name};
+export default ${compName};
 `;
+      fs.writeFileSync(path.join(screenOutDir, 'index.tsx'), indexCode, 'utf8');
 
-    fs.writeFileSync(path.join(screenDir, 'index.tsx'), indexContent, 'utf8');
+      exportedComponents.push({ name: compName, folder });
+      totalConverted++;
+    }
+
+    // Generate src/mockups/<role>/index.ts (only for non-buyer)
+    if (role !== 'buyer') {
+      const indexExports = exportedComponents
+        .map((c) => `export { default as ${c.name} } from './${c.name}';`)
+        .join('\n');
+      fs.writeFileSync(path.join(baseOutDir, 'index.ts'), indexExports + '\n', 'utf8');
+    }
   }
 
-  // 3. Write docs/MISSING-SIZES.md
-  let missingDoc = '# Missing Mockup Sizes (Responsive Fallback Log)\n\n';
-  missingDoc +=
-    'The following screens do not exist in all 3 sizes (mobile, tablet, desktop) in the design package. ';
-  missingDoc +=
-    'The responsive container falls back to the nearest available size (Mobile -> Tablet -> Desktop, etc.).\n\n';
-  missingDoc += '| Screen | Available Sizes | Missing Sizes | Fallback Rule |\n';
-  missingDoc += '| --- | --- | --- | --- |\n';
-
-  for (const item of missingSizesLog) {
-    missingDoc += `| **${item.screen}** | ${item.available.join(', ')} | ${item.missing.join(', ')} | nearest available |\n`;
-  }
-
-  fs.writeFileSync(path.resolve('docs/MISSING-SIZES.md'), missingDoc, 'utf8');
-  console.log(`Saved docs/MISSING-SIZES.md with ${missingSizesLog.length} entries.`);
-
-  // 4. Generate src/mockups/buyer/index.ts
-  let exportCode = `// Auto-generated exports for Buyer mockups\n\n`;
-  for (const mapping of BUYER_SCREEN_MAPPINGS) {
-    exportCode += `export { ${mapping.name} } from './${mapping.name}';\n`;
-  }
-  fs.writeFileSync(path.join(baseOutDir, 'index.ts'), exportCode, 'utf8');
-  console.log(`Saved src/mockups/buyer/index.ts.`);
+  console.log(`Total mobile screens converted: ${totalConverted}`);
 }
 
-if (
-  process.argv[1]?.endsWith('convert-mockups.ts') ||
-  process.argv[1]?.endsWith('convert-mockups.js')
-) {
+if (process.argv[1]?.includes('convert-mockups')) {
   runConversionPipeline();
 }

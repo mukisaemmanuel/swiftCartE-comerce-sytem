@@ -11,7 +11,10 @@ export interface ScreenProps {
 export const Screen: React.FC<ScreenProps> = (props) => {
   const onNavigate = props.onNavigate;
   
-  const { theme } = useDashboardTheme();
+  const { theme, toggleTheme } = useDashboardTheme();
+  void theme;
+  void toggleTheme;
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const assetBase = '';
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
@@ -22,7 +25,13 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between"><div className="flex items-center gap-space-xs"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" type="button" onClick={() => alertToast('Action triggered')}><Icon name="chevron_left" className="text-[24px]" /></button><div className="flex items-center gap-space-xs pl-space-xs"><img alt="swiftcart-logo-final.png" className="h-8 w-auto object-contain" src={`${assetBase}/images/a593324aedcf6cb2.webp`} /><div className="flex flex-col"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary">Uganda Ops</span><span className="font-headline-sm text-headline-sm leading-tight text-on-surface font-bold">Order Management</span></div></div></div><div className="flex items-center gap-space-sm"><div aria-label="User avatar" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+        />
+      )}
+      <header className="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between"><div className="flex items-center gap-space-xs"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" type="button" onClick={() => alertToast('Action triggered')}><Icon name="chevron_left" className="text-[24px]" /></button><div className="flex items-center gap-space-xs pl-space-xs"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/logo-full.png" /><div className="flex flex-col"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary">Uganda Ops</span><span className="font-headline-sm text-headline-sm leading-tight text-on-surface font-bold">Order Management</span></div></div></div><div className="flex items-center gap-space-sm"><div aria-label="User avatar" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
 <main className="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div className="flex flex-col w-full pb-8">
 
 <div className="px-margin pt-space-xs pb-space-sm flex items-center justify-between">

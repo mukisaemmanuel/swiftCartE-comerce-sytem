@@ -12,6 +12,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
   const onNavigate = props.onNavigate;
   
   const { theme, toggleTheme } = useDashboardTheme();
+  void theme;
+  void toggleTheme;
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const assetBase = '';
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
@@ -22,12 +25,18 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           {toastMessage}
         </div>
       )}
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+        />
+      )}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-surface-container-high shadow-[0_2px_12px_rgba(13,28,47,0.04)]">
 
 <div className="px-5 py-2.5 flex items-center justify-between gap-3">
 
 <div className="flex items-center gap-3 min-w-0">
-<img alt="SwiftCart Uganda" className="h-[38px] w-auto object-contain flex-shrink-0" src={`${assetBase}/images/1c4eb0924c9c9129.webp`} />
+<img alt="SwiftCart" className="h-[38px] w-auto object-contain flex-shrink-0" src="/brand/logo-full.png" />
 <div className="h-8 w-px bg-slate-200 hidden sm:block"></div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-2">

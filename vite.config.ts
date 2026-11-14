@@ -103,6 +103,30 @@ export default defineConfig({
               return `seller-${match[1].toLowerCase()}`;
             }
           }
+          if (id.includes('src/mockups/admin/')) {
+            const match = id.match(/mockups[\\/]admin[\\/]([^\\/]+)/);
+            if (match) {
+              return `admin-${match[1].toLowerCase()}`;
+            }
+          }
+          if (id.includes('src/mockups/super-admin/')) {
+            const match = id.match(/mockups[\\/]super-admin[\\/]([^\\/]+)/);
+            if (match) {
+              return `superadmin-${match[1].toLowerCase()}`;
+            }
+          }
+          if (id.includes('src/mockups/rider/')) {
+            const match = id.match(/mockups[\\/]rider[\\/]([^\\/]+)/);
+            if (match) {
+              return `rider-${match[1].toLowerCase()}`;
+            }
+          }
+          if (id.includes('src/mockups/hub/')) {
+            const match = id.match(/mockups[\\/]hub[\\/]([^\\/]+)/);
+            if (match) {
+              return `hub-${match[1].toLowerCase()}`;
+            }
+          }
         },
       },
     },

@@ -1,33 +1,26 @@
 // Auto-generated from C:/Users/Mukisa_Emmanuel/Desktop/swiftCartE-comerce-sytem/design/mobile/buyer/seller_application_status/code.html
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from '../../../components/shared/Icon';
 
-export interface MobileProps {
+export interface SellerApplicationStatusProps {
   onNavigate?: (path: string) => void;
   onAction?: (action: string, payload?: unknown) => void;
 }
 
-export const Mobile: React.FC<MobileProps> = (props) => {
+export const SellerApplicationStatus: React.FC<SellerApplicationStatusProps> = (props) => {
   const onNavigate = props.onNavigate;
-  const assetBase = import.meta.env.VITE_ASSET_BASE ?? '';
-  const [, setDrawerOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const alertToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 3000); };
-  return (
-    <div className="bg-surface text-on-surface antialiased font-body-md relative w-full overflow-x-hidden">
-      <style dangerouslySetInnerHTML={{ __html: `@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
-
-    body {
-      min-height: max(884px, 100dvh);
-    }
+  const onAction = props.onAction;
+  void onNavigate;
+  void onAction;
+  void Icon;
   
-` }} />
-      {toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-[100] bg-surface-dark text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium animate-fade-in">
-          {toastMessage}
-        </div>
-      )}
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div className="h-14 px-margin grid grid-cols-[44px_1fr_44px] items-center"><div className="flex items-center"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors active:scale-95" onClick={() => alertToast('Action triggered')}><Icon name="arrow_back" className="text-[24px]" /></button></div><div className="flex items-center justify-center gap-space-xs text-center"><img alt="swiftcart-logo-icon-only.png" className="h-6 w-auto object-contain hidden" src={`${assetBase}/images/95ec767b02525811.webp`} /><h1 className="font-label-lg text-label-lg text-on-surface tracking-tight truncate">Product Details</h1></div><div className="flex items-center justify-end"><button aria-label="Contextual Help" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}><Icon name="help_outline" className="text-[22px]" /></button></div></div></header><main className="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div className="flex flex-col w-full pb-safe">
+  
+
+  return (
+    <div className="relative w-full overflow-x-hidden min-h-screen">
+      
+      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div className="h-14 px-margin grid grid-cols-[44px_1fr_44px] items-center"><div className="flex items-center"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors active:scale-95"><Icon name="arrow_back" className="text-[24px]" /></button></div><div className="flex items-center justify-center gap-space-xs text-center"><img alt="SwiftCart" className="h-6 w-auto object-contain hidden" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-label-lg text-label-lg text-on-surface tracking-tight truncate">Product Details</h1></div><div className="flex items-center justify-end"><button aria-label="Contextual Help" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95"><Icon name="help_outline" className="text-[22px]" /></button></div></div></header>
+<main className="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div className="flex flex-col w-full pb-safe">
 
 <section className="px-margin pt-space-md pb-space-xs">
 <div className="flex items-center justify-between mb-space-xs">
@@ -37,16 +30,16 @@ export const Mobile: React.FC<MobileProps> = (props) => {
       </span>
 </div>
 <div aria-label="Application state selector" className="grid grid-cols-4 gap-1 p-1 bg-surface-container rounded-xl" role="tablist">
-<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-submitted" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-submitted" type="button">
         Submitted
       </button>
-<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm transition-all text-center" id="btn-in_review" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm transition-all text-center" id="btn-in_review" type="button">
         In Review
       </button>
-<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-approved" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-approved" type="button">
         Approved
       </button>
-<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-needs_changes" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="state-tab py-1.5 px-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface active:scale-95 text-center" id="btn-needs_changes" type="button">
         Action Req.
       </button>
 </div>
@@ -68,7 +61,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 </div>
 <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0">
-<img className="w-full h-full object-cover rounded-xl" data-alt="Warm modern electronic accessories stall at Pioneer Mall Kampala with phone screens gadgets and organized shop shelves under bright ambient light" src={`${assetBase}/images/f2b797cc7379aa1f.webp`} />
+<img className="w-full h-full object-cover rounded-xl" data-alt="Warm modern electronic accessories stall at Pioneer Mall Kampala with phone screens gadgets and organized shop shelves under bright ambient light" src="/images/f2b797cc7379aa1f.webp" />
 </div>
 </div>
 
@@ -104,7 +97,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 </div>
 <div className="flex items-center justify-end gap-space-sm pt-1">
-<button className="h-10 px-4 rounded-xl bg-error text-on-error font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="h-10 px-4 rounded-xl bg-error text-on-error font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
 <Icon name="photo_camera" className="text-[18px]" />
           Re-upload Document
         </button>
@@ -230,7 +223,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="flex flex-col gap-space-xs pt-1">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Need Urgent Verification?</span>
 <div className="grid grid-cols-1 gap-2 mt-1">
-<a className="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors" href="https://wa.me/256700123456" onClick={() => alertToast('Action triggered')}>
+<a className="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors" href="https://wa.me/256700123456">
 <div className="flex items-center gap-space-sm">
 <span className="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center">
 <Icon name="chat" className="text-[18px]" />
@@ -261,11 +254,11 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 
 <section className="sticky bottom-0 w-full bg-surface/90 backdrop-blur-xl p-margin shadow-[0_-4px_20px_rgba(14,27,77,0.06)] mt-space-md z-40">
 <div className="flex items-center gap-space-sm">
-<button className="flex-1 h-12 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm active:scale-98 transition-transform" type="button" onClick={() => alertToast('Action triggered')}>
+<button className="flex-1 h-12 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm active:scale-98 transition-transform" type="button">
 <Icon name="edit" className="text-[18px] text-on-surface-variant" />
         Modify Details
       </button>
-<button className="flex-1 h-12 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-[0px_4px_14px_rgba(218,55,0,0.30)] active:scale-98 transition-transform" type="button" onClick={() => setDrawerOpen((prev) => !prev)}>
+<button className="flex-1 h-12 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-[0px_4px_14px_rgba(218,55,0,0.30)] active:scale-98 transition-transform" type="button">
 <Icon name="menu_book" className="text-[18px]" />
         Seller Guide
       </button>
@@ -277,4 +270,4 @@ export const Mobile: React.FC<MobileProps> = (props) => {
   );
 };
 
-export default Mobile;
+export default SellerApplicationStatus;
