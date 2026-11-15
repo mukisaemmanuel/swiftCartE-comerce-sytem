@@ -2,31 +2,53 @@ import React from 'react';
 import type { RouteDefinition } from '../routes/types';
 import { useDashboardTheme } from '../context/ThemeContext';
 import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
+import useBreakpoint from '../hooks/useBreakpoint';
 
 // Converted Hub Mockup Screens
 import {
   CourierBagQrScanConfirmationModalSwiftcartWorkHub,
   DamagedParcelQuarantineBayIntakeSwiftcartHubAgent,
+  DeliveryAddressesHubsSwiftcartDesktop,
+  HubCustomerPickupHandoverConsoleSwiftcartDesktopDark,
+  HubCustomerPickupHandoverConsoleSwiftcartDesktopLight,
+  HubDamagedGoodsQuarantineBaySwiftcartDesktopDark,
+  HubDamagedGoodsQuarantineBaySwiftcartDesktopLight,
   HubDamagedGoodsQuarantineBayTablet,
   HubDamagedGoodsQuarantineBayTabletLight1,
   HubDamagedGoodsQuarantineBayTabletLight2,
+  HubInboundIntakeBarcodeScanSwiftcartDesktopDark,
+  HubInboundIntakeBarcodeScanSwiftcartDesktopLight,
   HubIntakeHighSpeedBarcodeScannerTablet,
   HubIntakeSortingStationSwiftcartWorkHub,
   HubIntakeStationSwiftcartWorkHub,
   HubLineHaulTransitManifestHandoverTablet,
   HubLineHaulTransitManifestHandoverTabletLight1,
   HubLineHaulTransitManifestHandoverTabletLight2,
+  HubLineHaulTransitManifestSwiftcartDesktopDark,
+  HubLineHaulTransitManifestSwiftcartDesktopLight,
   HubPickupHandoverConsoleTabletDark,
+  HubPickupHandoverConsoleTabletLight,
   HubReturnsQuarantineBayTabletDark,
+  HubReturnsQuarantineBayTabletLight,
+  HubReturnsRtoBaySwiftcartDesktopDark,
+  HubReturnsRtoBaySwiftcartDesktopLight,
+  HubRiderDispatchCourierStagingSwiftcartDesktopDark,
+  HubRiderDispatchCourierStagingSwiftcartDesktopLight,
   HubRiderDispatchCourierStagingTabletDark,
+  HubRiderDispatchCourierStagingTabletLight,
   HubSortingStationSwiftcartWorkHub,
+  HubStationCommandOverviewSwiftcartDesktopDark,
+  HubStationCommandOverviewSwiftcartDesktopLight,
   HubStationCommandOverviewTablet,
   HubStationCommandOverviewTabletLight1,
   HubStationCommandOverviewTabletLight2,
   HubStationSettingsShiftHandoverTabletDark,
+  HubStorageAgingMatrixSwiftcartDesktopDark,
+  HubStorageAgingMatrixSwiftcartDesktopLight,
   HubStorageAgingMatrixSwiftcartHub,
   HubStorageAgingMatrixSwiftcartHubLight,
   HubStorageAgingMatrixTabletDark,
+  HubStorageAgingMatrixTabletLight,
   IntakeSwiftcartHubAgent,
   LineHaulTransitManifestCreationSwiftcartHubAgent,
   MoreSwiftcartHubAgent,
@@ -49,6 +71,7 @@ export interface HubViewProps {
 export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
   const path = route.path.toLowerCase().replace(/\/+$/, '') || '/hub';
   const { theme } = useDashboardTheme();
+  const breakpoint = useBreakpoint();
 
   const handleAction = (action: string, payload?: unknown) => {
     console.log('[HubAction]', action, payload);
@@ -86,27 +109,107 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
     if (path === '/hub/rider-dispatch-courier-bag-staging-hub-agent') return <RiderDispatchCourierBagStagingSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/scan-hub-agent') return <ScanSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/swiftcart-work-hub-shared-system-components') return <SwiftcartWorkHubSharedSystemComponentsDarkLight onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-damaged-goods-quarantine-bay') return <HubDamagedGoodsQuarantineBayTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-damaged-goods-quarantine-bay') {
+      if (breakpoint === 'desktop') {
+        return theme === 'dark' ? (
+          <HubDamagedGoodsQuarantineBaySwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <HubDamagedGoodsQuarantineBaySwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        );
+      }
+      return <HubDamagedGoodsQuarantineBayTablet onNavigate={onNavigate} onAction={handleAction} />;
+    }
     if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return <HubDamagedGoodsQuarantineBayTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return <HubDamagedGoodsQuarantineBayTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-intake-high-speed-barcode-scanner') return <HubIntakeHighSpeedBarcodeScannerTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-line-haul-transit-manifest-handover') return <HubLineHaulTransitManifestHandoverTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return <HubLineHaulTransitManifestHandoverTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return <HubLineHaulTransitManifestHandoverTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-pickup-handover-console') return <HubPickupHandoverConsoleTabletDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-returns-quarantine-bay') return <HubReturnsQuarantineBayTabletDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-rider-dispatch-courier-staging') return <HubRiderDispatchCourierStagingTabletDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-station-command-overview') return <HubStationCommandOverviewTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-pickup-handover-console') {
+      return theme === 'dark' ? (
+        <HubPickupHandoverConsoleTabletDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubPickupHandoverConsoleTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-returns-quarantine-bay') {
+      return theme === 'dark' ? (
+        <HubReturnsQuarantineBayTabletDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubReturnsQuarantineBayTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-rider-dispatch-courier-staging') {
+      if (breakpoint === 'desktop') {
+        return theme === 'dark' ? (
+          <HubRiderDispatchCourierStagingSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <HubRiderDispatchCourierStagingSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        );
+      }
+      return theme === 'dark' ? (
+        <HubRiderDispatchCourierStagingTabletDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubRiderDispatchCourierStagingTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-station-command-overview') {
+      if (breakpoint === 'desktop') {
+        return theme === 'dark' ? (
+          <HubStationCommandOverviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <HubStationCommandOverviewSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        );
+      }
+      return <HubStationCommandOverviewTablet onNavigate={onNavigate} onAction={handleAction} />;
+    }
     if (path === '/hub/hub-station-command-overview-1') return <HubStationCommandOverviewTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-station-command-overview-2') return <HubStationCommandOverviewTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-station-settings-shift-handover') return <HubStationSettingsShiftHandoverTabletDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-storage-aging-matrix') return <HubStorageAgingMatrixTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-storage-aging-matrix') {
+      if (breakpoint === 'desktop') {
+        return theme === 'dark' ? (
+          <HubStorageAgingMatrixSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <HubStorageAgingMatrixSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        );
+      }
+      return theme === 'dark' ? (
+        <HubStorageAgingMatrixTabletDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubStorageAgingMatrixTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
     if (path === '/hub/rider-profile-support-hub') return <RiderProfileSupportHubTabletLight onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/delivery-addresses-hubs') return renderOverview();
-    if (path === '/hub/hub-customer-pickup-handover-console') return renderOverview();
-    if (path === '/hub/hub-inbound-intake-barcode-scan') return renderOverview();
-    if (path === '/hub/hub-line-haul-transit-manifest') return renderOverview();
-    if (path === '/hub/hub-returns-rto-bay') return renderOverview();
+    if (path === '/hub/delivery-addresses-hubs') return <DeliveryAddressesHubsSwiftcartDesktop onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-customer-pickup-handover-console') {
+      return theme === 'dark' ? (
+        <HubCustomerPickupHandoverConsoleSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubCustomerPickupHandoverConsoleSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-inbound-intake-barcode-scan') {
+      return theme === 'dark' ? (
+        <HubInboundIntakeBarcodeScanSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubInboundIntakeBarcodeScanSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-line-haul-transit-manifest') {
+      return theme === 'dark' ? (
+        <HubLineHaulTransitManifestSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubLineHaulTransitManifestSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
+    if (path === '/hub/hub-returns-rto-bay') {
+      return theme === 'dark' ? (
+        <HubReturnsRtoBaySwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubReturnsRtoBaySwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
     if (path === '/hub' || path === '/hub/overview') return renderOverview();
 
     return renderOverview();

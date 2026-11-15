@@ -2,6 +2,7 @@ import { preview } from 'vite';
 import { chromium } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
+import { execSync } from 'child_process';
 import sharp from 'sharp';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
@@ -134,10 +135,6 @@ export async function runHonestFidelity() {
     const sizeDir = path.join(process.cwd(), 'design', size);
     if (!fs.existsSync(sizeDir)) continue;
     for (const role of fs.readdirSync(sizeDir)) {
-      // Desktop is buyer only until Stage M8
-      if (size === 'desktop' && role !== 'buyer') {
-        continue;
-      }
       const roleDir = path.join(sizeDir, role);
       if (!fs.statSync(roleDir).isDirectory()) continue;
       for (const screen of fs.readdirSync(roleDir)) {
@@ -497,6 +494,27 @@ export async function runHonestFidelity() {
   }
 
   fs.writeFileSync(path.resolve(process.cwd(), 'docs/FIDELITY-REPORT.md'), md, 'utf8');
+
+  // Maintain docs/FIDELITY-HISTORY.md
+  let commitHash = 'unknown';
+  try {
+    commitHash = execSync('git rev-parse --short HEAD').toString().trim();
+  } catch {}
+
+  const historyPath = path.resolve(process.cwd(), 'docs/FIDELITY-HISTORY.md');
+  if (!fs.existsSync(historyPath)) {
+    fs.writeFileSync(
+      historyPath,
+      `# SwiftCart Fidelity Run History\n\n| Date / Time | Commit | Total | OK | CHECK | BAD | WRONG_PAGE | Summary by Role / Size |\n|---|---|---|---|---|---|---|---|\n`,
+      'utf8'
+    );
+  }
+  const details = Object.entries(summary)
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([k, v]) => `${k}: ${v.ok} OK, ${v.check} CHECK, ${v.bad} BAD${v.wrongPage > 0 ? `, ${v.wrongPage} WRONG` : ''}`)
+    .join('; ');
+  const historyRow = `| ${new Date().toISOString()} | \`${commitHash}\` | ${sumTotal} | ${sumOk} | ${sumCheck} | ${sumBad} | ${sumWrong} | ${details} |\n`;
+  fs.appendFileSync(historyPath, historyRow, 'utf8');
 
   console.log('\n--- FIDELITY AUDIT COMPLETE ---');
   console.log(`Total Evaluated: ${sumTotal}`);

@@ -21,11 +21,16 @@ import {
   RiderMapLiveDispatchNavigationTabletDark,
   RiderMapSwiftcartRider,
   RiderOfflineModeCachedManifestTabletDark,
+  RiderOfflineModeCachedManifestTabletLight,
   RiderOverviewDispatchMapTablet,
   RiderReturnPickupSwiftcartRider,
   RiderReversePickupReturnInspectionTablet,
   RiderSellerPickupDeliveryDetail,
   RiderSellerPickupDeliveryDetailLight,
+  RiderSimulatorActiveTaskOtpSimulationSwiftcartDesktop,
+  RiderSimulatorOverviewFleetMapSwiftcartDesktop,
+  RiderSimulatorReverseHandoverInspectionSwiftcartDesktop,
+  RiderSimulatorSecurityLockedExceptionsSwiftcartDesktop,
 } from '../mockups/rider';
 
 export interface RiderViewProps {
@@ -72,13 +77,19 @@ export const RiderView: React.FC<RiderViewProps> = ({ route, onNavigate }) => {
     if (path === '/rider/rider-delivery-task-execution-code-entry') return <RiderDeliveryTaskExecutionCodeEntryTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-failed-delivery-code-locked-state') return <RiderFailedDeliveryCodeLockedStateTabletLight onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-map-live-dispatch-navigation') return <RiderMapLiveDispatchNavigationTabletDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/rider/rider-offline-mode-cached-manifest') return <RiderOfflineModeCachedManifestTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/rider/rider-offline-mode-cached-manifest') {
+      return theme === 'dark' ? (
+        <RiderOfflineModeCachedManifestTabletDark onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <RiderOfflineModeCachedManifestTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
     if (path === '/rider/rider-overview-dispatch-map') return <RiderOverviewDispatchMapTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider/rider-reverse-pickup-return-inspection') return <RiderReversePickupReturnInspectionTablet onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/rider/rider-simulator-active-task-otp-simulation') return renderOverview();
-    if (path === '/rider/rider-simulator-overview-fleet-map') return renderOverview();
-    if (path === '/rider/rider-simulator-reverse-handover-inspection') return renderOverview();
-    if (path === '/rider/rider-simulator-security-locked-exceptions') return renderOverview();
+    if (path === '/rider/rider-simulator-active-task-otp-simulation') return <RiderSimulatorActiveTaskOtpSimulationSwiftcartDesktop onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/rider/rider-simulator-overview-fleet-map') return <RiderSimulatorOverviewFleetMapSwiftcartDesktop onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/rider/rider-simulator-reverse-handover-inspection') return <RiderSimulatorReverseHandoverInspectionSwiftcartDesktop onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/rider/rider-simulator-security-locked-exceptions') return <RiderSimulatorSecurityLockedExceptionsSwiftcartDesktop onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/rider' || path === '/rider/overview') return renderOverview();
 
     return renderOverview();

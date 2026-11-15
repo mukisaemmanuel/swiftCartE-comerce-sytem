@@ -396,12 +396,11 @@ html.light,
 /* Tablet mockups in design/tablet/buyer all use the cool blue-grey palette */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-  :root,
-  html,
-  body,
   .role-buyer,
-  [data-theme="light"],
-  .light {
+  html.role-buyer,
+  :root.role-buyer,
+  [data-role="buyer"],
+  [data-role="buyer"] body {
     --color-surface-variant: #d5e3fd;
     --color-inverse-surface: #233144;
     --color-surface-tint: #b02f00;

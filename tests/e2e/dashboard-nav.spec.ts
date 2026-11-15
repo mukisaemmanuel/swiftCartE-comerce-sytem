@@ -418,3 +418,158 @@ test.describe('Dashboard Tablet Navigation Shell Quality Gate (834x1112)', () =>
     });
   }
 });
+
+test.describe('Dashboard Desktop Navigation Shell Quality Gate (1440x900)', () => {
+  const roles: DashboardRole[] = ['seller', 'admin', 'super-admin', 'rider', 'hub'];
+
+  for (const role of roles) {
+    test(`Role "${role}" operates with 288px fixed sidebar desktop navigation (1440x900)`, async ({ page }) => {
+      test.setTimeout(180000); // 3 minutes per role
+
+      const config = ROLE_NAV_CONFIGS[role];
+      const overviewPath = config.bottomBarItems[0]?.path || `/${role}`;
+
+      const consoleErrors: string[] = [];
+      page.on('console', (msg: ConsoleMessage) => {
+        if (msg.type() === 'error') {
+          const text = msg.text();
+          if (
+            !text.includes('favicon') &&
+            !text.includes('Failed to load resource') &&
+            !text.includes('[vite]') &&
+            !text.includes('downloadable font')
+          ) {
+            consoleErrors.push(text);
+          }
+        }
+      });
+
+      await page.setViewportSize({ width: 1440, height: 900 });
+
+      // Pre-set user role and dark theme default
+      await page.addInitScript(
+        ({ roleName }) => {
+          localStorage.setItem('swiftcart_user_role', roleName);
+          localStorage.setItem('swiftcart_dashboard_theme', 'dark');
+        },
+        { roleName: role }
+      );
+
+      // 1. Open overview screen
+      console.log(`[desktop-${role}] Navigating to overview: ${overviewPath}`);
+      await page.goto(overviewPath, { waitUntil: 'domcontentloaded', timeout: 15000 });
+
+      // Wait for React Suspense fallback to disappear
+      await page
+        .waitForFunction(
+          () => !document.body.innerText.includes('Loading SwiftCart Portal...'),
+          { timeout: 8000 }
+        )
+        .catch(() => {});
+
+      await page.evaluate(() => document.fonts.ready).catch(() => {});
+      await page.waitForTimeout(200);
+
+      // 2. Assert shell header exists ONCE
+      const headerCount = await page.locator('[data-testid="shared-dashboard-header"]').count();
+      expect(headerCount, `Role ${role} should have exactly ONE shell header on desktop`).toBe(1);
+
+      // 3. Assert bottom bar is HIDDEN on desktop
+      const bottomBar = page.locator('[data-testid="shared-dashboard-bottom-bar"]');
+      if ((await bottomBar.count()) > 0) {
+        await expect(bottomBar).toBeHidden();
+      }
+
+      // 4. Assert tablet rail is HIDDEN on desktop
+      const tabletRail = page.locator('[data-testid="dashboard-tablet-rail"]');
+      if ((await tabletRail.count()) > 0) {
+        await expect(tabletRail).toBeHidden();
+      }
+
+      // 5. Assert 288px fixed sidebar is VISIBLE
+      const desktopSidebar = page.locator('[data-testid="dashboard-desktop-sidebar"]');
+      await expect(desktopSidebar).toBeVisible();
+
+      // 6. Assert Dark default theme
+      const initialTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
+      expect(initialTheme, `Role ${role} should default to dark theme on desktop`).toBe('dark');
+
+      // 7. Test Theme Toggle button flips data-theme
+      console.log(`[desktop-${role}] Testing theme toggle button`);
+      await page.click('.theme-toggle-btn');
+      await page.waitForTimeout(200);
+      const toggledTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
+      expect(toggledTheme, `Theme toggle should switch to light`).toBe('light');
+
+      // Toggle back to dark
+      await page.click('.theme-toggle-btn');
+      await page.waitForTimeout(200);
+      const restoredTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
+      expect(restoredTheme, `Theme toggle should restore dark`).toBe('dark');
+
+      // 8. Assert no horizontal scroll on desktop
+      const overviewOverflow = await page.evaluate(
+        () => document.documentElement.scrollWidth > window.innerWidth + 2
+      );
+      expect(overviewOverflow, `Role ${role} desktop overview has horizontal scroll`).toBe(false);
+
+      // 9. Store a marker on the header DOM element to prove it never remounts
+      await page.evaluate(() => {
+        const h = document.querySelector('[data-testid="shared-dashboard-header"]') as (HTMLElement & { _shellMountMarker?: string }) | null;
+        if (h) {
+          h._shellMountMarker = 'swiftcart-single-instance-desktop';
+        }
+      });
+
+      // 10. Click links from desktop sidebar
+      const sidebarLinks = desktopSidebar.locator('a');
+      const count = await sidebarLinks.count();
+      expect(count, `Expected links in ${role} desktop sidebar`).toBeGreaterThan(1);
+
+      for (let i = 1; i < Math.min(count, 4); i++) {
+        const link = sidebarLinks.nth(i);
+        const href = await link.getAttribute('href');
+        if (!href || href === '/' || href === '/help-centre') continue;
+
+        console.log(`[desktop-${role}] Clicking sidebar link: ${href}`);
+        await link.click();
+        await page.waitForTimeout(300);
+
+        const currentPath = new URL(page.url()).pathname.replace(/\/+$/, '') || '/';
+        const expectedPath = href.replace(/\/+$/, '') || '/';
+        expect(currentPath).toBe(expectedPath);
+
+        // Assert header never remounted
+        const marker = await page.evaluate(() => {
+          const h = document.querySelector('[data-testid="shared-dashboard-header"]') as (HTMLElement & { _shellMountMarker?: string }) | null;
+          return h ? h._shellMountMarker : null;
+        });
+        expect(marker, `Header remounted on desktop sidebar navigation to ${href}`).toBe(
+          'swiftcart-single-instance-desktop'
+        );
+
+        // Assert no horizontal scroll
+        const isOverflowing = await page.evaluate(
+          () => document.documentElement.scrollWidth > window.innerWidth + 2
+        );
+        expect(isOverflowing, `Route ${href} has horizontal scroll on desktop`).toBe(false);
+      }
+
+      // 11. Test Browser Back button
+      console.log(`[desktop-${role}] Testing browser back button on desktop`);
+      await page.goBack();
+      await page.waitForTimeout(300);
+
+      const backMarker = await page.evaluate(() => {
+        const h = document.querySelector('[data-testid="shared-dashboard-header"]') as (HTMLElement & { _shellMountMarker?: string }) | null;
+        return h ? h._shellMountMarker : null;
+      });
+      expect(backMarker, `Shell header remounted after browser back on desktop`).toBe(
+        'swiftcart-single-instance-desktop'
+      );
+
+      // 12. Assert 0 Console Errors
+      expect(consoleErrors, `Role ${role} logged console errors on desktop: ${consoleErrors.join('; ')}`).toEqual([]);
+    });
+  }
+});

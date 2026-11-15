@@ -113,7 +113,17 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
     title: 'Boda Rider Console',
     subtitle: 'On Duty • Active Dispatch',
     hasDrawer: false,
-    drawerItems: [],
+    drawerItems: [
+      { label: 'Overview & Fleet Map', icon: 'map', path: '/rider/overview-rider' },
+      { label: 'Active Task & OTP Simulation', icon: 'pin', path: '/rider/boda-rider-delivery-task-execution-code-entry' },
+      { label: 'Reverse Handover & Inspection', icon: 'swap_horizontal_circle', path: '/rider/boda-rider-reverse-pickup-package-inspection' },
+      { label: 'Security Locked & Exceptions', icon: 'gshield', path: '/rider/rider-code-locked-security' },
+      { label: 'Earnings & Telecom MoMo', icon: 'account_balance_wallet', path: '/rider/earnings-rider' },
+      { label: 'Deliveries', icon: 'package_2', path: '/rider/deliveries-rider' },
+      { label: 'Rider Map', icon: 'location_on', path: '/rider/rider-map-rider' },
+      { label: 'Profile', icon: 'person', path: '/rider/profile-support-rider' },
+      { label: 'Exit', icon: 'logout', path: '/' },
+    ],
     bottomBarItems: [
       { label: 'Overview', icon: 'dashboard', path: '/rider/overview-rider' },
       { label: 'Deliveries', icon: 'package_2', path: '/rider/deliveries-rider' },
@@ -285,16 +295,16 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
       {/* 1. SHARED TOP BAR */}
       <header
         ref={headerRef}
-        className="fixed top-0 inset-x-0 z-40 h-16 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest/30 shadow-[0_4px_20px_rgba(0,0,0,0.45)] select-none"
+        className="fixed top-0 inset-x-0 lg:left-72 z-40 h-16 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest/30 shadow-sm select-none"
         data-testid="shared-dashboard-header"
       >
-        <div className="h-16 px-4 flex items-center justify-between gap-2 max-w-7xl mx-auto w-full">
+        <div className="h-16 px-4 flex items-center justify-between gap-2 w-full">
           {/* Left: Hamburger + Logo + Heading */}
-          <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-2 min-w-0 shrink-0 max-w-[260px] md:max-w-xs">
             {navConfig.hasDrawer && (
               <button
                 type="button"
-                className="sidebar-hamburger-btn w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shrink-0"
+                className="lg:hidden sidebar-hamburger-btn w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shrink-0"
                 aria-label="Open menu"
                 onClick={() => setIsDrawerOpen(true)}
               >
@@ -305,7 +315,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             <img
               src="/brand/swiftcart-logo-icon.png"
               alt="SwiftCart"
-              className="h-8 w-auto object-contain cursor-pointer shrink-0"
+              className="lg:hidden h-8 w-auto object-contain cursor-pointer shrink-0"
               onClick={() => onNavigate(navConfig.bottomBarItems[0]?.path || '/')}
             />
 
@@ -322,17 +332,14 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             </div>
           </div>
 
-          {/* Tablet Horizontal Nav for Admin, Rider, Hub */}
+          {/* Tablet Horizontal Nav for Admin, Rider, Hub (Tablet only: md:flex lg:hidden) */}
           {(role === 'admin' || role === 'rider' || role === 'hub') && (
             <nav
-              className="hidden md:flex items-center gap-1 overflow-x-auto scrollbar-none max-w-xl mx-2"
+              className="hidden md:flex lg:hidden flex-1 min-w-0 items-center justify-center gap-1 overflow-x-auto scrollbar-none mx-2"
               data-testid="dashboard-tablet-top-nav"
               aria-label="Tablet navigation tabs"
             >
-              {(role === 'admin'
-                ? navConfig.drawerItems.slice(0, 7)
-                : navConfig.bottomBarItems
-              ).map((item) => {
+              {navConfig.bottomBarItems.map((item) => {
                 const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
                 const isParentActive = item.path !== '/' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
                 const isActive = isExactActive || isParentActive;
@@ -345,7 +352,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
                       e.preventDefault();
                       onNavigate(item.path);
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all ${
                       isActive
                         ? 'bg-primary-container text-on-primary shadow-sm font-bold'
                         : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
@@ -486,10 +493,10 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
         </>
       )}
 
-      {/* 2b. TABLET 72PX LEFT RAIL (Seller & Super-Admin) */}
+      {/* 2b. TABLET 72PX LEFT RAIL (Seller & Super-Admin) - Icon-only with tooltip */}
       {(role === 'seller' || role === 'super-admin') && (
         <aside
-          className="hidden md:flex flex-col fixed top-16 bottom-0 left-0 z-30 w-[72px] bg-surface-container-low border-r border-surface-container-highest/40 py-3 items-center gap-1.5 select-none overflow-y-auto scrollbar-none"
+          className="hidden md:flex lg:hidden flex-col fixed top-16 bottom-0 left-0 z-30 w-[72px] bg-surface-container-low border-r border-surface-container-highest/40 py-3 items-center gap-2 select-none overflow-y-auto scrollbar-none"
           data-testid="dashboard-tablet-rail"
           aria-label={`${navConfig.title} rail navigation`}
         >
@@ -503,31 +510,113 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
                 key={item.path + item.label}
                 href={item.path}
                 title={item.label}
+                aria-label={item.label}
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigate(item.path);
                 }}
-                className={`w-14 h-14 rounded-xl flex flex-col items-center justify-center p-1 transition-all ${
+                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
                   isActive
                     ? 'bg-primary-container text-on-primary shadow-sm font-bold'
                     : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface'
                 }`}
                 aria-current={isActive ? 'page' : undefined}
               >
-                <Icon name={item.icon} className="text-[20px]" />
-                <span className="text-[10px] font-medium tracking-tight mt-0.5 truncate max-w-[52px] text-center leading-tight">
-                  {item.label}
-                </span>
+                <Icon name={item.icon} className="text-[22px]" />
               </a>
             );
           })}
         </aside>
       )}
 
+      {/* 2c. DESKTOP 288PX FIXED LEFT SIDEBAR (lg:flex) */}
+      <aside
+        className="hidden lg:flex fixed top-0 bottom-0 left-0 z-30 w-72 flex-col bg-surface-container-low border-r border-surface-container-highest/40 select-none overflow-hidden"
+        data-testid="dashboard-desktop-sidebar"
+        aria-label={`${navConfig.title} desktop navigation`}
+      >
+        {/* Sidebar Header with Logo and Brand */}
+        <div className="h-16 px-5 flex items-center gap-3 border-b border-surface-container-highest/40 bg-surface-container-low">
+          <img
+            src="/brand/swiftcart-logo-icon.png"
+            alt="SwiftCart"
+            className="h-8 w-auto object-contain cursor-pointer shrink-0"
+            onClick={() => onNavigate(navConfig.bottomBarItems[0]?.path || '/')}
+          />
+          <div className="flex flex-col min-w-0">
+            <span className="font-bold text-[14px] text-on-surface truncate leading-tight tracking-tight">
+              {navConfig.title}
+            </span>
+            <div className="flex items-center gap-1 mt-0.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-escrow inline-block animate-pulse shrink-0" />
+              <span className="text-[10px] uppercase tracking-wider text-tertiary font-bold truncate">
+                {navConfig.subtitle}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Sidebar Navigation Items */}
+        <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
+          {navConfig.drawerItems.map((item) => {
+            const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
+            const isParentActive = item.path !== '/' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
+            const isActive = isExactActive || isParentActive;
+
+            return (
+              <a
+                key={item.path + item.label}
+                href={item.path}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate(item.path);
+                }}
+                className={`flex items-center justify-between px-3 py-2.5 rounded-xl font-medium text-[13px] transition-all ${
+                  isActive
+                    ? 'bg-primary-container text-white font-bold shadow-md'
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface'
+                }`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <Icon name={item.icon} className={`text-[20px] ${isActive ? 'text-white' : ''}`} />
+                  <span className="truncate">{item.label}</span>
+                </div>
+
+                {item.badge !== undefined && (
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-primary-container/20 text-primary-container'
+                    }`}
+                  >
+                    {item.badge}
+                  </span>
+                )}
+              </a>
+            );
+          })}
+        </div>
+
+        {/* Sidebar Footer */}
+        <div className="p-4 border-t border-surface-container-highest/40 bg-surface-container-lowest/60 flex flex-col gap-2">
+          <div className="bg-surface-container-low p-2.5 rounded-xl shadow-inner flex flex-col gap-1">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase font-bold text-on-surface-variant">Live Ops Channel</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-escrow"></span>
+            </div>
+            <span className="text-[11px] text-tertiary font-mono">Uganda Node #EAT-KLA-01</span>
+          </div>
+          <div className="flex items-center justify-between text-[11px] text-on-surface-variant px-1">
+            <span>SwiftCart v2.8</span>
+            <span className="font-semibold text-tertiary">Active</span>
+          </div>
+        </div>
+      </aside>
+
       {/* 3. SCREEN CHILDREN (Rendered inside main container) */}
       <div
         className={`flex-1 flex flex-col w-full relative ${
-          role === 'seller' || role === 'super-admin' ? 'md:pl-[72px]' : ''
+          role === 'seller' || role === 'super-admin' ? 'md:pl-[72px] lg:pl-72' : 'lg:pl-72'
         } ${navConfig.bottomBarItems.length > 0 ? 'pb-20 md:pb-6' : 'pb-6'} min-h-screen`}
       >
         {children}
