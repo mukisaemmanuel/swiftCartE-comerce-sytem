@@ -49,9 +49,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<div className="grid grid-cols-1 md:grid-cols-12 gap-space-md items-start">
 
-<div className="lg:col-span-7 xl:col-span-7 flex flex-col relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-md">
+<div className="md:col-span-7 flex flex-col relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-md">
 
 <div className="relative w-full h-[580px] lg:h-[720px] bg-slate-900 overflow-hidden select-none">
 
@@ -204,7 +204,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 
-<div className="lg:col-span-5 flex flex-col gap-space-md">
+<div className="md:col-span-5 flex flex-col gap-space-md">
 
 <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
 <div className="flex items-start justify-between gap-space-sm">

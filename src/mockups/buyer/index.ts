@@ -51,3 +51,5 @@ export { SplashFirstOpen } from './SplashFirstOpen';
 export { SplashWelcome } from './SplashWelcome';
 export { AddMobileMoney } from './AddMobileMoney';
 export { MtnMomoUssd } from './MtnMomoUssd';
+export { MtnMomoUssd165PinPrompt } from './MtnMomoUssd165PinPrompt';
+export { FollowedStoresSwiftcartUganda1 } from './FollowedStoresSwiftcartUganda1';

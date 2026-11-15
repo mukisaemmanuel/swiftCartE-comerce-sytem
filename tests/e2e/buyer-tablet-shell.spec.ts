@@ -2,12 +2,15 @@ import { test, expect, type ConsoleMessage } from '@playwright/test';
 import { allRoutes } from '../../src/routes';
 
 test.describe('Buyer Tablet Shell Quality Gate (834x1112)', () => {
+  const seen = new Set<string>();
   const tabletBuyerRoutes = allRoutes.filter(
     (r) =>
       r.role === 'buyer' &&
       (r.designFiles.tablet ||
         (Array.isArray(r.designFiles.all) &&
-          r.designFiles.all.some((f) => f.includes('design/tablet/buyer'))))
+          r.designFiles.all.some((f) => f.includes('design/tablet/buyer')))) &&
+      !seen.has(r.path) &&
+      seen.add(r.path)
   );
 
   for (const route of tabletBuyerRoutes) {

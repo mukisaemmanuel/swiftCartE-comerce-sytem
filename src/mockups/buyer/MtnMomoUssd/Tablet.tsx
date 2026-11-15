@@ -107,7 +107,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 
-<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm">
+<div className="fixed inset-0 z-40 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm">
 <div className="w-full max-w-[480px] bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col relative transform transition-all">
 
 <div className="bg-[#FFCC00] px-4 py-2 flex items-center justify-between">

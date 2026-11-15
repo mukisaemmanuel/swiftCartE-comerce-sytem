@@ -56,6 +56,8 @@ import {
   SplashWelcome,
   AddMobileMoney,
   MtnMomoUssd,
+  MtnMomoUssd165PinPrompt,
+  FollowedStoresSwiftcartUganda1,
 } from '../mockups/buyer';
 
 export interface BuyerViewProps {
@@ -105,12 +107,14 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
     // 2. Categories
     if (path === '/categories') return <Categories onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/categories-mega-directory-2') return <CategoriesAlt onNavigate={onNavigate} onAction={handleAction} />;
-    if (path.startsWith('/categories') || path === '/search-categories') {
+    if (path === '/search-categories') return <SearchAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/categories')) {
       return <Categories onNavigate={onNavigate} onAction={handleAction} />;
     }
 
     // 3. Search & Results
-    if (path === '/search' || path === '/search-experience') return <Search onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/search-results-filter-drawer') return <Search onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/search' || path === '/search-experience' || path === '/search-results-1') return <Search onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/search-results-2') return <SearchAlt onNavigate={onNavigate} onAction={handleAction} />;
     if (path.startsWith('/search')) return <Search onNavigate={onNavigate} onAction={handleAction} />;
 
@@ -127,6 +131,7 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
 
     // 6. Followed Stores
     if (path === '/followed-stores-2') return <FollowedStoresAlt onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/followed-stores' || path === '/followed-stores-1') return <FollowedStoresSwiftcartUganda1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path.startsWith('/followed-stores')) return <FollowedStores onNavigate={onNavigate} onAction={handleAction} />;
 
     // 7. Wishlist
@@ -153,6 +158,7 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
     if (path.startsWith('/payment-methods')) return <PaymentMethods onNavigate={onNavigate} onAction={handleAction} />;
 
     // 13. Payment Waiting / USSD PIN Prompt
+    if (path === '/mtn-momo-ussd-165-pin-prompt') return <MtnMomoUssd165PinPrompt onNavigate={onNavigate} onAction={handleAction} />;
     if (path.startsWith('/mtn-momo-ussd')) return <MtnMomoUssd onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/checkout-one-flow-payment-waiting') return <PaymentWaiting onNavigate={onNavigate} onAction={handleAction} />;
 

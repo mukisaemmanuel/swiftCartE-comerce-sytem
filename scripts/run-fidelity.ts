@@ -108,7 +108,7 @@ export async function runHonestFidelity() {
     desktop: { width: 1440, height: 900 },
   } as const;
 
-  const sizes = ['mobile', 'tablet'] as const;
+  const sizes = ['mobile', 'tablet', 'desktop'] as const;
   const results: ScreenFidelityItem[] = [];
 
   // Collect all folders in design/<size>/<role>/<screen>
@@ -125,8 +125,11 @@ export async function runHonestFidelity() {
     const sizeDir = path.join(process.cwd(), 'design', size);
     if (!fs.existsSync(sizeDir)) continue;
     for (const role of fs.readdirSync(sizeDir)) {
-      // In Stage M5, tablet is buyer only; do not test seller/admin/rider/hub tablet
+      // Tablet and desktop are buyer only in this stage
       if (size === 'tablet' && role !== 'buyer') {
+        continue;
+      }
+      if (size === 'desktop' && role !== 'buyer') {
         continue;
       }
       const roleDir = path.join(sizeDir, role);
@@ -286,7 +289,7 @@ export async function runHonestFidelity() {
       }
 
       // 3. Screenshot full height at exact viewport width
-      const actualBuffer = await page.screenshot({ fullPage: true });
+      const actualBuffer = await page.screenshot({ fullPage: true, animations: 'disabled' });
 
       // Read screen.png
       let expectedImg = sharp(fullPath);
@@ -294,11 +297,15 @@ export async function runHonestFidelity() {
       let origW = meta.width || vp.width;
       let origH = meta.height || vp.height;
 
-      // Special case: add_mobile_money_bottom_sheet_swiftcart_uganda is a 1600x1280 desktop canvas containing a 390x844 mobile phone at (605, 218)
+      // Special cases for Stitch desktop canvases containing centered device viewports
       if (screen === 'add_mobile_money_bottom_sheet_swiftcart_uganda' && origW > 800) {
-        expectedImg = sharp(fullPath).extract({ left: 605, top: 218, width: 390, height: 844 });
+        expectedImg = sharp(fullPath).extract({ left: 590, top: 205, width: 390, height: 844 });
         origW = 390;
         origH = 844;
+      } else if (screen === 'sign_in_register_swiftcart_tablet' && origW > 1200) {
+        expectedImg = sharp(fullPath).extract({ left: 383, top: 40, width: 834, height: Math.min(1050, origH - 40) });
+        origW = 834;
+        origH = Math.min(1050, origH - 40);
       }
 
       // Scale screen.png to viewport width

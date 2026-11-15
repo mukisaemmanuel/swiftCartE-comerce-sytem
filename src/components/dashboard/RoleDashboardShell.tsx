@@ -437,15 +437,12 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
 
             {/* Drawer Footer */}
             <div className="p-3 border-t border-surface-container-highest/40 bg-surface-container-low/60 flex items-center justify-between">
-              <span className="text-[11px] text-on-surface-variant">SwiftCart v0.1.0 • Kampala</span>
-              <button
-                type="button"
-                onClick={() => onNavigate('/')}
-                className="text-[11px] font-bold text-error flex items-center gap-1 hover:underline"
-              >
-                <Icon name="logout" className="text-[14px]" />
-                <span>Exit Portal</span>
-              </button>
+              <span className="text-[11px] text-on-surface-variant font-medium">
+                {role === 'admin' ? 'v2.4.1 (UG-Cluster)' : role === 'seller' ? 'SwiftCart Seller v1.2' : role === 'hub' ? 'Station #01 • William St' : 'Master Control • Kampala'}
+              </span>
+              <span className="text-[10px] text-tertiary font-bold uppercase tracking-wider">
+                Active Session
+              </span>
             </div>
           </aside>
         </>
@@ -467,7 +464,8 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             {navConfig.bottomBarItems.map((item) => {
               const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
               const isParentActive = item.path !== '/' && item.path !== '/hub/more-hub-agent' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
-              const isActive = isExactActive || isParentActive;
+              const isGovernance = item.label === 'Governance' && (normalizedPath === '/super-admin/users-roles-super-admin' || normalizedPath === '/super-admin/platform-settings-super-admin');
+              const isActive = isExactActive || isParentActive || isGovernance;
               const isMore = item.label === 'More';
 
               return (

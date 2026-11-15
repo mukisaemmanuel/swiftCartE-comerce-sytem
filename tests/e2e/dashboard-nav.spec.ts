@@ -200,6 +200,25 @@ test.describe('Dashboard Unified Navigation Shell Quality Gate (390x844)', () =>
           );
           expect(isOverflowing, `Tab route ${tab.path} has horizontal scroll`).toBe(false);
         }
+
+        // Test Browser Back button after bottom-bar navigation
+        if (config.bottomBarItems.length > 1) {
+          console.log(`[${role}] Testing browser back button after bottom-bar navigation`);
+          const urlBeforeBack = new URL(page.url()).pathname;
+          await page.goBack();
+          await page.waitForTimeout(300);
+          const urlAfterBack = new URL(page.url()).pathname;
+          expect(urlAfterBack, `Expected URL to change after browser back`).not.toBe(urlBeforeBack);
+
+          // Assert shell is still intact
+          const backMarkerBottom = await page.evaluate(() => {
+            const h = document.querySelector('[data-testid="shared-dashboard-header"]') as (HTMLElement & { _shellMountMarker?: string }) | null;
+            return h ? h._shellMountMarker : null;
+          });
+          expect(backMarkerBottom, `Shell header remounted after browser back from bottom bar`).toBe(
+            'swiftcart-single-instance'
+          );
+        }
       }
 
       // 6. Assert 0 Console Errors
