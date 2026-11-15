@@ -22,8 +22,7 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0"><Icon name="arrow_back_ios_new" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Discounts And Ads</h1></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter pb-space-xl gap-space-lg">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter pb-space-xl gap-space-lg">
 <div className="flex items-center justify-between pt-space-sm">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Campaign Suite</span>
@@ -70,7 +69,7 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active
               </span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">15% OFF storewide • Min UGX 100,000</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">15% OFF storewide • Min UGX 100,000</p>
 </div>
 </div>
 </div>
@@ -114,7 +113,7 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
               </span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">UGX 15,000 OFF • Baseus 65W GaN Charger</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 15,000 OFF • Baseus 65W GaN Charger</p>
 </div>
 </div>
 </div>
@@ -181,20 +180,20 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 </div>
 <div className="flex flex-col items-end">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Daily Cap</span>
-<span className="font-label-lg text-label-lg font-bold text-on-surface">UGX 15,000</span>
+<span className="font-label-lg text-label-lg font-bold text-on-surface whitespace-nowrap">UGX 15,000</span>
 </div>
 </div>
 <div className="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
 <div className="flex flex-col">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Total Spent</span>
-<span className="font-label-lg text-label-lg font-bold text-on-surface">UGX 75,000</span>
+<span className="font-label-lg text-label-lg font-bold text-on-surface whitespace-nowrap">UGX 75,000</span>
 </div>
 <div className="flex flex-col">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Ad Impressions</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface">1,420</span>
 </div>
 <div className="flex flex-col mt-1">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Clicks (UGX 412 CPC)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Clicks (UGX 412 CPC)</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface">182</span>
 </div>
 <div className="flex flex-col mt-1">
@@ -223,8 +222,8 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 </div>
 <p className="font-label-md text-label-md font-bold text-on-surface truncate">SoundCore Space One ANC Hi-Res</p>
 <div className="flex items-center gap-space-xs mt-0.5">
-<span className="font-label-lg text-label-lg font-bold text-primary">UGX 380,000</span>
-<span className="font-body-sm text-body-sm text-outline line-through">UGX 450,000</span>
+<span className="font-label-lg text-label-lg font-bold text-primary whitespace-nowrap">UGX 380,000</span>
+<span className="font-body-sm text-body-sm text-outline line-through whitespace-nowrap">UGX 450,000</span>
 </div>
 </div>
 </div>
@@ -257,7 +256,7 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 <button className="py-space-sm font-label-md text-label-md rounded-lg bg-surface shadow-sm font-bold text-primary transition-all" id="btnTypePercent">
             Percentage (%)
           </button>
-<button className="py-space-sm font-label-md text-label-md rounded-lg font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="btnTypeFixed">
+<button className="py-space-sm font-label-md text-label-md rounded-lg font-semibold text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" id="btnTypeFixed">
             Fixed Amount (UGX)
           </button>
 </div>
@@ -278,7 +277,7 @@ export const DiscountsAdsSwiftcartSeller: React.FC<DiscountsAdsSwiftcartSellerPr
 <input className="bg-surface-container-low rounded-lg px-space-md py-space-sm font-label-lg text-label-lg font-bold text-on-surface outline-none focus:bg-surface" type="number" value="15" />
 </div>
 <div className="flex flex-col gap-space-xs">
-<label className="font-label-md text-label-md text-on-surface font-semibold">Min Spend (UGX)</label>
+<label className="font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">Min Spend (UGX)</label>
 <input className="bg-surface-container-low rounded-lg px-space-md py-space-sm font-label-lg text-label-lg font-bold text-on-surface outline-none focus:bg-surface" type="number" value="50000" />
 </div>
 </div>

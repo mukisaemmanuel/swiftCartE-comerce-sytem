@@ -22,8 +22,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Live Ops • Kampala Central</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Escrow Ledger</h1></div></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface"><Icon name="sync_alt" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full pb-8">
+      <main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full pb-8">
 
 <div className="mx-margin mb-space-md flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-low shadow-sm">
 <div className="flex items-center gap-space-xs">
@@ -108,7 +107,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
             Secured
           </span>
 </div>
-<div className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-0.5">
+<div className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-0.5 whitespace-nowrap">
           UGX 198,420,000
         </div>
 <div className="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
@@ -223,7 +222,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <div className="flex items-center justify-between bg-surface-container-high/60 rounded-lg p-2.5 mb-space-md">
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Held</span>
-<span className="font-price-display text-price-display text-on-surface">UGX 1,150,000</span>
+<span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 1,150,000</span>
 </div>
 <span className="text-danger-penalty font-label-sm text-label-sm bg-danger-penalty/10 px-2 py-1 rounded">Seller Unresponsive</span>
 </div>
@@ -252,7 +251,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <div className="flex items-center justify-between mb-space-md px-1">
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Disbursement Gross Total</span>
-<span className="font-price-display text-price-display text-emerald-escrow">UGX 34,250,000</span>
+<span className="font-price-display text-price-display text-emerald-escrow whitespace-nowrap">UGX 34,250,000</span>
 </div>
 <div className="text-right">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Automated Audit</span>
@@ -325,7 +324,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <div className="space-y-space-sm font-body-sm text-body-sm">
 <div className="flex items-center justify-between">
 <span className="text-on-surface-variant truncate">Auto-Escrow release #TX-48192 (Airtel)</span>
-<span className="text-emerald-escrow font-label-sm text-label-sm flex-shrink-0">+UGX 420,000</span>
+<span className="text-emerald-escrow font-label-sm text-label-sm flex-shrink-0 whitespace-nowrap">+UGX 420,000</span>
 </div>
 <div className="flex items-center justify-between">
 <span className="text-on-surface-variant truncate">Boda #BD-349 reached Ntinda Hub</span>
@@ -340,7 +339,6 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 </section>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="manifest-runs" href="#"><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="hub-scanner" href="#"><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="escrow-ledger" href="#"><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Escrow</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#"><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

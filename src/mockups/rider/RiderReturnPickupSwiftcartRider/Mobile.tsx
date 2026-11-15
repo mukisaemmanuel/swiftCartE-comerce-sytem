@@ -22,8 +22,7 @@ export const RiderReturnPickupSwiftcartRider: React.FC<RiderReturnPickupSwiftcar
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go Back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors shrink-0"><Icon name="arrow_back" className="text-[22px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 ml-1"><div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-tertiary inline-block"></span><span className="font-label-sm text-label-sm text-tertiary font-bold">Online</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface truncate">Return Pickup Task</h1></div></div><div className="flex items-center gap-space-xs shrink-0"><div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-label-md font-bold shrink-0">KB</div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-32">
+      <main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-32">
 <section className="px-margin pt-space-md">
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
 <div className="flex items-center justify-between pb-space-sm border-b border-surface-container-high/60">
@@ -55,7 +54,7 @@ export const RiderReturnPickupSwiftcartRider: React.FC<RiderReturnPickupSwiftcar
 </div>
 <div className="text-right">
 <p className="font-label-sm text-label-sm text-on-surface-variant">Value</p>
-<p className="font-headline-sm text-[15px] font-bold text-primary">UGX 248,500</p>
+<p className="font-headline-sm text-[15px] font-bold text-primary whitespace-nowrap">UGX 248,500</p>
 </div>
 </div>
 </div>

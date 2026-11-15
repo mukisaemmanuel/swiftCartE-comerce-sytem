@@ -22,8 +22,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Audit Log</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full gap-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full gap-space-md">
 
 <div className="w-full bg-inverse-surface text-inverse-on-surface rounded-xl p-space-sm shadow-md flex items-start gap-space-sm">
 <div className="w-8 h-8 rounded-lg bg-surface-tint/20 flex items-center justify-center shrink-0 text-primary-container">
@@ -124,7 +123,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <div className="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1">
 <div className="flex items-center justify-between text-on-surface">
 <span className="font-label-md text-label-md font-bold">Payout #PO-8812</span>
-<span className="font-label-md text-label-md font-extrabold text-primary-container">UGX 5,280,000</span>
+<span className="font-label-md text-label-md font-extrabold text-primary-container whitespace-nowrap">UGX 5,280,000</span>
 </div>
 <div className="flex items-center gap-1 font-body-sm text-body-sm text-secondary truncate">
 <Icon name="store" className="text-[15px] text-tertiary" />
@@ -313,7 +312,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <div className="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1">
 <div className="flex items-center justify-between text-on-surface">
 <span className="font-label-md text-label-md font-bold">Case #RT-309</span>
-<span className="font-label-md text-label-md font-extrabold text-on-surface">UGX 280,000</span>
+<span className="font-label-md text-label-md font-extrabold text-on-surface whitespace-nowrap">UGX 280,000</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-tight mt-0.5">
             Disputed parcel transit: Damaged display panel reported by buyer. Funds locked in SwiftEscrow smart-vault.

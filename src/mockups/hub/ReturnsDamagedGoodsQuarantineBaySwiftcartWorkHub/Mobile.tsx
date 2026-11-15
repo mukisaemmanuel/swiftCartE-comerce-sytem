@@ -22,8 +22,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider truncate">SwiftCart Hub</span><span className="flex h-2 w-2 rounded-full bg-tertiary-container animate-pulse"></span></div><span className="font-label-md text-label-md text-on-surface font-semibold truncate">William St Central</span></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Toggle Torch" className="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button"><Icon name="flashlight_on" className="text-[20px]" /></button><button aria-label="Toggle Audio Cue" className="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button"><Icon name="volume_up" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ml-space-xs shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col w-full bg-surface pt-16 pb-20"><div className="flex flex-col w-full">
+      <main className="flex-1 flex flex-col w-full bg-surface pt-16 pb-20"><div className="flex flex-col w-full">
 
 <div className="hidden mx-margin mt-space-sm p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-md flex items-center justify-between gap-space-sm animate-pulse" id="statusToast">
 <div className="flex items-center gap-space-xs min-w-0">
@@ -81,7 +80,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="bg-surface-container-lowest p-space-xs rounded-lg shadow-sm">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Frozen Escrow</span>
 <div className="flex items-baseline gap-0.5 mt-0.5">
-<span className="font-label-sm text-label-sm font-bold text-primary">UGX</span>
+<span className="font-label-sm text-label-sm font-bold text-primary whitespace-nowrap">UGX</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface truncate">12,450,000</span>
 </div>
 </div>
@@ -156,7 +155,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <Icon name="lock" className="text-primary text-[20px]" />
 <div>
 <span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Stanbic Escrow Guarantee</span>
-<span className="font-price-display text-price-display text-primary font-bold">UGX 1,850,000</span>
+<span className="font-price-display text-price-display text-primary font-bold whitespace-nowrap">UGX 1,850,000</span>
 </div>
 </div>
 <span className="px-2 py-1 bg-surface-container-highest rounded text-on-surface font-label-sm text-label-sm font-bold">Safety Locked</span>
@@ -263,7 +262,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 </div>
 <div className="text-right shrink-0">
-<span className="font-label-sm text-label-sm font-bold text-on-surface block">UGX 320,000</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface block whitespace-nowrap">UGX 320,000</span>
 <button className="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
             Audit
           </button>
@@ -287,7 +286,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 </div>
 <div className="text-right shrink-0">
-<span className="font-label-sm text-label-sm font-bold text-on-surface block">UGX 1,150,000</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface block whitespace-nowrap">UGX 1,150,000</span>
 <button className="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
             Audit
           </button>
@@ -311,7 +310,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 </div>
 <div className="text-right shrink-0">
-<span className="font-label-sm text-label-sm font-bold text-on-surface block">UGX 480,000</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface block whitespace-nowrap">UGX 480,000</span>
 <button className="mt-1 px-2.5 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold rounded hover:bg-surface-container-high transition-colors" type="button">
             Audit
           </button>
@@ -341,7 +340,6 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(13,28,47,0.06)]" data-active-classes="text-primary font-bold"><div className="h-16 px-space-xs flex items-center justify-around"><a className="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="overview-deck" href="#"><Icon name="dashboard" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-space-xs">Deck</span></a><a className="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="inbound-receiving" href="#"><Icon name="move_to_inbox" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-space-xs">Inbound</span></a><a className="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="sorting-chutes" href="#"><Icon name="alt_route" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-space-xs">Sort</span></a><a className="flex flex-col items-center justify-center flex-1 h-full text-secondary hover:text-on-surface transition-colors" data-path="linehaul-dispatch" href="#"><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-space-xs">Linehaul</span></a><a aria-current="page" className="flex flex-col items-center justify-center flex-1 h-full transition-colors text-primary font-bold" data-path="hub-inventory" href="#"><Icon name="inventory_2" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-space-xs">Staging</span></a></div></nav>
     </div>
   );
 };

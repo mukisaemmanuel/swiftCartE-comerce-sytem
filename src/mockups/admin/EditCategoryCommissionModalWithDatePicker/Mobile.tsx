@@ -22,8 +22,7 @@ export const EditCategoryCommissionModalWithDatePicker: React.FC<EditCategoryCom
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm min-w-0"><button aria-label="Dismiss overlay" className="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors flex-shrink-0"><Icon name="close" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><span className="font-label-sm text-label-sm text-error uppercase tracking-wider">Action Authorization</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate">Kill Switch Confirmation</h1></div></div><div className="flex items-center gap-space-sm flex-shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full relative">
+      <main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full relative">
 
 <div className="w-full px-margin py-space-md opacity-30 blur-[2px] pointer-events-none select-none flex flex-col gap-space-md">
 <div className="bg-surface-container-high rounded-xl p-space-md shadow-sm">
@@ -58,7 +57,7 @@ export const EditCategoryCommissionModalWithDatePicker: React.FC<EditCategoryCom
               </span>
 <span className="font-body-sm text-body-sm text-secondary truncate">• Platform Settings</span>
 </div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5 whitespace-nowrap">
               Edit Category Commission Rate
             </h2>
 </div>
@@ -92,15 +91,15 @@ export const EditCategoryCommissionModalWithDatePicker: React.FC<EditCategoryCom
 <Icon name="history" className="text-[15px] text-tertiary" />
                 Nov 1 Override: Subsidized from 9.0% by SA-01
               </span>
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest rounded text-on-surface">UGX Market Hub</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest rounded text-on-surface whitespace-nowrap">UGX Market Hub</span>
 </div>
 <div className="flex items-center justify-between pt-1 font-body-sm text-body-sm">
 <span className="text-secondary">Gross Volume:</span>
-<span className="font-label-md text-label-md text-on-surface">~UGX 34.2M / mo</span>
+<span className="font-label-md text-label-md text-on-surface whitespace-nowrap">~UGX 34.2M / mo</span>
 </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm">
 <span className="text-secondary">Effective Take-Rate:</span>
-<span className="font-label-md text-label-md text-tertiary">UGX 2.73M / mo</span>
+<span className="font-label-md text-label-md text-tertiary whitespace-nowrap">UGX 2.73M / mo</span>
 </div>
 </div>
 </div>
@@ -150,15 +149,15 @@ export const EditCategoryCommissionModalWithDatePicker: React.FC<EditCategoryCom
             </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm">
 <span className="text-on-secondary-container">Current Take-Rate:</span>
-<span className="font-label-md text-label-md text-on-secondary-fixed">UGX 3,428,000 / day</span>
+<span className="font-label-md text-label-md text-on-secondary-fixed whitespace-nowrap">UGX 3,428,000 / day</span>
 </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm">
 <span className="text-on-secondary-container">Projected New Take-Rate:</span>
-<span className="font-label-md text-label-md text-on-secondary-fixed" id="projected-take-rate">UGX 3,213,750 / day</span>
+<span className="font-label-md text-label-md text-on-secondary-fixed whitespace-nowrap" id="projected-take-rate">UGX 3,213,750 / day</span>
 </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm">
 <span className="text-on-secondary-container">Revenue Variance:</span>
-<span className="font-label-md text-label-md text-error" id="variance-val">-UGX 214,250 / day (-6.25%)</span>
+<span className="font-label-md text-label-md text-error whitespace-nowrap" id="variance-val">-UGX 214,250 / day (-6.25%)</span>
 </div>
 
 <div className="mt-2 pt-2 bg-surface-container-lowest/80 rounded-lg p-2.5 flex items-start gap-2">

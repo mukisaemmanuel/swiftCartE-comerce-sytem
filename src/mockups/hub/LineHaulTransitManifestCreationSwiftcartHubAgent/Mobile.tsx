@@ -22,8 +22,7 @@ export const LineHaulTransitManifestCreationSwiftcartHubAgent: React.FC<LineHaul
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go Back" className="w-11 h-11 -ml-1 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate font-bold">Package Detail</h1><span className="font-label-sm text-label-sm text-on-surface-variant truncate">Station #04 - Kampala</span></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 w-full bg-surface pt-16 pb-safe"><div className="flex flex-col w-full">
+      <main className="flex-1 w-full bg-surface pt-16 pb-safe"><div className="flex flex-col w-full">
 
 <div className="px-margin pt-space-sm pb-space-sm bg-surface-container-low flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
@@ -163,7 +162,7 @@ export const LineHaulTransitManifestCreationSwiftcartHubAgent: React.FC<LineHaul
 </div>
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Insured Escrow</span>
-<span className="font-label-lg text-label-lg text-on-surface font-bold truncate">UGX 26,450,000</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">UGX 26,450,000</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Full Goods-In-Transit cover</span>
 </div>
 </div>

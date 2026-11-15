@@ -22,8 +22,7 @@ export const BodaRiderDeliveryTaskExecutionCodeEntry: React.FC<BodaRiderDelivery
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-gutter flex items-center justify-between gap-space-xs"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">SwiftCart Hub</span><span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-[9px] font-bold"><span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse mr-1"></span>4G KLA</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Boda Rider Delivery</h1></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Toggle Theme" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[22px]" /></button><button aria-label="Notifications" className="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span className="font-label-sm text-label-sm font-bold text-on-primary">KB</span></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div className="flex flex-col w-full px-gutter space-y-space-md pb-space-xl">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div className="flex flex-col w-full px-gutter space-y-space-md pb-space-xl">
 
 <div className="flex items-center justify-between bg-surface-container-low rounded-xl p-space-sm shadow-sm">
 <div className="flex items-center gap-space-sm min-w-0">
@@ -94,7 +93,7 @@ export const BodaRiderDeliveryTaskExecutionCodeEntry: React.FC<BodaRiderDelivery
 <div className="space-y-0.5 min-w-0">
 <div className="flex items-center gap-space-xs">
 <Icon name="person_pin" className="text-[18px] text-primary" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">Ronald K.</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Ronald K.</h2>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Nakawa District Zone (Address Masked for Safety)</p>
 </div>
@@ -125,7 +124,7 @@ export const BodaRiderDeliveryTaskExecutionCodeEntry: React.FC<BodaRiderDelivery
 </ul>
 <div className="flex items-center justify-between pt-space-xs">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Package Value</span>
-<span className="font-label-lg text-label-lg font-extrabold text-on-surface">UGX 365,000</span>
+<span className="font-label-lg text-label-lg font-extrabold text-on-surface whitespace-nowrap">UGX 365,000</span>
 </div>
 </div>
 
@@ -195,12 +194,11 @@ export const BodaRiderDeliveryTaskExecutionCodeEntry: React.FC<BodaRiderDelivery
 </div>
 
 <div className="space-y-space-xs pt-space-xs">
-<button className="w-full min-h-[52px] py-3.5 px-space-md rounded-xl bg-primary-container text-on-primary shadow-lg font-label-lg text-label-lg font-extrabold flex flex-col items-center justify-center active:scale-98 transition-transform" id="submit-handover-btn"><span className="tracking-wide">Verify Code &amp; Complete Delivery</span><span className="font-label-sm text-label-sm text-on-primary/90 font-medium">UGX 8,500 Rider Fare Credited Instantly</span></button>
+<button className="w-full min-h-[52px] py-3.5 px-space-md rounded-xl bg-primary-container text-on-primary shadow-lg font-label-lg text-label-lg font-extrabold flex flex-col items-center justify-center active:scale-98 transition-transform" id="submit-handover-btn"><span className="tracking-wide">Verify Code &amp; Complete Delivery</span><span className="font-label-sm text-label-sm text-on-primary/90 font-medium whitespace-nowrap">UGX 8,500 Rider Fare Credited Instantly</span></button>
 <button className="w-full py-2.5 px-space-md rounded-xl bg-transparent text-secondary hover:text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors"><Icon name="report_problem" className="text-[18px]" /><span className="">Report Delivery Issue / Damaged Item</span></button>
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold"><div className="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" className="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs transition-colors text-primary font-bold" data-path="boda-rider-delivery" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Rider</span></a><a className="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs text-on-surface-variant transition-colors" data-path="hub-intake-sorting" href="#"><Icon name="warehouse" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Hub Intake</span></a><a className="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs text-on-surface-variant transition-colors" data-path="seller-catalog" href="#"><Icon name="storefront" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Seller Store</span></a><a className="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs text-on-surface-variant transition-colors" data-path="work-telematics" href="#"><Icon name="monitoring" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Telematics</span></a><a className="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs text-on-surface-variant transition-colors" data-path="operations-profile" href="#"><Icon name="badge" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Operator</span></a></div></nav>
     </div>
   );
 };

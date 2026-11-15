@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RouteDefinition } from '../routes/types';
 import { useDashboardTheme } from '../context/ThemeContext';
+import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
 
 // Converted Rider Mockup Screens
 import {
@@ -77,9 +78,9 @@ export const RiderView: React.FC<RiderViewProps> = ({ route, onNavigate }) => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
+    <RoleDashboardShell role="rider" currentPath={path} onNavigate={onNavigate}>
       {renderActiveScreen()}
-    </div>
+    </RoleDashboardShell>
   );
 };
 

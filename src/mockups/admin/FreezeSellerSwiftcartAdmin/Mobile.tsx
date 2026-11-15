@@ -22,8 +22,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-space-sm flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button aria-label="Go back" className="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface truncate ml-space-xs leading-tight">Freeze Seller</h1></div><div className="flex items-center gap-space-xs mr-space-sm"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div><div className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-on-surface select-none">AD</div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full relative">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full relative">
 
 <div className="fixed inset-0 bg-on-surface/40 backdrop-blur-[3px] pointer-events-none z-10 transition-opacity"></div>
 
@@ -38,7 +37,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
 <div className="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
 <Icon name="pause_circle" className="text-[20px]" />
 </div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">Freeze Seller &amp; Listings</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Freeze Seller &amp; Listings</h2>
 </div>
 <button aria-label="Close modal" className="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
 <Icon name="close" className="text-[20px]" />
@@ -87,7 +86,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
 <p className="font-label-lg text-label-lg text-on-error-container leading-snug">
             Immediate Store Restriction
           </p>
-<p className="font-body-sm text-body-sm text-on-error-container/90 mt-1 leading-relaxed">
+<p className="font-body-sm text-body-sm text-on-error-container/90 mt-1 leading-relaxed whitespace-nowrap">
             Freezing immediately unpublishes all 34 active listings from search and holds pending escrow payouts of UGX 8,450,000. Customer orders in progress must still be fulfilled or refunded.
           </p>
 </div>

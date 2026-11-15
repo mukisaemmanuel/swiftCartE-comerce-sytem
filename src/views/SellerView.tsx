@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RouteDefinition } from '../routes/types';
 import { useDashboardTheme } from '../context/ThemeContext';
+import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
 
 // Converted Seller Mockup Screens
 import {
@@ -104,9 +105,9 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
+    <RoleDashboardShell role="seller" currentPath={path} onNavigate={onNavigate}>
       {renderActiveScreen()}
-    </div>
+    </RoleDashboardShell>
   );
 };
 

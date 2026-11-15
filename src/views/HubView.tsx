@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RouteDefinition } from '../routes/types';
 import { useDashboardTheme } from '../context/ThemeContext';
+import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
 
 // Converted Hub Mockup Screens
 import {
@@ -96,9 +97,9 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
+    <RoleDashboardShell role="hub" currentPath={path} onNavigate={onNavigate}>
       {renderActiveScreen()}
-    </div>
+    </RoleDashboardShell>
   );
 };
 

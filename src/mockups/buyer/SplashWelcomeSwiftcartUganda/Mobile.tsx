@@ -29,7 +29,7 @@ export const SplashWelcomeSwiftcartUganda: React.FC<SplashWelcomeSwiftcartUganda
 </div>
 
 <div className="relative w-[190px] h-[144px] flex items-center justify-center p-2 rounded-xl bg-surface-container-lowest shadow-md">
-<img alt="SwiftCart" className="w-full h-full object-contain" src="/brand/logo-full.png" />
+<img alt="SwiftCart" className="w-full h-full object-contain" src="/brand/swiftcart-logo-icon.png" />
 </div>
 
 <p className="font-headline-sm text-headline-sm text-on-surface mt-space-md tracking-tight">

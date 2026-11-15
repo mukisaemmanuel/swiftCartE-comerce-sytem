@@ -20,4 +20,15 @@ This file tracks visual oddities, text/currency inconsistencies, and wording pol
 - **Theme Variants (Dark vs Light)**:
   Mockups across `design/*/seller/` include a mix of light and dark screens (`_light` vs `_dark`). The Seller dashboard defaults to dark theme (`#0f172a` background, `#f9fafb` text) and provides a theme toggle button for light mode.
 
+## Stage M5 Additions & Intentional Differences
+- **Role Dashboard Unified Shell (Seller, Admin, Super-Admin, Rider, Hub)**:
+  Original Stitch phone mockups featured disconnected dummy `href="#"` links and fragmented navigation (e.g. 11 seller screens had baked-in drawers while others had none; hub screens had 3 conflicting menus). A persistent `RoleDashboardShell` now unifies all 5 roles with a shared top bar (logo, role title, theme toggle, hamburger), drawer with backdrop and close button, and active tab highlights. Inverted/baked-in headers were cleanly removed from screen components to avoid header duplication.
+- **Buyer Tablet Minimum Font Size (834x1112 Accessibility)**:
+  Stitch tablet mockups included multiple `text-[10px]` and `--text-label-sm: 10px` elements. For tablet readability and WCAG accessibility standards, typography on tablet viewports (>=768px) is enforced at a minimum of 12px (`--text-label-sm: 12px; font-size: 12px !important;`).
+- **Modal Backdrops and Overlays**:
+  Screens such as `/mtn-momo-ussd-165-pin-prompt` and `/add-money-bottom-sheet` render as interactive overlays (`fixed inset-0 z-50 flex flex-col justify-center items-center`) over the application context rather than isolated standalone pages, causing expected diff percent with isolated static mockup PNGs.
+- **Dynamic Boda Map Graphics**:
+  `/live-boda-rider-tracking` renders live SVG paths, boda rider speed indicators, and drop-off markers. The slight coordinate differences between static mockups and responsive tablet rendering account for pixel diffs while DOM structures remain authentic.
+
+
 

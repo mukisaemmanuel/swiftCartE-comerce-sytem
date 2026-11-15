@@ -22,8 +22,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Sellers Directory</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full space-y-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full space-y-space-md">
 
 <div className="relative w-full">
 <div className="bg-surface-container-low rounded-xl p-space-xs shadow-sm flex items-center gap-space-sm">
@@ -86,7 +85,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 </div>
 <div className="min-w-0">
 <div className="flex items-center gap-space-xs flex-wrap">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda Official</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">SoundCore Uganda Official</h2>
 </div>
 <p className="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
 <span className="text-on-surface-variant font-label-md">#VND-8821</span>
@@ -114,7 +113,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="grid grid-cols-3 gap-space-xs">
 <div className="bg-surface-container-low p-2.5 rounded-lg">
 <span className="font-label-sm text-label-sm text-secondary block leading-tight">Total Sales GMV</span>
-<span className="font-headline-sm text-headline-sm text-primary block mt-1 tracking-tight">UGX 184.2M</span>
+<span className="font-headline-sm text-headline-sm text-primary block mt-1 tracking-tight whitespace-nowrap">UGX 184.2M</span>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 mt-0.5">
 <Icon name="trending_up" className="text-[12px]" /> +14.2% MoM
         </span>
@@ -176,7 +175,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 </div>
 </div>
 <div className="min-w-0">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">Kampala Phone Hub</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Kampala Phone Hub</h2>
 <p className="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
 <span className="text-on-surface-variant font-label-md">#VND-9102</span>
 <span>•</span>
@@ -206,7 +205,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="grid grid-cols-2 gap-space-xs text-on-surface">
 <div className="bg-surface-container-low p-2.5 rounded-lg">
 <span className="font-label-sm text-label-sm text-secondary block">Pending Escrow Hold</span>
-<span className="font-headline-sm text-headline-sm text-error block mt-0.5">UGX 12,450,000</span>
+<span className="font-headline-sm text-headline-sm text-error block mt-0.5 whitespace-nowrap">UGX 12,450,000</span>
 </div>
 <div className="bg-surface-container-low p-2.5 rounded-lg">
 <span className="font-label-sm text-label-sm text-secondary block">Frozen Catalog Items</span>
@@ -225,7 +224,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="flex items-center gap-space-sm">
 <img className="w-12 h-12 rounded-xl object-cover bg-surface-container shadow-sm" data-alt="Cosmetics and beauty supplies distribution showroom with polished white counter displays and orderly branded skin care bottles in bright daylight" src="/images/7a0761267f3887de.webp" />
 <div className="min-w-0">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">Victoria Beauty Importers</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Victoria Beauty Importers</h2>
 <p className="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
 <span className="text-on-surface-variant font-label-md">#VND-7744</span>
 <span>•</span>
@@ -240,7 +239,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="grid grid-cols-3 gap-space-xs pt-1">
 <div className="bg-surface-container-low p-2 rounded-lg text-center">
 <span className="font-label-sm text-label-sm text-secondary block">GMV Total</span>
-<span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 42.0M</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 42.0M</span>
 </div>
 <div className="bg-surface-container-low p-2 rounded-lg text-center">
 <span className="font-label-sm text-label-sm text-secondary block">Rating</span>
@@ -400,7 +399,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <span className="text-primary font-bold">Onboarded</span>
 </div>
 <p className="text-on-surface font-label-md text-label-md">URA TIN Validation &amp; Bank Linking</p>
-<p className="text-secondary text-body-sm mt-0.5">Stanbic Bank UG Escrow merchant account tied and tested via UGX 5,000 micro-deposit.</p>
+<p className="text-secondary text-body-sm mt-0.5 whitespace-nowrap">Stanbic Bank UG Escrow merchant account tied and tested via UGX 5,000 micro-deposit.</p>
 </div>
 </div>
 <button className="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg" type="button">

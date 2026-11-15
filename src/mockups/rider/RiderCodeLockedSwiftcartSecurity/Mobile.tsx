@@ -22,8 +22,7 @@ export const RiderCodeLockedSwiftcartSecurity: React.FC<RiderCodeLockedSwiftcart
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back or close" className="w-11 h-11 -ml-1 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors"><Icon name="arrow_back" className="text-[22px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 pl-1"><span className="font-label-sm text-label-sm text-primary uppercase tracking-wider">SwiftCart Hub</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Security Lockout</h1></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full pb-8">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full pb-8">
 
 <div className="px-gutter pt-space-md">
 <div className="bg-error-container rounded-xl p-space-md shadow-md flex items-start gap-space-md">
@@ -48,7 +47,7 @@ export const RiderCodeLockedSwiftcartSecurity: React.FC<RiderCodeLockedSwiftcart
 <span className="font-label-lg text-label-lg text-on-surface">Escrow &amp; Asset Protection Guard</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-snug">
-        Automated freeze triggered to protect buyer escrow funds of <span className="font-headline-sm text-headline-sm text-on-surface">UGX 248,500</span> and merchant inventory against unauthorized physical handover.
+        Automated freeze triggered to protect buyer escrow funds of <span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 248,500</span> and merchant inventory against unauthorized physical handover.
       </p>
 <div className="mt-space-sm flex items-center gap-2 bg-surface-container-lowest rounded-lg p-2 shadow-sm">
 <Icon name="verified_user" className="text-tertiary-container text-[18px]" />

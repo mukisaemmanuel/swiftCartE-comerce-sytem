@@ -1,5 +1,5 @@
 // Auto-generated from C:/Users/Mukisa_Emmanuel/Desktop/swiftCartE-comerce-sytem/design/mobile/seller/products_swiftcart_seller/code.html
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from '../../../components/shared/Icon';
 import { useDashboardTheme } from '../../../context/ThemeContext';
 
@@ -17,14 +17,12 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
   const { theme, toggleTheme } = useDashboardTheme();
   void theme;
   void toggleTheme;
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  
 
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
-      {drawerOpen && <div className="fixed inset-0 bg-black/60 z-40 lg:hidden" onClick={() => setDrawerOpen(false)} />}
-      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-xs"><button type="button" className="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu" onClick={() => setDrawerOpen(true)}><Icon name="menu" className="text-[22px]" /></button><div className="flex items-center gap-space-xs"><button aria-label="Open seller menu" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" id="drawer-trigger" onClick={() => setDrawerOpen(true)}><Icon name="menu" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><span className="font-label-lg text-label-lg font-bold text-on-surface truncate hidden min-[360px]:inline">SwiftCart Seller</span></div><div className="flex items-center gap-space-xs"><button aria-label="Quick Search" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all"><Icon name="search" className="text-[22px]" /></button><button aria-label="Notifications" className="relative w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all"><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">3</span></button><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop"></div>
-<aside className={`fixed top-0 bottom-0 left-0 z-50 w-[310px] max-w-[85vw] bg-surface-container-lowest text-on-surface shadow-[0_16px_36px_-6px_rgba(15,23,42,0.18)]  flex flex-col pt-safe pb-safe overflow-hidden fixed z-50 select-none ${drawerOpen ? 'translate-x-0 !translate-x-0' : '-translate-x-full lg:translate-x-0'} transition-transform duration-200 ${theme === 'dark' ? 'bg-[#0d1225] border-[#2f3448]/60' : 'bg-white border-slate-200'}`} id="seller-drawer"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="p-gutter flex items-start justify-between bg-surface-container-low"><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-9 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><span className="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Kikuubo Sound &amp; Gadgets Hub</span><div className="flex items-center gap-1 mt-0.5"><span className="w-2 h-2 rounded-full bg-tertiary-container inline-block"></span><span className="font-label-sm text-label-sm text-tertiary font-bold tracking-tight uppercase">Verified Seller</span><span className="font-label-sm text-label-sm text-on-secondary-container font-semibold ml-1">• UGX</span></div></div></div><button aria-label="Close Menu" className="w-11 h-11 -mr-2 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[22px]" /></button></div><div className="flex-1 overflow-y-auto px-gutter py-space-md space-y-space-md"><div className="space-y-space-xs"><span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Operations</span><nav className="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#" onClick={() => setDrawerOpen(false)}><Icon name="grid_view" className="text-[20px]" /><span>Overview</span></a><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="orders" href="#" onClick={() => setDrawerOpen(false)}><Icon name="local_mall" className="text-[20px]" /><span>Orders</span></a><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="riders" href="#" onClick={() => setDrawerOpen(false)}><Icon name="two_wheeler" className="text-[20px]" /><span>Riders</span></a><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="returns-and-disputes" href="#" onClick={() => setDrawerOpen(false)}><Icon name="assignment_return" className="text-[20px]" /><span>Returns &amp; Disputes</span></a></nav></div><div className="space-y-space-xs"><span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Catalog</span><nav className="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a aria-current="page" className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg transition-colors bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md" data-path="products" href="#" onClick={() => setDrawerOpen(false)}><Icon name="inventory_2" className="text-[20px]" /><span>Products</span></a><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="discounts-and-ads" href="#" onClick={() => setDrawerOpen(false)}><Icon name="campaign" className="text-[20px]" /><span>Discounts &amp; Ads</span></a></nav></div><div className="space-y-space-xs"><span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Financials</span><nav className="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="wallet-and-payouts" href="#" onClick={() => setDrawerOpen(false)}><Icon name="account_balance_wallet" className="text-[20px]" /><span>Wallet &amp; Payouts</span></a><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="analytics" href="#" onClick={() => setDrawerOpen(false)}><Icon name="monitoring" className="text-[20px]" /><span>Analytics</span></a></nav></div><div className="space-y-space-xs"><span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary px-space-xs">Store</span><nav className="space-y-1" data-active-classes="bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold shadow-md"><a className="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="store-profile" href="#" onClick={() => setDrawerOpen(false)}><Icon name="storefront" className="text-[20px]" /><span>Store Profile</span></a></nav></div></div><div className="p-gutter bg-surface-container-low space-y-space-xs"><a className="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="help-and-support" href="#" onClick={() => setDrawerOpen(false)}><Icon name="support_agent" className="text-[20px]" /><span>Help &amp; Support</span></a><button className="w-full flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-error hover:bg-error-container/20 font-label-md text-label-md transition-colors" onClick={() => setDrawerOpen(false)}><Icon name="logout" className="text-[20px]" /><span>Log Out</span></button></div></aside>
+      
+      <div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop"></div>
 <main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div className="flex flex-col w-full text-on-surface">
 
 <section className="px-margin py-space-sm flex flex-col gap-space-sm bg-surface-container-low">
@@ -124,10 +122,10 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
             </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant font-medium">82 sold</span>
 </div>
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1">SoundCore Space One Wireless Headphones</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1 whitespace-nowrap">SoundCore Space One Wireless Headphones</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">SKU: <span className="font-semibold text-on-surface">SC-SPO-BLK</span></p>
 <div className="flex items-baseline justify-between mt-1">
-<span className="font-headline-sm text-headline-sm font-extrabold text-primary">UGX 345,000</span>
+<span className="font-headline-sm text-headline-sm font-extrabold text-primary whitespace-nowrap">UGX 345,000</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed/30 px-1.5 py-0.5 rounded">14 units</span>
 </div>
 </div>
@@ -163,10 +161,10 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
             </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant font-medium">119 sold</span>
 </div>
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1">Baseus 65W GaN Dual-Port Fast Charger</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1 whitespace-nowrap">Baseus 65W GaN Dual-Port Fast Charger</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">SKU: <span className="font-semibold text-on-surface">BAS-GAN-65</span></p>
 <div className="flex items-baseline justify-between mt-1">
-<span className="font-headline-sm text-headline-sm font-extrabold text-primary">UGX 85,000</span>
+<span className="font-headline-sm text-headline-sm font-extrabold text-primary whitespace-nowrap">UGX 85,000</span>
 <span className="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/40 px-1.5 py-0.5 rounded">2 units left</span>
 </div>
 </div>
@@ -196,10 +194,10 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
             </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant font-medium">340 sold</span>
 </div>
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1">Anker PowerCore 20000mAh Power Bank</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1 whitespace-nowrap">Anker PowerCore 20000mAh Power Bank</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">SKU: <span className="font-semibold text-on-surface">ANK-PC-20</span></p>
 <div className="flex items-baseline justify-between mt-1">
-<span className="font-headline-sm text-headline-sm font-extrabold text-on-surface">UGX 160,000</span>
+<span className="font-headline-sm text-headline-sm font-extrabold text-on-surface whitespace-nowrap">UGX 160,000</span>
 <span className="font-label-sm text-label-sm text-error font-bold">0 units</span>
 </div>
 </div>
@@ -229,10 +227,10 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
             </span>
 <span className="font-body-sm text-body-sm text-secondary font-medium">Submitted 2h ago</span>
 </div>
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1">Oraimo FreePods 4 ANC Edition</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1 whitespace-nowrap">Oraimo FreePods 4 ANC Edition</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">SKU: <span className="font-semibold text-on-surface">OR-FP-4</span></p>
 <div className="flex items-baseline justify-between mt-1">
-<span className="font-headline-sm text-headline-sm font-extrabold text-on-surface">UGX 145,000</span>
+<span className="font-headline-sm text-headline-sm font-extrabold text-on-surface whitespace-nowrap">UGX 145,000</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant font-semibold">25 units staged</span>
 </div>
 </div>
@@ -265,10 +263,10 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
             </span>
 <span className="font-body-sm text-body-sm text-error font-bold">Policy Flag</span>
 </div>
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1">Replica Wireless Earbuds Pro</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface truncate mt-1 whitespace-nowrap">Replica Wireless Earbuds Pro</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">SKU: <span className="font-semibold text-on-surface">REP-EAR-09</span></p>
 <div className="flex items-baseline justify-between mt-1">
-<span className="font-headline-sm text-headline-sm font-bold text-on-surface-variant line-through">UGX 65,000</span>
+<span className="font-headline-sm text-headline-sm font-bold text-on-surface-variant line-through whitespace-nowrap">UGX 65,000</span>
 <span className="font-label-sm text-label-sm text-error font-bold">Listing Locked</span>
 </div>
 </div>
@@ -295,72 +293,7 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
 
 <div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="filter-sheet-backdrop"></div>
 
-<aside className={`fixed inset-x-0 bottom-0 z-50 max-h-[751px] bg-surface-container-lowest text-on-surface rounded-t-3xl shadow-2xl translate-y-full transition-transform duration-300 flex flex-col overflow-hidden pb-safe fixed z-50 select-none ${drawerOpen ? 'translate-x-0 !translate-x-0' : '-translate-x-full lg:translate-x-0'} transition-transform duration-200 ${theme === 'dark' ? 'bg-[#0d1225] border-[#2f3448]/60' : 'bg-white border-slate-200'}`} id="filter-sheet"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div>
-<div className="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto mt-3 mb-2 shrink-0"></div>
-<div className="p-margin pb-space-sm flex items-center justify-between bg-surface-container-lowest">
-<div className="flex items-center gap-2">
-<Icon name="tune" className="text-primary text-[24px]" />
-<h3 className="font-headline-sm text-headline-sm font-bold">Filter Catalog</h3>
-</div>
-<button aria-label="Close Filter Sheet" className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onClick={() => setDrawerOpen(false)}>
-<Icon name="close" className="text-[20px]" />
-</button>
-</div>
-<div className="flex-1 overflow-y-auto px-margin space-y-space-md py-space-xs">
 
-<div>
-<span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Status</span>
-<div className="grid grid-cols-2 gap-2 mt-2">
-<label className="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container cursor-pointer select-none">
-<input checked={true} className="w-4 h-4 rounded accent-primary-container" type="checkbox" />
-<span className="font-label-md text-label-md font-semibold text-on-surface">Active (39)</span>
-</label>
-<label className="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container cursor-pointer select-none">
-<input checked={true} className="w-4 h-4 rounded accent-primary-container" type="checkbox" />
-<span className="font-label-md text-label-md font-semibold text-on-surface">Low Stock (2)</span>
-</label>
-<label className="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container cursor-pointer select-none">
-<input className="w-4 h-4 rounded accent-primary-container" type="checkbox" />
-<span className="font-label-md text-label-md font-semibold text-on-surface">Out of Stock (1)</span>
-</label>
-<label className="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container cursor-pointer select-none">
-<input className="w-4 h-4 rounded accent-primary-container" type="checkbox" />
-<span className="font-label-md text-label-md font-semibold text-on-surface">Draft / Review (7)</span>
-</label>
-</div>
-</div>
-
-<div>
-<span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Category</span>
-<div className="flex flex-wrap gap-2 mt-2">
-<button className="px-3 py-1.5 rounded-lg bg-on-surface text-surface font-label-md text-label-md font-bold" onClick={() => setDrawerOpen(false)}>Audio &amp; Headphones</button>
-<button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onClick={() => setDrawerOpen(false)}>Chargers &amp; GaN</button>
-<button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onClick={() => setDrawerOpen(false)}>Power Banks</button>
-<button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onClick={() => setDrawerOpen(false)}>Cables &amp; Adapters</button>
-</div>
-</div>
-
-<div>
-<div className="flex justify-between items-center">
-<span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Stock Level</span>
-<span className="font-label-sm text-label-sm text-primary font-bold">0 - 50+ units</span>
-</div>
-<div className="h-2 rounded-full bg-surface-container-high mt-3 relative">
-<div className="h-2 rounded-full bg-primary-container w-3/4"></div>
-<div className="w-5 h-5 rounded-full bg-primary-container shadow-md absolute -top-1.5 left-3/4 -translate-x-1/2 cursor-pointer"></div>
-</div>
-</div>
-</div>
-
-<div className="p-margin bg-surface-container-low flex items-center gap-3">
-<button className="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-bold hover:bg-surface-container-high active:scale-95 transition-all" onClick={() => setDrawerOpen(false)}>
-        Reset
-      </button>
-<button className="flex-[2] h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary active:scale-95 transition-all" onClick={() => setDrawerOpen(false)}>
-        Apply Filters
-      </button>
-</div>
-</aside>
 
 <div className="fixed inset-0 z-50 bg-inverse-surface/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="add-product-backdrop"></div>
 <div className="fixed inset-x-0 bottom-0 z-50 max-h-[813px] bg-surface-container-lowest text-on-surface rounded-t-3xl shadow-[0_-12px_40px_rgba(0,0,0,0.25)] translate-y-full transition-transform duration-300 flex flex-col overflow-hidden pb-safe" id="add-product-sheet">
@@ -378,7 +311,7 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
 <span className="font-label-sm text-label-sm text-on-surface-variant" id="step-indicator-text">Step 1 of 5: Product Media</span>
 </div>
 </div>
-<button aria-label="Dismiss Modal" className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onClick={() => setDrawerOpen(false)}>
+<button aria-label="Dismiss Modal" className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
 <Icon name="close" className="text-[20px]" />
 </button>
 </div>
@@ -450,12 +383,12 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
 <div className="step-panel hidden flex flex-col gap-space-sm" id="step-content-3">
 <span className="font-label-lg text-label-lg font-bold text-on-surface">Step 3: Pricing &amp; Inventory</span>
 <div className="flex flex-col gap-1.5">
-<label className="font-label-md text-label-md font-bold text-on-surface">Selling Price (UGX) *</label>
+<label className="font-label-md text-label-md font-bold text-on-surface whitespace-nowrap">Selling Price (UGX) *</label>
 <div className="relative">
-<span className="absolute left-3 top-1/2 -translate-y-1/2 font-headline-sm text-headline-sm font-extrabold text-on-surface-variant">UGX</span>
+<span className="absolute left-3 top-1/2 -translate-y-1/2 font-headline-sm text-headline-sm font-extrabold text-on-surface-variant whitespace-nowrap">UGX</span>
 <input className="w-full h-12 pl-16 pr-3 rounded-xl bg-surface-container-lowest text-on-surface font-price-display text-price-display font-extrabold shadow-sm outline-none focus:bg-surface-container" type="number" value="345000" />
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Suggested Kikuubo floor price: UGX 320,000 - 360,000</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Suggested Kikuubo floor price: UGX 320,000 - 360,000</span>
 </div>
 <div className="grid grid-cols-2 gap-3">
 <div className="flex flex-col gap-1.5">
@@ -499,7 +432,7 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
 <span className="w-5 h-5 rounded-full bg-slate-300 shadow-sm"></span>
 <div>
 <span className="font-label-md text-label-md font-bold text-on-surface">Glacier Pearl White</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Stock: 4 units • +UGX 5,000</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Stock: 4 units • +UGX 5,000</p>
 </div>
 </div>
 <Icon name="check_circle" className="text-tertiary text-[20px]" />
@@ -562,7 +495,6 @@ export const ProductsSwiftcartSeller: React.FC<ProductsSwiftcartSellerProps> = (
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold"><div className="flex justify-around items-center h-16 px-space-xs"><a className="flex flex-col items-center justify-center gap-0.5 w-16 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><Icon name="grid_view" className="text-[22px]" /><span className="font-label-sm text-label-sm">Home</span></a><a className="flex flex-col items-center justify-center gap-0.5 w-16 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="orders" href="#"><Icon name="local_mall" className="text-[22px]" /><span className="font-label-sm text-label-sm">Orders</span></a><a aria-current="page" className="flex flex-col items-center justify-center gap-0.5 w-16 h-14 transition-colors text-primary font-bold" data-path="products" href="#"><Icon name="inventory_2" className="text-[22px]" /><span className="font-label-sm text-label-sm">Catalog</span></a><a className="flex flex-col items-center justify-center gap-0.5 w-16 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="wallet-and-payouts" href="#"><Icon name="account_balance_wallet" className="text-[22px]" /><span className="font-label-sm text-label-sm">Payouts</span></a><a className="flex flex-col items-center justify-center gap-0.5 w-16 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="store-profile" href="#"><Icon name="storefront" className="text-[22px]" /><span className="font-label-sm text-label-sm">Store</span></a></div></nav>
     </div>
   );
 };

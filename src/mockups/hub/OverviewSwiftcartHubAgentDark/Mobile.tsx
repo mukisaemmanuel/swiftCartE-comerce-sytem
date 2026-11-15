@@ -22,8 +22,7 @@ export const OverviewSwiftcartHubAgentDark: React.FC<OverviewSwiftcartHubAgentDa
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Live Ops • Kampala Central</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Hub Scanner</h1></div></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface"><Icon name="sync_alt" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-10 space-y-space-lg">
+      <main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-10 space-y-space-lg">
 
 <div className="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-xl">
 <div className="flex items-center gap-space-sm min-w-0">
@@ -231,7 +230,7 @@ export const OverviewSwiftcartHubAgentDark: React.FC<OverviewSwiftcartHubAgentDa
 <span className="font-code-display text-[15px] leading-none text-on-surface font-bold">#SC-ORD-9104</span>
 <span className="bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">SLA Expired</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Samsung Galaxy A54 5G • UGX 1,280,000</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate whitespace-nowrap">Samsung Galaxy A54 5G • UGX 1,280,000</span>
 </div>
 </div>
 <div className="text-right shrink-0">
@@ -298,7 +297,7 @@ export const OverviewSwiftcartHubAgentDark: React.FC<OverviewSwiftcartHubAgentDa
 <span className="font-code-display text-[15px] leading-none text-on-surface font-bold">#SC-ORD-8820</span>
 <span className="bg-tertiary/20 text-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Outbound Staged</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Solar Inverter 3KVA • UGX 3,450,000</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate whitespace-nowrap">Solar Inverter 3KVA • UGX 3,450,000</span>
 </div>
 </div>
 <div className="text-right shrink-0">
@@ -341,7 +340,6 @@ export const OverviewSwiftcartHubAgentDark: React.FC<OverviewSwiftcartHubAgentDa
 </div>
 
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="manifest-runs" href="#"><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="hub-scanner" href="#"><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="escrow-ledger" href="#"><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Escrow</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#"><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

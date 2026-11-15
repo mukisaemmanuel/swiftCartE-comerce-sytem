@@ -1,5 +1,7 @@
 import React from 'react';
+import useBreakpoint from '../../../hooks/useBreakpoint';
 import Mobile from './Mobile';
+import Tablet from './Tablet';
 
 export interface SellerApplicationStatusProps {
   onNavigate?: (path: string) => void;
@@ -7,6 +9,12 @@ export interface SellerApplicationStatusProps {
 }
 
 export const SellerApplicationStatus: React.FC<SellerApplicationStatusProps> = (props) => {
+  const breakpoint = useBreakpoint();
+
+  if (breakpoint === 'tablet') {
+    return <Tablet {...props} />;
+  }
+
   return <Mobile {...props} />;
 };
 

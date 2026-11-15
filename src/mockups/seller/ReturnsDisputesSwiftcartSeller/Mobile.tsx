@@ -22,14 +22,13 @@ export const ReturnsDisputesSwiftcartSeller: React.FC<ReturnsDisputesSwiftcartSe
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0"><Icon name="arrow_back_ios_new" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Returns And Disputes</h1></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="font-label-sm text-label-sm font-bold text-on-primary">KG</span></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter py-space-sm gap-space-md text-on-surface">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter py-space-sm gap-space-md text-on-surface">
 
 <div className="w-full rounded-xl bg-surface-container-highest/60 p-space-sm flex items-start gap-space-sm shadow-sm backdrop-blur-sm">
 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-0.5">
 <Icon name="verified_user" className="text-[18px]" />
 </div>
-<div className="flex-1 min-w-0"><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Payment Protection</span><span className="w-1 h-1 rounded-full bg-outline"></span><span className="font-body-sm text-body-sm text-on-surface-variant text-[11px]">SwiftCart Uganda</span></div><p className="font-body-sm text-body-sm text-on-surface mt-0.5">Payment Protection: <strong className="font-semibold text-primary">UGX 280,000</strong> for order #RT-309 is held safely by SwiftCart pending return verification.</p></div>
+<div className="flex-1 min-w-0"><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Payment Protection</span><span className="w-1 h-1 rounded-full bg-outline"></span><span className="font-body-sm text-body-sm text-on-surface-variant text-[11px]">SwiftCart Uganda</span></div><p className="font-body-sm text-body-sm text-on-surface mt-0.5">Payment Protection: <strong className="font-semibold text-primary whitespace-nowrap">UGX 280,000</strong> for order #RT-309 is held safely by SwiftCart pending return verification.</p></div>
 </div>
 
 <div className="flex items-center gap-space-xs p-1 bg-surface-container rounded-xl overflow-x-auto select-none">
@@ -67,7 +66,7 @@ export const ReturnsDisputesSwiftcartSeller: React.FC<ReturnsDisputesSwiftcartSe
 <img className="w-14 h-14 rounded-lg object-cover shrink-0" data-alt="SoundCore Space One active noise cancelling wireless headphones in matte black finish on a sleek studio surface with blue accent lighting." src="/images/5c0e710f3b899718.webp" />
 <div className="flex-1 min-w-0">
 <div className="font-label-lg text-label-lg text-on-surface truncate">SoundCore Space One ANC</div>
-<div className="font-headline-sm text-headline-sm font-bold text-primary">UGX 280,000</div>
+<div className="font-headline-sm text-headline-sm font-bold text-primary whitespace-nowrap">UGX 280,000</div>
 <div className="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant text-[11px]">
 <span className="">Buyer: Alex K.</span>
 <span className="">•</span>
@@ -187,7 +186,7 @@ export const ReturnsDisputesSwiftcartSeller: React.FC<ReturnsDisputesSwiftcartSe
 <img className="w-10 h-10 rounded-lg object-cover shrink-0" data-alt="Anker 65W GaN Fast Charger compact wall adapter plugged in beside a braided USB-C cable on office desk." src="/images/203ceffe695822ac.webp" />
 <div className="flex-1 min-w-0">
 <div className="font-body-md text-body-md font-semibold text-on-surface truncate">Anker 65W GaN Fast Charger</div>
-<div className="font-body-sm text-body-sm text-tertiary font-bold">UGX 145,000 Payout Released</div>
+<div className="font-body-sm text-body-sm text-tertiary font-bold whitespace-nowrap">UGX 145,000 Payout Released</div>
 </div>
 </div>
 <div className="p-2 rounded-lg bg-surface-container-low text-[12px] text-on-surface-variant flex items-center gap-2">

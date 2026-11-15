@@ -22,8 +22,7 @@ export const ProductModerationSwiftcartAdmin: React.FC<ProductModerationSwiftcar
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Product Moderation</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full gap-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full gap-space-md">
 
 <section className="bg-surface-container-low rounded-xl p-space-md shadow-sm">
 <div className="flex items-center justify-between mb-space-xs">
@@ -125,7 +124,7 @@ export const ProductModerationSwiftcartAdmin: React.FC<ProductModerationSwiftcar
 <div className="grid grid-cols-3 gap-2 bg-surface-container-low p-2.5 rounded-lg">
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-secondary uppercase">Selling Price</span>
-<span className="font-label-lg text-label-lg text-primary font-bold">UGX 145,000</span>
+<span className="font-label-lg text-label-lg text-primary font-bold whitespace-nowrap">UGX 145,000</span>
 <span className="font-body-sm text-body-sm text-secondary line-through">160k MSRP</span>
 </div>
 <div className="flex flex-col">
@@ -135,7 +134,7 @@ export const ProductModerationSwiftcartAdmin: React.FC<ProductModerationSwiftcar
 </div>
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-secondary uppercase">Margin / Cut</span>
-<span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 11,600</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 11,600</span>
 <span className="font-body-sm text-body-sm text-secondary">8% Commission</span>
 </div>
 </div>
@@ -203,10 +202,10 @@ export const ProductModerationSwiftcartAdmin: React.FC<ProductModerationSwiftcar
 </div>
 </div>
 <div className="flex-1 min-w-0">
-<h3 className="font-label-lg text-label-lg text-on-surface font-bold truncate">Replica Designer Sunglasses - Gold Aviator</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">Replica Designer Sunglasses - Gold Aviator</h3>
 <p className="font-body-sm text-body-sm text-secondary">Seller: <span className="text-on-surface font-semibold">UrbanStyle Trends UG</span></p>
 <div className="mt-1 flex items-baseline gap-2">
-<span className="font-label-md text-label-md text-primary font-bold">UGX 35,000</span>
+<span className="font-label-md text-label-md text-primary font-bold whitespace-nowrap">UGX 35,000</span>
 <span className="font-body-sm text-body-sm text-secondary">Stock: 120 units</span>
 </div>
 </div>
@@ -238,7 +237,7 @@ export const ProductModerationSwiftcartAdmin: React.FC<ProductModerationSwiftcar
 <div className="flex items-center justify-between pb-space-xs">
 <div>
 <span className="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Listing Rejection</span>
-<h3 className="font-headline-sm text-headline-sm text-on-surface truncate max-w-[280px]" id="modal-product-title">Oraimo FreePods 4 ANC</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface truncate max-w-[280px] whitespace-nowrap" id="modal-product-title">Oraimo FreePods 4 ANC</h3>
 </div>
 <button className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-95" type="button">
 <Icon name="close" className="text-[20px]" />

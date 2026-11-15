@@ -22,8 +22,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div className="h-16 px-space-sm flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0"><Icon name="arrow_back_ios_new" className="text-[20px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 pl-1"><span className="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Seller Order Detail</h1></div></div><div className="flex items-center gap-space-sm flex-shrink-0"><div className="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><Icon name="verified_user" className="text-[16px]" /><span className="font-label-sm text-label-sm font-bold">SECURE</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-10">
+      <main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-10">
 
 <div className="px-margin pt-space-xs pb-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
 <div className="flex items-center gap-1.5">
@@ -45,7 +44,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <span className="font-label-md text-label-md text-on-surface">Operational Alerts</span>
 <span className="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px]">3 New</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant truncate">Payout batch UGX 8,450,000 scheduled • Tap to review</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant truncate whitespace-nowrap">Payout batch UGX 8,450,000 scheduled • Tap to review</p>
 </div>
 </div>
 <Icon name="expand_more" className="text-on-surface-variant text-[20px] transition-transform duration-200" />
@@ -75,7 +74,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <span className="font-label-md text-label-md text-on-surface">Merchant Settlement Scheduled</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">11:05</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Batch UGX 8,450,000 scheduled for release tomorrow 10:00 EAT directly to Stanbic ledger.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">Batch UGX 8,450,000 scheduled for release tomorrow 10:00 EAT directly to Stanbic ledger.</p>
 </div>
 </div>
 
@@ -126,7 +125,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <div className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider flex items-center gap-1">
               Escrow Secured Lock
             </div>
-<div className="font-price-display text-price-display text-on-surface truncate">UGX 248,500</div>
+<div className="font-price-display text-price-display text-on-surface truncate whitespace-nowrap">UGX 248,500</div>
 </div>
 </div>
 <div className="text-right flex-shrink-0">
@@ -193,7 +192,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
           </div>
 </div>
 <div className="text-right flex-shrink-0">
-<div className="font-label-lg text-label-lg text-on-surface">UGX 248,500</div>
+<div className="font-label-lg text-label-lg text-on-surface whitespace-nowrap">UGX 248,500</div>
 <span className="font-label-sm text-label-sm text-emerald-escrow">Prepaid</span>
 </div>
 </div>

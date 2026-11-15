@@ -22,8 +22,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.06)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><div className="flex items-center gap-1.5"><span className="font-label-md text-label-md text-on-surface font-bold truncate">William St Hub</span><span className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm flex-shrink-0"><span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Online</span></div><span className="font-label-sm text-label-sm text-secondary truncate">Kampala Central • Pickup</span></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" className="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container text-on-surface-variant"><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="Toggle Theme" className="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px]" /></button><div className="flex items-center gap-1.5 pl-1"><div className="flex flex-col text-right hidden xs:flex"><span className="font-label-sm text-label-sm text-on-surface font-bold leading-tight">Kato I.</span><span className="font-label-sm text-label-sm text-secondary font-mono leading-tight">#HUB-402</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div className="flex flex-col w-full pb-8">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div className="flex flex-col w-full pb-8">
 
 <div className="px-margin pt-space-sm pb-space-xs flex items-center justify-between bg-surface-container-low">
 <div className="flex items-center gap-space-xs">
@@ -105,7 +104,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-1.5 flex-wrap">
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold truncate">Dennis Mukasa</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold truncate whitespace-nowrap">Dennis Mukasa</h2>
 <span className="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-medium">UG-ID Validated</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary flex items-center gap-1 truncate">
@@ -156,7 +155,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 <span className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">ORD #SC-ORD-9281</span>
 <span className="font-label-lg text-label-lg text-on-surface font-bold truncate">SoundCore Space One Wireless ANC</span>
 <div className="flex items-center justify-between mt-1">
-<span className="font-label-md text-label-md text-on-surface font-extrabold">UGX 248,500</span>
+<span className="font-label-md text-label-md text-on-surface font-extrabold whitespace-nowrap">UGX 248,500</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-container/15 px-1.5 py-0.5 rounded">MTN MoMo Escrow</span>
 </div>
 </div>
@@ -329,7 +328,6 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 </div>
 </div>
 </div></main>
-<nav className="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.06)]" data-active-classes="text-primary-container font-bold"><div className="flex justify-between items-center h-20 px-space-xs relative"><a className="flex-1 flex flex-col items-center justify-center h-full min-w-[48px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="overview" href="#"><Icon name="dashboard" className="text-[24px]" /><span className="font-label-sm text-label-sm tracking-tight">Overview</span></a><a className="flex-1 flex flex-col items-center justify-center h-full min-w-[48px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="intake" href="#"><Icon name="move_to_inbox" className="text-[24px]" /><span className="font-label-sm text-label-sm tracking-tight">Intake</span></a><div className="relative flex-1 flex flex-col items-center justify-center"><a className="absolute -top-6 w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg shadow-primary-container/40 ring-4 ring-surface active:scale-95 transition-transform" data-path="scan" href="#"><Icon name="qr_code_scanner" className="text-[28px]" /></a><span className="font-label-sm text-label-sm text-secondary pt-8 tracking-tight">Scan</span></div><a aria-current="page" className="flex-1 flex flex-col items-center justify-center h-full min-w-[48px] min-h-[48px] transition-colors text-primary-container font-bold" data-path="pickup" href="#"><Icon name="front_hand" className="text-[24px]" /><span className="font-label-sm text-label-sm tracking-tight">Pickup</span></a><a className="flex-1 flex flex-col items-center justify-center h-full min-w-[48px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="more" href="#"><Icon name="widgets" className="text-[24px]" /><span className="font-label-sm text-label-sm tracking-tight">More</span></a></div></nav>
     </div>
   );
 };

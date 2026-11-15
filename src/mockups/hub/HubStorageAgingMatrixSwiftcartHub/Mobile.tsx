@@ -22,8 +22,7 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div className="h-16 px-space-sm flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0"><Icon name="arrow_back_ios_new" className="text-[20px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 pl-1"><span className="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Hub Storage &amp; Aging</h1></div></div><div className="flex items-center gap-space-sm flex-shrink-0"><div className="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><Icon name="verified_user" className="text-[16px]" /><span className="font-label-sm text-label-sm font-bold">SECURE</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full">
+      <main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full">
 
 <div className="px-margin pt-space-xs pb-space-xs flex items-center justify-between bg-surface-container-low text-on-surface">
 <div className="flex items-center gap-space-xs">
@@ -50,7 +49,7 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
 <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider">Facility Node</span>
 <span className="px-1.5 py-0.2 bg-surface-container-high rounded text-[10px] font-label-sm font-bold text-on-surface-variant">HUB-04</span>
 </div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">William St Central Hub #04</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">William St Central Hub #04</h2>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
@@ -157,11 +156,11 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
                   Ready for Rider Pickup
                 </span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate">SoundCore Space One Wireless</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate whitespace-nowrap">SoundCore Space One Wireless</h3>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-price-display text-headline-sm text-on-surface">UGX 340,000</span>
+<span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 340,000</span>
 <div className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
 <span>Escrow Held</span>
@@ -208,11 +207,11 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
                   SLA Expired
                 </span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate">Samsung Galaxy A54 5G (128GB)</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate whitespace-nowrap">Samsung Galaxy A54 5G (128GB)</h3>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-price-display text-headline-sm text-on-surface">UGX 1,220,000</span>
+<span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 1,220,000</span>
 <span className="font-label-sm text-label-sm text-danger-penalty font-medium">Merchant Hold Active</span>
 </div>
 </div>
@@ -263,11 +262,11 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
                   Hold - PIN Mismatch
                 </span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate">SoundCore ANC Life Q30</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate whitespace-nowrap">SoundCore ANC Life Q30</h3>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-price-display text-headline-sm text-on-surface">UGX 285,000</span>
+<span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 285,000</span>
 <div className="flex items-center gap-1 text-amber-warning font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
 <span>Escrow Protected</span>
@@ -311,11 +310,11 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
                   Linehaul Staged for Jinja Depot
                 </span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate">Solar Inverter 3KVA Hybrid</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface mt-0.5 truncate whitespace-nowrap">Solar Inverter 3KVA Hybrid</h3>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-price-display text-headline-sm text-on-surface">UGX 2,450,000</span>
+<span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 2,450,000</span>
 <div className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified" className="text-[14px]" />
 <span>B2B Ledger Verified</span>

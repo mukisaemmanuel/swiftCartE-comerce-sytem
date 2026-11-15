@@ -24,7 +24,7 @@ export const ProductDetailSoundcoreSpaceOne2: React.FC<ProductDetailSoundcoreSpa
 
 <div className="px-margin py-space-sm bg-surface-container-low flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-sm">
-<img alt="SwiftCart" className="h-6 w-auto object-contain" src="/brand/logo-full.png" />
+<img alt="SwiftCart" className="h-6 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" />
 <span className="font-label-md text-label-md text-on-surface">SwiftCart Uganda</span>
 </div>
 <div className="flex items-center gap-space-md">

@@ -73,6 +73,25 @@ test.describe('Dashboard Dark Default & Theme Toggle Quality Gate (390x844)', ()
       const reloadedThemeAttr = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
       expect(reloadedThemeAttr).toBe('light');
 
+      // 6. Assert light theme persists across routes in same dashboard
+      const nextRouteMap: Record<string, string> = {
+        seller: '/seller/orders-seller',
+        admin: '/admin/orders-oversight-admin',
+        'super-admin': '/super-admin/platform-settings-super-admin',
+        rider: '/rider/deliveries-rider',
+        hub: '/hub/intake-hub-agent',
+      };
+      const nextRoute = nextRouteMap[role];
+      if (nextRoute) {
+        console.log(`[${role}] Navigating to second route: ${nextRoute}`);
+        await page.goto(nextRoute, { waitUntil: 'networkidle' });
+        const secondRouteTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
+        expect(secondRouteTheme, `Theme should persist as light on ${nextRoute}`).toBe('light');
+        const secondRouteBg = await page.evaluate(() => window.getComputedStyle(document.body).backgroundColor);
+        const secondRouteLum = getLuminance(secondRouteBg);
+        expect(secondRouteLum, `Background luminance on ${nextRoute} should remain light`).toBeGreaterThanOrEqual(0.5);
+      }
+
       await context.close();
     });
   }

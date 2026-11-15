@@ -22,8 +22,7 @@ export const OverviewSwiftcartHubAgentLightMode: React.FC<OverviewSwiftcartHubAg
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0"><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm text-primary uppercase tracking-wider">SwiftCart Hub</span><span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm"><span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Online</span></div><div className="flex items-center gap-1.5"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate font-bold">Overview</h1><span className="text-body-sm font-body-sm text-on-surface-variant truncate hidden sm:inline">(Station #04)</span></div></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Toggle Theme" className="theme-toggle-btn w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container active:bg-surface-container-high transition-colors" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 w-full bg-surface pt-16 pb-28"><div className="flex flex-col w-full pb-8">
+      <main className="flex-1 w-full bg-surface pt-16 pb-28"><div className="flex flex-col w-full pb-8">
 
 <section className="px-margin pt-space-xs pb-space-md">
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
@@ -33,7 +32,7 @@ export const OverviewSwiftcartHubAgentLightMode: React.FC<OverviewSwiftcartHubAg
 <Icon name="warehouse" className="text-[18px]" />
 </span>
 <div className="min-w-0">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate font-bold">William St Central Hub #04</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate font-bold whitespace-nowrap">William St Central Hub #04</h2>
 <p className="font-body-sm text-body-sm text-secondary truncate">Day Shift • 08:00 - 17:00 • Agent Isaac Kato</p>
 </div>
 </div>
@@ -358,7 +357,6 @@ export const OverviewSwiftcartHubAgentLightMode: React.FC<OverviewSwiftcartHubAg
 </section>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary"><div className="flex justify-between items-center h-16 px-gutter max-w-lg mx-auto relative"><a aria-current="page" className="flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors text-primary" data-path="overview" href="#"><Icon name="dashboard" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-0.5">Overview</span></a><a className="flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-on-surface transition-colors" data-path="intake" href="#"><Icon name="move_to_inbox" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-0.5">Intake</span></a><div className="relative -top-5 flex flex-col items-center"><a className="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg shadow-primary-container/30 active:scale-95 transition-transform" data-path="scan" href="#"><Icon name="barcode_scanner" className="text-[28px]" /></a><span className="font-label-sm text-label-sm text-on-surface-variant font-bold mt-1">Scan</span></div><a className="flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-on-surface transition-colors" data-path="pickup" href="#"><Icon name="outbox" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-0.5">Pickup</span></a><a className="flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-on-surface transition-colors" data-path="more" href="#"><Icon name="menu_open" className="text-[22px]" /><span className="font-label-sm text-label-sm mt-0.5">More</span></a></div></nav>
     </div>
   );
 };

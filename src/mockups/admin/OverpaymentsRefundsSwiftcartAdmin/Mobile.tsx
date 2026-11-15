@@ -22,8 +22,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Overpayments &amp; Refunds</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-10">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-10">
 
 <div className="bg-surface-container rounded-xl p-space-md shadow-sm mb-space-md">
 <div className="flex items-center justify-between gap-space-xs mb-space-xs">
@@ -37,7 +36,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="flex items-baseline justify-between gap-space-sm mb-space-xs">
 <div>
-<p className="font-price-display text-price-display text-on-surface">UGX 1,420,000</p>
+<p className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 1,420,000</p>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Total Overpayments &amp; Return Escrows</p>
 </div>
 <div className="text-right">
@@ -79,7 +78,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="text-right">
 <span className="font-label-sm text-label-sm text-on-surface-variant block">Discrepancy</span>
-<span className="font-headline-sm text-headline-sm text-primary">+UGX 365,000</span>
+<span className="font-headline-sm text-headline-sm text-primary whitespace-nowrap">+UGX 365,000</span>
 </div>
 </div>
 
@@ -89,7 +88,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div className="min-w-0 flex-1">
 <p className="font-label-md text-label-md text-on-surface">Incident Overview</p>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Buyer <span className="font-semibold text-on-surface">Ronald K.</span> suffered network timeout at checkout. The carrier initiated two debits of <span className="font-semibold text-on-surface">UGX 365,000</span> each. Order fulfillment executed cleanly once.
+            Buyer <span className="font-semibold text-on-surface">Ronald K.</span> suffered network timeout at checkout. The carrier initiated two debits of <span className="font-semibold text-on-surface whitespace-nowrap">UGX 365,000</span> each. Order fulfillment executed cleanly once.
           </p>
 </div>
 </div>
@@ -149,7 +148,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="text-right">
 <span className="font-label-sm text-label-sm text-on-surface-variant block">Refund Pool</span>
-<span className="font-headline-sm text-headline-sm text-on-surface">UGX 180,000</span>
+<span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 180,000</span>
 </div>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm leading-relaxed">
@@ -184,7 +183,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="text-right">
 <span className="font-label-sm text-label-sm text-on-surface-variant block">Pending</span>
-<span className="font-headline-sm text-headline-sm text-on-surface">UGX 875,000</span>
+<span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 875,000</span>
 </div>
 </div>
 <div className="flex items-center justify-between text-xs pt-1 text-on-surface-variant">
@@ -203,11 +202,11 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div className="space-y-2 text-xs">
 <div className="flex items-center justify-between py-1 bg-surface-container-lowest/80 px-2.5 rounded">
 <span className="font-body-sm text-body-sm text-on-surface">#REF-1048 Reversal Completed</span>
-<span className="font-mono text-label-sm text-label-sm text-tertiary font-bold">+UGX 94,000 (Airtel)</span>
+<span className="font-mono text-label-sm text-label-sm text-tertiary font-bold whitespace-nowrap">+UGX 94,000 (Airtel)</span>
 </div>
 <div className="flex items-center justify-between py-1 bg-surface-container-lowest/80 px-2.5 rounded">
 <span className="font-body-sm text-body-sm text-on-surface">#REF-1047 Credit Note #CN-401 issued</span>
-<span className="font-mono text-label-sm text-label-sm text-secondary font-bold">UGX 512,000</span>
+<span className="font-mono text-label-sm text-label-sm text-secondary font-bold whitespace-nowrap">UGX 512,000</span>
 </div>
 </div>
 </div>
@@ -245,7 +244,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="flex justify-between items-center text-sm pt-1">
 <span className="font-label-md text-label-md text-on-surface font-semibold">Immediate Refund Amount</span>
-<span className="font-price-display text-price-display text-primary">UGX 365,000</span>
+<span className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 365,000</span>
 </div>
 </div>
 <div className="bg-tertiary-container/15 rounded-lg p-2.5 flex items-start gap-2 mb-space-lg text-tertiary">

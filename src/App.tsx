@@ -77,6 +77,9 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (activeRoute.role && activeRoute.role !== userRole) {
+      if (userRole === 'super-admin' && activeRoute.role === 'admin') {
+        return;
+      }
       setUserRole(activeRoute.role);
       if (typeof window !== 'undefined') {
         localStorage.setItem('swiftcart_user_role', activeRoute.role);
@@ -104,9 +107,13 @@ export const App: React.FC = () => {
 
       const targetRoute = pathToView(newPath);
       if (targetRoute.role && targetRoute.role !== userRole) {
-        setUserRole(targetRoute.role);
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('swiftcart_user_role', targetRoute.role);
+        if (userRole === 'super-admin' && targetRoute.role === 'admin') {
+          // Super-admin retains their role when navigating to admin sub-routes
+        } else {
+          setUserRole(targetRoute.role);
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('swiftcart_user_role', targetRoute.role);
+          }
         }
       }
     }
@@ -165,7 +172,7 @@ export const App: React.FC = () => {
         return <SellerView route={activeRoute} onNavigate={navigate} />;
       case 'admin':
       case 'super-admin':
-        return <AdminView route={activeRoute} onNavigate={navigate} />;
+        return <AdminView route={activeRoute} userRole={userRole} onNavigate={navigate} />;
       case 'rider':
         return <RiderView route={activeRoute} onNavigate={navigate} />;
       case 'hub':

@@ -22,8 +22,7 @@ export const CourierBagQrScanConfirmationModalSwiftcartWorkHub: React.FC<Courier
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-space-sm flex items-center justify-between gap-space-xs"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center min-w-0 gap-space-xs"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><span className="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider truncate">William St Central</span><h1 className="font-label-lg text-label-lg font-bold text-on-surface truncate">High Velocity Scan</h1></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Scanner Light" className="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container" type="button"><Icon name="flash_on" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col w-full bg-surface pt-16"><div className="flex flex-col w-full relative">
+      <main className="flex-1 flex flex-col w-full bg-surface pt-16"><div className="flex flex-col w-full relative">
 
 <div className="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-30 pointer-events-none transition-opacity duration-300"></div>
 
@@ -165,7 +164,7 @@ export const CourierBagQrScanConfirmationModalSwiftcartWorkHub: React.FC<Courier
 
 <div className="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col">
 <span className="font-label-sm text-label-sm text-secondary">Total Escrow Value</span>
-<span className="font-price-display text-price-display font-black text-on-surface tracking-tight mt-0.5">UGX 3.42M</span>
+<span className="font-price-display text-price-display font-black text-on-surface tracking-tight mt-0.5 whitespace-nowrap">UGX 3.42M</span>
 <span className="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-0.5 mt-0.5">
 <Icon name="shield" className="text-[14px]" /> Insured Transit
               </span>

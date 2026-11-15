@@ -22,8 +22,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Live Ops • Kampala Central</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Escrow Ledger</h1></div></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface"><Icon name="sync_alt" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+      <main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
 
 <div className="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md">
 <div className="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
@@ -78,7 +77,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 <div className="flex flex-col">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Platform Gross Volume (GMV)</span>
 <div className="flex items-baseline gap-1 mt-0.5">
-<span className="font-label-sm text-label-sm text-on-surface-variant">UGX</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">UGX</span>
 <span className="font-price-display text-price-display text-on-surface tracking-tight">1,842,500,000</span>
 </div>
 </div>
@@ -114,7 +113,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 </span>
 </div>
 <div className="mt-2">
-<div className="font-label-sm text-label-sm text-on-surface-variant">UGX</div>
+<div className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">UGX</div>
 <div className="font-headline-sm text-headline-sm text-on-surface leading-snug">92,125,000</div>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-1.5 flex items-center gap-1">
@@ -130,7 +129,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 </span>
 </div>
 <div className="mt-2">
-<div className="font-label-sm text-label-sm text-on-surface-variant">UGX</div>
+<div className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">UGX</div>
 <div className="font-headline-sm text-headline-sm text-emerald-escrow leading-snug">245,000,000</div>
 </div>
 <span className="font-body-sm text-body-sm text-tertiary mt-1.5 flex items-center gap-1">
@@ -192,7 +191,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 <div className="flex flex-col min-w-0 flex-1">
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-primary">#SC-ORD-99405</span>
-<span className="font-label-md text-label-md text-on-surface">UGX 1,850,000</span>
+<span className="font-label-md text-label-md text-on-surface whitespace-nowrap">UGX 1,850,000</span>
 </div>
 <span className="font-body-md text-body-md text-on-surface font-semibold truncate">Solar Inverter 3KVA Complete Unit</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">Buyer Claims: Defective Internal Inverter Board</span>
@@ -294,7 +293,6 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="manifest-runs" href="#"><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="hub-scanner" href="#"><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="escrow-ledger" href="#"><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Escrow</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#"><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 // Auto-generated from C:/Users/Mukisa_Emmanuel/Desktop/swiftCartE-comerce-sytem/design/mobile/hub/swiftcart_work_hub_shared_system_components_dark_light/code.html
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from '../../../components/shared/Icon';
 import { useDashboardTheme } from '../../../context/ThemeContext';
 
@@ -17,15 +17,13 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
   const { theme, toggleTheme } = useDashboardTheme();
   void theme;
   void toggleTheme;
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  
 
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
-      {drawerOpen && <div className="fixed inset-0 bg-black/60 z-40 lg:hidden" onClick={() => setDrawerOpen(false)} />}
+      
       <input className="hidden peer" id="app-drawer-state" type="checkbox" />
 <label className="hidden fixed inset-0 z-50 bg-surface-dark/70 backdrop-blur-sm transition-opacity" htmlFor="app-drawer-state" id="app-drawer-backdrop"></label>
-<aside className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-surface-container-low shadow-[0_4px_24px_rgba(0,0,0,0.6)] flex flex-col justify-between transform  transition-transform duration-200 ease-out pt-safe pb-safe fixed z-50 select-none ${drawerOpen ? 'translate-x-0 !translate-x-0' : '-translate-x-full lg:translate-x-0'} transition-transform duration-200 ${theme === 'dark' ? 'bg-[#0d1225] border-[#2f3448]/60' : 'bg-white border-slate-200'}`} id="app-drawer-panel"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="flex flex-col p-space-lg gap-space-lg"><div className="flex items-center justify-between"><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-white.png" /><span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">SwiftCart</span></div><label className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant cursor-pointer transition-colors" htmlFor="app-drawer-state"><Icon name="close" className="text-[20px]" /></label></div><div className="flex items-center gap-space-md p-space-md bg-container-dark-low rounded-xl"><div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0"><Icon name="person" className="text-on-primary text-[20px]" /></div><div className="flex flex-col overflow-hidden"><span className="font-label-lg text-label-lg text-on-surface truncate">Kikuubo Express Hub</span><div className="flex items-center gap-space-xs mt-0.5"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Hub Logistics</span></div></div></div><nav className="flex flex-col gap-space-xs"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm mb-space-xs">Operations</span><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="field-overview" href="#" onClick={() => setDrawerOpen(false)}><Icon name="dashboard" className="text-[20px]" /><span className="font-label-lg text-label-lg">Overview</span></a><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="live-orders-manifest" href="#" onClick={() => setDrawerOpen(false)}><Icon name="local_shipping" className="text-[20px]" /><span className="font-label-lg text-label-lg">Active Deliveries</span></a><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="inventory-and-fleet" href="#" onClick={() => setDrawerOpen(false)}><Icon name="warehouse" className="text-[20px]" /><span className="font-label-lg text-label-lg">Hub Parcels</span></a><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="escrow-and-settlements" href="#" onClick={() => setDrawerOpen(false)}><Icon name="account_balance_wallet" className="text-[20px]" /><span className="font-label-lg text-label-lg">Escrow Ledger</span></a><span className="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm mt-space-sm mb-space-xs">Security &amp; Sync</span><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="security-and-relay-proxy" href="#" onClick={() => setDrawerOpen(false)}><Icon name="verified_user" className="text-[20px]" /><span className="font-label-lg text-label-lg">Blind OTP Console</span></a></nav></div><div className="p-space-lg flex flex-col gap-space-xs"><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" href="#" onClick={() => setDrawerOpen(false)}><Icon name="help_center" className="text-[20px]" /><span className="font-body-md text-body-md">Field Support</span></a><a className="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-error hover:bg-error-container/20 transition-colors" href="#" onClick={() => setDrawerOpen(false)}><Icon name="logout" className="text-[20px]" /><span className="font-label-lg text-label-lg">Sign Out</span></a></div></aside>
-<header className="fixed top-0 inset-x-0 z-40 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div className="h-14 px-space-md flex items-center justify-between gap-space-sm"><button type="button" className="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu" onClick={() => setDrawerOpen(true)}><Icon name="menu" className="text-[22px]" /></button><div className="flex items-center gap-space-xs"><label aria-label="Open drawer" className="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container cursor-pointer transition-colors" htmlFor="app-drawer-state"><Icon name="menu" className="text-[24px]" /></label><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-white.png" /><span className="font-headline-sm text-headline-sm tracking-tight text-on-surface hidden xs:inline">SwiftCart</span></div><div className="flex-1 text-center truncate px-space-xs"><span className="font-label-lg text-label-lg tracking-tight uppercase text-on-surface truncate">Field Overview</span></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Search" className="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container transition-colors" type="button"><Icon name="search" className="text-[20px]" /></button><button aria-label="Notifications" className="relative w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container transition-colors" type="button"><Icon name="notifications" className="text-[20px]" /><span className="absolute top-2 right-2 w-4 h-4 bg-primary-container text-on-primary-container rounded-full font-label-sm text-label-sm flex items-center justify-center font-bold">3</span></button><button aria-label="Toggle theme" className="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container transition-colors" type="button" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
 <main className="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div className="flex flex-col w-full">
 
 <div className="px-space-md py-space-sm bg-surface-container flex items-center justify-between gap-space-xs sticky top-0 z-30 shadow-md">
@@ -47,18 +45,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 </div>
 </div>
 
-<div aria-live="polite" className="w-full bg-amber-warning/15 px-space-md py-2.5 flex items-center justify-between gap-space-sm shadow-inner" role="status">
-<div className="flex items-center gap-2 min-w-0">
-<Icon name="bolt" className="text-amber-warning text-[20px] shrink-0 animate-bounce" />
-<div className="flex flex-col min-w-0">
-<p className="font-label-md text-label-md text-on-surface font-bold truncate">You're offline. Showing saved ledger</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Cached 4m ago • Kikuubo Hub Relay v12</p>
-</div>
-</div>
-<button className="shrink-0 px-3 py-1.5 rounded-lg bg-amber-warning text-surface-dark font-label-md text-label-md font-bold shadow hover:opacity-90 active:scale-95 transition-transform" type="button">
-      Retry
-    </button>
-</div>
+
 
 <div className="px-space-md pt-space-sm">
 <div className="w-full p-space-sm rounded-xl bg-surface-container-high shadow-lg flex items-center justify-between gap-space-sm">
@@ -68,10 +55,10 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 </div>
 <div className="min-w-0 flex flex-col">
 <span className="font-label-md text-label-md text-on-surface truncate">Escrow Settlement Approved</span>
-<span className="font-body-sm text-body-sm text-emerald-escrow text-[11px] truncate">UGX 1,240,000 credited to MTN MoMo (Ronald K.)</span>
+<span className="font-body-sm text-body-sm text-emerald-escrow text-[11px] truncate whitespace-nowrap">UGX 1,240,000 credited to MTN MoMo (Ronald K.)</span>
 </div>
 </div>
-<button className="text-on-surface-variant hover:text-on-surface p-1" type="button" onClick={() => setDrawerOpen(false)}>
+<button className="text-on-surface-variant hover:text-on-surface p-1" type="button">
 <Icon name="close" className="text-[18px]" />
 </button>
 </div>
@@ -97,7 +84,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
           </span>
 </div>
 <div className="mt-2">
-<div className="font-price-display text-price-display text-on-surface tracking-tight">UGX 8,420,000</div>
+<div className="font-price-display text-price-display text-on-surface tracking-tight whitespace-nowrap">UGX 8,420,000</div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">42 Transactions verified</span>
 </div>
 
@@ -121,12 +108,12 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
           </span>
 </div>
 <div className="mt-2">
-<div className="font-price-display text-price-display text-on-surface tracking-tight">UGX 3,150,000</div>
+<div className="font-price-display text-price-display text-on-surface tracking-tight whitespace-nowrap">UGX 3,150,000</div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Auto-release upon buyer OTP</span>
 </div>
 <div className="mt-3 flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant pt-1">
-<span>MTN: UGX 2.1M</span>
-<span>Airtel: UGX 1.05M</span>
+<span className="whitespace-nowrap">MTN: UGX 2.1M</span>
+<span className="whitespace-nowrap">Airtel: UGX 1.05M</span>
 </div>
 </div>
 
@@ -193,7 +180,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
               Ready for Boda
             </span>
 </div>
-<span className="font-price-display text-[17px] text-on-surface font-black">UGX 145,000</span>
+<span className="font-price-display text-[17px] text-on-surface font-black whitespace-nowrap">UGX 145,000</span>
 </div>
 <div className="flex flex-col gap-1 py-1">
 <div className="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
@@ -234,7 +221,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
               In Hub Transit
             </span>
 </div>
-<span className="font-price-display text-[17px] text-on-surface font-black">UGX 620,000</span>
+<span className="font-price-display text-[17px] text-on-surface font-black whitespace-nowrap">UGX 620,000</span>
 </div>
 <div className="flex flex-col gap-1 py-1">
 <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
@@ -263,7 +250,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
               Dispute Frozen
             </span>
 </div>
-<span className="font-price-display text-[17px] text-error font-black">UGX 280,000</span>
+<span className="font-price-display text-[17px] text-error font-black whitespace-nowrap">UGX 280,000</span>
 </div>
 <div className="flex flex-col gap-1">
 <div className="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
@@ -385,15 +372,15 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <div className="flex flex-wrap gap-2">
 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
           Order #8921
-          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button" onClick={() => setDrawerOpen(false)}>close</button>
+          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button">close</button>
 </span>
 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
           Mukono Hub Relay
-          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button" onClick={() => setDrawerOpen(false)}>close</button>
+          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button">close</button>
 </span>
 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
           MTN USSD Escrow
-          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button" onClick={() => setDrawerOpen(false)}>close</button>
+          <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button">close</button>
 </span>
 </div>
 </div>
@@ -519,7 +506,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 </div>
 
 <p className="font-body-md text-body-md text-on-surface-variant">
-        This will immediately halt payout of <strong className="text-on-surface font-bold">UGX 280,000</strong> to Seller “Gadget Hub Kampala”. Funds remain held in SwiftCart platform custody pending arbitration review.
+        This will immediately halt payout of <strong className="text-on-surface font-bold whitespace-nowrap">UGX 280,000</strong> to Seller “Gadget Hub Kampala”. Funds remain held in SwiftCart platform custody pending arbitration review.
       </p>
 
 <div className="flex flex-col gap-1">
@@ -543,7 +530,6 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 
 
 </div></main>
-<nav className="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.35)]" data-active-classes="text-action-gradient-start font-bold"><div className="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" className="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 transition-all text-action-gradient-start font-bold" data-path="field-overview" href="#"><Icon name="grid_view" className="text-[22px]" /><span className="font-label-sm text-label-sm">Overview</span></a><a className="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="live-orders-manifest" href="#"><Icon name="receipt_long" className="text-[22px]" /><span className="font-label-sm text-label-sm">Orders</span></a><a className="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="inventory-and-fleet" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm">Fleet/Hub</span></a><a className="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="escrow-and-settlements" href="#"><Icon name="payments" className="text-[22px]" /><span className="font-label-sm text-label-sm">Payouts</span></a><a className="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-all" data-path="operator-profile" href="#"><Icon name="account_circle" className="text-[22px]" /><span className="font-label-sm text-label-sm">Profile</span></a></div></nav>
     </div>
   );
 };

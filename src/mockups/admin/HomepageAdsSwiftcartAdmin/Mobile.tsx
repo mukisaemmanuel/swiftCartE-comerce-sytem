@@ -22,8 +22,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Homepage &amp; Ads</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-10 space-y-5">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-10 space-y-5">
 
 <div className="bg-surface-container-high rounded-xl p-4 flex items-center justify-between shadow-sm">
 <div className="flex items-center space-x-3">
@@ -88,7 +87,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
 <span className="font-label-sm text-label-sm text-tertiary uppercase">Active</span>
 <span className="font-body-sm text-body-sm text-secondary">• Ends Nov 30</span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface truncate">Super Tech Week - 40% Audio</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface truncate whitespace-nowrap">Super Tech Week - 40% Audio</h3>
 <p className="font-body-sm text-body-sm text-secondary truncate">Target: Electronics • Priority High</p>
 </div>
 </div>
@@ -133,7 +132,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
 <span className="font-label-sm text-label-sm text-tertiary uppercase">Active</span>
 <span className="font-body-sm text-body-sm text-secondary">• Evergreen</span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface truncate">Kikuubo Wholesalers Direct</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface truncate whitespace-nowrap">Kikuubo Wholesalers Direct</h3>
 <p className="font-body-sm text-body-sm text-secondary truncate">Bulk Tier 1 • 15% Merchant Rebate</p>
 </div>
 </div>
@@ -178,7 +177,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
 <span className="font-label-sm text-label-sm text-secondary uppercase">Draft</span>
 <span className="font-body-sm text-body-sm text-primary">• Launches Dec 1</span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface truncate">SwiftExpress Boda Free Delivery</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface truncate whitespace-nowrap">SwiftExpress Boda Free Delivery</h3>
 <p className="font-body-sm text-body-sm text-secondary truncate">Holiday Campaign • Kampala Metro</p>
 </div>
 </div>
@@ -295,7 +294,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
 <span className="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">Top 3 Search</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold" id="ad-status-badge">Running</span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface font-bold truncate">SoundCore Space One ANC Boost</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">SoundCore Space One ANC Boost</h3>
 <div className="flex items-center space-x-1 text-secondary">
 <Icon name="storefront" className="text-[14px]" />
 <span className="font-body-sm text-body-sm truncate">Kikuubo Sound Hub</span>
@@ -326,7 +325,7 @@ export const HomepageAdsSwiftcartAdmin: React.FC<HomepageAdsSwiftcartAdminProps>
 <Icon name="trending_up" className="text-[14px]" />
 <span className="font-label-sm text-[11px]">+3.2x ROAS Metric</span>
 </div>
-<span className="font-body-sm text-[10px] text-secondary mt-1">Bid ceiling: UGX 500</span>
+<span className="font-body-sm text-[10px] text-secondary mt-1 whitespace-nowrap">Bid ceiling: UGX 500</span>
 </div>
 </div>
 

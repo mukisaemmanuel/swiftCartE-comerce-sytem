@@ -22,8 +22,7 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Commission</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full space-y-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full space-y-space-md">
 
 <div className="w-full bg-secondary-container rounded-xl p-space-md shadow-sm flex items-start gap-space-sm text-on-secondary-container">
 <div className="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 text-secondary shadow-sm">
@@ -49,11 +48,11 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <Icon name="bolt" className="text-[16px] text-primary-container" />
 <span className="font-label-md text-label-md uppercase tracking-wider">Today's Platform Revenue</span>
 </div>
-<div className="font-price-display text-price-display text-on-surface tracking-tight">
+<div className="font-price-display text-price-display text-on-surface tracking-tight whitespace-nowrap">
           UGX 3,428,000
         </div>
 <div className="flex items-center gap-space-xs mt-1">
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">From UGX 42.85M GMV</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant whitespace-nowrap">From UGX 42.85M GMV</span>
 <span className="font-label-sm text-label-sm font-semibold text-tertiary flex items-center">
 <Icon name="arrow_upward" className="text-[14px]" />+12.4%
           </span>
@@ -67,8 +66,8 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <div className="grid grid-cols-2 gap-space-sm pt-space-xs bg-surface-container-low rounded-lg p-space-sm">
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant mb-0.5">MTD Platform Total</span>
-<span className="font-headline-sm text-headline-sm text-on-surface">UGX 89.45M</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">89,450,000 UGX gross</span>
+<span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 89.45M</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">89,450,000 UGX gross</span>
 </div>
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant mb-0.5">Avg Take Rate</span>
@@ -225,15 +224,15 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <div className="grid grid-cols-3 gap-space-xs bg-surface-container-low rounded-lg p-space-sm text-center">
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Gross Order</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 280,000</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 280,000</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-primary-container font-semibold">Fee (8.0%)</span>
-<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5">+UGX 22,400</span>
+<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5 whitespace-nowrap">+UGX 22,400</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Merchant Net</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 257,600</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 257,600</span>
 </div>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">
@@ -259,15 +258,15 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <div className="grid grid-cols-3 gap-space-xs bg-surface-container-low rounded-lg p-space-sm text-center">
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Gross Order</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 85,000</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 85,000</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-primary-container font-semibold">Fee (8.0%)</span>
-<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5">+UGX 6,800</span>
+<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5 whitespace-nowrap">+UGX 6,800</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Merchant Net</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 78,200</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 78,200</span>
 </div>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">
@@ -292,15 +291,15 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <div className="grid grid-cols-3 gap-space-xs bg-surface-container-low rounded-lg p-space-sm text-center">
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Gross Order</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 145,000</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 145,000</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-primary-container font-semibold">Fee (8.0%)</span>
-<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5">+UGX 11,600</span>
+<span className="font-label-md text-label-md text-primary-container font-bold mt-0.5 whitespace-nowrap">+UGX 11,600</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Merchant Net</span>
-<span className="font-label-md text-label-md text-on-surface mt-0.5">UGX 133,400</span>
+<span className="font-label-md text-label-md text-on-surface mt-0.5 whitespace-nowrap">UGX 133,400</span>
 </div>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">

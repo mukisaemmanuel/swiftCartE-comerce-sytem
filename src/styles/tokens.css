@@ -401,6 +401,18 @@ html.light,
     padding-top: env(safe-area-inset-top, 0px);
   }
 
+  /* Buyer Tablet accessibility: ensure minimum 12px typography on >=768px */
+  @media (min-width: 768px) {
+    :root {
+      --text-label-sm: 12px;
+      --text-label-sm--line-height: 16px;
+    }
+    .text-label-sm,
+    .text-\[8px\], .text-\[9px\], .text-\[10px\], .text-\[11px\] {
+      font-size: 12px !important;
+    }
+  }
+
   aside[id*="drawer"], aside#seller-drawer, aside#admin-drawer, aside#app-drawer-panel {
     transition: transform 0.25s ease-out;
   }

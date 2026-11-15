@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RouteDefinition } from '../routes/types';
 import { useDashboardTheme } from '../context/ThemeContext';
+import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
 
 // Converted Admin Mockup Screens
 import {
@@ -37,10 +38,11 @@ import {
 
 export interface AdminViewProps {
   route: RouteDefinition;
+  userRole?: string;
   onNavigate: (path: string) => void;
 }
 
-export const AdminView: React.FC<AdminViewProps> = ({ route, onNavigate }) => {
+export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigate }) => {
   const path = route.path.toLowerCase().replace(/\/+$/, '') || '/admin';
   const { theme } = useDashboardTheme();
 
@@ -122,10 +124,20 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, onNavigate }) => {
     return renderAdminOverview();
   };
 
+  const isSuperAdmin =
+    userRole === 'super-admin' ||
+    route.role === 'super-admin' ||
+    path.startsWith('/super-admin') ||
+    (typeof window !== 'undefined' && localStorage.getItem('swiftcart_user_role') === 'super-admin');
+
   return (
-    <div className="min-h-screen w-full flex flex-col bg-surface text-on-surface">
+    <RoleDashboardShell
+      role={isSuperAdmin ? 'super-admin' : 'admin'}
+      currentPath={path}
+      onNavigate={onNavigate}
+    >
       {renderActiveScreen()}
-    </div>
+    </RoleDashboardShell>
   );
 };
 

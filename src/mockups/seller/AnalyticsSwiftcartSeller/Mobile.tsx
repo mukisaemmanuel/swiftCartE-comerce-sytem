@@ -22,8 +22,7 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shrink-0"><Icon name="arrow_back_ios_new" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Analytics</h1></div><div className="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Light and Dark Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px] dark:hidden" /><Icon name="light_mode" className="text-[20px] hidden dark:inline" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter pb-space-xl space-y-space-lg text-on-surface">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex flex-col w-full px-gutter pb-space-xl space-y-space-lg text-on-surface">
 
 <section aria-label="Date Range Filters" className="pt-space-sm">
 <div className="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-xs -mx-gutter px-gutter">
@@ -77,8 +76,8 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
 <Icon name="payments" className="text-primary text-[20px]" />
 </div>
 <div className="my-space-xs">
-<p className="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">UGX 14.25M</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant">UGX 14,250,000</p>
+<p className="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight whitespace-nowrap">UGX 14.25M</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 14,250,000</p>
 </div>
 <div className="flex items-center justify-between pt-space-xs">
 <span className="inline-flex items-center font-label-sm text-label-sm text-tertiary font-bold">
@@ -163,7 +162,7 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
 <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">Daily Revenue Trend</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Peak velocity on weekends</p>
 </div>
-<span className="inline-flex items-center px-space-xs py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span className="inline-flex items-center px-space-xs py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm whitespace-nowrap">
         UGX Millions
       </span>
 </div>
@@ -310,7 +309,7 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
 <div className="flex items-center gap-space-xs mt-0.5">
 <span className="font-body-sm text-body-sm text-on-surface-variant">34 Units sold</span>
 <span className="inline-block w-1 h-1 rounded-full bg-outline"></span>
-<span className="font-body-sm text-body-sm text-tertiary font-semibold">UGX 11,730,000</span>
+<span className="font-body-sm text-body-sm text-tertiary font-semibold whitespace-nowrap">UGX 11,730,000</span>
 </div>
 </div>
 <Icon name="local_fire_department" className="text-tertiary text-[20px] shrink-0" />
@@ -328,7 +327,7 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
 <div className="flex items-center gap-space-xs mt-0.5">
 <span className="font-body-sm text-body-sm text-on-surface-variant">28 Units sold</span>
 <span className="inline-block w-1 h-1 rounded-full bg-outline"></span>
-<span className="font-body-sm text-body-sm text-tertiary font-semibold">UGX 2,380,000</span>
+<span className="font-body-sm text-body-sm text-tertiary font-semibold whitespace-nowrap">UGX 2,380,000</span>
 </div>
 </div>
 <Icon name="trending_flat" className="text-secondary text-[20px] shrink-0" />
@@ -346,7 +345,7 @@ export const AnalyticsSwiftcartSeller: React.FC<AnalyticsSwiftcartSellerProps> =
 <div className="flex items-center gap-space-xs mt-0.5">
 <span className="font-body-sm text-body-sm text-on-surface-variant">24 Units sold</span>
 <span className="inline-block w-1 h-1 rounded-full bg-outline"></span>
-<span className="font-body-sm text-body-sm text-tertiary font-semibold">UGX 1,080,000</span>
+<span className="font-body-sm text-body-sm text-tertiary font-semibold whitespace-nowrap">UGX 1,080,000</span>
 </div>
 </div>
 <Icon name="trending_flat" className="text-secondary text-[20px] shrink-0" />

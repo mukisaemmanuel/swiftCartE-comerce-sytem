@@ -22,8 +22,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0"><img alt="SwiftCart" className="h-8 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider truncate">SwiftCart Rider</span><h1 className="font-headline-sm text-headline-sm text-on-surface font-bold leading-none truncate">Earnings</h1></div></div><div className="flex items-center gap-space-xs"><button aria-label="Toggle Online Status" className="min-h-[44px] px-space-md py-space-xs rounded-full bg-surface-container-high flex items-center gap-space-xs hover:bg-surface-container-highest transition-colors" type="button"><span className="h-3 w-3 rounded-full bg-tertiary-container shadow-[0_0_8px_rgba(0,165,114,0.6)] animate-pulse"></span><span className="font-label-md text-label-md text-on-surface font-bold">ONLINE</span></button><button aria-label="Notifications" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" type="button"><Icon name="notifications" className="text-[24px]" /><span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="Toggle Dark/Light Mode" className="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button" onClick={() => toggleTheme()}><Icon name="light_mode" className="text-[22px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 w-full bg-surface pt-16 pb-24 px-margin"><div className="flex flex-col w-full gap-space-lg">
+      <main className="flex-1 w-full bg-surface pt-16 pb-24 px-margin"><div className="flex flex-col w-full gap-space-lg">
 
 <div className="flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
@@ -57,7 +56,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant font-semibold">Available for Instant Payout</span>
 <div className="flex items-baseline gap-1.5 mt-0.5">
-<span className="font-label-md text-label-md text-primary-fixed-dim font-bold">UGX</span>
+<span className="font-label-md text-label-md text-primary-fixed-dim font-bold whitespace-nowrap">UGX</span>
 <span className="font-headline-xl-mobile text-headline-xl-mobile font-extrabold tracking-tight text-inverse-on-surface">248,500</span>
 </div>
 </div>
@@ -94,7 +93,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <div className="flex flex-col min-w-0">
 <span className="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Cash-on-Delivery (COD) in Hand</span>
 <div className="flex items-baseline gap-1">
-<span className="font-label-sm text-label-sm text-secondary font-bold">UGX</span>
+<span className="font-label-sm text-label-sm text-secondary font-bold whitespace-nowrap">UGX</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-tight">45,000</span>
 </div>
 </div>
@@ -105,7 +104,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <div className="flex flex-col gap-1.5">
 <div className="flex justify-between items-center font-label-sm text-label-sm">
 <span className="text-on-surface-variant font-medium">Safe Allowance Utilized</span>
-<span className="text-primary font-bold">45% of UGX 100k Limit</span>
+<span className="text-primary font-bold whitespace-nowrap">45% of UGX 100k Limit</span>
 </div>
 <div className="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
 <div className="h-full bg-primary-container rounded-full" style={{"width":"45%"}}></div>
@@ -115,7 +114,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <div className="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface">
 <Icon name="warning" className="text-[18px] text-primary flex-shrink-0" />
 <span className="font-body-sm text-body-sm text-secondary leading-snug">
-        Hand-in required before reaching <strong className="text-on-surface font-bold">UGX 100,000</strong> to keep receiving cash orders.
+        Hand-in required before reaching <strong className="text-on-surface font-bold whitespace-nowrap">UGX 100,000</strong> to keep receiving cash orders.
       </span>
 </div>
 <button className="w-full min-h-[44px] bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-colors" type="button">
@@ -141,7 +140,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <span className="font-body-sm text-body-sm text-secondary">42 distance legs &amp; flag drops</span>
 </div>
 </div>
-<span className="font-label-lg text-label-lg text-on-surface font-extrabold">UGX 185,000</span>
+<span className="font-label-lg text-label-lg text-on-surface font-extrabold whitespace-nowrap">UGX 185,000</span>
 </div>
 
 <div className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
@@ -154,7 +153,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <span className="font-body-sm text-body-sm text-secondary">7 high-demand surges</span>
 </div>
 </div>
-<span className="font-label-lg text-label-lg text-primary font-extrabold">+UGX 38,500</span>
+<span className="font-label-lg text-label-lg text-primary font-extrabold whitespace-nowrap">+UGX 38,500</span>
 </div>
 
 <div className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
@@ -167,7 +166,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <span className="font-body-sm text-body-sm text-tertiary font-bold">100% kept by rider</span>
 </div>
 </div>
-<span className="font-label-lg text-label-lg text-tertiary font-extrabold">+UGX 25,000</span>
+<span className="font-label-lg text-label-lg text-tertiary font-extrabold whitespace-nowrap">+UGX 25,000</span>
 </div>
 
 <div className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
@@ -180,7 +179,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 <span className="font-body-sm text-body-sm text-secondary">Zero penalty streak</span>
 </div>
 </div>
-<span className="font-label-lg text-label-lg text-secondary font-extrabold">UGX 0</span>
+<span className="font-label-lg text-label-lg text-secondary font-extrabold whitespace-nowrap">UGX 0</span>
 </div>
 </div>
 </div>
@@ -209,12 +208,12 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 <div className="inline-flex items-center gap-1 mt-1 text-tertiary">
 <Icon name="favorite" className="text-[13px]" />
-<span className="font-label-sm text-label-sm font-bold">+UGX 1,000 Tip</span>
+<span className="font-label-sm text-label-sm font-bold whitespace-nowrap">+UGX 1,000 Tip</span>
 </div>
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 6,500</span>
+<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold whitespace-nowrap">UGX 6,500</span>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-bold mt-1">Paid</span>
 </div>
 </div>
@@ -234,7 +233,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 5,500</span>
+<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold whitespace-nowrap">UGX 5,500</span>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-bold mt-1">Paid</span>
 </div>
 </div>
@@ -254,7 +253,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 8,000</span>
+<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold whitespace-nowrap">UGX 8,000</span>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-bold mt-1">Paid</span>
 </div>
 </div>
@@ -274,7 +273,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 7,000</span>
+<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold whitespace-nowrap">UGX 7,000</span>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-bold mt-1">Paid</span>
 </div>
 </div>
@@ -302,7 +301,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-label-lg text-label-lg text-on-surface font-extrabold">UGX 180,000</span>
+<span className="font-label-lg text-label-lg text-on-surface font-extrabold whitespace-nowrap">UGX 180,000</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5 mt-0.5">
 <Icon name="check_circle" className="text-[13px]" />
             Completed
@@ -321,7 +320,7 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 <div className="flex flex-col items-end flex-shrink-0">
-<span className="font-label-lg text-label-lg text-on-surface font-extrabold">UGX 150,000</span>
+<span className="font-label-lg text-label-lg text-on-surface font-extrabold whitespace-nowrap">UGX 150,000</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5 mt-0.5">
 <Icon name="check_circle" className="text-[13px]" />
             Completed
@@ -332,7 +331,6 @@ export const EarningsSwiftcartRider: React.FC<EarningsSwiftcartRiderProps> = (pr
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary-container bg-surface-container-high font-bold"><div className="flex items-center justify-around h-20 px-space-xs max-w-lg mx-auto"><a className="flex-1 flex flex-col items-center justify-center min-h-[48px] py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="overview" href="#"><Icon name="dashboard" className="text-[26px]" /><span className="font-label-md text-label-md mt-0.5">Overview</span></a><a className="flex-1 flex flex-col items-center justify-center min-h-[48px] py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="deliveries" href="#"><Icon name="package_2" className="text-[26px]" /><span className="font-label-md text-label-md mt-0.5">Deliveries</span></a><a className="flex-1 flex flex-col items-center justify-center min-h-[48px] py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="rider-map" href="#"><Icon name="location_on" className="text-[26px]" /><span className="font-label-md text-label-md mt-0.5">Map</span></a><a aria-current="page" className="flex-1 flex flex-col items-center justify-center min-h-[48px] py-space-xs rounded-xl transition-all text-primary-container bg-surface-container-high font-bold" data-path="earnings" href="#"><Icon name="account_balance_wallet" className="text-[26px]" /><span className="font-label-md text-label-md mt-0.5">Earnings</span></a><a className="flex-1 flex flex-col items-center justify-center min-h-[48px] py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-all" data-path="profile" href="#"><Icon name="person" className="text-[26px]" /><span className="font-label-md text-label-md mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

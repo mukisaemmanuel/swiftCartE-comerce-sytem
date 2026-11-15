@@ -22,8 +22,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go Back" className="w-11 h-11 -ml-1 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate font-bold">Package Detail</h1><span className="font-label-sm text-label-sm text-on-surface-variant truncate">Station #04 - Kampala</span></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 w-full bg-surface pt-16 pb-safe"><div className="flex flex-col w-full pb-8">
+      <main className="flex-1 w-full bg-surface pt-16 pb-safe"><div className="flex flex-col w-full pb-8">
 
 <div className="px-margin pt-space-sm pb-space-xs">
 <div className="bg-surface-container rounded-xl p-space-md shadow-sm flex items-center justify-between">
@@ -103,7 +102,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-baseline justify-between gap-1">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">Kizito Brian</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Kizito Brian</h2>
 <span className="font-label-sm text-label-sm text-primary font-bold">#RDR-UG-4082</span>
 </div>
 <div className="flex items-center gap-space-xs mt-0.5">
@@ -151,7 +150,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 <Icon name="lock" className="text-[18px] text-tertiary" />
 </div>
 <div className="mt-1 truncate">
-<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold truncate">UGX 3.42M</span>
+<span className="font-headline-sm text-headline-sm text-on-surface font-extrabold truncate whitespace-nowrap">UGX 3.42M</span>
 </div>
 <div className="flex items-center gap-1 mt-1">
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>

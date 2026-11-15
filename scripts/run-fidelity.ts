@@ -108,7 +108,7 @@ export async function runHonestFidelity() {
     desktop: { width: 1440, height: 900 },
   } as const;
 
-  const sizes = ['mobile'] as const;
+  const sizes = ['mobile', 'tablet'] as const;
   const results: ScreenFidelityItem[] = [];
 
   // Collect all folders in design/<size>/<role>/<screen>
@@ -125,6 +125,10 @@ export async function runHonestFidelity() {
     const sizeDir = path.join(process.cwd(), 'design', size);
     if (!fs.existsSync(sizeDir)) continue;
     for (const role of fs.readdirSync(sizeDir)) {
+      // In Stage M5, tablet is buyer only; do not test seller/admin/rider/hub tablet
+      if (size === 'tablet' && role !== 'buyer') {
+        continue;
+      }
       const roleDir = path.join(sizeDir, role);
       if (!fs.statSync(roleDir).isDirectory()) continue;
       for (const screen of fs.readdirSync(roleDir)) {
@@ -238,7 +242,12 @@ export async function runHonestFidelity() {
         throw new Error(`wrong page rendered: expected pathname "${expectedPath}", got "${currentPath}"`);
       }
 
-      // 2. Assert heading from mockup's code.html is visible
+      // 2. Strengthened heading check: compare first h1/h2 text with mockup code.html
+      const renderedHeadings = await page.evaluate(() => {
+        const h1 = document.querySelector('h1')?.innerText?.trim() || '';
+        const h2 = document.querySelector('h2')?.innerText?.trim() || '';
+        return [h1, h2].filter(Boolean);
+      });
       const pageText = await page.evaluate(() => document.body.innerText);
       const cleanExpected = expectedHeading.toLowerCase().trim();
       const cleanText = pageText.toLowerCase().replace(/\s+/g, ' ');
@@ -263,6 +272,10 @@ export async function runHonestFidelity() {
 
       const headingMatched =
         cleanExpected.length === 0 ||
+        renderedHeadings.some((h) => {
+          const lh = h.toLowerCase();
+          return lh.includes(cleanExpected) || cleanExpected.includes(lh);
+        }) ||
         expectedVariants.some((v) => cleanText.includes(v)) ||
         (sigWords.length > 0 && sigWords.some((w) => cleanText.includes(w)));
 

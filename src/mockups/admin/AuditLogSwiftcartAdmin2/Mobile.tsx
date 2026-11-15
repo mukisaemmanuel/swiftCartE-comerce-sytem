@@ -22,8 +22,7 @@ export const AuditLogSwiftcartAdmin2: React.FC<AuditLogSwiftcartAdmin2Props> = (
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Uganda Admin</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Audit Log</h1></div></div><div className="flex items-center gap-space-xs"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div><div className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-on-surface select-none">AD</div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div className="flex flex-col w-full px-margin pb-space-xl gap-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div className="flex flex-col w-full px-margin pb-space-xl gap-space-md">
 
 <div className="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
@@ -220,7 +219,7 @@ export const AuditLogSwiftcartAdmin2: React.FC<AuditLogSwiftcartAdmin2Props> = (
 </div>
 <div className="mt-1 flex items-baseline gap-1">
 <span className="font-label-sm text-label-sm text-secondary">Disbursed:</span>
-<span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">UGX 14,250,000</span>
+<span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold whitespace-nowrap">UGX 14,250,000</span>
 </div>
 </div>
 </div>
@@ -352,7 +351,6 @@ export const AuditLogSwiftcartAdmin2: React.FC<AuditLogSwiftcartAdmin2Props> = (
 <span className="font-body-sm text-[11px] text-secondary/70">Displaying administrative actions within the 90-day retention cycle.</span>
 </div>
 </div></main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div className="flex justify-around items-center h-16 px-space-xs"><a className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-secondary hover:text-on-surface transition-colors" data-path="sellers-directory" href="#"><Icon name="storefront" className="text-[22px]" /><span className="font-label-sm text-label-sm">Sellers</span></a><a aria-current="page" className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="audit-log" href="#"><Icon name="receipt_long" className="text-[22px]" /><span className="font-label-sm text-label-sm">Audit</span></a><a className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-secondary hover:text-on-surface transition-colors" data-path="danger-zone" href="#"><Icon name="security" className="text-[22px]" /><span className="font-label-sm text-label-sm">Governance</span></a></div></nav>
     </div>
   );
 };

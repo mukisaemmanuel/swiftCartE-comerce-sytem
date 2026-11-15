@@ -22,8 +22,7 @@ export const EditExistingProductSwiftcartSeller: React.FC<EditExistingProductSwi
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div className="h-16 px-space-sm flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0"><Icon name="arrow_back_ios_new" className="text-[20px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 pl-1"><span className="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Seller Edit Product</h1></div></div><div className="flex items-center gap-space-sm flex-shrink-0"><div className="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><Icon name="verified_user" className="text-[16px]" /><span className="font-label-sm text-label-sm font-bold">SECURE</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-32">
+      <main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-32">
 
 <div className="px-margin pt-space-xs pb-space-sm flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
@@ -156,9 +155,9 @@ export const EditExistingProductSwiftcartSeller: React.FC<EditExistingProductSwi
 <div className="grid grid-cols-2 gap-space-sm items-start">
 
 <div className="flex flex-col gap-1">
-<label className="font-label-sm text-label-sm text-primary uppercase font-bold">Selling Price (UGX)</label>
+<label className="font-label-sm text-label-sm text-primary uppercase font-bold whitespace-nowrap">Selling Price (UGX)</label>
 <div className="bg-surface-container-highest rounded-lg px-space-sm py-2 flex items-center gap-1.5">
-<span className="font-label-md text-label-md text-on-surface-variant font-bold">UGX</span>
+<span className="font-label-md text-label-md text-on-surface-variant font-bold whitespace-nowrap">UGX</span>
 <input className="w-full bg-transparent font-price-display text-[18px] text-on-surface outline-none font-bold" inputMode="numeric" type="text" value="248,500" />
 </div>
 </div>
@@ -169,14 +168,14 @@ export const EditExistingProductSwiftcartSeller: React.FC<EditExistingProductSwi
 <span className="bg-error-container text-on-error-container font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-20%</span>
 </div>
 <div className="bg-surface-container-highest rounded-lg px-space-sm py-2 flex items-center gap-1.5">
-<span className="font-label-md text-label-md text-on-surface-variant">UGX</span>
+<span className="font-label-md text-label-md text-on-surface-variant whitespace-nowrap">UGX</span>
 <input className="w-full bg-transparent font-body-md text-body-md text-on-surface-variant line-through outline-none" inputMode="numeric" type="text" value="310,000" />
 </div>
 </div>
 </div>
 <div className="flex items-center gap-1 text-amber-warning">
 <Icon name="info" className="text-[14px]" />
-<span className="font-label-sm text-label-sm font-medium">UGX only, integer format. Settlement excludes standard platform fee (3.5%).</span>
+<span className="font-label-sm text-label-sm font-medium whitespace-nowrap">UGX only, integer format. Settlement excludes standard platform fee (3.5%).</span>
 </div>
 </div>
 

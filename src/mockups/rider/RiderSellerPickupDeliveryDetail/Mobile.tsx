@@ -22,13 +22,12 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div className="h-16 px-space-sm flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:text-primary transition-colors flex-shrink-0"><Icon name="arrow_back_ios_new" className="text-[20px]" /></button><img alt="SwiftCart" className="h-7 w-auto object-contain flex-shrink-0" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col min-w-0 pl-1"><span className="font-label-sm text-label-sm text-primary uppercase tracking-widest truncate">SwiftCart Ops</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Rider Seller Pickup Confirmation</h1></div></div><div className="flex items-center gap-space-sm flex-shrink-0"><div className="flex items-center gap-1 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow"><Icon name="verified_user" className="text-[16px]" /><span className="font-label-sm text-label-sm font-bold">SECURE</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-8">
+      <main className="flex flex-col relative w-full pt-16 bg-surface pb-safe"><div className="flex flex-col w-full pb-8">
 
 <div className="w-full bg-surface-container-high/90 px-margin py-space-xs flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-xs min-w-0">
 <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-ping"></span>
-<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider truncate">Escrow Locked: UGX 340,000</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider truncate whitespace-nowrap">Escrow Locked: UGX 340,000</span>
 </div>
 <div className="flex items-center gap-1 text-on-surface-variant flex-shrink-0">
 <Icon name="wifi_tethering" className="text-[16px] text-amber-warning" />
@@ -66,7 +65,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 <div className="grid grid-cols-3 gap-space-xs pt-space-xs mt-space-xs bg-surface-container-highest/40 p-space-xs rounded-lg">
 <div className="flex flex-col items-center justify-center p-1">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Payout</span>
-<span className="font-label-lg text-label-lg text-tertiary font-bold">UGX 6,500</span>
+<span className="font-label-lg text-label-lg text-tertiary font-bold whitespace-nowrap">UGX 6,500</span>
 </div>
 <div className="flex flex-col items-center justify-center p-1 bg-surface-container/60 rounded-md">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Distance</span>
@@ -151,7 +150,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest truncate">Authorized Merchant</span>
-<h3 className="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda Official</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">SoundCore Uganda Official</h3>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">Pioneer Mall Stall G-14, Kampala Central</span>
 </div>
 </div>

@@ -22,8 +22,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span><span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Live Ops • Kampala Central</span></div><h1 className="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Manifest Runs</h1></div></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface"><Icon name="sync_alt" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full pb-8 space-y-4">
+      <main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full pb-8 space-y-4">
 
 <div className="px-margin pt-1">
 <div className="bg-surface-container-low rounded-xl p-space-md shadow-md">
@@ -39,7 +38,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-1.5 truncate">
-<h2 className="font-headline-sm text-headline-sm text-on-surface truncate">SoundCore Uganda</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">SoundCore Uganda</h2>
 </div>
 <div className="flex items-center gap-2 mt-0.5">
 <span className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 truncate">
@@ -119,7 +118,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 </div>
 <div>
-<div className="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight">
+<div className="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight whitespace-nowrap">
             UGX 1,420,000
           </div>
 <div className="flex items-center gap-1 mt-1 text-tertiary font-label-sm text-label-sm">
@@ -137,7 +136,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 </div>
 <div>
-<div className="font-headline-sm text-headline-sm text-emerald-escrow font-extrabold tracking-tight">
+<div className="font-headline-sm text-headline-sm text-emerald-escrow font-extrabold tracking-tight whitespace-nowrap">
             UGX 8,450,000
           </div>
 <div className="flex items-center gap-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
@@ -211,7 +210,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 248,500</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 248,500</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
 <span>In Escrow</span>
@@ -255,7 +254,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 330,000</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 330,000</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
 <span>In Escrow</span>
@@ -312,7 +311,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 <div className="text-right flex-shrink-0">
 <span className="font-label-sm text-label-sm text-on-surface-variant block">Scheduled</span>
-<span className="font-label-md text-label-md text-tertiary font-bold">UGX 8,450,000</span>
+<span className="font-label-md text-label-md text-tertiary font-bold whitespace-nowrap">UGX 8,450,000</span>
 </div>
 </div>
 
@@ -324,7 +323,6 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="manifest-runs" href="#"><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="hub-scanner" href="#"><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="escrow-ledger" href="#"><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Escrow</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#"><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#"><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

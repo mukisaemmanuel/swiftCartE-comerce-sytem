@@ -22,8 +22,7 @@ export const SellerNotificationsSwiftcart: React.FC<SellerNotificationsSwiftcart
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors -ml-space-xs"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0" src="/brand/swiftcart-logo-white.png" /><div className="flex flex-col min-w-0 ml-space-xs"><span className="font-label-sm text-label-sm text-secondary tracking-wider uppercase truncate">SwiftCart Uganda</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate">Seller Notifications</h1></div></div><div className="flex items-center gap-space-xs"><button aria-label="Page options" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors"><Icon name="more_vert" className="text-[22px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-safe">
+      <main className="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-safe">
 
 <div className="px-margin pt-space-md pb-space-sm bg-inverse-surface flex items-center justify-between">
 <div className="flex items-center gap-space-sm min-w-0">
@@ -95,7 +94,7 @@ export const SellerNotificationsSwiftcart: React.FC<SellerNotificationsSwiftcart
 <span className="font-body-sm text-body-sm text-secondary-fixed-dim whitespace-nowrap shrink-0">5m ago</span>
 </div>
 <p className="font-body-md text-body-md text-inverse-on-surface mt-1 leading-snug">
-            New Order <span className="font-bold text-primary-container">#SC-9952</span> received for <span className="font-semibold text-inverse-on-surface">SoundCore Space One ANC</span> (<span className="font-bold text-inverse-on-surface">UGX 248,500</span>). Pack parcel and assign a Boda rider before <span className="text-primary-container font-bold underline underline-offset-2">2:00 PM</span>.
+            New Order <span className="font-bold text-primary-container">#SC-9952</span> received for <span className="font-semibold text-inverse-on-surface">SoundCore Space One ANC</span> (<span className="font-bold text-inverse-on-surface whitespace-nowrap">UGX 248,500</span>). Pack parcel and assign a Boda rider before <span className="text-primary-container font-bold underline underline-offset-2">2:00 PM</span>.
           </p>
 
 <div className="flex items-center gap-space-sm mt-space-md pt-space-xs">
@@ -128,7 +127,7 @@ export const SellerNotificationsSwiftcart: React.FC<SellerNotificationsSwiftcart
 <span className="font-body-sm text-body-sm text-secondary-fixed-dim whitespace-nowrap shrink-0">1h ago</span>
 </div>
 <p className="font-body-md text-body-md text-inverse-on-surface mt-1 leading-snug">
-<span className="font-bold text-tertiary-fixed-dim">UGX 1,420,000</span> has been transferred to your <span className="font-semibold text-inverse-on-surface">MTN Mobile Money</span> wallet (<span className="font-mono text-secondary-fixed-dim">+256 772 ***910</span>). Reference: <span className="font-mono font-semibold text-inverse-on-surface">PYO-88319</span>.
+<span className="font-bold text-tertiary-fixed-dim whitespace-nowrap">UGX 1,420,000</span> has been transferred to your <span className="font-semibold text-inverse-on-surface">MTN Mobile Money</span> wallet (<span className="font-mono text-secondary-fixed-dim">+256 772 ***910</span>). Reference: <span className="font-mono font-semibold text-inverse-on-surface">PYO-88319</span>.
           </p>
 
 <div className="flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg bg-surface-container-highest/20 text-secondary-fixed-dim text-body-sm font-body-sm">
@@ -222,7 +221,7 @@ export const SellerNotificationsSwiftcart: React.FC<SellerNotificationsSwiftcart
 <span className="font-body-sm text-body-sm text-secondary-fixed-dim whitespace-nowrap shrink-0">1d ago</span>
 </div>
 <p className="font-body-md text-body-md text-secondary-fixed-dim mt-1 leading-snug">
-            Yesterday's store performance: <span className="font-semibold text-inverse-on-surface">18 completed orders</span>, <span className="font-bold text-inverse-on-surface">UGX 4,280,000</span> total revenue, zero dispatch cancellations.
+            Yesterday's store performance: <span className="font-semibold text-inverse-on-surface">18 completed orders</span>, <span className="font-bold text-inverse-on-surface whitespace-nowrap">UGX 4,280,000</span> total revenue, zero dispatch cancellations.
           </p>
 
 <div className="grid grid-cols-2 gap-space-xs mt-3 p-2 rounded-lg bg-surface-container-highest/15">
@@ -232,7 +231,7 @@ export const SellerNotificationsSwiftcart: React.FC<SellerNotificationsSwiftcart
 </div>
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">Avg Order</span>
-<span className="font-headline-sm text-headline-sm font-bold text-inverse-on-surface">UGX 237,777</span>
+<span className="font-headline-sm text-headline-sm font-bold text-inverse-on-surface whitespace-nowrap">UGX 237,777</span>
 </div>
 </div>
 <div className="flex items-center gap-space-sm mt-space-md pt-space-xs">

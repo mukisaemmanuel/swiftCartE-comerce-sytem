@@ -90,7 +90,7 @@ export const MtnMomoUssd165PinPrompt: React.FC<MtnMomoUssd165PinPromptProps> = (
 </div>
 </div>
 
-<div className="fixed top-16 inset-x-0 bottom-0 z-40 flex flex-col justify-start items-center px-4 pt-1 bg-inverse-surface/65 backdrop-blur-[6px] transition-opacity duration-200" id="ussd-modal">
+<div className="fixed inset-0 z-50 flex flex-col justify-center items-center px-4 bg-inverse-surface/65 backdrop-blur-[6px] transition-opacity duration-200" id="ussd-modal">
 
 <div className="w-full max-w-[360px] bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-[fadeIn_0.25s_ease-out]">
 

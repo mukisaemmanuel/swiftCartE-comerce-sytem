@@ -22,8 +22,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface" type="button"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Locked Dispatches</h1></div><div className="flex items-center gap-space-xs"><button className="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><Icon name="routine" className="text-[20px]" /></button><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-8 space-y-4">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div className="flex-1 w-full px-margin pt-space-md pb-space-lg"><div className="flex flex-col w-full pb-8 space-y-4">
 
 <div className="rounded-xl bg-error-container text-on-error-container p-4 shadow-md relative overflow-hidden">
 <div className="flex items-start gap-3">
@@ -76,7 +75,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
 </div>
 <div className="text-right shrink-0">
 <span className="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
-<span className="font-price-display text-price-display text-primary">UGX 520,000</span>
+<span className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 520,000</span>
 </div>
 </div>
 
@@ -166,7 +165,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
 </div>
 <div className="text-right shrink-0">
 <span className="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
-<span className="font-price-display text-price-display text-primary">UGX 1,480,000</span>
+<span className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 1,480,000</span>
 </div>
 </div>
 
@@ -226,7 +225,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
 </div>
 <div className="text-right shrink-0">
 <span className="font-label-sm text-label-sm text-secondary uppercase block">Consignment</span>
-<span className="font-price-display text-price-display text-on-surface">UGX 195,000</span>
+<span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 195,000</span>
 </div>
 </div>
 <div className="rounded-lg bg-surface-container text-on-surface p-2.5 flex items-start gap-2">

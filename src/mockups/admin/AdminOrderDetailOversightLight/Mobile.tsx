@@ -22,8 +22,7 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-xs"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" type="button"><Icon name="chevron_left" className="text-[24px]" /></button><div className="flex items-center gap-space-xs pl-space-xs"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-white.png" /><div className="flex flex-col"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary">Uganda Ops</span><span className="font-headline-sm text-headline-sm leading-tight text-on-surface font-bold">Merchant Compliance</span></div></div></div><div className="flex items-center gap-space-sm"><div aria-label="User avatar" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
-<main className="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+      <main className="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div className="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
 
 <div className="flex items-center justify-between px-space-md py-space-xs bg-surface-container-lowest rounded-xl shadow-sm">
 <div className="flex items-center gap-space-xs">
@@ -75,7 +74,7 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 </div>
 <div className="text-right">
 <div className="font-label-sm text-label-sm text-secondary uppercase">Vault Collateral</div>
-<div className="font-label-lg text-label-lg font-extrabold text-on-surface">UGX 253,500</div>
+<div className="font-label-lg text-label-lg font-extrabold text-on-surface whitespace-nowrap">UGX 253,500</div>
 </div>
 </div>
 </div>
@@ -134,7 +133,7 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 </div>
 <div className="flex items-center justify-between pt-1 font-body-sm text-body-sm bg-surface-bright p-2 rounded-lg">
 <span className="text-secondary font-label-sm text-label-sm uppercase">Payable Holdback</span>
-<span className="font-label-md text-label-md font-bold text-on-surface">UGX 248,500</span>
+<span className="font-label-md text-label-md font-bold text-on-surface whitespace-nowrap">UGX 248,500</span>
 </div>
 </div>
 
@@ -213,25 +212,25 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 <div className="space-y-space-xs font-body-sm text-body-sm pt-1">
 <div className="flex items-center justify-between text-secondary">
 <span>Escrow Total Ingested</span>
-<span className="font-label-md text-label-md text-on-surface font-bold">UGX 253,500</span>
+<span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX 253,500</span>
 </div>
 <div className="flex items-center justify-between text-secondary">
 <span className="flex items-center gap-1">
           SwiftCart Platform Fee (5%)
           <Icon name="info" className="text-[13px] text-secondary" />
 </span>
-<span className="font-semibold text-error">-UGX 12,425</span>
+<span className="font-semibold text-error whitespace-nowrap">-UGX 12,425</span>
 </div>
 <div className="flex items-center justify-between text-secondary">
 <span>Boda Logistics Disburse</span>
-<span className="font-semibold text-error">-UGX 5,000</span>
+<span className="font-semibold text-error whitespace-nowrap">-UGX 5,000</span>
 </div>
 <div className="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
 <div>
 <div className="font-label-md text-label-md text-on-surface font-extrabold">Net Merchant Payable</div>
 <div className="font-body-sm text-[11px] text-secondary">Auto-disburses upon Buyer OTP Match</div>
 </div>
-<div className="font-label-lg text-label-lg font-black text-tertiary">
+<div className="font-label-lg text-label-lg font-black text-tertiary whitespace-nowrap">
           UGX 236,075
         </div>
 </div>

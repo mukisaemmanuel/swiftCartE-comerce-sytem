@@ -142,100 +142,58 @@ export function convertMobileHtmlToReact(
   // 1. Remove scripts, meta, external font stylesheets, title
   $('script, meta, link[rel="stylesheet"], title').remove();
 
+  // Fix followed_stores header bug from mockup
+  if (htmlPath.includes('followed_stores')) {
+    $('h1:contains("Order Tracking")').text('Followed Stores');
+  }
+
   const isDashboard = role !== 'buyer';
+  const isMobile = true;
 
   // 2. Dashboard Specific AST Adjustments
   let hasSidebar = false;
   if (isDashboard) {
-    // Duplicate Dark/Light pill replacement
-    $('button, div, span').each((_, el) => {
-      const text = $(el).text().trim().toLowerCase();
-      if (text === 'dark' || text === 'light') {
-        const parent = $(el).parent();
-        const parentText = parent.text().toLowerCase();
-        if (parentText.includes('dark') && parentText.includes('light')) {
-          parent.replaceWith(
-            `<button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50" aria-label="Toggle Theme" title="Toggle Theme"><span class="material-symbols-outlined text-[20px]">theme_toggle_placeholder</span></button>`
-          );
-        }
-      }
-    });
+    // A role must feel like ONE app: The shell renders once per role in RoleDashboardShell.
+    // Converted dashboard screens render as CHILDREN inside the shell and must NOT
+    // render their own fixed top header, aside drawer, or fixed bottom bar.
+    $('header').remove();
+    $('aside').remove();
+    $('nav.fixed, nav[class*="bottom-0"], body > nav').remove();
 
-    // Overview not Dashboard
-    $('a, span, h1, h2, h3, h4, p, div').each((_, el) => {
+    // Prevent wrapping on currency amounts ("UGX 1,420,000") across dashboard screens
+    $('*').each((_, el) => {
       if ($(el).children().length === 0) {
-        const text = $(el).text().trim();
-        if (text === 'Dashboard') {
-          $(el).text('Overview');
+        const text = $(el).text();
+        if (/\b(?:UGX|USh)\b/i.test(text)) {
+          const cls = $(el).attr('class') || '';
+          if (!cls.includes('whitespace-nowrap')) {
+            $(el).attr('class', `${cls} whitespace-nowrap`.trim());
+          }
         }
       }
     });
 
-    // Aside / Sidebar detection & transformation
-    $('aside').each((_, el) => {
-      hasSidebar = true;
-      const cls = ($(el).attr('class') || '')
-        .replace(/-translate-x-full/g, '')
-        .replace(/\btranslate-x-0\b/g, '')
-        .trim();
-      $(el).attr(
-        'class',
-        `${cls} fixed z-50 select-none dashboard-aside-drawer`
-      );
-      // Prepend close button for mobile if not present
-      if ($(el).find('.sidebar-close-btn').length === 0) {
-        $(el).prepend(
-          `<div class="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" class="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined text-[20px]">close</span></button></div>`
-        );
+    // Prevent header title wrapping
+    $('h1, h2, h3').each((_, el) => {
+      const cls = $(el).attr('class') || '';
+      if (!cls.includes('whitespace-nowrap') && cls.includes('truncate')) {
+        $(el).attr('class', `${cls} whitespace-nowrap`.trim());
       }
     });
 
-    // Content area adjustments: pl-60 -> pl-0 lg:pl-60, left-60 -> left-0 lg:left-60
+    // Content area adjustments: pl-60 -> pl-0, left-60 -> left-0, ml-60 -> ml-0
     $('*').each((_, el) => {
       const cls = $(el).attr('class') || '';
       if (cls.includes('pl-60')) {
-        $(el).attr('class', cls.replace(/\bpl-60\b/g, 'pl-0 lg:pl-60'));
+        $(el).attr('class', cls.replace(/\bpl-60\b/g, 'pl-0'));
       }
       if (cls.includes('left-60')) {
-        $(el).attr('class', cls.replace(/\bleft-60\b/g, 'left-0 lg:left-60'));
+        $(el).attr('class', cls.replace(/\bleft-60\b/g, 'left-0'));
       }
       if (cls.includes('ml-60')) {
-        $(el).attr('class', cls.replace(/\bml-60\b/g, 'ml-0 lg:ml-60'));
+        $(el).attr('class', cls.replace(/\bml-60\b/g, 'ml-0'));
       }
     });
-
-    // Header hamburger button injection (only if header does not already have a drawer/menu button)
-    const hasExistingMenuButton =
-      $(
-        'header button[id*="drawer"], header button[aria-label*="menu" i], header button:has(span:contains("menu")), header button:has(i:contains("menu"))'
-      ).length > 0;
-    if (hasSidebar && !hasExistingMenuButton) {
-      $('header').first().each((_, el) => {
-        const firstDiv = $(el).children().first();
-        if (firstDiv.length > 0) {
-          firstDiv.prepend(
-            `<button type="button" class="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]">menu</span></button>`
-          );
-        }
-      });
-    }
-
-    // Ensure header has a sun/moon toggle if none exists
-    const hasExistingToggle =
-      $('.theme-toggle-btn').length > 0 ||
-      $(
-        'header button[title*="theme" i], header button[aria-label*="theme" i], header button[aria-label*="mode" i], header button:has(span:contains("dark_mode")), header button:has(span:contains("light_mode")), header button:has(span:contains("routine"))'
-      ).length > 0;
-    if (!hasExistingToggle) {
-      $('header').first().each((_, el) => {
-        const lastDiv = $(el).children().last();
-        if (lastDiv.length > 0) {
-          lastDiv.prepend(
-            `<button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme"><span class="material-symbols-outlined text-[20px]">theme_toggle_placeholder</span></button>`
-          );
-        }
-      });
-    }
   }
 
   // 3. Logo Replacement (Never show broken image)

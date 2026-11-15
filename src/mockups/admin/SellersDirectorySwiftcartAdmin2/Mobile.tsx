@@ -22,8 +22,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between"><button type="button" className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 mr-2" aria-label="Toggle Theme" title="Toggle Theme" onClick={() => toggleTheme()}>{theme === 'dark' ? <Icon name="light_mode" className="text-[20px]" /> : <Icon name="dark_mode" className="text-[20px]" />}</button><div className="flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Uganda Admin</span><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Sellers Directory</h1></div></div><div className="flex items-center gap-space-xs"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div><div className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-on-surface select-none">AD</div></div></div></header>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div className="flex flex-col w-full pb-6 px-margin gap-space-md">
+      <main className="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div className="flex flex-col w-full pb-6 px-margin gap-space-md">
 
 <div className="flex flex-col pt-space-xs gap-space-xs">
 <p className="font-body-sm text-body-sm text-secondary">Manage verified merchant accounts &amp; store status across Kampala &amp; regional hubs.</p>
@@ -66,7 +65,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 <div className="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center font-headline-sm text-headline-sm text-on-primary-fixed font-bold shadow-xs select-none shrink-0">SC</div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-space-xs">
-<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate">SoundCore Uganda Official</h2>
+<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">SoundCore Uganda Official</h2>
 </div>
 <div className="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm truncate">
 <span>Electronics</span>
@@ -90,7 +89,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 </div>
 <div className="flex flex-col px-space-xs py-1">
 <span className="font-label-sm text-label-sm text-secondary">30d Volume</span>
-<span className="font-label-md text-label-md text-on-surface font-bold truncate">UGX 42,500,000</span>
+<span className="font-label-md text-label-md text-on-surface font-bold truncate whitespace-nowrap">UGX 42,500,000</span>
 </div>
 <div className="flex flex-col px-space-xs py-1">
 <span className="font-label-sm text-label-sm text-secondary">Rating</span>
@@ -119,7 +118,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 <div className="flex items-center gap-space-sm min-w-0">
 <div className="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center font-headline-sm text-headline-sm text-amber-900 font-bold shadow-xs select-none shrink-0">KW</div>
 <div className="flex flex-col min-w-0">
-<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate">Kikuubo Wholesalers Direct</h2>
+<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">Kikuubo Wholesalers Direct</h2>
 <div className="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm truncate">
 <span>Home &amp; Solar</span>
 <span>•</span>
@@ -164,7 +163,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 <div className="flex items-center gap-space-sm min-w-0">
 <div className="w-11 h-11 rounded-xl bg-error-container flex items-center justify-center font-headline-sm text-headline-sm text-on-error-container font-bold shadow-xs select-none shrink-0">KP</div>
 <div className="flex flex-col min-w-0">
-<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate">Kampala Phone Hub</h2>
+<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">Kampala Phone Hub</h2>
 <div className="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm truncate">
 <span>Smartphones</span>
 <span>•</span>
@@ -212,7 +211,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 <div className="flex items-center gap-space-sm min-w-0">
 <div className="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm text-on-secondary-fixed font-bold shadow-xs select-none shrink-0">BF</div>
 <div className="flex flex-col min-w-0">
-<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate">Bella Fashion Boutique</h2>
+<h2 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">Bella Fashion Boutique</h2>
 <div className="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm truncate">
 <span>Clothing</span>
 <span>•</span>
@@ -235,7 +234,7 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 </div>
 <div className="flex flex-col px-space-xs py-1">
 <span className="font-label-sm text-label-sm text-secondary">30d Volume</span>
-<span className="font-label-md text-label-md text-on-surface font-bold truncate">UGX 18,200,000</span>
+<span className="font-label-md text-label-md text-on-surface font-bold truncate whitespace-nowrap">UGX 18,200,000</span>
 </div>
 <div className="flex flex-col px-space-xs py-1">
 <span className="font-label-sm text-label-sm text-secondary">Rating</span>
@@ -298,7 +297,6 @@ export const SellersDirectorySwiftcartAdmin2: React.FC<SellersDirectorySwiftcart
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div className="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="sellers-directory" href="#"><Icon name="storefront" className="text-[22px]" /><span className="font-label-sm text-label-sm">Sellers</span></a><a className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-secondary hover:text-on-surface transition-colors" data-path="audit-log" href="#"><Icon name="receipt_long" className="text-[22px]" /><span className="font-label-sm text-label-sm">Audit</span></a><a className="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-secondary hover:text-on-surface transition-colors" data-path="danger-zone" href="#"><Icon name="security" className="text-[22px]" /><span className="font-label-sm text-label-sm">Governance</span></a></div></nav>
     </div>
   );
 };
