@@ -1,6 +1,11 @@
+export { default as AdminSuperAdminCommandOverviewTablet } from './AdminSuperAdminCommandOverviewTablet';
 export { default as AuditLogSwiftcartSuperAdmin } from './AuditLogSwiftcartSuperAdmin';
 export { default as DangerZoneRoleChangeSwiftcartSuperAdmin } from './DangerZoneRoleChangeSwiftcartSuperAdmin';
 export { default as OverviewSwiftcartSuperAdmin } from './OverviewSwiftcartSuperAdmin';
 export { default as OverviewSwiftcartSuperAdminDark } from './OverviewSwiftcartSuperAdminDark';
+export { default as PlatformSettingsFeeMatrixTabletDark } from './PlatformSettingsFeeMatrixTabletDark';
 export { default as PlatformSettingsSwiftcartSuperAdmin } from './PlatformSettingsSwiftcartSuperAdmin';
+export { default as SuperAdminOperationalOverviewTabletDark } from './SuperAdminOperationalOverviewTabletDark';
+export { default as SuperAdminOperationalOverviewTabletLight } from './SuperAdminOperationalOverviewTabletLight';
 export { default as UsersRolesSwiftcartSuperAdmin } from './UsersRolesSwiftcartSuperAdmin';
+export { default as UsersRolesWithRoleChangeTabletDark } from './UsersRolesWithRoleChangeTabletDark';

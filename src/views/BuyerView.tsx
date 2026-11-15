@@ -100,9 +100,10 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
     const path = route.path;
 
     // 1. Home
-    if (path === '/') return <Home onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/') return <Home onNavigate={onNavigate} onAction={handleAction} variant="home2" />;
+    if (path === '/home-marketplace-1') return <Home onNavigate={onNavigate} onAction={handleAction} variant="home1" />;
     if (path === '/-alt' || path === '/home-marketplace-2') return <HomeAlt onNavigate={onNavigate} onAction={handleAction} />;
-    if (path.startsWith('/home')) return <Home onNavigate={onNavigate} onAction={handleAction} />;
+    if (path.startsWith('/home')) return <Home onNavigate={onNavigate} onAction={handleAction} variant="home1" />;
 
     // 2. Categories
     if (path === '/categories') return <Categories onNavigate={onNavigate} onAction={handleAction} />;

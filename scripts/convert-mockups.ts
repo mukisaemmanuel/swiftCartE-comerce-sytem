@@ -87,6 +87,7 @@ const BOOLEAN_ATTRS = new Set([
   'required',
   'multiple',
   'autofocus',
+  'autoFocus',
   'readonly',
   'readOnly',
   'hidden',
@@ -105,6 +106,13 @@ const TAG_MAP: Record<string, string> = {
   clippath: 'clipPath',
   foreignobject: 'foreignObject',
   textpath: 'textPath',
+  fegaussianblur: 'feGaussianBlur',
+  femerge: 'feMerge',
+  femergenode: 'feMergeNode',
+  fecolormatrix: 'feColorMatrix',
+  feoffset: 'feOffset',
+  feblend: 'feBlend',
+  fedropshadow: 'feDropShadow',
 };
 
 const NUMERIC_ATTRS = new Set([

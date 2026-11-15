@@ -21,11 +21,29 @@ import {
   ProductsSwiftcartSeller,
   ReturnsDisputesSwiftcartSeller,
   RidersSwiftcartSeller,
+  SellerAddProductWithAiStudioTabletDark,
+  SellerAnalyticsPerformanceHeatmapsTabletLight1,
+  SellerAnalyticsPerformanceHeatmapsTabletLight2,
+  SellerApplicationsKycVerificationTablet,
+  SellerDiscountsFlashSalesPromotionBuilderTabletLight1,
+  SellerDiscountsFlashSalesPromotionBuilderTabletLight2,
   SellerDisputeResponseSwiftcartUganda1,
   SellerDisputeResponseSwiftcartUganda2,
+  SellerDisputeResponseTabletDark,
+  SellerEditProductWithAiStudioTabletDark,
+  SellerInboundReturnTamperInspectionTabletDark,
+  SellerNotificationsCenterTabletLight,
   SellerNotificationsSwiftcart,
   SellerOrderDetailSwiftcartSeller,
   SellerOrderDetailSwiftcartSellerLight,
+  SellerOrdersMasterDetailTabletLight2,
+  SellerOverviewDashboardTabletDark,
+  SellerOverviewDashboardTabletLight1,
+  SellerOverviewDashboardTabletLight2,
+  SellerProductsBatchPricingTabletDark,
+  SellerProductsBulkPriceUpdateTabletDark,
+  SellerRidersFleetLogisticsTabletDark,
+  SellerWalletPayoutsTabletDark,
   StoreProfileSwiftcartSeller,
 } from '../mockups/seller';
 
@@ -71,24 +89,24 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
     if (path === '/seller/seller-notifications') return <SellerNotificationsSwiftcart onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-order-detail-seller') return renderSellerOrderDetail();
     if (path === '/seller/store-profile-seller') return <StoreProfileSwiftcartSeller onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-add-product-with-ai-studio') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-analytics-performance-heatmaps-1') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-analytics-performance-heatmaps-2') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-applications-kyc-verification') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-1') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-2') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-dispute-response') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-edit-product-with-ai-studio') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-inbound-return-tamper-inspection') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-notifications-center') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-orders-master-detail-2') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-overview-dashboard') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-overview-dashboard-1') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-overview-dashboard-2') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-products-batch-pricing') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-products-bulk-price-update') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-riders-fleet-logistics') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/seller/seller-wallet-payouts') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-add-product-with-ai-studio') return <SellerAddProductWithAiStudioTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-analytics-performance-heatmaps-1') return <SellerAnalyticsPerformanceHeatmapsTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-analytics-performance-heatmaps-2') return <SellerAnalyticsPerformanceHeatmapsTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-applications-kyc-verification') return <SellerApplicationsKycVerificationTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-1') return <SellerDiscountsFlashSalesPromotionBuilderTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-discounts-flash-sales-promotion-builder-2') return <SellerDiscountsFlashSalesPromotionBuilderTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-dispute-response') return <SellerDisputeResponseTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-edit-product-with-ai-studio') return <SellerEditProductWithAiStudioTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-inbound-return-tamper-inspection') return <SellerInboundReturnTamperInspectionTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-notifications-center') return <SellerNotificationsCenterTabletLight onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-orders-master-detail-2') return <SellerOrdersMasterDetailTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard') return <SellerOverviewDashboardTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard-1') return <SellerOverviewDashboardTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-overview-dashboard-2') return <SellerOverviewDashboardTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-products-batch-pricing') return <SellerProductsBatchPricingTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-products-bulk-price-update') return <SellerProductsBulkPriceUpdateTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-riders-fleet-logistics') return <SellerRidersFleetLogisticsTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/seller/seller-wallet-payouts') return <SellerWalletPayoutsTabletDark onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-add-product-5-step-ai-flow') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-analytics-performance-heatmaps') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/seller/seller-applications-kyc') return <OverviewSwiftcartSellerDark onNavigate={onNavigate} onAction={handleAction} />;

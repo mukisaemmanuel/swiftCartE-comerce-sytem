@@ -7,11 +7,26 @@ import { RoleDashboardShell } from '../components/dashboard/RoleDashboardShell';
 import {
   CourierBagQrScanConfirmationModalSwiftcartWorkHub,
   DamagedParcelQuarantineBayIntakeSwiftcartHubAgent,
+  HubDamagedGoodsQuarantineBayTablet,
+  HubDamagedGoodsQuarantineBayTabletLight1,
+  HubDamagedGoodsQuarantineBayTabletLight2,
+  HubIntakeHighSpeedBarcodeScannerTablet,
   HubIntakeSortingStationSwiftcartWorkHub,
   HubIntakeStationSwiftcartWorkHub,
+  HubLineHaulTransitManifestHandoverTablet,
+  HubLineHaulTransitManifestHandoverTabletLight1,
+  HubLineHaulTransitManifestHandoverTabletLight2,
+  HubPickupHandoverConsoleTabletDark,
+  HubReturnsQuarantineBayTabletDark,
+  HubRiderDispatchCourierStagingTabletDark,
   HubSortingStationSwiftcartWorkHub,
+  HubStationCommandOverviewTablet,
+  HubStationCommandOverviewTabletLight1,
+  HubStationCommandOverviewTabletLight2,
+  HubStationSettingsShiftHandoverTabletDark,
   HubStorageAgingMatrixSwiftcartHub,
   HubStorageAgingMatrixSwiftcartHubLight,
+  HubStorageAgingMatrixTabletDark,
   IntakeSwiftcartHubAgent,
   LineHaulTransitManifestCreationSwiftcartHubAgent,
   MoreSwiftcartHubAgent,
@@ -21,6 +36,7 @@ import {
   RegionalLinehaulTransitHandoverSwiftcartWorkHub,
   ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub,
   RiderDispatchCourierBagStagingSwiftcartHubAgent,
+  RiderProfileSupportHubTabletLight,
   ScanSwiftcartHubAgent,
   SwiftcartWorkHubSharedSystemComponentsDarkLight,
 } from '../mockups/hub';
@@ -70,22 +86,22 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
     if (path === '/hub/rider-dispatch-courier-bag-staging-hub-agent') return <RiderDispatchCourierBagStagingSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/scan-hub-agent') return <ScanSwiftcartHubAgent onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/swiftcart-work-hub-shared-system-components') return <SwiftcartWorkHubSharedSystemComponentsDarkLight onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-damaged-goods-quarantine-bay') return renderOverview();
-    if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return renderOverview();
-    if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return renderOverview();
-    if (path === '/hub/hub-intake-high-speed-barcode-scanner') return renderOverview();
-    if (path === '/hub/hub-line-haul-transit-manifest-handover') return renderOverview();
-    if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return renderOverview();
-    if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return renderOverview();
-    if (path === '/hub/hub-pickup-handover-console') return renderOverview();
-    if (path === '/hub/hub-returns-quarantine-bay') return renderOverview();
-    if (path === '/hub/hub-rider-dispatch-courier-staging') return renderOverview();
-    if (path === '/hub/hub-station-command-overview') return renderOverview();
-    if (path === '/hub/hub-station-command-overview-1') return renderOverview();
-    if (path === '/hub/hub-station-command-overview-2') return renderOverview();
-    if (path === '/hub/hub-station-settings-shift-handover') return renderOverview();
-    if (path === '/hub/hub-storage-aging-matrix') return renderOverview();
-    if (path === '/hub/rider-profile-support-hub') return renderOverview();
+    if (path === '/hub/hub-damaged-goods-quarantine-bay') return <HubDamagedGoodsQuarantineBayTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return <HubDamagedGoodsQuarantineBayTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return <HubDamagedGoodsQuarantineBayTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-intake-high-speed-barcode-scanner') return <HubIntakeHighSpeedBarcodeScannerTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-line-haul-transit-manifest-handover') return <HubLineHaulTransitManifestHandoverTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return <HubLineHaulTransitManifestHandoverTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return <HubLineHaulTransitManifestHandoverTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-pickup-handover-console') return <HubPickupHandoverConsoleTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-returns-quarantine-bay') return <HubReturnsQuarantineBayTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-rider-dispatch-courier-staging') return <HubRiderDispatchCourierStagingTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-station-command-overview') return <HubStationCommandOverviewTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-station-command-overview-1') return <HubStationCommandOverviewTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-station-command-overview-2') return <HubStationCommandOverviewTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-station-settings-shift-handover') return <HubStationSettingsShiftHandoverTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-storage-aging-matrix') return <HubStorageAgingMatrixTabletDark onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/rider-profile-support-hub') return <RiderProfileSupportHubTabletLight onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/delivery-addresses-hubs') return renderOverview();
     if (path === '/hub/hub-customer-pickup-handover-console') return renderOverview();
     if (path === '/hub/hub-inbound-intake-barcode-scan') return renderOverview();

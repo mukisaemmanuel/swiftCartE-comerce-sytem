@@ -45,8 +45,10 @@ export function getLuminance(hex: string): number {
 function extractMockupHeading(codeHtmlPath: string): string {
   if (!fs.existsSync(codeHtmlPath)) return '';
   const rawContent = fs.readFileSync(codeHtmlPath, 'utf-8');
-  // Strip <aside>...</aside> so off-canvas drawer headings are not selected as the primary page heading
-  const content = rawContent.replace(/<aside[\s\S]*?<\/aside>/gi, '');
+  // Strip <aside>...</aside> and <header>...</header> so off-canvas drawer headings and shell header chrome are not selected as the primary page heading
+  const content = rawContent
+    .replace(/<aside[\s\S]*?<\/aside>/gi, '')
+    .replace(/<header[\s\S]*?<\/header>/gi, '');
 
   const clean = (raw: string) =>
     decodeEntities(raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
@@ -67,7 +69,7 @@ function extractMockupHeading(codeHtmlPath: string): string {
 
   // 3. Fallback to prominent title span/div
   match = content.match(
-    /<(?:div|span|p|header)[^>]*(?:font-headline|font-title|font-bold|text-headline|text-title)[^>]*>([\s\S]*?)<\/(?:div|span|p|header)>/i
+    /<(?:div|span|p)[^>]*(?:font-headline|font-title|font-bold|text-headline|text-title)[^>]*>([\s\S]*?)<\/(?:div|span|p)>/i
   );
   if (match) {
     const text = clean(match[1]);
@@ -108,7 +110,14 @@ export async function runHonestFidelity() {
     desktop: { width: 1440, height: 900 },
   } as const;
 
-  const sizes = ['mobile', 'tablet', 'desktop'] as const;
+  const sizeArgIndex = process.argv.indexOf('--size');
+  const targetSize = sizeArgIndex !== -1 ? process.argv[sizeArgIndex + 1] : null;
+
+  const allSizes = ['mobile', 'tablet', 'desktop'] as const;
+  const sizes = targetSize && allSizes.includes(targetSize as any)
+    ? [targetSize as 'mobile' | 'tablet' | 'desktop']
+    : allSizes;
+
   const results: ScreenFidelityItem[] = [];
 
   // Collect all folders in design/<size>/<role>/<screen>
@@ -125,10 +134,7 @@ export async function runHonestFidelity() {
     const sizeDir = path.join(process.cwd(), 'design', size);
     if (!fs.existsSync(sizeDir)) continue;
     for (const role of fs.readdirSync(sizeDir)) {
-      // Tablet and desktop are buyer only in this stage
-      if (size === 'tablet' && role !== 'buyer') {
-        continue;
-      }
+      // Desktop is buyer only until Stage M8
       if (size === 'desktop' && role !== 'buyer') {
         continue;
       }

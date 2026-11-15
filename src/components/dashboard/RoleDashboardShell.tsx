@@ -322,6 +322,44 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             </div>
           </div>
 
+          {/* Tablet Horizontal Nav for Admin, Rider, Hub */}
+          {(role === 'admin' || role === 'rider' || role === 'hub') && (
+            <nav
+              className="hidden md:flex items-center gap-1 overflow-x-auto scrollbar-none max-w-xl mx-2"
+              data-testid="dashboard-tablet-top-nav"
+              aria-label="Tablet navigation tabs"
+            >
+              {(role === 'admin'
+                ? navConfig.drawerItems.slice(0, 7)
+                : navConfig.bottomBarItems
+              ).map((item) => {
+                const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
+                const isParentActive = item.path !== '/' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
+                const isActive = isExactActive || isParentActive;
+
+                return (
+                  <a
+                    key={item.path + item.label}
+                    href={item.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate(item.path);
+                    }}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                      isActive
+                        ? 'bg-primary-container text-on-primary shadow-sm font-bold'
+                        : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
+                    }`}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    <Icon name={item.icon} className="text-[16px]" />
+                    <span>{item.label}</span>
+                  </a>
+                );
+              })}
+            </nav>
+          )}
+
           {/* Right: Theme Toggle + Sync/User Icon */}
           <div className="flex items-center gap-2 shrink-0">
             <button
@@ -448,15 +486,57 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
         </>
       )}
 
+      {/* 2b. TABLET 72PX LEFT RAIL (Seller & Super-Admin) */}
+      {(role === 'seller' || role === 'super-admin') && (
+        <aside
+          className="hidden md:flex flex-col fixed top-16 bottom-0 left-0 z-30 w-[72px] bg-surface-container-low border-r border-surface-container-highest/40 py-3 items-center gap-1.5 select-none overflow-y-auto scrollbar-none"
+          data-testid="dashboard-tablet-rail"
+          aria-label={`${navConfig.title} rail navigation`}
+        >
+          {navConfig.drawerItems.slice(0, 8).map((item) => {
+            const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
+            const isParentActive = item.path !== '/' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
+            const isActive = isExactActive || isParentActive;
+
+            return (
+              <a
+                key={item.path + item.label}
+                href={item.path}
+                title={item.label}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate(item.path);
+                }}
+                className={`w-14 h-14 rounded-xl flex flex-col items-center justify-center p-1 transition-all ${
+                  isActive
+                    ? 'bg-primary-container text-on-primary shadow-sm font-bold'
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface'
+                }`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <Icon name={item.icon} className="text-[20px]" />
+                <span className="text-[10px] font-medium tracking-tight mt-0.5 truncate max-w-[52px] text-center leading-tight">
+                  {item.label}
+                </span>
+              </a>
+            );
+          })}
+        </aside>
+      )}
+
       {/* 3. SCREEN CHILDREN (Rendered inside main container) */}
-      <div className={`flex-1 flex flex-col w-full relative ${navConfig.bottomBarItems.length > 0 ? 'pb-20' : 'pb-6'} min-h-screen`}>
+      <div
+        className={`flex-1 flex flex-col w-full relative ${
+          role === 'seller' || role === 'super-admin' ? 'md:pl-[72px]' : ''
+        } ${navConfig.bottomBarItems.length > 0 ? 'pb-20 md:pb-6' : 'pb-6'} min-h-screen`}
+      >
         {children}
       </div>
 
-      {/* 4. SHARED BOTTOM BAR */}
+      {/* 4. SHARED BOTTOM BAR (Phone only: md:hidden) */}
       {navConfig.bottomBarItems.length > 0 && (
         <nav
-          className="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-highest/40 shadow-[0_-4px_20px_rgba(0,0,0,0.35)] select-none"
+          className="md:hidden fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-highest/40 shadow-[0_-4px_20px_rgba(0,0,0,0.35)] select-none"
           data-testid="shared-dashboard-bottom-bar"
           aria-label="Bottom tab navigation"
         >

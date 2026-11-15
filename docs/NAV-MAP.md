@@ -162,3 +162,89 @@ All menu labels, icons, and structures are derived directly from the most comple
 - `/hub/courier-bag-qr-scan-confirmation-modal-work-hub`: Triggered by scanning bag barcode in Scan (`/hub/scan-hub-agent`).
 - `/hub/returns-damaged-goods-quarantine-bay-work-hub`: Click "Quarantine Details" in Intake Station.
 - `/hub/overview-hub-agent-light-mode`: Theme toggle to light mode on `/hub/overview-hub-agent`.
+
+---
+
+## 6. Tablet Navigation Architecture (768px–1023px, Tested at 834x1112)
+
+On tablet viewports, the mobile bottom bar is hidden (`md:hidden`), and navigation transitions to either a 72px left rail or a top header horizontal nav:
+
+### Seller Tablet Navigation
+- **72px Left Rail** (`data-testid="dashboard-tablet-rail"`): Overview (`/seller/overview-seller`), Orders (`/seller/orders-seller`), Riders (`/seller/riders-seller`), Returns (`/seller/returns-disputes-seller`), Products (`/seller/products-seller`), Discounts (`/seller/discounts-ads-seller`), Wallet (`/seller/seller-wallet-payouts`), Store Profile (`/seller/store-profile-seller`).
+- **Drawer Menu**: Full 12-item menu accessible via hamburger button in top bar.
+- **Tablet Mockup Folders & Routes**:
+  - `seller_add_product_with_ai_studio_tablet_dark` &rarr; `/seller/seller-add-product-with-ai-studio`
+  - `seller_analytics_performance_heatmaps_tablet_light_1` &rarr; `/seller/seller-analytics-performance-heatmaps-1`
+  - `seller_analytics_performance_heatmaps_tablet_light_2` &rarr; `/seller/seller-analytics-performance-heatmaps-2`
+  - `seller_applications_kyc_verification_tablet` &rarr; `/seller/seller-applications-kyc-verification`
+  - `seller_discounts_flash_sales_promotion_builder_tablet_light_1` &rarr; `/seller/seller-discounts-flash-sales-promotion-builder-1`
+  - `seller_discounts_flash_sales_promotion_builder_tablet_light_2` &rarr; `/seller/seller-discounts-flash-sales-promotion-builder-2`
+  - `seller_dispute_response_tablet_dark` &rarr; `/seller/seller-dispute-response`
+  - `seller_edit_product_with_ai_studio_tablet_dark` &rarr; `/seller/seller-edit-product-with-ai-studio`
+  - `seller_inbound_return_tamper_inspection_tablet_dark` &rarr; `/seller/seller-inbound-return-tamper-inspection`
+  - `seller_notifications_center_tablet_light` &rarr; `/seller/seller-notifications-center`
+  - `seller_orders_master_detail_tablet_light_2` &rarr; `/seller/seller-orders-master-detail-2`
+  - `seller_overview_dashboard_tablet_dark` &rarr; `/seller/seller-overview-dashboard`
+  - `seller_overview_dashboard_tablet_light_1` &rarr; `/seller/seller-overview-dashboard-1`
+  - `seller_overview_dashboard_tablet_light_2` &rarr; `/seller/seller-overview-dashboard-2`
+  - `seller_products_batch_pricing_tablet_dark` &rarr; `/seller/seller-products-batch-pricing`
+  - `seller_products_bulk_price_update_tablet_dark` &rarr; `/seller/seller-products-bulk-price-update`
+  - `seller_riders_fleet_logistics_tablet_dark` &rarr; `/seller/seller-riders-fleet-logistics`
+  - `seller_wallet_payouts_tablet_dark` &rarr; `/seller/seller-wallet-payouts`
+
+### Admin Tablet Navigation
+- **Top Header Horizontal Nav** (`data-testid="dashboard-tablet-top-nav"`): Overview (`/admin/overview-admin`), KYC (`/admin/sellers-directory-admin-1`), Sellers (`/admin/sellers-directory-admin-2`), Riders (`/admin/riders-couriers-admin`), Orders (`/admin/orders-oversight-admin`), Disputes (`/admin/escrow-disputes-admin`), Payouts (`/admin/payout-queue-admin`).
+- **Drawer Menu**: Full 14-item governance menu accessible via hamburger button.
+- **Tablet Mockup Folders & Routes**:
+  - `audit_log_security_ledger_tablet_dark` &rarr; `/admin/audit-log-security-ledger`
+  - `homepage_ads_management_tablet_dark` &rarr; `/admin/homepage-ads-management`
+  - `locked_dispatches_pin_overrides_tablet_dark` &rarr; `/admin/locked-dispatches-pin-overrides`
+  - `orders_oversight_detail_tablet` &rarr; `/admin/orders-oversight-detail`
+  - `overpayments_refunds_tablet_light` &rarr; `/admin/overpayments-refunds`
+  - `payout_queue_commission_matrix_tablet` &rarr; `/admin/payout-queue-commission-matrix`
+  - `product_moderation_catalog_review_tablet_dark` &rarr; `/admin/product-moderation-catalog-review`
+  - `riders_fleet_directory_tablet_dark` &rarr; `/admin/riders-fleet-directory`
+  - `sellers_directory_with_freeze_drawer_tablet` &rarr; `/admin/sellers-directory-with-freeze-drawer`
+
+### Super-Admin Tablet Navigation
+- **72px Left Rail** (`data-testid="dashboard-tablet-rail"`): Overview (`/super-admin/overview-super-admin`), Users & Roles (`/super-admin/users-roles-super-admin`), Platform Settings (`/super-admin/platform-settings-super-admin`), KYC (`/admin/sellers-directory-admin-1`), Orders (`/admin/orders-oversight-admin`), Audit Log (`/super-admin/audit-log-super-admin`).
+- **Drawer Menu**: Full control menu accessible via hamburger button.
+- **Tablet Mockup Folders & Routes**:
+  - `admin_super_admin_command_overview_tablet` &rarr; `/super-admin/admin-super-admin-command-overview`
+  - `platform_settings_fee_matrix_tablet_dark` &rarr; `/super-admin/platform-settings-fee-matrix`
+  - `super_admin_operational_overview_tablet_dark` &rarr; `/super-admin/super-admin-operational-overview`
+  - `users_roles_with_role_change_tablet_dark` &rarr; `/super-admin/users-roles-with-role-change`
+
+### Rider Tablet Navigation
+- **Top Header Horizontal Nav** (`data-testid="dashboard-tablet-top-nav"`): Overview (`/rider/overview-rider`), Deliveries (`/rider/deliveries-rider`), Map (`/rider/rider-map-rider`), Earnings (`/rider/earnings-rider`), Profile (`/rider/profile-support-rider`).
+- **Drawer Menu**: Accessible via top bar menu button.
+- **Tablet Mockup Folders & Routes**:
+  - `rider_deliveries_master_detail_tablet` &rarr; `/rider/rider-deliveries-master-detail`
+  - `rider_delivery_task_execution_code_entry_tablet` &rarr; `/rider/rider-delivery-task-execution-code-entry`
+  - `rider_failed_delivery_code_locked_state_tablet_light` &rarr; `/rider/rider-failed-delivery-code-locked-state`
+  - `rider_map_live_dispatch_navigation_tablet_dark` &rarr; `/rider/rider-map-live-dispatch-navigation`
+  - `rider_offline_mode_cached_manifest_tablet_dark` &rarr; `/rider/rider-offline-mode-cached-manifest`
+  - `rider_overview_dispatch_map_tablet` &rarr; `/rider/rider-overview-dispatch-map`
+  - `rider_reverse_pickup_return_inspection_tablet` &rarr; `/rider/rider-reverse-pickup-return-inspection`
+
+### Hub Tablet Navigation
+- **Top Header Horizontal Nav** (`data-testid="dashboard-tablet-top-nav"`): Overview (`/hub/overview-hub-agent`), Intake (`/hub/intake-hub-agent`), Scan (`/hub/scan-hub-agent`), Pickup (`/hub/pickup-hub-agent`), Storage (`/hub/hub-storage-aging-matrix-hub`), Dispatch (`/hub/rider-dispatch-courier-bag-staging-hub-agent`).
+- **Drawer Menu**: Full station menu accessible via hamburger button.
+- **Tablet Mockup Folders & Routes**:
+  - `hub_damaged_goods_quarantine_bay_tablet` &rarr; `/hub/hub-damaged-goods-quarantine-bay`
+  - `hub_damaged_goods_quarantine_bay_tablet_light_1` &rarr; `/hub/hub-damaged-goods-quarantine-bay-1`
+  - `hub_damaged_goods_quarantine_bay_tablet_light_2` &rarr; `/hub/hub-damaged-goods-quarantine-bay-2`
+  - `hub_intake_high_speed_barcode_scanner_tablet` &rarr; `/hub/hub-intake-high-speed-barcode-scanner`
+  - `hub_line_haul_transit_manifest_handover_tablet` &rarr; `/hub/hub-line-haul-transit-manifest-handover`
+  - `hub_line_haul_transit_manifest_handover_tablet_light_1` &rarr; `/hub/hub-line-haul-transit-manifest-handover-1`
+  - `hub_line_haul_transit_manifest_handover_tablet_light_2` &rarr; `/hub/hub-line-haul-transit-manifest-handover-2`
+  - `hub_pickup_handover_console_tablet_dark` &rarr; `/hub/hub-pickup-handover-console`
+  - `hub_returns_quarantine_bay_tablet_dark` &rarr; `/hub/hub-returns-quarantine-bay`
+  - `hub_rider_dispatch_courier_staging_tablet_dark` &rarr; `/hub/hub-rider-dispatch-courier-staging`
+  - `hub_station_command_overview_tablet` &rarr; `/hub/hub-station-command-overview`
+  - `hub_station_command_overview_tablet_light_1` &rarr; `/hub/hub-station-command-overview-1`
+  - `hub_station_command_overview_tablet_light_2` &rarr; `/hub/hub-station-command-overview-2`
+  - `hub_station_settings_shift_handover_tablet_dark` &rarr; `/hub/hub-station-settings-shift-handover`
+  - `hub_storage_aging_matrix_tablet_dark` &rarr; `/hub/hub-storage-aging-matrix`
+  - `rider_profile_support_hub_tablet_light` &rarr; `/hub/rider-profile-support-hub`
+

@@ -41,6 +41,8 @@ const ThemeSync: React.FC<{ role?: UserRole }> = ({ role }) => {
   const { theme } = useDashboardTheme();
 
   useEffect(() => {
+    document.documentElement.setAttribute('data-role', role || 'buyer');
+    document.documentElement.classList.toggle('role-buyer', role === 'buyer');
     if (role === 'buyer') {
       document.documentElement.setAttribute('data-theme', 'light');
       document.documentElement.classList.remove('dark');
