@@ -18,6 +18,20 @@ export interface RoleNavConfig {
   hasDrawer: boolean;
   drawerItems: NavItem[];
   bottomBarItems: NavItem[];
+  desktopSidebarHeader: {
+    title: string;
+    subtitle: string;
+    badge?: string;
+  };
+  desktopNavItems: NavItem[];
+  desktopMoreItems: NavItem[];
+  desktopHeaderConfig: {
+    brandTitle: string;
+    brandSub: string;
+    searchPlaceholder: string;
+    pills: { icon?: string; label: string; highlight?: boolean }[];
+    user: { name: string; roleLabel: string; initials: string };
+  };
 }
 
 export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
@@ -47,6 +61,41 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
       { label: 'Riders', icon: 'two_wheeler', path: '/seller/riders-seller' },
       { label: 'Profile', icon: 'storefront', path: '/seller/store-profile-seller' },
     ],
+    desktopSidebarHeader: {
+      title: 'Seller Hub',
+      subtitle: 'SoundCore Uganda Official',
+      badge: 'URSB',
+    },
+    desktopNavItems: [
+      { label: 'Overview', icon: 'grid_view', path: '/seller/overview-seller' },
+      { label: 'Orders', icon: 'local_shipping', path: '/seller/orders-seller', badge: '14 Pending' },
+      { label: 'Products & Inventory', icon: 'inventory_2', path: '/seller/products-seller', badge: '2 Low' },
+      { label: 'Riders & Logistics', icon: 'two_wheeler', path: '/seller/riders-seller', badge: '6 Active' },
+      { label: 'Returns & Disputes', icon: 'gavel', path: '/seller/returns-disputes-seller', badge: '1 Case' },
+      { label: 'Wallet & Payouts', icon: 'account_balance_wallet', path: '/seller/seller-wallet-payouts', badge: '14.8M UGX' },
+      { label: 'Analytics & Heatmaps', icon: 'insights', path: '/seller/analytics-seller' },
+      { label: 'Discounts & Ads', icon: 'campaign', path: '/seller/discounts-ads-seller' },
+      { label: 'Store Profile & KYC', icon: 'verified_user', path: '/seller/store-profile-seller', badge: 'check_circle' },
+      { label: 'Settings', icon: 'settings', path: '/seller/store-profile-seller' },
+    ],
+    desktopMoreItems: [
+      { label: 'Add Product Flow', icon: 'add_photo_alternate', path: '/seller/add-product-step-1-photos-seller' },
+      { label: 'AI Photo Studio', icon: 'auto_fix_high', path: '/seller/add-product-step-2-ai-photo-studio-seller' },
+      { label: 'Catalog Preview', icon: 'visibility', path: '/seller/add-product-step-5-buyer-preview-submit-seller' },
+      { label: 'Inspect Return', icon: 'fact_check', path: '/seller/merchant-return-inspection-acceptance' },
+      { label: 'Help & Support', icon: 'support_agent', path: '/help-centre' },
+      { label: 'Log Out', icon: 'logout', path: '/' },
+    ],
+    desktopHeaderConfig: {
+      brandTitle: 'SwiftCart',
+      brandSub: 'Seller Portal',
+      searchPlaceholder: 'Search products, orders, payouts...',
+      pills: [
+        { icon: 'verified', label: 'SoundCore Uganda Official', highlight: true },
+        { label: 'MTN & Airtel Rails Active' },
+      ],
+      user: { name: 'Kizito Ronald', roleLabel: 'Store General Manager (KR)', initials: 'KR' },
+    },
   },
   admin: {
     role: 'admin',
@@ -76,6 +125,46 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
       { label: 'Disputes', icon: 'shield_with_heart', path: '/admin/escrow-disputes-admin' },
       { label: 'Payouts', icon: 'account_balance_wallet', path: '/admin/payout-queue-admin' },
     ],
+    desktopSidebarHeader: {
+      title: 'Admin Console',
+      subtitle: 'Platform Governance',
+      badge: 'UG-KLA',
+    },
+    desktopNavItems: [
+      { label: 'Overview', icon: 'dashboard', path: '/admin/overview-admin' },
+      { label: 'Seller Applications', icon: 'storefront', path: '/admin/sellers-directory-admin-1', badge: '14' },
+      { label: 'Sellers Directory', icon: 'verified', path: '/admin/sellers-directory-admin-2' },
+      { label: 'Riders Fleet', icon: 'two_wheeler', path: '/admin/riders-couriers-admin' },
+      { label: 'Product Moderation', icon: 'fact_check', path: '/admin/product-moderation-admin', badge: '8' },
+      { label: 'Orders Oversight', icon: 'local_shipping', path: '/admin/orders-oversight-admin', badge: '189' },
+      { label: 'Escrow & Disputes', icon: 'shield', path: '/admin/escrow-disputes-admin', badge: '6' },
+      { label: 'Payout Queue', icon: 'payments', path: '/admin/payout-queue-admin' },
+      { label: 'Overpayments & Refunds', icon: 'currency_exchange', path: '/admin/overpayments-refunds-admin' },
+      { label: 'Commission Rates', icon: 'percent', path: '/admin/commission-rates-earnings-admin' },
+      { label: 'Platform Settings', icon: 'tune', path: '/super-admin/platform-settings-super-admin' },
+      { label: 'Users & Roles', icon: 'admin_panel_settings', path: '/super-admin/users-roles-super-admin' },
+      { label: 'Homepage & Ads', icon: 'ad_units', path: '/admin/homepage-ads-admin' },
+      { label: 'Audit Log', icon: 'history', path: '/admin/audit-log-admin-1' },
+    ],
+    desktopMoreItems: [
+      { label: 'Locked Dispatches', icon: 'local_shipping', path: '/admin/locked-dispatches-admin' },
+      { label: 'Order Detail Oversight', icon: 'receipt_long', path: '/admin/admin-order-detail-oversight' },
+      { label: 'Freeze Seller', icon: 'ac_unit', path: '/admin/freeze-seller-admin' },
+      { label: 'Commission Matrix', icon: 'tune', path: '/admin/edit-category-commission-modal-with-date-picker' },
+      { label: 'Audit Log Ledger', icon: 'history_edu', path: '/admin/audit-log-admin-2' },
+      { label: 'Exit Portal', icon: 'logout', path: '/' },
+    ],
+    desktopHeaderConfig: {
+      brandTitle: 'SwiftCart',
+      brandSub: 'Admin Console',
+      searchPlaceholder: 'Search orders, sellers, ESCROW IDs, riders... (Press ⌘K)',
+      pills: [
+        { icon: 'radio_button_checked', label: 'Kampala Central: 12ms', highlight: true },
+        { label: 'MTN MoMo: 99.98%' },
+        { label: 'Airtel Money: 100%' },
+      ],
+      user: { name: 'Kizito Ronald', roleLabel: 'Super Admin', initials: 'KR' },
+    },
   },
   'super-admin': {
     role: 'super-admin',
@@ -107,6 +196,43 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
       { label: 'Disputes', icon: 'shield_with_heart', path: '/admin/escrow-disputes-admin' },
       { label: 'Governance', icon: 'admin_panel_settings', path: '/super-admin/platform-settings-super-admin' },
     ],
+    desktopSidebarHeader: {
+      title: 'Super Admin Console',
+      subtitle: 'Full Operations Command',
+      badge: 'ROOT',
+    },
+    desktopNavItems: [
+      { label: 'Overview', icon: 'space_dashboard', path: '/super-admin/overview-super-admin' },
+      { label: 'Users & Roles', icon: 'admin_panel_settings', path: '/super-admin/users-roles-super-admin' },
+      { label: 'Platform Settings', icon: 'tune', path: '/super-admin/platform-settings-super-admin' },
+      { label: 'Orders Oversight', icon: 'receipt_long', path: '/admin/orders-oversight-admin' },
+      { label: 'Riders Fleet', icon: 'two_wheeler', path: '/admin/riders-couriers-admin' },
+      { label: 'Seller Applications', icon: 'how_to_reg', path: '/admin/sellers-directory-admin-1', badge: '14' },
+      { label: 'Sellers Directory', icon: 'storefront', path: '/admin/sellers-directory-admin-2' },
+      { label: 'Product Moderation', icon: 'verified', path: '/admin/product-moderation-admin', badge: '8' },
+      { label: 'Escrow & Disputes', icon: 'shield_lock', path: '/admin/escrow-disputes-admin', badge: '6' },
+      { label: 'Payout Queue', icon: 'payments', path: '/admin/payout-queue-admin' },
+      { label: 'Overpayments & Refunds', icon: 'currency_exchange', path: '/admin/overpayments-refunds-admin' },
+      { label: 'Commission Rates', icon: 'percent', path: '/admin/commission-rates-earnings-admin' },
+      { label: 'Homepage & Ads', icon: 'view_carousel', path: '/admin/homepage-ads-admin' },
+      { label: 'Audit Log', icon: 'history', path: '/super-admin/audit-log-super-admin' },
+    ],
+    desktopMoreItems: [
+      { label: 'Danger Zone', icon: 'warning', path: '/super-admin/danger-zone-role-change-super-admin' },
+      { label: 'Locked Dispatches', icon: 'local_shipping', path: '/admin/locked-dispatches-admin' },
+      { label: 'Exit Portal', icon: 'logout', path: '/' },
+    ],
+    desktopHeaderConfig: {
+      brandTitle: 'SwiftCart',
+      brandSub: 'Super Admin Control Center',
+      searchPlaceholder: 'Search users, system logs, security keys... (Press ⌘K)',
+      pills: [
+        { icon: 'sync', label: 'Node: 99.98% Live', highlight: true },
+        { label: 'Kampala Central: 12ms' },
+        { label: 'MTN & Airtel Rails Synced' },
+      ],
+      user: { name: 'Kizito Ronald', roleLabel: 'Super Admin', initials: 'KR' },
+    },
   },
   rider: {
     role: 'rider',
@@ -131,6 +257,36 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
       { label: 'Earnings', icon: 'account_balance_wallet', path: '/rider/earnings-rider' },
       { label: 'Profile', icon: 'person', path: '/rider/profile-support-rider' },
     ],
+    desktopSidebarHeader: {
+      title: 'Dispatch Command Navigation',
+      subtitle: 'Boda Sim Ops',
+      badge: 'BODA',
+    },
+    desktopNavItems: [
+      { label: 'Overview & Fleet Map', icon: 'map', path: '/rider/overview-rider' },
+      { label: 'Active Task & OTP Simulation', icon: 'pin', path: '/rider/boda-rider-delivery-task-execution-code-entry' },
+      { label: 'Security Locked & Exceptions', icon: 'gshield', path: '/rider/rider-code-locked-security' },
+      { label: 'Earnings & Telecom MoMo', icon: 'account_balance_wallet', path: '/rider/earnings-rider' },
+    ],
+    desktopMoreItems: [
+      { label: 'Deliveries', icon: 'package_2', path: '/rider/deliveries-rider' },
+      { label: 'Rider Map', icon: 'location_on', path: '/rider/rider-map-rider' },
+      { label: 'Reverse Inspection', icon: 'swap_horizontal_circle', path: '/rider/boda-rider-reverse-pickup-package-inspection' },
+      { label: 'Profile & Support', icon: 'person', path: '/rider/profile-support-rider' },
+      { label: 'Exit Portal', icon: 'logout', path: '/' },
+    ],
+    desktopHeaderConfig: {
+      brandTitle: 'SwiftCart Uganda',
+      brandSub: 'Dispatch & Sim Ops',
+      searchPlaceholder: 'Search active tasks, dispatch pins, route corridors...',
+      pills: [
+        { icon: 'hub', label: 'Kampala Central Hub #04', highlight: true },
+        { icon: 'phone_iphone', label: 'Tecno Camon 20' },
+        { icon: 'signal_cellular_alt_2_bar', label: 'Edge / 2.5G' },
+        { icon: 'battery_horiz_075', label: '84%' },
+      ],
+      user: { name: 'Kigozi Ronald', roleLabel: 'Boda #412', initials: 'KR' },
+    },
   },
   hub: {
     role: 'hub',
@@ -158,6 +314,41 @@ export const ROLE_NAV_CONFIGS: Record<DashboardRole, RoleNavConfig> = {
       { label: 'Pickup', icon: 'front_hand', path: '/hub/pickup-hub-agent' },
       { label: 'More', icon: 'widgets', path: '/hub/more-hub-agent' },
     ],
+    desktopSidebarHeader: {
+      title: 'UG-KLA Hub Ops Portal',
+      subtitle: 'Sorting Node #04',
+      badge: 'HUB #04',
+    },
+    desktopNavItems: [
+      { label: 'Station Overview', icon: 'hub', path: '/hub/overview-hub-agent' },
+      { label: 'Inbound Intake & Scan', icon: 'barcode_scanner', path: '/hub/hub-intake-sorting-station-work-hub' },
+      { label: 'Rider Dispatch & Staging', icon: 'two_wheeler', path: '/hub/rider-dispatch-courier-bag-staging-hub-agent' },
+      { label: 'Storage & Aging Matrix', icon: 'shelves', path: '/hub/hub-storage-aging-matrix-hub' },
+      { label: 'Line-Haul Manifests', icon: 'local_shipping', path: '/hub/line-haul-transit-manifest-creation-hub-agent' },
+      { label: 'Customer Pickup', icon: 'countertops', path: '/hub/pickup-hub-agent' },
+      { label: 'Damaged & Quarantine Bay', icon: 'gavel', path: '/hub/damaged-parcel-quarantine-bay-intake-hub-agent' },
+      { label: 'Returns & RTO', icon: 'replay', path: '/hub/returns-damaged-goods-quarantine-bay-work-hub' },
+    ],
+    desktopMoreItems: [
+      { label: 'Intake Station', icon: 'move_to_inbox', path: '/hub/hub-intake-station-work-hub' },
+      { label: 'Sorting Station', icon: 'filter_alt', path: '/hub/hub-sorting-station-work-hub' },
+      { label: 'Barcode Scanner Desk', icon: 'qr_code_scanner', path: '/hub/scan-hub-agent' },
+      { label: 'Regional Linehaul Handover', icon: 'alt_route', path: '/hub/regional-linehaul-transit-handover-work-hub' },
+      { label: 'Shared Operations Components', icon: 'account_balance_wallet', path: '/hub/swiftcart-work-hub-shared-system-components' },
+      { label: 'Exit Portal', icon: 'logout', path: '/' },
+    ],
+    desktopHeaderConfig: {
+      brandTitle: 'SwiftCart',
+      brandSub: 'Hub Operations Node',
+      searchPlaceholder: 'Scan or search parcel tracking, bag barcode, line-haul manifest...',
+      pills: [
+        { icon: 'location_on', label: 'Kampala Central Hub #04 - William St', highlight: true },
+        { icon: 'conveyor_belt', label: 'Belt #2 Speed: 1.4 m/s (Nominal)' },
+        { icon: 'qr_code_scanner', label: 'Honeywell Xenon 1950g Ready' },
+        { icon: 'schedule', label: '14:38:09 EAT' },
+      ],
+      user: { name: 'Brian Mukasa', roleLabel: 'Hub Lead Supervisor', initials: 'BM' },
+    },
   },
 };
 
@@ -168,35 +359,36 @@ export const ROUTE_HEADING_MAP: Record<string, string> = {
   '/seller': 'Manifest Runs',
   '/seller/orders-seller': 'Orders',
   '/seller/riders-seller': 'My Couriers & Boda Fleet',
-  '/seller/returns-disputes-seller': 'Returns And Disputes',
-  '/seller/products-seller': 'Products',
+  '/seller/returns-disputes-seller': 'Returns & Disputes',
+  '/seller/products-seller': 'Inventory & Catalog',
   '/seller/add-product-step-1-photos-seller': 'Add Product',
-  '/seller/add-product-step-2-ai-photo-studio-seller': 'Make Photos Look Professional',
-  '/seller/add-product-step-3-ai-description-seller': 'Write My Description',
-  '/seller/add-product-step-4-catalog-details-seller': 'Pricing & Earnings',
-  '/seller/add-product-step-5-buyer-preview-submit-seller': 'Media Enhancement',
-  '/seller/analytics-seller': 'Analytics',
-  '/seller/assign-rider-bottom-sheet-modal-seller': 'Assign Dedicated Rider',
-  '/seller/discounts-ads-seller': 'Discounts And Ads',
-  '/seller/edit-existing-product-seller': 'Seller Edit Product',
-  '/seller/invite-courier-bottom-sheet-modal-seller': 'Invite Dedicated Courier',
-  '/seller/merchant-return-inspection-acceptance': 'Inspect Returned Item',
-  '/seller/seller-dispute-response-1': 'Dispute Resolution',
-  '/seller/seller-dispute-response-2': 'Dispute Resolution',
+  '/seller/add-product-step-2-ai-photo-studio-seller': 'AI Studio Enhancer',
+  '/seller/add-product-step-3-ai-description-seller': 'AI Product Details',
+  '/seller/add-product-step-4-catalog-details-seller': 'Catalog Specifications',
+  '/seller/add-product-step-5-buyer-preview-submit-seller': 'Preview & Publish',
+  '/seller/assign-rider-bottom-sheet-modal-seller': 'Assign Delivery Rider',
+  '/seller/discounts-ads-seller': 'Discounts & Ads',
+  '/seller/edit-existing-product-seller': 'Edit Product',
+  '/seller/invite-courier-bottom-sheet-modal-seller': 'Invite Boda Courier',
+  '/seller/merchant-return-inspection-acceptance': 'Inspect Return Tamper Bag',
+  '/seller/seller-analytics-seller': 'Store Analytics',
+  '/seller/analytics-seller': 'Store Analytics',
+  '/seller/seller-dispute-response-1': 'Dispute Response',
+  '/seller/seller-dispute-response-2': 'Dispute Settlement',
   '/seller/seller-notifications': 'Seller Notifications',
-  '/seller/seller-order-detail-seller': 'Seller Order Detail',
-  '/seller/store-profile-seller': 'Kikuubo Sound & Gadgets Hub',
+  '/seller/seller-order-detail-seller': 'Order Details',
+  '/seller/store-profile-seller': 'Store Profile',
   '/seller/seller-wallet-payouts': 'Wallet & Payouts',
 
   // Admin
-  '/admin/overview-admin': 'Overview',
-  '/admin': 'Overview',
-  '/admin/admin-order-detail-oversight': 'Admin Order Detail',
+  '/admin/overview-admin': 'Admin Command Overview',
+  '/admin': 'Admin Command Overview',
+  '/admin/admin-order-detail-oversight': 'Order Oversight Detail',
   '/admin/audit-log-admin-1': 'Audit Log',
-  '/admin/audit-log-admin-2': 'Audit Log',
-  '/admin/commission-rates-earnings-admin': 'Commission',
-  '/admin/edit-category-commission-modal-with-date-picker': 'Kill Switch Confirmation',
-  '/admin/escrow-disputes-admin': 'Escrow & Disputes',
+  '/admin/audit-log-admin-2': 'Security Ledger',
+  '/admin/commission-rates-earnings-admin': 'Commission Matrix',
+  '/admin/edit-category-commission-modal-with-date-picker': 'Commission Schedule',
+  '/admin/escrow-disputes-admin': 'Escrow Disputes',
   '/admin/freeze-seller-admin': 'Freeze Seller',
   '/admin/homepage-ads-admin': 'Homepage & Ads',
   '/admin/locked-dispatches-admin': 'Locked Dispatches',
@@ -298,13 +490,13 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
         className="fixed top-0 inset-x-0 lg:left-72 z-40 h-16 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest/30 shadow-sm select-none"
         data-testid="shared-dashboard-header"
       >
-        <div className="h-16 px-4 flex items-center justify-between gap-2 w-full">
-          {/* Left: Hamburger + Logo + Heading */}
-          <div className="flex items-center gap-2 min-w-0 shrink-0 max-w-[260px] md:max-w-xs">
+        <div className="h-16 px-4 lg:px-6 flex items-center justify-between gap-2 lg:gap-4 w-full">
+          {/* Left: Mobile/Tablet Hamburger & Title (Hidden on desktop where sidebar provides branding) */}
+          <div className="lg:hidden flex items-center gap-2 min-w-0 shrink-0 max-w-[260px] md:max-w-xs">
             {navConfig.hasDrawer && (
               <button
                 type="button"
-                className="lg:hidden sidebar-hamburger-btn w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shrink-0"
+                className="sidebar-hamburger-btn w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shrink-0"
                 aria-label="Open menu"
                 onClick={() => setIsDrawerOpen(true)}
               >
@@ -315,7 +507,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             <img
               src="/brand/swiftcart-logo-icon.png"
               alt="SwiftCart"
-              className="lg:hidden h-8 w-auto object-contain cursor-pointer shrink-0"
+              className="h-8 w-auto object-contain cursor-pointer shrink-0"
               onClick={() => onNavigate(navConfig.bottomBarItems[0]?.path || '/')}
             />
 
@@ -367,8 +559,37 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             </nav>
           )}
 
-          {/* Right: Theme Toggle + Sync/User Icon */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Desktop Left/Center: Command Search Bar matching desktop mockups */}
+          <div className="hidden lg:flex flex-1 max-w-xl">
+            <div className="relative flex items-center bg-surface-container-low border border-surface-container-highest/50 rounded-xl px-3 py-2 text-xs text-on-surface-variant hover:border-primary/50 transition-colors w-full cursor-text">
+              <Icon name="search" className="text-[18px] mr-2 text-on-surface-variant/70 shrink-0" />
+              <span className="truncate flex-1">{navConfig.desktopHeaderConfig.searchPlaceholder}</span>
+              <kbd className="ml-2 px-1.5 py-0.5 rounded bg-surface-container text-[10px] font-mono font-bold text-on-surface-variant border border-surface-container-highest/60 shrink-0">
+                ⌘K
+              </kbd>
+            </div>
+          </div>
+
+          {/* Right: Telemetry Status Pill + Theme Toggle + Notifications + User Profile */}
+          <div className="flex items-center gap-2 lg:gap-3 shrink-0">
+            {/* Desktop Telemetry Status Pill (first pill matching mockup) */}
+            <div className="hidden xl:flex items-center gap-2">
+              {navConfig.desktopHeaderConfig.pills.slice(0, 1).map((pill, idx) => (
+                <div
+                  key={idx}
+                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap ${
+                    pill.highlight
+                      ? 'bg-tertiary-container/20 text-tertiary border border-tertiary-container/30'
+                      : 'bg-surface-container-low text-on-surface-variant border border-surface-container-highest/40'
+                  }`}
+                >
+                  {pill.icon && <Icon name={pill.icon} className="text-[15px]" />}
+                  <span>{pill.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Exactly ONE theme toggle in the header: ALWAYS visible across mobile, tablet, and desktop */}
             <button
               type="button"
               className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 transition-all active:scale-95"
@@ -383,14 +604,40 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
               )}
             </button>
 
+            {/* Desktop Notifications Button */}
+            <button
+              type="button"
+              className="hidden lg:flex w-9 h-9 relative items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 transition-colors"
+              aria-label="Notifications"
+            >
+              <Icon name="notifications" className="text-[20px]" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary" />
+            </button>
+
+            {/* Mobile/Tablet User Icon Button */}
             <button
               type="button"
               onClick={() => onNavigate(navConfig.bottomBarItems[0]?.path || '/')}
-              className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)] text-on-primary transition-transform active:scale-95 shrink-0"
+              className="lg:hidden w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(255,181,161,0.25)] text-on-primary transition-transform active:scale-95 shrink-0"
               aria-label="User Profile"
             >
               <Icon name="person" className="text-[18px]" />
             </button>
+
+            {/* Desktop User Profile Block */}
+            <div className="hidden lg:flex items-center gap-2.5 pl-3 border-l border-surface-container-highest/40">
+              <div className="w-8 h-8 rounded-full bg-primary-container text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+                {navConfig.desktopHeaderConfig.user.initials}
+              </div>
+              <div className="flex flex-col text-left leading-tight min-w-0 max-w-[130px]">
+                <span className="text-xs font-bold text-on-surface truncate">
+                  {navConfig.desktopHeaderConfig.user.name}
+                </span>
+                <span className="text-[10px] text-on-surface-variant truncate">
+                  {navConfig.desktopHeaderConfig.user.roleLabel}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -535,30 +782,37 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
         data-testid="dashboard-desktop-sidebar"
         aria-label={`${navConfig.title} desktop navigation`}
       >
-        {/* Sidebar Header with Logo and Brand */}
-        <div className="h-16 px-5 flex items-center gap-3 border-b border-surface-container-highest/40 bg-surface-container-low">
-          <img
-            src="/brand/swiftcart-logo-icon.png"
-            alt="SwiftCart"
-            className="h-8 w-auto object-contain cursor-pointer shrink-0"
-            onClick={() => onNavigate(navConfig.bottomBarItems[0]?.path || '/')}
-          />
-          <div className="flex flex-col min-w-0">
-            <span className="font-bold text-[14px] text-on-surface truncate leading-tight tracking-tight">
-              {navConfig.title}
-            </span>
-            <div className="flex items-center gap-1 mt-0.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-escrow inline-block animate-pulse shrink-0" />
-              <span className="text-[10px] uppercase tracking-wider text-tertiary font-bold truncate">
-                {navConfig.subtitle}
+        {/* Sidebar Header with Mockup Logo & Title */}
+        <div className="h-16 px-5 flex items-center justify-between border-b border-surface-container-highest/40 bg-surface-container-low">
+          <div className="flex items-center gap-3 min-w-0">
+            <img
+              src="/brand/swiftcart-logo-icon.png"
+              alt="SwiftCart"
+              className="h-8 w-auto object-contain cursor-pointer shrink-0"
+              onClick={() => onNavigate(navConfig.desktopNavItems[0]?.path || '/')}
+            />
+            <div className="flex flex-col min-w-0">
+              <span className="font-bold text-[14px] text-on-surface truncate leading-tight tracking-tight">
+                {navConfig.desktopSidebarHeader.title}
               </span>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-escrow inline-block animate-pulse shrink-0" />
+                <span className="text-[10px] uppercase tracking-wider text-tertiary font-bold truncate">
+                  {navConfig.desktopSidebarHeader.subtitle}
+                </span>
+              </div>
             </div>
           </div>
+          {navConfig.desktopSidebarHeader.badge && (
+            <span className="px-2 py-0.5 rounded bg-surface-container text-[10px] font-mono font-bold text-on-surface-variant shrink-0 border border-surface-container-highest/60">
+              {navConfig.desktopSidebarHeader.badge}
+            </span>
+          )}
         </div>
 
-        {/* Sidebar Navigation Items */}
+        {/* Sidebar Navigation Items in EXACT mockup order */}
         <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-          {navConfig.drawerItems.map((item) => {
+          {navConfig.desktopNavItems.map((item) => {
             const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
             const isParentActive = item.path !== '/' && normalizedPath.startsWith(item.path.toLowerCase().replace(/\/+$/, ''));
             const isActive = isExactActive || isParentActive;
@@ -571,7 +825,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
                   e.preventDefault();
                   onNavigate(item.path);
                 }}
-                className={`flex items-center justify-between px-3 py-2.5 rounded-xl font-medium text-[13px] transition-all ${
+                className={`flex items-center justify-between px-3 py-2 rounded-xl font-medium text-[13px] transition-all ${
                   isActive
                     ? 'bg-primary-container text-white font-bold shadow-md'
                     : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface'
@@ -579,7 +833,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
                 aria-current={isActive ? 'page' : undefined}
               >
                 <div className="flex items-center gap-3 min-w-0">
-                  <Icon name={item.icon} className={`text-[20px] ${isActive ? 'text-white' : ''}`} />
+                  <Icon name={item.icon} className={`text-[19px] ${isActive ? 'text-white' : ''}`} />
                   <span className="truncate">{item.label}</span>
                 </div>
 
@@ -595,6 +849,40 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
               </a>
             );
           })}
+
+          {/* More Operations / Sub-routes Section */}
+          {navConfig.desktopMoreItems.length > 0 && (
+            <div className="pt-3 mt-3 border-t border-surface-container-highest/40 space-y-1">
+              <span className="px-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant/70 block mb-1">
+                More Operations
+              </span>
+              {navConfig.desktopMoreItems.map((item) => {
+                const isExactActive = normalizedPath === item.path.toLowerCase().replace(/\/+$/, '');
+                const isActive = isExactActive;
+
+                return (
+                  <a
+                    key={item.path + item.label}
+                    href={item.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate(item.path);
+                    }}
+                    className={`flex items-center justify-between px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                      isActive
+                        ? 'bg-surface-container text-primary font-bold'
+                        : 'text-on-surface-variant/80 hover:bg-surface-container/60 hover:text-on-surface'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <Icon name={item.icon} className="text-[16px]" />
+                      <span className="truncate">{item.label}</span>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Sidebar Footer */}

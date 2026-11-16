@@ -1,0 +1,36 @@
+{
+  "folder": "seller_discounts_flash_sales_promotion_builder_tablet_light_2",
+  "size": "tablet",
+  "role": "seller",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Promotions, Flash Deals & Sponsored Ads",
+    "Kampala Tech Week Flash Sale",
+    "Campaign Configuration",
+    "Storewide Voucher",
+    "Flash Sale SKU Discount",
+    "Free Boda Delivery",
+    "Sponsored Search Ad",
+    "Live Vouchers & Coupons",
+    "Sponsored Ad Inventory",
+    "Kampala Merchant Velocity Tip"
+  ],
+  "buttons": [
+    "light_mode",
+    "notifications",
+    "history Audit Log",
+    "add_circle + Create New Campaign",
+    "Percentage (%)",
+    "Fixed UGX Cut",
+    "rocket_launch Launch Campaign & Notify Followers",
+    "Manage All",
+    "add_chart Boost Ad Spend • Auto-Optimize"
+  ],
+  "labels": [
+    "Step 1 • Select Promotion Engine",
+    "Step 2 • Parameters & Schedule",
+    "Step 3 • Select Enrolled SKUs (4 items)"
+  ]
+}

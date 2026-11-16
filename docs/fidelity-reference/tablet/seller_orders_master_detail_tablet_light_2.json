@@ -1,0 +1,36 @@
+{
+  "folder": "seller_orders_master_detail_tablet_light_2",
+  "size": "tablet",
+  "role": "seller",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Order #SC-ORD-9488"
+  ],
+  "buttons": [
+    "light_mode",
+    "notifications",
+    "qr_code_scanner",
+    "print Print Slips (4)",
+    "group_add Batch Assign",
+    "bolt Quick Dispatch",
+    "All (42)",
+    "Action Required 6",
+    "With Courier (8)",
+    "Delivered / Completed (26)",
+    "Disputed 1",
+    "Assign Courier arrow_forward",
+    "barcode Print Barcode",
+    "qr_code Seal #SC-TS-4091",
+    "picture_as_pdf Waybill PDF",
+    "call Call",
+    "chat WhatsApp",
+    "swap_horiz",
+    "shield Message Buyer via SwiftRelay",
+    "verified Verify Tamper Seal",
+    "gavel Emergency Hold",
+    "pin Request Delivery OTP Handshake"
+  ],
+  "labels": []
+}

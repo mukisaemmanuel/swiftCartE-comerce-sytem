@@ -1,0 +1,44 @@
+{
+  "folder": "sign_in_register_swiftcart_tablet",
+  "size": "tablet",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Buy Safely with SwiftCart Escrow.",
+    "Welcome to SwiftCart"
+  ],
+  "buttons": [
+    "Sign In",
+    "Create Account",
+    "Use email instead",
+    "visibility",
+    "Sign In & Verify arrow_forward",
+    "MoMo MTN MoMo ID",
+    "Google"
+  ],
+  "labels": [
+    "shield Kampala Protected Escrow",
+    "Secure MoMo Vault",
+    "Live Boda Tracking",
+    "48h Instant Refund",
+    "Verified Buyer",
+    "DK",
+    "David K. • Kololo",
+    "Sign In",
+    "Create Account",
+    "Help Center help_outline",
+    "Ugandan Mobile Number",
+    "🇺🇬 +256 arrow_drop_down",
+    "Use email instead",
+    "Security Verification",
+    "SMS OTP",
+    "Remember on this tablet",
+    "Forgot PIN?",
+    "Or quick connect with",
+    "MoMo MTN MoMo ID",
+    "Google",
+    "Skip and continue as Guest east"
+  ]
+}

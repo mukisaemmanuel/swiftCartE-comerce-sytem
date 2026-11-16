@@ -1,0 +1,49 @@
+{
+  "folder": "boda_rider_reverse_pickup_tamper_bag_inspection",
+  "size": "mobile",
+  "role": "rider",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Operational Workflow",
+    "Alex Kato",
+    "Tamper Inspection Protocol",
+    "SoundCore Uganda Official"
+  ],
+  "buttons": [
+    "arrow_back",
+    "Retake",
+    "lock Seal Tamper Pouch & Start Return Ride"
+  ],
+  "labels": [
+    "CASE #UG-4821",
+    "electric_moped SwiftExpress Reverse",
+    "#ORD-8942",
+    "At Customer Doorstep",
+    "KB",
+    "Kizito Brian",
+    "Duty Rider",
+    "Verified Buyer",
+    "Buyer Handover PIN",
+    "check_circle Code Verified",
+    "Tamper Inspection Protocol",
+    "4 of 4 Completed",
+    "1. Unit Match Confirmed",
+    "SC-9821",
+    "2. Original Accessories Included",
+    "3. Holographic Bag Insertion",
+    "Sealed",
+    "4. Tamper Barcode Verified",
+    "LOCKED",
+    "Mandatory Bag Seal Photo",
+    "photo_camera UPLOADED",
+    "15:48 EAT • Nakasero GPS [0.3275° N]",
+    "Retake",
+    "Return Destination",
+    "SoundCore Uganda Official",
+    "14 mins",
+    "navigation Route Loaded (2.4 km)",
+    "lock Seal Tamper Pouch & Start Return Ride"
+  ]
+}

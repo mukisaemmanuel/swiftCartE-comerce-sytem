@@ -1,0 +1,48 @@
+{
+  "folder": "checkout_delivery_code_swiftcart",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Checkout",
+    "SwiftShield Guarantee",
+    "Items in Package (2)",
+    "SoundCore Space One ANC Headphones",
+    "Anker 65W GaN Charger",
+    "Payment Method"
+  ],
+  "buttons": [
+    "arrow_back_ios_new",
+    "share",
+    "Change",
+    "lock Confirm Order & Pay UGX 483,500"
+  ],
+  "labels": [
+    "SwiftShield Guarantee",
+    "vpn_key Secure Handover Passcode",
+    "lock_clock Code activates upon dispatch",
+    "Dennis Mukasa",
+    "Home",
+    "+256 772 ••• 814",
+    "Change",
+    "SafeBoda Express",
+    "UGX 5,000",
+    "Items in Package (2)",
+    "verified Verified Merchant",
+    "Official",
+    "SoundCore Space One ANC Headphones",
+    "UGX 385,000",
+    "Official",
+    "Anker 65W GaN Charger",
+    "UGX 93,500",
+    "Payment Method",
+    "shield Instant MoMo Prompt",
+    "MTN Mobile Money",
+    "UGX 478,500",
+    "UGX 5,000",
+    "lock Confirm Order & Pay UGX 483,500",
+    "SwiftCart Uganda"
+  ]
+}

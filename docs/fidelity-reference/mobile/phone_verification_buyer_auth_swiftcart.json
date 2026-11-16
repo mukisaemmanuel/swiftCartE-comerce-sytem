@@ -1,0 +1,45 @@
+{
+  "folder": "phone_verification_buyer_auth_swiftcart",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Buyer Auth",
+    "Welcome to SwiftCart"
+  ],
+  "buttons": [
+    "arrow_back_ios_new",
+    "Sign In",
+    "Register",
+    "Change Phone Number",
+    "Verify & Continue arrow_forward",
+    "Continue with Google",
+    "Browse Marketplace as Guest storefront"
+  ],
+  "labels": [
+    "bolt UG",
+    "Sign In",
+    "Register",
+    "Buyer Security Tier 1",
+    "UGX Enabled",
+    "Full Legal Name For Delivery KYC",
+    "Email Address",
+    "payments Free Escrow SMS",
+    "+256",
+    "SMS Verification Code",
+    "Sent",
+    "+256 772 ••• 819",
+    "schedule Resend Code in (0:45)",
+    "Change Phone Number",
+    "Verify & Continue arrow_forward",
+    "or continue with",
+    "Continue with Google",
+    "Browse Marketplace as Guest storefront",
+    "100% Escrow Protected",
+    "Bank & Telco Level",
+    "Terms of Service",
+    "Privacy Policy"
+  ]
+}

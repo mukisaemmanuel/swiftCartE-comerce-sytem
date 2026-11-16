@@ -1,0 +1,21 @@
+{
+  "folder": "add_mobile_money_bottom_sheet_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Add Mobile Money Wallet"
+  ],
+  "buttons": [
+    "MoMo MTN Uganda *165# Instant",
+    "airtel Airtel Money *185# USSD",
+    "Verify & Link Wallet",
+    "Cancel & Return"
+  ],
+  "labels": [
+    "Select Telecom Provider *",
+    "Registered Phone Number *"
+  ]
+}

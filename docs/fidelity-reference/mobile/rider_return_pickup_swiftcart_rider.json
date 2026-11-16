@@ -1,0 +1,45 @@
+{
+  "folder": "rider_return_pickup_swiftcart_rider",
+  "size": "mobile",
+  "role": "rider",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Return Pickup Task",
+    "Dennis Mukasa",
+    "checklist Pickup Verification",
+    "SoundCore Uganda Official"
+  ],
+  "buttons": [
+    "arrow_back",
+    "check_circle Intact",
+    "Minor Wear",
+    "Damaged",
+    "check_circle Confirm Return Collected",
+    "warning Customer Unavailable / Issue"
+  ],
+  "labels": [
+    "Online",
+    "KB",
+    "Customer",
+    "Order #SC-ORD-9281",
+    "SoundCore Space One ANC",
+    "Value",
+    "checklist Pickup Verification",
+    "Step 1: Confirm item matches order",
+    "Step 2: Check item condition",
+    "check_circle Intact",
+    "Minor Wear",
+    "Damaged",
+    "Step 3: Take photo of returned item",
+    "2 Photos Ready",
+    "Retake / Add Photo",
+    "Drop-off Destination",
+    "SoundCore Uganda Official",
+    "alt_route Alt: Drop at William St Hub",
+    "14 mins",
+    "check_circle Confirm Return Collected",
+    "warning Customer Unavailable / Issue"
+  ]
+}

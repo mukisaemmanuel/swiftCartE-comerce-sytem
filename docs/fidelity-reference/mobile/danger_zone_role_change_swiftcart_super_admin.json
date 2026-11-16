@@ -1,0 +1,46 @@
+{
+  "folder": "danger_zone_role_change_swiftcart_super_admin",
+  "size": "mobile",
+  "role": "super-admin",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Danger Zone",
+    "Role Management",
+    "Assign Super Admin Permissions",
+    "Danger Zone - High-Impact Actions",
+    "Storewide Maintenance Mode",
+    "Suspend Platform User"
+  ],
+  "buttons": [
+    "arrow_back",
+    "Resend SMS",
+    "admin_panel_settings Confirm Role Update",
+    "pause_circle Pause Checkout (Maintenance Mode)",
+    "block Suspend User"
+  ],
+  "labels": [
+    "AD",
+    "SwiftCart Platform • East Africa Hub",
+    "Level 3 Clearance",
+    "Audit Log Active",
+    "Isaac Kato",
+    "#USR-402",
+    "Current Assigned Role",
+    "badge Hub Operations Staff",
+    "Active",
+    "Assign Target Role",
+    "Assign Super Admin Permissions",
+    "Step 1: Justification & Purpose",
+    "Required",
+    "Step 2: 2-Factor Verification Code",
+    "Resend SMS",
+    "admin_panel_settings Confirm Role Update",
+    "Storewide Maintenance Mode",
+    "Inactive",
+    "pause_circle Pause Checkout (Maintenance Mode)",
+    "Suspend Platform User",
+    "block Suspend User"
+  ]
+}

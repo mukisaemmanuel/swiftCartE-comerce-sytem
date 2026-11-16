@@ -1,0 +1,46 @@
+{
+  "folder": "merchant_return_inspection_acceptance",
+  "size": "mobile",
+  "role": "seller",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Inspect Returned Item",
+    "SoundCore Space One ANC",
+    "Inspection Checklist",
+    "Photos of Returned Item",
+    "Seller Decision"
+  ],
+  "buttons": [
+    "arrow_back",
+    "add_a_photoAdd Inspection Photo",
+    "upload_fileUpload Photo Proof",
+    "check_circleConfirm Return Inspection"
+  ],
+  "labels": [
+    "SoundCore Uganda Official",
+    "Return Delivered to Store",
+    "Refund Amount",
+    "KB",
+    "Kizito Brian",
+    "Inspection Checklist",
+    "3 Steps",
+    "Item received matches order",
+    "Item received matches order",
+    "Original accessories & box included",
+    "Original accessories & box included",
+    "Product physical condition verified",
+    "Product physical condition verified",
+    "Photos of Returned Item",
+    "2 Photos",
+    "add_a_photoAdd Inspection Photo",
+    "Seller Decision",
+    "Accept Return & Release Buyer Refund",
+    "Reason for Rejection",
+    "Reason for Rejection",
+    "upload_fileUpload Photo Proof",
+    "check_circleConfirm Return Inspection",
+    "chatContact Buyer (Dennis Mukasa)"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "folder": "returns_disputes_swiftcart_seller",
+  "size": "mobile",
+  "role": "seller",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Returns And Disputes",
+    "Seller Dispute Response"
+  ],
+  "buttons": [
+    "arrow_back_ios_new",
+    "dark_modelight_mode",
+    "Requests 2",
+    "In Dispute 1",
+    "Resolved 14",
+    "two_wheeler Accept Return & Authorize Boda Pickup",
+    "close",
+    "Cancel",
+    "sendSubmit Response"
+  ],
+  "labels": [
+    "KG",
+    "Payment Protection",
+    "Requests",
+    "2",
+    "In Dispute",
+    "1",
+    "Resolved",
+    "14",
+    "Urgent",
+    "18h left",
+    "SoundCore Space One ANC",
+    "Buyer Claim",
+    "Buyer Evidence (3 Photos)",
+    "Tap to inspect",
+    "Serial & Label",
+    "Power LED",
+    "Accessories",
+    "Audit Chronology",
+    "two_wheeler Accept Return & Authorize Boda Pickup",
+    "Case #RT-298",
+    "check_circle Resolved",
+    "Seller Defense Statement * Min 20 characters",
+    "Min 20 characters",
+    "Packaging Proof / Serial Video *",
+    "Upload CCTV Packaging Footage or Photo",
+    "Cancel",
+    "sendSubmit Response"
+  ]
+}

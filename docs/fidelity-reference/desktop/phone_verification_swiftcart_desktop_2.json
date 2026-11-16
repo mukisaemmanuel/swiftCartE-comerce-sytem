@@ -1,0 +1,29 @@
+{
+  "folder": "phone_verification_swiftcart_desktop_2",
+  "size": "desktop",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 1440,
+  "headings": [
+    "Verify Your Mobile Number"
+  ],
+  "buttons": [
+    "(Change phone number)",
+    "Verify & Continue to SwiftCart arrow_forward",
+    "Click here for instant WhatsApp delivery.",
+    "Resend Code in 45s",
+    "Receive code via WhatsApp voice call",
+    "arrow_back Back to sign in"
+  ],
+  "labels": [
+    "verified_user Two-Factor Account Authentication",
+    "(Change phone number)",
+    "timer Code expires in 01:48",
+    "Verify & Continue to SwiftCart arrow_forward",
+    "Didn't receive the SMS? Resend Code in 45s",
+    "Receive code via WhatsApp voice call",
+    "Swift Escrow Protected",
+    "arrow_back Back to sign in"
+  ]
+}

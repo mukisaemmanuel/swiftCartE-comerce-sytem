@@ -6,7 +6,7 @@ Total occurrences found: 1171
 
 | File | Line | Phrase | Sample Content |
 | --- | --- | --- | --- |
-| `src/components/dashboard/RoleDashboardShell.tsx` | 198 | **kill switch** | `'/admin/edit-category-commission-modal-with-date-picker': 'Kill Switch Confirmation',` |
+| `src/components/dashboard/RoleDashboardShell.tsx` | 373 | **tamper bag** | `'/seller/merchant-return-inspection-acceptance': 'Inspect Return Tamper Bag',` |
 | `src/mockups/admin/AdminCommandOverviewSwiftcartDesktopDark/Desktop.tsx` | 181 | **statutory** | `<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dual-rail statutory custody monitoring across Kampala commerce centers</p>` |
 | `src/mockups/admin/AdminCommandOverviewSwiftcartDesktopDark/Desktop.tsx` | 253 | **BoU** | `<span>Compliant with BoU National Payment Systems Act 2020</span>` |
 | `src/mockups/admin/AdminCommandOverviewSwiftcartDesktopDark/Desktop.tsx` | 514 | **URA** | `<p className="font-body-sm text-body-sm text-on-surface-variant">Oldest submission waiting 18 hours (URA TIN + trading license verification).</p>` |

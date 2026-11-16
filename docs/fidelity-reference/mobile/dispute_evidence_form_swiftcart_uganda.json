@@ -1,0 +1,32 @@
+{
+  "folder": "dispute_evidence_form_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Dispute Evidence Form",
+    "SoundCore Space One Wireless ANC",
+    "Upload Photo Evidence"
+  ],
+  "buttons": [
+    "arrow_back",
+    "help_outline",
+    "Clear",
+    "delete",
+    "delete",
+    "add_photo_alternate+ Add Photo",
+    "sendSubmit Dispute Evidence",
+    "Cancel"
+  ],
+  "labels": [
+    "Dispute Evidence Form",
+    "SoundCore Space One Wireless ANC",
+    "SwiftCart Support Desk",
+    "Your Explanation",
+    "Upload Photo Evidence",
+    "add_photo_alternate+ Add Photo",
+    "sendSubmit Dispute Evidence"
+  ]
+}

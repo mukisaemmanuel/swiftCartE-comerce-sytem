@@ -1,0 +1,49 @@
+{
+  "folder": "order_confirmation_delivery_code",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Order Confirmation",
+    "Order Placed Successfully!",
+    "Delivery Expectation",
+    "Order Summary",
+    "SoundCore Space One ANC Headphones"
+  ],
+  "buttons": [
+    "arrow_back",
+    "more_vert",
+    "content_copy Copy Code (841902)",
+    "qr_code_2 QR Scan",
+    "navigation Track Order in Real-Time",
+    "shopping_bag Continue Shopping",
+    "download View Invoice",
+    "Chat with SwiftCart Support 24/7 arrow_forward"
+  ],
+  "labels": [
+    "schedule Today, 14:24 EAT",
+    "Your Confidential Delivery Code",
+    "Active Escrow",
+    "content_copy Copy Code (841902)",
+    "qr_code_2 QR Scan",
+    "SwiftCart Fast-Scan PIN",
+    "Keep this code secret.",
+    "Boda Express",
+    "Estimated Handover",
+    "Tomorrow, Oct 17 between 1:00 PM – 3:00 PM",
+    "Payment Verified via MTN MoMo",
+    "Order Sent to Merchant",
+    "SwiftCart Rider Dispatch",
+    "Destination Address",
+    "storefront SoundCore Uganda Official verified",
+    "SoundCore Space One ANC Headphones",
+    "UGX 248,500",
+    "Total Paid (MTN MoMo) UGX 253,500",
+    "navigation Track Order in Real-Time",
+    "shopping_bag Continue Shopping",
+    "download View Invoice",
+    "Chat with SwiftCart Support 24/7 arrow_forward"
+  ]
+}

@@ -248,3 +248,170 @@ On tablet viewports, the mobile bottom bar is hidden (`md:hidden`), and navigati
   - `hub_storage_aging_matrix_tablet_dark` &rarr; `/hub/hub-storage-aging-matrix`
   - `rider_profile_support_hub_tablet_light` &rarr; `/hub/rider-profile-support-hub`
 
+
+---
+
+## 7. Desktop Navigation Architecture (1024px+, Tested at 1440x900)
+
+On desktop viewports, each role has a dedicated 288px (`w-72`) fixed left sidebar and an integrated top header matching the Stitch desktop mockups pixel-for-pixel:
+
+### 7.1 Admin Desktop (`role: "admin"`)
+- **Desktop Header (`<header>`)**:
+  - **Logo Block**: SwiftCart Logo (`/brand/swiftcart-logo-icon.png`), Brand title "SwiftCart Admin Console" with live heartbeat indicator (`UG-KLA`).
+  - **Search Bar**: Centered/Left-aligned command search `search` + `⌘K` with placeholder `"Search orders, sellers, ESCROW IDs, riders... (Press ⌘K)"`.
+  - **Telemetry & Status Indicators**:
+    - `radio_button_checked` `"Kampala Central: 12ms"`
+    - `"MTN MoMo: 99.98% Live"`
+    - `"Airtel Money: 100% Live"`
+  - **Right Controls**:
+    - Sun/Moon Theme Toggle (`theme-toggle-btn`)
+    - Notifications button with alert badge (`notifications` + `4`)
+    - User Profile Block: Avatar (`person` / `/brand/avatar-admin.png`) with `"Kizito Ronald"` (Bold) and `"Super Admin"` (Label).
+- **Desktop Sidebar (`<aside>`)**:
+  - **Sidebar Header**: `"Admin Console"` with sub-badge `"Platform Governance • Active Node"`.
+  - **Main Navigation Items (In EXACT Mockup Order)**:
+    1. **Overview** (`dashboard`) &rarr; `/admin/overview-admin`
+    2. **Seller Applications** (`storefront`, badge: `"14"`) &rarr; `/admin/sellers-directory-admin-1`
+    3. **Sellers Directory** (`verified`) &rarr; `/admin/sellers-directory-admin-2`
+    4. **Riders Fleet** (`two_wheeler`) &rarr; `/admin/riders-couriers-admin`
+    5. **Product Moderation** (`fact_check`, badge: `"8"`) &rarr; `/admin/product-moderation-admin`
+    6. **Orders Oversight** (`local_shipping`, badge: `"189"`) &rarr; `/admin/orders-oversight-admin`
+    7. **Escrow & Disputes** (`shield`, badge: `"6"`) &rarr; `/admin/escrow-disputes-admin`
+    8. **Payout Queue** (`payments`) &rarr; `/admin/payout-queue-admin`
+    9. **Overpayments & Refunds** (`currency_exchange`) &rarr; `/admin/overpayments-refunds-admin`
+    10. **Commission Rates** (`percent`) &rarr; `/admin/commission-rates-earnings-admin`
+    11. **Platform Settings** (`tune`) &rarr; `/super-admin/platform-settings-super-admin`
+    12. **Users & Roles** (`admin_panel_settings`) &rarr; `/super-admin/users-roles-super-admin`
+    13. **Homepage & Ads** (`ad_units`) &rarr; `/admin/homepage-ads-admin`
+    14. **Audit Log** (`history`) &rarr; `/admin/audit-log-admin-1`
+  - **More Operations / Sub-routes (Footer Section)**:
+    - **Locked Dispatches** (`local_shipping`) &rarr; `/admin/locked-dispatches-admin`
+    - **Order Detail Oversight** (`receipt_long`) &rarr; `/admin/admin-order-detail-oversight`
+    - **Freeze Seller Action** (`ac_unit`) &rarr; `/admin/freeze-seller-admin`
+    - **Commission Matrix Modal** (`tune`) &rarr; `/admin/edit-category-commission-modal-with-date-picker`
+    - **Audit Log Ledger View** (`history_edu`) &rarr; `/admin/audit-log-admin-2`
+    - **Exit Portal** (`logout`) &rarr; `/`
+
+---
+
+### 7.2 Seller Desktop (`role: "seller"`)
+- **Desktop Header (`<header>`)**:
+  - **Logo Block**: SwiftCart Logo, Title `"SwiftCart Seller Hub"`.
+  - **Store Identity Selector**: Verified Store Badge `"SoundCore Uganda Official"` with `"URSB Verified • Nakasero Flagship"`.
+  - **Search Bar**: Quick lookup `search` `"Search products, orders, payouts..."`.
+  - **Telemetry**: `"MTN & Airtel Rails Active"`.
+  - **Right Controls**:
+    - Sun/Moon Theme Toggle
+    - Notifications button (`notifications`)
+    - Store Manager Profile: Avatar + `"Kizito Ronald"`, `"Store General Manager (KR)"`.
+- **Desktop Sidebar (`<aside>`)**:
+  - **Sidebar Header**: `"Seller Hub"` & Store Header `"SoundCore Uganda"`.
+  - **Main Navigation Items (In EXACT Mockup Order)**:
+    1. **Overview** (`grid_view`) &rarr; `/seller/overview-seller`
+    2. **Orders** (`local_shipping`, badge: `"14 Pending"`) &rarr; `/seller/orders-seller`
+    3. **Products & Inventory** (`inventory_2`, badge: `"2 Low"`) &rarr; `/seller/products-seller`
+    4. **Riders & Logistics** (`two_wheeler`, badge: `"6 Active"`) &rarr; `/seller/riders-seller`
+    5. **Returns & Disputes** (`gavel`, badge: `"1 Case"`) &rarr; `/seller/returns-disputes-seller`
+    6. **Wallet & Payouts** (`account_balance_wallet`, badge: `"14.8M UGX"`) &rarr; `/seller/seller-wallet-payouts`
+    7. **Analytics & Heatmaps** (`insights`) &rarr; `/seller/analytics-seller`
+    8. **Discounts & Ads** (`campaign`) &rarr; `/seller/discounts-ads-seller`
+    9. **Store Profile & KYC** (`verified_user`, badge: `"check_circle"`) &rarr; `/seller/store-profile-seller`
+    10. **Settings** (`settings`) &rarr; `/seller/store-profile-seller`
+  - **More Operations / Flows**:
+    - **Add Product Flow** (`add_photo_alternate`) &rarr; `/seller/add-product-step-1-photos-seller`
+    - **AI Photo Studio** (`auto_fix_high`) &rarr; `/seller/add-product-step-2-ai-photo-studio-seller`
+    - **Catalog Preview** (`visibility`) &rarr; `/seller/add-product-step-5-buyer-preview-submit-seller`
+    - **Return Inspection** (`fact_check`) &rarr; `/seller/merchant-return-inspection-acceptance`
+    - **Help & Support** (`support_agent`) &rarr; `/help-centre`
+    - **Log Out** (`logout`) &rarr; `/`
+
+---
+
+### 7.3 Super-Admin Desktop (`role: "super-admin"`)
+- **Desktop Header (`<header>`)**:
+  - **Logo Block**: SwiftCart Logo + `"Super Admin Control Center"`.
+  - **Search Bar**: `search` + `⌘K` `"Search users, system logs, security keys..."`.
+  - **Telemetry**: `"Node: 99.98% Live"` | `"Kampala Central: 12ms"` | `"MTN & Airtel Rails Synced"`.
+  - **Right Controls**:
+    - Sun/Moon Theme Toggle
+    - Notifications button
+    - Profile: `"Kizito Ronald"` + `"Super Admin (Root)"`.
+- **Desktop Sidebar (`<aside>`)**:
+  - **Sidebar Header**: `"Master Control"`.
+  - **Main Navigation Items (In EXACT Mockup Order)**:
+    1. **Overview** (`space_dashboard`) &rarr; `/super-admin/overview-super-admin`
+    2. **Users & Roles** (`admin_panel_settings`) &rarr; `/super-admin/users-roles-super-admin`
+    3. **Platform Settings** (`tune`) &rarr; `/super-admin/platform-settings-super-admin`
+    4. **Orders Oversight** (`receipt_long`) &rarr; `/admin/orders-oversight-admin`
+    5. **Riders Fleet** (`two_wheeler`) &rarr; `/admin/riders-couriers-admin`
+    6. **Seller Applications** (`how_to_reg`, badge: `"14"`) &rarr; `/admin/sellers-directory-admin-1`
+    7. **Sellers Directory** (`storefront`) &rarr; `/admin/sellers-directory-admin-2`
+    8. **Product Moderation** (`verified`, badge: `"8"`) &rarr; `/admin/product-moderation-admin`
+    9. **Escrow & Disputes** (`shield_lock`, badge: `"6"`) &rarr; `/admin/escrow-disputes-admin`
+    10. **Payout Queue** (`payments`) &rarr; `/admin/payout-queue-admin`
+    11. **Overpayments & Refunds** (`currency_exchange`) &rarr; `/admin/overpayments-refunds-admin`
+    12. **Commission Rates** (`percent`) &rarr; `/admin/commission-rates-earnings-admin`
+    13. **Homepage & Ads** (`view_carousel`) &rarr; `/admin/homepage-ads-admin`
+    14. **Audit Log** (`history`) &rarr; `/super-admin/audit-log-super-admin`
+  - **More Operations**:
+    - **Danger Zone Role Change** (`warning`) &rarr; `/super-admin/danger-zone-role-change-super-admin`
+    - **Locked Dispatches** (`local_shipping`) &rarr; `/admin/locked-dispatches-admin`
+    - **Exit Portal** (`logout`) &rarr; `/`
+
+---
+
+### 7.4 Rider Desktop (`role: "rider"`)
+- **Desktop Header (`<header>`)**:
+  - **Logo Block**: SwiftCart Logo + `"Dispatch & Sim Ops"`.
+  - **Corridor Selector**: `"Kampala Central Hub #04 (William St Corridor) - Active (98.4% On-Time)"`.
+  - **Device Telemetry**:
+    - `phone_iphone` `"Tecno Camon 20"`
+    - `signal_cellular_alt` `"Edge / 2.5G"`
+    - `battery_charging_full` `"84%"`
+  - **Right Controls**:
+    - Sun/Moon Theme Toggle
+    - Profile: `"Kigozi Ronald (Boda #412)"`.
+- **Desktop Sidebar (`<aside>`)**:
+  - **Sidebar Header**: `"Dispatch Command Navigation"`.
+  - **Main Navigation Items (In EXACT Mockup Order)**:
+    1. **Overview & Fleet Map** (`map`) &rarr; `/rider/overview-rider`
+    2. **Active Task & OTP Simulation** (`pin`) &rarr; `/rider/boda-rider-delivery-task-execution-code-entry`
+    3. **Security Locked & Exceptions** (`gshield`) &rarr; `/rider/rider-code-locked-security`
+    4. **Earnings & Telecom MoMo** (`account_balance_wallet`) &rarr; `/rider/earnings-rider`
+  - **More Operations**:
+    - **Deliveries List** (`package_2`) &rarr; `/rider/deliveries-rider`
+    - **Rider Map Navigation** (`location_on`) &rarr; `/rider/rider-map-rider`
+    - **Reverse Pickup Inspection** (`swap_horizontal_circle`) &rarr; `/rider/boda-rider-reverse-pickup-package-inspection`
+    - **Profile & Support** (`person`) &rarr; `/rider/profile-support-rider`
+    - **Exit** (`logout`) &rarr; `/`
+
+---
+
+### 7.5 Hub Desktop (`role: "hub"`)
+- **Desktop Header (`<header>`)**:
+  - **Logo Block**: SwiftCart Logo + `"Hub Operations Node"`.
+  - **Station Selector**: `location_on` `"Active Sorting Node: Kampala Central Hub #04 - William St"`.
+  - **Hardware & Telemetry**:
+    - `conveyor_belt` `"Belt #2 Speed: 1.4 m/s (Nominal)"`
+    - `qr_code_scanner` `"Honeywell Xenon 1950g Ready"`
+    - `schedule` `"14:38:09 EAT"`
+  - **Right Controls**:
+    - Sun/Moon Theme Toggle
+    - Profile: `"Brian Mukasa"` + `"Hub Lead Supervisor"`.
+- **Desktop Sidebar (`<aside>`)**:
+  - **Sidebar Header**: `"UG-KLA Hub Ops Portal"`.
+  - **Main Navigation Items (In EXACT Mockup Order)**:
+    1. **Station Overview** (`hub`) &rarr; `/hub/overview-hub-agent`
+    2. **Inbound Intake & Scan** (`barcode_scanner`) &rarr; `/hub/hub-intake-sorting-station-work-hub`
+    3. **Rider Dispatch & Staging** (`two_wheeler`) &rarr; `/hub/rider-dispatch-courier-bag-staging-hub-agent`
+    4. **Storage & Aging Matrix** (`shelves`) &rarr; `/hub/hub-storage-aging-matrix-hub`
+    5. **Line-Haul Manifests** (`local_shipping`) &rarr; `/hub/line-haul-transit-manifest-creation-hub-agent`
+    6. **Customer Pickup** (`countertops`) &rarr; `/hub/pickup-hub-agent`
+    7. **Damaged & Quarantine Bay** (`gavel`) &rarr; `/hub/damaged-parcel-quarantine-bay-intake-hub-agent`
+    8. **Returns & RTO** (`replay`) &rarr; `/hub/returns-damaged-goods-quarantine-bay-work-hub`
+  - **More Operations**:
+    - **Intake Station** (`move_to_inbox`) &rarr; `/hub/hub-intake-station-work-hub`
+    - **Sorting Station** (`filter_alt`) &rarr; `/hub/hub-sorting-station-work-hub`
+    - **Regional Linehaul Handover** (`local_shipping`) &rarr; `/hub/regional-linehaul-transit-handover-work-hub`
+    - **Field Ops KPIs & Shared Components** (`account_balance_wallet`) &rarr; `/hub/swiftcart-work-hub-shared-system-components`
+    - **Exit** (`logout`) &rarr; `/`

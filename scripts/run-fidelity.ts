@@ -1,4 +1,3 @@
-import { preview } from 'vite';
 import { chromium } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -7,6 +6,13 @@ import sharp from 'sharp';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
 import { allRoutes } from '../src/routes';
+
+export interface TextDiffInfo {
+  missingHeadings: string[];
+  extraHeadings: string[];
+  missingButtons: string[];
+  extraButtons: string[];
+}
 
 export interface ScreenFidelityItem {
   screenPath: string;
@@ -20,6 +26,7 @@ export interface ScreenFidelityItem {
   imageFile: string;
   expectedHeading?: string;
   foundHeading?: string;
+  textDiff?: TextDiffInfo;
   error?: string;
 }
 
@@ -82,32 +89,15 @@ function extractMockupHeading(codeHtmlPath: string): string {
 
 export async function runHonestFidelity() {
   console.log('--- Starting Honest Fidelity Test (Part A) ---');
-  let server: any = null;
-  let baseUrl = 'http://127.0.0.1:4173';
-  let port = 4173;
-  while (!server && port < 4185) {
-    try {
-      server = await preview({
-        preview: {
-          port,
-          host: '127.0.0.1',
-          strictPort: true,
-        },
-      });
-      baseUrl = (server.resolvedUrls?.local[0] || `http://127.0.0.1:${port}`).replace(/\/$/, '');
-      console.log(`Preview server started successfully on port ${port}:`, baseUrl);
-      break;
-    } catch {
-      port++;
-    }
-  }
-  if (!server) {
-    console.log('Fallback: connecting to existing preview server at:', baseUrl);
-    baseUrl = baseUrl.replace(/\/$/, '');
-  }
-  console.log('Using target URL:', baseUrl);
+  const baseUrl = 'https://app.local';
+  const distDir = path.resolve('dist');
+  const indexHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
+  console.log('Using offline target URL:', baseUrl);
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
   const imagesDir = path.resolve(process.cwd(), 'docs/fidelity-images');
   if (!fs.existsSync(imagesDir)) {
@@ -189,10 +179,50 @@ export async function runHonestFidelity() {
     const expectedHeading = extractMockupHeading(codeHtmlPath);
     const safeFileName = `${size}-${role}-${screen}.png`;
 
-    // Fresh browser context per screen with no stored auth
+    // Fresh browser context per screen with offline SPA router
     const context = await browser.newContext({
       viewport: { width: vp.width, height: vp.height },
       deviceScaleFactor: 1,
+    });
+
+    await context.route('**/*', async (route) => {
+      const reqUrl = route.request().url();
+      if (reqUrl.startsWith('https://app.local')) {
+        const urlObj = new URL(reqUrl);
+        const pathname = urlObj.pathname;
+        if (pathname.startsWith('/assets/')) {
+          const filePath = path.join(distDir, pathname);
+          if (fs.existsSync(filePath)) {
+            const ext = path.extname(filePath);
+            const mime =
+              ext === '.js'
+                ? 'application/javascript'
+                : ext === '.css'
+                ? 'text/css'
+                : ext === '.woff2'
+                ? 'font/woff2'
+                : 'application/octet-stream';
+            return route.fulfill({ status: 200, contentType: mime, body: fs.readFileSync(filePath) });
+          }
+        }
+        if (pathname.startsWith('/brand/') || pathname.startsWith('/images/')) {
+          const filePath = path.resolve('public', pathname.slice(1));
+          if (fs.existsSync(filePath)) {
+            const ext = path.extname(filePath);
+            const mime =
+              ext === '.png'
+                ? 'image/png'
+                : ext === '.webp'
+                ? 'image/webp'
+                : ext === '.svg'
+                ? 'image/svg+xml'
+                : 'application/octet-stream';
+            return route.fulfill({ status: 200, contentType: mime, body: fs.readFileSync(filePath) });
+          }
+        }
+        return route.fulfill({ status: 200, contentType: 'text/html', body: indexHtml });
+      }
+      return route.continue();
     });
 
     let isLightMockup = false;
@@ -244,10 +274,10 @@ export async function runHonestFidelity() {
           () => !document.body.innerText.includes('Loading SwiftCart Portal...'),
           { timeout: 10000 }
         )
-        .catch(() => {});
+        .catch(() => { });
 
       // Wait for web fonts to load
-      await page.evaluate(() => document.fonts.ready).catch(() => {});
+      await page.evaluate(() => document.fonts.ready).catch(() => { });
 
       // Layout stabilization
       await page.waitForTimeout(200);
@@ -308,24 +338,30 @@ export async function runHonestFidelity() {
       // 3. Screenshot full height at exact viewport width
       const actualBuffer = await page.screenshot({ fullPage: true, animations: 'disabled' });
 
-      // Read screen.png
-      let expectedImg = sharp(fullPath);
-      const meta = await sharp(fullPath).metadata();
+      // Honest Reference Comparison: check docs/fidelity-reference/<size>/<screen>.png first
+      const refPngPath = path.resolve('docs/fidelity-reference', size, `${screen}.png`);
+      const refMetaPath = path.resolve('docs/fidelity-reference', size, `${screen}.json`);
+      const referenceFile = fs.existsSync(refPngPath) ? refPngPath : fullPath;
+
+      let expectedImg = sharp(referenceFile);
+      const meta = await sharp(referenceFile).metadata();
       let origW = meta.width || vp.width;
       let origH = meta.height || vp.height;
 
-      // Special cases for Stitch desktop canvases containing centered device viewports
-      if (screen === 'add_mobile_money_bottom_sheet_swiftcart_uganda' && origW > 800) {
-        expectedImg = sharp(fullPath).extract({ left: 590, top: 205, width: 390, height: 844 });
-        origW = 390;
-        origH = 844;
-      } else if (screen === 'sign_in_register_swiftcart_tablet' && origW > 1200) {
-        expectedImg = sharp(fullPath).extract({ left: 383, top: 40, width: 834, height: Math.min(1050, origH - 40) });
-        origW = 834;
-        origH = Math.min(1050, origH - 40);
+      // Special cases for Stitch desktop canvases containing centered device viewports (fallback only)
+      if (!fs.existsSync(refPngPath)) {
+        if (screen === 'add_mobile_money_bottom_sheet_swiftcart_uganda' && origW > 800) {
+          expectedImg = sharp(fullPath).extract({ left: 590, top: 205, width: 390, height: 844 });
+          origW = 390;
+          origH = 844;
+        } else if (screen === 'sign_in_register_swiftcart_tablet' && origW > 1200) {
+          expectedImg = sharp(fullPath).extract({ left: 383, top: 40, width: 834, height: Math.min(1050, origH - 40) });
+          origW = 834;
+          origH = Math.min(1050, origH - 40);
+        }
       }
 
-      // Scale screen.png to viewport width
+      // Scale reference to viewport width if needed
       const scale = vp.width / origW;
       const scaledOrigH = Math.round(origH * scale);
 
@@ -333,8 +369,8 @@ export async function runHonestFidelity() {
       const actualMeta = await sharp(actualBuffer).metadata();
       const actualH = actualMeta.height || vp.height;
 
-      // Crop both to shorter height
-      const compH = Math.min(scaledOrigH, actualH, 3200);
+      // Crop both to shorter height (up to 4000)
+      const compH = Math.min(scaledOrigH, actualH, 4000);
 
       const expectedBuffer = await expectedImg
         .resize({
@@ -374,6 +410,52 @@ export async function runHonestFidelity() {
       const status: 'OK' | 'CHECK' | 'BAD' =
         diffPercent <= 12 ? 'OK' : diffPercent <= 25 ? 'CHECK' : 'BAD';
 
+      // Text diff comparison against reference metadata JSON
+      let textDiff: TextDiffInfo | undefined = undefined;
+      if (fs.existsSync(refMetaPath)) {
+        try {
+          const refMeta = JSON.parse(fs.readFileSync(refMetaPath, 'utf-8'));
+          const actualTextData = (await page.evaluate(`(() => {
+            const clean = (s) => (s || '').replace(/\\s+/g, ' ').trim();
+            const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+              .map((el) => clean(el.textContent))
+              .filter(Boolean);
+            const buttons = Array.from(document.querySelectorAll('button, [role="button"], a.btn'))
+              .map((el) => clean(el.textContent))
+              .filter((s) => s.length > 0 && s.length < 50);
+            const labels = Array.from(document.querySelectorAll('label, [class*="label"], [class*="badge"]'))
+              .map((el) => clean(el.textContent))
+              .filter((s) => s.length > 0 && s.length < 50);
+            return { headings, buttons, labels };
+          })()`)) as { headings?: string[]; buttons?: string[]; labels?: string[] } | null;
+
+          const refHeadings: string[] = refMeta.headings || [];
+          const actHeadings: string[] = actualTextData?.headings || [];
+          const refButtons: string[] = refMeta.buttons || [];
+          const actButtons: string[] = actualTextData?.buttons || [];
+
+          const missingHeadings = refHeadings.filter(
+            (h) => !actHeadings.some((ah) => ah.toLowerCase().includes(h.toLowerCase()) || h.toLowerCase().includes(ah.toLowerCase()))
+          );
+          const extraHeadings = actHeadings.filter(
+            (ah) => !refHeadings.some((h) => h.toLowerCase().includes(ah.toLowerCase()) || ah.toLowerCase().includes(h.toLowerCase()))
+          );
+          const missingButtons = refButtons.filter(
+            (b) => !actButtons.some((ab) => ab.toLowerCase().includes(b.toLowerCase()) || b.toLowerCase().includes(ab.toLowerCase()))
+          );
+          const extraButtons = actButtons.filter(
+            (ab) => !refButtons.some((b) => b.toLowerCase().includes(ab.toLowerCase()) || ab.toLowerCase().includes(b.toLowerCase()))
+          );
+
+          textDiff = {
+            missingHeadings: Array.from(new Set(missingHeadings)).slice(0, 5),
+            extraHeadings: Array.from(new Set(extraHeadings)).slice(0, 5),
+            missingButtons: Array.from(new Set(missingButtons)).slice(0, 5),
+            extraButtons: Array.from(new Set(extraButtons)).slice(0, 5),
+          };
+        } catch { }
+      }
+
       // Composite side-by-side: [ expected | actual | diff ]
       const diffBuffer = PNG.sync.write(diffPng);
       const compositeBuffer = await sharp({
@@ -405,6 +487,7 @@ export async function runHonestFidelity() {
         status,
         imageFile: `fidelity-images/${safeFileName}`,
         expectedHeading,
+        textDiff,
       });
 
       if (results.length % 25 === 0) {
@@ -436,9 +519,6 @@ export async function runHonestFidelity() {
   }
 
   await browser.close();
-  if (server?.httpServer) {
-    server.httpServer.close();
-  }
 
   // Summary counts
   const summary: Record<
@@ -489,13 +569,38 @@ export async function runHonestFidelity() {
   md += `| **TOTAL** | **${sumOk}** | **${sumCheck}** | **${sumBad}** | **${sumWrong}** | **${sumTotal}** |\n\n`;
 
   md += `## 20 Worst Screens (Top Discrepancies & Wrong Pages)\n\n`;
-  md += `| Route | Role | Size | Screen Folder | Diff % | Status | Expected Heading | Side-by-Side (Expected \\| Actual \\| Diff) |\n`;
-  md += `|---|---|---|---|---|---|---|---|\n`;
+  md += `| Route | Role | Size | Screen Folder | Diff % | Status | Expected Heading | Text Diff (Missing Headings / Buttons) | Side-by-Side |\n`;
+  md += `|---|---|---|---|---|---|---|---|---|\n`;
 
   for (const r of results.slice(0, 20)) {
     const diffStr = r.diffPercent !== null ? `${r.diffPercent}%` : 'N/A';
     const imgLink = r.imageFile ? `[View Side-by-Side](${r.imageFile})` : (r.error || 'N/A');
-    md += `| \`${r.routePath}\` | ${r.role} | ${r.size} | \`${r.screenName}\` | **${diffStr}** | **${r.status}** | "${r.expectedHeading || ''}" | ${imgLink} |\n`;
+    let textDiffSummary = 'None';
+    if (r.textDiff) {
+      const parts: string[] = [];
+      if (r.textDiff.missingHeadings.length) parts.push(`Missing H: ${r.textDiff.missingHeadings.join(', ')}`);
+      if (r.textDiff.missingButtons.length) parts.push(`Missing Btn: ${r.textDiff.missingButtons.join(', ')}`);
+      if (parts.length > 0) textDiffSummary = parts.join('; ');
+    }
+    md += `| \`${r.routePath}\` | ${r.role} | ${r.size} | \`${r.screenName}\` | **${diffStr}** | **${r.status}** | "${r.expectedHeading || ''}" | ${textDiffSummary} | ${imgLink} |\n`;
+  }
+
+  // Screens with Text Differences section
+  const textDiffScreens = results.filter(
+    (r) =>
+      r.textDiff &&
+      (r.textDiff.missingHeadings.length > 0 ||
+        r.textDiff.extraHeadings.length > 0 ||
+        r.textDiff.missingButtons.length > 0 ||
+        r.textDiff.extraButtons.length > 0)
+  );
+
+  md += `\n## Screens with Visible Text Differences (${textDiffScreens.length})\n\n`;
+  md += `| Route | Role | Size | Missing Headings | Extra Headings | Missing Buttons | Extra Buttons |\n`;
+  md += `|---|---|---|---|---|---|---|\n`;
+  for (const r of textDiffScreens) {
+    const td = r.textDiff!;
+    md += `| \`${r.routePath}\` | ${r.role} | ${r.size} | ${td.missingHeadings.join('; ') || '-'} | ${td.extraHeadings.join('; ') || '-'} | ${td.missingButtons.join('; ') || '-'} | ${td.extraButtons.join('; ') || '-'} |\n`;
   }
 
   md += `\n## Complete Screen Fidelity Breakdown\n\n`;
@@ -513,7 +618,7 @@ export async function runHonestFidelity() {
   let commitHash = 'unknown';
   try {
     commitHash = execSync('git rev-parse --short HEAD').toString().trim();
-  } catch {}
+  } catch { }
 
   const historyPath = path.resolve(process.cwd(), 'docs/FIDELITY-HISTORY.md');
   if (!fs.existsSync(historyPath)) {
@@ -539,10 +644,6 @@ export async function runHonestFidelity() {
   console.log('Summary by role & size:');
   console.table(summary);
   console.log('Report saved to docs/FIDELITY-REPORT.md\n');
-
-  if (server?.httpServer) {
-    await server.httpServer.close();
-  }
 
   return { sumOk, sumCheck, sumBad, sumWrong, sumTotal, summary, results };
 }

@@ -1,0 +1,48 @@
+{
+  "folder": "payment_methods_swiftcart_uganda_1",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Payment Methods",
+    "Mobile Money Accounts",
+    "Cards & Banking",
+    "How Swift Escrow Works",
+    "Approve instant USSD prompt (*165# or *185#)",
+    "Funds secured in Escrow (Locked until delivery)",
+    "Inspect goods & release with 6-digit delivery code",
+    "Add Mobile Money Wallet",
+    "Swift Escrow Protection"
+  ],
+  "buttons": [
+    "arrow_back",
+    "help_outline",
+    "more_vert",
+    "more_vert",
+    "Make Default",
+    "more_vert",
+    "Make Default",
+    "add_circle + Add New Payment Method",
+    "close",
+    "MoMo MTN Uganda 077 / 078",
+    "airtel Airtel Uganda 070 / 075",
+    "verified Verify & Save Wallet",
+    "Got It"
+  ],
+  "labels": [
+    "Swift Escrow Protected",
+    "MTN Mobile Money",
+    "Airtel Money",
+    "Stanbic Bank",
+    "Add Payment Method",
+    "+ Add Mobile Money Wallet",
+    "+ Add Bank Card",
+    "Approve instant USSD prompt (*165# or *185#)",
+    "Funds secured in Escrow (Locked until delivery)",
+    "add_circle + Add New Payment Method",
+    "Registered Mobile Number",
+    "verified Verify & Save Wallet"
+  ]
+}

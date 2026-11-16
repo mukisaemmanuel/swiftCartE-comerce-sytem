@@ -1,0 +1,42 @@
+{
+  "folder": "sign_in_swiftcart_buyer",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Buyer Sign In",
+    "Welcome Back"
+  ],
+  "buttons": [
+    "arrow_back",
+    "more_vert",
+    "Phone Number",
+    "Email Address",
+    "visibility",
+    "Sign In arrow_forward",
+    "Continue with Google",
+    "sms Sign in with OTP / SMS Code"
+  ],
+  "labels": [
+    "SwiftCart Uganda",
+    "Uganda's Verified Marketplace",
+    "Phone Number",
+    "Email Address",
+    "Mobile Number bolt MTN & Airtel Money Ready",
+    "bolt MTN & Airtel Money Ready",
+    "+256",
+    "Email Address",
+    "Password",
+    "Forgot Password?",
+    "Keep me signed in",
+    "30 Days",
+    "Sign In arrow_forward",
+    "Or continue with",
+    "Continue with Google",
+    "Sign in with OTP / SMS Code",
+    "shopping_bag Continue as Guest chevron_right",
+    "Register here"
+  ]
+}

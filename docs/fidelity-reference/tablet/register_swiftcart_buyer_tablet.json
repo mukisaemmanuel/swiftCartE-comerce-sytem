@@ -1,0 +1,39 @@
+{
+  "folder": "register_swiftcart_buyer_tablet",
+  "size": "tablet",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Join Uganda's Verified Marketplace",
+    "Create Your Account"
+  ],
+  "buttons": [
+    "visibility",
+    "Create Account & Send Code arrow_forward",
+    "Register with Google"
+  ],
+  "labels": [
+    "Uganda Marketplace",
+    "100% Escrow Protection",
+    "Fast Same-Day Boda Delivery",
+    "Zero-Fee Mobile Money",
+    "140+ Verified Local Merchants",
+    "Verified Buyer",
+    "Ritah K.",
+    "Full Name",
+    "Mobile Money Number",
+    "MTN & Airtel Money Ready",
+    "+256",
+    "Email Address",
+    "Optional",
+    "Create Password",
+    "Strong",
+    "Confirm Password",
+    "Create Account & Send Code arrow_forward",
+    "OR",
+    "Register with Google",
+    "Sign In"
+  ]
+}

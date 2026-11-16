@@ -1,0 +1,42 @@
+{
+  "folder": "splash_welcome_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [],
+  "buttons": [
+    "Kampala Central check_circle",
+    "Nakawa check_circle",
+    "Makindye check_circle",
+    "Rubaga check_circle",
+    "Kawempe check_circle",
+    "Wakiso check_circle",
+    "Entebbe check_circle",
+    "Mukono check_circle",
+    "Jinja check_circle",
+    "Mbarara check_circle",
+    "Gulu check_circle",
+    "Start Shopping arrow_forward"
+  ],
+  "labels": [
+    "Uganda's Marketplace",
+    "Where should we deliver?",
+    "Kampala Central",
+    "Kampala Central",
+    "Nakawa",
+    "Makindye",
+    "Rubaga",
+    "Kawempe",
+    "Wakiso",
+    "Entebbe",
+    "Mukono",
+    "Jinja",
+    "Mbarara",
+    "Gulu",
+    "SwiftCart Buyer Protection",
+    "Start Shopping arrow_forward",
+    "SwiftCart Uganda"
+  ]
+}

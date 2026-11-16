@@ -1,0 +1,44 @@
+{
+  "folder": "courier_bag_qr_scan_confirmation_modal_swiftcart_work_hub",
+  "size": "mobile",
+  "role": "hub",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "High Velocity Scan"
+  ],
+  "buttons": [
+    "arrow_back",
+    "flash_on",
+    "close",
+    "sync Sync",
+    "undo Cancel Scan & Unpack Bag"
+  ],
+  "labels": [
+    "William St Central",
+    "High Velocity Scan",
+    "Staged at Bay 4 • Staging Lane B",
+    "#BAG-UG-2025-044",
+    "Kizito Brian",
+    "Assigned Route",
+    "Route 08 (Central East)",
+    "1. Sack Master QR Code",
+    "Scanned & Locked",
+    "2. Tamper Foil Bolt Seal Barcode",
+    "Awaiting Optical Lock",
+    "Detected Target",
+    "sync Sync",
+    "inventory_2 Bag Contents Manifest",
+    "18/20 Slots (90% Packed)",
+    "Total Escrow Value",
+    "High-Value Items",
+    "3 Flagged Parcels",
+    "Samsung A54, Anker, SoundCore",
+    "headphones SoundCore Space One",
+    "smartphone Galaxy A54 5G",
+    "bolt Anker 65W GaN",
+    "+15 General Cargo",
+    "undo Cancel Scan & Unpack Bag"
+  ]
+}

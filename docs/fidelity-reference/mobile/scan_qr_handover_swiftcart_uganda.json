@@ -1,0 +1,46 @@
+{
+  "folder": "scan_qr_handover_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Live Rider Tracking",
+    "Delivery Handover"
+  ],
+  "buttons": [
+    "arrow_back",
+    "emergency",
+    "close",
+    "qr_code_2 Show QR Code",
+    "pin Manual 6-Digit PIN",
+    "content_copy Copy Code",
+    "thumb_up I Have Inspected & Received Parcel",
+    "report_problem Report Issue or Refuse Delivery"
+  ],
+  "labels": [
+    "Live Rider Tracking",
+    "Order Ref #ORD-8942",
+    "Rider Kizito Brian has arrived",
+    "At Doorstep",
+    "verified_user Swift Escrow Protected",
+    "1. Unbox & Inspect First",
+    "qr_code_2 Show QR Code",
+    "pin Manual 6-Digit PIN",
+    "Display brightness automatically maximized",
+    "Inspection Handover PIN",
+    "content_copy Copy Code",
+    "lock_clock Valid for this handover",
+    "Backup Code: 749 • 206",
+    "Active PIN",
+    "checklist Unboxing Safety Checklist",
+    "Tap to mark",
+    "SwiftCart tamper-evident seal is undamaged",
+    "I have tested power & am satisfied with condition",
+    "Kizito Brian",
+    "⭐ 4.9 (1,240+)",
+    "thumb_up I Have Inspected & Received Parcel",
+    "report_problem Report Issue or Refuse Delivery"
+  ]
+}

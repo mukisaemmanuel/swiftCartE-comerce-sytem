@@ -1,0 +1,37 @@
+{
+  "folder": "sign_in_register_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [],
+  "buttons": [
+    "arrow_back",
+    "Sign In",
+    "Create Account",
+    "Use email instead",
+    "Send Verification Code arrow_forward",
+    "Edit number",
+    "task_alt Verify & Sign In",
+    "Continue with Google"
+  ],
+  "labels": [
+    "verified_user Escrow Protected",
+    "Uganda's Most Trusted Marketplace",
+    "bolt Instant MoMo Checkout",
+    "Sign In",
+    "Create Account",
+    "Mobile Phone Number bolt No Password Needed",
+    "bolt No Password Needed",
+    "Network: MTN Uganda (MoMo Ready)",
+    "Use email instead",
+    "Send Verification Code arrow_forward",
+    "lock_reset Enter 6-digit verification code",
+    "schedule Resend code in 42s Edit number",
+    "task_alt Verify & Sign In",
+    "Or continue with",
+    "Continue with Google",
+    "Escrow Protected"
+  ]
+}

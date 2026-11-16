@@ -1,0 +1,27 @@
+{
+  "folder": "seller_overview_dashboard_tablet_dark",
+  "size": "tablet",
+  "role": "seller",
+  "isLight": false,
+  "themeClass": "dark",
+  "width": 834,
+  "headings": [
+    "Seller Command Overview",
+    "Live Order Stream & Fulfillment Queue",
+    "Assigned Couriers",
+    "Low Stock Warnings"
+  ],
+  "buttons": [
+    "keyboard_double_arrow_right",
+    "menu",
+    "dark_mode",
+    "notifications",
+    "View telemetry chevron_right",
+    "two_wheeler Assign SafeBoda Rider",
+    "Handover OTP",
+    "Print Shipping Tag",
+    "inventory Update Stock & Inventory",
+    "send_to_mobile Instant Withdraw to MoMo"
+  ],
+  "labels": []
+}

@@ -1,0 +1,33 @@
+{
+  "folder": "phone_verification_swiftcart_buyer_tablet",
+  "size": "tablet",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Verify Your Phone Number"
+  ],
+  "buttons": [
+    "edit (Change Phone Number)",
+    "Resend SMS Code",
+    "Verify & Continue arrow_forward",
+    "chat Send Code via WhatsApp"
+  ],
+  "labels": [
+    "Kampala Hub",
+    "Step 2 of 3",
+    "Phone Verification",
+    "edit (Change Phone Number)",
+    "Enter 6-Digit SMS PIN",
+    "timelapse Resend code in 00:48",
+    "Resend SMS Code",
+    "Verify & Continue arrow_forward",
+    "chat Send Code via WhatsApp",
+    "Why verify your phone number?",
+    "SwiftCart Uganda 256-bit Secure Gateway",
+    "Bank of Uganda Compliant",
+    "help Need help receiving code?",
+    "Kampala Dispatch Center"
+  ]
+}

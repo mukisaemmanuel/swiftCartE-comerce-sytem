@@ -1,0 +1,38 @@
+{
+  "folder": "splash_first_open_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "SwiftCart",
+    "Welcome! Owanika?"
+  ],
+  "buttons": [
+    "Kampala Central check_circle",
+    "Nakawa Division check_circle",
+    "Wakiso / Kira check_circle",
+    "Entebbe Municipality check_circle",
+    "Jinja City check_circle",
+    "Mbarara City check_circle",
+    "Gulu City check_circle",
+    "Continue to Marketplace arrow_forward",
+    "Sign In"
+  ],
+  "labels": [
+    "Your Most Trusted Marketplaceverified",
+    "Delivery District bolt Live Dispatch Hubs",
+    "bolt Live Dispatch Hubs",
+    "Delivering to",
+    "Kampala Central",
+    "Change",
+    "Swift Escrow Protected",
+    "Swift Express 24hr Delivery",
+    "Seamless Mobile Money",
+    "Browse as Guest is Active",
+    "• No setup required",
+    "Continue to Marketplace arrow_forward",
+    "Sign In"
+  ]
+}

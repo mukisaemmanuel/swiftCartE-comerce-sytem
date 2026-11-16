@@ -1,0 +1,51 @@
+{
+  "folder": "sign_in_swiftcart_desktop_1",
+  "size": "desktop",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 1440,
+  "headings": [
+    "Welcome Back to Uganda's Premier Marketplace",
+    "Sign In to SwiftCart"
+  ],
+  "buttons": [
+    "smartphone Mobile Number Uganda Fav",
+    "mail Email Address",
+    "visibility",
+    "Sign In to SwiftCart arrow_forward",
+    "Google One-Tap",
+    "sms One-Time SMS (OTP)"
+  ],
+  "labels": [
+    "storefront Return to Marketplace",
+    "help_outline Help & FAQ",
+    "UGX (USH) · Kampala (EAT)",
+    "Uganda's Commerce Hub",
+    "256-Bit SSL",
+    "45-Min SafeBoda Express",
+    "100% Escrow Protection",
+    "Zero-Fee Mobile Money",
+    "1,400+ Verified Merchants",
+    "lock SSL Encrypted Checkout",
+    "Kampala (EAT) GMT+3",
+    "smartphone Mobile Number Uganda Fav",
+    "mail Email Address",
+    "Mobile Phone Number",
+    "+256",
+    "Email Address",
+    "Password",
+    "Forgot password?",
+    "Remember me on this computer",
+    "Escrow Ready",
+    "Sign In to SwiftCart arrow_forward",
+    "Or continue with",
+    "Google One-Tap",
+    "sms One-Time SMS (OTP)",
+    "store Are you a merchant? Sell on SwiftCart",
+    "100% Escrow Protection",
+    "45-Min SafeBoda City Hub",
+    "Zero MoMo Fees",
+    "URSB Certified Stores"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "folder": "register_swiftcart_desktop_2",
+  "size": "desktop",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 1440,
+  "headings": [
+    "Shop fearlessly with protected Kampala checkout.",
+    "Create Your SwiftCart Account",
+    "100% Escrow Protection",
+    "45-Min SafeBoda City Hub",
+    "Zero MoMo Fees",
+    "URSB Certified Stores"
+  ],
+  "buttons": [
+    "Continue with Google",
+    "visibility",
+    "Create Account & Verify Phone arrow_forward"
+  ],
+  "labels": [
+    "Full Name",
+    "Mobile Number",
+    "Email Address",
+    "Delivery Hub / District",
+    "Create Password"
+  ]
+}

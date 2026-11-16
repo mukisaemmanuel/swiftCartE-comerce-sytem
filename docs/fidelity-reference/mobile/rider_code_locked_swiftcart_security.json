@@ -1,0 +1,48 @@
+{
+  "folder": "rider_code_locked_swiftcart_security",
+  "size": "mobile",
+  "role": "rider",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Security Lockout",
+    "DELIVERY CODE LOCKED",
+    "checklist Mandatory Protocol Checklist"
+  ],
+  "buttons": [
+    "arrow_back",
+    "send_to_mobile SMS Buyer New Re-Verification Link",
+    "Unlock"
+  ],
+  "labels": [
+    "SwiftCart Hub",
+    "Protocol Violation",
+    "ATTEMPTS: 3/3",
+    "Escrow & Asset Protection Guard",
+    "Incident Dossier",
+    "ID: #INC-88219",
+    "Order Tracking",
+    "Lock Timestamp",
+    "14:48:12 EAT",
+    "Package:",
+    "SoundCore Space One",
+    "Security Seal:",
+    "#SC-TB-4819 INTACT",
+    "Buyer Name:",
+    "Dennis Mukasa",
+    "Drop Location:",
+    "Dispatched Node:",
+    "1",
+    "HALT HANDOVER IMMEDIATELY",
+    "2",
+    "Stow Sealed Bag Securely",
+    "3",
+    "Contact SwiftCart Dispatch",
+    "Call Dispatch Operations (0800 220 800)",
+    "WhatsApp Dispatch Support Desk",
+    "SMS Buyer New Re-Verification Link",
+    "Supervisor Emergency Override Token",
+    "Unlock"
+  ]
+}

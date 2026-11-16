@@ -1,0 +1,38 @@
+{
+  "folder": "freeze_seller_swiftcart_admin",
+  "size": "mobile",
+  "role": "admin",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Freeze Seller",
+    "Freeze Seller & Listings"
+  ],
+  "buttons": [
+    "arrow_back",
+    "close",
+    "block Freeze Payouts & Listings",
+    "Cancel"
+  ],
+  "labels": [
+    "AD",
+    "#SLR-0554",
+    "verified Merchant",
+    "Active Inventory",
+    "Escrow Balance",
+    "Immediate Store Restriction",
+    "Reason for Freeze *",
+    "Policy Governance",
+    "Counterfeit or misleading item complaints",
+    "Repeated fulfillment failure / SLA breaches",
+    "Suspected unauthorized account takeover",
+    "Other policy breach",
+    "Admin Explanation & Internal Notes *",
+    "Confidential",
+    "Notify Seller Immediately",
+    "Store listings hidden and escrow paused.",
+    "block Freeze Payouts & Listings",
+    "Cancel"
+  ]
+}

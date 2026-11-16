@@ -1,0 +1,30 @@
+{
+  "folder": "followed_stores_swiftcart_uganda_2",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Followed Stores (12)",
+    "SoundCore Uganda Official",
+    "Kampala Smart Gadgets",
+    "Elegance Fashion Kampala",
+    "SwiftCart Escrow Guarantee"
+  ],
+  "buttons": [
+    "arrow_back",
+    "search",
+    "All 12",
+    "Official Stores (8)",
+    "Arcade Stalls (4)",
+    "local_offer Discounts Active",
+    "check Following",
+    "more_vert",
+    "check Following",
+    "more_vert",
+    "check Following",
+    "more_vert"
+  ],
+  "labels": []
+}

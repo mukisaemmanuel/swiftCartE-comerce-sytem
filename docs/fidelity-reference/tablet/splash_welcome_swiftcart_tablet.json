@@ -1,0 +1,35 @@
+{
+  "folder": "splash_welcome_swiftcart_tablet",
+  "size": "tablet",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Uganda's Fastest Multi-Vendor Marketplace"
+  ],
+  "buttons": [
+    "English",
+    "Yogera mu Luganda",
+    "Start Shopping in Kampala arrow_forward",
+    "Sign in to existing account",
+    "Browse as guest"
+  ],
+  "labels": [
+    "LIVE IN UGANDA",
+    "English",
+    "Yogera mu Luganda",
+    "Select Your Delivery District",
+    "location_on Live Hubs",
+    "Kampala Central",
+    "Wakiso & Entebbe",
+    "Mukono & Kira",
+    "Jinja Hub Corridor",
+    "MTN & Airtel MoMo",
+    "Verified Kampala",
+    "6-Digit Handshake",
+    "Start Shopping in Kampala arrow_forward",
+    "Sign in to existing account",
+    "Browse as guest"
+  ]
+}

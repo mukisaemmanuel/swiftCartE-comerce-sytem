@@ -1,0 +1,30 @@
+{
+  "folder": "phone_verification_swiftcart_desktop_1",
+  "size": "desktop",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 1440,
+  "headings": [
+    "Two-Factor Account Protection",
+    "Delivery Code Security",
+    "MTN & Airtel MoMo Rails",
+    "45-Min SafeBoda Dispatch",
+    "100% Escrow Protection",
+    "Verify Your Mobile Number",
+    "SwiftCart Uganda",
+    "Customer Service",
+    "About & Business",
+    "Payment & Trust Rails"
+  ],
+  "buttons": [
+    "(Change phone number)",
+    "Verify & Continue to SwiftCart arrow_forward",
+    "Click here for instant WhatsApp OTP delivery.",
+    "Resend Code in 44s",
+    "Receive code via WhatsApp voice call"
+  ],
+  "labels": [
+    "Enter 6-Digit Verification Code"
+  ]
+}

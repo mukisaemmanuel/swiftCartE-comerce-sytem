@@ -1,0 +1,43 @@
+{
+  "folder": "privacy_policy_swiftcart_buyer",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Buyer Privacy",
+    "Privacy Policy",
+    "SwiftCart Data Pledge",
+    "Data Protection Officer & Registry"
+  ],
+  "buttons": [
+    "arrow_back",
+    "more_vert",
+    "picture_as_pdf PDF",
+    "check_circle I Understand & Acknowledge"
+  ],
+  "labels": [
+    "SwiftCart Uganda",
+    "Consumer Legal Protection",
+    "SwiftCart Data Pledge",
+    "Zero PIN Storage",
+    "Live Transit GPS Only",
+    "1. Collection",
+    "2. Usage & Boda",
+    "3. MoMo Payments",
+    "4. GPS Location",
+    "5. Security",
+    "6. Your Rights",
+    "Buyer Identity",
+    "Ugandan Destination Records",
+    "Commercial Transaction Logs",
+    "lock Payment Integrity Standard",
+    "Data Export:",
+    "Account & Data Erasure:",
+    "Data Protection Officer & Registry",
+    "picture_as_pdf PDF",
+    "check_circle I Understand & Acknowledge",
+    "Acknowledged"
+  ]
+}

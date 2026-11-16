@@ -1,0 +1,26 @@
+{
+  "folder": "seller_analytics_performance_heatmaps_tablet_light_2",
+  "size": "tablet",
+  "role": "seller",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 834,
+  "headings": [
+    "Store Analytics & Performance Intelligence",
+    "Gross Revenue & Daily Order Velocity",
+    "Kampala Division Demand Heatmap & Fulfillment Velocity",
+    "Top Selling Catalog SKUs",
+    "Store Conversion Funnel"
+  ],
+  "buttons": [
+    "light_mode",
+    "notifications",
+    "7D",
+    "Last 30 Days",
+    "This Month",
+    "Feb 1 - 28 Feb calendar_today",
+    "table_view Export CSV",
+    "picture_as_pdf PDF Report"
+  ],
+  "labels": []
+}

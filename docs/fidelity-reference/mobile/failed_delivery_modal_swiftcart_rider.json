@@ -1,0 +1,46 @@
+{
+  "folder": "failed_delivery_modal_swiftcart_rider",
+  "size": "mobile",
+  "role": "rider",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Failed Delivery",
+    "Report Failed Delivery"
+  ],
+  "buttons": [
+    "arrow_back",
+    "call Redial",
+    "add_a_photo Add Photo Proof"
+  ],
+  "labels": [
+    "SwiftCart Hub",
+    "warning Delivery Exception",
+    "Step 1 of 2",
+    "Dennis Mukasa",
+    "Dispatch Protocol Verification",
+    "Dennis Mukasa (+256 701 498 221)",
+    "Last called 6 mins ago • Unanswered",
+    "call Redial",
+    "Select Primary Reason",
+    "Required",
+    "check Buyer unreachable / phone switched off",
+    "Buyer unreachable / phone switched off",
+    "check Buyer not at location & no proxy available",
+    "Buyer not at location & no proxy available",
+    "check Buyer refused delivery / rejected item",
+    "Buyer refused delivery / rejected item",
+    "check Buyer cannot provide 6-digit delivery code",
+    "Buyer cannot provide 6-digit delivery code",
+    "check Security refused access / gate locked",
+    "Security refused access / gate locked",
+    "Arrival & Gate Photo Proof",
+    "GPS tagged",
+    "Optional",
+    "add_a_photo Add Photo Proof",
+    "Rider Incident Notes",
+    "0/150",
+    "Return Protocol #RT-HUB-04 Strict SLA"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "folder": "help_centre_support_swiftcart_uganda",
+  "size": "mobile",
+  "role": "buyer",
+  "isLight": true,
+  "themeClass": "light",
+  "width": 390,
+  "headings": [
+    "Help Centre",
+    "Swift Escrow Protection",
+    "Boda Dispatch & Tracking",
+    "Returns, Refunds & Disputes",
+    "Mobile Money & Payments",
+    "Seller Guarantees & Verification"
+  ],
+  "buttons": [
+    "arrow_back",
+    "share",
+    "How do I return a defective item? expand_more",
+    "Do you deliver outside Kampala? expand_more"
+  ],
+  "labels": [
+    "SwiftCart Support Desk",
+    "All Uganda Systems & MoMo Gateways Operational",
+    "Direct Assistance Channels",
+    "Average reply < 2m",
+    "24/7 Live",
+    "Open WhatsApp Chat arrow_forward",
+    "Toll-Free",
+    "Call Now phone_enabled",
+    "Escrow Officer",
+    "Launch Chat chevron_right",
+    "Email Desk",
+    "Write Ticket chevron_right",
+    "Browse Help Topics",
+    "5 Specialized Guides",
+    "Shielded",
+    "Express",
+    "Frequently Asked Questions",
+    "Kampala Guide",
+    "SwiftCart Consumer Protection Hub",
+    "KLA City Centre•Kampala, Uganda•v3.4.2"
+  ]
+}
