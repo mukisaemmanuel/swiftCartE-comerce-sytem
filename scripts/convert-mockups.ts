@@ -189,17 +189,17 @@ export function convertMobileHtmlToReact(
       }
     });
 
-    // Content area adjustments: pl-60 -> pl-0, left-60 -> left-0, ml-60 -> ml-0
+    // Content area adjustments: remove hardcoded sidebar offsets from mockup bodies
     $('*').each((_, el) => {
       const cls = $(el).attr('class') || '';
-      if (cls.includes('pl-60')) {
-        $(el).attr('class', cls.replace(/\bpl-60\b/g, 'pl-0'));
+      if (/\b(?:pl-60|pl-64|pl-72|pl-80)\b/.test(cls)) {
+        $(el).attr('class', cls.replace(/\b(?:pl-60|pl-64|pl-72|pl-80)\b/g, 'pl-0'));
       }
-      if (cls.includes('left-60')) {
-        $(el).attr('class', cls.replace(/\bleft-60\b/g, 'left-0'));
+      if (/\b(?:left-60|left-64|left-72|left-80)\b/.test(cls)) {
+        $(el).attr('class', cls.replace(/\b(?:left-60|left-64|left-72|left-80)\b/g, 'left-0'));
       }
-      if (cls.includes('ml-60')) {
-        $(el).attr('class', cls.replace(/\bml-60\b/g, 'ml-0'));
+      if (/\b(?:ml-60|ml-64|ml-72|ml-80)\b/.test(cls)) {
+        $(el).attr('class', cls.replace(/\b(?:ml-60|ml-64|ml-72|ml-80)\b/g, 'ml-0'));
       }
     });
   }

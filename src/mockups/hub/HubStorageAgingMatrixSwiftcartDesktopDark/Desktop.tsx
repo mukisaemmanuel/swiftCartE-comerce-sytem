@@ -22,7 +22,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-72 min-h-screen flex flex-col"><main className="w-full pt-16 bg-surface flex-1"><div className="flex flex-col w-full">
+      <div className="pl-0 min-h-screen flex flex-col"><main className="w-full pt-16 bg-surface flex-1"><div className="flex flex-col w-full">
 <div className="p-space-lg lg:p-margin-desktop flex flex-col gap-space-lg w-full max-w-[1600px] mx-auto">
 
 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">

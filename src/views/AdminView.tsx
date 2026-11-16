@@ -94,9 +94,9 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigat
     const renderAdminOverview = () => {
       if (breakpoint === 'desktop') {
         return theme === 'dark' ? (
-          <AdminCommandOverviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-        ) : (
           <AdminCommandOverviewSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <AdminCommandOverviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
         );
       }
       return theme === 'dark' ? (
@@ -178,9 +178,9 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigat
     if (path === '/admin/product-moderation-catalog-review') {
       if (breakpoint === 'desktop') {
         return theme === 'dark' ? (
-          <ProductModerationCatalogReviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-        ) : (
           <ProductModerationCatalogReviewSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+        ) : (
+          <ProductModerationCatalogReviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
         );
       }
       return theme === 'dark' ? (
@@ -202,9 +202,9 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigat
     if (path === '/admin/sellers-directory-with-freeze-drawer') return <SellersDirectoryWithFreezeDrawerTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/admin-command-overview') {
       return theme === 'dark' ? (
-        <AdminCommandOverviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-      ) : (
         <AdminCommandOverviewSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <AdminCommandOverviewSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
       );
     }
     if (path === '/admin/commission-rates-fee-matrix') return <CommissionRatesFeeMatrixSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />;
@@ -220,9 +220,9 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigat
     if (path === '/admin/riders-fleet-operations-live-dispatch') return <RidersFleetOperationsLiveDispatchSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/sellers-directory-account-governance') {
       return theme === 'dark' ? (
-        <SellersDirectoryAccountGovernanceSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-      ) : (
         <SellersDirectoryAccountGovernanceSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <SellersDirectoryAccountGovernanceSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
       );
     }
     if (path === '/super-admin/audit-log-super-admin') return <AuditLogSwiftcartSuperAdmin onNavigate={onNavigate} onAction={handleAction} />;

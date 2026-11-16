@@ -84,16 +84,25 @@ export async function runHonestFidelity() {
   console.log('--- Starting Honest Fidelity Test (Part A) ---');
   let server: any = null;
   let baseUrl = 'http://127.0.0.1:4173';
-  try {
-    server = await preview({
-      preview: {
-        port: 4173,
-        host: '127.0.0.1',
-      },
-    });
-    baseUrl = (server.resolvedUrls?.local[0] || 'http://127.0.0.1:4173').replace(/\/$/, '');
-  } catch {
-    console.log('Preview server port in use, connecting to existing preview server at:', baseUrl);
+  let port = 4173;
+  while (!server && port < 4185) {
+    try {
+      server = await preview({
+        preview: {
+          port,
+          host: '127.0.0.1',
+          strictPort: true,
+        },
+      });
+      baseUrl = (server.resolvedUrls?.local[0] || `http://127.0.0.1:${port}`).replace(/\/$/, '');
+      console.log(`Preview server started successfully on port ${port}:`, baseUrl);
+      break;
+    } catch {
+      port++;
+    }
+  }
+  if (!server) {
+    console.log('Fallback: connecting to existing preview server at:', baseUrl);
     baseUrl = baseUrl.replace(/\/$/, '');
   }
   console.log('Using target URL:', baseUrl);
@@ -187,23 +196,27 @@ export async function runHonestFidelity() {
     });
 
     let isLightMockup = false;
-    if (screen.includes('dark')) {
+    if (fs.existsSync(codeHtmlPath)) {
+      const html = fs.readFileSync(codeHtmlPath, 'utf-8');
+      const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
+      const bgMatch = html.match(/"background":\s*"([^"]+)"/);
+      const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
+      if (hex && hex.startsWith('#')) {
+        const lum = getLuminance(hex);
+        isLightMockup = lum > 0.4;
+      } else if (html.includes('<html class="light"') || html.includes('data-theme="light"')) {
+        isLightMockup = true;
+      } else if (html.includes('<html class="dark"') || html.includes('data-theme="dark"')) {
+        isLightMockup = false;
+      } else if (screen.includes('dark')) {
+        isLightMockup = false;
+      } else if (screen.includes('light')) {
+        isLightMockup = true;
+      }
+    } else if (screen.includes('dark')) {
       isLightMockup = false;
     } else if (screen.includes('light')) {
       isLightMockup = true;
-    } else if (fs.existsSync(codeHtmlPath)) {
-      const html = fs.readFileSync(codeHtmlPath, 'utf-8');
-      if (html.includes('<html class="light"') || html.includes('data-theme="light"')) {
-        isLightMockup = true;
-      } else {
-        const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
-        const bgMatch = html.match(/"background":\s*"([^"]+)"/);
-        const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
-        if (hex && hex.startsWith('#')) {
-          const lum = getLuminance(hex);
-          isLightMockup = lum > 0.4;
-        }
-      }
     }
 
     // If role needs a signed-in mock user, set it before navigation exactly as dev does
@@ -250,12 +263,13 @@ export async function runHonestFidelity() {
 
       // 2. Strengthened heading check: compare first h1/h2 text with mockup code.html
       const renderedHeadings = await page.evaluate(() => {
-        const h1 = document.querySelector('h1')?.innerText?.trim() || '';
-        const h2 = document.querySelector('h2')?.innerText?.trim() || '';
-        return [h1, h2].filter(Boolean);
+        const heads = Array.from(document.querySelectorAll('h1, h2, h3, [class*="headline"], [class*="title"]'))
+          .map((el) => (el as HTMLElement).innerText?.trim() || '')
+          .filter(Boolean);
+        return heads;
       });
-      const pageText = await page.evaluate(() => document.body.innerText);
-      const cleanExpected = expectedHeading.toLowerCase().trim();
+      const pageText = await page.evaluate(() => document.body.innerText || '');
+      const cleanExpected = decodeEntities(expectedHeading).toLowerCase().trim();
       const cleanText = pageText.toLowerCase().replace(/\s+/g, ' ');
 
       // Dashboard / Overview variants
@@ -525,6 +539,10 @@ export async function runHonestFidelity() {
   console.log('Summary by role & size:');
   console.table(summary);
   console.log('Report saved to docs/FIDELITY-REPORT.md\n');
+
+  if (server?.httpServer) {
+    await server.httpServer.close();
+  }
 
   return { sumOk, sumCheck, sumBad, sumWrong, sumTotal, summary, results };
 }

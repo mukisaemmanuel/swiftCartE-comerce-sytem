@@ -19,6 +19,7 @@ import {
   HubInboundIntakeBarcodeScanSwiftcartDesktopDark,
   HubInboundIntakeBarcodeScanSwiftcartDesktopLight,
   HubIntakeHighSpeedBarcodeScannerTablet,
+  HubIntakeHighSpeedBarcodeScannerTabletLight,
   HubIntakeSortingStationSwiftcartWorkHub,
   HubIntakeStationSwiftcartWorkHub,
   HubLineHaulTransitManifestHandoverTablet,
@@ -121,7 +122,13 @@ export const HubView: React.FC<HubViewProps> = ({ route, onNavigate }) => {
     }
     if (path === '/hub/hub-damaged-goods-quarantine-bay-1') return <HubDamagedGoodsQuarantineBayTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-damaged-goods-quarantine-bay-2') return <HubDamagedGoodsQuarantineBayTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/hub/hub-intake-high-speed-barcode-scanner') return <HubIntakeHighSpeedBarcodeScannerTablet onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/hub/hub-intake-high-speed-barcode-scanner') {
+      return theme === 'dark' ? (
+        <HubIntakeHighSpeedBarcodeScannerTablet onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <HubIntakeHighSpeedBarcodeScannerTabletLight onNavigate={onNavigate} onAction={handleAction} />
+      );
+    }
     if (path === '/hub/hub-line-haul-transit-manifest-handover') return <HubLineHaulTransitManifestHandoverTablet onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-line-haul-transit-manifest-handover-1') return <HubLineHaulTransitManifestHandoverTabletLight1 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/hub/hub-line-haul-transit-manifest-handover-2') return <HubLineHaulTransitManifestHandoverTabletLight2 onNavigate={onNavigate} onAction={handleAction} />;

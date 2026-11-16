@@ -22,7 +22,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-72 min-h-screen flex flex-col bg-background"><main className="w-full pt-16 px-space-lg pb-space-xl flex-1 bg-background"><div className="flex flex-col w-full relative">
+      <div className="pl-0 min-h-screen flex flex-col bg-background"><main className="w-full pt-16 px-space-lg pb-space-xl flex-1 bg-background"><div className="flex flex-col w-full relative">
 
 <div className="flex flex-col w-full gap-space-lg select-none opacity-40 pointer-events-none filter blur-[1px]">
 
@@ -161,7 +161,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 
-<div className="fixed inset-0 top-16 left-72 z-50 flex items-center justify-center p-space-lg bg-inverse-surface/40 backdrop-blur-sm overflow-y-auto">
+<div className="fixed inset-0 top-16 left-0 z-50 flex items-center justify-center p-space-lg bg-inverse-surface/40 backdrop-blur-sm overflow-y-auto">
 
 <div className="relative w-full max-w-3xl bg-surface-container-lowest rounded-xl shadow-[0px_16px_40px_rgba(14,27,77,0.16)] flex flex-col overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-150">
 

@@ -205,9 +205,9 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
     }
     if (path === '/seller/seller-applications-kyc') {
       return theme === 'dark' ? (
-        <SellerApplicationsKycSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-      ) : (
         <SellerApplicationsKycSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <SellerApplicationsKycSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
       );
     }
     if (path === '/seller/seller-discounts-flash-sales-promotion-builder') {
