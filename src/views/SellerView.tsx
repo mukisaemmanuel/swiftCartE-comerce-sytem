@@ -204,10 +204,11 @@ export const SellerView: React.FC<SellerViewProps> = ({ route, onNavigate }) => 
       );
     }
     if (path === '/seller/seller-applications-kyc') {
+      // Note: In Stitch design folders, the dark mockup is inside _light and the light mockup is inside _dark
       return theme === 'dark' ? (
-        <SellerApplicationsKycSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
-      ) : (
         <SellerApplicationsKycSwiftcartDesktopLight onNavigate={onNavigate} onAction={handleAction} />
+      ) : (
+        <SellerApplicationsKycSwiftcartDesktopDark onNavigate={onNavigate} onAction={handleAction} />
       );
     }
     if (path === '/seller/seller-discounts-flash-sales-promotion-builder') {

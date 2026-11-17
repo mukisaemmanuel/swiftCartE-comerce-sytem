@@ -12,6 +12,35 @@ function getLuminance(hex: string): number {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+function getTargetTheme(folder: string, role: string, codeHtmlPath?: string): 'light' | 'dark' {
+  if (role === 'buyer') return 'light';
+
+  // Specific Stitch export anomalies where folder name contradicts the actual design inside code.html
+  if (folder === 'seller_applications_kyc_swiftcart_desktop_dark') return 'light';
+  if (folder === 'seller_applications_kyc_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_line_haul_transit_manifest_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_station_command_overview_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_damaged_goods_quarantine_bay_tablet_light_1') return 'dark';
+  if (folder === 'hub_station_command_overview_tablet_light_1') return 'dark';
+
+  if (folder.includes('light')) return 'light';
+  if (folder.includes('dark')) return 'dark';
+
+  if (codeHtmlPath && fs.existsSync(codeHtmlPath)) {
+    const html = fs.readFileSync(codeHtmlPath, 'utf-8');
+    const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
+    const bgMatch = html.match(/"background":\s*"([^"]+)"/);
+    const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
+    if (hex && hex.startsWith('#')) {
+      return getLuminance(hex) > 0.4 ? 'light' : 'dark';
+    }
+    if (html.includes('<html class="light"') || html.includes('data-theme="light"')) return 'light';
+    if (html.includes('<html class="dark"') || html.includes('data-theme="dark"')) return 'dark';
+  }
+
+  return 'dark';
+}
+
 export async function generateReferences() {
   console.log('--- Generating Honest Reference Screenshots from code.html ---');
   const tailwindScriptPath = path.resolve(process.cwd(), 'scripts/tailwindcss.js');
@@ -98,36 +127,15 @@ export async function generateReferences() {
 
         let html = fs.readFileSync(codeHtmlPath, 'utf-8');
 
-        // Determine theme
-        let isLight = false;
-        if (role === 'buyer') {
-          isLight = true;
-        } else if (folder.includes('light')) {
-          isLight = true;
-        } else if (folder.includes('dark')) {
-          isLight = false;
-        } else {
-          const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
-          const bgMatch = html.match(/"background":\s*"([^"]+)"/);
-          const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
-          if (hex && hex.startsWith('#')) {
-            isLight = getLuminance(hex) > 0.4;
-          } else if (html.includes('<html class="light"') || html.includes('data-theme="light"')) {
-            isLight = true;
-          } else if (html.includes('<html class="dark"') || html.includes('data-theme="dark"')) {
-            isLight = false;
-          }
-        }
+        const themeClass = getTargetTheme(folder, role, codeHtmlPath);
 
-        const themeClass = isLight ? 'light' : 'dark';
-
-        // Ensure html tag has theme class and data-theme
+        // Ensure html tag has theme class and data-theme cleanly without duplicate class attributes
         if (!html.includes('<html')) {
-          html = `<html class="${themeClass}" data-theme="${themeClass}">` + html + '</html>';
+          html = `<html class="${themeClass}" data-theme="${themeClass}" lang="en">` + html + '</html>';
         } else {
           html = html.replace(
-            /<html([^>]*)>/i,
-            `<html$1 class="${themeClass}" data-theme="${themeClass}">`
+            /<html[^>]*>/i,
+            `<html class="${themeClass}" data-theme="${themeClass}" lang="en">`
           );
         }
 
@@ -141,7 +149,7 @@ export async function generateReferences() {
           await page.setContent(html, { waitUntil: 'load', timeout: 15000 });
           // Stabilize layout and let tailwind script finish class processing
           await page.waitForTimeout(300);
-          await page.evaluate('document.fonts && document.fonts.ready').catch(() => {});
+          await page.evaluate('document.fonts && document.fonts.ready').catch(() => { });
 
           // Extract visible text and structure for text diffing using string evaluation
           const textData = await page.evaluate(`(() => {

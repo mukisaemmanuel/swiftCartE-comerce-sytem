@@ -50,6 +50,35 @@ export function getLuminance(hex: string): number {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+export function getTargetTheme(folder: string, role: string, codeHtmlPath?: string): 'light' | 'dark' {
+  if (role === 'buyer') return 'light';
+
+  // Specific Stitch export anomalies where folder name contradicts the actual design inside code.html
+  if (folder === 'seller_applications_kyc_swiftcart_desktop_dark') return 'light';
+  if (folder === 'seller_applications_kyc_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_line_haul_transit_manifest_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_station_command_overview_swiftcart_desktop_light') return 'dark';
+  if (folder === 'hub_damaged_goods_quarantine_bay_tablet_light_1') return 'dark';
+  if (folder === 'hub_station_command_overview_tablet_light_1') return 'dark';
+
+  if (folder.includes('light')) return 'light';
+  if (folder.includes('dark')) return 'dark';
+
+  if (codeHtmlPath && fs.existsSync(codeHtmlPath)) {
+    const html = fs.readFileSync(codeHtmlPath, 'utf-8');
+    const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
+    const bgMatch = html.match(/"background":\s*"([^"]+)"/);
+    const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
+    if (hex && hex.startsWith('#')) {
+      return getLuminance(hex) > 0.4 ? 'light' : 'dark';
+    }
+    if (html.includes('<html class="light"') || html.includes('data-theme="light"')) return 'light';
+    if (html.includes('<html class="dark"') || html.includes('data-theme="dark"')) return 'dark';
+  }
+
+  return 'dark';
+}
+
 function extractMockupHeading(codeHtmlPath: string): string {
   if (!fs.existsSync(codeHtmlPath)) return '';
   const rawContent = fs.readFileSync(codeHtmlPath, 'utf-8');
@@ -198,10 +227,10 @@ export async function runHonestFidelity() {
               ext === '.js'
                 ? 'application/javascript'
                 : ext === '.css'
-                ? 'text/css'
-                : ext === '.woff2'
-                ? 'font/woff2'
-                : 'application/octet-stream';
+                  ? 'text/css'
+                  : ext === '.woff2'
+                    ? 'font/woff2'
+                    : 'application/octet-stream';
             return route.fulfill({ status: 200, contentType: mime, body: fs.readFileSync(filePath) });
           }
         }
@@ -213,10 +242,10 @@ export async function runHonestFidelity() {
               ext === '.png'
                 ? 'image/png'
                 : ext === '.webp'
-                ? 'image/webp'
-                : ext === '.svg'
-                ? 'image/svg+xml'
-                : 'application/octet-stream';
+                  ? 'image/webp'
+                  : ext === '.svg'
+                    ? 'image/svg+xml'
+                    : 'application/octet-stream';
             return route.fulfill({ status: 200, contentType: mime, body: fs.readFileSync(filePath) });
           }
         }
@@ -225,29 +254,8 @@ export async function runHonestFidelity() {
       return route.continue();
     });
 
-    let isLightMockup = false;
-    if (fs.existsSync(codeHtmlPath)) {
-      const html = fs.readFileSync(codeHtmlPath, 'utf-8');
-      const surfaceMatch = html.match(/"surface":\s*"([^"]+)"/);
-      const bgMatch = html.match(/"background":\s*"([^"]+)"/);
-      const hex = (surfaceMatch && surfaceMatch[1]) || (bgMatch && bgMatch[1]);
-      if (hex && hex.startsWith('#')) {
-        const lum = getLuminance(hex);
-        isLightMockup = lum > 0.4;
-      } else if (html.includes('<html class="light"') || html.includes('data-theme="light"')) {
-        isLightMockup = true;
-      } else if (html.includes('<html class="dark"') || html.includes('data-theme="dark"')) {
-        isLightMockup = false;
-      } else if (screen.includes('dark')) {
-        isLightMockup = false;
-      } else if (screen.includes('light')) {
-        isLightMockup = true;
-      }
-    } else if (screen.includes('dark')) {
-      isLightMockup = false;
-    } else if (screen.includes('light')) {
-      isLightMockup = true;
-    }
+    const targetTheme = getTargetTheme(screen, role, codeHtmlPath);
+    const isLightMockup = targetTheme === 'light';
 
     // If role needs a signed-in mock user, set it before navigation exactly as dev does
     if (route.role && route.role !== 'buyer') {
