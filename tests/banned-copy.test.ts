@@ -2,11 +2,37 @@ import { describe, it, expect } from 'vitest';
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Banned phrases per docs/BUILD-RULES.md
-const BANNED_PATTERNS: { phrase: string; regex: RegExp }[] = [
+// Banned phrases per docs/BUILD-RULES.md and STAGE C1 Decisions
+export const BANNED_PATTERNS: { phrase: string; regex: RegExp; filter?: (line: string) => boolean }[] = [
+  // 1. Escrow / Payment terminology
+  {
+    phrase: 'Escrow (user-visible copy)',
+    regex: /\bescrows?\b/i,
+    filter: (line: string) => {
+      const stripped = line
+        .replace(/emerald-escrow/g, '')
+        .replace(/--color-emerald-escrow/g, '')
+        .replace(/escrowStatus/g, '')
+        .replace(/EscrowStatus/g, '')
+        .replace(/EscrowDisputesSwiftcartAdmin/g, '')
+        .replace(/EscrowDisputeReturn/g, '')
+        .replace(/EscrowDispute/g, '')
+        .replace(/\/admin\/escrow-disputes-admin/g, '')
+        .replace(/\/escrow-dispute-return-request/g, '')
+        .replace(/\/escrow-dispute/g, '')
+        .replace(/inEscrowBalance/g, '')
+        .replace(/design\/.*\/escrow_.*/g, '');
+      return /\bescrows?\b/i.test(stripped);
+    },
+  },
+  { phrase: 'Vault (payment)', regex: /\bvaults?\b/i },
+  { phrase: 'Custody', regex: /\bcustody\b/i },
+  { phrase: 'Locked funds / Ringfenced', regex: /\b(locked\s+funds|ringfenced)\b/i },
+
+  // 2. Unverifiable claims / Regulatory
   { phrase: 'Bank of Uganda', regex: /\bBank\s+of\s+Uganda\b/i },
   { phrase: 'BoU', regex: /\bBoU\b/ },
-  { phrase: 'NPS', regex: /\bNPS\b/ },
+  { phrase: 'NPS', regex: /\b(NPS|National\s+Payment\s+Systems?(?:\s+Act)?)\b/i },
   { phrase: 'Stanbic', regex: /\bStanbic\b/i },
   { phrase: 'regulated', regex: /\bregulated\b/i },
   { phrase: 'statutory', regex: /\bstatutory\b/i },
@@ -29,12 +55,24 @@ const BANNED_PATTERNS: { phrase: string; regex: RegExp }[] = [
   { phrase: 'VAT', regex: /\bVAT\b/ },
   { phrase: 'URA', regex: /\bURA\b/ },
   { phrase: 'EFRIS', regex: /\bEFRIS\b/i },
+  { phrase: 'tamper seal', regex: /\btamper\s+seal\b/i },
+  { phrase: 'tamper bag', regex: /\btamper\s+bag\b/i },
+  { phrase: '100% guaranteed', regex: /\b100%\s+guaranteed\b/i },
+  { phrase: 'underwritten 100% / insured', regex: /\b(underwritten\s+100%|insured)\b/i },
+
+  // 3. Non-existent features & payment methods
   { phrase: 'SwiftCoins', regex: /\bSwiftCoins\b/i },
   { phrase: 'Afterpay', regex: /\bAfterpay\b/i },
   { phrase: 'Google Pay', regex: /\bGoogle\s+Pay\b/i },
+  { phrase: 'Apple Pay', regex: /\bApple\s+Pay\b/i },
+  { phrase: 'PayPal', regex: /\bPayPal\b/i },
   { phrase: 'instalments', regex: /\binstalments?\b/i },
-  { phrase: 'tamper seal', regex: /\btamper\s+seal\b/i },
-  { phrase: 'tamper bag', regex: /\btamper\s+bag\b/i },
+
+  // 4. Placeholders & Foreign references
+  { phrase: 'Lagos', regex: /\bLagos\b/i },
+  { phrase: 'New York / NY', regex: /\b(New\s+York|\bNY\b)/ },
+  { phrase: 'Alex (placeholder name)', regex: /\bAlex\b/ },
+  { phrase: 'USSD prompt code', regex: /\*(165|185|175)\*?[0-9#]*/ },
 ];
 
 function getAllFiles(dirPath: string, arrayOfFiles: string[] = []): string[] {
@@ -57,7 +95,7 @@ function getAllFiles(dirPath: string, arrayOfFiles: string[] = []): string[] {
 }
 
 describe('Quality Gate: Banned Copy Scan', () => {
-  it('should scan for banned phrases in src/ directory and record them to docs/COPY-TO-CLEAN.md', () => {
+  it('should scan for banned phrases in src/ directory and assert 0 violations', () => {
     const srcDir = path.resolve(__dirname, '../src');
     const files = getAllFiles(srcDir);
     const violations: { file: string; line: number; phrase: string; content: string }[] = [];
@@ -67,8 +105,9 @@ describe('Quality Gate: Banned Copy Scan', () => {
       const lines = content.split('\n');
 
       lines.forEach((line, index) => {
-        BANNED_PATTERNS.forEach(({ phrase, regex }) => {
-          if (regex.test(line)) {
+        BANNED_PATTERNS.forEach(({ phrase, regex, filter }) => {
+          const isMatch = filter ? filter(line) : regex.test(line);
+          if (isMatch) {
             violations.push({
               file: path.relative(process.cwd(), filePath).replace(/\\/g, '/'),
               line: index + 1,
@@ -80,22 +119,22 @@ describe('Quality Gate: Banned Copy Scan', () => {
       });
     });
 
-    const cleanListPath = path.resolve(__dirname, '../docs/COPY-TO-CLEAN.md');
-    let mdContent = '# Copy to Clean (To-Do List for Polishing Phase)\n\n';
-    mdContent += 'This file lists banned phrases found in `src/`. The app must not be deployed publicly until this list is cleared.\n\n';
-    mdContent += `Total occurrences found: ${violations.length}\n\n`;
-    mdContent += '| File | Line | Phrase | Sample Content |\n';
-    mdContent += '| --- | --- | --- | --- |\n';
+    if (violations.length > 0) {
+      const cleanListPath = path.resolve(__dirname, '../docs/COPY-TO-CLEAN.md');
+      let mdContent = '# Copy to Clean Violations Detected\n\n';
+      mdContent += `Total occurrences found: ${violations.length}\n\n`;
+      mdContent += '| File | Line | Phrase | Sample Content |\n';
+      mdContent += '| --- | --- | --- | --- |\n';
 
-    violations.forEach((v) => {
-      const escapedContent = v.content.replace(/\|/g, '\\|');
-      mdContent += `| \`${v.file}\` | ${v.line} | **${v.phrase}** | \`${escapedContent}\` |\n`;
-    });
+      violations.forEach((v) => {
+        const escapedContent = v.content.replace(/\|/g, '\\|');
+        mdContent += `| \`${v.file}\` | ${v.line} | **${v.phrase}** | \`${escapedContent}\` |\n`;
+      });
 
-    fs.writeFileSync(cleanListPath, mdContent, 'utf-8');
+      fs.writeFileSync(cleanListPath, mdContent, 'utf-8');
+    }
 
-    // Does not fail the build per STAGE M instructions
-    expect(fs.existsSync(cleanListPath)).toBe(true);
+    // Strict quality gate: fails if any violations are found
+    expect(violations, `Found ${violations.length} banned copy occurrences in src/`).toEqual([]);
   });
 });
-
