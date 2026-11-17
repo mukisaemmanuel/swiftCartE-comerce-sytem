@@ -144,7 +144,7 @@ export const IntakeSwiftcartHubAgent: React.FC<IntakeSwiftcartHubAgentProps> = (
                 Take Photo
               </button>
 </div>
-<textarea className="w-full p-2 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Record broken tamper seal, dented corner, or carton crush severity..." rows={2}></textarea>
+<textarea className="w-full p-2 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Record broken package seal, dented corner, or carton crush severity..." rows={2}></textarea>
 </div>
 </div>
 </div>

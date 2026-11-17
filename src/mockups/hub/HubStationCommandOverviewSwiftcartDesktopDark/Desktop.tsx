@@ -34,7 +34,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">LEDGER TX HASH: <span className="font-code-display text-emerald-escrow tracking-normal">0x89F4..31B2</span></span>
 <div className="flex items-center gap-1 text-emerald-escrow">
 <Icon name="verified" className="text-[16px]" />
-<span className="font-label-sm text-label-sm whitespace-nowrap">UGX Escrow Lock Confirmed</span>
+<span className="font-label-sm text-label-sm whitespace-nowrap">UGX Payment Lock Confirmed</span>
 </div>
 </div>
 </div>
@@ -295,7 +295,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-wrap items-center gap-space-xs">
 <span className="font-code-display text-body-md text-on-surface font-extrabold tracking-wider">SC-UG-88214</span>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
-<Icon name="verified_user" className="text-[12px]" /> UGX 145,000 Escrow
+<Icon name="verified_user" className="text-[12px]" /> UGX 145,000 Payment
                     </span>
 <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Lane A • Kampala Central</span>
 </div>
@@ -386,7 +386,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-0.5">
 <span>Seller: Jumia Express Depot</span>
 <span>•</span>
-<span className="whitespace-nowrap">Escrow Frozen UGX 320,000</span>
+<span className="whitespace-nowrap">payment frozen UGX 320,000</span>
 <span>•</span>
 <span className="text-danger-penalty font-label-sm text-label-sm">Inspection Bay Q4</span>
 </div>
@@ -408,7 +408,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col min-w-0">
 <div className="flex flex-wrap items-center gap-space-xs">
 <span className="font-code-display text-body-md text-on-surface font-extrabold tracking-wider">SC-UG-88190</span>
-<span className="px-2 py-0.5 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm whitespace-nowrap">UGX 45,000 Escrow</span>
+<span className="px-2 py-0.5 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm whitespace-nowrap">UGX 45,000 Payment</span>
 <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Lane B • Nakawa</span>
 </div>
 <div className="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-0.5">
@@ -457,18 +457,18 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-sm">
 <Icon name="account_balance_wallet" className="text-secondary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-on-surface">Hub Escrow Custody</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">Hub payment holding</span>
 </div>
 <Icon name="verified" className="text-emerald-escrow text-[18px]" />
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Value of parcels currently in William St Station racks awaiting handoff or settlement.</p>
 </div>
 <div className="my-space-md p-space-md rounded-xl bg-surface-container flex flex-col gap-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Station Vault Holdings</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Station reserve Holdings</span>
 <span className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-extrabold whitespace-nowrap">UGX 48,250,000</span>
 <div className="flex items-center justify-between font-body-sm text-body-sm text-emerald-escrow mt-1">
 <span className="flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> MTN MoMo &amp; Airtel SafeVault</span>
-<span>100% Guaranteed</span>
+<span>Quality Assured</span>
 </div>
 </div>
 <div className="flex items-center justify-between pt-space-xs font-body-sm text-body-sm text-on-surface-variant">

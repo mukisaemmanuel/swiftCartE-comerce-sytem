@@ -28,11 +28,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md flex-wrap">
 <div className="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-error-container text-on-error-container">
 <span className="w-2 h-2 rounded-full bg-error animate-ping"></span>
-<span className="font-label-sm uppercase tracking-wider text-error">VAULT QUARANTINE ACTIVE</span>
+<span className="font-label-sm uppercase tracking-wider text-error">reserve QUARANTINE ACTIVE</span>
 </div>
 <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span>Escrow Intercept Rail #04</span>
+<span>Payment Intercept Rail #04</span>
 <span className="text-outline-variant">•</span>
 <span className="font-label-sm text-tertiary font-bold">Smart Lock v2.4 Engaged</span>
 </div>
@@ -51,11 +51,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-outline-variant">•</span>
 <span className="font-label-sm text-primary font-bold">SECURED ENCLOSURE BAY Q4</span>
 <span className="text-outline-variant">•</span>
-<span className="font-label-sm text-on-surface-variant">CHAIN-OF-CUSTODY AUDIT</span>
+<span className="font-label-sm text-on-surface-variant">CHAIN-OF-holding AUDIT</span>
 </div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-extrabold">Damaged Goods &amp; Quarantine Bay Intake</h1>
 <p className="font-body-md text-body-md text-on-surface-variant">
-          Forensic intake telemetry, live photographic cataloging, and automated mobile money escrow lockouts for flagged transit consignments.
+          Forensic intake telemetry, live photographic cataloging, and automated mobile money payment lockouts for flagged transit consignments.
         </p>
 </div>
 <div className="flex items-center gap-space-sm flex-wrap">
@@ -100,7 +100,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-on-surface-variant uppercase tracking-wider">Frozen Escrow Value</span>
+<span className="font-label-sm text-on-surface-variant uppercase tracking-wider">Frozen Payment Value</span>
 <span className="font-price-display text-price-display text-primary font-black mt-1 whitespace-nowrap">UGX 4,890,000</span>
 </div>
 <div className="w-10 h-10 rounded-lg bg-error-container/50 flex items-center justify-center text-error">
@@ -203,7 +203,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <tr className="bg-surface-container-low text-on-surface-variant font-label-sm uppercase tracking-wider">
 <th className="py-space-md px-space-md font-bold">Waybill / Origin</th>
 <th className="py-space-md px-space-md font-bold">Merchant / Trader</th>
-<th className="py-space-md px-space-md font-bold">Escrow Locked</th>
+<th className="py-space-md px-space-md font-bold">payment protected</th>
 <th className="py-space-md px-space-md font-bold">Incident Modality</th>
 <th className="py-space-md px-space-md font-bold text-right">Rack Bay</th>
 </tr>
@@ -340,7 +340,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="lock" className="text-[14px]" />
                         UGX 850,000
                       </span>
-<span className="text-tertiary font-label-sm">Bank Escrow Lock</span>
+<span className="text-tertiary font-label-sm">Bank Payment Lock</span>
 </div>
 </td>
 <td className="py-space-md px-space-md">
@@ -383,7 +383,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="account_balance_wallet" className="text-[28px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-md text-on-surface font-bold whitespace-nowrap">UGX Mobile Money Escrow Freeze Shield</span>
+<span className="font-label-md text-on-surface font-bold whitespace-nowrap">UGX Mobile money payment Freeze Shield</span>
 <p className="font-body-sm text-on-surface-variant">
                 Automatic merchant payout disbursement cut triggered upon intake scan to eliminate fraudulent cash out across MTN MoMo &amp; Airtel rails.
               </p>
@@ -507,19 +507,19 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-on-surface-variant">Logged by #kla-118</span>
 </div>
 <div className="p-space-sm rounded-lg bg-surface-container-low text-body-sm text-on-surface leading-relaxed">
-              Consignment received via Jinja Line-Haul #MNF-1081 with visible heavy pallet crush. Factory tape severed at base seam. Headphone outer ear-cup casing cracked. Escrow release withheld pending trader review.
+              Consignment received via Jinja Line-Haul #MNF-1081 with visible heavy pallet crush. Factory tape severed at base seam. Headphone outer ear-cup casing cracked. Payment Release withheld pending trader review.
             </div>
 </div>
 
 <div className="flex flex-col gap-space-sm pt-space-xs">
 <button className="w-full h-12 rounded-xl bg-primary-container text-on-primary font-label-lg flex items-center justify-center gap-space-sm shadow-md hover:opacity-95 active:scale-[0.98] transition-all">
 <Icon name="lock_clock" className="text-[20px]" />
-<span>Submit Quarantine Intake &amp; Lock Escrow</span>
+<span>Submit Quarantine Intake &amp; Lock Payment</span>
 </button>
 <div className="grid grid-cols-2 gap-space-sm">
 <button className="h-10 rounded-lg bg-surface-container-low text-on-surface font-label-md flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
 <Icon name="picture_as_pdf" className="text-[18px]" />
-<span>BOU Incident PDF</span>
+<span>Pesapal Incident PDF</span>
 </button>
 <button className="h-10 rounded-lg bg-surface-container-low text-on-surface font-label-md flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
 <Icon name="replay" className="text-[18px]" />

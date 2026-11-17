@@ -185,11 +185,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start gap-space-md">
 <div className="w-16 h-16 rounded-xl bg-surface-container overflow-hidden flex-shrink-0 relative">
 <img className="w-full h-full object-cover" data-alt="Massive slim bezel 65 inch 4K Ultra HD smart television standing on a minimal wooden credenza against a warm sunlit interior wall" src="/images/b9dc29482675cd26.webp" />
-<span className="absolute top-1 left-1 px-1 py-0.5 rounded bg-secondary-container/90 font-label-sm text-[9px] text-on-secondary-container font-bold">ESCROW</span>
+<span className="absolute top-1 left-1 px-1 py-0.5 rounded bg-secondary-container/90 font-label-sm text-[9px] text-on-secondary-container font-bold">PAYMENT</span>
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between gap-space-xs">
-<span className="font-label-sm text-secondary uppercase tracking-wider font-bold">High Value Escrow</span>
+<span className="font-label-sm text-secondary uppercase tracking-wider font-bold">High Value Payment</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">14m ago</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface truncate whitespace-nowrap">Samsung 65-inch Crystal UHD 4K Smart TV</h3>
@@ -353,7 +353,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="relative rounded-xl overflow-hidden bg-surface-container">
-<img className="w-full h-36 object-cover" data-alt="Official Soundcore Space One retail package with rainbow iridescent security tamper seal and authentic serial label clearly in focus" src="/images/6cdfbf64ad21a597.webp" />
+<img className="w-full h-36 object-cover" data-alt="Official Soundcore Space One retail package with rainbow iridescent security package seal and authentic serial label clearly in focus" src="/images/6cdfbf64ad21a597.webp" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-transparent to-transparent"></div>
 <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-surface">
 <span className="font-label-sm text-[10px] bg-tertiary px-1 rounded text-on-tertiary">Authorized Sample</span>
@@ -433,7 +433,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Dispute History</span>
 <span className="font-label-lg text-label-lg text-on-surface font-bold">1 Dispute Filed</span>
-<span className="font-label-sm text-on-surface-variant">Escrow resolved in 24h</span>
+<span className="font-label-sm text-on-surface-variant">Payment resolved in 24h</span>
 </div>
 <div className="flex flex-col">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Hub Inbound Gate</span>
@@ -493,7 +493,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="h-12 px-space-md rounded-xl bg-secondary text-on-secondary hover:bg-secondary/90 font-label-lg transition-all flex items-center justify-center gap-space-xs shadow-sm active:scale-95">
 <Icon name="lock_clock" className="text-[18px]" />
-<span>Approve with Mandatory Escrow Hold</span>
+<span>Approve with Mandatory Payment Hold</span>
 </button>
 
 <button className="h-12 px-space-md rounded-xl bg-surface-container text-on-surface-variant/40 font-label-lg cursor-not-allowed flex items-center justify-center gap-space-xs" disabled={true}>
@@ -505,7 +505,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-on-surface-variant text-[11px]">
 <span className="flex items-center gap-1">
 <Icon name="security" className="text-[13px] text-tertiary" />
-            Escrow protection rule enforced on telecom payout rails (MTN MoMo &amp; Airtel Money)
+            Payment protection rule enforced on telecom payout rails (MTN MoMo &amp; Airtel Money)
           </span>
 <span className="font-mono">REF: MOD-2025-0518</span>
 </div>

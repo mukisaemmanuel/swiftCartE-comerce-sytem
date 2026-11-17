@@ -38,7 +38,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           Tier 1 Merchant
         </div>
 <span className="text-on-surface-variant hidden sm:inline">•</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Kampala CBD Escrow Clearinghouse Node</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Kampala CBD Payment Clearinghouse Node</span>
 </div>
 <div className="flex items-center gap-space-md text-on-surface-variant">
 <span className="font-body-sm text-body-sm flex items-center gap-1">
@@ -116,7 +116,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start justify-between">
 <div className="space-y-1">
 <div className="flex items-center gap-1.5">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Pending Clearance</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Pending Clearance</span>
 <Icon name="shield" className="text-tertiary text-[14px]" />
 </div>
 <div className="flex items-baseline gap-1">
@@ -194,7 +194,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Live Orders Dispatch Stream</h3>
 <span className="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm animate-pulse">4 Realtime</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Active Kampala metro pipeline protected by SwiftCart cryptographic escrow release</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Active Kampala metro pipeline protected by SwiftCart verified Payment Release</p>
 </div>
 <div className="flex items-center gap-space-xs">
 <button className="px-space-sm py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-container-high transition-colors">All (28)</button>
@@ -218,7 +218,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="moped" className="text-[13px] text-primary" /> SafeBoda #412
                     </span>
 <span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1">
-<Icon name="enhanced_encryption" className="text-[12px]" /> Escrow Secured
+<Icon name="enhanced_encryption" className="text-[12px]" /> payment secured
                     </span>
 </div>
 <p className="font-body-md text-body-md text-on-surface truncate">SoundCore Space One ANC Headphones (Matte Black)</p>
@@ -289,12 +289,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-bold">#SC-98234</span>
 <span className="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">SafeBoda #108</span>
 <span className="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-1">
-                      Airtel Money Escrow
+                      Airtel money payment
                     </span>
 </div>
 <p className="font-body-md text-body-md text-on-surface truncate">SoundCore Life P3 Noise Cancelling Earbuds (Navy)</p>
 <p className="font-body-sm text-body-sm text-primary font-medium flex items-center gap-1">
-<Icon name="pin" className="text-[14px]" /> Awaiting Customer 4-Digit Escrow OTP (Rider at Customer Gate)
+<Icon name="pin" className="text-[14px]" /> Awaiting Customer 4-Digit Payment OTP (Rider at Customer Gate)
                   </p>
 </div>
 </div>
@@ -328,7 +328,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <p className="font-body-md text-body-md text-on-surface truncate">Anker SoundCore 2 Outdoor Bluetooth Speaker</p>
 <p className="font-body-sm text-body-sm text-tertiary flex items-center gap-1">
-<Icon name="done_all" className="text-[14px]" /> OTP Confirmed • Escrow Released to Kampala Merchant Balance
+<Icon name="done_all" className="text-[14px]" /> OTP Confirmed • Paid to seller to Kampala Merchant Balance
                   </p>
 </div>
 </div>
@@ -520,10 +520,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="gavel" className="text-[18px]" />
 <span className="font-label-md text-label-md font-bold">Dispute #SC-97810</span>
 </div>
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error/10 text-error font-bold">Escrow Held</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error/10 text-error font-bold">Payment Held</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface">
-                Tamper Bag Inspection Pending. Customer reported unsealed outer box in Kololo.
+                package bag Inspection Pending. Customer reported unsealed outer box in Kololo.
               </p>
 <div className="pt-space-xs flex items-center justify-between">
 <span className="font-currency-code text-currency-code text-error font-bold whitespace-nowrap">UGX 310,000</span>
@@ -700,7 +700,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-bold">0.3%</span>
 </div>
 <div className="flex items-center justify-between text-body-sm font-body-sm">
-<span className="text-on-surface-variant">Escrow Release Speed</span>
+<span className="text-on-surface-variant">Payment Release Speed</span>
 <span className="font-label-md text-label-md text-tertiary font-bold">&lt; 4 mins OTP</span>
 </div>
 </div>

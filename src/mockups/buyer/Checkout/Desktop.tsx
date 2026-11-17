@@ -69,7 +69,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             </div>
 <div className="hidden sm:flex flex-col">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Step 4</span>
-<span className="font-label-md text-label-md font-bold text-on-surface-variant">Review &amp; Escrow</span>
+<span className="font-label-md text-label-md font-bold text-on-surface-variant">Review &amp; Payment</span>
 </div>
 </div>
 </div>
@@ -175,7 +175,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                   Dedicated helmeted courier dispatched from merchant. Delivered in <span className="font-bold text-on-surface">45-60 minutes</span> to Kololo. Live GPS tracking shared via SMS &amp; App.
                 </p>
 <div className="mt-space-xs flex items-center gap-space-md text-tertiary font-label-sm text-label-sm font-semibold">
-<span className="flex items-center gap-1"><Icon name="format_image_left" className="text-[14px]" /> Insured Cargo</span>
+<span className="flex items-center gap-1"><Icon name="format_image_left" className="text-[14px]" /> protected Cargo</span>
 <span className="flex items-center gap-1"><Icon name="pin_drop" className="text-[14px]" /> Live GPS Link</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Select Payment Method (MoMo &amp; Cards)</h2>
 </div>
 <span className="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-container px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
-<Icon name="lock" className="text-[14px]" /> Funds Held in Escrow
+<Icon name="lock" className="text-[14px]" /> Funds Held until delivery
             </span>
 </div>
 
@@ -236,7 +236,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </span>
 </div>
 <span className="font-label-lg text-label-lg text-on-surface font-bold">MTN MoMo</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-tight">Instant *165# USSD prompt to phone</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-tight">Instant Mobile prompt USSD prompt to phone</span>
 <div className="mt-space-sm inline-block">
 <span className="bg-[#ffcc00]/25 text-[#735100] text-[10px] font-extrabold px-1.5 py-0.5 rounded">Most Popular</span>
 </div>
@@ -269,7 +269,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-lg text-label-lg text-on-surface font-bold">Debit / Credit Card</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-tight">Visa &amp; Mastercard accepted</span>
 <div className="mt-space-sm inline-block">
-<span className="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-1.5 py-0.5 rounded">Bank Escrow</span>
+<span className="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-1.5 py-0.5 rounded">Bank Payment</span>
 </div>
 </label>
 </div>
@@ -291,7 +291,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
-              A payment authorization prompt for <span className="font-bold text-on-surface">UGX 305,000</span> will pop up on this phone automatically. Enter your 5-digit MoMo PIN to authorize escrow lock.
+              A payment authorization prompt for <span className="font-bold text-on-surface">UGX 305,000</span> will pop up on this phone automatically. Enter your 5-digit MoMo PIN to authorize payment lock.
             </p>
 </div>
 </section>
@@ -302,7 +302,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl p-space-md rounded-t-xl">
 <div className="flex items-center gap-space-xs">
 <Icon name="shopping_cart_checkout" className="text-primary text-[22px]" />
-<h3 className="font-label-lg text-label-lg text-on-surface font-bold">Order Review &amp; Vault</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface font-bold">Order Review &amp; reserve</h3>
 </div>
 <span className="font-label-sm text-label-sm font-bold text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full flex items-center gap-1">
 <Icon name="security" className="text-[12px]" /> Verified
@@ -361,7 +361,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-xs mt-space-xs flex items-baseline justify-between">
 <div>
 <span className="font-label-lg text-label-lg font-bold text-on-surface block">Total Due</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Includes VAT &amp; Escrow cover</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Includes Tax &amp; Payment cover</span>
 </div>
 <div className="text-right">
 <span className="font-currency-code text-currency-code text-primary mr-1">UGX</span>
@@ -378,10 +378,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-space-lg p-space-md rounded-xl bg-tertiary-container/10 flex flex-col gap-space-xs">
 <div className="flex items-center gap-space-xs text-tertiary font-label-md text-label-md font-bold">
 <Icon name="verified_user" className="text-[18px]" />
-<span>Zero-Fraud Escrow Guarantee</span>
+<span>Zero-Fraud Payment Protection</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Your money does <span className="font-bold text-on-surface">NOT</span> go directly to the merchant. SwiftCart securely locks funds in our bank-regulated escrow vault. The vendor receives payment only after you physically inspect the items at your doorstep and share your 6-digit release code with the courier.
+              Your money does <span className="font-bold text-on-surface">NOT</span> go directly to the merchant. SwiftCart securely locks funds in our bank-standard Payment Reserve. The vendor receives payment only after you physically inspect the items at your doorstep and share your 6-digit release code with the courier.
             </p>
 <div className="flex items-center justify-between pt-space-xs text-tertiary font-label-sm text-label-sm font-bold">
 <span className="flex items-center gap-1">
@@ -396,7 +396,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-space-md flex items-center justify-center gap-space-md text-on-surface-variant/70 text-[11px] font-semibold">
 <span className="flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> 256-Bit SSL</span>
 <span>•</span>
-<span>Bank of Uganda Regulated</span>
+<span>Pesapal Verified Rails</span>
 </div>
 </div>
 </div>

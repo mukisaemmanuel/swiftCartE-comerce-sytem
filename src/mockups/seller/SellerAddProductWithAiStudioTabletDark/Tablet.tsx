@@ -133,7 +133,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="absolute bottom-2 right-2 bg-surface-container-high/90 backdrop-blur-md px-space-sm py-1 rounded-lg flex items-center gap-1.5 shadow-md">
 <Icon name="verified_user" className="text-emerald-escrow text-[18px]" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface font-bold">SwiftCart Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold">SwiftCart Protection</span>
 <span className="text-[9px] text-tertiary">Verified Genuine Serial</span>
 </div>
 </div>
@@ -236,7 +236,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified" className="text-emerald-escrow text-[20px]" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md">SwiftCart Trust Stamp</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Guarantee Badge</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Protection Badge</span>
 </div>
 </div>
 <Icon name="toggle_on" className="text-emerald-escrow text-[20px]" />
@@ -335,7 +335,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <Icon name="payments" className="text-emerald-escrow text-[22px]" />
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Pricing &amp; Escrow Settlement</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">Pricing &amp; payment settlement</h3>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Currency: <strong className="text-on-surface whitespace-nowrap">UGX Only</strong></span>
 </div>
@@ -352,7 +352,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </span>
 </div>
 <div className="bg-surface-container p-space-sm rounded-lg flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Net Settlement</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Net Settlement</span>
 <div className="flex items-baseline gap-1 mt-1">
 <span className="font-price-display text-price-display text-emerald-escrow">228,620</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">UGX</span>
@@ -365,7 +365,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center gap-space-xs bg-surface-container/60 p-space-xs rounded-lg text-on-surface-variant font-body-sm text-body-sm">
 <Icon name="lock_clock" className="text-emerald-escrow text-[18px] shrink-0" />
-<span>Customer funds held safely in Escrow Reserve until delivery OTP confirms at handoff.</span>
+<span>Customer funds held safely in Payment Reserve until delivery OTP confirms at handoff.</span>
 </div>
 </div>
 </section>
@@ -393,7 +393,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </main>
-<footer className="w-full bg-surface-container-low py-space-sm shadow-[0_-1px_8px_rgba(0,0,0,0.5)]"><div className="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span>William St Central Hub: Live (99.8%)</span></div><span className="hidden md:inline text-outline-variant">|</span><div className="flex items-center gap-1"><Icon name="electric_moped" className="text-action-gradient-start text-[14px]" /><span>Kampala Boda Dispatch Mesh Active</span></div></div><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1 text-tertiary"><Icon name="lock" className="text-[14px]" /><span>Escrow Secured under Bank of Uganda NPS</span></div><span className="hidden md:inline text-outline-variant">|</span><span>© 2025 SwiftCart Uganda Ltd.</span></div></div></footer>
+<footer className="w-full bg-surface-container-low py-space-sm shadow-[0_-1px_8px_rgba(0,0,0,0.5)]"><div className="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span>William St Central Hub: Live (99.8%)</span></div><span className="hidden md:inline text-outline-variant">|</span><div className="flex items-center gap-1"><Icon name="electric_moped" className="text-action-gradient-start text-[14px]" /><span>Kampala Boda Dispatch Mesh Active</span></div></div><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1 text-tertiary"><Icon name="lock" className="text-[14px]" /><span>payment secured under Pesapal Pesapal Rails</span></div><span className="hidden md:inline text-outline-variant">|</span><span>© 2025 SwiftCart Uganda Ltd.</span></div></div></footer>
     </div>
   );
 };

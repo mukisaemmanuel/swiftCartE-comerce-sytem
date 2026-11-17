@@ -36,10 +36,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="space-y-2 mt-4">
 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary text-label-sm font-label-sm uppercase tracking-wider">
 <Icon name="shield" className="text-sm" />
-            Kampala Protected Escrow
+            Kampala Protected Payment
           </div>
 <h2 className="font-headline-lg text-headline-lg text-on-primary tracking-tight leading-tight">
-            Buy Safely with SwiftCart Escrow.
+            Buy Safely with SwiftCart Protection.
           </h2>
 <p className="font-body-md text-body-md text-on-primary/90">
             Uganda's fastest consumer marketplace with 100% money-back guarantee.
@@ -52,8 +52,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="lock" className="text-base text-on-primary" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-primary">Secure MoMo Vault</span>
-<span className="font-body-sm text-body-sm text-on-primary/85 leading-snug">Funds held safely in escrow until you inspect delivery.</span>
+<span className="font-label-lg text-label-lg text-on-primary">Secure MoMo reserve</span>
+<span className="font-body-sm text-body-sm text-on-primary/85 leading-snug">Funds held safely held until delivery until you inspect delivery.</span>
 </div>
 </div>
 <div className="flex items-start gap-3 bg-surface-container-lowest/10 backdrop-blur-sm p-3.5 rounded-lg shadow-sm">
@@ -227,7 +227,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="p-3 bg-surface-container rounded-lg text-center">
 <p className="font-body-sm text-body-sm text-secondary leading-relaxed text-[11px]">
-            By continuing, you agree to SwiftCart's <a className="underline text-on-surface" href="javascript:void(0)" onClick={() => alertToast('Action triggered')}>Terms of Service</a> &amp; <a className="underline text-on-surface" href="javascript:void(0)" onClick={() => alertToast('Action triggered')}>Escrow Protection Policy</a>. All transactions are securely cleared via Bank of Uganda compliant payment rails.
+            By continuing, you agree to SwiftCart's <a className="underline text-on-surface" href="javascript:void(0)" onClick={() => alertToast('Action triggered')}>Terms of Service</a> &amp; <a className="underline text-on-surface" href="javascript:void(0)" onClick={() => alertToast('Action triggered')}>Payment Protection Policy</a>. All transactions are securely cleared via Pesapal compliant payment rails.
           </p>
 </div>
 </div>

@@ -1,6 +1,7 @@
 import type {
   OrderStatus,
   PaymentStatus,
+  PaymentHoldStatus,
   EscrowStatus,
   SellerStatus,
   ProductStatus,
@@ -238,6 +239,7 @@ export interface Order {
   orderNumber: string;
   status: OrderStatus;
   paymentStatus: PaymentStatus;
+  paymentHoldStatus: PaymentHoldStatus;
   escrowStatus: EscrowStatus;
   createdAt: string;
   items: OrderItem[];

@@ -90,7 +90,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
               <span>Prompt expires in: {countdown}s</span>
             </div>
 
-            {/* Order & Escrow Details */}
+            {/* Order & Payment Details */}
             <div className="bg-slate-50 rounded-2xl p-4 text-left text-xs space-y-2 border border-slate-100">
               <div className="flex justify-between text-slate-600">
                 <span>Order Reference</span>
@@ -109,7 +109,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
               <div className="flex justify-between text-slate-600">
                 <span>Security</span>
                 <span className="font-bold text-emerald-700">
-                  SwiftCart Escrow Protected
+                  SwiftCart Payment Protected
                 </span>
               </div>
             </div>
@@ -146,7 +146,7 @@ export const PaymentWaitingPage: React.FC<PaymentWaitingPageProps> = ({ onNaviga
                 Payment Approved!
               </h2>
               <p className="text-sm text-slate-600 mt-1">
-                Your payment of UGX {amount.toLocaleString()} is safely held in Escrow.
+                Your payment of UGX {amount.toLocaleString()} is safely held in Payment.
               </p>
             </div>
             <div className="text-xs text-slate-400">

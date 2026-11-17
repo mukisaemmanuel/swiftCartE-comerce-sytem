@@ -53,7 +53,7 @@ export const OrderDeliveredPage: React.FC<OrderDeliveredPageProps> = ({ onNaviga
             Package Received!
           </h1>
           <p className="text-sm text-slate-500 max-w-md mx-auto">
-            Order <strong className="text-[#0E1B4D]">{order?.orderNumber}</strong> was marked delivered. Escrow payment was safely released to the merchant.
+            Order <strong className="text-[#0E1B4D]">{order?.orderNumber}</strong> was marked delivered. Payment payment was safely released to the merchant.
           </p>
         </div>
 

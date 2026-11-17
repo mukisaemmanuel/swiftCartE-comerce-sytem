@@ -258,7 +258,7 @@ export const EditCategoryCommissionModalWithDatePicker: React.FC<EditCategoryCom
 
 <div className="flex items-center justify-center gap-1.5 py-1 text-center font-body-sm text-body-sm text-secondary">
 <Icon name="fingerprint" className="text-[15px] text-secondary" />
-<span>Cryptographic Diff will be committed to Audit Log #891-440</span>
+<span>Commission update will be logged to Audit Log #891-440</span>
 </div>
 
 <div className="flex flex-col gap-2.5 pt-1">

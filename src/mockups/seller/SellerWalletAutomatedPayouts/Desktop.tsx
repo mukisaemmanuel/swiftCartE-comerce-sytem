@@ -31,7 +31,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           onClick={() => setDrawerOpen(false)}
         />
       )}
-      <aside className="fixed z-50 left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="flex flex-col"><div className="h-16 px-space-xl flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/logo-full.png" /><span className="font-headline-sm text-headline-sm text-primary tracking-tight">SwiftCart</span><span className="ml-auto bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">Merchant</span></div><div className="px-space-md py-space-sm mx-space-md mb-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-[0_1px_4px_rgba(14,27,77,0.03)]"><div className="flex items-center gap-space-sm min-w-0"><div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0"><Icon name="verified" className="text-primary text-[18px]" /></div><div className="min-w-0"><p className="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span> Kampala Hub</p></div></div><Icon name="unfold_more" className="text-on-surface-variant text-[16px]" /></div><nav className="px-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}><span className="flex items-center gap-space-md"><Icon name="grid_view" className="text-[20px]" />Overview</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}><span className="flex items-center gap-space-md"><Icon name="receipt_long" className="text-[20px]" />Orders</span><span className="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Pending</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/products-seller'); }}><span className="flex items-center gap-space-md"><Icon name="inventory_2" className="text-[20px]" />Products &amp; Inventory</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">2 Low</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><span className="flex items-center gap-space-md"><Icon name="local_shipping" className="text-[20px]" />Riders &amp; Logistics</span><span className="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">6 Active</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}><span className="flex items-center gap-space-md"><Icon name="assignment_return" className="text-[20px]" />Returns &amp; Disputes</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}><span className="flex items-center gap-space-md"><Icon name="account_balance_wallet" className="text-[20px]" />Wallet &amp; Payouts</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/analytics-seller'); }}><span className="flex items-center gap-space-md"><Icon name="insights" className="text-[20px]" />Analytics &amp; Heatmaps</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/discounts-ads-seller'); }}><span className="flex items-center gap-space-md"><Icon name="campaign" className="text-[20px]" />Discounts &amp; Ads</span></a></nav></div><div className="p-space-md border-t border-surface-container-high space-y-1"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><span className="flex items-center gap-space-md"><Icon name="verified_user" className="text-[20px]" />Store Profile &amp; KYC</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><span className="flex items-center gap-space-md"><Icon name="settings" className="text-[20px]" />Settings</span></a><div className="mt-space-md p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div className="flex items-center gap-2"><Icon name="shield" className="text-tertiary text-[18px]" /><span className="font-label-sm text-label-sm text-on-surface-variant">Swift Escrow Protected</span></div><Icon name="lock" className="text-tertiary text-[16px]" /></div></div></aside>
+      <aside className="fixed z-50 left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="flex flex-col"><div className="h-16 px-space-xl flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/logo-full.png" /><span className="font-headline-sm text-headline-sm text-primary tracking-tight">SwiftCart</span><span className="ml-auto bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">Merchant</span></div><div className="px-space-md py-space-sm mx-space-md mb-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-[0_1px_4px_rgba(14,27,77,0.03)]"><div className="flex items-center gap-space-sm min-w-0"><div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0"><Icon name="verified" className="text-primary text-[18px]" /></div><div className="min-w-0"><p className="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span> Kampala Hub</p></div></div><Icon name="unfold_more" className="text-on-surface-variant text-[16px]" /></div><nav className="px-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}><span className="flex items-center gap-space-md"><Icon name="grid_view" className="text-[20px]" />Overview</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}><span className="flex items-center gap-space-md"><Icon name="receipt_long" className="text-[20px]" />Orders</span><span className="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Pending</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/products-seller'); }}><span className="flex items-center gap-space-md"><Icon name="inventory_2" className="text-[20px]" />Products &amp; Inventory</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">2 Low</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><span className="flex items-center gap-space-md"><Icon name="local_shipping" className="text-[20px]" />Riders &amp; Logistics</span><span className="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">6 Active</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}><span className="flex items-center gap-space-md"><Icon name="assignment_return" className="text-[20px]" />Returns &amp; Disputes</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}><span className="flex items-center gap-space-md"><Icon name="account_balance_wallet" className="text-[20px]" />Wallet &amp; Payouts</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/analytics-seller'); }}><span className="flex items-center gap-space-md"><Icon name="insights" className="text-[20px]" />Analytics &amp; Heatmaps</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/discounts-ads-seller'); }}><span className="flex items-center gap-space-md"><Icon name="campaign" className="text-[20px]" />Discounts &amp; Ads</span></a></nav></div><div className="p-space-md border-t border-surface-container-high space-y-1"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><span className="flex items-center gap-space-md"><Icon name="verified_user" className="text-[20px]" />Store Profile &amp; KYC</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><span className="flex items-center gap-space-md"><Icon name="settings" className="text-[20px]" />Settings</span></a><div className="mt-space-md p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div className="flex items-center gap-2"><Icon name="shield" className="text-tertiary text-[18px]" /><span className="font-label-sm text-label-sm text-on-surface-variant">Payment Protected</span></div><Icon name="lock" className="text-tertiary text-[16px]" /></div></div></aside>
 <div className="pl-72 flex flex-col min-h-screen"><header className="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div className="flex items-center gap-space-lg flex-1 max-w-xl"><button type="button" className="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu" onClick={() => setDrawerOpen(true)}><Icon name="menu" className="text-[22px]" /></button><div className="relative w-full"><Icon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]" /><input className="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_2px_rgba(14,27,77,0.02)]" placeholder="Search orders, SKU, customer phone (+256)..." type="search" /></div></div><div className="flex items-center gap-space-md"><div className="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.04)]"><span className="w-2 h-2 rounded-full bg-tertiary"></span><span className="font-label-sm text-label-sm text-on-surface">MTN &amp; Airtel Rails Active</span></div><button aria-label="Toggle Theme" className="w-9 h-9 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" type="button" onClick={() => toggleTheme()}><Icon name="light_mode" className="text-[18px]" /></button><button aria-label="Notifications" className="relative w-9 h-9 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-notifications'); }}><Icon name="notifications" className="text-[18px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div className="flex items-center gap-space-sm pl-space-sm"><div className="hidden sm:flex flex-col text-right"><span className="font-label-md text-label-md text-on-surface leading-tight">Kigozi Ronald</span><span className="font-label-sm text-label-sm text-on-surface-variant">Store General Manager</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header><main className="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div className="flex flex-col w-full">
 
 <div className="p-space-xl space-y-space-xl max-w-[1400px] mx-auto w-full">
@@ -52,7 +52,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Merchant Wallet &amp; Automated Payouts</h1>
 <span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-sm">
 <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-              Direct Escrow Settlement Active
+              Direct payment settlement Active
             </span>
 </div>
 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
@@ -63,7 +63,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-outline-variant">•</span>
 <span className="flex items-center gap-1">
 <Icon name="account_balance" className="text-secondary text-[16px]" />
-              Bank of Uganda Regulatory Sandbox ID: <span className="font-mono font-medium text-on-surface">BOU-NPS-2024-918</span>
+              Pesapal Regulatory Sandbox ID: <span className="font-mono font-medium text-on-surface">Pesapal-Pesapal Rails-2024-918</span>
 </span>
 </div>
 </div>
@@ -84,7 +84,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="flex items-center gap-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface px-space-md py-2.5 rounded-xl font-label-md text-label-md transition-all shadow-[0_1px_4px_rgba(14,27,77,0.04)]" onClick={() => alertToast('Action triggered')}>
 <Icon name="receipt" className="text-[18px] text-secondary" />
-<span>EFRIS Tax Report</span>
+<span>E-INVOICE Tax Report</span>
 </button>
 
 <button className="flex items-center gap-2 bg-gradient-to-r from-[#FF8A1F] to-primary-container text-on-primary-container hover:brightness-105 active:scale-[0.98] px-space-lg py-2.5 rounded-xl font-label-lg text-label-lg shadow-[0_4px_14px_rgba(218,55,0,0.25)] transition-all" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>
@@ -125,7 +125,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] relative overflow-hidden flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="space-y-1">
-<span className="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Escrow Custody Vault</span>
+<span className="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">payment holding reserve</span>
 <div className="flex items-baseline gap-1 mt-1">
 <span className="font-currency-code text-currency-code text-on-surface-variant">UGX</span>
 <span className="font-headline-lg text-headline-lg text-on-surface tracking-tight">12,450,000</span>
@@ -142,7 +142,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           </p>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
 <span className="text-tertiary font-semibold">Central Bank Protected</span>
-<span className="text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">100% Insured</span>
+<span className="text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">100% protected</span>
 </div>
 </div>
 </div>
@@ -190,7 +190,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             Effective Rate: 2.85% (SafeBoda Subsidy Applied)
           </p>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
-<span className="text-secondary font-semibold">URA EFRIS E-Invoicing</span>
+<span className="text-secondary font-semibold">Tax E-INVOICE E-Invoicing</span>
 <span className="text-tertiary bg-tertiary-fixed/30 px-1.5 py-0.5 rounded font-bold">Auto-Filed</span>
 </div>
 </div>
@@ -308,7 +308,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="arrow_upward" className="text-primary text-[18px] shrink-0 mt-0.5" />
 <div className="min-w-0">
 <p className="font-label-md text-label-md text-on-surface leading-tight">Min Auto-Disburse Floor</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant">UGX 500,000 (Balances below hold in escrow)</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">UGX 500,000 (Balances below hold held until delivery)</p>
 </div>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
@@ -336,7 +336,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-lg space-y-space-md">
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
 <div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Escrow Clearing &amp; Settlement Ledger</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Payment Clearing &amp; Settlement Ledger</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Live cryptographically validated transaction journal with telecom carrier callbacks</p>
 </div>
 <div className="flex items-center gap-space-sm">
@@ -366,13 +366,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             MoMo Payouts (42)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors" onClick={() => alertToast('Action triggered')}>
-            Escrow Releases (112)
+            Payment Releases (112)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}>
             Dispute Holds (2)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors" onClick={() => alertToast('Action triggered')}>
-            EFRIS Tax Deductions (28)
+            E-INVOICE Tax Deductions (28)
           </button>
 </div>
 </div>
@@ -439,7 +439,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-3.5 px-space-md whitespace-nowrap">
 <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
-<Icon name="lock_open" className="text-[12px]" /> Escrow Handover
+<Icon name="lock_open" className="text-[12px]" /> Payment Handover
                 </span>
 </td>
 <td className="py-3.5 px-space-md text-on-surface font-medium whitespace-nowrap">
@@ -474,7 +474,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-3.5 px-space-md whitespace-nowrap">
 <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
-<Icon name="lock_open" className="text-[12px]" /> Escrow Handover
+<Icon name="lock_open" className="text-[12px]" /> Payment Handover
                 </span>
 </td>
 <td className="py-3.5 px-space-md text-on-surface font-medium whitespace-nowrap">
@@ -598,7 +598,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">99.98% Up</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Automatic retry queue with cryptographic idempotency key prevents duplicated disbursements.
+            Automatic retry queue with verified idempotency key prevents duplicated disbursements.
           </p>
 </div>
 </div>
@@ -624,11 +624,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="space-y-1">
 <div className="flex items-center gap-2">
-<h3 className="font-label-md text-label-md text-on-surface">Bank of Uganda Escrow Policy</h3>
+<h3 className="font-label-md text-label-md text-on-surface">Pesapal payment protection policy</h3>
 <span className="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">Sec 14 Compliant</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Funds from buyers are locked in licensed custodian partner trust accounts until delivery verification code is confirmed.
+            Funds from buyers are locked in registered custodian partner trust accounts until delivery verification code is confirmed.
           </p>
 </div>
 </div>

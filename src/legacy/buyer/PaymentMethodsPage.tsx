@@ -174,7 +174,7 @@ export const PaymentMethodsPage: React.FC<PaymentMethodsPageProps> = ({ onNaviga
               Add Mobile Money Account
             </h2>
             <p className="text-xs text-slate-500 mb-6">
-              Connect your Ugandan MTN or Airtel line for seamless escrow checkouts
+              Connect your Ugandan MTN or Airtel line for seamless payment checkouts
             </p>
 
             {errorMsg && (

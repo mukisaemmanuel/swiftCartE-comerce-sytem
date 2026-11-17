@@ -65,7 +65,7 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
               : 'text-slate-600 hover:bg-slate-100'
           }`}
         >
-          Orders & Escrow
+          Orders & Payment
         </button>
         <button
           onClick={() => setFilter('promo')}

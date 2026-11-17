@@ -50,7 +50,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
 <span className="font-label-sm text-label-sm text-secondary">Uganda Legal Redress</span>
 </div>
-<h1 className="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Escrow Dispute &amp; Return Request</h1>
+<h1 className="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Payment Dispute &amp; Return Request</h1>
 </div>
 <div className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-tertiary-container/15 text-tertiary self-start sm:self-center shadow-xs">
 <div className="relative flex items-center justify-center">
@@ -58,7 +58,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
 </div>
 <div className="flex flex-col text-left">
-<span className="font-label-sm text-label-sm text-tertiary/80 uppercase leading-none font-bold">Escrow Active</span>
+<span className="font-label-sm text-label-sm text-tertiary/80 uppercase leading-none font-bold">holds active</span>
 <span className="font-label-lg text-label-lg font-bold text-tertiary leading-tight">UGX 388,500 Frozen</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-bold">1</span>
 <h2 className="font-headline-sm text-headline-sm text-on-surface font-bold" id="section-items">Select Disputed Items</h2>
 </div>
-<span className="font-body-sm text-body-sm text-secondary">Choose items eligible for escrow claim</span>
+<span className="font-body-sm text-body-sm text-secondary">Choose items eligible for payment claim</span>
 </div>
 <div className="flex flex-col gap-3">
 
@@ -211,7 +211,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between mb-2">
 <div className="flex items-center gap-2">
 <input checked={true} className="w-4 h-4 accent-primary-container cursor-pointer" name="resolution_choice" type="radio" value="momo_refund" />
-<span className="font-label-lg text-label-lg font-bold text-on-surface">Full Escrow Refund</span>
+<span className="font-label-lg text-label-lg font-bold text-on-surface">Full Payment Refund</span>
 </div>
 <Icon name="payments" className="text-[20px] text-primary" />
 </div>
@@ -247,7 +247,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-bold">4</span>
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold" id="section-seal">Tamper Seal Bag Verification</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold" id="section-seal">package seal Bag Verification</h2>
 </div>
 <span className="px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="warning" className="text-[14px]" />
@@ -255,14 +255,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary">
-            Enter the 9-digit security code stamped on your SwiftCart orange tamper-proof delivery satchel to validate the packaging chain of custody.
+            Enter the 9-digit security code stamped on your SwiftCart orange tamper-proof delivery satchel to validate the packaging chain of holding.
           </p>
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center">
 <div className="sm:col-span-2 relative">
 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-secondary">
 <Icon name="qr_code_scanner" className="text-[20px]" />
 </div>
-<input aria-label="Tamper Seal Bag Number" className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-mono font-bold text-body-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="e.g. SC-TS-0000" type="text" value="SC-TS-4091" />
+<input aria-label="package seal Bag Number" className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-mono font-bold text-body-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="e.g. SC-TS-0000" type="text" value="SC-TS-4091" />
 </div>
 <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-secondary font-body-sm text-body-sm">
 <Icon name="verified" className="text-tertiary text-[18px]" />
@@ -282,7 +282,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 
-<aside aria-label="Dispute Escrow Details & Protection" className="lg:col-span-5 flex flex-col gap-6">
+<aside aria-label="Dispute Payment Details & Protection" className="lg:col-span-5 flex flex-col gap-6">
 
 <div className="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
 <div className="flex items-center justify-between pb-3 border-b-0">
@@ -291,8 +291,8 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="account_balance" className="text-tertiary text-[20px]" />
 </div>
 <div>
-<h3 className="font-label-lg text-label-lg font-bold text-on-surface">Escrow Protection Summary</h3>
-<span className="font-label-sm text-label-sm text-secondary">Bank of Uganda Compliant NPS</span>
+<h3 className="font-label-lg text-label-lg font-bold text-on-surface">Payment Protection Summary</h3>
+<span className="font-label-sm text-label-sm text-secondary">Pesapal Compliant Pesapal Rails</span>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Protected</span>
@@ -341,7 +341,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <h3 className="font-label-lg text-label-lg font-bold">Uganda Consumer Protection Guarantee</h3>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-relaxed">
-            Your transaction is governed strictly by the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011)</strong> and the <strong className="text-on-surface">Uganda Digital Trade Framework</strong>. SwiftCart acts as a licensed impartial escrow fiduciary.
+            Your transaction is governed strictly by the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011)</strong> and the <strong className="text-on-surface">Uganda Digital Trade Framework</strong>. SwiftCart acts as a registered impartial payment fiduciary.
           </p>
 <div className="grid grid-cols-2 gap-2 mt-1">
 <div className="p-2.5 rounded-lg bg-surface-container-low flex items-center gap-2">
@@ -368,7 +368,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
               </div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md font-bold text-primary">Step 1: File Request &amp; Freeze Payout</span>
-<span className="font-body-sm text-body-sm text-secondary mt-0.5">Submit unboxing photo/video evidence. Escrow funds instantly locked. (Current Step)</span>
+<span className="font-body-sm text-body-sm text-secondary mt-0.5">Submit unboxing photo/video evidence. held funds instantly locked. (Current Step)</span>
 </div>
 </li>
 
@@ -411,7 +411,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 </div>
-</main><footer className="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)] mt-auto"><div className="w-full px-gutter-desktop py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg"><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0"><Icon name="verified_user" className="text-tertiary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</span><span className="font-body-sm text-body-sm text-secondary">Funds secured until 100% item inspection</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0"><Icon name="two_wheeler" className="text-primary-container text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</span><span className="font-body-sm text-body-sm text-secondary">Express city hub runner direct to your doorstep</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><Icon name="assignment_return" className="text-secondary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</span><span className="font-body-sm text-body-sm text-secondary">Drop off at Oasis Mall, Acacia, or Village Mall</span></div></div></div><div className="flex flex-wrap items-center justify-between gap-space-md pt-space-md"><div className="flex flex-wrap items-center gap-space-md"><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="font-label-md text-label-md text-primary font-bold hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="sell-on-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
+</main><footer className="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)] mt-auto"><div className="w-full px-gutter-desktop py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg"><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0"><Icon name="verified_user" className="text-tertiary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</span><span className="font-body-sm text-body-sm text-secondary">Funds secured until 100% item inspection</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0"><Icon name="two_wheeler" className="text-primary-container text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</span><span className="font-body-sm text-body-sm text-secondary">Express city hub runner direct to your doorstep</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><Icon name="assignment_return" className="text-secondary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</span><span className="font-body-sm text-body-sm text-secondary">Drop off at Oasis Mall, Acacia, or Village Mall</span></div></div></div><div className="flex flex-wrap items-center justify-between gap-space-md pt-space-md"><div className="flex flex-wrap items-center gap-space-md"><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="font-label-md text-label-md text-primary font-bold hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="sell-on-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

@@ -75,7 +75,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
             Returns & Disputes
           </h1>
           <p className="text-sm text-slate-500">
-            Escrow resolution and 3-day buyer protection policy
+            Payment resolution and 3-day buyer protection policy
           </p>
         </div>
       </div>
@@ -110,7 +110,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
               : 'text-slate-600 hover:bg-slate-100'
           }`}
         >
-          File Escrow Dispute
+          File Payment Dispute
         </button>
       </div>
 
@@ -174,7 +174,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
                     4
                   </div>
                   <div className="font-bold text-slate-400">Refunded</div>
-                  <div className="text-[10px] text-slate-400">Escrow MoMo</div>
+                  <div className="text-[10px] text-slate-400">Payment MoMo</div>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
 
           {(returnSubmitted || disputeSubmitted) && (
             <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl text-emerald-900 text-sm font-medium">
-              Your request was logged successfully. Escrow funds remain secured while the dispute team reviews the case.
+              Your request was logged successfully. held funds remain secured while the dispute team reviews the case.
             </div>
           )}
         </div>
@@ -282,17 +282,17 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
         </form>
       )}
 
-      {/* Tab 3: File Escrow Dispute Form */}
+      {/* Tab 3: File Payment Dispute Form */}
       {activeTab === 'dispute' && (
         <form onSubmit={handleDisputeSubmit} className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
           <div className="flex items-center gap-2 text-red-600">
             <Icon name="gavel" className="text-2xl" />
             <h2 className="text-lg font-extrabold text-[#0E1B4D]">
-              Open SwiftCart Escrow Dispute
+              Open SwiftCart Payment Dispute
             </h2>
           </div>
           <p className="text-xs text-slate-500">
-            Filing a dispute immediately freezes seller payout from Escrow until our mediation team resolves the case.
+            Filing a dispute immediately freezes seller payout from Payment until our mediation team resolves the case.
           </p>
 
           <div>
@@ -368,7 +368,7 @@ export const ReturnsDisputesPage: React.FC<ReturnsDisputesPageProps> = ({ onNavi
               type="submit"
               className="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-md transition-colors min-h-[48px]"
             >
-              Freeze Escrow & Submit Dispute
+              Freeze Payment & Submit Dispute
             </button>
           </div>
         </form>

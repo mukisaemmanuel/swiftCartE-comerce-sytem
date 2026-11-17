@@ -163,10 +163,10 @@ export const CourierBagQrScanConfirmationModalSwiftcartWorkHub: React.FC<Courier
 <div className="grid grid-cols-2 gap-space-xs">
 
 <div className="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col">
-<span className="font-label-sm text-label-sm text-secondary">Total Escrow Value</span>
+<span className="font-label-sm text-label-sm text-secondary">Total Payment Value</span>
 <span className="font-price-display text-price-display font-black text-on-surface tracking-tight mt-0.5 whitespace-nowrap">UGX 3.42M</span>
 <span className="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-0.5 mt-0.5">
-<Icon name="shield" className="text-[14px]" /> Insured Transit
+<Icon name="shield" className="text-[14px]" /> protected Transit
               </span>
 </div>
 
@@ -209,7 +209,7 @@ export const CourierBagQrScanConfirmationModalSwiftcartWorkHub: React.FC<Courier
 
 <button className="w-full h-14 rounded-xl bg-primary-container hover:bg-primary active:scale-[0.98] transition-all text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25" id="bind-seal-btn" type="button">
 <Icon name="lock" className="text-[22px]" />
-<span>Bind Tamper Seal &amp; Release for Courier Handover</span>
+<span>Bind package seal &amp; Release for Courier Handover</span>
 </button>
 
 <button className="w-full h-11 rounded-xl bg-transparent hover:bg-surface-container text-secondary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors" type="button">

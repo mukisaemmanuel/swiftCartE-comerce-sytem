@@ -45,7 +45,7 @@ export const PhoneVerificationBuyerAuthSwiftcart: React.FC<PhoneVerificationBuye
 </div>
 <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Welcome to SwiftCart</h2>
 <p className="font-body-md text-body-md text-secondary mt-space-xs max-w-xs leading-snug">
-      Uganda's trusted multi-vendor marketplace with escrow protection
+      Uganda's trusted multi-vendor marketplace with payment protection
     </p>
 </div>
 
@@ -93,7 +93,7 @@ export const PhoneVerificationBuyerAuthSwiftcart: React.FC<PhoneVerificationBuye
 <label className="font-label-md text-label-md text-on-surface-variant flex items-center justify-between">
 <span>MTN / Airtel Mobile Number</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
-<Icon name="payments" className="text-[13px]" /> Free Escrow SMS
+<Icon name="payments" className="text-[13px]" /> Free Payment SMS
         </span>
 </label>
 <div className="flex items-center gap-2">
@@ -209,12 +209,12 @@ export const PhoneVerificationBuyerAuthSwiftcart: React.FC<PhoneVerificationBuye
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-1.5">
-<span className="font-label-md text-label-md text-on-surface font-bold">100% Escrow Protected</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">100% Payment Protected</span>
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
 <span className="font-label-sm text-label-sm text-tertiary font-semibold">Bank &amp; Telco Level</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
-        Payments held safely in SwiftCart escrow until you inspect and confirm receipt of your delivery in Kampala or upcountry.
+        Payments Held safely until delivery confirmation until you inspect and confirm receipt of your delivery in Kampala or upcountry.
       </p>
 </div>
 </div>

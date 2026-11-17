@@ -324,7 +324,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Step 4 • Settlement &amp; Net Margin Simulator</span>
 <span className="text-tertiary font-label-sm text-label-sm flex items-center gap-1 font-bold">
-<Icon name="bolt" className="text-[14px]" /> Instant MoMo Escrow
+<Icon name="bolt" className="text-[14px]" /> Instant momo payment
               </span>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
@@ -348,7 +348,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-mono text-error whitespace-nowrap">-UGX 16,898</span>
 </div>
 <div className="flex justify-between text-secondary">
-<span>Escrow &amp; SafeBoda Levy:</span>
+<span>Payment &amp; SafeBoda Levy:</span>
 <span className="font-mono text-tertiary whitespace-nowrap">UGX 0 (Subsidized)</span>
 </div>
 <div className="flex justify-between text-on-surface font-bold pt-1 border-t border-outline-variant/30">
@@ -511,7 +511,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></main>
-<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bank of Uganda Escrow Regulated</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pesapal Payment standard</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
     </div>
   );
 };

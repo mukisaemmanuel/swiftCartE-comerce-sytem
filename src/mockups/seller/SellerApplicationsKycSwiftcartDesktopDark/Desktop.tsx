@@ -29,8 +29,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary-container/30 text-tertiary">
 <Icon name="verified_user" className="text-[16px]" />
 </span>
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Statutory Compliance Node:</span>
-<span className="font-body-sm text-body-sm text-on-surface">Integrated Direct Rails: <strong className="text-tertiary">URSB API Online</strong> (Uganda Registration Services Bureau) • <strong className="text-tertiary">URA EFRIS Node-4</strong> Active • <strong className="text-tertiary">NIRA Biometric Vault</strong> Responsive</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary">verified platform Compliance Node:</span>
+<span className="font-body-sm text-body-sm text-on-surface">Integrated Direct Rails: <strong className="text-tertiary">URSB API Online</strong> (Uganda Registration Services Bureau) • <strong className="text-tertiary">Tax E-INVOICE Node-4</strong> Active • <strong className="text-tertiary">NIRA Biometric reserve</strong> Responsive</span>
 </div>
 <div className="flex items-center gap-space-sm">
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
@@ -49,7 +49,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Seller Applications &amp; Business KYC Dossier Review</h1>
-<p className="font-body-md text-body-md text-on-surface-variant mt-1">Multi-tier statutory verification hub verifying enterprise merchants against Ugandan official registry ledgers.</p>
+<p className="font-body-md text-body-md text-on-surface-variant mt-1">Multi-tier verified platform verification hub verifying enterprise merchants against Ugandan official registry ledgers.</p>
 </div>
 <div className="flex items-center gap-space-sm">
 <button className="px-space-md py-2.5 rounded-xl bg-container-dark-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-2" type="button">
@@ -217,7 +217,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start justify-between gap-space-sm">
 <div className="min-w-0 flex-1">
 <div className="flex items-center gap-1.5 flex-wrap mb-1">
-<span className="px-2 py-0.5 rounded-full bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm">Pending URA TIN</span>
+<span className="px-2 py-0.5 rounded-full bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm">Pending Tax ID</span>
 <span className="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Renewable Energy</span>
 </div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Pearl Solar Systems</h3>
@@ -230,7 +230,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-3 pt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
 <span className="text-amber-warning font-label-sm text-label-sm flex items-center gap-1">
-<Icon name="sync_problem" className="text-[15px]" /> Awaiting EFRIS Ping
+<Icon name="sync_problem" className="text-[15px]" /> Awaiting E-INVOICE Ping
           </span>
 <span className="font-label-sm text-label-sm text-outline">Action Paused</span>
 </div>
@@ -326,7 +326,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-sm">
 <span className="w-2.5 h-2.5 rounded-full bg-emerald-escrow"></span>
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Statutory Audit &amp; Government Ledger Verification</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">verified platform Audit &amp; Government Ledger Verification</h3>
 </div>
 <span className="px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-md text-label-md font-bold flex items-center gap-1.5">
 <Icon name="task_alt" className="text-[16px]" /> 4 of 4 Verification Passes Complete
@@ -372,13 +372,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">Step 2: Tax Compliance (URA EFRIS)</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">Step 2: Tax Compliance (Tax E-INVOICE)</span>
 <span className="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-bold">Verified</span>
 </div>
 <div className="flex items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant mt-1 flex-wrap">
 <span>TIN: <strong className="text-on-surface font-mono">1009842104</strong></span>
 <span className="text-outline">•</span>
-<span>EFRIS Electronic Invoicing: <strong className="text-tertiary">Active &amp; Linked</strong></span>
+<span>E-INVOICE Electronic Invoicing: <strong className="text-tertiary">Active &amp; Linked</strong></span>
 <span className="text-outline">•</span>
 <span>Tax Clearance Valid: <strong className="text-on-surface">Dec 2025</strong></span>
 </div>
@@ -494,7 +494,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <span className="w-3 h-3 rounded-full bg-secondary"></span>
-<span className="font-label-md text-label-md text-on-surface font-bold">Secondary: Stanbic Bank Uganda</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Secondary: Pesapal Uganda</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">Cleared</span>
 </div>
@@ -551,7 +551,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-outline">Auditor: Kizito Ronald (Super Admin)</span>
 </div>
 <div className="relative">
-<textarea className="w-full bg-surface-container rounded-xl p-space-md font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-high transition-all resize-none shadow-inner" placeholder="Enter statutory notes or requirements..." rows={3}>URSB registration authentic, TIN active on EFRIS. Biometrics verified with 99.4% confidence via NIRA gateway. Physical premises inspected at Pioneer Mall. Ready for unconditional onboarding.</textarea>
+<textarea className="w-full bg-surface-container rounded-xl p-space-md font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-high transition-all resize-none shadow-inner" placeholder="Enter verified platform notes or requirements..." rows={3}>URSB registration authentic, TIN active on E-INVOICE. Biometrics verified with 99.4% confidence via NIRA gateway. Physical premises inspected at Pioneer Mall. Ready for unconditional onboarding.</textarea>
 </div>
 </div>
 

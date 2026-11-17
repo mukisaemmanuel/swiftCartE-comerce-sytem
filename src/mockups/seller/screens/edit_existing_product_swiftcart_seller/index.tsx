@@ -159,7 +159,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-semibold">Pricing &amp; Settlement</span>
 <div className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm bg-emerald-escrow/10 px-2 py-0.5 rounded-full font-bold">
 <Icon name="lock" className="text-[14px]" />
-<span>ESCROW VERIFIED</span>
+<span>payment verified</span>
 </div>
 </div>
 <div className="grid grid-cols-2 gap-space-sm items-start">
@@ -324,7 +324,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-error font-bold">Archive or Delete Item</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Archiving preserves escrow history and customer receipts while removing this SKU from public search.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Archiving preserves payment history and customer receipts while removing this SKU from public search.</span>
 </div>
 </div>
 <div className="grid grid-cols-2 gap-space-sm pt-1">

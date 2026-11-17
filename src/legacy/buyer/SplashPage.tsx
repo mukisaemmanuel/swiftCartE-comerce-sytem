@@ -32,7 +32,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onNavigate }) => {
               <Icon name="security" className="text-xl" />
             </div>
             <div>
-              <h3 className="font-bold text-sm text-[#0E1B4D]">Escrow Payment Protection</h3>
+              <h3 className="font-bold text-sm text-[#0E1B4D]">Payment Payment Protection</h3>
               <p className="text-xs text-slate-600 mt-0.5">
                 Your payment is held safely until you inspect and confirm your package with a 6-digit code.
               </p>

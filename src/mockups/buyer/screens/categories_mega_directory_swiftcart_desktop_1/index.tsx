@@ -40,7 +40,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span>Escrow Inspected Before Payment</span>
+<span>Payment Inspected Before Payment</span>
 </div>
 </div>
 </div>
@@ -57,7 +57,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           Explore All 14 Departments &amp; 120+ Categories in Uganda
         </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
-          Browse verified merchants across Central Kampala, Nakasero fresh produce, Kikuubo wholesale distributors, and official brand outlets. 100% Escrow Protected in UGX.
+          Browse verified merchants across Central Kampala, Nakasero fresh produce, Kikuubo wholesale distributors, and official brand outlets. 100% Payment Protected in UGX.
         </p>
 </div>
 
@@ -255,7 +255,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between mb-space-lg">
 <div>
 <h2 className="font-headline-md text-headline-md text-on-surface font-bold">Marketplace Department Directory</h2>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Select any sub-category to view in-stock Kampala inventory with real-time seller escrow status.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Select any sub-category to view in-stock Kampala inventory with real-time seller payment hold status.</p>
 </div>
 <div className="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-md py-1 rounded-full">
 <span>Click category to jump • Instant SafeBoda delivery tagged</span>
@@ -871,15 +871,15 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="security" className="text-[32px]" />
 </div>
 <div>
-<h4 className="font-headline-sm text-headline-sm text-on-surface font-bold">100% Genuine Escrow Protection Across All Departments</h4>
+<h4 className="font-headline-sm text-headline-sm text-on-surface font-bold">100% Genuine Payment Protection Across All Departments</h4>
 <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-          When you pay via MTN MoMo or Airtel Money on SwiftCart, your money is held in regulated bank escrow. The vendor is paid only AFTER you unbox and verify delivery with the courier.
+          When you pay via MTN MoMo or Airtel Money on SwiftCart, your money is held in standard bank payment. The vendor is paid only AFTER you unbox and verify delivery with the courier.
         </p>
 </div>
 </div>
 <div className="shrink-0 flex items-center gap-space-sm">
 <a className="px-space-lg py-3 bg-surface-container text-on-surface hover:bg-surface-container-high rounded-xl font-label-lg text-label-lg font-bold transition-colors" href="#" onClick={() => alertToast('Action triggered')}>
-        Read Escrow Terms
+        Read Payment Terms
       </a>
 <a className="px-space-lg py-3 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg font-bold transition-all shadow-md" href="#" onClick={() => alertToast('Action triggered')}>
         Start Shopping Now
@@ -896,7 +896,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           <Icon name="lock" className="text-[26px]" />
         </div>
         <div>
-          <h4 className="font-label-lg text-label-lg font-bold text-white">100% Escrow Protection</h4>
+          <h4 className="font-label-lg text-label-lg font-bold text-white">100% Payment Protection</h4>
           <p className="font-body-sm text-body-sm text-slate-400 mt-0.5">Funds locked safely until 6-digit handover PIN entered</p>
         </div>
       </div>
@@ -924,7 +924,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         </div>
         <div>
           <h4 className="font-label-lg text-label-lg font-bold text-white">URSB Certified Stores</h4>
-          <p className="font-body-sm text-body-sm text-slate-400 mt-0.5">Every vendor verified and licensed</p>
+          <p className="font-body-sm text-body-sm text-slate-400 mt-0.5">Every vendor verified and registered</p>
         </div>
       </div>
     </div>
@@ -943,14 +943,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           </div>
         </div>
         <p className="font-body-md text-body-md text-slate-300 leading-relaxed">
-          Kampala's high-trust escrow commerce ecosystem connecting verified downtown wholesalers, Nakasero fresh produce, and official brand flagships under secure buyer safeguards.
+          Kampala's high-trust payment commerce ecosystem connecting verified downtown wholesalers, Nakasero fresh produce, and official brand flagships under secure buyer safeguards.
         </p>
         <div className="bg-[#141b34] border border-slate-700/80 p-space-md rounded-xl shadow-md flex items-center gap-space-md">
           <div className="w-10 h-10 rounded-lg bg-tertiary-container/30 border border-tertiary-fixed/30 flex items-center justify-center shrink-0">
             <Icon name="shield_with_heart" className="text-tertiary-fixed text-[26px]" />
           </div>
           <div>
-            <div className="font-label-md text-label-md font-bold text-white">100% Escrow Inspected</div>
+            <div className="font-label-md text-label-md font-bold text-white">100% Payment Inspected</div>
             <div className="font-body-sm text-body-sm text-slate-400 mt-0.5">Seller payout release only on customer approval</div>
           </div>
         </div>
@@ -960,7 +960,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
       <div className="flex flex-col gap-space-sm">
         <span className="font-headline-sm text-headline-sm text-white font-bold mb-space-xs tracking-tight">Customer Service</span>
         <a className="text-slate-300 hover:text-[#ff9275] transition-colors font-body-md text-body-md" data-path="help-center" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; FAQs</a>
-        <a className="text-slate-300 hover:text-[#ff9275] transition-colors font-body-md text-body-md" data-path="escrow-disputes" href="#" onClick={() => alertToast('Action triggered')}>Escrow Disputes &amp; Resolution</a>
+        <a className="text-slate-300 hover:text-[#ff9275] transition-colors font-body-md text-body-md" data-path="payment-disputes" href="#" onClick={() => alertToast('Action triggered')}>Payments & Disputes &amp; Resolution</a>
         <a className="text-slate-300 hover:text-[#ff9275] transition-colors font-body-md text-body-md" data-path="safeboda-tracking" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>SafeBoda Live Tracking</a>
         <a className="text-slate-300 hover:text-[#ff9275] transition-colors font-body-md text-body-md" data-path="returns-policy" href="#" onClick={() => alertToast('Action triggered')}>Returns &amp; Replacement Policy</a>
         <div className="pt-space-xs mt-space-xs border-t border-slate-800">
@@ -997,9 +997,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         <div className="p-space-md rounded-xl bg-[#141b34] border border-slate-800 text-slate-400 font-body-sm text-body-sm leading-relaxed">
           <div className="flex items-center gap-space-xs text-white font-label-md text-label-md mb-1">
             <Icon name="verified_user" className="text-primary text-[18px]" />
-            <span>Bank of Uganda Compliance</span>
+            <span>Pesapal Compliance</span>
           </div>
-          SwiftCart operates under strict National Payment Systems (NPS) Act 2020 regulatory escrow guidelines for verified non-bank e-money settlement.
+          SwiftCart operates under strict Pesapal Payment Guidelines payment protection guidelines for verified non-bank e-money settlement.
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-full shadow-sm">
 <Icon name="verified_user" className="text-[14px] text-tertiary" />
-<span className="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">Escrow Safe</span>
+<span className="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">Payment Safe</span>
 </div>
 </div>
 
@@ -282,7 +282,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 
 <span className="inline-flex items-center gap-0.5 bg-[#ECFDF5] text-tertiary px-1.5 py-0.5 rounded-full text-[10px] font-bold">
 <Icon name="lock" className="text-[11px]" />
-                    Swift Escrow Protected
+                    Payment Protected
                   </span>
 </div>
 <h4 className="font-label-md text-label-md text-on-surface font-bold truncate">20,000mAh Fast Charge Bank</h4>
@@ -308,7 +308,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-label-sm text-label-sm text-on-surface font-bold">MTN MoMo &amp; Airtel Money Ready</span>
-<span className="font-body-sm text-[11px] text-on-surface-variant leading-tight">Funds held securely in escrow until goods are inspected.</span>
+<span className="font-body-sm text-[11px] text-on-surface-variant leading-tight">Funds held securely held until delivery until goods are inspected.</span>
 </div>
 </div>
 </main>

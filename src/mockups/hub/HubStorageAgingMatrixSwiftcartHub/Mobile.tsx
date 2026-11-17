@@ -163,7 +163,7 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
 <span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 340,000</span>
 <div className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
-<span>Escrow Held</span>
+<span>Payment Held</span>
 </div>
 </div>
 </div>
@@ -269,7 +269,7 @@ export const HubStorageAgingMatrixSwiftcartHub: React.FC<HubStorageAgingMatrixSw
 <span className="font-price-display text-headline-sm text-on-surface whitespace-nowrap">UGX 285,000</span>
 <div className="flex items-center gap-1 text-amber-warning font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
-<span>Escrow Protected</span>
+<span>Payment Protected</span>
 </div>
 </div>
 </div>

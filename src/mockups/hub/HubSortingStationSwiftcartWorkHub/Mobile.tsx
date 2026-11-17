@@ -133,7 +133,7 @@ export const HubSortingStationSwiftcartWorkHub: React.FC<HubSortingStationSwiftc
 </div>
 <span className="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
 <Icon name="check_circle" className="text-[14px]" />
-          Bag volume threshold reached • Safe to apply security tamper seal
+          Bag volume threshold reached • Safe to apply security package seal
         </span>
 </div>
 </div>
@@ -160,7 +160,7 @@ export const HubSortingStationSwiftcartWorkHub: React.FC<HubSortingStationSwiftc
 <div className="flex items-center gap-space-xs min-w-0">
 <Icon name="lock_open" className="text-primary text-[22px] flex-shrink-0" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-label-sm text-secondary uppercase font-bold">Tamper Barcode Seal</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase font-bold">package barcode Seal</span>
 <span className="font-label-md text-label-md text-on-surface font-mono font-bold tracking-tight truncate" id="seal-code-text">#BAG-UG-2025-044</span>
 </div>
 </div>

@@ -61,7 +61,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <span className="font-label-md text-label-md text-on-surface">Order #SC-ORD-9488 Received</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">14:24</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Customer committed escrow via MTN MoMo. Packed confirmation pending.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Customer committed payment via MTN MoMo. Packed confirmation pending.</p>
 </div>
 </div>
 
@@ -74,7 +74,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <span className="font-label-md text-label-md text-on-surface">Merchant Settlement Scheduled</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">11:05</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">Batch UGX 8,450,000 scheduled for release tomorrow 10:00 EAT directly to Stanbic ledger.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">Batch UGX 8,450,000 scheduled for release tomorrow 10:00 EAT directly to Pesapal ledger.</p>
 </div>
 </div>
 
@@ -87,7 +87,7 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 <span className="font-label-md text-label-md text-on-surface">Dispute #9281 Resolved</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Closed in merchant favor following courier tamper seal proof verification.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Closed in merchant favor following courier package seal proof verification.</p>
 </div>
 </div>
 </div>
@@ -123,13 +123,13 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 </div>
 <div className="min-w-0">
 <div className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider flex items-center gap-1">
-              Escrow Secured Lock
+              payment secured Lock
             </div>
 <div className="font-price-display text-price-display text-on-surface truncate whitespace-nowrap">UGX 248,500</div>
 </div>
 </div>
 <div className="text-right flex-shrink-0">
-<span className="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-[10px] block">MTN MoMo Vault</span>
+<span className="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-[10px] block">MTN MoMo reserve</span>
 <span className="font-body-sm text-[11px] text-tertiary">Ledger Confirmed</span>
 </div>
 </div>
@@ -260,8 +260,8 @@ export const SellerOrderDetailSwiftcartSeller: React.FC<SellerOrderDetailSwiftca
 </div>
 <div className="flex-1 flex items-start justify-between min-w-0">
 <div>
-<div className="font-label-md text-label-md text-on-surface">Payment Verified via MTN MoMo Escrow</div>
-<div className="font-body-sm text-body-sm text-on-surface-variant">Custody ref: #MM-782190</div>
+<div className="font-label-md text-label-md text-on-surface">Payment Verified via MTN momo payment</div>
+<div className="font-body-sm text-body-sm text-on-surface-variant">holding ref: #MM-782190</div>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">14:25</span>
 </div>

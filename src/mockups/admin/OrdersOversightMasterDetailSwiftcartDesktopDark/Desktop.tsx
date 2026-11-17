@@ -48,7 +48,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
 <div className="flex flex-col max-w-3xl">
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Platform Orders Oversight &amp; Real-Time Dispatch Stream</h1>
-<p className="font-body-md text-body-md text-on-surface-variant mt-1">End-to-end telemetric tracking of active multi-vendor orders, rider assignments, statutory escrow holds, and delivery code verifications across Kampala metropolitan corridors.</p>
+<p className="font-body-md text-body-md text-on-surface-variant mt-1">End-to-end telemetric tracking of active multi-vendor orders, rider assignments, active payment holds, and delivery code verifications across Kampala metropolitan corridors.</p>
 </div>
 
 <div className="flex flex-wrap items-center gap-space-sm">
@@ -69,7 +69,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified" className="text-tertiary text-[18px]" />
 <select className="bg-transparent text-on-surface font-label-md text-label-md outline-none cursor-pointer pr-4 appearance-none">
 <option className="bg-surface-container-high text-on-surface" value="transit">Status: In Transit &amp; Out for Delivery</option>
-<option className="bg-surface-container-high text-on-surface" value="escrow">Status: Escrow Locked (In Hub)</option>
+<option className="bg-surface-container-high text-on-surface" value="payment">Status: payment protected (In Hub)</option>
 <option className="bg-surface-container-high text-on-surface" value="blocked">Status: Code Lock Hold (Attention)</option>
 <option className="bg-surface-container-high text-on-surface" value="delivered">Status: Completed Today</option>
 </select>
@@ -116,7 +116,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
 <Icon name="lock" className="text-[14px] text-tertiary" />
-<span className="whitespace-nowrap">UGX 384,500,000 locked in escrow vault</span>
+<span className="whitespace-nowrap">UGX 384,500,000 locked held until delivery reserve</span>
 </p>
 </div>
 <div className="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
@@ -198,7 +198,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-xs overflow-x-auto pb-1">
 <button className="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold whitespace-nowrap shadow-sm">All (1,140)</button>
 <button className="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">Out for Delivery (142)</button>
-<button className="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">Escrow Locked (480)</button>
+<button className="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">payment protected (480)</button>
 <button className="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">At Hub Staging (312)</button>
 <button className="px-space-md py-1.5 rounded-full bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm font-bold whitespace-nowrap">Code Locked (6)</button>
 </div>
@@ -326,7 +326,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pt-space-xs mt-space-xs">
 <div className="flex items-center gap-1.5 text-emerald-escrow font-label-sm text-label-sm font-semibold">
 <Icon name="security" className="text-[16px]" />
-<span>Escrow Locked • High Value</span>
+<span>payment protected • High Value</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-secondary-container text-secondary font-label-sm text-label-sm font-bold">
                   Inspection Stage
@@ -382,13 +382,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                 </span>
 <span className="px-2.5 py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="verified_user" className="text-[16px]" />
-                  Bank of Uganda NPS Act 2020 Compliant Escrow Locked
+                  Pesapal Verified Payment Protected
                 </span>
 </div>
 </div>
 
 <div className="bg-surface-container px-space-lg py-space-sm rounded-lg flex flex-col md:items-end">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Vault Escrow Balance</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">reserve Pending clearance</span>
 <span className="font-headline-md text-headline-md text-primary font-black whitespace-nowrap">UGX 180,000</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-semibold">MTN MoMo Confirmed</span>
 </div>
@@ -463,7 +463,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs text-on-surface">
 <Icon name="inventory_2" className="text-primary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm font-bold">Package Custody &amp; Financial Ledger</h2>
+<h2 className="font-headline-sm text-headline-sm font-bold">Package Handover & Financial Ledger</h2>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">BAG-TAG: #SWIFT-BAG-99201-KC</span>
 </div>
@@ -482,12 +482,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col md:items-end shrink-0">
 <span className="font-price-display text-price-display text-on-surface font-black whitespace-nowrap">UGX 180,000</span>
-<span className="font-label-sm text-label-sm text-emerald-escrow font-semibold">Escrow Tag: LOCKED</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-semibold">Payment Tag: LOCKED</span>
 </div>
 </div>
 
 <div className="bg-surface-container rounded-lg p-space-md flex flex-col gap-space-xs">
-<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Transaction Breakdown &amp; Telecom Escrow Rails</span>
+<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Transaction Breakdown &amp; Telecom Payment Rails</span>
 <div className="flex justify-between items-center text-body-md text-on-surface py-1">
 <span className="text-on-surface-variant">Merchandise Subtotal:</span>
 <span className="font-bold whitespace-nowrap">UGX 180,000</span>
@@ -503,12 +503,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="whitespace-nowrap">-UGX 2,000</span>
 </div>
 <div className="flex justify-between items-center font-headline-sm text-headline-sm text-on-surface pt-2 mt-1">
-<span className="font-bold">Total Customer Charge (In Escrow):</span>
+<span className="font-bold">Total Customer Charge (Held until delivery):</span>
 <span className="text-primary font-black whitespace-nowrap">UGX 182,500</span>
 </div>
 <div className="flex items-center justify-between text-label-sm text-label-sm text-on-surface-variant pt-2">
 <span className="flex items-center gap-1">
-<span className="w-2 h-2 rounded-full bg-mtn-yellow"></span> Paid via MTN MoMo (*165# Push Payment)
+<span className="w-2 h-2 rounded-full bg-mtn-yellow"></span> Paid via MTN MoMo (Mobile Approval)
               </span>
 <span className="font-mono">Audit Transaction Ref: #MTN-8821094</span>
 </div>
@@ -519,7 +519,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs text-on-surface">
 <Icon name="history" className="text-primary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm font-bold">Statutory Milestone Custody Log</h2>
+<h2 className="font-headline-sm text-headline-sm font-bold">Order Fulfillment Milestone Log</h2>
 </div>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm font-bold">4 / 5 Steps Cleared</span>
 </div>
@@ -532,7 +532,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-lg text-label-lg text-on-surface font-bold">Order Created &amp; Payment Escrowed</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">11:21 EAT</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">MTN MoMo API Handshake 200 OK • Bank of Uganda ledger reference recorded into vault custody.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">MTN MoMo API Handshake 200 OK • Pesapal ledger reference recorded into in settlement holding.</p>
 </div>
 
 <div className="relative flex flex-col gap-0.5">
@@ -565,7 +565,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="relative flex flex-col gap-0.5">
 <div className="absolute -left-[27px] top-0.5 w-4 h-4 rounded-full bg-surface-variant flex items-center justify-center text-surface text-[10px]">○</div>
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-label-lg text-on-surface-variant font-bold">Customer 6-Digit Delivery OTP Entry &amp; Escrow Release</span>
+<span className="font-label-lg text-label-lg text-on-surface-variant font-bold">Customer 6-Digit Delivery OTP Entry &amp; Payment Release</span>
 <span className="font-label-sm text-label-sm text-amber-warning font-bold">Pending Arrival</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Requires buyer Grace N. to recite the 6-digit confirmation pin to driver app. Payout immediately triggers to merchant wallet upon confirmation.</p>

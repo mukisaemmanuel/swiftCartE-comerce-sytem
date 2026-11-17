@@ -139,7 +139,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <Icon name="verified_user" className="text-[16px]" />
 </div>
 <div className="flex flex-col min-w-0">
-<span className="font-label-md text-label-md text-on-surface truncate">Swift Escrow Protected</span>
+<span className="font-label-md text-label-md text-on-surface truncate">Payment Protected</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">MoMo &amp; Cash held safely until item inspection</span>
 </div>
 </div>

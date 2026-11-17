@@ -34,7 +34,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Damaged Goods &amp; Quarantine Bay Intake</h1>
 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm uppercase tracking-wider font-bold">
 <span className="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
-          Vault Quarantine Active
+          reserve Quarantine Active
         </span>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs">
@@ -42,7 +42,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-surface-bright">•</span>
 <span className="text-primary font-medium">Secured Enclosure Bay Q4</span>
 <span className="text-surface-bright">•</span>
-<span className="text-emerald-escrow font-semibold">Forensic Damage Logging &amp; Escrow Freeze Protocol</span>
+<span className="text-emerald-escrow font-semibold">Forensic Damage Logging &amp; Payment Freeze Protocol</span>
 </p>
 </div>
 
@@ -88,7 +88,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-md group hover:bg-surface-container-high transition-colors">
 <div className="flex items-center justify-between mb-space-sm">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Frozen Escrow Value</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Frozen Payment Value</span>
 <span className="p-1.5 rounded-lg bg-emerald-escrow/10 text-emerald-escrow">
 <Icon name="lock_clock" className="text-[18px]" />
 </span>
@@ -199,7 +199,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-3 px-3">Waybill / Tracking</th>
 <th className="py-3 px-3">Merchant / Origin</th>
 <th className="py-3 px-3">Destination</th>
-<th className="py-3 px-3 text-right">Escrow Locked</th>
+<th className="py-3 px-3 text-right">payment protected</th>
 <th className="py-3 px-3">Incident Category</th>
 <th className="py-3 px-3">Tamper Status</th>
 <th className="py-3 px-3">Cell</th>
@@ -387,7 +387,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>Showing 4 of 14 logged cases in Q4 Enclosure</span>
 <span className="inline-flex items-center gap-1 text-emerald-escrow font-semibold">
 <Icon name="shield" className="text-[14px]" />
-              Escrow Smart Contract 0x829...4F19 Active
+              Payment Smart Contract 0x829...4F19 Active
             </span>
 </div>
 <div className="flex items-center gap-1">
@@ -404,7 +404,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="balance" className="text-[24px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX Mobile Money Escrow Freeze Shield</span>
+<span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX Mobile money payment Freeze Shield</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Automatic merchant disbursement cut applied upon intake scan to avoid fraudulent cash out.</span>
 </div>
 </div>
@@ -432,7 +432,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </h2>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase block">Frozen Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase block">Frozen Payment</span>
 <span className="font-price-display text-price-display text-emerald-escrow font-extrabold whitespace-nowrap">UGX 320,000</span>
 </div>
 </div>
@@ -526,13 +526,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="w-full h-[52px] rounded-2xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:brightness-110 active:scale-[0.98] transition-all" type="button">
 <Icon name="lock_reset" className="text-[20px]" />
-<span>Submit Quarantine Intake &amp; Lock Escrow</span>
+<span>Submit Quarantine Intake &amp; Lock Payment</span>
 </button>
 
 <div className="grid grid-cols-2 gap-space-sm">
 <button className="h-11 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-[0.98]" type="button">
 <Icon name="picture_as_pdf" className="text-[18px] text-secondary" />
-<span>BOU Incident PDF</span>
+<span>Pesapal Incident PDF</span>
 </button>
 <button className="h-11 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-[0.98]" type="button">
 <Icon name="assignment_return" className="text-[18px] text-amber-warning" />

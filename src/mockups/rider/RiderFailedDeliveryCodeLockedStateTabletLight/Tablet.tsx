@@ -51,7 +51,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col items-end">
 <span className="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md mb-0.5">Stop 4 of 6</span>
 <span className="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Secured
+<Icon name="verified_user" className="text-[13px]" /> payment secured
           </span>
 </div>
 </div>
@@ -66,7 +66,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">#SC-9488</span>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant block">Escrow Amount</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block">Payment Amount</span>
 <span className="font-price-display text-price-display text-primary tracking-tight whitespace-nowrap">UGX 248,500</span>
 </div>
 </div>
@@ -79,7 +79,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h4 className="font-label-lg text-label-lg text-on-surface truncate">SoundCore Space One ANC</h4>
 <span className="font-body-sm text-body-sm text-on-surface-variant block">Audio &amp; Electronics • 1 Unit</span>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary mt-1">
-<Icon name="lock" className="text-[14px]" /> UGX 248,500 in Escrow
+<Icon name="lock" className="text-[14px]" /> UGX 248,500 in Payment
             </span>
 </div>
 </div>
@@ -149,10 +149,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm tracking-wider uppercase font-bold">Locked</span>
 </div>
 <p className="font-body-md text-body-md text-on-error-container font-semibold leading-snug">
-              Tamper-Proof Escrow Protocol • Automatic Package Freeze Enforced
+              Tamper-Proof Payment Protocol • Automatic Package Freeze Enforced
             </p>
 <p className="font-body-sm text-body-sm text-on-error-container/90 mt-1.5">
-              3 Incorrect Delivery PIN Attempts Detected. Courier terminal is hard-locked for handoff SC-9488. Handing over without valid cryptographic release violates SafeBoda &amp; SwiftCart merchant bailment liability.
+              3 Incorrect Delivery PIN Attempts Detected. Courier terminal is hard-locked for handoff SC-9488. Handing over without valid verified release violates SafeBoda &amp; SwiftCart merchant bailment liability.
             </p>
 </div>
 </div>
@@ -185,7 +185,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
 <div className="flex items-center justify-between">
 <span className="font-headline-sm text-headline-sm text-on-surface">Resolution Pathways</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Required Escrow Protocol</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Required Payment Protocol</span>
 </div>
 
 <div className="grid grid-cols-1 gap-space-sm" id="pathway-container">
@@ -205,7 +205,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-2.5 pl-7 flex items-center gap-space-sm text-body-sm text-on-surface-variant">
 <Icon name="headset_mic" className="text-tertiary text-[18px]" />
-<span>Dedicated Agent Assigned: <strong className="text-on-surface">Patricia Namubiru (Desk #4)</strong></span>
+<span>Dedicated Agent Assigned: <strong className="text-on-surface">Denis Mukasa (Desk #4)</strong></span>
 </div>
 </div>
 
@@ -223,7 +223,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">Nakasero Hub</span>
 </div>
 <div className="mt-2.5 pl-7 text-body-sm text-on-surface-variant">
-<span>Initiates secure custody transfer back to SafeBoda Central Hub KLA with tamper strip scanning.</span>
+<span>Initiates secure holding transfer back to SafeBoda Central Hub KLA with tamper strip scanning.</span>
 </div>
 </div>
 </div>

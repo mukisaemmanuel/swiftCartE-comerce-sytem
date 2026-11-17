@@ -99,9 +99,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col md:flex-row md:items-center justify-between pb-space-md gap-space-md">
 <div className="flex flex-col">
 <div className="flex items-center gap-space-xs">
-<span className="font-headline-md text-headline-md text-on-surface">Shift Custody Handover</span>
+<span className="font-headline-md text-headline-md text-on-surface">Shift holding Handover</span>
 <span className="px-space-sm py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm uppercase flex items-center gap-1">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Sealed
+<Icon name="verified_user" className="text-[13px]" /> Payment Sealed
                 </span>
 </div>
 <span className="font-body-md text-body-md text-on-surface-variant mt-0.5">Formal ledger transfer for morning operational cycle (24 Oct 2024)</span>
@@ -153,7 +153,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-lg text-label-lg text-on-surface uppercase tracking-wide flex items-center gap-space-xs">
 <Icon name="inventory" className="text-primary text-[18px]" />
-                Custody &amp; Physical Reconciliation
+                holding &amp; Physical Reconciliation
               </span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
 <Icon name="check_circle" className="text-[14px]" /> 4 of 4 Verified
@@ -231,7 +231,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-md bg-surface-container-lowest px-space-md py-space-sm rounded-lg">
 <div className="flex flex-col text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant">MTN / Airtel Escrow Sync</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">MTN / Airtel Payment Sync</span>
 <span className="font-label-md text-label-md text-emerald-escrow whitespace-nowrap">UGX 8,420,500 Locked</span>
 </div>
 <Icon name="account_balance_wallet" className="text-emerald-escrow text-[22px]" />
@@ -245,7 +245,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="passkey" className="text-primary text-[20px]" />
 <span className="font-label-lg text-label-lg text-on-surface">Incoming Agent Mutual Authorization</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Dual-Key Handover Protocol</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">two-step admin Handover Protocol</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
 

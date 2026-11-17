@@ -107,7 +107,7 @@ export const OverviewSwiftcartRiderDark: React.FC<OverviewSwiftcartRiderDarkProp
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-1.5">
 <Icon name="shield_lock" className="text-[18px] text-amber-warning" />
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">In-Hand Courier Escrow</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">In-Hand Courier Payment</span>
 </div>
 <span className="bg-secondary-container/60 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded-full">Boxer Bag #04</span>
 </div>
@@ -116,7 +116,7 @@ export const OverviewSwiftcartRiderDark: React.FC<OverviewSwiftcartRiderDarkProp
 <span className="text-tertiary font-label-md text-label-md bg-on-tertiary px-2 py-0.5 rounded">1 Item Active</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-        Custody liability covered under SwiftCart Transit Shield Guarantee.
+        holding liability covered under SwiftCart Transit Shield Guarantee.
       </p>
 </div>
 </section>
@@ -132,7 +132,7 @@ export const OverviewSwiftcartRiderDark: React.FC<OverviewSwiftcartRiderDarkProp
 </div>
 <div className="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded text-tertiary font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
-<span>Escrow Locked</span>
+<span>payment protected</span>
 </div>
 </div>
 
@@ -213,7 +213,7 @@ export const OverviewSwiftcartRiderDark: React.FC<OverviewSwiftcartRiderDarkProp
 
 <button className="w-full h-[52px] bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-[0_4px_18px_rgba(218,55,0,0.35)] active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="release-btn" type="button">
 <Icon name="check_circle" className="text-[20px]" />
-      Enter Customer Code &amp; Release Escrow
+      Enter Customer Code &amp; release payment
     </button>
 
 <div className="grid grid-cols-2 gap-space-sm pt-1">

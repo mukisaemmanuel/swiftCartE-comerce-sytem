@@ -565,7 +565,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-medium">
 <Icon name="lock" className="text-[14px]" />
-<span>Swift Escrow Protected • Tamper Bag #SWIFT-BAG-99201</span>
+<span>Payment Protected • package bag #SWIFT-BAG-99201</span>
 </div>
 </div>
 
@@ -588,7 +588,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="p-2 rounded-lg bg-amber-50 text-amber-900 font-label-sm text-label-sm flex items-center gap-2">
 <Icon name="pin" className="text-[16px] text-amber-700" />
-<span>Delivery requires <strong>6-Digit OTP Handshake</strong> prior to Escrow release.</span>
+<span>Delivery requires <strong>6-Digit OTP Handshake</strong> prior to Payment Release.</span>
 </div>
 </div>
 

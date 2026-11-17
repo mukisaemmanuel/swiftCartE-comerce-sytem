@@ -151,7 +151,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <section className="flex flex-col gap-2.5 mb-6">
 <div className="flex items-center justify-between px-2 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
 <span>Operational Staff Directory (6 Matching)</span>
-<span className="hidden sm:inline whitespace-nowrap">Audit trail recorded • UGX Escrow Authorization Key Required</span>
+<span className="hidden sm:inline whitespace-nowrap">Audit trail recorded • UGX Payment Authorization Key Required</span>
 </div>
 <div className="p-3.5 rounded-xl bg-surface-container-low shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors hover:bg-surface-container">
 <div className="flex items-center gap-3 min-w-0">
@@ -222,8 +222,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         </div>
 <div className="min-w-0">
 <div className="flex items-center gap-2 flex-wrap">
-<span className="font-label-lg text-label-lg text-on-surface font-semibold truncate">Patricia Namubiru</span>
-<span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Admin • Arbitration Officer</span>
+<span className="font-label-lg text-label-lg text-on-surface font-semibold truncate">Denis Mukasa</span>
+<span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Admin • dispute reviewers</span>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
 <span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span> Active
             </span>
@@ -366,7 +366,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="gavel" className="text-[18px] text-secondary" />
 <span>Admin (Disputes Lead)</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant/70 block mt-0.5">Arbitration desk access only</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant/70 block mt-0.5">Dispute Desk access only</span>
 </div>
 <div>
 <label className="font-label-sm text-label-sm text-primary uppercase tracking-wider block mb-1" htmlFor="new-role-select">New Role Target</label>
@@ -388,14 +388,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>Permission Scope Elevation Summary</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface leading-relaxed">
-          Grants access to platform settings, fee matrix configuration, staff role assignments, and manual escrow overrides.
+          Grants access to platform settings, fee matrix configuration, staff role assignments, and manual payment overrides.
         </p>
 <div className="flex items-center gap-4 pt-1 font-label-sm text-label-sm text-on-surface-variant">
 <span className="flex items-center gap-1 text-tertiary">
 <Icon name="check" className="text-[14px]" /> Node Routing Controls
           </span>
 <span className="flex items-center gap-1 text-tertiary">
-<Icon name="check" className="text-[14px]" /> Escrow Re-allocation
+<Icon name="check" className="text-[14px]" /> Payment Re-allocation
           </span>
 <span className="flex items-center gap-1 text-tertiary">
 <Icon name="check" className="text-[14px]" /> Staff Revocation

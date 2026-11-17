@@ -47,9 +47,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="">Promos &amp; Vouchers</span>
 <span className="bg-secondary/15 text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">1</span>
 </button>
-<button className="tab-btn flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap active:bg-surface-container-high transition-all duration-200" id="tab-escrow" onClick={() => alertToast('Action triggered')}>
+<button className="tab-btn flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap active:bg-surface-container-high transition-all duration-200" id="tab-payment" onClick={() => alertToast('Action triggered')}>
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span className="">Escrow Alerts</span>
+<span className="">Payment Alerts</span>
 </button>
 </div>
 
@@ -107,7 +107,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="mt-2.5 flex items-center justify-between">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
 <Icon name="lock" className="text-[13px] text-tertiary" />
-              Swift Escrow Protected
+              Payment Protected
             </span>
 <span className="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
 </div>
@@ -191,7 +191,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between pt-1">
 <div className="flex items-center gap-1.5 text-on-surface-variant">
 <Icon name="security" className="text-[16px] text-tertiary" />
-<span className="font-label-sm text-label-sm">Funds held safely in escrow</span>
+<span className="font-label-sm text-label-sm">Funds held safely held until delivery</span>
 </div>
 <button className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm active:bg-surface-container-high transition-colors" onClick={() => alertToast('Action triggered')}>
 <Icon name="call" className="text-[16px] text-primary" />
@@ -234,7 +234,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </span>
 <div>
 <span className="font-label-sm text-label-sm text-outline font-bold uppercase tracking-wider block">Order #SW-87110</span>
-<span className="font-label-md text-label-md text-on-surface font-bold">Escrow Released &amp; Completed</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Paid to seller &amp; Completed</span>
 </div>
 </div>
 <span className="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Settled</span>

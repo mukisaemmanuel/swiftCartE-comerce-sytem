@@ -69,7 +69,7 @@ export const adminRoutes: RouteDefinition[] = [
   },
   {
     path: "/admin/escrow-disputes-admin",
-    name: "Escrow Disputes Admin",
+    name: "Payments & Disputes Admin",
     role: "admin",
     designFiles: {
       mobile: "design/mobile/admin/escrow_disputes_swiftcart_admin",

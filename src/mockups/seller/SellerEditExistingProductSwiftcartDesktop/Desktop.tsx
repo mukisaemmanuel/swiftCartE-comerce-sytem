@@ -147,7 +147,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <label className="flex items-center gap-3 p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer select-none">
 <input checked={true} className="w-4 h-4 rounded text-primary accent-primary" type="checkbox" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wide">URSB &amp; EFRIS VAT Registered SKU</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wide">URSB &amp; E-INVOICE Tax Registered SKU</span>
 <span className="font-body-sm text-[11px] text-on-surface-variant">Automated fiscal e-receipt receipt generated upon buyer payment release.</span>
 </div>
 </label>
@@ -410,7 +410,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-on-surface">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Package Standard</span>
-<span className="font-label-sm text-label-sm font-bold">Tamper-Evident Bag (Size M)</span>
+<span className="font-label-sm text-label-sm font-bold">Sealed Package Bag (Size M)</span>
 </div>
 <div className="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-on-surface">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Origin Warehouse Hub</span>
@@ -442,7 +442,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-currency-code text-currency-code text-error whitespace-nowrap">- UGX 8,550</span>
 </div>
 <div className="flex justify-between items-center text-body-sm font-body-sm">
-<span className="text-on-surface-variant">Escrow Transit Insurance</span>
+<span className="text-on-surface-variant">Payment Transit Insurance</span>
 <span className="font-currency-code text-currency-code text-error whitespace-nowrap">- UGX 1,710</span>
 </div>
 <div className="h-px bg-surface-variant my-1"></div>

@@ -94,7 +94,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="text-tertiary font-semibold">FREE (Promo)</span>
 </div>
 <div className="flex justify-between font-body-md text-body-md text-on-surface-variant">
-<span>Escrow Protection Fee</span>
+<span>Payment Protection Fee</span>
 <span className="text-tertiary font-semibold">Waived</span>
 </div>
 <div className="my-1 h-px bg-surface-container"></div>
@@ -116,7 +116,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             MTN
           </div>
 <span className="font-label-sm text-label-sm font-bold text-black tracking-tight">
-            MTN Mobile Money Gateway • Bank of Uganda Regulated
+            MTN Mobile Money Gateway • Pesapal Verified Rails
           </span>
 </div>
 <div className="flex items-center gap-1 text-black/80 font-label-sm text-label-sm font-semibold">
@@ -136,7 +136,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="absolute inset-2 rounded-full bg-[#FFCC00]/25 animate-pulse"></div>
 <div className="relative w-16 h-16 rounded-2xl bg-surface-container flex flex-col items-center justify-center shadow-md">
 <Icon name="smartphone" className="text-[#b02f00] text-[28px]" />
-<span className="font-label-sm text-[9px] font-extrabold text-[#541200] leading-none mt-0.5 tracking-tight">*165# SENT</span>
+<span className="font-label-sm text-[9px] font-extrabold text-[#541200] leading-none mt-0.5 tracking-tight">Mobile prompt SENT</span>
 </div>
 
 <span className="absolute top-1 right-2 flex h-3 w-3">
@@ -167,9 +167,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-2 gap-3 pt-1 text-left">
 <div>
-<span className="font-label-sm text-label-sm text-secondary block">Escrow Merchant</span>
+<span className="font-label-sm text-label-sm text-secondary block">Payment Merchant</span>
 <span className="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1 truncate">
-                SwiftCart Escrow Vault
+                SwiftCart Payment Reserve
               </span>
 <span className="font-label-sm text-[10px] text-secondary">Reg #SC-PAY-9488</span>
 </div>
@@ -201,7 +201,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-start gap-2.5">
 <span className="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
 <p className="font-body-sm text-body-sm text-on-surface font-medium leading-tight">
-                Tap <span className="font-bold text-on-surface">"Send / OK"</span> to approve the escrow authorization.
+                Tap <span className="font-bold text-on-surface">"Send / OK"</span> to approve the payment authorization.
               </p>
 </div>
 </div>
@@ -239,14 +239,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="mt-4 pt-3 flex items-start gap-2 text-left bg-surface-container-lowest">
 <Icon name="verified_user" className="text-tertiary text-[18px] shrink-0 mt-0.5" />
 <p className="font-body-sm text-[11px] leading-relaxed text-secondary">
-<span className="font-semibold text-on-surface">100% Escrow Protection:</span> No funds leave your account until you enter your confidential PIN. Money remains safely locked in the SwiftCart Vault until Dennis inspects and verifies delivery.
+<span className="font-semibold text-on-surface">100% Payment Protection:</span> No funds leave your account until you enter your confidential PIN. Money remains safely locked in the SwiftCart reserve until Dennis inspects and verifies delivery.
           </p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div></main><footer className="w-full bg-surface-container-lowest mt-12 shadow-[0_-2px_12px_rgba(15,23,42,0.03)]"><div className="max-w-6xl mx-auto px-4 py-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8"><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-primary"><Icon name="verified_user" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary"><Icon name="two_wheeler" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Direct to home, office, or central pickup hub</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary"><Icon name="assignment_return" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Hassle-free refunds across 42 pickup spots</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4"><div className="flex flex-wrap gap-6 font-label-md text-label-md text-on-surface-variant"><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Kampala Pickup Hubs</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MoMo Payment Guarantee</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Uganda Merchant Portal</a><a className="hover:text-on-surface transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; WhatsApp Support</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Registered under URA &amp; NITA-U. All rights reserved.</p></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-lowest mt-12 shadow-[0_-2px_12px_rgba(15,23,42,0.03)]"><div className="max-w-6xl mx-auto px-4 py-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8"><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-primary"><Icon name="verified_user" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary"><Icon name="two_wheeler" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Direct to home, office, or central pickup hub</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary"><Icon name="assignment_return" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Hassle-free refunds across 42 pickup spots</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4"><div className="flex flex-wrap gap-6 font-label-md text-label-md text-on-surface-variant"><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Kampala Pickup Hubs</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MoMo Payment Guarantee</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Uganda Merchant Portal</a><a className="hover:text-on-surface transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; WhatsApp Support</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Registered under Tax &amp; NITA-U. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

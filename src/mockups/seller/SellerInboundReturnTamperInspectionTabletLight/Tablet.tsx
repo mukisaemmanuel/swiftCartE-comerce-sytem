@@ -22,7 +22,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Escrow Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full gap-space-md">
+      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Payment Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full gap-space-md">
 
 <section className="bg-surface-container-low rounded-xl p-space-md shadow-sm">
 <div className="flex flex-wrap items-center justify-between gap-space-sm">
@@ -46,7 +46,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-1.5 bg-surface-container-highest px-3 py-1.5 rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-          Escrow Shield Active
+          Payment Protection Active
         </div>
 <div className="flex items-center gap-1.5 bg-primary-fixed text-on-primary-fixed-variant px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-bold">
 <Icon name="schedule" className="text-[16px] animate-pulse" />
@@ -71,7 +71,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-body-sm text-secondary truncate">SoundCore Space One ANC</span>
 </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Secured Escrow Value</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Secured Payment Value</span>
 <span className="font-label-lg text-label-lg font-extrabold text-primary whitespace-nowrap">UGX 248,500</span>
 <span className="font-label-sm text-label-sm text-tertiary font-medium">Locked in SwiftVault</span>
 </div>
@@ -103,7 +103,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-xs">
 <div className="flex items-center gap-2">
 <span className="w-2.5 h-6 rounded-full bg-primary-container inline-block"></span>
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold">Tamper Bag Security Check</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold">package bag Security Check</h2>
 </div>
 <span className="bg-surface-container px-2.5 py-1 rounded-md font-label-sm text-label-sm font-bold text-secondary">Protocol 4.2</span>
 </div>
@@ -233,7 +233,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="check_circle" className="text-[18px]" />
 </div>
 <span className="font-label-sm text-label-sm font-bold mt-1">Like New / Resellable</span>
-<span className="font-body-sm text-body-sm text-on-primary-fixed-variant mt-0.5 opacity-90">100% Escrow Refund to Buyer</span>
+<span className="font-body-sm text-body-sm text-on-primary-fixed-variant mt-0.5 opacity-90">100% Payment Refund to Buyer</span>
 </div>
 <div className="p-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col justify-between cursor-pointer transition-colors">
 <div className="flex items-center justify-between">
@@ -249,7 +249,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="radio_button_unchecked" className="text-[18px] text-secondary" />
 </div>
 <span className="font-label-sm text-label-sm font-bold mt-1">Damaged / Missing Parts</span>
-<span className="font-body-sm text-body-sm text-secondary mt-0.5">Escrow Dispute Freeze</span>
+<span className="font-body-sm text-body-sm text-secondary mt-0.5">Payment Dispute Freeze</span>
 </div>
 </div>
 </div>
@@ -262,14 +262,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-xs">
 <div className="flex items-center gap-2">
 <span className="w-2.5 h-6 rounded-full bg-tertiary-container inline-block"></span>
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold">Escrow Disposition</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-extrabold">Payment Disposition</h2>
 </div>
-<span className="bg-surface-container px-2.5 py-1 rounded-md font-label-sm text-label-sm font-mono font-bold text-secondary">Vault ESC-UG-2024-991</span>
+<span className="bg-surface-container px-2.5 py-1 rounded-md font-label-sm text-label-sm font-mono font-bold text-secondary">reserve ESC-UG-2024-991</span>
 </div>
 
 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Current Escrow Balance Locked</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Current Pending clearance Locked</span>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold bg-surface-container-lowest px-2 py-0.5 rounded">
 <Icon name="lock" className="text-[14px]" />
               Protected
@@ -279,7 +279,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             UGX 248,500
           </div>
 <p className="font-body-sm text-body-sm text-secondary mt-1">
-            MTN MoMo Escrow Lock guarantee active. Safe to disburse upon inbound scan completion.
+            MTN momo payment Lock guarantee active. Safe to disburse upon inbound scan completion.
           </p>
 </div>
 
@@ -289,7 +289,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="radio_button_checked" className="text-primary text-[20px]" />
-<span className="font-label-md text-label-md font-extrabold text-on-surface">Accept Item &amp; Authorize Buyer Escrow Refund</span>
+<span className="font-label-md text-label-md font-extrabold text-on-surface">Accept Item &amp; Authorize Buyer Payment Refund</span>
 </div>
 <span className="font-label-md text-label-md font-extrabold text-primary whitespace-nowrap">UGX 248,500</span>
 </div>
@@ -362,7 +362,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>TXID: 0x9AF8...20B</span>
 <span className="flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-            Immutable Escrow Audit Enforced
+            Immutable Payment Audit Enforced
           </span>
 </div>
 </div>

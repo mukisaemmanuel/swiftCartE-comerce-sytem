@@ -44,14 +44,14 @@ export const RiderCodeLockedSwiftcartSecurity: React.FC<RiderCodeLockedSwiftcart
 <div className="bg-surface-container rounded-xl p-space-md shadow-sm">
 <div className="flex items-center gap-space-xs mb-1">
 <Icon name="shield_with_heart" className="text-primary text-[20px]" />
-<span className="font-label-lg text-label-lg text-on-surface">Escrow &amp; Asset Protection Guard</span>
+<span className="font-label-lg text-label-lg text-on-surface">Payment &amp; Asset Protection Guard</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-snug">
-        Automated freeze triggered to protect buyer escrow funds of <span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 248,500</span> and merchant inventory against unauthorized physical handover.
+        Automated freeze triggered to protect buyer held funds of <span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 248,500</span> and merchant inventory against unauthorized physical handover.
       </p>
 <div className="mt-space-sm flex items-center gap-2 bg-surface-container-lowest rounded-lg p-2 shadow-sm">
 <Icon name="verified_user" className="text-tertiary-container text-[18px]" />
-<span className="font-label-sm text-label-sm text-on-surface">Payout locked until cryptographic or dispatch verification completes.</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payout locked until verified or dispatch verification completes.</span>
 </div>
 </div>
 </div>
@@ -115,7 +115,7 @@ export const RiderCodeLockedSwiftcartSecurity: React.FC<RiderCodeLockedSwiftcart
 <div className="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md flex-shrink-0 mt-0.5">2</div>
 <div className="min-w-0">
 <span className="font-label-lg text-label-lg text-on-surface block">Stow Sealed Bag Securely</span>
-<p className="font-body-sm text-body-sm text-secondary leading-snug">Place item back into top courier lock-box. Verify tamper seal remains uncompromised.</p>
+<p className="font-body-sm text-body-sm text-secondary leading-snug">Place item back into top courier lock-box. Verify package seal remains uncompromised.</p>
 </div>
 </div>
 <div className="flex items-start gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">

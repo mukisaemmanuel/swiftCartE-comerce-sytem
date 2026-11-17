@@ -28,14 +28,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-sm text-on-surface">
 <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm uppercase font-bold tracking-tight">
 <span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow animate-ping"></span>
-        Escrow Relay Live
+        Payment Relay Live
       </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Connected to Bank of Uganda Regulatory Sandbox Node • Latency 18ms</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Connected to Pesapal Regulatory Sandbox Node • Latency 18ms</span>
 </div>
 <div className="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
 <span className="flex items-center gap-1"><Icon name="electric_moped" className="text-action-gradient-start text-[14px]" /> SafeBoda API: Operational</span>
 <span className="text-surface-container-highest">/</span>
-<span className="flex items-center gap-1"><Icon name="payments" className="text-mtn-yellow text-[14px]" /> MTN MoMo &amp; Airtel Escrow: Synced</span>
+<span className="flex items-center gap-1"><Icon name="payments" className="text-mtn-yellow text-[14px]" /> MTN MoMo &amp; Airtel Payment: Synced</span>
 </div>
 </div>
 
@@ -146,7 +146,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/60 font-bold">Package</span>
 <span className="text-on-surface font-medium truncate">1x SoundCore Space One ANC</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Secured
+<Icon name="verified_user" className="text-[13px]" /> payment secured
                   </span>
 </div>
 
@@ -185,7 +185,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/60 font-bold">Package</span>
 <span className="text-on-surface font-medium truncate">1x Anker 65W GaN Fast Charger</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Secured
+<Icon name="verified_user" className="text-[13px]" /> payment secured
                   </span>
 </div>
 <div className="flex flex-col md:items-end justify-center">
@@ -262,7 +262,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/60 font-bold">Package</span>
 <span className="text-on-surface font-medium truncate">1x SoundCore Liberty 4 Pro</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Secured
+<Icon name="verified_user" className="text-[13px]" /> payment secured
                   </span>
 </div>
 <div className="flex flex-col md:items-end justify-center">
@@ -336,7 +336,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-code-display text-price-display text-on-surface font-extrabold tracking-wider">#SC-98241</span>
 <span className="px-2 py-0.5 rounded-full bg-action-gradient-start/15 text-action-gradient-start font-label-sm text-label-sm font-bold uppercase">SafeBoda Express</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Placed: Today, 14:04 EAT • Direct Escrow ID: #ESC-UG-88192-KC</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Placed: Today, 14:04 EAT • Direct Payment ID: #ESC-UG-88192-KC</span>
 </div>
 <div className="flex items-center gap-2">
 <button className="p-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all active:scale-95 shadow-sm" title="Print Packing Slip" type="button">
@@ -355,8 +355,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col gap-1">
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 380,000 Escrow Custody</span>
-<span className="px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">Bank of Uganda Sandbox</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 380,000 payment holding</span>
+<span className="px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold">Pesapal Sandbox</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                 Funds are secured and will release automatically when buyer <span className="text-on-surface font-bold">Ronald M.</span> inspects the package and delivers the cryptographically signed 6-digit OTP delivery token to SafeBoda courier <span className="text-on-surface font-bold">Brian Kizito</span>.
@@ -468,7 +468,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">
 <div className="flex items-center gap-1">
-<span>Platform Escrow Fee (3.0%)</span>
+<span>Platform Processing Fee (3.0%)</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant/70">URSB Sandbox</span>
 </div>
 <span className="text-danger-penalty font-medium whitespace-nowrap">- UGX 11,400</span>

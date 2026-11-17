@@ -87,7 +87,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
 <Icon name="key" className="text-[16px] text-primary" />
-        Dual-key consensus required for root
+        two-step admin consensus required for root
       </div>
 </div>
 
@@ -119,7 +119,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-4 pt-3 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
 <Icon name="fingerprint" className="text-[16px] text-tertiary" />
-        Hardware token / FIDO2 biometric
+        Two-Factor Authenticator / Two-Factor Authenticator biometric
       </div>
 </div>
 </div>
@@ -185,7 +185,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-4 px-space-md">
 <div className="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md">
 <Icon name="token" className="text-[16px]" />
-                FIDO2 Hardware Key
+                Two-Factor Authenticator Hardware Key
               </div>
 </td>
 <td className="py-4 px-space-md">
@@ -208,7 +208,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-1.5">
-<span className="font-label-lg text-label-lg text-on-surface font-bold truncate">Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold truncate">Denis Mukasa</span>
 <span className="px-1.5 py-0.2 rounded bg-primary-container text-on-primary-container font-label-sm text-[9px] uppercase tracking-wider font-extrabold">Escalation Pending</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">patricia.n@swiftcart.ug • <span className="font-bold text-on-surface">ADM-004</span></span>
@@ -218,7 +218,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-4 px-space-md">
 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
 <Icon name="gavel" className="text-[13px] text-secondary" />
-                Lead Arbitration Officer
+                Lead dispute reviewers
               </span>
 </td>
 <td className="py-4 px-space-md font-body-md text-body-md">
@@ -261,7 +261,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               </span>
 </td>
 <td className="py-4 px-space-md font-body-md text-body-md">
-              Stanbic Escrow Desk
+              Pesapal Payments Desk
             </td>
 <td className="py-4 px-space-md">
 <div className="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md">
@@ -400,7 +400,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="warning" className="text-error text-[20px] shrink-0 mt-0.5" />
 <div className="flex flex-col font-body-sm text-body-sm">
 <strong className="font-label-md text-label-md text-on-error-container">High-Consequence Action:</strong>
-<span>Promoting to Super Admin grants unrestricted access to Bank of Uganda statutory escrow accounts, live telecom API settlement nodes, and merchant blacklist execution.</span>
+<span>Promoting to Super Admin grants unrestricted access to Pesapal Secure Settlement payment accounts, live telecom API settlement nodes, and merchant blacklist execution.</span>
 </div>
 </div>
 
@@ -410,10 +410,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="space-y-1">
 <span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Target Staff Officer</span>
 <div className="flex items-center gap-2">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">Denis Mukasa</span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">ADM-004</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant block">Current: Lead Arbitration Officer</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant block">Current: Lead dispute reviewers</span>
 </div>
 <div className="space-y-1">
 <span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Target Escalation Role</span>
@@ -430,15 +430,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="grid grid-cols-2 gap-2">
 <div className="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
 <Icon name="power_settings_new" className="text-primary text-[18px]" />
-<span>Emergency System Killswitch</span>
+<span>Emergency System platform pause</span>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
 <Icon name="key" className="text-primary text-[18px]" />
-<span>Telecom Root Key Rotation</span>
+<span>Telecom Gateway Token Refresh</span>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
 <Icon name="account_balance_wallet" className="text-primary text-[18px]" />
-<span>Escrow Pool Manual Override</span>
+<span>settlement pool Manual Override</span>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
 <Icon name="tune" className="text-primary text-[18px]" />
@@ -449,9 +449,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="space-y-1.5">
 <label className="block font-label-md text-label-md text-on-surface font-bold">
-            Step 1: Statutory Reason for Role Escalation <span className="text-primary">*</span>
+            Step 1: verified platform Reason for Role Escalation <span className="text-primary">*</span>
 </label>
-<input className="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Appointed Interim Chief Compliance Officer per Board Resolution BR-2025-09" />
+<input className="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Appointed Interim Operations Lead per Staff Assignment BR-2025-09" />
 <span className="font-body-sm text-body-sm text-on-surface-variant">Logged in the immutable URSB compliance and governance audit trail.</span>
 </div>
 
@@ -460,7 +460,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <label className="block font-label-md text-label-md text-on-surface font-bold">
               Step 2: Dual Super Admin Consensus Protocol
             </label>
-<span className="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Dual-Key Required</span>
+<span className="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">two-step admin Required</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 
@@ -473,7 +473,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="space-y-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant font-bold">Kizito Ronald (FIDO2 / 6-digit OTP)</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant font-bold">Kizito Ronald (Two-Factor Authenticator / 6-digit OTP)</span>
 <div className="relative">
 <input className="w-full px-space-md py-2.5 bg-surface-container-low text-on-surface font-headline-sm text-headline-sm tracking-wider rounded-xl outline-none focus:ring-2 focus:ring-primary-container" maxLength={7} placeholder="e.g. 849 201" type="text" value="849 201" />
 <Icon name="verified" className="absolute right-3 top-2.5 text-tertiary text-[20px]" />

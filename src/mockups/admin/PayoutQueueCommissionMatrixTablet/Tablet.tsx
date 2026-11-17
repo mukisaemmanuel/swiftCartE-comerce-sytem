@@ -38,7 +38,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-sm w-full md:w-auto justify-end">
 <div className="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface">
 <Icon name="account_balance" className="text-emerald-escrow text-[16px]" />
-<span className="font-label-sm text-label-sm">Stanbic Node: Synchronized</span>
+<span className="font-label-sm text-label-sm">Pesapal Node: Synchronized</span>
 </div>
 <div className="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface">
 <Icon name="format_image_left" className="text-tertiary text-[16px]" />
@@ -92,7 +92,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
 <div className="flex items-center justify-between mb-space-xs">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow In Custody</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment on Hold</span>
 <Icon name="lock" className="text-tertiary text-[20px]" />
 </div>
 <div className="flex items-baseline gap-space-xs">
@@ -100,7 +100,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 mt-space-sm pt-space-xs text-on-surface-variant">
 <Icon name="account_balance_wallet" className="text-emerald-escrow text-[14px]" />
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Stanbic BoU Statutory Trustee #90302</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Pesapal Settlement Trustee #90302</span>
 </div>
 </div>
 
@@ -232,7 +232,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-start gap-space-xs">
 <Icon name="gavel" className="text-amber-warning text-[18px] shrink-0" />
 <p className="font-body-sm text-body-sm text-on-surface">
-<strong className="text-error">Triggered:</strong> Duplicate TIN registration detected across merchant node #M-8812 &amp; #M-4421. Hub Tamper Seal Flagged on 3 parcels.
+<strong className="text-error">Triggered:</strong> Duplicate TIN registration detected across merchant node #M-8812 &amp; #M-4421. Hub package seal Flagged on 3 parcels.
               </p>
 </div>
 <div className="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
@@ -325,12 +325,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-sm w-full sm:w-auto">
 <button className="px-space-md py-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs w-full sm:w-auto transition-colors">
 <Icon name="download" className="text-[18px]" />
-            Export BoU Settlement CSV
+            Export Pesapal Settlement CSV
           </button>
 </div>
 <button className="w-full sm:w-auto px-space-xl py-3 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:scale-[1.01] active:scale-[0.98] transition-all">
 <Icon name="send_and_archive" className="text-[20px]" />
-          Authorize Manual Escrow Sweep (UGX 37,360,000)
+          Authorize Manual Payment Sweep (UGX 37,360,000)
         </button>
 </div>
 </section>
@@ -343,7 +343,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="percent" className="text-primary-container text-[22px]" />
 <div className="flex flex-col">
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Category Commission Matrix</h3>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Statutory Revenue Schedule</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">verified platform Revenue Schedule</span>
 </div>
 </div>
 <button className="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" id="toggle-editor-btn">
@@ -379,7 +379,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">FMCG &amp; Groceries</span>
-<span className="font-label-sm text-label-sm text-tertiary">Essential goods statutory tier</span>
+<span className="font-label-sm text-label-sm text-tertiary">Essential goods verified platform tier</span>
 </div>
 <div className="flex items-center gap-space-sm">
 <span className="font-headline-sm text-headline-sm text-tertiary font-extrabold">4.0%</span>
@@ -417,7 +417,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="price_change" className="text-action-gradient-start text-[20px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface">Stage Commission Adjustment</span>
 </div>
-<span className="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">Statutory Ledger Staging</span>
+<span className="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">System Audit Ledger Staging</span>
 </div>
 <form className="flex flex-col gap-space-md" onSubmit={(e) => e.preventDefault()}>
 
@@ -480,9 +480,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm">
 <Icon name="verified_user" className="text-emerald-escrow text-[22px] shrink-0 mt-0.5" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">BoU Regulatory Compliance Certification</span>
+<span className="font-label-md text-label-md text-on-surface">Pesapal Regulatory Compliance Certification</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-            All platform commission deductions and escrow disbursements strictly conform to the <strong>Bank of Uganda National Payment Systems (NPS) Act 2020 §24</strong>. Trust ledger reconciliations are reported every 24 hours to the Central Bank NPS Supervisor.
+            All platform commission deductions and Seller Payouts strictly conform to the <strong>Pesapal Payment Guidelines</strong>. Trust ledger reconciliations are reported every 24 hours to the Central Bank Pesapal Rails Supervisor.
           </p>
 </div>
 </div>
@@ -490,7 +490,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></main>
-<footer className="w-full bg-surface-container-low py-space-md mt-auto shadow-[0_-4px_16px_rgba(0,0,0,0.3)]"><div className="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 SwiftCart Uganda Ltd • Bank of Uganda Regulated National Payment Operator</span><div className="flex items-center gap-space-md font-label-sm text-label-sm"><span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-tertiary"></span>Latency: 28ms</span><span>Enclave Node: EBB-DC-04</span><span>Build v4.18.2-prod</span></div></div></footer>
+<footer className="w-full bg-surface-container-low py-space-md mt-auto shadow-[0_-4px_16px_rgba(0,0,0,0.3)]"><div className="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 SwiftCart Uganda Ltd • Digital E-Commerce Platform Powered by Pesapal</span><div className="flex items-center gap-space-md font-label-sm text-label-sm"><span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-tertiary"></span>Latency: 28ms</span><span>Server Node: EBB-DC-04</span><span>Build v4.18.2-prod</span></div></div></footer>
     </div>
   );
 };

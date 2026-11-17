@@ -143,7 +143,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="space-y-1">
 <label className="font-label-md text-label-md text-on-surface font-bold flex items-center justify-between" htmlFor="plate-number">
 <span>Motorcycle Plate Number</span>
-<span className="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">URA Validated Format</span>
+<span className="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">Tax Validated Format</span>
 </label>
 <div className="relative flex items-center">
 
@@ -185,13 +185,13 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Dispatch Compliance Terms</span>
 
 <label className="flex items-start gap-space-sm cursor-pointer select-none">
-<input checked={true} className="sr-only peer" id="terms-escrow" type="checkbox" />
+<input checked={true} className="sr-only peer" id="terms-payment" type="checkbox" />
 <div className="w-5 h-5 mt-0.5 rounded bg-surface-container-high peer-checked:bg-primary-container peer-checked:text-on-primary flex items-center justify-center text-transparent transition-all shrink-0">
 <Icon name="check" className="text-[16px] font-black" />
 </div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface font-semibold leading-tight">
-                Rider agrees to SwiftCart escrow delivery code verification protocol
+                Rider agrees to SwiftCart Protection delivery code verification protocol
               </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">
                 Funds released instantly upon customer 4-digit PIN hand-off confirmation.

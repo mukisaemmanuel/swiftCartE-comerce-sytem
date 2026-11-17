@@ -70,10 +70,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-2 text-tertiary">
 <Icon name="verified_user" className="text-base" />
-<span className="font-label-md text-label-md">FIDO2 Multi-Tenant Keyring Synchronized</span>
+<span className="font-label-md text-label-md">Two-Factor Authenticator Multi-Tenant Keyring Synchronized</span>
 </div>
 <span className="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">•</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Bank of Uganda Statutory Dual-Approval Policy: <strong className="text-on-surface font-semibold">Active Enforced</strong></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Pesapal Secure Settlement Dual-Approval Policy: <strong className="text-on-surface font-semibold">Active Enforced</strong></span>
 </div>
 <div className="flex items-center gap-space-sm text-on-surface-variant font-code-display text-label-sm">
 <span>SESSION HASH:</span>
@@ -110,7 +110,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-sm bg-surface-container/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Dual-key consensus required</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">two-step admin consensus required</span>
 <span className="px-1.5 py-0.5 rounded bg-surface-variant text-on-surface font-label-sm text-label-sm font-bold">Strict 2/3</span>
 </div>
 </div>
@@ -142,7 +142,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-sm bg-surface-container/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Hardware key or FIDO2 biometric</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Hardware key or Two-Factor Authenticator biometric</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold">Enforced</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-space-md px-space-lg">
 <div className="inline-flex items-center gap-1.5 text-tertiary">
 <Icon name="usb" className="text-base" />
-<span className="font-label-md text-label-md">FIDO2 Hardware Key</span>
+<span className="font-label-md text-label-md">Two-Factor Authenticator Hardware Key</span>
 </div>
 </td>
 <td className="py-space-md px-space-lg">
@@ -243,7 +243,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                   </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-2">
-<span className="font-label-lg text-label-lg text-on-surface font-bold truncate">Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold truncate">Denis Mukasa</span>
 <span className="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-display text-label-sm font-bold">ADM-004</span>
 <span className="px-1.5 py-0.5 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm uppercase font-bold">Escalation Queued</span>
 </div>
@@ -254,7 +254,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-space-md px-space-lg">
 <span className="px-2.5 py-1 rounded-md bg-secondary-container/60 text-secondary-fixed font-label-md text-label-md font-semibold inline-flex items-center gap-1">
 <Icon name="gavel" className="text-sm" />
-                  Lead Arbitration Officer
+                  Lead dispute reviewers
                 </span>
 </td>
 <td className="py-space-md px-space-lg">
@@ -305,7 +305,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-space-md px-space-lg">
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface font-semibold">Stanbic Escrow Desk</span>
+<span className="font-label-md text-label-md text-on-surface font-semibold">Pesapal Payments Desk</span>
 <span className="text-on-surface-variant font-body-sm text-body-sm">Crested Towers Level 8</span>
 </div>
 </td>
@@ -463,10 +463,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">Denis Mukasa</span>
 <span className="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-display text-label-sm font-bold">ADM-004</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Current: <strong className="text-on-surface">Lead Arbitration Officer</strong></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Current: <strong className="text-on-surface">Lead dispute reviewers</strong></span>
 </div>
 </div>
 <div className="flex items-center gap-2 font-label-md text-label-md">
@@ -483,7 +483,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col gap-1">
 <span className="font-label-md text-label-md text-danger-penalty font-bold uppercase tracking-wide">High-Consequence Action</span>
 <p className="font-body-sm text-body-sm text-on-surface">
-              Promoting to Super Admin grants unrestricted access to Bank of Uganda statutory escrow accounts, Emergency Killswitch, Root Key Rotation, and Fee Schedules.
+              Promoting to Super Admin grants unrestricted access to Pesapal Secure Settlement payment accounts, Emergency Platform Pause, System Token Refresh, and Fee Schedules.
             </p>
 </div>
 </div>
@@ -496,8 +496,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </label>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Governance Audit Record</span>
 </div>
-<textarea className="w-full bg-surface-container text-on-surface font-body-md text-body-md p-space-md rounded-xl focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant resize-none" placeholder="Provide governance rationale or board minutes reference..." rows={2}>Appointed Interim Chief Compliance Officer per Board Resolution BR-2025-09</textarea>
-<span className="font-body-sm text-body-sm text-on-surface-variant">This statement is immutably written to the cryptographic audit trail UG-CENTRAL-LEDGER.</span>
+<textarea className="w-full bg-surface-container text-on-surface font-body-md text-body-md p-space-md rounded-xl focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant resize-none" placeholder="Provide governance rationale or board minutes reference..." rows={2}>Appointed Interim Operations Lead per Staff Assignment BR-2025-09</textarea>
+<span className="font-body-sm text-body-sm text-on-surface-variant">This statement is immutably written to the verified audit trail UG-CENTRAL-LEDGER.</span>
 </div>
 
 <div className="p-space-md bg-surface-container rounded-xl flex flex-col gap-space-md">
@@ -531,7 +531,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface font-bold">Secondary Super Admin</span>
 <span className="font-body-sm text-body-sm text-amber-warning flex items-center gap-1">
 <Icon name="pending" className="text-xs" />
-                  Hardware Token Required
+                  Two-Factor Authenticator Required
                 </span>
 </div>
 </div>
@@ -546,7 +546,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex flex-col gap-1">
-<label className="font-label-sm text-label-sm text-on-surface-variant font-bold">6-Digit Hardware OTP (FIDO2)</label>
+<label className="font-label-sm text-label-sm text-on-surface-variant font-bold">6-Digit Hardware OTP (Two-Factor Authenticator)</label>
 <div className="relative flex items-center">
 <Icon name="dialpad" className="absolute left-3 text-on-surface-variant text-[18px]" />
 <input className="w-full bg-surface-container-high text-on-surface font-code-display text-body-md tracking-widest pl-9 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-primary font-bold" maxLength={6} type="text" value="782 914" />

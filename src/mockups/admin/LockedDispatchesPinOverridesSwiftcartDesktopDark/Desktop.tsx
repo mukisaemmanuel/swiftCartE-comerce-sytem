@@ -27,14 +27,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="w-full bg-amber-warning/15 px-margin-desktop py-space-xs flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-sm">
 <Icon name="gavel" className="text-amber-warning text-[18px]" />
-<span className="font-label-md text-label-md text-on-surface">SUPERVISORY PIN OVERRIDE PROTOCOL ACTIVE • HIGH-CONSEQUENCE ESCROW DISPATCH VAULT</span>
+<span className="font-label-md text-label-md text-on-surface">SUPERVISORY PIN OVERRIDE PROTOCOL ACTIVE • HIGH-CONSEQUENCE PAYMENT DISPATCH VERIFICATION</span>
 </div>
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-space-xs">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
 <span className="font-label-sm text-label-sm text-tertiary">Uganda Telecom Rails Nominal</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Ledger Hash: 0x98EF••44B1</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Log Ref: #LG-98EF44B1</span>
 </div>
 </div>
 <div className="p-margin-desktop space-y-space-xl">
@@ -49,7 +49,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Locked Dispatches &amp; Supervisory PIN Overrides</h1>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-4xl mt-1">
-            Emergency resolution console for deadlocked orders where 6-digit delivery code verification has failed, buyer phone is unreachable, or tamper seals are disputed at customer doorstep.
+            Emergency resolution console for deadlocked orders where 6-digit delivery code verification has failed, buyer phone is unreachable, or package seal are disputed at customer doorstep.
           </p>
 </div>
 <div className="flex items-center gap-space-sm shrink-0">
@@ -78,7 +78,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           Wrong Code Entered 3x (2)
         </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
-          Tamper Seal Disputed (1)
+          Package Seal Disputed (1)
         </button>
 </div>
 
@@ -98,7 +98,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </span>
 </div>
 <div className="font-price-display text-price-display text-error leading-none mb-1">6 Orders</div>
-<div className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 2,420,000 escrow value frozen at doorstep</div>
+<div className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 2,420,000 payment value frozen at doorstep</div>
 <div className="mt-space-md flex items-center gap-space-xs font-label-sm text-label-sm text-error">
 <span className="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
 <span>Doorstep deadlock SLA warning triggered</span>
@@ -193,7 +193,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-xs flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <span className="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Active
+<Icon name="verified_user" className="text-[12px]" /> holds active
                 </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Nakasero Hub</span>
 </div>
@@ -229,7 +229,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-xs flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <span className="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Active
+<Icon name="verified_user" className="text-[12px]" /> holds active
                 </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Kireka Hub</span>
 </div>
@@ -265,7 +265,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-xs flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <span className="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Active
+<Icon name="verified_user" className="text-[12px]" /> holds active
                 </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Old Kampala Hub</span>
 </div>
@@ -301,7 +301,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-xs flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <span className="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Active
+<Icon name="verified_user" className="text-[12px]" /> holds active
                 </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Entebbe Hub</span>
 </div>
@@ -327,7 +327,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs">
 <span className="px-space-sm py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase flex items-center gap-1">
-<Icon name="lock_reset" className="text-[14px]" /> Escrow Hold
+<Icon name="lock_reset" className="text-[14px]" /> Payment Hold
               </span>
 <span className="px-space-sm py-1 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="timer" className="text-[14px]" /> 14m On-Site
@@ -362,7 +362,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="font-body-sm text-body-sm text-on-surface truncate mt-0.5">Nike Air Force 1 '07 (42)</div>
 <div className="font-label-sm text-label-sm text-tertiary mt-1 flex items-center gap-1">
 <Icon name="account_balance" className="text-[14px]" />
-<span>BoU Escrow Account</span>
+<span>Pesapal Payment Hold Account</span>
 </div>
 </div>
 </div>
@@ -423,7 +423,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div>
 <span className="font-headline-sm text-headline-sm text-on-surface">Supervisory PIN Override Authorization</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Master escalation to trigger immediate courier handover and release escrow</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Master escalation to trigger immediate courier handover and release payment</p>
 </div>
 <span className="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">Super Admin Clearance</span>
 </div>
@@ -462,7 +462,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full h-11 px-space-md rounded-lg bg-surface-container-high text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-variant cursor-pointer shadow-sm">
 <option selected={true}>Customer Phone Battery Dead / Identity Verified In Person via National ID Card (NIRA)</option>
 <option>Buyer Traveling - Authorized Sibling / Family Handover with Official ID</option>
-<option>Tamper Seal Inspected Remotely by Supervisor &amp; Cleared for Doorstep Acceptance</option>
+<option>Package Seal Inspected Remotely by Supervisor &amp; Cleared for Doorstep Acceptance</option>
 <option>Uganda Telecom SMS Gateway Delay Verified via MoMo Gateway Admin</option>
 </select>
 <Icon name="arrow_drop_down" className="absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[20px]" />
@@ -478,7 +478,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pt-space-sm space-y-space-sm">
 <button className="w-full h-[52px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:opacity-95 active:scale-[0.99] transition-all" type="button">
 <Icon name="lock_open" className="text-[22px]" />
-<span>Authorize Supervisory PIN Override &amp; Release Escrow</span>
+<span>Authorize Supervisory PIN Override &amp; release payment</span>
 </button>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
 <button className="h-11 rounded-lg bg-amber-warning/20 hover:bg-amber-warning/30 text-amber-warning font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs transition-colors" type="button">
@@ -495,7 +495,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
 <Icon name="verified_user" className="text-primary text-[18px] shrink-0 mt-0.5" />
 <div className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-<span className="text-on-surface font-bold">Immutable Ledger Recording:</span> Action will be permanently recorded on immutable audit ledger under Officer Kizito Ronald (ID: ADM-04). Escrow of UGX 120,000 will settle to <span className="text-on-surface font-medium">Kikuubo Sneaker Shop</span> within normal 18:00 EAT clearing cycle.
+<span className="text-on-surface font-bold">Immutable Ledger Recording:</span> Action will be permanently recorded on immutable audit ledger under Officer Kizito Ronald (ID: ADM-04). Payment of UGX 120,000 will settle to <span className="text-on-surface font-medium">Kikuubo Sneaker Shop</span> within normal 18:00 EAT clearing cycle.
             </div>
 </div>
 </div>

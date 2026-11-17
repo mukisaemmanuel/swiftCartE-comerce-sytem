@@ -38,7 +38,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-on-surface-variant">
 <Icon name="search" className="text-[20px]" />
 </div>
-<input className="w-full h-12 pl-11 pr-space-md rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="supportSearchInput" placeholder="Search help topics, escrow rules, boda issues..." type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') onNavigate?.('/search?q=' + encodeURIComponent(searchQuery)); }} />
+<input className="w-full h-12 pl-11 pr-space-md rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="supportSearchInput" placeholder="Search help topics, payment rules, boda issues..." type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') onNavigate?.('/search?q=' + encodeURIComponent(searchQuery)); }} />
 </div>
 
 <div className="flex items-center gap-space-sm px-space-md py-space-xs bg-tertiary/10 rounded-full w-fit">
@@ -96,7 +96,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="smart_toy" className="text-[22px]" />
 </div>
 <div>
-<p className="font-label-lg text-label-lg text-on-surface">Escrow Officer</p>
+<p className="font-label-lg text-label-lg text-on-surface">Payments Officer</p>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Live dispute handling</p>
 </div>
 <span className="text-primary font-label-sm text-label-sm font-bold mt-space-md flex items-center gap-0.5">
@@ -132,10 +132,10 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center gap-1.5">
-<h2 className="font-headline-sm text-[15px] leading-[20px] text-on-surface font-bold truncate">Swift Escrow Protection</h2>
+<h2 className="font-headline-sm text-[15px] leading-[20px] text-on-surface font-bold truncate">swift payment protection</h2>
 <span className="px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[8px] uppercase font-black rounded">Shielded</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Escrow Protected: money held by SwiftCart until 6-digit Delivery Code confirmed</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Payment Protected: money held by SwiftCart until 6-digit Delivery Code confirmed</p>
 </div>
 <Icon name="chevron_right" className="text-on-surface-variant text-[20px]" />
 </div>
@@ -202,7 +202,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="expand_more" className="text-on-surface-variant text-[20px] transition-transform shrink-0 mt-0.5" />
 </button>
 <div className="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-space-md">
-<div className="pt-0 pb-space-md text-body-sm font-body-sm text-on-surface-variant"><div className="p-space-sm bg-surface-container-low rounded-lg mb-2 text-primary font-label-md text-label-md flex items-center gap-1.5"><Icon name="gpp_maybe" className="text-[18px]" /><span className="">Inspection Rule: Handover Inspection First!</span></div>Give this code to the rider ONLY at handover after you inspect your goods. Sharing the 6-digit Delivery Code releases escrow payment immediately to the merchant.</div>
+<div className="pt-0 pb-space-md text-body-sm font-body-sm text-on-surface-variant"><div className="p-space-sm bg-surface-container-low rounded-lg mb-2 text-primary font-label-md text-label-md flex items-center gap-1.5"><Icon name="gpp_maybe" className="text-[18px]" /><span className="">Inspection Rule: Handover Inspection First!</span></div>Give this code to the rider ONLY at handover after you inspect your goods. Sharing the 6-digit Delivery Code releases payment payment immediately to the merchant.</div>
 </div>
 </div>
 
@@ -215,11 +215,11 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="pt-0 pb-space-md text-body-sm font-body-sm text-on-surface-variant">
             If network latency delays the USSD popup on your screen:
             <ol className="list-decimal pl-5 mt-2 space-y-1">
-<li className="">Dial <span className="font-bold text-on-surface">*165#</span> on your MTN phone.</li>
+<li className="">Dial <span className="font-bold text-on-surface">Mobile prompt</span> on your MTN phone.</li>
 <li className="">Select option <strong>My Account</strong>, then choose <strong>Approvals</strong>.</li>
-<li className="">Enter your MoMo PIN to authorize the pending SwiftCart escrow hold.</li>
+<li className="">Enter your MoMo PIN to authorize the pending SwiftCart Protection hold.</li>
 </ol>
-            For Airtel Money, dial <span className="font-bold text-on-surface">*185#</span> &gt; <strong>Pending Approvals</strong>.
+            For Airtel Money, dial <span className="font-bold text-on-surface">Mobile prompt</span> &gt; <strong>Pending Approvals</strong>.
           </div>
 </div>
 </div>
@@ -251,7 +251,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 
 <div className="mt-space-xl px-margin">
-<div className="bg-surface-container-low rounded-2xl p-space-lg flex flex-col items-center text-center gap-space-sm shadow-sm"><div className="w-10 h-10 rounded-full bg-tertiary/15 text-tertiary flex items-center justify-center"><Icon name="verified_user" className="text-[22px]" /></div><div className="flex flex-col gap-0.5"><p className="font-label-lg text-label-lg text-on-surface">SwiftCart Consumer Protection Hub</p><p className="font-body-sm text-body-sm text-on-surface-variant max-w-[280px]">Escrow Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</p></div><div className="flex items-center gap-2 mt-space-xs text-[11px] font-label-md text-on-surface-variant"><span className="">KLA City Centre</span><span className="">•</span><span className="">Kampala, Uganda</span><span className="">•</span><span className="">v3.4.2</span></div></div>
+<div className="bg-surface-container-low rounded-2xl p-space-lg flex flex-col items-center text-center gap-space-sm shadow-sm"><div className="w-10 h-10 rounded-full bg-tertiary/15 text-tertiary flex items-center justify-center"><Icon name="verified_user" className="text-[22px]" /></div><div className="flex flex-col gap-0.5"><p className="font-label-lg text-label-lg text-on-surface">SwiftCart Consumer Protection Hub</p><p className="font-body-sm text-body-sm text-on-surface-variant max-w-[280px]">Payment Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</p></div><div className="flex items-center gap-2 mt-space-xs text-[11px] font-label-md text-on-surface-variant"><span className="">KLA City Centre</span><span className="">•</span><span className="">Kampala, Uganda</span><span className="">•</span><span className="">v3.4.2</span></div></div>
 </div>
 </div>
 </main>

@@ -33,11 +33,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm uppercase tracking-wider">Depot Intranet Mesh • William St Gateway</span>
 </div>
 <div className="h-3 w-[1px] bg-surface-container-highest"></div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Arbitration Oracle Node <span className="text-on-surface font-semibold">UG-ARB-04</span></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">dispute review Oracle Node <span className="text-on-surface font-semibold">UG-ARB-04</span></span>
 </div>
 <div className="flex items-center gap-space-sm text-emerald-escrow">
 <Icon name="lock_reset" className="text-[16px]" />
-<span className="font-label-sm text-label-sm tracking-wide">Automatic Escrow Restoral Engine Active</span>
+<span className="font-label-sm text-label-sm tracking-wide">Automatic Payment Restoral Engine Active</span>
 </div>
 </div>
 
@@ -105,12 +105,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden group">
 <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-escrow/10 rounded-full blur-xl pointer-events-none"></div>
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Reversal Rate</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Payment Reversal Rate</span>
 <Icon name="verified" className="text-emerald-escrow text-[22px]" />
 </div>
 <div className="flex flex-col">
 <span className="font-headline-lg text-headline-lg text-emerald-escrow font-extrabold tracking-tight">94.2%</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Refunded or held via arbitration</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Refunded or held via dispute review</span>
 </div>
 <div className="flex items-center gap-space-xs text-emerald-escrow">
 <Icon name="shield" className="text-[16px]" />
@@ -149,7 +149,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               Customer Refused / Expired (18)
             </button>
 <button className="px-space-md py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface whitespace-nowrap transition-all">
-              Arbitration Ruled (9)
+              dispute review Ruled (9)
             </button>
 <button className="px-space-md py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface whitespace-nowrap transition-all">
               Undeliverable / SafeBoda (11)
@@ -303,7 +303,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-space-md px-space-md">
 <div className="flex flex-col">
 <span className="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[11px] font-bold block w-fit">
-                      Arbitration Ruled
+                      dispute review Ruled
                     </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Wrong Color Shipped</span>
 </div>
@@ -430,7 +430,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-1.5">
 <span className="w-2.5 h-2.5 rounded-full bg-tertiary inline-block"></span>
-<span className="text-on-surface-variant">Arbitration Ruled</span>
+<span className="text-on-surface-variant">dispute review Ruled</span>
 </div>
 <span className="text-on-surface font-bold">24% (9)</span>
 </div>
@@ -509,7 +509,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase">
-<span>Escrow Restoral</span>
+<span>Payment Restoral</span>
 <Icon name="account_balance_wallet" className="text-[16px] text-emerald-escrow" />
 </div>
 <span className="font-headline-sm text-headline-sm text-emerald-escrow font-extrabold whitespace-nowrap">UGX 2.84M</span>
@@ -602,9 +602,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-md shadow-sm">
 <Icon name="verified_user" className="text-amber-warning text-[26px]" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface font-bold">SafeBoda Reverse Custody Rule</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">SafeBoda Reverse holding Rule</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">
-            Merchant OTP required on delivery before escrow reversal clears to merchant MTN/Airtel wallet.
+            Merchant OTP required on delivery before payment reversal clears to merchant MTN/Airtel wallet.
           </span>
 </div>
 </div>

@@ -22,7 +22,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Escrow Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full pb-12">
+      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Payment Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full pb-12">
 
 <div className="w-full bg-surface-container-lowest rounded-xl shadow-sm p- space-md mb-space-md">
 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
@@ -35,7 +35,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-md">
 <Icon name="verified_user" className="text-tertiary text-[16px]" />
-<span className="font-label-sm text-label-sm text-tertiary">Escrow Shielded</span>
+<span className="font-label-sm text-label-sm text-tertiary">Payment Shielded</span>
 </div>
 </div>
 <div className="flex items-center gap-space-sm flex-wrap">
@@ -107,7 +107,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 248,500</span>
 <span className="inline-flex items-center gap-0.5 px-2 py-0.5 bg-surface-container text-tertiary font-label-sm text-label-sm rounded font-semibold">
 <Icon name="shield" className="text-[13px]" />
-              MoMo Escrow Secured
+              momo payment Secured
             </span>
 </div>
 <div className="flex items-center gap-space-sm p-2.5 bg-surface-container-low rounded-lg mb-space-sm">
@@ -150,7 +150,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-baseline gap-2 mb-2">
 <span className="font-headline-md text-headline-md text-tertiary font-extrabold whitespace-nowrap">+UGX 1,420,000</span>
-<span className="font-body-sm text-body-sm text-secondary">Automatic Escrow Sweep</span>
+<span className="font-body-sm text-body-sm text-secondary">Automatic Payment Sweep</span>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2.5 bg-surface-container-low rounded-lg mb-space-xs font-body-sm text-body-sm">
 <div className="flex flex-col">
@@ -184,7 +184,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-body-sm text-secondary">2 hours ago</span>
 </div>
 <p className="font-body-md text-body-md text-secondary mb-2">
-            Buyer claims package seal broken upon delivery. Escrow held until merchant triage complete.
+            Buyer claims package seal broken upon delivery. Payment held until merchant triage complete.
           </p>
 <div className="flex items-center justify-between p-2.5 bg-surface-container-low rounded-lg mb-space-sm">
 <div className="flex flex-col">
@@ -217,7 +217,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-body-sm text-secondary">5 hours ago</span>
 </div>
 <p className="font-body-md text-body-md text-secondary mb-2 whitespace-nowrap">
-            URA Tax Identification &amp; Kampala City Traders Association license validated. Your merchant daily transaction threshold is upgraded to UGX 50,000,000.
+            Tax Tax Identification &amp; Kampala City Traders Association license validated. Your merchant daily transaction threshold is upgraded to UGX 50,000,000.
           </p>
 <div className="flex justify-end">
 <a className="text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-semibold inline-flex items-center gap-1" href="#">
@@ -263,7 +263,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">Order #SC-9952</span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5">
 <Icon name="lock" className="text-[13px]" />
-                Escrow Locked
+                payment protected
               </span>
 </div>
 <span className="font-body-sm text-body-sm text-secondary">Dispatch Triage • SafeBoda Express</span>
@@ -386,7 +386,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-3 flex items-center justify-center gap-1.5 text-secondary font-label-sm text-label-sm text-center">
 <Icon name="cell_tower" className="text-[14px]" />
-<span>SMS Priority Relay will alert Sarah upon parcel custody transfer</span>
+<span>SMS Priority Relay will alert Sarah upon parcel holding transfer</span>
 </div>
 </div>
 

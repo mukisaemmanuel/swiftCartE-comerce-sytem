@@ -33,12 +33,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
 <span>Security &amp; Governance</span>
 <span>/</span>
-<span className="text-primary font-bold">Statutory Ledger</span>
+<span className="text-primary font-bold">System Audit Ledger</span>
 </div>
 <h1 className="font-headline-md text-headline-md text-on-surface tracking-tight">Audit Log &amp; Security Governance Ledger</h1>
 <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5 flex-wrap">
 <Icon name="gavel" className="text-[16px] text-tertiary" />
-          Statutory Electronic Records • Compliant with Uganda Computer Misuse Act (2022) &amp; Electronic Transactions Act (2011)
+          Electronic Commerce Records • Compliant with Uganda Computer Misuse Act (2022) &amp; Electronic Transactions Act (2011)
         </p>
 </div>
 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
@@ -51,7 +51,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <button className="flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-sm hover:opacity-95 transition-all active:scale-[0.98]">
 <Icon name="lock_reset" className="text-[18px]" />
-<span>Export Vault (JSON/PDF)</span>
+<span>Export Records (JSON/PDF)</span>
 </button>
 </div>
 </div>
@@ -93,7 +93,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-space-sm flex items-baseline gap-space-xs">
 <span className="font-headline-lg text-headline-lg text-on-surface">100%</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">YubiKey / FIDO2</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">YubiKey / Two-Factor Authenticator</span>
 </div>
 <div className="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
 <div className="bg-secondary h-full w-full rounded-full"></div>
@@ -102,7 +102,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface-variant">Bank of Uganda Statutory</span>
+<span className="font-label-md text-label-md text-on-surface-variant">Pesapal Secure Settlement</span>
 <Icon name="account_balance" className="text-tertiary text-[20px]" />
 </div>
 <div className="mt-space-sm flex items-baseline gap-space-xs">
@@ -111,7 +111,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             In Compliance
           </span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant mt-space-sm">Signed Act: NPS-UG-2020</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant mt-space-sm">Platform Merchant Terms §4</span>
 </div>
 </div>
 
@@ -128,7 +128,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
 <button className="px-space-sm py-1 bg-primary text-on-primary rounded-full font-label-sm text-label-sm whitespace-nowrap shadow-sm">All Logs (64)</button>
-<button className="px-space-sm py-1 bg-surface-container-low text-on-surface-variant hover:bg-surface-container rounded-full font-label-sm text-label-sm whitespace-nowrap transition-colors">Escrow (28)</button>
+<button className="px-space-sm py-1 bg-surface-container-low text-on-surface-variant hover:bg-surface-container rounded-full font-label-sm text-label-sm whitespace-nowrap transition-colors">Payment (28)</button>
 <button className="px-space-sm py-1 bg-surface-container-low text-on-surface-variant hover:bg-surface-container rounded-full font-label-sm text-label-sm whitespace-nowrap transition-colors">Role Elevate (4)</button>
 <button className="px-space-sm py-1 bg-surface-container-low text-on-surface-variant hover:bg-surface-container rounded-full font-label-sm text-label-sm whitespace-nowrap transition-colors">Overrides (12)</button>
 <button className="px-space-sm py-1 bg-surface-container-low text-on-surface-variant hover:bg-surface-container rounded-full font-label-sm text-label-sm whitespace-nowrap transition-colors">Config (8)</button>
@@ -149,8 +149,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </span>
 </div>
 <div className="flex flex-col">
-<span className="font-headline-sm text-headline-sm text-on-surface leading-tight">Escrow Adjudication Ruling Executed</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Actor: <strong className="text-on-surface">Officer Patricia Namubiru</strong> (Super Admin #KLA-8842-SA)</span>
+<span className="font-headline-sm text-headline-sm text-on-surface leading-tight">Payment Adjudication Ruling Executed</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Actor: <strong className="text-on-surface">Officer Denis Mukasa</strong> (Super Admin #KLA-8842-SA)</span>
 </div>
 <div className="p-space-xs bg-surface-container-low rounded-lg flex items-center justify-between text-body-sm text-on-surface">
 <span className="truncate">Docket #DSP-104 (Sarah N. vs Victoria Tech)</span>
@@ -175,7 +175,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-on-surface">Remote Dispatch PIN Override</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Actor: Patricia Namubiru • Target: Order #SC-9488</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Actor: Denis Mukasa • Target: Order #SC-9488</span>
 </div>
 <div className="text-body-sm text-on-surface-variant">
               Courier Kizito Brian (Nakasero Cluster) manual token bypass verified.
@@ -210,11 +210,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <span className="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full font-bold">
 <Icon name="lock" className="text-[14px]" />
-                Custody Lock
+                Payment Hold
               </span>
 </div>
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-surface">Shift Custody Docket Locked</span>
+<span className="font-label-lg text-label-lg text-on-surface">Shift Transfer Docket Locked</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Actor: William Ssebaggala (Hub Lead) • Bay #UG-8820</span>
 </div>
 </div>
@@ -274,10 +274,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div>
 <span className="text-on-surface-variant block font-label-sm text-label-sm">Actor Identity:</span>
-<span className="text-on-surface font-bold">Patricia Namubiru (Level 4 Super Admin)</span>
+<span className="text-on-surface font-bold">Denis Mukasa (Level 4 Super Admin)</span>
 </div>
 <div>
-<span className="text-on-surface-variant block font-label-sm text-label-sm">Hardware Token:</span>
+<span className="text-on-surface-variant block font-label-sm text-label-sm">Two-Factor Authenticator:</span>
 <span className="font-mono text-tertiary font-bold">YubiKey 5C NFC (#YK-UG-491) - Matched</span>
 </div>
 <div>
@@ -298,7 +298,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-space-sm py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase">100% Refund</span>
 </div>
 <div className="flex flex-col gap-1 text-body-sm text-on-surface">
-<span className="font-bold text-on-surface-variant">Statutory Findings &amp; Evidence:</span>
+<span className="font-bold text-on-surface-variant">Review Findings & Evidence:</span>
 <p className="bg-surface-container-lowest p-space-sm rounded-lg text-on-surface">
                   Non-OEM Counterfeit Cable substitution verified by Nakasero Forensic Station. Serial discrepancy matches Docket #DSP-104 inspection protocol photos.
                 </p>
@@ -326,7 +326,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Cryptographic Chain Attestation</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Verified Chain Verification Approved</span>
 <Icon name="lock" className="text-[16px] text-tertiary" />
 </div>
 <div className="flex flex-col gap-2 font-mono text-body-sm">
@@ -352,7 +352,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </button>
 <button className="flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg rounded-xl transition-all active:scale-[0.98]">
 <Icon name="flag" className="text-[20px]" />
-<span>Flag for PwC / BOU Audit</span>
+<span>Flag for PwC / Pesapal Audit</span>
 </button>
 </div>
 </div>

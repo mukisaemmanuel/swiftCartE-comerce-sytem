@@ -58,7 +58,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
 
 <div className="hidden flex-col gap-space-xs p-space-sm bg-surface-container rounded-xl shadow-md transition-all" id="export-dropdown">
 <div className="flex items-center justify-between pb-space-xs px-space-xs">
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Cryptographic Export Options</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Verified Export Options</span>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-[2px]">
 <Icon name="lock" className="text-[12px]" /> Hardware Sign
         </span>
@@ -76,7 +76,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
 <Icon name="picture_as_pdf" className="text-[18px]" />
 <span className="font-label-md text-label-md font-bold text-on-surface">Signed PDF</span>
 </div>
-<span className="font-body-sm text-[11px] text-secondary">BOU compliance stamped</span>
+<span className="font-body-sm text-[11px] text-secondary">Pesapal compliance stamped</span>
 </button>
 </div>
 </div>
@@ -145,7 +145,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
           ROLE_ELEVATION_AUTHORIZED
         </h2>
 <div className="mt-1 flex items-center gap-space-xs flex-wrap font-body-md text-body-md text-on-surface">
-<span className="font-semibold text-primary">Patricia Namubiru</span>
+<span className="font-semibold text-primary">Denis Mukasa</span>
 <Icon name="trending_flat" className="text-[16px] text-secondary" />
 <span className="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-bold text-on-surface">
             Admin (Operations Lead)
@@ -241,7 +241,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
 
 <div className="pl-1 pt-0.5 flex items-center justify-between text-secondary font-label-sm text-label-sm">
 <span className="">Authorized: Superadmin Override</span>
-<span className="text-tertiary font-medium">BOU Case ID: #DIS-294</span>
+<span className="text-tertiary font-medium">Pesapal Case ID: #DIS-294</span>
 </div>
 </article>
 
@@ -252,7 +252,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
 <div className="flex flex-wrap items-center gap-space-xs">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold tracking-wide">
 <Icon name="account_balance" className="text-[13px]" />
-            ESCROW BATCH CLEARED
+            PAYMENT BATCH CLEARED
           </span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
             Yesterday 14:10 EAT
@@ -264,7 +264,7 @@ export const AuditLogSwiftcartSuperAdmin: React.FC<AuditLogSwiftcartSuperAdminPr
 <div className="pl-1"><span className="">Provider: MTN MoMo Batch #882 • Verified by Super Admin</span><span className="font-mono text-body-sm text-[11px] text-tertiary">Cleared</span></div>
 
 <div className="pl-1 pt-0.5 flex items-center justify-between text-secondary font-label-sm text-label-sm">
-<span className="">Custodian: StandChart Escrow UG</span>
+<span className="">Custodian: StandChart Payment UG</span>
 <span className="font-mono text-body-sm text-[11px] text-tertiary">TxID: 0x91da...66ea</span>
 </div>
 </article>

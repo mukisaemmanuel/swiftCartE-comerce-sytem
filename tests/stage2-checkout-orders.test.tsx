@@ -82,7 +82,7 @@ describe('Stage 2: Checkout & Orders', () => {
     expect(screen.getByText(/Delivery Handover Code/i)).toBeDefined();
     expect(screen.getByText(/Delivery Routing \(Kampala\)/i)).toBeDefined();
     expect(screen.getByRole('button', { name: /Request Return \/ Refund/i })).toBeDefined();
-    expect(screen.getByRole('button', { name: /Open Escrow Dispute/i })).toBeDefined();
+    expect(screen.getByRole('button', { name: /Open (?:Escrow|Payment) Dispute/i })).toBeDefined();
   });
 
   it('renders OrderTrackingPage with rider card and 6-digit delivery code', () => {

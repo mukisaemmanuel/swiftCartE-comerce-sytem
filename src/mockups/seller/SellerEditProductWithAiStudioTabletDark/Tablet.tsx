@@ -121,11 +121,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-md">
 <div className="flex items-center gap-space-xs">
 <Icon name="payments" className="text-emerald-escrow text-[20px]" />
-<h2 className="font-headline-sm text-on-surface">Pricing &amp; Escrow Economics</h2>
+<h2 className="font-headline-sm text-on-surface">Pricing &amp; Payment Economics</h2>
 </div>
 <div className="flex items-center gap-1 text-emerald-escrow font-label-sm">
 <Icon name="lock" className="text-[14px]" />
-<span>UG Escrow Protected</span>
+<span>UG Payment Protected</span>
 </div>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
@@ -176,7 +176,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="text-right">
 <span className="font-label-sm text-on-surface-variant block whitespace-nowrap">SwiftCart Fee: 3.5% (UGX 8,698)</span>
-<span className="font-label-sm text-on-surface-variant">Tax Stamp (URA EFRIS): Compliant</span>
+<span className="font-label-sm text-on-surface-variant">Tax Stamp (Tax E-INVOICE): Compliant</span>
 </div>
 </div>
 </div>

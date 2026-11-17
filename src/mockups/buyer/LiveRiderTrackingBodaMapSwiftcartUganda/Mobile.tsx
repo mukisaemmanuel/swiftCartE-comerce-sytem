@@ -190,7 +190,7 @@ export const LiveRiderTrackingBodaMapSwiftcartUganda: React.FC<LiveRiderTracking
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
 <Icon name="lock" className="text-[14px]" />
-<span>Swift Escrow Protected</span>
+<span>Payment Protected</span>
 </div>
 <span className="font-label-md text-label-md text-on-surface font-bold">UGX 385,000</span>
 </div>
@@ -247,7 +247,7 @@ export const LiveRiderTrackingBodaMapSwiftcartUganda: React.FC<LiveRiderTracking
 <rect height="10" width="15" x="35" y="80"></rect>
 </svg>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant mt-2">Scan code to release escrow on parcel approval</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant mt-2">Scan code to release payment on parcel approval</span>
 </div>
 </div>
 
@@ -266,7 +266,7 @@ export const LiveRiderTrackingBodaMapSwiftcartUganda: React.FC<LiveRiderTracking
 </div>
 <div className="flex-1 flex items-baseline justify-between">
 <div>
-<p className="font-label-md text-label-md text-on-surface">Order Confirmed &amp; Escrow Funded</p>
+<p className="font-label-md text-label-md text-on-surface">Order Confirmed &amp; Payment Funded</p>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Merchant received UGX 385,000 hold</p>
 </div>
 <span className="font-body-sm text-[11px] text-on-surface-variant shrink-0">2:40 PM</span>
@@ -329,7 +329,7 @@ export const LiveRiderTrackingBodaMapSwiftcartUganda: React.FC<LiveRiderTracking
 </div>
 
 <p className="text-center font-body-sm text-[11px] text-on-surface-variant">
-        Protected by Kampala SwiftCart Guarantee • Instant Escrow Refund if parcel is unsealed or incorrect.
+        Protected by Kampala SwiftCart Guarantee • Instant Payment Refund if parcel is unsealed or incorrect.
       </p>
 </div>
 </div>

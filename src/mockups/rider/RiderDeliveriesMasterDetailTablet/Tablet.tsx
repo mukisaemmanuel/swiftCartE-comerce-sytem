@@ -56,7 +56,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Fleet Liquidity Guard</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">
             Cash Collected: <span className="text-emerald-escrow whitespace-nowrap">UGX 0</span>
-<span className="text-on-surface-variant font-normal">(100% MoMo Escrow Locked - Zero Cash Risk)</span>
+<span className="text-on-surface-variant font-normal">(100% MoMo payment protected - Zero Cash Risk)</span>
 </span>
 </div>
 </div>
@@ -110,13 +110,13 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex flex-col">
 <span className="font-code-display text-label-lg text-primary font-bold tracking-normal">#SC-ORD-9488</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Tamper Seal: <strong className="text-on-surface">#SC-TS-4091</strong></span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">package seal: <strong className="text-on-surface">#SC-TS-4091</strong></span>
 </div>
 <div className="flex flex-col items-end">
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight whitespace-nowrap">UGX 388,500</span>
 <span className="bg-emerald-escrow/15 text-emerald-escrow px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="lock" className="text-[13px]" />
-                MOMO ESCROW LOCKED
+                MOMO payment protected
               </span>
 </div>
 </div>
@@ -160,7 +160,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold whitespace-nowrap">UGX 280,000</span>
 <span className="text-tertiary font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="verified" className="text-[13px]" />
-                Stanbic BoU Escrow
+                Pesapal Pesapal Payment
               </span>
 </div>
 </div>
@@ -242,7 +242,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col items-end">
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold whitespace-nowrap">UGX 235,000</span>
-<span className="text-danger-penalty font-label-sm text-label-sm">Disputed Escrow</span>
+<span className="text-danger-penalty font-label-sm text-label-sm">Disputed Payment</span>
 </div>
 </div>
 <div className="bg-surface-container-lowest p-2 rounded-lg flex items-center justify-between">
@@ -281,12 +281,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-1.5 bg-surface-container-highest px-3 py-1 rounded-lg">
 <Icon name="verified_user" className="text-emerald-escrow text-[18px]" />
-<span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">Escrow Reserve: UGX 388,500</span>
+<span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">Payment Reserve: UGX 388,500</span>
 </div>
 </div>
 <div className="flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm pt-1">
 <div className="flex items-center gap-space-sm">
-<span className="text-on-surface">Stanbic BoU Escrow Lock #TX-998124</span>
+<span className="text-on-surface">Pesapal Payment Hold Ref #TX-998124</span>
 <span>•</span>
 <span className="text-emerald-escrow">Merchant Authorized</span>
 </div>
@@ -295,7 +295,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 <div className="flex flex-col gap-space-xs">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Order Custody Chain</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Order holding Chain</span>
 <div className="grid grid-cols-4 gap-space-xs">
 
 <div className="flex flex-col gap-1 bg-surface-container-low p-2.5 rounded-lg">
@@ -304,7 +304,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">14:22</span>
 </div>
 <span className="font-label-md text-label-md text-on-surface font-bold leading-tight">1. Payment Confirmed</span>
-<span className="font-body-sm text-body-sm text-emerald-escrow">MTN MoMo Vault</span>
+<span className="font-body-sm text-body-sm text-emerald-escrow">MTN MoMo reserve</span>
 </div>
 
 <div className="flex flex-col gap-1 bg-surface-container-low p-2.5 rounded-lg">
@@ -419,7 +419,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Manifest &amp; Tamper Seal Verification</span>
+<span className="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Manifest &amp; package seal Verification</span>
 <span className="text-label-sm font-label-sm text-primary font-bold">2/2 Items Barcode Checked</span>
 </div>
 <div className="flex flex-col gap-space-xs">
@@ -487,7 +487,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </button>
 <button className="h-12 bg-danger-penalty/10 hover:bg-danger-penalty/20 text-danger-penalty rounded-xl font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors font-bold">
 <Icon name="gpp_maybe" className="text-[18px]" />
-<span>Tamper Seal Compromised Alert</span>
+<span>package seal Compromised Alert</span>
 </button>
 </div>
 </div>
@@ -502,7 +502,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-xs text-emerald-escrow font-label-sm text-label-sm font-bold uppercase tracking-wider">
 <Icon name="lock_clock" className="text-[16px]" />
-<span>Escrow Settlement Trigger</span>
+<span>payment settlement Trigger</span>
 </div>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">Customer Handover Verification</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Ask recipient Dennis Mukasa for their blind 6-digit confirmation code.</span>
@@ -537,7 +537,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-space-xs">
 <button className="w-full h-14 bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-lg active:scale-[0.99] transition-all" id="confirmSettlementBtn">
 <Icon name="check_circle" className="text-[20px]" />
-<span>Verify Code &amp; Release Escrow</span>
+<span>Verify Code &amp; release payment</span>
 </button>
 <button className="w-full py-2 text-on-surface-variant font-label-md text-label-md hover:text-on-surface" id="cancelModalBtn">
           Return to Manifest
@@ -547,7 +547,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </main>
-<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Escrow Ledger Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Payment Holds Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
     </div>
   );
 };

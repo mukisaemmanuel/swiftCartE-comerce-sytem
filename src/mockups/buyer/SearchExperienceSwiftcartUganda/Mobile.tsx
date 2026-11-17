@@ -121,7 +121,7 @@ export const SearchExperienceSwiftcartUganda: React.FC<SearchExperienceSwiftcart
 <div className="flex items-center gap-2">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Pioneer Mall, Kampala</span>
 <span className="w-1 h-1 rounded-full bg-outline"></span>
-<span className="font-label-sm text-label-sm text-tertiary">Swift Escrow</span>
+<span className="font-label-sm text-label-sm text-tertiary">swift protection</span>
 </div>
 </div>
 </div>

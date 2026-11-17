@@ -324,7 +324,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
 <div className="flex items-center gap-1">
-<span>Escrow Protection Fee</span>
+<span>Payment Protection Fee</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold bg-surface-container px-1 rounded">SwiftCart Guarantee</span>
 </div>
 <span className="text-tertiary font-bold">FREE</span>
@@ -335,7 +335,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-baseline justify-between pt-0.5">
 <div>
 <span className="font-headline-sm text-headline-sm font-extrabold text-on-surface">Total</span>
-<p className="font-label-sm text-label-sm text-secondary">Inclusive of 18% Uganda VAT</p>
+<p className="font-label-sm text-label-sm text-secondary">Inclusive of 18% Uganda Tax</p>
 </div>
 <div className="text-right">
 <span className="font-price-display text-price-display font-black text-primary-container">UGX 388,500</span>
@@ -350,7 +350,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-surface-container-low">
 <Icon name="security" className="text-tertiary text-[20px] shrink-0 mt-0.5" />
 <p className="font-label-sm text-label-sm text-on-surface-variant leading-snug">
-<strong className="text-on-surface font-bold">Bank of Uganda Compliant Escrow.</strong> Funds released to vendors only after you inspect and provide the delivery release PIN.
+<strong className="text-on-surface font-bold">Pesapal Compliant Payment.</strong> Funds released to vendors only after you inspect and provide the delivery release PIN.
           </p>
 </div>
 
@@ -384,7 +384,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div>
-</div></div></main><footer className="w-full bg-surface-container-lowest mt-12 shadow-[0_-2px_12px_rgba(15,23,42,0.03)]"><div className="max-w-6xl mx-auto px-4 py-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8"><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-primary"><Icon name="verified_user" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary"><Icon name="two_wheeler" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Direct to home, office, or central pickup hub</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary"><Icon name="assignment_return" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Hassle-free refunds across 42 pickup spots</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4"><div className="flex flex-wrap gap-6 font-label-md text-label-md text-on-surface-variant"><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Kampala Pickup Hubs</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MoMo Payment Guarantee</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Uganda Merchant Portal</a><a className="hover:text-on-surface transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; WhatsApp Support</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Registered under URA &amp; NITA-U. All rights reserved.</p></div></div></footer>
+</div></div></main><footer className="w-full bg-surface-container-lowest mt-12 shadow-[0_-2px_12px_rgba(15,23,42,0.03)]"><div className="max-w-6xl mx-auto px-4 py-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8"><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-primary"><Icon name="verified_user" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary"><Icon name="two_wheeler" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Direct to home, office, or central pickup hub</p></div></div><div className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low"><div className="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary"><Icon name="assignment_return" className="text-[24px]" /></div><div><h4 className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Hassle-free refunds across 42 pickup spots</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4"><div className="flex flex-wrap gap-6 font-label-md text-label-md text-on-surface-variant"><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Kampala Pickup Hubs</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MoMo Payment Guarantee</a><a className="hover:text-on-surface transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Uganda Merchant Portal</a><a className="hover:text-on-surface transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; WhatsApp Support</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. Registered under Tax &amp; NITA-U. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

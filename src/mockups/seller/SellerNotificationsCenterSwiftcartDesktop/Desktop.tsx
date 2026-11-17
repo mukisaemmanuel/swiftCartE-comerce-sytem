@@ -76,7 +76,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </button>
 <button className="flex items-center gap-space-xs px-3.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
 <Icon name="account_balance_wallet" className="text-[16px] text-emerald-escrow" />
-<span>Escrow &amp; Payouts</span>
+<span>Payment &amp; Payouts</span>
 <span className="px-1.5 py-0.2 rounded-full bg-surface-container font-label-sm text-label-sm">8</span>
 </button>
 <button className="flex items-center gap-space-xs px-3.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
@@ -124,7 +124,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-xs">
 <span className="px-2 py-0.5 rounded bg-error-container/30 text-error font-label-sm text-label-sm flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
-                URGENT ESCROW HOLD
+                URGENT Payment Hold
               </span>
 <span className="px-1.5 py-0.2 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm">Unread</span>
 </div>
@@ -132,11 +132,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-space-xs pl-2">
 <h2 className="font-headline-sm text-headline-sm text-on-surface leading-snug group-hover:text-primary transition-colors">Dispute #DSP-88219 filed for Order #SC-97810</h2>
-<p className="mt-1 font-body-md text-body-md text-on-surface-variant leading-relaxed whitespace-nowrap">UGX 342,000 temporarily held in Bank of Uganda sandbox. Merchant response window ends in 14 hours.</p>
+<p className="mt-1 font-body-md text-body-md text-on-surface-variant leading-relaxed whitespace-nowrap">UGX 342,000 temporarily held in Pesapal sandbox. Merchant response window ends in 14 hours.</p>
 </div>
 <div className="mt-space-sm pl-2 flex items-center justify-between text-outline">
 <div className="flex items-center gap-2">
-<span className="px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm font-mono">BOU-ESCR-7489</span>
+<span className="px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm font-mono">Pesapal-ESCR-7489</span>
 <span className="text-outline font-body-sm text-body-sm">•</span>
 <span className="font-label-sm text-label-sm text-danger-penalty flex items-center gap-1">
 <Icon name="timer" className="text-[14px]" /> 13h 48m left
@@ -230,13 +230,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start justify-between gap-space-sm">
 <span className="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="verified" className="text-[13px]" />
-              KYC &amp; REGULATORY ATTESTATION
+              KYC &amp; Verification Approved
             </span>
 <span className="font-body-sm text-body-sm text-outline">Oct 22</span>
 </div>
 <div className="mt-space-xs">
 <h2 className="font-label-lg text-label-lg text-on-surface leading-snug group-hover:text-primary transition-colors">Annual URSB Business Certificate Verified</h2>
-<p className="mt-1 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Uganda Registration Services Bureau attestation logged. Tier 3 daily payout limit maintained at UGX 20,000,000.</p>
+<p className="mt-1 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Uganda Registration Services Bureau Verification Approved logged. Tier 3 daily payout limit maintained at UGX 20,000,000.</p>
 </div>
 </div>
 </div>
@@ -253,7 +253,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2">
-<span className="font-label-md text-label-md text-error uppercase tracking-wider">Priority Escrow Block</span>
+<span className="font-label-md text-label-md text-error uppercase tracking-wider">Priority Payment Block</span>
 <span className="w-1.5 h-1.5 rounded-full bg-error"></span>
 <span className="font-label-sm text-label-sm text-on-surface">Urgent Action Required</span>
 </div>
@@ -273,7 +273,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">SafeBoda Express Dispatch</span>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="lock" className="text-[13px]" />
-                Bank of Uganda Escrow Custody
+                Pesapal payment holding
               </span>
 </div>
 </div>
@@ -293,7 +293,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-error">Tampered Packaging</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface mt-1 leading-snug">
-                Buyer <span className="font-label-md text-label-md text-on-surface">Nantongo Grace</span> reported torn tamper seal tape at handover. SafeBoda rider paused handover OTP exchange.
+                Buyer <span className="font-label-md text-label-md text-on-surface">Nantongo Grace</span> reported torn package seal tape at handover. SafeBoda rider paused handover OTP exchange.
               </p>
 </div>
 <div className="flex items-center justify-between pt-space-xs text-outline font-body-sm text-body-sm">
@@ -337,7 +337,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Nakasero Hub CCTV Outbound Sealing Tape Log</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Barcode SC-97810 scanned at 14:02:18 EAT • Station 03 (Tamper seal intact)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Barcode SC-97810 scanned at 14:02:18 EAT • Station 03 (package seal intact)</span>
 </div>
 </div>
 <button className="h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" type="button">
@@ -348,14 +348,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="flex flex-col gap-space-sm pt-space-xs">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface">Escrow &amp; Custody Telematics Audit Trail</span>
-<span className="font-label-sm text-label-sm text-outline">Bank of Uganda Sandbox ID: #BOU-98214-UG</span>
+<span className="font-label-md text-label-md text-on-surface">Payment &amp; holding Telematics Audit Trail</span>
+<span className="font-label-sm text-label-sm text-outline">Pesapal Sandbox ID: #Pesapal-98214-UG</span>
 </div>
 <div className="relative pl-6 flex flex-col gap-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
 <div className="relative flex items-start justify-between gap-space-sm">
 <div className="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-emerald-escrow ring-4 ring-surface-container-low"></div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">11:21 EAT • Order Placed &amp; Escrow Committed</span>
+<span className="font-label-md text-label-md text-on-surface">11:21 EAT • Order Placed &amp; Payment Committed</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">Buyer payment of UGX 342,000 received via Airtel Money Uganda and securely locked.</span>
 </div>
 <span className="font-label-sm text-label-sm text-outline font-mono">BOU_LOCKED</span>
@@ -364,7 +364,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-low"></div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">14:02 EAT • Outbound Packaging Sealed at Nakasero Hub</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Packaged with SwiftCart orange hologram security seal #UG-9021. Custody transferred to SafeBoda.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Packaged with SwiftCart orange hologram security seal #UG-9021. holding transferred to SafeBoda.</span>
 </div>
 <span className="font-label-sm text-label-sm text-outline font-mono">DISPATCH_HUB</span>
 </div>
@@ -379,7 +379,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="relative flex items-start justify-between gap-space-sm">
 <div className="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-danger-penalty ring-4 ring-surface-container-low"></div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">14:48 EAT • Dispute Logged &amp; Escrow Frozen</span>
+<span className="font-label-md text-label-md text-on-surface">14:48 EAT • Dispute Logged &amp; payment frozen</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">System frozen to safeguard both parties pending merchant evidence submission or replacement authorization.</span>
 </div>
 <span className="font-label-sm text-label-sm text-danger-penalty font-mono">DSP_HELD</span>
@@ -462,7 +462,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-emerald-escrow">Instant Ping</span>
-<span className="font-body-sm text-body-sm text-outline">High-Value Escrow Holds</span>
+<span className="font-body-sm text-body-sm text-outline">High-Value Payment Holds</span>
 </div>
 </div>
 

@@ -104,7 +104,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </span>
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Step 2: Legal Verification &amp; KYC Documents</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-              Ugandan regulatory requirements for verified storefront sellers and escrow settlement.
+              Ugandan regulatory requirements for verified storefront sellers and payment settlement.
             </p>
 </div>
 
@@ -200,7 +200,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <label className="flex items-start gap-space-sm cursor-pointer select-none pt-space-xs">
 <input checked={true} className="mt-1 w-4 h-4 text-primary-container rounded bg-surface-container-low focus:ring-primary accent-primary" type="checkbox" />
 <span className="font-body-sm text-body-sm text-on-surface leading-tight">
-                I certify that all submitted credentials represent authentic registered business operations in Uganda, compliant with URA and SwiftCart Terms.
+                I certify that all submitted credentials represent authentic registered business operations in Uganda, compliant with Tax and SwiftCart Terms.
               </span>
 </label>
 
@@ -243,7 +243,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <h4 className="font-label-md text-label-md text-on-surface">Zero-Fee MoMo Payouts</h4>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Automated daily escrow payouts directly to MTN MoMo &amp; Airtel Money Merchant accounts.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Automated daily seller payouts directly to MTN MoMo &amp; Airtel Money Merchant accounts.</p>
 </div>
 </div>
 
@@ -252,7 +252,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="verified_user" className="text-[18px]" />
 </div>
 <div className="flex flex-col">
-<h4 className="font-label-md text-label-md text-on-surface">Buyer Escrow Protection</h4>
+<h4 className="font-label-md text-label-md text-on-surface">buyer payment protection</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Funds locked on checkout; released automatically once recipient inputs their delivery confirmation code.</p>
 </div>
 </div>
@@ -327,7 +327,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 </div>
-</div></main><footer className="w-full bg-surface-container-low pt-space-xl pb-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div className="w-full px-gutter"><div className="grid grid-cols-4 gap-space-md pb-space-lg"><div className="flex items-start gap-space-sm"><Icon name="verified_user" className="text-tertiary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Buyer Protection</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Full refunds &amp; genuine guarantee</p></div></div><div className="flex items-start gap-space-sm"><Icon name="local_shipping" className="text-primary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Swift Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Same-day Kampala express</p></div></div><div className="flex items-start gap-space-sm"><Icon name="currency_exchange" className="text-tertiary-container text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">MoMo &amp; Card Escrow</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Secure merchant settlement</p></div></div><div className="flex items-start gap-space-sm"><Icon name="headset_mic" className="text-secondary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Uganda 24/7 Support</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Toll-free &amp; WhatsApp agents</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between pt-space-md gap-space-md"><div className="flex items-center gap-space-md flex-wrap"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Partners:</span><div className="flex items-center gap-space-sm"><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">MTN MoMo</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Airtel Money</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Visa</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Mastercard</span></div></div><div className="flex items-center gap-space-md flex-wrap"><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#" onClick={() => alertToast('Action triggered')}>Terms of Use</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="merchant-policy" href="#" onClick={() => alertToast('Action triggered')}>Merchant Directory</a><span className="font-body-sm text-body-sm text-on-surface-variant">© 2024 SwiftCart Uganda Ltd.</span></div></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-low pt-space-xl pb-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div className="w-full px-gutter"><div className="grid grid-cols-4 gap-space-md pb-space-lg"><div className="flex items-start gap-space-sm"><Icon name="verified_user" className="text-tertiary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Buyer Protection</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Full refunds &amp; genuine guarantee</p></div></div><div className="flex items-start gap-space-sm"><Icon name="local_shipping" className="text-primary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Swift Dispatch</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Same-day Kampala express</p></div></div><div className="flex items-start gap-space-sm"><Icon name="currency_exchange" className="text-tertiary-container text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">MoMo &amp; Card Payment</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Secure merchant settlement</p></div></div><div className="flex items-start gap-space-sm"><Icon name="headset_mic" className="text-secondary text-[26px]" /><div><h4 className="font-label-md text-label-md text-on-surface">Uganda 24/7 Support</h4><p className="font-body-sm text-body-sm text-on-surface-variant">Toll-free &amp; WhatsApp agents</p></div></div></div><div className="flex flex-col md:flex-row items-center justify-between pt-space-md gap-space-md"><div className="flex items-center gap-space-md flex-wrap"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Partners:</span><div className="flex items-center gap-space-sm"><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">MTN MoMo</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Airtel Money</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Visa</span><span className="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm font-bold text-on-surface">Mastercard</span></div></div><div className="flex items-center gap-space-md flex-wrap"><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#" onClick={() => alertToast('Action triggered')}>Terms of Use</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="merchant-policy" href="#" onClick={() => alertToast('Action triggered')}>Merchant Directory</a><span className="font-body-sm text-body-sm text-on-surface-variant">© 2024 SwiftCart Uganda Ltd.</span></div></div></div></footer>
     </div>
   );
 };

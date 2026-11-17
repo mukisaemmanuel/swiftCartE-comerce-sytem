@@ -34,7 +34,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full shadow-sm">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span className="font-label-sm text-label-sm text-on-surface font-bold tracking-tight">Escrow Guaranteed</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold tracking-tight">payment guaranteed</span>
 </div>
 </div>
 <div className="px-gutter flex flex-col gap-space-md">
@@ -164,7 +164,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-label-md text-label-md font-semibold text-secondary truncate">Cash on Delivery</span>
-<span className="font-body-sm text-body-sm text-secondary truncate">Escrow security requires instant settlement</span>
+<span className="font-body-sm text-body-sm text-secondary truncate">Payment security requires instant settlement</span>
 </div>
 </div>
 <Icon name="lock" className="text-secondary text-[18px]" />
@@ -204,7 +204,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="flex justify-between font-body-md text-body-md">
 <span className="text-secondary flex items-center gap-1">
-            Buyer Protection Escrow
+            Buyer Protection Payment
             <Icon name="info" className="text-[14px] text-tertiary" />
 </span>
 <span className="font-bold text-tertiary uppercase text-label-sm font-label-sm">Free</span>
@@ -236,7 +236,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <span className="font-label-sm text-label-sm text-primary font-bold px-2 py-0.5 rounded bg-primary/10">Action Required</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant mt-1 leading-snug">
-            Check your phone for the <span className="font-bold text-on-surface">*165# prompt</span> and enter your MTN Mobile Money PIN to authorize <span className="font-bold text-on-surface">UGX 253,500</span>.
+            Check your phone for the <span className="font-bold text-on-surface">Mobile prompt prompt</span> and enter your MTN Mobile Money PIN to authorize <span className="font-bold text-on-surface">UGX 253,500</span>.
           </p>
 </div>
 </div>
@@ -244,9 +244,9 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <div className="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2">
 <Icon name="security" className="text-tertiary text-[18px] flex-shrink-0 mt-0.5" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-label-sm font-bold text-on-surface">Anti-Duplicate Escrow Shield #TX-98421</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface">Anti-Duplicate Payment Protection #TX-98421</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-tight">
-            Funds remain safely locked in SwiftCart Escrow until delivery is verified. Refreshing this page will never charge you twice.
+            Funds remain safely locked in SwiftCart Protection until delivery is verified. Refreshing this page will never charge you twice.
           </p>
 </div>
 </div>

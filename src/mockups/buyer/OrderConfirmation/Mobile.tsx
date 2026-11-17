@@ -68,7 +68,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Your Confidential Delivery Code</span>
 </div>
 <span className="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
-<span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span> Active Escrow
+<span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span> Active Holds
       </span>
 </div>
 
@@ -153,7 +153,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="mt-space-sm pt-space-xs flex items-start gap-2">
 <Icon name="shield_with_heart" className="text-tertiary text-[18px] flex-shrink-0 mt-0.5" />
 <p className="font-body-sm text-body-sm text-secondary leading-snug">
-        Your <span className="font-semibold text-on-surface">UGX 253,500</span> payment is safely locked in <span className="font-semibold text-tertiary">SwiftCart Escrow</span>. The seller is only paid after you provide this 6-digit code to the rider.
+        Your <span className="font-semibold text-on-surface">UGX 253,500</span> payment is safely locked in <span className="font-semibold text-tertiary">SwiftCart Protection</span>. The seller is only paid after you provide this 6-digit code to the rider.
       </p>
 </div>
 </div>
@@ -189,7 +189,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 <div>
 <p className="font-label-md text-label-md text-on-surface font-bold">Payment Verified via MTN MoMo</p>
-<p className="font-body-sm text-body-sm text-secondary">Funds safely held in SwiftCart Vault • Today, 14:24</p>
+<p className="font-body-sm text-body-sm text-secondary">Funds safely held in SwiftCart reserve • Today, 14:24</p>
 </div>
 </div>
 
@@ -262,7 +262,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span>UGX 5,000</span>
 </div>
 <div className="flex justify-between font-body-sm text-body-sm text-tertiary font-medium">
-<span>Escrow Buyer Protection Guarantee</span>
+<span>Payment Buyer Protection Guarantee</span>
 <span className="font-bold">FREE</span>
 </div>
 <div className="flex justify-between items-center pt-space-xs font-label-lg text-label-lg text-on-surface font-extrabold">

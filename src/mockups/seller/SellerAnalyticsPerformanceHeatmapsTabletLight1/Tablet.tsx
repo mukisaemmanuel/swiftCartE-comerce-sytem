@@ -34,11 +34,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">
 <Icon name="verified" className="text-[15px]" />
 <span>Top 1% Kampala Electronics Sellers</span>
-<span className="text-secondary">• Tier-1 Escrow Verified</span>
+<span className="text-secondary">• Tier-1 payment verified</span>
 </div>
 </div>
 <p className="font-body-md text-body-md text-secondary">
-          Live merchant metrics for Pioneer Mall G-14 hub • Synchronized with Central Switch Escrow
+          Live merchant metrics for Pioneer Mall G-14 hub • Synchronized with Central Switch Payment
         </p>
 </div>
 
@@ -90,7 +90,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2">
-<span>Net Escrow Payout:</span>
+<span>Net Seller Payout:</span>
 <span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX 39,422,000</span>
 </div>
 </div>
@@ -264,7 +264,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
 <span className="text-secondary font-label-sm text-label-sm">Net Margin Realized</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold mt-0.5">92.0%</span>
-<span className="text-secondary font-label-sm text-label-sm mt-0.5">8% SwiftCart Escrow &amp; Tax</span>
+<span className="text-secondary font-label-sm text-label-sm mt-0.5">8% SwiftCart Protection &amp; Tax</span>
 </div>
 <div className="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
 <span className="text-secondary font-label-sm text-label-sm">Daily Peak Order Count</span>
@@ -542,7 +542,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col gap-1">
 <div className="flex justify-between font-label-md text-label-md">
-<span className="text-on-surface font-bold">4. Paid &amp; Escrow Locked</span>
+<span className="text-on-surface font-bold">4. Paid &amp; payment protected</span>
 <div className="flex items-center gap-1.5">
 <span className="text-tertiary font-label-sm text-label-sm font-bold">14.8% completion</span>
 <span className="text-tertiary font-extrabold">184 Orders</span>
@@ -585,12 +585,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="mt-space-md flex items-center justify-between">
 <div className="flex flex-col">
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold">72%</span>
-<span className="font-label-sm text-label-sm text-secondary">MTN MoMo Escrow</span>
+<span className="font-label-sm text-label-sm text-secondary">MTN momo payment</span>
 </div>
 <div className="h-8 w-px bg-surface-container"></div>
 <div className="flex flex-col text-right">
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold">28%</span>
-<span className="font-label-sm text-label-sm text-secondary">Airtel Money Escrow</span>
+<span className="font-label-sm text-label-sm text-secondary">Airtel money payment</span>
 </div>
 </div>
 </div>
@@ -601,7 +601,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex justify-between items-center text-[11px] text-secondary mt-1">
 <span>Instant Auto-settlement</span>
-<span>Bank of Uganda Regulated</span>
+<span>Pesapal Verified Rails</span>
 </div>
 </div>
 </div>
@@ -626,7 +626,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></main>
-<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bank of Uganda Escrow Regulated</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pesapal Payment standard</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
     </div>
   );
 };

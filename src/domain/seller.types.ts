@@ -1,5 +1,6 @@
 import type {
   ORDER_STATUS,
+  PAYMENT_HOLD_STATUS,
   ESCROW_STATUS,
   DISPATCH_STATUS,
   RETURN_STATUS,
@@ -23,6 +24,7 @@ export interface SellerOrder {
   orderNumber: string; // e.g. "SWIFT-UG-8901"
   status: (typeof ORDER_STATUS)[keyof typeof ORDER_STATUS];
   paymentStatus: string;
+  paymentHoldStatus: (typeof PAYMENT_HOLD_STATUS)[keyof typeof PAYMENT_HOLD_STATUS];
   escrowStatus: (typeof ESCROW_STATUS)[keyof typeof ESCROW_STATUS];
   dispatchStatus: (typeof DISPATCH_STATUS)[keyof typeof DISPATCH_STATUS];
   // STRICT DATA PRIVACY: First name & district only!
@@ -102,6 +104,7 @@ export interface SellerReturn {
   details: string;
   photos: string[];
   status: (typeof RETURN_STATUS)[keyof typeof RETURN_STATUS];
+  paymentHoldStatus: (typeof PAYMENT_HOLD_STATUS)[keyof typeof PAYMENT_HOLD_STATUS];
   escrowStatus: (typeof ESCROW_STATUS)[keyof typeof ESCROW_STATUS];
   refundAmount: number; // Integer UGX
   sellerResponseReason?: string;

@@ -31,17 +31,17 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-space-sm">
-<span className="font-headline-sm text-headline-sm text-on-surface truncate">Reverse Pickup &amp; Tamper Bag Inspection</span>
+<span className="font-headline-sm text-headline-sm text-on-surface truncate">Reverse Pickup &amp; package bag Inspection</span>
 <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-action-gradient-start font-bold uppercase tracking-wider">Sim Mode: Dual-Sync</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Task Protocol #RET-UG-4019 • SafeBoda Sealed Escrow Chain • William St Central Hub</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Task Protocol #RET-UG-4019 • SafeBoda Sealed Payment Chain • William St Central Hub</span>
 </div>
 </div>
 
 <div className="flex items-center gap-space-sm flex-wrap">
 <div className="flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded-lg">
 <Icon name="verified_user" className="text-emerald-escrow text-[18px]" />
-<span className="font-label-sm text-label-sm text-on-surface">Escrow In Custody:</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payment on Hold:</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 185,000</span>
 </div>
 <div className="flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded-lg">
@@ -51,7 +51,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <button className="flex items-center gap-space-xs bg-action-gradient-end text-on-primary-container px-space-md py-space-xs rounded-lg shadow-md hover:opacity-90 active:scale-95 transition-all">
 <Icon name="receipt_long" className="text-[16px]" />
-<span className="font-label-sm text-label-sm uppercase tracking-wider">Custody Receipt Active</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider">holding Receipt Active</span>
 </button>
 </div>
 </div>
@@ -149,7 +149,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="bg-surface-container p-space-sm rounded-xl mb-space-sm flex flex-col gap-1">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">Tamper Bag Barcode</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">package bag Barcode</span>
 <span className="font-label-sm text-label-sm text-amber-warning font-bold flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-amber-warning"></span> Scanned
               </span>
@@ -163,7 +163,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="w-full h-[52px] bg-gradient-to-r from-action-gradient-start to-action-gradient-end rounded-xl shadow-[0_4px_18px_rgba(218,55,0,0.45)] text-on-primary-container font-label-lg text-label-lg flex items-center justify-center gap-space-sm active:scale-95 transition-all" id="mobile-seal-btn">
 <Icon name="enhanced_encryption" className="text-[20px]" />
-<span>Seal Return Tamper Bag &amp; Sign</span>
+<span>Seal Return package bag &amp; Sign</span>
 </button>
 <div className="flex items-center justify-center gap-2 mt-2">
 <span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span>
@@ -189,9 +189,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="bg-surface-container-high p-space-md rounded-lg flex flex-col gap-1">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Platform Arbitrator</span>
-<span className="font-headline-sm text-[16px] text-on-surface font-bold">Patricia Namubiru (Senior Ops)</span>
+<span className="font-headline-sm text-[16px] text-on-surface font-bold">Denis Mukasa (Senior Ops)</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
-                “Return approved within 48h SLA window under Item Unopened policy. Escrow hold intact until Hub physical intake validation.”
+                “Return approved within 48h SLA window under Item Unopened policy. Payment Hold intact until Hub physical intake validation.”
               </p>
 </div>
 <div className="flex flex-col gap-space-xs">
@@ -204,15 +204,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-on-surface font-semibold">Elite Mobile Accessories</span>
 </div>
 <div className="flex items-center justify-between text-body-sm text-on-surface-variant">
-<span>Locked Custody Value</span>
-<span className="text-emerald-escrow font-bold font-mono whitespace-nowrap">UGX 185,000 (MTN MoMo Escrow)</span>
+<span>Locked holding Value</span>
+<span className="text-emerald-escrow font-bold font-mono whitespace-nowrap">UGX 185,000 (MTN momo payment)</span>
 </div>
 </div>
 </div>
 
 <div className="mt-space-md pt-space-xs bg-surface-container-lowest/50 p-space-sm rounded-lg">
 <div className="flex justify-between items-center mb-1">
-<span className="font-label-sm text-[11px] text-on-surface-variant uppercase font-bold">Custody Release State</span>
+<span className="font-label-sm text-[11px] text-on-surface-variant uppercase font-bold">holding Release State</span>
 <span className="font-label-sm text-[11px] text-primary font-bold">Stage 2 of 4</span>
 </div>
 <div className="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden flex">
@@ -232,7 +232,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <Icon name="qr_code_scanner" className="text-primary text-[20px]" />
-<span className="font-label-lg text-label-lg text-on-surface font-bold">Tamper Seal Telemetry</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">package seal Telemetry</span>
 </div>
 <span className="font-code-display text-[11px] text-tertiary-fixed font-mono bg-tertiary-container/40 px-2 py-0.5 rounded">HASH VALID</span>
 </div>
@@ -304,7 +304,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-space-sm bg-container-dark-high p-space-sm rounded-lg flex items-center gap-space-sm">
 <Icon name="satellite_alt" className="text-action-gradient-start text-[20px]" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface font-bold">Cryptographic Handshake</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold">Verified Handshake</span>
 <span className="font-body-sm text-[11px] text-on-surface-variant">Bag ID registered to Rider SIM IMEI + GPS Geo-Stamp</span>
 </div>
 </div>
@@ -344,10 +344,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="group relative rounded-xl overflow-hidden bg-surface-container-high shadow-md">
 <div className="h-40 w-full relative">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high contrast forensic inspection photo of a heavy-duty transparent polymer tamper bag with red void indicators and serial barcode label clearly framed in sharp focus." src="/images/44a40683c5e51bbb.webp" />
+<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high contrast forensic inspection photo of a heavy-duty transparent polymer package bag with red void indicators and serial barcode label clearly framed in sharp focus." src="/images/44a40683c5e51bbb.webp" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent"></div>
 <span className="absolute top-2 left-2 bg-surface-dark/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-on-surface font-mono font-bold">ANGLE 03: ENCLOSURE</span>
-<span className="absolute bottom-2 left-2 font-label-md text-label-md text-on-surface font-bold">Tamper Seal Bag Locked</span>
+<span className="absolute bottom-2 left-2 font-label-md text-label-md text-on-surface font-bold">package seal Bag Locked</span>
 <span className="absolute bottom-2 right-2 text-tertiary-fixed font-bold text-xs flex items-center"><Icon name="done_all" className="text-[14px]" /> SYNCED</span>
 </div>
 </div>
@@ -375,7 +375,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </button>
 <button className="px-space-xl py-3 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end hover:opacity-95 text-on-primary-container font-label-lg text-label-lg flex items-center gap-2 shadow-[0_4px_16px_rgba(218,55,0,0.4)] active:scale-95 transition-all" id="supervisor-approve-btn">
 <Icon name="assignment_turned_in" className="text-[20px]" />
-<span>Issue Custody Receipt</span>
+<span>Issue holding Receipt</span>
 </button>
 </div>
 </div>

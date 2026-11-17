@@ -101,7 +101,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="lock" className="text-[16px] text-on-surface-variant/40" />
 </div>
 <span className="font-label-md text-label-md text-on-surface-variant font-bold">Catalog &amp; Pricing</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant/70 whitespace-nowrap">UGX tiers &amp; MoMo escrow</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant/70 whitespace-nowrap">UGX tiers &amp; momo payment</span>
 <div className="w-full h-1 bg-surface-container-highest rounded-full mt-1"></div>
 </div>
 
@@ -409,7 +409,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-emerald-escrow/10 flex items-start gap-2.5">
 <Icon name="verified" className="text-emerald-escrow text-[18px] shrink-0 mt-0.5" />
 <p className="font-body-sm text-body-sm text-emerald-escrow leading-snug">
-            Images validated against Swift Escrow Authenticity Guarantees. Counterfeit penalties apply per URSB marketplace guideline.
+            Images validated against swift protection Authenticity Guarantees. Counterfeit penalties apply per URSB marketplace guideline.
           </p>
 </div>
 </div>

@@ -133,7 +133,7 @@ export const RegionalLinehaulTransitHandoverSwiftcartWorkHub: React.FC<RegionalL
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <Icon name="inventory" className="text-[18px] text-secondary" />
-<h2 className="font-label-lg text-label-lg font-bold text-on-surface">Cargo Manifest &amp; Tamper Seals</h2>
+<h2 className="font-label-lg text-label-lg font-bold text-on-surface">Cargo Manifest &amp; package seal</h2>
 </div>
 <span className="font-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">148 Total Parcels</span>
 </div>
@@ -157,12 +157,12 @@ export const RegionalLinehaulTransitHandoverSwiftcartWorkHub: React.FC<RegionalL
 </div>
 
 <div className="mt-space-xs p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-space-xs">
-<span className="font-label-sm uppercase font-bold tracking-wider text-secondary">Vault Security Credentials</span>
+<span className="font-label-sm uppercase font-bold tracking-wider text-secondary">reserve Security Credentials</span>
 <div className="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
 <div className="flex items-center gap-space-xs min-w-0">
 <Icon name="lock" className="text-tertiary text-[18px]" />
 <div className="min-w-0">
-<p className="font-label-sm font-bold text-on-surface truncate">Master Bolt #BOU-SEAL-8891</p>
+<p className="font-label-sm font-bold text-on-surface truncate">Master Bolt #Pesapal-SEAL-8891</p>
 <p className="font-body-sm text-body-sm text-secondary">Chamber Lock 1 • Verified Laser-Etched</p>
 </div>
 </div>
@@ -175,7 +175,7 @@ export const RegionalLinehaulTransitHandoverSwiftcartWorkHub: React.FC<RegionalL
 <Icon name="verified_user" className="text-secondary text-[18px]" />
 <div className="min-w-0">
 <p className="font-label-sm font-bold text-on-surface truncate">Backup Foil #SWIFT-SEC-2025-09</p>
-<p className="font-body-sm text-body-sm text-secondary">Rear Latches • Anti-tamper barcode intact</p>
+<p className="font-body-sm text-body-sm text-secondary">Rear Latches • Anti-package barcode intact</p>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm font-bold flex-shrink-0">

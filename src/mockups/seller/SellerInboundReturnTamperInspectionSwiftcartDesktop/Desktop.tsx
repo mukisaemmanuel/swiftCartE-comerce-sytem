@@ -28,12 +28,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-space-xs text-amber-warning">
 <Icon name="verified_user" className="text-[18px]" />
-<span className="font-label-sm text-label-sm uppercase tracking-wider">Field Ledger Custody</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider">Field Ledger holding</span>
 </div>
 <div className="h-3 w-px bg-surface-container-high"></div>
 <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow animate-pulse"></span>
-        Ledger Transaction Locked in Nakasero Multi-Sig Escrow Vault
+        Ledger Transaction Locked in Nakasero Multi-Sig Payment Reserve
       </p>
 </div>
 <div className="flex items-center gap-space-sm text-tertiary font-label-sm text-label-sm">
@@ -54,7 +54,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-primary font-bold">Inbound Inspection #RTN-4491</span>
 </nav>
 <div className="flex items-center gap-space-md flex-wrap mt-1">
-<h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Inbound Return &amp; Tamper Seal Inspection</h1>
+<h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Inbound Return &amp; package seal Inspection</h1>
 <div className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-md text-label-md shadow-sm">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow"></span>
 <span>Physical Inspection Active • Nakasero Flagship Hub #UG-04</span>
@@ -412,7 +412,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <input className="mt-1 accent-action-gradient-start" name="disposition_choice" type="radio" value="reject" />
 <div className="flex-1">
 <span className="font-label-lg text-label-lg text-danger-penalty font-bold">Reject Return (Misuse or Item Swap)</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deny escrow release to customer. Initiate fraud investigation with SwiftCart Risk Dept.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deny Payment Release to customer. Initiate fraud investigation with SwiftCart Risk Dept.</p>
 </div>
 </label>
 </div>
@@ -422,11 +422,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between mb-space-md">
 <div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Financial Disposition</h3>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Automated ledger resolution via SwiftCart Escrow Smart-Lock</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Automated ledger resolution via SwiftCart Protection Smart-Lock</p>
 </div>
 <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-emerald-escrow/10 text-emerald-escrow font-bold flex items-center gap-1">
 <Icon name="lock_open" className="text-[14px]" />
-<span>ESCROW READY</span>
+<span>PAYMENT READY</span>
 </span>
 </div>
 <div className="space-y-space-sm mb-space-md">
@@ -476,11 +476,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col gap-space-sm">
 <button className="w-full h-12 rounded-xl text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-lg shadow-action-gradient-end/30 bg-gradient-to-r from-action-gradient-start to-action-gradient-end" id="btn-confirm-verdict">
 <Icon name="check_circle" className="text-[20px]" />
-<span>Confirm Inspection &amp; Release Escrow</span>
+<span>Confirm Inspection &amp; release payment</span>
 </button>
 <button className="w-full h-10 rounded-lg bg-surface-container-high text-danger-penalty font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-danger-penalty/10 transition-colors" id="btn-arbitrate">
 <Icon name="gavel" className="text-[18px]" />
-<span>Flag Discrepancy &amp; Route to Arbitration</span>
+<span>Flag Discrepancy &amp; Route to dispute review</span>
 </button>
 </div>
 </div>

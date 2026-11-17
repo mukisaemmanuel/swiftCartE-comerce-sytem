@@ -38,7 +38,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </span>
 </div>
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Legal &amp; Consumer Safeguards</span>
-<span className="font-body-sm text-body-sm text-secondary">Statutory compliance oversight for SwiftCart Uganda Logistics Technologies Ltd.</span>
+<span className="font-body-sm text-body-sm text-secondary">verified platform compliance oversight for SwiftCart Uganda Logistics Technologies Ltd.</span>
 </div>
 </div>
 <div className="flex items-center gap-space-sm w-full md:w-auto">
@@ -83,7 +83,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <nav className="flex flex-col gap-1" id="toc-nav">
 <a className="toc-link group flex items-start gap-space-xs p-2 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-bold transition-colors" href="#pledge-overview" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>
 <Icon name="verified_user" className="text-[18px] text-primary shrink-0 mt-0.5" />
-<span className="line-clamp-1">1. SwiftCart Data Pledge &amp; Escrow Overview</span>
+<span className="line-clamp-1">1. SwiftCart Data Pledge &amp; Payment Overview</span>
 </a>
 <a className="toc-link group flex items-start gap-space-xs p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md font-medium transition-colors" href="#info-we-collect" onClick={() => alertToast('Action triggered')}>
 <Icon name="badge" className="text-[18px] text-secondary shrink-0 mt-0.5 group-hover:text-primary" />
@@ -209,19 +209,19 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 
 <article className="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-md" id="pledge-overview">
 <div className="flex items-center gap-space-xs text-primary">
-<span className="font-headline-sm text-headline-sm font-bold">1. SwiftCart Data Pledge &amp; Escrow Overview</span>
+<span className="font-headline-sm text-headline-sm font-bold">1. SwiftCart Data Pledge &amp; Payment Overview</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-relaxed">
-            SwiftCart operates a high-throughput multi-vendor digital commerce marketplace serving buyers across Uganda. To protect all marketplace participants, our data protocols are anchored in real-time escrow safety. When you authorize an order, your capital and personal contact coordinates are ring-fenced inside our secured operational vault until verified delivery handover by your assigned courier.
+            SwiftCart operates a high-throughput multi-vendor digital commerce marketplace serving buyers across Uganda. To protect all marketplace participants, our data protocols are anchored in real-time payment safety. When you authorize an order, your capital and personal contact coordinates are reserved inside our secured operational reserve until verified delivery handover by your assigned courier.
           </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
 <div className="flex items-center gap-space-xs text-on-surface font-label-lg text-label-lg font-bold">
 <Icon name="account_balance_wallet" className="text-primary text-[20px]" />
-<span>Payment Escrow Protection</span>
+<span>Payment Payment Protection</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Payment deductions via MTN MoMo, Airtel Money, or Card remain in an independent trustee escrow until goods pass physical buyer inspection at the door.
+                Payment deductions via MTN MoMo, Airtel Money, or Card remain in an independent trustee payment until goods pass physical buyer inspection at the door.
               </p>
 </div>
 <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
@@ -241,7 +241,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-headline-sm text-headline-sm font-bold">2. Information We Collect (Identity, Addresses, MoMo)</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-relaxed">
-            Under Section 10 of the Uganda Data Protection and Privacy Act 2019, SwiftCart collects and processes solely the baseline minimum personal records required to establish proof of sale and complete physical transit:
+            Under Section 10 of the Uganda SwiftCart Privacy Policy 2019, SwiftCart collects and processes solely the baseline minimum personal records required to establish proof of sale and complete physical transit:
           </p>
 <div className="flex flex-col gap-space-sm">
 <div className="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
@@ -250,7 +250,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg font-bold text-on-surface">Identity &amp; Account Profiling</span>
-<span className="font-body-md text-body-md text-on-surface-variant">Full name, contact telephone number (e.g. +256 prefix), verified email address, and optional business tax PIN (URA TIN) for corporate invoicing.</span>
+<span className="font-body-md text-body-md text-on-surface-variant">Full name, contact telephone number (e.g. +256 prefix), verified email address, and optional business tax PIN (Tax ID) for corporate invoicing.</span>
 </div>
 </div>
 <div className="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
@@ -331,14 +331,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-headline-sm text-headline-sm font-bold">4. Payment Security &amp; Zero PIN Storage</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-relaxed">
-            SwiftCart integrates directly with Bank of Uganda licensed National Payment System (NPS) operators, including MTN Mobile Money Uganda and Airtel Money. We strictly maintain a <strong>Zero Mobile Money PIN Storage Architecture</strong>.
+            SwiftCart integrates directly with Pesapal registered Pesapal Payment Guidelines operators, including MTN Mobile Money Uganda and Airtel Money. We strictly maintain a <strong>Zero Mobile Money PIN Storage Architecture</strong>.
           </p>
 <div className="rounded-xl bg-error-container/20 p-space-md flex items-start gap-space-md">
 <Icon name="warning" className="text-error text-[28px] shrink-0" />
 <div className="flex flex-col gap-1">
 <span className="font-label-lg text-label-lg font-bold text-error">Critical Consumer Payment Warning</span>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                SwiftCart staff, agents, and Boda couriers will <strong>NEVER</strong> prompt, request, or input your 4-digit or 5-digit Mobile Money PIN. PIN entry occurs exclusively via official telecom USSD prompts (*165# or *185#) or certified financial SDK webhooks on your personal device.
+                SwiftCart staff, agents, and Boda couriers will <strong>NEVER</strong> prompt, request, or input your 4-digit or 5-digit Mobile Money PIN. PIN entry occurs exclusively via official telecom USSD prompts (Mobile prompt or Mobile prompt) or certified financial SDK webhooks on your personal device.
               </p>
 </div>
 </div>
@@ -348,7 +348,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-body-sm text-body-sm text-secondary">Card digits are never kept on local disk. Encrypted tokens only.</span>
 </div>
 <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span className="font-label-md text-label-md font-bold text-on-surface">BOU NPS Authorized</span>
+<span className="font-label-md text-label-md font-bold text-on-surface">Pesapal Pesapal Rails Authorized</span>
 <span className="font-body-sm text-body-sm text-secondary">Settlement partners operate with full central bank licensure.</span>
 </div>
 <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
@@ -386,7 +386,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-headline-sm text-headline-sm font-bold">6. Data Retention, Security &amp; Deletion Rights</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-relaxed">
-            In compliance with Part IV of Uganda's Data Protection Act, every buyer possesses full statutory rights over their personal telemetry:
+            In compliance with Part IV of Uganda's SwiftCart Privacy Policy, every buyer possesses full verified platform rights over their personal telemetry:
           </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
@@ -404,7 +404,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
                 Right to Erasure (Forget Me)
               </span>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Permanently purge your account, saved addresses, and profile metadata. Financial transaction ledgers are retained for 7 years solely as mandated by URA tax statutes.
+                Permanently purge your account, saved addresses, and profile metadata. Financial transaction ledgers are retained for 7 years solely as mandated by Tax tax statutes.
               </p>
 </div>
 </div>

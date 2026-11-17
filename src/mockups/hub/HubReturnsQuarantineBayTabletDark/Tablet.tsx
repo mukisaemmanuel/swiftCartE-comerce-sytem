@@ -48,7 +48,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-lg text-headline-lg text-secondary">14</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Pkgs</span>
 </div>
-<span className="font-label-md text-label-md text-emerald-escrow mt-0.5 whitespace-nowrap">UGX 3,420,000 in Escrow</span>
+<span className="font-label-md text-label-md text-emerald-escrow mt-0.5 whitespace-nowrap">UGX 3,420,000 in Payment</span>
 </div>
 <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
 <Icon name="local_shipping" className="text-secondary text-[22px]" />
@@ -128,14 +128,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col items-end shrink-0">
 <span className="font-label-lg text-label-lg text-emerald-escrow whitespace-nowrap">UGX 380,000</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5 mt-0.5">
-<Icon name="verified_user" className="text-[13px] text-emerald-escrow" /> Escrow Held
+<Icon name="verified_user" className="text-[13px] text-emerald-escrow" /> Payment Held
                 </span>
 </div>
 </div>
 <div className="mt-space-sm pt-space-xs flex flex-col gap-1 bg-surface-container-lowest/60 p-space-sm rounded-lg">
 <div className="flex items-center gap-1.5 text-danger-penalty font-label-sm text-label-sm">
 <Icon name="warning" className="text-[16px]" />
-<span>Tamper Seal Sliced • Discrepant Cable Returned</span>
+<span>package seal Sliced • Discrepant Cable Returned</span>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-0.5">
 <span>Rider: Kizito B. (UFA 421Z)</span>
@@ -228,7 +228,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-1">Merchant: <strong className="text-on-surface">Victoria Tech Supplies</strong> • Buyer Phone: <code className="text-primary font-mono">07•• ••• 419</code></span>
 </div>
 <div className="flex flex-col items-start md:items-end bg-surface-container-high px-space-md py-space-xs rounded-lg shrink-0">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Custody Vault</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">payment holding reserve</span>
 <div className="flex items-center gap-1 text-emerald-escrow">
 <Icon name="lock" className="text-[18px]" />
 <span className="font-price-display text-price-display font-extrabold whitespace-nowrap">UGX 380,000</span>
@@ -245,9 +245,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm">
 <span className="font-label-lg text-label-lg text-on-surface">Dispute Docket #DSP-104</span>
-<span className="px-2 py-0.5 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm font-semibold">Under Fast-Track Arbitration</span>
+<span className="px-2 py-0.5 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm font-semibold">Under Fast-Track dispute review</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Assigned Officer: <strong className="text-on-surface">Patricia Namubiru</strong> (SwiftCart HQ Trust &amp; Safety Desk)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Assigned Officer: <strong className="text-on-surface">Denis Mukasa</strong> (SwiftCart HQ Trust &amp; Safety Desk)</span>
 </div>
 </div>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors shrink-0">
@@ -262,7 +262,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                 Forensic Tamper Inspection Matrix
               </span>
 <span className="font-label-sm text-label-sm text-emerald-escrow bg-tertiary-container/30 px-2 py-1 rounded">
-                Tamper Bag Barcode: #TB-KLA-8820-91X Verified
+                package bag Barcode: #TB-KLA-8820-91X Verified
               </span>
 </div>
 
@@ -383,7 +383,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs">
 <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Agent Inspection Finding Log</span>
 <p className="font-body-md text-body-md text-on-surface">
-                Package arrived with tamper tape sliced from underneath. SoundCore unit powers on, but customer substituted factory black nylon USB-C braided fast cable with unbranded standard white USB-A lead. Escrow hold maintained per SwiftCart RTO Section 4B. Isolated to Quarantine Shelf Q-02 pending merchant concurrence.
+                Package arrived with tamper tape sliced from underneath. SoundCore unit powers on, but customer substituted factory black nylon USB-C braided fast cable with unbranded standard white USB-A lead. Payment Hold maintained per SwiftCart RTO Section 4B. Isolated to Quarantine Shelf Q-02 pending merchant concurrence.
               </p>
 </div>
 </div>

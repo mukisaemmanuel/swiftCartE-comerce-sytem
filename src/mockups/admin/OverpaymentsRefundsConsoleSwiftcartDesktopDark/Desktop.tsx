@@ -89,8 +89,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-xs bg-surface-container-low/50 rounded-lg p-space-xs flex justify-between items-center text-label-sm font-label-sm">
-<span className="text-on-surface-variant">Escrow Buffer Safe:</span>
-<span className="text-emerald-escrow font-bold">100% Guaranteed</span>
+<span className="text-on-surface-variant">Payment Buffer Safe:</span>
+<span className="text-emerald-escrow font-bold">Quality Assured</span>
 </div>
 </div>
 
@@ -239,7 +239,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-space-md px-space-md">
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Duplicate USSD Push</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">*165# double tap confirmed</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Mobile PIN prompt confirmed</span>
 </div>
 </td>
 <td className="py-space-md px-space-md whitespace-nowrap">
@@ -529,7 +529,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="contactless" className="text-action-gradient-start text-[22px]" />
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Process Direct Telecom Reverse Credit</h2>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Cryptographic mobile money settlement dispatch</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Verified mobile money settlement dispatch</span>
 </div>
 <span className="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-code-display text-label-sm font-bold">STAGE 2/2</span>
 </div>
@@ -566,8 +566,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-emerald-escrow font-bold whitespace-nowrap">0 UGX (Waived Partner Agree.)</span>
 </div>
 <div className="flex items-center justify-between font-label-md text-label-md">
-<span className="text-on-surface-variant">Escrow Account Debited</span>
-<span className="text-on-surface font-mono text-label-sm">ESCROW-UG-MOMO-01</span>
+<span className="text-on-surface-variant">Payment Hold Account Debited</span>
+<span className="text-on-surface font-mono text-label-sm">PAYMENT-UG-MOMO-01</span>
 </div>
 <div className="h-px bg-surface-container-high/60 w-full my-1"></div>
 <div className="flex items-center justify-between">
@@ -623,7 +623,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface font-semibold">Automated Settlement Settlement Engine v3</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">All reversals communicate directly with Kampala Central MoMo aggregator switches under Bank of Uganda National Payments Systems (NPS) mandate.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">All reversals communicate directly with Kampala Central MoMo aggregator switches under Pesapal Gateway Switch Integration.</span>
 </div>
 </div>
 <div className="flex items-center gap-space-md flex-shrink-0">

@@ -45,7 +45,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-xs flex-shrink-0 self-start md:self-center">
 <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
 <Icon name="lock" className="text-primary text-[14px]" />
-<span className="tracking-wide">ENCLAVE: LOCKED</span>
+<span className="tracking-wide">secure engine: LOCKED</span>
 </div>
 <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">
 <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
@@ -89,7 +89,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </p>
 </div>
 <div className="text-right flex-shrink-0">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Escrow Held</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Payment Held</span>
 <span className="font-price-display text-price-display text-primary font-bold whitespace-nowrap">UGX 248.5K</span>
 </div>
 </div>
@@ -116,7 +116,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </p>
 </div>
 <div className="text-right flex-shrink-0">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Escrow Held</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Payment Held</span>
 <span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 115K</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </p>
 </div>
 <div className="text-right flex-shrink-0">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Escrow Held</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Payment Held</span>
 <span className="font-headline-sm text-headline-sm text-on-surface whitespace-nowrap">UGX 65K</span>
 </div>
 </div>
@@ -199,14 +199,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">Dispatch Proof</span>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
 <Icon name="format_image_left" className="text-[14px]" />
-                HMAC VERIFIED LOCAL ENCLAVE
+                HMAC VERIFIED LOCAL secure engine
               </span>
 </div>
 <h1 className="font-headline-md text-headline-md text-on-surface mt-1">Sarah Namubiru <span className="text-on-surface-variant font-label-lg text-label-lg">(#SC-9952)</span></h1>
 <p className="font-body-md text-body-md text-on-surface-variant mt-0.5">Acacia Mall Gate 2, Kampala Central • Buyer Phone: 07•• ••• 418</p>
 </div>
 <div className="px-3 py-1.5 rounded-xl bg-surface-container-low flex flex-col items-end">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">payment protected</span>
 <span className="font-headline-sm text-headline-sm text-tertiary whitespace-nowrap">UGX 248,500</span>
 </div>
 </div>
@@ -220,7 +220,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">Customer SMS / In-App Offline Seed</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-            Customer provides the cryptographic handover token displayed on their phone. Verified locally against pre-synced salted SHA-256 digest.
+            Customer provides the verified handover token displayed on their phone. Verified locally against pre-synced salted SHA-256 digest.
           </p>
 
 <div className="grid grid-cols-6 gap-2 sm:gap-3 max-w-md mx-auto">
@@ -317,7 +317,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-center gap-1.5 text-center mt-1 text-on-surface-variant">
 <Icon name="history_toggle_off" className="text-[16px] text-tertiary" />
 <p className="font-body-sm text-body-sm">
-              Handover proof will automatically upload to SwiftCart central escrow ledger as soon as 3G/4G connectivity is restored.
+              Handover proof will automatically upload to SwiftCart central Payment Holds as soon as 3G/4G connectivity is restored.
             </p>
 </div>
 </div>
@@ -340,7 +340,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="fixed bottom-24 right-6 bg-surface-container-highest text-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="statusToast">
 <Icon name="check_circle" className="text-primary text-[20px]" />
-<span className="font-label-md text-label-md" id="toastMsg">Proof stored securely in offline enclave</span>
+<span className="font-label-md text-label-md" id="toastMsg">Proof stored securely in offline secure engine</span>
 </div>
 </div>
 </div></main>

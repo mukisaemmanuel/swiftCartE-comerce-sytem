@@ -36,7 +36,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-sm">
 <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
-<span>BoU NPS Sandbox Live</span>
+<span>Pesapal Pesapal Rails Sandbox Live</span>
 </div>
 <span className="text-outline text-label-sm">|</span>
 <span className="text-outline font-label-sm">Sync ID: <span className="font-code-display text-on-surface text-[12px] tracking-normal">KLA-MERCH-8821B</span></span>
@@ -108,7 +108,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-3 flex items-center justify-between">
 <div className="flex items-center gap-1 text-on-surface-variant font-body-sm">
 <Icon name="lock_clock" className="text-emerald-escrow text-[16px]" />
-<span>Escrow cleared via MoMo Rails</span>
+<span>payment cleared via MoMo Rails</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm">96.5% Net Yield</span>
 </div>
@@ -162,7 +162,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface">Revenue &amp; Sales Velocity</span>
 <span className="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm whitespace-nowrap">Gross UGX</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Daily escrow billing volume matched against dispatched order count</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Daily payment billing volume matched against dispatched order count</p>
 </div>
 <div className="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
 <button className="px-3 py-1 rounded text-outline hover:text-on-surface font-label-sm transition-colors" type="button">Hourly</button>
@@ -245,7 +245,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
 <Icon name="sync_saved_locally" className="text-[16px]" />
-            Ledger Reconciled: BoU Sandbox Verified
+            Ledger Reconciled: Pesapal Sandbox Verified
           </span>
 </div>
 </div>
@@ -400,7 +400,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="electric_moped" className="text-tertiary text-[20px]" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Jinja Road Express Dispatch Corridor</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">SafeBoda Priority Channel: 100% blind OTP cryptographic verification active</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">SafeBoda Priority Channel: 100% blind OTP verified verification active</span>
 </div>
 </div>
 <div className="flex items-center gap-2">
@@ -533,7 +533,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="health_and_safety" className="text-emerald-escrow text-[22px]" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Return &amp; Dispute Rate: 0.6%</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow holdback threshold safe (&lt; 2.0%)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment holdback threshold safe (&lt; 2.0%)</span>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm uppercase">Optimal</span>

@@ -219,7 +219,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-3.5 px-4">
 <span className="font-label-md text-label-md text-on-surface block">Duplicate USSD Push</span>
-<span className="text-label-sm text-on-surface-variant leading-tight block">*165# double tap confirmed</span>
+<span className="text-label-sm text-on-surface-variant leading-tight block">Mobile PIN prompt confirmed</span>
 </td>
 <td className="py-3.5 px-4 text-right font-bold text-on-surface font-mono">
                   180,000
@@ -455,7 +455,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div>
 <div className="flex items-center gap-2">
 <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase">Stage 2 / 2</span>
-<span className="font-label-sm text-label-sm text-primary font-bold">Cryptographic Dispatch</span>
+<span className="font-label-sm text-label-sm text-primary font-bold">Verified Dispatch</span>
 </div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface mt-1">Process Direct Reverse Credit</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Instant push to customer telecom cash wallet.</p>
@@ -502,14 +502,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-mono text-tertiary whitespace-nowrap">0 UGX (Waived)</span>
 </div>
 <div className="flex items-center justify-between text-body-sm text-on-surface-variant">
-<span>Debited Escrow Node</span>
-<span className="font-mono text-on-surface text-[12px]">ESCROW-UG-MOMO-01</span>
+<span>Debited Payment Node</span>
+<span className="font-mono text-on-surface text-[12px]">PAYMENT-UG-MOMO-01</span>
 </div>
 
 <div className="p-4 rounded-xl bg-primary-fixed/30 flex items-center justify-between mt-3">
 <div>
 <span className="font-label-sm text-label-sm text-primary uppercase font-bold block">Net Buyer Credit</span>
-<span className="text-body-sm text-on-surface-variant">Non-taxable escrow rollback</span>
+<span className="text-body-sm text-on-surface-variant">Non-taxable payment rollback</span>
 </div>
 <div className="text-right">
 <div className="font-price-display text-price-display text-primary font-black whitespace-nowrap">UGX 180,000</div>
@@ -523,7 +523,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-label-sm text-outline">Internal Node Log</span>
 </label>
 <div className="p-3 rounded-xl bg-surface-container-low font-mono text-[11px] text-on-surface-variant leading-relaxed">
-              [2024-03-24 14:18:02 EAT] AUTO-DETECT: Customer initiated duplicate payment *165# before webhook callback acknowledged. External TransID: #MTN-8821940. Auto-flagged for immediate supervisor settlement sign-off.
+              [2024-03-24 14:18:02 EAT] AUTO-DETECT: Customer initiated duplicate mobile payment before webhook callback acknowledged. External TransID: #MTN-8821940. Auto-flagged for immediate supervisor settlement sign-off.
             </div>
 </div>
 
@@ -566,9 +566,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div>
 <div className="flex items-center gap-2">
 <span className="font-label-lg text-label-lg text-on-surface">Automated Settlement Engine v3</span>
-<span className="px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm">Stanbic Bank Partner Float Synced</span>
+<span className="px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm">Pesapal Partner Float Synced</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Uganda National Payment Systems Act Compliant (Bank of Uganda NPS-092-2021).</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Processed securely via Pesapal Uganda Gateway.</p>
 </div>
 </div>
 <div className="flex items-center gap-6">

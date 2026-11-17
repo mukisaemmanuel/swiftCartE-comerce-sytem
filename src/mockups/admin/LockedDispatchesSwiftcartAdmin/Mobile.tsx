@@ -38,7 +38,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
           3 Dispatches Currently Locked
         </h2>
 <p className="font-body-sm text-body-sm text-on-error-container opacity-90 mt-1">
-          Escrow vaults and courier digital handover channels are suspended pending staff operational sign-off.
+          Payment reserve and courier digital handover channels are suspended pending staff operational sign-off.
         </p>
 </div>
 </div>
@@ -85,7 +85,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
 <p className="font-label-md text-label-md font-bold leading-snug">
           3 Consecutive Failed Delivery Release Code Attempts
         </p>
-<span className="font-label-sm text-label-sm text-error uppercase font-semibold">Handover Blocked • Vault Frozen</span>
+<span className="font-label-sm text-label-sm text-error uppercase font-semibold">Handover Blocked • reserve Frozen</span>
 </div>
 </div>
 
@@ -111,7 +111,7 @@ export const LockedDispatchesSwiftcartAdmin: React.FC<LockedDispatchesSwiftcartA
         </span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary bg-surface-container-lowest p-2 rounded-lg leading-relaxed">
-<span className="font-bold text-on-surface">Telemetry Note:</span> Courier arrived 14:18. Customer provided 3 invalid 6-digit verification codes. Automated anti-theft escrow lock initiated.
+<span className="font-bold text-on-surface">Telemetry Note:</span> Courier arrived 14:18. Customer provided 3 invalid 6-digit verification codes. Automated anti-theft payment lock initiated.
       </p>
 </div>
 

@@ -146,7 +146,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 </div>
 <div className="bg-surface-container-low rounded-xl p-space-sm flex flex-col justify-between">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Bag Escrow Value</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Bag Payment Value</span>
 <Icon name="lock" className="text-[18px] text-tertiary" />
 </div>
 <div className="mt-1 truncate">
@@ -154,7 +154,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 </div>
 <div className="flex items-center gap-1 mt-1">
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-<span className="font-label-sm text-label-sm text-on-surface-variant truncate">Stanbic &amp; MoMo Prot.</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant truncate">Pesapal &amp; MoMo Prot.</span>
 </div>
 </div>
 </div>
@@ -170,7 +170,7 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 </div>
 <div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold">Sack Physical Lock Seal</h3>
-<p className="font-label-sm text-label-sm text-on-surface-variant">Tamper-Evident Staging Protocol</p>
+<p className="font-label-sm text-label-sm text-on-surface-variant">Sealed Package Bag Staging Protocol</p>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
@@ -298,9 +298,9 @@ export const RiderDispatchCourierBagStagingSwiftcartHubAgent: React.FC<RiderDisp
 <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-space-xs">
 <Icon name="document_scanner" className="text-[28px]" />
 </div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">Courier Custody Transfer</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">Courier holding Transfer</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-0.5">
-        Scan Kizito Brian's SwiftRider driver app token to bind escrow custody to Rider #RDR-UG-4082.
+        Scan Kizito Brian's SwiftRider driver app token to bind payment holding to Rider #RDR-UG-4082.
       </p>
 
 <button className="w-full mt-space-md py-3.5 px-space-md bg-inverse-surface text-inverse-on-surface rounded-xl shadow-md flex items-center justify-center gap-space-sm active:scale-98 transition-all hover:bg-inverse-surface/90">

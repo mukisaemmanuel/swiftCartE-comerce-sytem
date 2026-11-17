@@ -27,7 +27,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="relative w-full">
 <div className="bg-surface-container-low rounded-xl p-space-xs shadow-sm flex items-center gap-space-sm">
 <Icon name="search" className="text-outline ml-space-xs text-[22px]" />
-<input className="bg-transparent flex-1 py-space-sm text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none" id="sellerSearchInput" placeholder="Search store name, ID or URA TIN..." type="text" />
+<input className="bg-transparent flex-1 py-space-sm text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none" id="sellerSearchInput" placeholder="Search store name, ID or Tax ID..." type="text" />
 <button aria-label="Filter presets" className="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 transition-transform" type="button">
 <Icon name="tune" className="text-[18px]" />
 </button>
@@ -133,7 +133,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="bg-surface-container-low p-space-md rounded-lg space-y-space-xs">
 <div className="flex justify-between items-center text-label-sm font-label-sm">
 <span className="text-secondary flex items-center gap-1">
-<Icon name="health_and_safety" className="text-[15px] text-tertiary" /> Escrow Settlement Reliability
+<Icon name="health_and_safety" className="text-[15px] text-tertiary" /> payment settlement Reliability
         </span>
 <span className="font-label-md text-label-md text-tertiary">99.4% Flawless Completion</span>
 </div>
@@ -204,7 +204,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 
 <div className="grid grid-cols-2 gap-space-xs text-on-surface">
 <div className="bg-surface-container-low p-2.5 rounded-lg">
-<span className="font-label-sm text-label-sm text-secondary block">Pending Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-secondary block">Pending Payment Hold</span>
 <span className="font-headline-sm text-headline-sm text-error block mt-0.5 whitespace-nowrap">UGX 12,450,000</span>
 </div>
 <div className="bg-surface-container-low p-2.5 rounded-lg">
@@ -253,7 +253,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 </div>
 </div>
 <div className="flex items-center justify-between pt-1 text-label-sm font-label-sm">
-<span className="text-secondary">URA TIN: 1002998341 (Valid)</span>
+<span className="text-secondary">Tax ID: 1002998341 (Valid)</span>
 <button className="text-primary font-label-md text-label-md flex items-center gap-0.5 active:opacity-75" type="button">
         Manage Merchant <Icon name="chevron_right" className="text-[16px]" />
 </button>
@@ -264,7 +264,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <div className="w-10 h-10 rounded-full bg-primary-container/15 text-primary mx-auto flex items-center justify-center">
 <Icon name="local_police" className="text-[20px]" />
 </div>
-<p className="font-label-md text-label-md text-on-surface">SwiftCart Escrow &amp; Merchant Integrity</p>
+<p className="font-label-md text-label-md text-on-surface">SwiftCart Protection &amp; Merchant Integrity</p>
 <p className="font-body-sm text-body-sm text-secondary">
       All automated dispatch audits recalculate hourly. Suspended accounts lose checkout gateway integration immediately.
     </p>
@@ -327,7 +327,7 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <label className="flex items-start gap-space-sm p-space-xs cursor-pointer">
 <input className="mt-1 w-4 h-4 rounded text-error accent-error cursor-pointer" id="complianceCheckbox" type="checkbox" />
 <span className="font-body-sm text-body-sm text-on-surface">
-          I confirm that frozen orders will route to the SwiftCart Escrow buffer and the merchant payout cycle will halt.
+          I confirm that frozen orders will route to the SwiftCart Protection buffer and the merchant payout cycle will halt.
         </span>
 </label>
 
@@ -398,8 +398,8 @@ export const SellersDirectorySwiftcartAdmin1: React.FC<SellersDirectorySwiftcart
 <span>01 Mar 2024 • 11:00 EAT</span>
 <span className="text-primary font-bold">Onboarded</span>
 </div>
-<p className="text-on-surface font-label-md text-label-md">URA TIN Validation &amp; Bank Linking</p>
-<p className="text-secondary text-body-sm mt-0.5 whitespace-nowrap">Stanbic Bank UG Escrow merchant account tied and tested via UGX 5,000 micro-deposit.</p>
+<p className="text-on-surface font-label-md text-label-md">Tax ID Validation &amp; Bank Linking</p>
+<p className="text-secondary text-body-sm mt-0.5 whitespace-nowrap">Pesapal UG Payment merchant account tied and tested via UGX 5,000 micro-deposit.</p>
 </div>
 </div>
 <button className="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg" type="button">

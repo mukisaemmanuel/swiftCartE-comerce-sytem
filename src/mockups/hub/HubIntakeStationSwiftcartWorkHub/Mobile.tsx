@@ -157,7 +157,7 @@ export const HubIntakeStationSwiftcartWorkHub: React.FC<HubIntakeStationSwiftcar
 <div className="flex items-center gap-1.5 min-w-0">
 <Icon name="shield_lock" className="text-[18px] text-primary-container" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-[11px] text-on-surface font-bold truncate">Level-2 Tamper Seal Intact</span>
+<span className="font-label-sm text-[11px] text-on-surface font-bold truncate">Level-2 package seal Intact</span>
 <span className="font-label-sm text-[10px] text-secondary font-mono truncate">#SEAL-8821 • SoundCore ANC Pro</span>
 </div>
 </div>

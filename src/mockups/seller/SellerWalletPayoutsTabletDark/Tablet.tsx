@@ -76,10 +76,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between gap-2 mb-space-xs">
 <span className="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
 <Icon name="gavel" className="text-[18px] text-emerald-escrow" />
-              Escrow Reserve (Protected)
+              Payment Reserve (Protected)
             </span>
 <span className="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="verified" className="text-[13px] text-emerald-escrow" /> Tier-1 Vault
+<Icon name="verified" className="text-[13px] text-emerald-escrow" /> Tier-1 reserve
             </span>
 </div>
 <div className="flex items-baseline gap-1 mt-1">
@@ -93,7 +93,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-space-md pt-2">
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span>Bank of Uganda NPS Safe Custody</span>
+<span>Pesapal Pesapal Rails Safe holding</span>
 <span className="text-tertiary font-bold">18 Active Orders</span>
 </div>
 <div className="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
@@ -141,7 +141,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="receipt_long" className="text-[22px] text-action-gradient-start" />
 <div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Ledger &amp; Payout Audit Stream</h2>
-<p className="font-label-sm text-label-sm text-on-surface-variant">Direct BoU compliant escrow settlement logs</p>
+<p className="font-label-sm text-label-sm text-on-surface-variant">Direct Pesapal compliant payment settlement logs</p>
 </div>
 </div>
 <div className="flex items-center gap-1.5 self-start sm:self-auto">
@@ -175,7 +175,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center gap-1.5 overflow-x-auto pb-1" id="filterTabs">
 <button className="px-3 py-1.5 rounded-lg bg-action-gradient-start/15 text-action-gradient-start font-label-sm text-label-sm font-bold whitespace-nowrap" data-filter="all">All Settlements (24)</button>
-<button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap" data-filter="release">Order Escrow Releases (18)</button>
+<button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap" data-filter="release">Order Payment Releases (18)</button>
 <button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap" data-filter="withdrawal">Instant Withdrawals (4)</button>
 <button className="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap" data-filter="dispute">Dispute Holds (1)</button>
 </div>
@@ -190,7 +190,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2 flex-wrap">
-<span className="font-label-md text-label-md text-on-surface font-bold">Escrow Release: Order #SC-ORD-9485</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Payment Release: Order #SC-ORD-9485</span>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm font-bold">Cleared</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SoundCore Motion+ • Buyer Dennis M. verified OTP (*4912)</span>
@@ -230,7 +230,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2 flex-wrap">
-<span className="font-label-md text-label-md text-on-surface font-bold">Escrow Release: Order #SC-ORD-9478</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Payment Release: Order #SC-ORD-9478</span>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm font-bold">Cleared</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Anker 65W GaN Charger • Delivery confirmed in Nakasero</span>
@@ -270,7 +270,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2 flex-wrap">
-<span className="font-label-md text-label-md text-on-surface font-bold">Escrow Release: Order #SC-ORD-9466</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Payment Release: Order #SC-ORD-9466</span>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm font-bold">Cleared</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Space One ANC Headphones • Buyer validated via SMS pin</span>
@@ -291,7 +291,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-label-md text-label-md text-danger-penalty font-bold">Dispute Payout Freeze #DSP-8910-KLA</span>
-<span className="px-2 py-0.5 rounded-full bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm font-bold">Held in Escrow Vault</span>
+<span className="px-2 py-0.5 rounded-full bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm font-bold">Held until delivery reserve</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Package unboxing claim under seller-buyer conciliation</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant/80 mt-1">12 Feb 2025 • SwiftCart Legal Mediation Team</span>
@@ -439,11 +439,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="space-y-1">
 <div className="flex items-center gap-2">
-<h4 className="font-label-lg text-label-lg text-on-surface">Bank of Uganda Statutory Escrow</h4>
-<span className="px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">NPS 2020</span>
+<h4 className="font-label-lg text-label-lg text-on-surface">Pesapal Secure Settlement Payment</h4>
+<span className="px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">Pesapal Rails</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                All platform funds are ring-fenced inside Stanbic Bank Uganda Escrow Trust Accounts under the National Payment Systems Act 2020. Guaranteed 100% merchant solvency regardless of network liquidity.
+                All platform funds are reserved inside Pesapal Uganda Payment Protection Accounts under the Pesapal Payment Guidelines. Guaranteed 100% merchant solvency regardless of network liquidity.
               </p>
 <div className="pt-2 flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
 <span className="flex items-center gap-1 text-emerald-escrow">
@@ -466,7 +466,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container p-2.5 rounded-lg flex flex-col items-center">
 <div className="w-7 h-7 rounded-full bg-action-gradient-start/15 text-action-gradient-start flex items-center justify-center font-bold text-xs mb-1">1</div>
 <span className="font-label-sm text-label-sm text-on-surface font-semibold">Buyer Pays</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Funds lock in BoU Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Funds lock in Pesapal Payment</span>
 </div>
 <div className="bg-surface-container p-2.5 rounded-lg flex flex-col items-center">
 <div className="w-7 h-7 rounded-full bg-emerald-escrow/15 text-emerald-escrow flex items-center justify-center font-bold text-xs mb-1">2</div>
@@ -486,7 +486,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 
 </div></main>
-<footer className="fixed bottom-0 left-0 right-0 h-10 bg-surface-container-lowest/95 backdrop-blur-md z-40 px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div className="flex items-center gap-space-sm"><span className="flex items-center gap-1.5 text-tertiary"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>William St Central Hub Connection: 99.8%</span><span className="text-outline-variant">•</span><span className="text-on-surface-variant">Lat: 18ms</span></div><div className="flex items-center gap-space-xs text-on-surface-variant"><Icon name="account_balance" className="text-[15px] text-emerald-escrow" /><span>Bank of Uganda Escrow Compliance Custody Tier-1 Verified</span></div></footer>
+<footer className="fixed bottom-0 left-0 right-0 h-10 bg-surface-container-lowest/95 backdrop-blur-md z-40 px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div className="flex items-center gap-space-sm"><span className="flex items-center gap-1.5 text-tertiary"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>William St Central Hub Connection: 99.8%</span><span className="text-outline-variant">•</span><span className="text-on-surface-variant">Lat: 18ms</span></div><div className="flex items-center gap-space-xs text-on-surface-variant"><Icon name="account_balance" className="text-[15px] text-emerald-escrow" /><span>Pesapal Payment Compliance holding Tier-1 Verified</span></div></footer>
     </div>
   );
 };

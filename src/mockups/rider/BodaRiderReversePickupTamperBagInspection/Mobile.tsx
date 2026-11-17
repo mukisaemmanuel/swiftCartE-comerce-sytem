@@ -75,14 +75,14 @@ export const BodaRiderReversePickupTamperBagInspection: React.FC<BodaRiderRevers
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-sm">
 <div className="relative">
-<img className="w-12 h-12 rounded-full object-cover" data-alt="Close-up professional portrait of a Ugandan young man Alex Kato wearing a clean collared polo shirt smiling outdoors in urban Kampala sunshine" src="/images/3153ca9f909b1a53.webp" />
+<img className="w-12 h-12 rounded-full object-cover" data-alt="Close-up professional portrait of a Ugandan young man Isaac Kato wearing a clean collared polo shirt smiling outdoors in urban Kampala sunshine" src="/images/3153ca9f909b1a53.webp" />
 <span className="absolute -bottom-0.5 -right-0.5 bg-tertiary text-on-tertiary rounded-full p-0.5 flex items-center justify-center">
 <Icon name="check" className="text-[12px]" />
 </span>
 </div>
 <div>
 <div className="flex items-center gap-1.5">
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Alex Kato</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Isaac Kato</h2>
 <span className="bg-secondary-fixed text-on-secondary-fixed-variant px-1.5 py-0.5 rounded font-label-sm text-label-sm">Verified Buyer</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">+256 772 ••• 678</p>
@@ -115,7 +115,7 @@ export const BodaRiderReversePickupTamperBagInspection: React.FC<BodaRiderRevers
             2
           </div>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant text-center mt-1">Confirmed with buyer app via escrow handshake</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant text-center mt-1">Confirmed with buyer app via payment handshake</p>
 </div>
 </div>
 </section>
@@ -173,7 +173,7 @@ export const BodaRiderReversePickupTamperBagInspection: React.FC<BodaRiderRevers
 </div>
 <div className="flex-1">
 <div className="flex items-center justify-between">
-<p className="font-label-md text-label-md text-on-surface font-semibold">4. Tamper Barcode Verified</p>
+<p className="font-label-md text-label-md text-on-surface font-semibold">4. package barcode Verified</p>
 <span className="font-label-sm text-label-sm text-tertiary font-bold">LOCKED</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Security code scanned from pouch reticle.</p>
@@ -243,7 +243,7 @@ export const BodaRiderReversePickupTamperBagInspection: React.FC<BodaRiderRevers
         </span>
 </div>
 <div className="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-high">
-<img className="w-full h-full object-cover" data-alt="Clear high resolution photograph of a bright orange SwiftCart security tamper bag sealed with a silver holographic barcode strip resting securely on a motorcycle seat in bright daylight outdoors with Kampala asphalt background" src="/images/d7ad4321f81f5acc.webp" />
+<img className="w-full h-full object-cover" data-alt="Clear high resolution photograph of a bright orange SwiftCart security package bag sealed with a silver holographic barcode strip resting securely on a motorcycle seat in bright daylight outdoors with Kampala asphalt background" src="/images/d7ad4321f81f5acc.webp" />
 
 <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-inverse-surface/85 backdrop-blur-sm px-space-sm py-1.5 rounded-lg flex items-center justify-between text-inverse-on-surface">
 <div className="flex items-center gap-1.5">

@@ -71,7 +71,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
             </span>
 </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Escrow Balance</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Pending clearance</span>
 <span className="font-headline-sm text-headline-sm text-error mt-0.5 flex items-center gap-1">
 <Icon name="lock" className="text-[18px]" />
               UGX 8,450,000
@@ -87,7 +87,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
             Immediate Store Restriction
           </p>
 <p className="font-body-sm text-body-sm text-on-error-container/90 mt-1 leading-relaxed whitespace-nowrap">
-            Freezing immediately unpublishes all 34 active listings from search and holds pending escrow payouts of UGX 8,450,000. Customer orders in progress must still be fulfilled or refunded.
+            Freezing immediately unpublishes all 34 active listings from search and holds pending seller payouts of UGX 8,450,000. Customer orders in progress must still be fulfilled or refunded.
           </p>
 </div>
 </div>
@@ -166,7 +166,7 @@ export const FreezeSellerSwiftcartAdmin: React.FC<FreezeSellerSwiftcartAdminProp
 </div>
 
 <div className="hidden p-space-sm bg-tertiary-container text-on-tertiary rounded-xl text-center font-label-lg text-label-lg" id="freeze-feedback">
-          Store listings hidden and escrow paused.
+          Store listings hidden and payment paused.
         </div>
 
 <div className="flex flex-col gap-2 pt-2">

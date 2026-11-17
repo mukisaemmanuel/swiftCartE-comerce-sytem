@@ -36,14 +36,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                     5 Active Lockouts
                   </span>
                 </div>
-                <span className="font-body-md text-body-md text-on-surface-variant">Anti-Fraud Package Lockout &amp; Cryptographic Handover Resolution • Kampala Urban Network</span>
+                <span className="font-body-md text-body-md text-on-surface-variant">Anti-Fraud Package Lockout &amp; Verified Handover Resolution • Kampala Urban Network</span>
               </div>
               <div className="flex items-center gap-space-xs self-start lg:self-auto">
                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container shadow-sm">
                   <Icon name="verified" className="text-primary text-[18px]" />
                   <span className="font-label-sm text-label-sm text-on-surface font-bold">Node #UG-HQ-KLA Auth Layer</span>
                   <span className="text-outline text-label-sm">•</span>
-                  <span className="font-label-sm text-label-sm text-tertiary font-bold">Patricia Namubiru (SA)</span>
+                  <span className="font-label-sm text-label-sm text-tertiary font-bold">Denis Mukasa (SA)</span>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                 </div>
                 <div className="flex items-baseline gap-2 mt-2">
                   <span className="font-headline-lg text-headline-lg text-tertiary font-extrabold">100%</span>
-                  <span className="font-label-sm text-label-sm text-on-surface font-bold">Escrow Vaulted</span>
+                  <span className="font-label-sm text-label-sm text-on-surface font-bold">Payment Vaulted</span>
                 </div>
                 <span className="font-body-sm text-body-sm text-on-surface-variant mt-1">5 of 5 physically secure</span>
               </div>
@@ -143,7 +143,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                   <div className="mt-2 flex items-center justify-between">
                     <div className="flex flex-col">
                       <span className="font-label-lg text-label-lg text-on-surface font-bold">Run #KLA-HUB-04 • Order #SC-9488</span>
-                      <span className="font-body-sm text-body-sm text-on-surface-variant">SoundCore Space One ANC (High Escrow)</span>
+                      <span className="font-body-sm text-body-sm text-on-surface-variant">SoundCore Space One ANC (High Payment)</span>
                     </div>
                   </div>
 
@@ -251,11 +251,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                     </div>
                     <div className="flex flex-col">
                       <span className="font-label-lg text-label-lg text-on-surface font-bold">Handover Incident Dossier: #SC-9488</span>
-                      <span className="font-body-sm text-body-sm text-on-surface-variant">Cryptographic Delivery Lockout Stream</span>
+                      <span className="font-body-sm text-body-sm text-on-surface-variant">Secure Delivery Verification Stream</span>
                     </div>
                   </div>
                   <span className="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-error"></span> Escrow Frozen
+                    <span className="w-1.5 h-1.5 rounded-full bg-error"></span> payment frozen
                   </span>
                 </div>
 
@@ -344,12 +344,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-2">
                         <div className="w-6 h-6 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary font-bold text-xs">✓</div>
-                        <span className="font-label-md text-label-md text-on-surface font-bold">Option A: Cryptographic Bypass</span>
+                        <span className="font-label-md text-label-md text-on-surface font-bold">Option A: Supervisor Override Code</span>
                       </div>
                       <span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Recommended</span>
                     </div>
                     <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">
-                      Generates a secure 1-time emergency 4-digit NOC release key directly to Courier Handset and releases Escrow upon physical scan.
+                      Generates a secure 1-time emergency 4-digit NOC release key directly to Courier Handset and releases Payment upon physical scan.
                     </p>
                     <div className="mt-3 pt-2 flex items-center justify-between text-on-surface font-mono font-bold text-headline-sm">
                       <span className="font-label-sm text-label-sm text-on-surface-variant font-sans uppercase">Release PIN:</span>

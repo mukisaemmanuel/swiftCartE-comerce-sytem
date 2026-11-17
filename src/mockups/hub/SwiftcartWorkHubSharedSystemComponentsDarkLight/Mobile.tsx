@@ -54,7 +54,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <Icon name="verified" className="text-[18px]" />
 </div>
 <div className="min-w-0 flex flex-col">
-<span className="font-label-md text-label-md text-on-surface truncate">Escrow Settlement Approved</span>
+<span className="font-label-md text-label-md text-on-surface truncate">payment settlement Approved</span>
 <span className="font-body-sm text-body-sm text-emerald-escrow text-[11px] truncate whitespace-nowrap">UGX 1,240,000 credited to MTN MoMo (Ronald K.)</span>
 </div>
 </div>
@@ -101,7 +101,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 
 <div className="shrink-0 w-[240px] p-space-md rounded-2xl bg-surface-container flex flex-col justify-between shadow-md">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow In Custody</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Payment on Hold</span>
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold">
 <Icon name="lock" className="text-[13px]" />
             Secured
@@ -142,7 +142,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 </div>
 <div className="mt-3 flex items-center gap-1 text-[11px] text-tertiary font-label-sm">
 <Icon name="shield" className="text-[14px]" />
-          Zero arbitration penalties
+          Zero dispute review penalties
         </div>
 </div>
 </div>
@@ -203,7 +203,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <div className="flex items-center justify-between pt-2 border-t-0 bg-surface-container-high/50 p-2.5 rounded-xl">
 <div className="flex items-center gap-1.5">
 <span className="w-2.5 h-2.5 rounded-full bg-mtn-yellow"></span>
-<span className="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">MTN MoMo Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">MTN MoMo payment protected</span>
 </div>
 <button className="h-9 px-3 rounded-lg bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-md text-label-md font-bold shadow hover:opacity-95 active:scale-95 transition-transform flex items-center gap-1" type="button">
 <span>Dispatch Boda</span>
@@ -235,7 +235,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <div className="min-w-0 flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wide">Handover Verification Rule</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-snug">
-              Blind Code [••••••] — Only Buyer holds code. Rider enters on physical delivery to release escrow.
+              Blind Code [••••••] — Only Buyer holds code. Rider enters on physical delivery to release payment.
             </span>
 </div>
 </div>
@@ -260,7 +260,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <span className="text-outline text-xs">•</span>
 <span className="font-code-display text-[13px] tracking-wider text-on-surface-variant">07•• ••• 810</span>
 </div>
-<span className="text-error font-label-sm text-label-sm">Arbitration Held</span>
+<span className="text-error font-label-sm text-label-sm">dispute review Held</span>
 </div>
 <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
 <Icon name="pin_drop" className="text-[16px] text-primary" />
@@ -379,7 +379,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
           <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button">close</button>
 </span>
 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
-          MTN USSD Escrow
+          MTN USSD Payment
           <button className="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface" type="button">close</button>
 </span>
 </div>
@@ -437,7 +437,7 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
           <Icon name="close" className="text-[14px]" />
 </span>
 <span className="shrink-0 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-action-gradient-start text-white font-label-sm text-label-sm font-bold">
-          Pending Escrow
+          Pending Payment
           <Icon name="close" className="text-[14px]" />
 </span>
 </div>
@@ -500,13 +500,13 @@ export const SwiftcartWorkHubSharedSystemComponentsDarkLight: React.FC<Swiftcart
 <Icon name="lock_person" className="text-[28px]" />
 </div>
 <div className="flex flex-col">
-<h3 className="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-snug">Freeze Escrow &amp; Dispute</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-snug">Freeze Payment &amp; Dispute</h3>
 <span className="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Irreversible Action</span>
 </div>
 </div>
 
 <p className="font-body-md text-body-md text-on-surface-variant">
-        This will immediately halt payout of <strong className="text-on-surface font-bold whitespace-nowrap">UGX 280,000</strong> to Seller “Gadget Hub Kampala”. Funds remain held in SwiftCart platform custody pending arbitration review.
+        This will immediately halt payout of <strong className="text-on-surface font-bold whitespace-nowrap">UGX 280,000</strong> to Seller “Gadget Hub Kampala”. Funds remain held in SwiftCart platform holding pending dispute review review.
       </p>
 
 <div className="flex flex-col gap-1">

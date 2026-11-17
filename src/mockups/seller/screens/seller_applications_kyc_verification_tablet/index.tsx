@@ -31,7 +31,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           onClick={() => setDrawerOpen(false)}
         />
       )}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-28 w-full px-margin-desktop flex flex-col justify-between pt-3 pb-2"><div className="flex items-center justify-between gap-space-md"><div className="flex items-center gap-space-md min-w-0"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface tracking-tight whitespace-nowrap">SwiftCart Central Command</span><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow animate-pulse"></span>Super Admin • Enclave Verified</span></div></div></div><div className="flex items-center gap-space-lg"><div className="flex items-center gap-space-sm bg-surface-container-low px-3 py-1.5 rounded-lg"><div className="flex flex-col text-right"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase">BoU Escrow</span><span className="font-label-md text-label-md text-tertiary">UGX 198.4M</span></div><div className="w-px h-6 bg-surface-container-highest"></div><div className="flex flex-col text-right"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Nodes</span><span className="font-label-md text-label-md text-secondary">142</span></div></div><div className="flex items-center gap-space-sm"><button aria-label="Theme Switcher" className="p-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" type="button" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px]" /></button><button aria-label="Notifications" className="relative p-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-notifications'); }}><Icon name="notifications" className="text-[20px]" /><span className="absolute -top-1 -right-1 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">4</span></button></div><div className="flex items-center gap-space-sm pl-space-xs"><div className="flex flex-col text-right"><span className="font-label-md text-label-md text-on-surface whitespace-nowrap">Admin Officer Namubiru</span><span className="font-label-sm text-label-sm text-on-surface-variant">Superadmin Node</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></div><nav className="flex items-center gap-space-xs overflow-x-auto py-1 scrollbar-none" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="command-overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}>Command Overview</a><a aria-current="page" className="px-3 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="kyc-applications" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>KYC Applications (12)</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="sellers-directory" href="#" onClick={() => alertToast('Action triggered')}>Sellers Directory</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="escrow-and-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}>Escrow &amp; Disputes (5)</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="orders-oversight" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}>Orders Oversight</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="payout-queue" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>Payout Queue</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="system-and-health" href="#" onClick={() => alertToast('Action triggered')}>System &amp; Health</a></nav></div></header>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div className="h-28 w-full px-margin-desktop flex flex-col justify-between pt-3 pb-2"><div className="flex items-center justify-between gap-space-md"><div className="flex items-center gap-space-md min-w-0"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" /><div className="flex flex-col"><div className="flex items-center gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface tracking-tight whitespace-nowrap">SwiftCart Central Command</span><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow animate-pulse"></span>Super Admin • secure engine Verified</span></div></div></div><div className="flex items-center gap-space-lg"><div className="flex items-center gap-space-sm bg-surface-container-low px-3 py-1.5 rounded-lg"><div className="flex flex-col text-right"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Pesapal Payment</span><span className="font-label-md text-label-md text-tertiary">UGX 198.4M</span></div><div className="w-px h-6 bg-surface-container-highest"></div><div className="flex flex-col text-right"><span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Nodes</span><span className="font-label-md text-label-md text-secondary">142</span></div></div><div className="flex items-center gap-space-sm"><button aria-label="Theme Switcher" className="p-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" type="button" onClick={() => toggleTheme()}><Icon name="dark_mode" className="text-[20px]" /></button><button aria-label="Notifications" className="relative p-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-notifications'); }}><Icon name="notifications" className="text-[20px]" /><span className="absolute -top-1 -right-1 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">4</span></button></div><div className="flex items-center gap-space-sm pl-space-xs"><div className="flex flex-col text-right"><span className="font-label-md text-label-md text-on-surface whitespace-nowrap">Admin Officer Namubiru</span><span className="font-label-sm text-label-sm text-on-surface-variant">Superadmin Node</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></div><nav className="flex items-center gap-space-xs overflow-x-auto py-1 scrollbar-none" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="command-overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}>Command Overview</a><a aria-current="page" className="px-3 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="kyc-applications" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>KYC Applications (12)</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="sellers-directory" href="#" onClick={() => alertToast('Action triggered')}>Sellers Directory</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="payment-and-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}>Payment &amp; Disputes (5)</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="orders-oversight" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}>Orders Oversight</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="payout-queue" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>Payout Queue</a><a className="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="system-and-health" href="#" onClick={() => alertToast('Action triggered')}>System &amp; Health</a></nav></div></header>
 <main className="w-full pt-28 bg-surface min-h-screen"><div className="flex flex-col w-full">
 
 <div className="px-margin-desktop py-2 bg-surface-container-lowest flex items-center justify-between">
@@ -177,7 +177,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="flex items-center gap-1">
 <Icon name="schedule" className="text-[14px]" /> Applied 5h ago
             </span>
-<span className="text-secondary font-label-sm">Awaiting Escrow</span>
+<span className="text-secondary font-label-sm">Awaiting Payment</span>
 </div>
 </div>
 
@@ -251,7 +251,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">NATIONAL TAX RECORD</span>
 <div className="flex items-center gap-1.5 mt-0.5">
 <Icon name="fact_check" className="text-tertiary text-[18px]" />
-<span className="font-label-md text-label-md text-on-surface">URA TIN 101-884-9023</span>
+<span className="font-label-md text-label-md text-on-surface">Tax ID 101-884-9023</span>
 </div>
 </div>
 <div className="flex flex-col px-2">
@@ -275,9 +275,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="badge" className="text-primary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-on-surface">Statutory Compliance Documents (4/4)</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">verified platform Compliance Documents (4/4)</span>
 </div>
-<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-2 py-0.5 rounded">All Cryptographic Hashes Authenticated</span>
+<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-2 py-0.5 rounded">All Record Checksumes Authenticated</span>
 </div>
 <div className="grid grid-cols-2 gap-space-md">
 
@@ -351,10 +351,10 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="account_balance" className="text-tertiary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-on-surface">Bank of Uganda Regulated Settlement Ledger</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">Pesapal Verified Rails Settlement Ledger</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
-            Statutory Trust Compliant
+            verified platform Trust Compliant
           </span>
 </div>
 <div className="grid grid-cols-2 gap-space-md mt-1">
@@ -370,12 +370,12 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 
 <div className="bg-surface-container-lowest p-space-md rounded-xl flex flex-col gap-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant">ESCROW PERFORMANCE BOND POSTED</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">PAYMENT PERFORMANCE BOND POSTED</span>
 <div className="flex items-baseline gap-1">
 <span className="font-label-sm text-label-sm text-tertiary">UGX</span>
 <span className="font-price-display text-price-display text-tertiary">14,850,000</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Custody Account: Stanbic Bank Uganda (#90300188421)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">holding Account: Pesapal Uganda (#90300188421)</span>
 </div>
 </div>
 </div>
@@ -384,9 +384,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex flex-col gap-1">
 <label className="font-label-md text-label-md text-on-surface flex items-center justify-between">
 <span>Superadmin Compliance Note &amp; Audit Recommendation</span>
-<span className="text-tertiary text-label-sm">Enclave Cryptographic Stamp #499</span>
+<span className="text-tertiary text-label-sm">secure engine Verified Stamp #499</span>
 </label>
-<textarea className="w-full bg-surface-container-lowest text-on-surface p-3 rounded-lg font-body-sm text-body-sm focus:outline-none" rows={2}>All statutory documents match URSB &amp; NIRA APIs. Recommend approval for Tier-1 Electronics status with UGX 14.85M bond active in BoU escrow.</textarea>
+<textarea className="w-full bg-surface-container-lowest text-on-surface p-3 rounded-lg font-body-sm text-body-sm focus:outline-none" rows={2}>All verified platform documents match URSB &amp; NIRA APIs. Recommend approval for Tier-1 Electronics status with UGX 14.85M bond active in Pesapal payment.</textarea>
 </div>
 
 <div className="flex items-center justify-between gap-space-md pt-2">

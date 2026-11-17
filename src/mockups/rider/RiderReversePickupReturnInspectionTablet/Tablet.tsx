@@ -76,7 +76,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between gap-space-sm mb-space-xs">
 <span className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm font-bold uppercase tracking-wider">
 <Icon name="lock" className="text-[16px]" />
-              Escrow Ledger Hold
+              Payment Holds Hold
             </span>
 <span className="px-2 py-0.5 rounded text-label-sm font-label-sm bg-danger-penalty/15 text-danger-penalty uppercase font-bold tracking-tight">Frozen</span>
 </div>
@@ -98,7 +98,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-xs">
 <div className="flex items-center gap-space-xs">
 <Icon name="assignment_turned_in" className="text-primary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Arbitration Complaint Profile</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">dispute review Complaint Profile</h2>
 </div>
 <span className="bg-surface-container-high px-space-sm py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm">Dispute #DIS-0992</span>
 </div>
@@ -148,7 +148,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-space-sm" id="inspectionChecklist">
 
 <label className="flex items-start gap-space-md p-space-md bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer">
-<input checked={true} className="mt-1 w-5 h-5 accent-emerald-escrow rounded cursor-pointer" type="checkbox" />
+<input checked={true} className="mt-1 w-5 h-5 accent-emerald-payment rounded cursor-pointer" type="checkbox" />
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-on-surface">Item Serial Number Matches Manifest</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant font-mono">Matched barcode value: SN-48192-UG-OK</span>
@@ -156,7 +156,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </label>
 
 <label className="flex items-start gap-space-md p-space-md bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer">
-<input checked={true} className="mt-1 w-5 h-5 accent-emerald-escrow rounded cursor-pointer" type="checkbox" />
+<input checked={true} className="mt-1 w-5 h-5 accent-emerald-payment rounded cursor-pointer" type="checkbox" />
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-on-surface">All Stated Accessories Present in Pouch</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Includes 3.5mm jack, USB-C fast lead &amp; branded zipper pouch</span>
@@ -164,9 +164,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </label>
 
 <label className="flex items-start gap-space-md p-space-md bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer">
-<input checked={true} className="mt-1 w-5 h-5 accent-emerald-escrow rounded cursor-pointer" type="checkbox" />
+<input checked={true} className="mt-1 w-5 h-5 accent-emerald-payment rounded cursor-pointer" type="checkbox" />
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-surface">Damage Consistency with Arbitration Claim</span>
+<span className="font-label-lg text-label-lg text-on-surface">Damage Consistency with dispute review Claim</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Physical crack on right arm swivel verified intact as reported</span>
 </div>
 </label>
@@ -224,14 +224,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-xs">
 <div className="flex items-center gap-space-xs">
 <Icon name="enhanced_encryption" className="text-action-gradient-start text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Step 2: Tamper Seal Security Bag</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Step 2: package seal Security Bag</h2>
 </div>
-<span className="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-action-gradient-start/20 text-action-gradient-start font-bold uppercase tracking-wider">Custody Step</span>
+<span className="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-action-gradient-start/20 text-action-gradient-start font-bold uppercase tracking-wider">holding Step</span>
 </div>
 <div className="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
 <Icon name="info" className="text-amber-warning text-[22px] shrink-0 mt-0.5" />
 <p className="font-body-md text-body-md text-on-surface">
-              Enclose headphones and travel pouch inside the <strong className="text-on-surface">SwiftCart Tamper-Evident Satchel</strong>. Remove red adhesive tab to engage permanent void-seal before scanning.
+              Enclose headphones and travel pouch inside the <strong className="text-on-surface">SwiftCart Sealed Package Bag Satchel</strong>. Remove red adhesive tab to engage permanent void-seal before scanning.
             </p>
 </div>
 
@@ -263,7 +263,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-xs">
 <div className="flex items-center gap-space-xs">
 <Icon name="draw" className="text-secondary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Step 3: Bilateral Chain-of-Custody</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Step 3: Bilateral Chain-of-holding</h2>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Dual Ledger Signature</span>
 </div>
@@ -296,7 +296,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="two_wheeler" className="text-secondary text-[20px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Rider Custody Acknowledgment</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Rider holding Acknowledgment</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">Mukasa Brian • Bajaj Boxer UEF 842X</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Badge: Helmet #44 (KLA-Central Tier 1)</span>
 </div>
@@ -334,7 +334,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="hidden items-center justify-center gap-space-xs text-emerald-escrow bg-emerald-escrow/10 p-space-sm rounded-lg font-label-md text-label-md animate-fade-in" id="statusToast">
 <Icon name="check_circle" className="text-[18px]" />
-<span>Security Satchel Sealed &amp; Registered in Escrow Ledger. Proceed to William St.</span>
+<span>Security Satchel Sealed &amp; Registered in Payment Holds. Proceed to William St.</span>
 </div>
 </div>
 </div>
@@ -342,7 +342,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </main>
-<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Escrow Ledger Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Payment Holds Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
     </div>
   );
 };

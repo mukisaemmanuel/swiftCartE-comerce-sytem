@@ -488,7 +488,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="space-y-1">
 <span className="font-headline-sm text-headline-sm font-bold text-on-surface">Cancel Order <span id="cancel-order-id-label" className="">#SC-9938</span>?</span>
 <p className="font-body-sm text-body-sm text-secondary">
-          Cancelling will automatically refund Grace N. through escrow. You must provide a valid cancellation reason to avoid seller rating penalties.
+          Cancelling will automatically refund Grace N. through payment. You must provide a valid cancellation reason to avoid seller rating penalties.
         </p>
 </div>
 <div className="space-y-space-xs">

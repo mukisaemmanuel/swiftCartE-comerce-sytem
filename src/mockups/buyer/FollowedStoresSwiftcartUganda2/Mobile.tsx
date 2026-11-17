@@ -134,7 +134,7 @@ export const FollowedStoresSwiftcartUganda2: React.FC<FollowedStoresSwiftcartUga
 <div className="bg-amber-50/70 border border-amber-200/60 rounded-xl px-3 py-1.5 flex items-center justify-between gap-2">
 <div className="flex items-center gap-1.5 min-w-0">
 <Icon name="confirmation_number" className="text-[16px] text-amber-700" />
-<span className="font-semibold text-xs text-amber-900 truncate">5% OFF next escrow order</span>
+<span className="font-semibold text-xs text-amber-900 truncate">5% OFF next payment order</span>
 </div>
 <span className="font-bold text-[10px] tracking-wide text-emerald-800 px-2 py-0.5 rounded-full bg-emerald-100 border border-emerald-200 shrink-0 uppercase">Claimed</span>
 </div>
@@ -201,7 +201,7 @@ export const FollowedStoresSwiftcartUganda2: React.FC<FollowedStoresSwiftcartUga
                 </span>
 <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-semibold text-[10px] border border-emerald-200/60">
 <Icon name="shield" className="text-[11px] text-emerald-600" />
-                  Escrow Verified
+                  payment verified
                 </span>
 </div>
 </div>
@@ -359,9 +359,9 @@ export const FollowedStoresSwiftcartUganda2: React.FC<FollowedStoresSwiftcartUga
 <Icon name="verified_user" className="text-emerald-700 text-[18px]" />
 </div>
 <div className="flex-1 min-w-0">
-<h3 className="font-bold text-xs text-stone-900">SwiftCart Escrow Guarantee</h3>
+<h3 className="font-bold text-xs text-stone-900">SwiftCart Protection Guarantee</h3>
 <p className="text-[11px] text-stone-600 leading-relaxed mt-0.5">
-            Escrow Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.
+            Payment Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.
           </p>
 </div>
 </div>

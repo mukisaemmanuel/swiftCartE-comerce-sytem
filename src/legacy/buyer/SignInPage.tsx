@@ -41,7 +41,7 @@ export const SignInPage: React.FC<SignInPageProps> = ({ onNavigate }) => {
             Welcome Back
           </h1>
           <p className="text-xs sm:text-sm text-slate-500">
-            Sign in to access your SwiftCart orders and escrow
+            Sign in to access your SwiftCart orders and payment
           </p>
         </div>
 

@@ -39,7 +39,7 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
 </div>
 <div className="bg-error-container text-on-error-container px-2.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider font-extrabold flex items-center gap-1 shadow-sm">
 <Icon name="lock" className="text-[14px]" />
-      BOU-NPS SEC
+      Pesapal-Pesapal Rails SEC
     </div>
 </div>
 <div className="px-margin flex flex-col gap-space-md mt-space-xs">
@@ -47,10 +47,10 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
 <section className="bg-error-container text-on-error-container p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
 <div className="flex items-center gap-space-xs">
 <Icon name="gavel" className="text-error text-[20px]" />
-<h3 className="font-label-lg text-label-lg font-bold text-on-error-container">Regulatory Exception Docket • Mandatory Escrow Hold</h3>
+<h3 className="font-label-lg text-label-lg font-bold text-on-error-container">Regulatory Exception Docket • Mandatory Payment Hold</h3>
 </div>
 <p className="font-body-sm text-body-sm text-on-error-container/90 leading-relaxed">
-        Damaged or tampered items must be logged within <strong className="font-bold underline decoration-error">15 minutes</strong> of physical receipt to legally freeze courier and merchant liabilities under Bank of Uganda NPS e-commerce compliance.
+        Damaged or tampered items must be logged within <strong className="font-bold underline decoration-error">15 minutes</strong> of physical receipt to legally freeze courier and merchant liabilities under Pesapal Pesapal Rails e-commerce compliance.
       </p>
 <div className="mt-space-xs flex items-center justify-between bg-surface-container-lowest/70 backdrop-blur-sm px-3 py-1.5 rounded-lg text-on-surface font-label-sm text-label-sm">
 <span className="flex items-center gap-1 text-on-surface-variant">
@@ -106,7 +106,7 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
         </button>
 <button className="damage-pill px-3 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all bg-primary-container text-on-primary-container font-bold shadow-sm" data-checked="true" type="button">
 <Icon name="check_box" className="text-[18px]" />
-          Broken Tamper Seal (VOID Exposed)
+          Broken package seal (VOID Exposed)
         </button>
 <button className="damage-pill px-3 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all bg-surface-container text-on-surface font-medium" data-checked="false" type="button">
 <Icon name="check_box_outline_blank" className="text-[18px] text-outline" />
@@ -123,16 +123,16 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
 </div>
 <div className="mt-2 bg-error-container/40 p-2.5 rounded-lg flex items-center gap-2">
 <Icon name="emergency_home" className="text-error text-[18px]" />
-<span className="font-label-sm text-label-sm text-on-error-container font-semibold">Immediate Escrow Suspension Triggered by Selected Flags</span>
+<span className="font-label-sm text-label-sm text-on-error-container font-semibold">Immediate Payment Suspension Triggered by Selected Flags</span>
 </div>
 </section>
 
 <section className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
-<h3 className="font-label-lg text-label-lg font-bold text-on-surface">3-Angle Chain-of-Custody Evidence</h3>
+<h3 className="font-label-lg text-label-lg font-bold text-on-surface">3-Angle Chain-of-holding Evidence</h3>
 <span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">2 of 3 Logged</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">High-clarity evidentiary captures for forensic arbitration:</p>
+<p className="font-body-sm text-body-sm text-secondary">High-clarity evidentiary captures for forensic dispute review:</p>
 <div className="grid grid-cols-3 gap-space-xs pt-1">
 
 <div className="flex flex-col gap-1">
@@ -215,7 +215,7 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
 <input className="mt-1 w-4 h-4 accent-primary" name="custody_liability" type="radio" value="theft" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md font-bold text-on-surface">Suspected Thefts / En-Route Tampering</span>
-<span className="font-body-sm text-body-sm text-secondary">Escalate immediately to SwiftCart Legal, Central Arbitration &amp; Police.</span>
+<span className="font-body-sm text-body-sm text-secondary">Escalate immediately to SwiftCart Legal, Central dispute review &amp; Police.</span>
 </div>
 </label>
 </div>
@@ -224,7 +224,7 @@ export const DamagedParcelQuarantineBayIntakeSwiftcartHubAgent: React.FC<Damaged
 <section className="flex flex-col gap-space-sm pt-space-xs">
 <button className="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-extrabold py-3.5 px-space-md rounded-xl shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-freeze" type="button">
 <Icon name="lock_clock" className="text-[20px]" />
-        Freeze Escrow &amp; Admit to Bay 03
+        Freeze Payment &amp; Admit to Bay 03
       </button>
 <button className="w-full bg-surface-container-high hover:bg-surface-dim text-on-surface font-label-lg text-label-lg font-bold py-3 px-space-md rounded-xl transition-all flex items-center justify-center gap-2" type="button">
 <Icon name="support_agent" className="text-[20px] text-primary" />

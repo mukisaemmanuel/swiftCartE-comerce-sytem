@@ -470,7 +470,7 @@ const INITIAL_SELLER_NOTIFICATIONS: SellerNotification[] = [
     id: 's-notif-1',
     sellerId: DEFAULT_SELLER_ID,
     title: 'New Confirmed Order: SWIFT-UG-8901',
-    message: 'Mukisa from Kampala has confirmed payment of UGX 185,000. Funds held in escrow. Please pack items.',
+    message: 'Mukisa from Kampala has confirmed payment of UGX 185,000. Funds held until delivery. Please pack items.',
     type: 'order',
     isRead: false,
     actionUrl: '/seller/orders',
@@ -479,7 +479,7 @@ const INITIAL_SELLER_NOTIFICATIONS: SellerNotification[] = [
   {
     id: 's-notif-2',
     sellerId: DEFAULT_SELLER_ID,
-    title: 'Escrow Payout Released',
+    title: 'Seller Payout Released',
     message: 'UGX 228,000 for order SWIFT-UG-6531 has been credited to your available balance after delivery OTP confirmation.',
     type: 'wallet',
     isRead: false,

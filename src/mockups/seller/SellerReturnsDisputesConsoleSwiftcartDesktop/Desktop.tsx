@@ -34,13 +34,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex flex-wrap items-center justify-between gap-space-md mt-1">
 <div className="flex items-center gap-space-md">
-<h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Returns, Claims &amp; Escrow Disputes</h1>
+<h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Returns, Claims &amp; Payments & Disputes</h1>
 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-danger-penalty/15 text-danger-penalty font-label-md text-label-md">
 <span className="relative flex h-2 w-2">
 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-danger-penalty opacity-75"></span>
 <span className="relative inline-flex rounded-full h-2 w-2 bg-danger-penalty"></span>
 </span>
-          1 Active Dispute • Escrow Hold
+          1 Active Dispute • Payment Hold
         </div>
 </div>
 <div className="flex items-center gap-space-sm">
@@ -50,7 +50,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
         </button>
 <button className="flex items-center gap-2 h-10 px-4 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all shadow-sm">
 <Icon name="verified_user" className="text-[18px]" />
-          Arbitration SLA Policy
+          dispute review SLA Policy
         </button>
 </div>
 </div>
@@ -77,7 +77,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
         Resolved &amp; Released (14)
       </button>
 <button className="px-3.5 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
-        Escalated to Arbitration (1)
+        Escalated to dispute review (1)
       </button>
 </div>
 </div>
@@ -89,7 +89,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="grid grid-cols-2 gap-space-sm">
 <div className="bg-surface-container-low rounded-xl p-space-md">
 <div className="flex items-center justify-between text-on-surface-variant mb-1">
-<span className="font-label-sm text-label-sm uppercase">Frozen in Escrow</span>
+<span className="font-label-sm text-label-sm uppercase">Frozen in Payment</span>
 <Icon name="lock" className="text-[16px] text-amber-warning" />
 </div>
 <p className="font-headline-sm text-headline-sm text-amber-warning whitespace-nowrap">UGX 342,000</p>
@@ -97,7 +97,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="bg-surface-container-low rounded-xl p-space-md">
 <div className="flex items-center justify-between text-on-surface-variant mb-1">
-<span className="font-label-sm text-label-sm uppercase">Arbitration Win Rate</span>
+<span className="font-label-sm text-label-sm uppercase">dispute review Win Rate</span>
 <Icon name="military_tech" className="text-[16px] text-tertiary" />
 </div>
 <p className="font-headline-sm text-headline-sm text-tertiary">92.4%</p>
@@ -133,12 +133,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pl-1 space-y-1.5">
 <div className="flex items-start gap-1.5 text-danger-penalty">
 <Icon name="warning" className="text-[16px] shrink-0 mt-0.5" />
-<p className="font-label-sm text-label-sm font-bold">Tamper Seal Broken / Customer Unsealed Box at Gate</p>
+<p className="font-label-sm text-label-sm font-bold">package seal Broken / Customer Unsealed Box at Gate</p>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1">
 <span className="flex items-center gap-1 text-tertiary">
 <Icon name="lock_clock" className="text-[14px]" />
-              UGX 342,000 Frozen in Escrow Node
+              UGX 342,000 Frozen in Payment Node
             </span>
 <span>Today, 11:24 EAT</span>
 </div>
@@ -233,7 +233,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-high rounded-xl p-space-md flex items-start gap-space-sm">
 <Icon name="shield_lock" className="text-emerald-escrow text-[22px] shrink-0 mt-0.5" />
 <div className="text-body-sm text-on-surface">
-<span className="font-bold text-emerald-escrow">Direct Bank of Uganda Escrow Sandbox Hold:</span>
+<span className="font-bold text-emerald-escrow">Direct Pesapal Payment Sandbox Hold:</span>
 <span> Funds are locked safely in Node 04. Automatic release or reverse-debit occurs only through mutual signoff or URSB dispute arbitrator resolution.</span>
 </div>
 </div>
@@ -342,7 +342,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Priority Dispatch &lt;45m</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                Dispatch an unopened factory unit directly from Nakasero Hub. SafeBoda performs doorstep simultaneous swap at buyer address before releasing escrow payout.
+                Dispatch an unopened factory unit directly from Nakasero Hub. SafeBoda performs doorstep simultaneous swap at buyer address before releasing Seller Payout.
               </p>
 </div>
 </label>
@@ -351,11 +351,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <input className="mt-1 accent-action-gradient-start h-4 w-4" name="claim_resolution" type="radio" />
 <div className="flex-1">
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">Option C: Contest Claim &amp; Escalate to SwiftCart Arbitration</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">Option C: Contest Claim &amp; Escalate to SwiftCart dispute review</span>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded bg-danger-penalty/20 text-danger-penalty font-bold">Formal Review</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                Contest the claim by providing packing table CCTV footage. Assigned SwiftCart Arbitration Officer: <strong className="text-on-surface">Patricia Namubiru (Lead Dispute Counsel)</strong>.
+                Contest the claim by providing packing table CCTV footage. Assigned SwiftCart dispute reviewers: <strong className="text-on-surface">Denis Mukasa (Lead Dispute Counsel)</strong>.
               </p>
 </div>
 </label>

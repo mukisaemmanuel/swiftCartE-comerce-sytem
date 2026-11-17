@@ -60,7 +60,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         </span>
 <span className="text-outline-variant">•</span>
 <span className="inline-flex items-center text-tertiary font-semibold">
-<Icon name="verified_user" className="text-[16px] mr-1" /> MoMo Escrow Protected
+<Icon name="verified_user" className="text-[16px] mr-1" /> MoMo Payment Protected
         </span>
 </p>
 </div>
@@ -144,7 +144,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="account_balance_wallet" className="text-[18px]" />
 </div>
 <span className="font-label-sm text-[11px] font-bold text-on-surface leading-tight">MTN &amp; Airtel MoMo</span>
-<span className="font-body-sm text-[10px] text-secondary mt-0.5">Escrow Guaranteed</span>
+<span className="font-body-sm text-[10px] text-secondary mt-0.5">payment guaranteed</span>
 </div>
 <div className="flex flex-col items-center text-center px-1">
 <div className="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-tertiary mb-1 shadow-sm">
@@ -179,7 +179,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="w-full mt-6 pt-4 flex items-center justify-center gap-1.5 text-center text-on-surface-variant font-body-sm text-[11px]">
 <Icon name="gavel" className="text-[16px] text-tertiary" />
-<span>Regulated E-Commerce Platform</span>
+<span>standard E-Commerce Platform</span>
 <span className="text-outline-variant">•</span>
 <span className="font-semibold text-on-surface">100% Buyer Protection Guarantee</span>
 </div>

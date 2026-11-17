@@ -32,7 +32,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </span>
 <span className="font-label-sm text-label-sm text-tertiary tracking-wider uppercase">Local SQLite Sync Active</span>
 <span className="text-on-surface-variant font-label-sm text-label-sm opacity-60">•</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Queue: 0 pending retries | Cryptographic Handover Enabled</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Queue: 0 pending retries | Verified Handover Enabled</span>
 </div>
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-space-xs text-amber-warning font-label-sm text-label-sm">
@@ -368,7 +368,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">6 Parcels</span>
 </div>
 <div className="flex items-center gap-space-md">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Total Escrow Value: <strong className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 1,420,000</strong></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Total Payment Value: <strong className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 1,420,000</strong></span>
 <button className="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
 <Icon name="add" className="text-[16px]" /> Add Item
                 </button>
@@ -383,7 +383,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm">
 <span className="font-label-md text-label-md text-on-surface">#SC-9952: SoundCore Space One ANC</span>
-<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Escrow</span>
+<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Payment</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Recipient: Sarah Namubiru • Acacia Mall Level 2 (Shop 41) • 07•• ••• 819</span>
 </div>
@@ -402,7 +402,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm">
 <span className="font-label-md text-label-md text-on-surface">#SC-9948: SoundCore ANC Pro Studio</span>
-<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Escrow</span>
+<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Payment</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Recipient: David Mukasa • Kololo Terrace Plot 12B • 07•• ••• 110</span>
 </div>
@@ -457,7 +457,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm">
 <span className="font-label-md text-label-md text-on-surface">#SC-9920: JBL Flip 6 Bluetooth Speaker</span>
-<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Escrow</span>
+<span className="px-2 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">High Value Payment</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Recipient: Moses Byaruhanga • Prince Charles Drive • 07•• ••• 551</span>
 </div>
@@ -494,7 +494,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-sm">
 <Icon name="verified_user" className="text-emerald-escrow text-[22px]" />
-<span className="font-body-sm text-body-sm text-on-surface">Cryptographic Escrow Custody ready for transfer to Rider Kizito Brian</span>
+<span className="font-body-sm text-body-sm text-on-surface">Verified payment holding ready for transfer to Rider Kizito Brian</span>
 </div>
 <div className="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
 <span>Handover protocol: <strong className="text-tertiary">RFID/NFC + QR Seal</strong></span>
@@ -572,11 +572,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col gap-space-xs">
 <div className="flex items-center justify-between font-body-sm text-body-sm">
-<span className="text-on-surface-variant">Tamper Seal Check:</span>
+<span className="text-on-surface-variant">package seal Check:</span>
 <span className="text-emerald-escrow font-bold">#ZIP-KLA-88402 (Valid)</span>
 </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm">
-<span className="text-on-surface-variant">Escrow Handover:</span>
+<span className="text-on-surface-variant">Payment Handover:</span>
 <span className="text-on-surface whitespace-nowrap">UGX 1,420,000 (6 Parcels)</span>
 </div>
 </div>

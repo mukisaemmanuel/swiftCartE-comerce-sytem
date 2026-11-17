@@ -54,7 +54,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-surface-container-highest">•</span>
 <span className="text-on-surface font-semibold">UGX 64,250,000 Catalog Valuation</span>
 <span className="text-surface-container-highest">•</span>
-<span className="text-emerald-escrow flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> UGX 18.4M in Escrow</span>
+<span className="text-emerald-escrow flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> UGX 18.4M in Payment</span>
 </div>
 </div>
 
@@ -126,7 +126,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-3.5 px-3 text-center">Nakasero Stock</th>
 <th className="py-3.5 px-3 text-right">Base Price</th>
 <th className="py-3.5 px-3 text-right">Sale Price</th>
-<th className="py-3.5 px-3 text-center">Escrow / Margin</th>
+<th className="py-3.5 px-3 text-center">Payment / Margin</th>
 <th className="py-3.5 pr-4 pl-3 text-right">Actions</th>
 </tr>
 </thead>

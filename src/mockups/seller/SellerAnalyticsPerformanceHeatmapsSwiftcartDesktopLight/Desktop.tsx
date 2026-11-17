@@ -39,7 +39,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
 <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
 </span>
-<span className="font-label-sm text-label-sm text-tertiary tracking-wide uppercase">BoU NPS Sandbox Live</span>
+<span className="font-label-sm text-label-sm text-tertiary tracking-wide uppercase">Pesapal Pesapal Rails Sandbox Live</span>
 <span className="font-label-sm text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">ID: KLA-MERCH-8821B</span>
 </div>
 
@@ -75,7 +75,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             </span>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-            Kampala metropolitan trade velocity, rider corridor SLAs, and escrow settlement performance across MTN MoMo and Airtel Money infrastructure.
+            Kampala metropolitan trade velocity, rider corridor SLAs, and payment settlement performance across MTN MoMo and Airtel Money infrastructure.
           </p>
 </div>
 
@@ -87,7 +87,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             </span>
 </div>
 <div className="px-3 py-1 bg-surface-container-lowest rounded-lg shadow-sm">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Escrow Release</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase">Payment Release</span>
 <span className="font-label-lg text-label-lg text-primary flex items-center gap-1">
 <Icon name="lock_clock" className="text-[16px]" /> T+0 Instant
             </span>
@@ -147,7 +147,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center justify-between pt-1">
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded-full">
-<Icon name="shield" className="text-[12px]" /> Escrow cleared via MoMo Rails
+<Icon name="shield" className="text-[12px]" /> payment cleared via MoMo Rails
           </span>
 </div>
 </div>
@@ -225,7 +225,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Revenue &amp; Sales Velocity</h2>
 <span className="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm whitespace-nowrap">Gross UGX</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Daily escrow billing volume across Kampala hubs &amp; online checkout</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Daily payment billing volume across Kampala hubs &amp; online checkout</p>
 </div>
 
 <div className="flex items-center p-1 rounded-xl bg-surface-container font-label-md text-label-md">
@@ -320,7 +320,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-2 text-tertiary">
 <Icon name="verified" className="text-[16px]" />
-<span className="font-label-sm text-label-sm uppercase">Ledger Reconciled: BoU Sandbox Verified</span>
+<span className="font-label-sm text-label-sm uppercase">Ledger Reconciled: Pesapal Sandbox Verified</span>
 </div>
 </div>
 </div>
@@ -578,7 +578,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="rounded-2xl bg-surface-container-lowest p-space-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] flex flex-col gap-space-md">
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Channels &amp; Payment Rails</h2>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Buyer acquisition origin and telecom escrow settlement</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Buyer acquisition origin and telecom payment settlement</p>
 
 <div className="space-y-1.5">
 <div className="flex justify-between font-label-sm text-label-sm">
@@ -619,7 +619,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified_user" className="text-[18px] text-tertiary" />
 <div>
 <p className="font-label-sm text-label-sm text-on-surface">Return &amp; Dispute Rate</p>
-<p className="font-body-sm text-[10px] text-on-surface-variant">Escrow holdback threshold safe</p>
+<p className="font-body-sm text-[10px] text-on-surface-variant">Payment holdback threshold safe</p>
 </div>
 </div>
 <div className="text-right">

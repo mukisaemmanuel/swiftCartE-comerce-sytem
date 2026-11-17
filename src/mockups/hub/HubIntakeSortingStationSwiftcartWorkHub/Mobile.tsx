@@ -71,7 +71,7 @@ export const HubIntakeSortingStationSwiftcartWorkHub: React.FC<HubIntakeSortingS
 <Icon name="gpp_maybe" className="text-[16px] text-error" />
 </div>
 <p className="font-price-display text-price-display text-error font-extrabold mt-1">3</p>
-<span className="font-body-sm text-body-sm text-error font-semibold">Seal escrows</span>
+<span className="font-body-sm text-body-sm text-error font-semibold">Seal payments</span>
 </div>
 </div>
 
@@ -155,7 +155,7 @@ export const HubIntakeSortingStationSwiftcartWorkHub: React.FC<HubIntakeSortingS
 
 <div className="mt-space-xs bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between gap-space-xs">
 <div className="flex items-center gap-space-xs min-w-0">
-<img className="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Close-up macro photograph of a heavy-duty security tamper-evident polymer seal bearing barcode UG-SEAL-8891 securely affixed onto a bright orange swiftcart shipping satchel in an industrial hub with crisp warehouse lighting" src="/images/250fc77d9ef2cba8.webp" />
+<img className="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Close-up macro photograph of a heavy-duty security Sealed Package Bag polymer seal bearing barcode UG-SEAL-8891 securely affixed onto a bright orange swiftcart shipping satchel in an industrial hub with crisp warehouse lighting" src="/images/250fc77d9ef2cba8.webp" />
 <div className="min-w-0">
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
 <Icon name="lock" className="text-[16px]" /> Seal Intact

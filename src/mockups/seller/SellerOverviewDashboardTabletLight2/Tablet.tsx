@@ -147,7 +147,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-3">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">ESCROW IN-TRANSIT</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">PAYMENT IN-TRANSIT</span>
 <span className="w-8 h-8 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary">
 <Icon name="lock" className="text-[18px]" />
 </span>
@@ -156,7 +156,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 14,850,000</div>
 <div className="flex items-center gap-1.5 mt-1 font-body-sm text-body-sm text-tertiary font-semibold">
 <Icon name="shield" className="text-[14px]" />
-<span>SwiftCart Custody Safe</span>
+<span>SwiftCart holding Safe</span>
 </div>
 </div>
 <div className="pt-2 flex items-center justify-between text-secondary font-label-sm text-label-sm bg-surface-container-low px-3 py-1.5 rounded-lg">
@@ -238,7 +238,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-label-md text-label-md font-bold text-on-surface font-mono">#SC-ORD-9488</span>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px]" /> Escrow Locked
+<Icon name="lock" className="text-[12px]" /> payment protected
               </span>
 <span className="px-2 py-0.5 rounded bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-label-sm font-semibold">
                 1-Hour Boda
@@ -277,7 +277,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-label-md text-label-md font-bold text-on-surface font-mono">#SC-ORD-9490</span>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px]" /> Escrow Locked
+<Icon name="lock" className="text-[12px]" /> payment protected
               </span>
 <span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
                 Acacia Hub Locker
@@ -314,7 +314,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-label-md text-label-md font-bold text-on-surface font-mono">#SC-ORD-9491</span>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px]" /> Escrow Locked
+<Icon name="lock" className="text-[12px]" /> payment protected
               </span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">
                 Standard Delivery
@@ -351,7 +351,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-label-md text-label-md font-bold text-on-surface font-mono">#SC-ORD-9493</span>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px]" /> Escrow Locked
+<Icon name="lock" className="text-[12px]" /> payment protected
               </span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">
                 Line-Haul Express
@@ -534,7 +534,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></main>
-<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bank of Uganda Escrow Regulated</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm"><div className="flex items-center gap-space-md flex-wrap"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>Latency: 28ms</span></div><span>•</span><span>William St Central Hub: 99.8% Online</span><span>•</span><span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pesapal Payment standard</span></div><div><span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span></div></div></footer>
     </div>
   );
 };

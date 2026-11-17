@@ -147,7 +147,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         <div className="flex items-center gap-space-sm">
           <span className="font-code-display text-[15px] font-bold text-primary tracking-wide">#SC-9952</span>
           <span className="px-2 py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
-            <Icon name="verified_user" className="text-[13px]" /> Escrow Guarded
+            <Icon name="verified_user" className="text-[13px]" /> payment guarded
           </span>
         </div>
         <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase">Active Staging</span>
@@ -217,7 +217,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         </div>
       </div>
       <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
-        <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow" /> Escrow Locked</span>
+        <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow" /> payment protected</span>
         <span className="text-on-surface-variant">Awaiting Caller Arrival</span>
       </div>
     </div>
@@ -231,7 +231,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           </span>
         </div>
         <span className="px-2 py-0.5 rounded bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm font-bold uppercase">
-          High Priority Escrow
+          High Priority Payment
         </span>
       </div>
       <div className="flex flex-col gap-0.5 mt-0.5">
@@ -248,7 +248,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         <span className="text-on-surface-variant flex items-center gap-1">
           <Icon name="lock" className="text-[14px]" /> Dual-Auth Required
         </span>
-        <span className="text-amber-warning font-semibold">Vault Keeper Staged</span>
+        <span className="text-amber-warning font-semibold">reserve Keeper Staged</span>
       </div>
     </div>
   </div>
@@ -275,7 +275,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-sm">
 <span className="font-headline-md text-headline-md text-on-surface tracking-tight">Waybill #SC-9952</span>
 <span className="px-2.5 py-0.5 rounded-full bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1 font-bold">
-<Icon name="lock" className="text-[14px]" /> ESCROW FUNDED
+<Icon name="lock" className="text-[14px]" /> PAYMENT FUNDED
                 </span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
@@ -323,7 +323,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <span className="font-label-sm text-label-sm px-2.5 py-1 rounded bg-tertiary-container/30 text-tertiary font-bold flex items-center gap-1">
-<Icon name="vpn_key" className="text-[14px]" /> Cryptographic Match
+<Icon name="vpn_key" className="text-[14px]" /> Verified Match
             </span>
 </div>
 
@@ -339,7 +339,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-tertiary-container/20 rounded-lg p-space-sm flex items-center justify-between text-tertiary px-space-md">
 <div className="flex items-center gap-2">
 <Icon name="check_circle" className="text-[20px]" />
-<span className="font-label-md text-label-md">Blind PIN Match Confirmed • Matches Escrow Secret Hash SHA256: 0x9f88...</span>
+<span className="font-label-md text-label-md">Blind PIN Match Confirmed • Matches Payment Secret Hash SHA256: 0x9f88...</span>
 </div>
 <span className="font-label-sm text-label-sm font-mono text-tertiary/80">LATENCY 18ms</span>
 </div>
@@ -351,7 +351,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <label className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
 <div className="flex items-center gap-space-md">
-<input checked={true} className="w-5 h-5 rounded accent-emerald-escrow cursor-pointer" type="checkbox" />
+<input checked={true} className="w-5 h-5 rounded accent-emerald-payment cursor-pointer" type="checkbox" />
 <span className="font-body-md text-body-md text-on-surface">Tamper Security Ribbon #SEAL-4419 intact &amp; verified</span>
 </div>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold px-2 py-0.5 rounded bg-emerald-escrow/10">PASSED</span>
@@ -359,7 +359,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <label className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
 <div className="flex items-center gap-space-md">
-<input checked={true} className="w-5 h-5 rounded accent-emerald-escrow cursor-pointer" type="checkbox" />
+<input checked={true} className="w-5 h-5 rounded accent-emerald-payment cursor-pointer" type="checkbox" />
 <span className="font-body-md text-body-md text-on-surface">Customer physical inspection completed without packaging tear</span>
 </div>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold px-2 py-0.5 rounded bg-emerald-escrow/10">PASSED</span>
@@ -367,7 +367,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <label className="flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
 <div className="flex items-center gap-space-md">
-<input checked={true} className="w-5 h-5 rounded accent-emerald-escrow cursor-pointer" type="checkbox" />
+<input checked={true} className="w-5 h-5 rounded accent-emerald-payment cursor-pointer" type="checkbox" />
 <span className="font-body-md text-body-md text-on-surface">Serial &amp; SKU matches manifest (SoundCore Space One ANC - Jet Black)</span>
 </div>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold px-2 py-0.5 rounded bg-emerald-escrow/10">PASSED</span>
@@ -404,7 +404,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <button className="w-full h-14 rounded-2xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-white font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_18px_rgba(218,55,0,0.35)] hover:brightness-110 active:scale-[0.99] transition-all" id="btn-release">
 <Icon name="verified" className="text-[24px]" />
-<span className="whitespace-nowrap">Confirm Handover &amp; Release Escrow (UGX 248,500)</span>
+<span className="whitespace-nowrap">Confirm Handover &amp; release payment (UGX 248,500)</span>
 </button>
 
 <div className="grid grid-cols-2 gap-space-md w-full">

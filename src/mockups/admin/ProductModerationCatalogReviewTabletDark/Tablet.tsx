@@ -187,7 +187,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-2 flex items-start gap-1.5 p-2 rounded-lg bg-primary-container/10 text-primary">
 <Icon name="badge" className="text-[15px] shrink-0 mt-0.5" />
-<p className="font-label-sm text-label-sm leading-tight">High value SKU - Merchant KYC tier unverified for tier 3 escrow limit.</p>
+<p className="font-label-sm text-label-sm leading-tight">High value SKU - Merchant KYC tier unverified for tier 3 payment limit.</p>
 </div>
 </div>
 </div>
@@ -336,7 +336,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="analytics" className="text-primary text-[20px]" />
 <span className="font-label-md text-label-md text-on-surface">Pricing &amp; Legal Compliance Telematics</span>
 </div>
-<span className="font-label-sm text-label-sm font-mono text-on-surface-variant">URA EFRIS VERIFIED</span>
+<span className="font-label-sm text-label-sm font-mono text-on-surface-variant">INVOICE VERIFIED</span>
 </div>
 <div className="grid grid-cols-2 gap-3">
 
@@ -365,12 +365,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Tax &amp; Regulatory</span>
 <span className="flex items-center gap-1 text-emerald-escrow font-label-sm text-label-sm font-bold">
-<Icon name="verified" className="text-[15px]" /> EFRIS PASS
+<Icon name="verified" className="text-[15px]" /> INVOICE VERIFIED
               </span>
 </div>
 <div className="flex flex-col gap-1">
 <div className="flex items-center justify-between font-label-sm text-label-sm">
-<span className="text-on-surface-variant">URA EFRIS Inv:</span>
+<span className="text-on-surface-variant">Tax E-INVOICE Inv:</span>
 <span className="font-mono text-on-surface font-bold">EF-2024-889102-K</span>
 </div>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
@@ -378,12 +378,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="text-tertiary font-bold">Certified Clearance</span>
 </div>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
-<span className="text-on-surface-variant">Escrow Hold Tier:</span>
+<span className="text-on-surface-variant">Payment Hold Tier:</span>
 <span className="text-on-surface">Standard T+2 Release</span>
 </div>
 </div>
 <div className="pt-1 font-label-sm text-label-sm text-on-surface-variant/80 flex items-center gap-1">
-<Icon name="lock_clock" className="text-[14px] text-tertiary" /> Platform Escrow protection guaranteed
+<Icon name="lock_clock" className="text-[14px] text-tertiary" /> Platform Payment protection guaranteed
             </div>
 </div>
 </div>
@@ -459,7 +459,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>Request Invoice Info</span>
 </button>
 
-<button className="col-span-5 h-12 rounded-xl bg-emerald-escrow hover:brightness-110 text-on-tertiary font-label-lg text-label-lg transition-transform active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg shadow-emerald-escrow/20" type="button">
+<button className="col-span-5 h-12 rounded-xl bg-emerald-escrow hover:brightness-110 text-on-tertiary font-label-lg text-label-lg transition-transform active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg shadow-emerald-payment/20" type="button">
 <Icon name="verified" className="text-[20px]" />
 <span>Approve &amp; Publish</span>
 </button>

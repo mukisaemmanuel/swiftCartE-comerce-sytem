@@ -50,7 +50,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
 <span className="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
 </span>
-<span className="font-label-md text-label-md font-bold tracking-wide">MTN MoMo Escrow Locked</span>
+<span className="font-label-md text-label-md font-bold tracking-wide">MTN MoMo payment protected</span>
 </div>
 </div>
 </div>
@@ -105,7 +105,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm font-bold text-secondary">14:22 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  MTN MoMo Escrow Lock <span className="font-bold text-on-surface">UGX 388,500</span> confirmed. Funds held safe until hand-off verification.
+                  MTN momo payment Lock <span className="font-bold text-on-surface">UGX 388,500</span> confirmed. Funds held safe until hand-off verification.
                 </p>
 <div className="mt-1.5 flex items-center gap-2 text-secondary font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px] text-tertiary" />
@@ -143,7 +143,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm font-bold text-secondary">14:48 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Courier bag sealed with Tamper Seal <span className="font-bold text-on-surface">#SC-TS-4091</span>. Supervised and checked by Hub Lead Kato.
+                  Courier bag sealed with package seal <span className="font-bold text-on-surface">#SC-TS-4091</span>. Supervised and checked by Hub Lead Kato.
                 </p>
 <div className="mt-1.5 flex items-center gap-2 text-secondary font-label-sm text-label-sm">
 <Icon name="verified" className="text-[14px] text-tertiary" />
@@ -193,11 +193,11 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm text-secondary font-semibold">Expected ~15:30</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary mt-1">
-                  Inspect packages physically. Share your 6-digit release PIN with Rider Mukasa only after you verify the tamper seal.
+                  Inspect packages physically. Share your 6-digit release PIN with Rider Mukasa only after you verify the package seal.
                 </p>
 
 <div className="mt-space-sm inline-flex items-center gap-space-sm p-space-xs px-space-sm bg-surface-container-lowest rounded-lg shadow-xs">
-<span className="font-label-sm text-label-sm uppercase font-bold text-secondary">Release Escrow PIN:</span>
+<span className="font-label-sm text-label-sm uppercase font-bold text-secondary">release payment PIN:</span>
 <div className="flex items-center gap-1">
 <span className="px-1.5 py-0.5 rounded bg-primary-fixed font-headline-sm text-headline-sm font-black text-on-primary-fixed tracking-widest">4</span>
 <span className="px-1.5 py-0.5 rounded bg-primary-fixed font-headline-sm text-headline-sm font-black text-on-primary-fixed tracking-widest">0</span>
@@ -218,7 +218,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="shield_person" className="text-[20px]" />
 </div>
 <div>
-<h3 className="font-label-lg text-label-lg text-on-surface font-bold">Uganda Buyer Escrow Safeguard</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface font-bold">Uganda Buyer Payment Safeguard</h3>
 <p className="font-body-sm text-body-sm text-secondary">Enforced under SwiftCart MoMo Protection Standard</p>
 </div>
 </div>
@@ -227,7 +227,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-xs">
 <Icon name="verified" className="text-primary text-[20px] mt-0.5" />
 <div>
-<div className="font-label-md text-label-md text-on-surface font-bold">Tamper Seal Verification</div>
+<div className="font-label-md text-label-md text-on-surface font-bold">package seal Verification</div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                   Confirm seal tag <strong className="text-on-surface">#SC-TS-4091</strong> is securely unbroken before communicating your PIN.
                 </p>
@@ -237,7 +237,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-xs">
 <Icon name="assignment_return" className="text-tertiary-container text-[20px] mt-0.5" />
 <div>
-<div className="font-label-md text-label-md text-on-surface font-bold">Zero Risk Escrow Guarantee</div>
+<div className="font-label-md text-label-md text-on-surface font-bold">Zero Risk Payment Protection</div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                   If contents appear opened or damaged, refuse immediately. MTN/Airtel automatically refunds to your wallet in 10 mins.
                 </p>
@@ -341,7 +341,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 
 <div className="mt-space-sm pt-space-xs bg-surface-container-low/50 p-space-sm rounded-lg flex items-center justify-between">
-<span className="font-label-md text-label-md text-secondary">Total Escrow Value</span>
+<span className="font-label-md text-label-md text-secondary">Total Payment Value</span>
 <div className="text-right">
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">UGX 388,500</span>
 <div className="font-label-sm text-label-sm text-tertiary font-bold flex items-center justify-end gap-1">
@@ -365,7 +365,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 </div>
-</div></main><footer className="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="max-w-7xl mx-auto px-margin py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg border-b border-surface-container-high"><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="verified_user" className="text-[32px] text-tertiary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</div><div className="font-body-sm text-body-sm text-secondary">100% payout security until delivery is confirmed</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="two_wheeler" className="text-[32px] text-primary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</div><div className="font-body-sm text-body-sm text-secondary">Rapid localized urban courier network</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="replay" className="text-[32px] text-tertiary" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</div><div className="font-body-sm text-body-sm text-secondary">Drop off returns at any verified hub in Uganda</div></div></div></div><div className="py-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary"><div className="flex flex-wrap items-center justify-center gap-space-md"><a className="hover:text-primary transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="hover:text-primary transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="hover:text-primary transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="hover:text-primary transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="hover:text-primary transition-colors font-bold text-on-surface" data-path="merchant-registration" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="text-center">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="max-w-7xl mx-auto px-margin py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg border-b border-surface-container-high"><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="verified_user" className="text-[32px] text-tertiary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</div><div className="font-body-sm text-body-sm text-secondary">100% payout security until delivery is confirmed</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="two_wheeler" className="text-[32px] text-primary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</div><div className="font-body-sm text-body-sm text-secondary">Rapid localized urban courier network</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="replay" className="text-[32px] text-tertiary" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</div><div className="font-body-sm text-body-sm text-secondary">Drop off returns at any verified hub in Uganda</div></div></div></div><div className="py-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary"><div className="flex flex-wrap items-center justify-center gap-space-md"><a className="hover:text-primary transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="hover:text-primary transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="hover:text-primary transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="hover:text-primary transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="hover:text-primary transition-colors font-bold text-on-surface" data-path="merchant-registration" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="text-center">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

@@ -105,7 +105,7 @@ export const UsersRolesSwiftcartSuperAdmin: React.FC<UsersRolesSwiftcartSuperAdm
 <div className="relative shrink-0"><div className="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm shadow-inner">PN</div><span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span></div>
 <div className="min-w-0">
 <div className="flex items-center gap-1 flex-wrap">
-<h3 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Patricia Namubiru</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface truncate whitespace-nowrap">Denis Mukasa</h3>
 <span className="inline-flex items-center px-1.5 py-0.2 rounded-full bg-primary/10 text-primary font-label-sm text-[10px] font-extrabold tracking-wider">
                 ADMIN
               </span>
@@ -151,7 +151,7 @@ export const UsersRolesSwiftcartSuperAdmin: React.FC<UsersRolesSwiftcartSuperAdm
           Active
         </span>
 </div>
-<div className="flex items-center gap-space-xs flex-wrap"><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold"><Icon name="verified" className="text-[14px]" />Verified Seller</span><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold"><Icon name="phone_iphone" className="text-[14px] text-primary" />MoMo *165# Active</span><span className="font-body-sm text-body-sm text-secondary ml-auto">Last login: 14 mins ago</span></div>
+<div className="flex items-center gap-space-xs flex-wrap"><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold"><Icon name="verified" className="text-[14px]" />Verified Seller</span><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold"><Icon name="phone_iphone" className="text-[14px] text-primary" />MoMo Mobile prompt Active</span><span className="font-body-sm text-body-sm text-secondary ml-auto">Last login: 14 mins ago</span></div>
 <div className="flex items-center gap-space-xs pt-1">
 <button className="flex-1 h-10 rounded-xl bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold hover:brightness-110 transition-all flex items-center justify-center gap-1" type="button">
 <Icon name="storefront" className="text-[18px]" />
@@ -260,7 +260,7 @@ export const UsersRolesSwiftcartSuperAdmin: React.FC<UsersRolesSwiftcartSuperAdm
 <span className="font-label-sm text-label-sm text-primary font-extrabold uppercase tracking-wider">Step 1 of 2: Hardware Confirmation</span>
 <h3 className="font-headline-sm text-headline-sm text-on-surface mt-0.5">Role Escalation Protocol</h3>
 <p className="font-body-sm text-body-sm text-secondary mt-1" id="escalation-user-desc">
-          Escalating target account privileges to privileged administrative tiers requires FIDO2/WebAuthn approval.
+          Escalating target account privileges to privileged administrative tiers requires Two-Factor Authenticator/WebAuthn approval.
         </p>
 </div>
 <div className="p-space-sm rounded-xl bg-surface-container-low space-y-space-xs text-body-sm font-body-sm">
@@ -268,13 +268,13 @@ export const UsersRolesSwiftcartSuperAdmin: React.FC<UsersRolesSwiftcartSuperAdm
 <select className="w-full p-2.5 rounded-lg bg-surface-container-lowest text-on-surface outline-none font-label-md text-label-md">
 <option>Super Administrator (Tier 0 Full Root)</option>
 <option selected={true}>Operations Lead Admin (Tier 1)</option>
-<option>Finance &amp; Escrow Admin (Tier 1)</option>
+<option>Finance &amp; Payment Admin (Tier 1)</option>
 <option>Logistics Regional Dispatcher (Tier 2)</option>
 </select>
 </div>
 <div className="p-space-sm rounded-xl bg-primary-fixed/30 text-on-primary-fixed-variant text-body-sm font-body-sm flex items-center gap-2">
 <Icon name="phonelink_lock" className="text-[18px] text-primary shrink-0 animate-pulse" />
-<span className="">Touch your YubiKey hardware token or enter master OTP.</span>
+<span className="">Touch your YubiKey Two-Factor Authenticator or enter master OTP.</span>
 </div>
 <div className="flex items-center gap-space-xs pt-1">
 <button className="flex-1 h-11 rounded-xl bg-surface-container text-secondary font-label-md text-label-md font-bold" type="button">Cancel</button>

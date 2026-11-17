@@ -114,7 +114,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 </div>
 
-<div className="flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-xl"><div className="flex items-center justify-between text-on-surface-variant font-label-md text-label-md"><div className="flex items-center gap-1.5"><Icon name="two_wheeler" className="text-primary text-[18px]" /><span className="">Swift Express boda dispatch</span></div><span className="font-bold text-on-surface">UGX 5,000</span></div><div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm"><Icon name="schedule" className="text-[14px] text-tertiary" /><span className="">Tomorrow by 2:00 PM to Nakawa</span></div><div className="mt-1 flex items-start gap-1.5 bg-tertiary-container/10 p-2 rounded-lg text-tertiary font-label-sm text-label-sm"><Icon name="verified_user" className="text-[16px] flex-shrink-0" /><span className="">Escrow Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</span></div></div>
+<div className="flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-xl"><div className="flex items-center justify-between text-on-surface-variant font-label-md text-label-md"><div className="flex items-center gap-1.5"><Icon name="two_wheeler" className="text-primary text-[18px]" /><span className="">Swift Express boda dispatch</span></div><span className="font-bold text-on-surface">UGX 5,000</span></div><div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm"><Icon name="schedule" className="text-[14px] text-tertiary" /><span className="">Tomorrow by 2:00 PM to Nakawa</span></div><div className="mt-1 flex items-start gap-1.5 bg-tertiary-container/10 p-2 rounded-lg text-tertiary font-label-sm text-label-sm"><Icon name="verified_user" className="text-[16px] flex-shrink-0" /><span className="">Payment Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</span></div></div>
 
 <div className="bg-surface-container-high/60 rounded-xl p-space-md flex flex-col gap-1.5">
 <div className="flex items-center justify-between">
@@ -312,7 +312,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-secondary-fixed">Total Amount</span>
 <span className="font-body-sm text-body-sm text-tertiary flex items-center gap-1">
 <Icon name="format_image_left" className="text-[14px]" />
-            Escrow Protected
+            Payment Protected
           </span>
 </div>
 <span className="font-headline-md text-headline-md text-primary-container">UGX 373,500</span>

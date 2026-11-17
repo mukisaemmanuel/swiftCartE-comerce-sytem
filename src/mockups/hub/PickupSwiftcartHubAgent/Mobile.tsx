@@ -31,7 +31,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 </div>
 <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed">
 <Icon name="lock" className="text-[14px] text-tertiary" />
-<span className="font-label-sm text-label-sm font-semibold">Dual-Token Escrow Active</span>
+<span className="font-label-sm text-label-sm font-semibold">Dual-Token holds active</span>
 </div>
 </div>
 
@@ -156,7 +156,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 <span className="font-label-lg text-label-lg text-on-surface font-bold truncate">SoundCore Space One Wireless ANC</span>
 <div className="flex items-center justify-between mt-1">
 <span className="font-label-md text-label-md text-on-surface font-extrabold whitespace-nowrap">UGX 248,500</span>
-<span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-container/15 px-1.5 py-0.5 rounded">MTN MoMo Escrow</span>
+<span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-container/15 px-1.5 py-0.5 rounded">MTN momo payment</span>
 </div>
 </div>
 </div>
@@ -173,7 +173,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 <label className="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer active:bg-surface-container transition-colors">
 <input checked={true} className="mt-0.5 w-5 h-5 rounded accent-primary cursor-pointer" type="checkbox" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-md text-label-md text-on-surface font-bold">Tamper Seal Intact (#SC-TB-4819)</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">package seal Intact (#SC-TB-4819)</span>
 <span className="font-body-sm text-body-sm text-secondary truncate">Visual inspection complete. Packaging has zero perforations.</span>
 </div>
 </label>
@@ -238,7 +238,7 @@ export const PickupSwiftcartHubAgent: React.FC<PickupSwiftcartHubAgentProps> = (
 <div className="flex flex-col gap-space-xs pt-1">
 <button className="w-full h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-black tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-primary-container/30 active:scale-[0.98] transition-transform">
 <Icon name="task_alt" className="text-[20px]" />
-          Confirm Handover &amp; Release Escrow
+          Confirm Handover &amp; release payment
         </button>
 <button className="w-full h-10 rounded-xl bg-surface-container text-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 hover:text-on-surface active:bg-surface-variant transition-colors">
 <Icon name="keyboard_return" className="text-[18px]" />

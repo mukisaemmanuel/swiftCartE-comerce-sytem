@@ -38,7 +38,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           Join Uganda's Verified Marketplace
         </h1>
 <p className="font-body-md text-body-md text-secondary">
-          Smart, escrow-backed commerce tailored for reliable shopping in Kampala, Entebbe, and Wakiso.
+          Smart, payment-backed commerce tailored for reliable shopping in Kampala, Entebbe, and Wakiso.
         </p>
 </div>
 
@@ -49,7 +49,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-lg" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-surface font-bold">100% Escrow Protection</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">100% Payment Protection</span>
 <span className="font-body-sm text-body-sm text-secondary mt-0.5">Funds held safely until you confirm 6-digit delivery code with your Boda rider.</span>
 </div>
 </div>
@@ -97,7 +97,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm bg-tertiary/10 text-tertiary px-2 py-0.5 rounded-full font-bold">Verified Buyer</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface italic mt-1">
-          "The escrow release with OTP pin on Boda arrival is genius. I bought my wireless setup safely without stress in Nakawa."
+          "The Payment Release with OTP pin on Boda arrival is genius. I bought my wireless setup safely without stress in Nakawa."
         </p>
 <div className="flex items-center justify-between mt-1 text-secondary">
 <span className="font-label-md text-label-md text-on-surface font-bold">Ritah K.</span>
@@ -138,7 +138,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <input className="w-full bg-transparent font-body-md text-body-md text-on-surface outline-none placeholder:text-secondary/60" id="momo-phone" placeholder="770 123 456" required={true} type="tel" />
 <Icon name="phone_android" className="text-secondary text-lg" />
 </div>
-<span className="font-body-sm text-body-sm text-secondary">Used to authenticate instant Escrow PIN unlocks upon delivery.</span>
+<span className="font-body-sm text-body-sm text-secondary">Used to authenticate instant Payment PIN unlocks upon delivery.</span>
 </div>
 
 <div className="flex flex-col gap-1">
@@ -183,7 +183,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <label className="flex items-start gap-space-sm cursor-pointer mt-1 select-none">
 <input checked={true} className="w-4 h-4 mt-0.5 rounded accent-primary-container cursor-pointer shrink-0" type="checkbox" />
 <span className="font-body-sm text-body-sm text-secondary leading-snug">
-            I agree to the <span className="font-semibold text-on-surface underline">SwiftCart Terms of Service</span> and <span className="font-semibold text-on-surface underline">Privacy Policy</span>, including escrow protection terms.
+            I agree to the <span className="font-semibold text-on-surface underline">SwiftCart Terms of Service</span> and <span className="font-semibold text-on-surface underline">Privacy Policy</span>, including payment protection terms.
           </span>
 </label>
 

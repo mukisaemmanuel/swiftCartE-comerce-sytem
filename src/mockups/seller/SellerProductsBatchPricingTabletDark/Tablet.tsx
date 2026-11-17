@@ -46,7 +46,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h1 className="font-headline-md text-on-surface font-extrabold tracking-tight">Products &amp; Inventory</h1>
 <span className="bg-primary-container/20 text-primary font-label-sm px-2.5 py-1 rounded-full border-none">48 Active SKUs</span>
 <span className="bg-tertiary-container/25 text-tertiary font-label-sm px-2 py-0.5 rounded-md flex items-center gap-1">
-<Icon name="verified_user" className="text-[13px]" /> Escrow Guarded
+<Icon name="verified_user" className="text-[13px]" /> payment guarded
           </span>
 </div>
 <p className="font-body-md text-on-surface-variant mt-1">
@@ -437,7 +437,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-container-dark-low p-space-md rounded-xl flex flex-col gap-space-xs">
 <div className="flex items-center justify-between text-on-surface-variant">
 <label className="font-label-sm uppercase tracking-wide whitespace-nowrap" htmlFor="priceInput">Base Price (UGX)</label>
-<span className="font-label-sm text-emerald-escrow whitespace-nowrap">Est. Escrow Payout: UGX 238,560</span>
+<span className="font-label-sm text-emerald-escrow whitespace-nowrap">Est. Seller Payout: UGX 238,560</span>
 </div>
 <div className="flex items-center gap-space-xs mt-1">
 <button className="w-11 h-11 rounded-lg bg-container-dark-high text-on-surface font-headline-sm flex items-center justify-center hover:bg-surface-bright active:scale-95 transition-all" id="priceDecrementBtn" title="Decrease 5,000" type="button">
@@ -502,9 +502,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-low/70 rounded-xl p-space-md flex items-start gap-space-sm">
 <Icon name="shield" className="text-emerald-escrow text-[22px] flex-shrink-0" />
 <div className="flex flex-col">
-<span className="font-label-sm text-on-surface">Automated Escrow Hold Guarantee</span>
+<span className="font-label-sm text-on-surface">Automated Payment Hold Guarantee</span>
 <p className="font-body-sm text-on-surface-variant mt-0.5">
-              Buyer payments are locked into SwiftCart Escrow upon dispatch. Mobile Money settlement (MTN/Airtel) unlocks automatically 15 minutes post-OTP driver receipt.
+              Buyer payments are locked into SwiftCart Protection upon dispatch. Mobile Money settlement (MTN/Airtel) unlocks automatically 15 minutes post-OTP driver receipt.
             </p>
 </div>
 </div>

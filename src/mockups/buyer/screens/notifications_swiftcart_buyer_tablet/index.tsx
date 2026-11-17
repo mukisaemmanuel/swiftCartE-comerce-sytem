@@ -30,7 +30,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-headline-md text-headline-md text-on-surface">Notifications Center</span>
 <span className="inline-flex items-center px-space-sm py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase">3 unread alerts</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary mt-0.5">Real-time delivery coordination, MoMo protection escrow, and timely local deals across Kampala</p>
+<p className="font-body-sm text-body-sm text-secondary mt-0.5">Real-time delivery coordination, MoMo protection payment, and timely local deals across Kampala</p>
 </div>
 <div className="flex items-center gap-space-sm">
 <button className="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="markAllReadBtn" onClick={() => alertToast('Action triggered')}>
@@ -46,7 +46,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none" id="filterPills">
 <button className="filter-pill shrink-0 px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all" data-filter="all" onClick={() => alertToast('Action triggered')}>All (6)</button>
 <button className="filter-pill shrink-0 px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" data-filter="delivery" onClick={(e) => { e.preventDefault(); onNavigate?.('/orders'); }}>Orders &amp; Delivery (3)</button>
-<button className="filter-pill shrink-0 px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" data-filter="payment" onClick={() => alertToast('Action triggered')}>Payment &amp; Escrow (2)</button>
+<button className="filter-pill shrink-0 px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" data-filter="payment" onClick={() => alertToast('Action triggered')}>Payment &amp; Payment (2)</button>
 <button className="filter-pill shrink-0 px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" data-filter="vouchers" onClick={(e) => { e.preventDefault(); onNavigate?.('/vouchers'); }}>Price Drops &amp; Vouchers (1)</button>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
@@ -101,14 +101,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-space-xs">
 <span className="px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm uppercase tracking-wide">Payment Protected</span>
 <span className="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
-<Icon name="shield" className="text-[14px]" /> Safe Escrow
+<Icon name="shield" className="text-[14px]" /> Safe Payment
                   </span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary">24 min ago</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold mt-1">UGX 248,500 held safely in SwiftCart Payment Protection</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-                Funds for <span className="font-semibold text-on-surface">SoundCore Space One</span> remain held in safe custody. Merchant will only receive payout after you unpack, inspect, and submit your 6-digit PIN.
+                Funds for <span className="font-semibold text-on-surface">SoundCore Space One</span> remain held in safe holding. Merchant will only receive payout after you unpack, inspect, and submit your 6-digit PIN.
               </p>
 <div className="mt-space-sm flex items-center gap-space-md text-secondary">
 <span className="font-label-sm text-label-sm flex items-center gap-1">
@@ -309,7 +309,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between gap-space-sm">
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface font-semibold">SMS Alerts</span>
-<span className="font-body-sm text-body-sm text-secondary">Essential 6-digit Delivery PINs and MoMo Escrow status updates</span>
+<span className="font-body-sm text-body-sm text-secondary">Essential 6-digit Delivery PINs and momo payment status updates</span>
 </div>
 <label className="relative inline-flex items-center cursor-pointer shrink-0">
 <input checked={true} className="sr-only peer" type="checkbox" />
@@ -333,7 +333,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface font-bold">Protected by SwiftCart TrustShield</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-              Zero spam guarantee. Strictly operational logistics, rider coordination, escrow safety confirmations, and personalized price drop updates for Uganda customers.
+              Zero spam guarantee. Strictly operational logistics, rider coordination, payment safety confirmations, and personalized price drop updates for Uganda customers.
             </span>
 </div>
 </div>

@@ -41,7 +41,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
         In Transit (42)
       </button>
-<button className="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Escrow Held (189)</button>
+<button className="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Payment Held (189)</button>
 <button className="px-space-md py-1.5 rounded-full bg-surface-container-low text-secondary hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Delivered (117)</button>
 <button className="px-space-md py-1.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1">
 <Icon name="flag" className="text-[14px]" /> Flagged (6)
@@ -74,8 +74,8 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <div className="flex items-center gap-space-xs">
 <Icon name="verified_user" className="text-tertiary text-[20px]" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-bold">Escrow Custody Active</span>
-<span className="font-body-sm text-body-sm text-on-surface">MTN MoMo Prepaid (Escrow ID: #ESC-4019)</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-bold">Payment Hold Active</span>
+<span className="font-body-sm text-body-sm text-on-surface">MTN MoMo Prepaid (Payment ID: #ESC-4019)</span>
 </div>
 </div>
 <div className="text-right">
@@ -188,7 +188,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <span className="text-tertiary font-medium">Free Promo</span>
 </div>
 <div className="flex items-center justify-between font-label-md text-label-md text-on-surface font-bold pt-1">
-<span>Total Value In Escrow</span>
+<span>Total Value Held until delivery</span>
 <span className="text-primary font-extrabold whitespace-nowrap">UGX 365,000</span>
 </div>
 </div>
@@ -203,7 +203,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <Icon name="check" className="text-on-tertiary text-[10px]" />
 </div>
 <div className="flex items-baseline justify-between">
-<span className="font-label-md text-label-md text-on-surface font-bold">Order Placed &amp; Escrow Funded</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Order Placed &amp; Payment Funded</span>
 <span className="font-label-sm text-label-sm text-secondary">10:14 AM</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary">Auto-approved via MTN Mobile Money Instant Push (Trans ID: #MOM-88319).</p>
@@ -247,7 +247,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
 </div>
 <div className="flex items-baseline justify-between">
-<span className="font-label-md text-label-md text-on-surface">Delivery &amp; Escrow Release</span>
+<span className="font-label-md text-label-md text-on-surface">Delivery &amp; Payment Release</span>
 <span className="font-label-sm text-label-sm text-secondary">Awaiting OTP</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <div className="space-y-space-xs" id="notes-container">
 <div className="p-2 rounded bg-surface-container text-on-surface">
 <div className="flex items-center justify-between text-secondary">
-<span className="font-label-sm text-label-sm font-bold text-on-surface">Patricia Namubiru (Lead)</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface">Denis Mukasa (Lead)</span>
 <span className="font-label-sm text-label-sm">11:12 AM</span>
 </div>
 <p className="font-body-sm text-body-sm mt-0.5">Customer requested call before rider reaches shell gas station Nakawa. Rider informed.</p>
@@ -323,7 +323,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <div className="flex items-center justify-between pt-1 font-body-sm text-body-sm text-secondary">
 <div className="flex items-center gap-1 text-tertiary">
 <Icon name="lock" className="text-[16px]" />
-<span className="font-label-sm text-label-sm font-semibold">Escrow Secured: Airtel Money</span>
+<span className="font-label-sm text-label-sm font-semibold">payment secured: Airtel Money</span>
 </div>
 <button className="font-label-sm text-label-sm text-primary font-bold flex items-center gap-0.5">
           Inspect <Icon name="arrow_forward" className="text-[14px]" />
@@ -345,7 +345,7 @@ export const OrdersOversightSwiftcartAdmin: React.FC<OrdersOversightSwiftcartAdm
 <div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Freeze Dispatch &amp; Audit #SC-9941?</h3>
 <p className="font-body-sm text-body-sm text-secondary mt-1">
-          This immediately alerts rider Kizito Brian to pause delivery, halts MTN MoMo escrow release, and flags the transaction for fraud investigation.
+          This immediately alerts rider Kizito Brian to pause delivery, halts MTN MoMo Payment Release, and flags the transaction for fraud investigation.
         </p>
 </div>
 

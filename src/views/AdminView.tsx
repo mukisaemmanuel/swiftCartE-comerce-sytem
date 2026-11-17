@@ -125,7 +125,7 @@ export const AdminView: React.FC<AdminViewProps> = ({ route, userRole, onNavigat
     if (path === '/admin/audit-log-admin-2') return <AuditLogSwiftcartAdmin2 onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/commission-rates-earnings-admin') return <CommissionRatesEarningsSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/edit-category-commission-modal-with-date-picker') return <EditCategoryCommissionModalWithDatePicker onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/admin/escrow-disputes-admin') return <EscrowDisputesSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
+    if (path === '/admin/escrow-disputes-admin' || path === '/admin/payments-disputes-admin' || path === '/admin/payment-disputes-admin') return <EscrowDisputesSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/freeze-seller-admin') return <FreezeSellerSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/homepage-ads-admin') return <HomepageAdsSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;
     if (path === '/admin/locked-dispatches-admin') return <LockedDispatchesSwiftcartAdmin onNavigate={onNavigate} onAction={handleAction} />;

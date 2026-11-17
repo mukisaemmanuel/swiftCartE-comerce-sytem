@@ -30,11 +30,11 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
-<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Escrow Liquidity • UG-X</span>
+<span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Payment Liquidity • UG-X</span>
 </div>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
 <Icon name="assured_workload" className="text-[14px]" />
-        BOU NPS Regulated
+        Pesapal Verified Rails
       </span>
 </div>
 
@@ -186,7 +186,7 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 </div>
 </div>
 <div className="flex items-center justify-between font-body-sm text-body-sm text-secondary pt-0.5">
-<span className="whitespace-nowrap">Gross Escrow: UGX 5,740,000</span>
+<span className="whitespace-nowrap">Gross Payment: UGX 5,740,000</span>
 <span className="text-on-surface-variant font-medium whitespace-nowrap">Platform Fee (8%): -UGX 460,000</span>
 </div>
 </div>
@@ -195,7 +195,7 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
 <span className="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
-<span>MTN Mobile Money (*165#)</span>
+<span>MTN Mobile Money</span>
 </div>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
 <Icon name="gpp_good" className="text-[13px]" />
@@ -288,7 +288,7 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 </div>
 <div className="min-w-0 flex flex-col">
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">Wandegeya Tech Hub</h3>
-<span className="font-body-sm text-body-sm text-secondary truncate">#VND-1943 • Escrow Batch #821</span>
+<span className="font-body-sm text-body-sm text-secondary truncate">#VND-1943 • Payment Batch #821</span>
 </div>
 </div>
 <div className="text-right shrink-0">
@@ -306,7 +306,7 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 <span>Telecom Error: USSD Carrier Timeout (Code #504)</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-error-container/90">
-          Airtel Money gateway timed out at 09:41 AM. Escrow balance remains locked in SwiftCart safety reserve. No double-debit registered.
+          Airtel Money gateway timed out at 09:41 AM. Payment balance remains locked in SwiftCart safety reserve. No double-debit registered.
         </p>
 </div>
 
@@ -328,14 +328,14 @@ export const PayoutQueueSwiftcartAdmin: React.FC<PayoutQueueSwiftcartAdminProps>
 <section className="bg-surface-container rounded-xl p-space-md space-y-space-sm">
 <div className="flex items-center gap-space-xs text-on-surface">
 <Icon name="policy" className="text-[20px] text-primary" />
-<h3 className="font-label-lg text-label-lg font-bold">Bank of Uganda (BOU) Compliance Note</h3>
+<h3 className="font-label-lg text-label-lg font-bold">Pesapal (Pesapal) Compliance Note</h3>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-relaxed whitespace-nowrap">
-      In accordance with the National Payment Systems (NPS) Act 2020, all merchant dispatches exceeding UGX 5,000,000 undergo automated URSB registration matching and instantaneous sanction screening before telecom broadcast.
+      In accordance with the Pesapal Payment Guidelines, all merchant dispatches exceeding UGX 5,000,000 undergo automated URSB registration matching and instantaneous sanction screening before telecom broadcast.
     </p>
 <div className="flex items-center justify-between pt-1 text-[11px] font-label-sm text-label-sm text-secondary">
-<span>Escrow Custody: Stanbic Bank Uganda</span>
-<span className="font-bold text-on-surface">Audit Hash: #BOU-9942-KYC</span>
+<span>Payment Held: Pesapal Uganda</span>
+<span className="font-bold text-on-surface">Audit Hash: #Pesapal-9942-KYC</span>
 </div>
 </section>
 

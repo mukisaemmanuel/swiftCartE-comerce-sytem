@@ -41,7 +41,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-sm shrink-0 self-end md:self-auto">
 <span className="px-space-sm py-1 rounded bg-surface-dark/15 font-code-display text-[11px] text-surface-dark font-bold tracking-widest uppercase">
-        Enclave: Locked
+        secure engine: Locked
       </span>
 <span className="px-space-sm py-1 rounded bg-surface-dark text-amber-warning font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="database" className="text-[13px]" />
@@ -83,7 +83,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Escrow Held</span>
+<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Payment Held</span>
 <span className="font-price-display text-[17px] font-bold text-tertiary whitespace-nowrap">UGX 248,500</span>
 </div>
 </div>
@@ -109,7 +109,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Escrow Held</span>
+<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Payment Held</span>
 <span className="font-headline-sm text-[16px] text-on-surface whitespace-nowrap">UGX 115,000</span>
 </div>
 </div>
@@ -135,7 +135,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Escrow Held</span>
+<span className="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Payment Held</span>
 <span className="font-headline-sm text-[16px] text-on-surface whitespace-nowrap">UGX 65,000</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div>
 <div className="flex items-center gap-2">
 <span className="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-code-display text-[12px] font-bold">DISPATCH PROOF</span>
-<span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">HMAC Verified Local Enclave</span>
+<span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">HMAC Verified Local secure engine</span>
 </div>
 <h2 className="font-headline-md text-headline-md text-on-surface mt-1">Sarah Namubiru (#SC-9952)</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
@@ -231,7 +231,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-3">
 <input checked={true} className="w-5 h-5 rounded bg-container-dark-high text-primary-container accent-primary-container cursor-pointer" id="seal-check" type="checkbox" />
 <label className="font-body-md text-body-md text-on-surface cursor-pointer select-none" htmlFor="seal-check">
-<span className="font-bold text-on-surface">Physical Tamper Seal Check:</span> Customer inspected green ribbon seal intact before opening.
+<span className="font-bold text-on-surface">Physical package seal Check:</span> Customer inspected green ribbon seal intact before opening.
               </label>
 </div>
 <span className="font-code-display text-[11px] text-tertiary font-bold shrink-0 bg-tertiary/10 px-2 py-1 rounded">SEAL #4419</span>
@@ -285,7 +285,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </button>
 <p className="font-body-sm text-[11px] text-center text-on-surface-variant/80 px-2 leading-relaxed">
 <Icon name="lock" className="text-[12px] inline align-middle text-emerald-escrow" />
-              Handover proof will automatically upload to SwiftCart central escrow ledger as soon as 3G/4G connectivity is restored.
+              Handover proof will automatically upload to SwiftCart central Payment Holds as soon as 3G/4G connectivity is restored.
             </p>
 </div>
 </div>
@@ -299,7 +299,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex-1">
 <h4 className="font-label-lg text-label-lg text-on-surface">Stored Locally in Queue</h4>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Signature &amp; GPS cryptographically sealed to SQLite. Ready for background ledger dispatch.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Signature &amp; GPS securely logged to SQLite. Ready for background ledger dispatch.</p>
 </div>
 </div>
 </div>

@@ -33,12 +33,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight font-extrabold">Quarantine Bay D-04 • Forensic Logging Desk</span>
-<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider bg-danger-penalty/10 text-danger-penalty font-bold border border-danger-penalty/20">Statutory Hold</span>
+<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider bg-danger-penalty/10 text-danger-penalty font-bold border border-danger-penalty/20">verified platform Hold</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
-<span>Bank of Uganda Statutory Escrow Frozen Custody Protocol (Act Sec. 44)</span>
+<span>Pesapal Secure Settlement payment frozen holding Protocol (Act Sec. 44)</span>
 <span className="text-outline">•</span>
-<span className="text-secondary font-mono font-semibold">Arbitration Vault #04-VLT</span>
+<span className="text-secondary font-mono font-semibold">dispute review reserve #04-VLT</span>
 </p>
 </div>
 </div>
@@ -91,7 +91,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h3 className="font-headline-sm text-headline-sm text-on-surface mt-0.5 font-bold">SoundCore Space One ANC Headphones</h3>
 </div>
 <div className="flex flex-col items-end">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">payment protected</span>
 <span className="font-headline-sm text-headline-sm text-amber-warning font-mono font-extrabold whitespace-nowrap">UGX 235k</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h3 className="font-body-lg text-body-lg font-bold text-on-surface mt-0.5">Kikuubo Wholesale Electronic Inverters (4x)</h3>
 </div>
 <div className="flex flex-col items-end">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">payment protected</span>
 <span className="font-headline-sm text-headline-sm text-amber-warning font-mono font-extrabold whitespace-nowrap">UGX 4.82M</span>
 </div>
 </div>
@@ -153,7 +153,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h3 className="font-body-lg text-body-lg font-bold text-on-surface mt-0.5">Solar Smart Inverter Battery Link</h3>
 </div>
 <div className="flex flex-col items-end">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">payment protected</span>
 <span className="font-headline-sm text-headline-sm text-amber-warning font-mono font-extrabold whitespace-nowrap">UGX 89k</span>
 </div>
 </div>
@@ -175,7 +175,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h3 className="font-body-lg text-body-lg font-bold text-on-surface mt-0.5">Nike Pegasus Trail 4 (Size 43 Midnight)</h3>
 </div>
 <div className="flex flex-col items-end">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">payment protected</span>
 <span className="font-headline-sm text-headline-sm text-amber-warning font-mono font-extrabold whitespace-nowrap">UGX 145k</span>
 </div>
 </div>
@@ -225,7 +225,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="px-space-md py-space-xs rounded-xl bg-surface-container border border-outline flex items-center gap-space-xs shrink-0 self-start sm:self-auto">
 <Icon name="verified_user" className="text-emerald-escrow text-[22px]" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant leading-none font-semibold">Statutory Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant leading-none font-semibold">verified platform Payment Hold</span>
 <span className="font-headline-sm text-headline-sm text-emerald-escrow font-mono font-extrabold whitespace-nowrap">UGX 235,000</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="rounded-lg bg-amber-warning/10 border border-amber-warning/30 p-space-sm flex items-start gap-space-sm">
 <Icon name="policy" className="text-amber-warning text-[20px] shrink-0 mt-0.5" />
 <p className="font-body-sm text-body-sm text-on-surface leading-snug">
-<strong className="font-bold text-amber-warning">Escrow Protection Enforced:</strong> UGX 235,000 is securely quarantined in the Bank of Uganda Ledger. Capital cannot be remitted to Merchant (Pioneer Mall G-14) nor refunded to Sarah N. prior to physical bench verification and sign-off.
+<strong className="font-bold text-amber-warning">Payment Protection Enforced:</strong> UGX 235,000 is securely quarantined in the Pesapal Ledger. Capital cannot be remitted to Merchant (Pioneer Mall G-14) nor refunded to Sarah N. prior to physical bench verification and sign-off.
           </p>
 </div>
 
@@ -301,7 +301,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col gap-space-xs">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold">Forensic Evidence Vault Photometry</span>
+<span className="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold">Forensic Evidence reserve Photometry</span>
 <span className="font-label-sm text-label-sm text-secondary font-mono font-semibold">3 / 3 Required Snaps</span>
 </div>
 <div className="grid grid-cols-3 gap-space-sm">
@@ -318,7 +318,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col gap-1">
 <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container border border-outline group shadow-sm">
-<img className="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Extreme close-up of a holographic tamper-evident courier satchel security seal with visible microprint barcode, void pattern intact, illuminated by forensic UV bench lamp" src="/images/b072dda9682661eb.webp" />
+<img className="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Extreme close-up of a holographic Sealed Package Bag courier satchel security seal with visible microprint barcode, void pattern intact, illuminated by forensic UV bench lamp" src="/images/b072dda9682661eb.webp" />
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 <span className="absolute top-2 left-2 px-space-xs py-0.5 rounded bg-slate-800 text-white font-mono font-label-sm text-label-sm font-bold shadow-sm">#EV-02 SEAL</span>
 <Icon name="zoom_in" className="absolute bottom-2 right-2  text-white text-[18px]" />
@@ -346,7 +346,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-space-xs pt-space-xs">
 <label className="font-label-md text-label-md text-on-surface uppercase tracking-wider flex items-center justify-between font-bold">
 <span>Inspector Disposition Action</span>
-<span className="text-amber-warning font-label-sm text-label-sm font-bold">Mandatory Arbitration Route</span>
+<span className="text-amber-warning font-label-sm text-label-sm font-bold">Mandatory dispute review Route</span>
 </label>
 <div className="flex flex-col gap-space-xs" id="dispositionGroup">
 
@@ -354,10 +354,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <input checked={true} className="mt-1 h-4 w-4 text-primary focus:ring-primary" name="disposition" type="radio" />
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between flex-wrap gap-1">
-<span className="font-label-lg text-label-lg text-primary font-bold">TRANSFER TO SECURE EVIDENCE VAULT (Bay D-04, Lockbox #12)</span>
-<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold bg-amber-warning/15 text-amber-warning border border-amber-warning/30">Escrow Frozen</span>
+<span className="font-label-lg text-label-lg text-primary font-bold">TRANSFER TO SECURE EVIDENCE reserve (Bay D-04, Lockbox #12)</span>
+<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold bg-amber-warning/15 text-amber-warning border border-amber-warning/30">payment frozen</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Physical custody secured in Bay Lockbox #12. Full escrow remains frozen under BoU statutory pool pending Officer Patricia Namubiru ledger ruling.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Physical package secured in Bay Lockbox #12. Full payment remains frozen under Pesapal verified platform pool pending Officer Denis Mukasa ledger ruling.</p>
 </div>
 </label>
 
@@ -377,7 +377,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between flex-wrap gap-1">
 <span className="font-label-lg text-label-lg text-on-surface font-bold">SALVAGE WRITE-OFF / SAFEBODA LOGISTICS INSURANCE CLAIM</span>
-<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold bg-emerald-escrow/10 text-emerald-escrow border border-emerald-escrow/20">Insured Claim</span>
+<span className="px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold bg-emerald-escrow/10 text-emerald-escrow border border-emerald-escrow/20">protected Claim</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">Transit telemetry G-force impact validated. Direct Safeboda underwriter settles UGX 235k merchant liability without seller penalty.</p>
 </div>
@@ -396,7 +396,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-bold">Agent Okello David</span>
 <Icon name="verified" className="text-emerald-escrow text-[16px]" />
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant font-mono">Badge HUB-8812 • Physical Custody Station #04</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant font-mono">Badge HUB-8812 • Physical package Station #04</span>
 </div>
 </div>
 <div className="flex items-center gap-space-xs font-mono text-label-sm text-label-sm text-secondary font-semibold">
@@ -414,7 +414,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <button className="w-full flex-1 h-[52px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end hover:opacity-95 active:scale-[0.98] transition-all shadow-[0_4px_18px_rgba(218,55,0,0.30)] flex items-center justify-center gap-space-xs text-white font-label-lg text-label-lg font-bold" id="lockVaultBtn">
 <Icon name="lock" className="text-[22px]" />
-<span>LOCK IN EVIDENCE VAULT &amp; NOTIFY ARBITRATOR</span>
+<span>LOCK IN EVIDENCE reserve &amp; NOTIFY ARBITRATOR</span>
 </button>
 </div>
 </div>
@@ -423,7 +423,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </main>
-<footer className="w-full bg-white border-t border-outline shadow-sm"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-emerald-escrow font-bold">Bank of Uganda Escrow Custody Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container border border-outline font-mono text-secondary font-semibold">NODE_ID: KLA-C-03</span></div></div></footer>
+<footer className="w-full bg-white border-t border-outline shadow-sm"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-emerald-escrow font-bold">Pesapal payment holding Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container border border-outline font-mono text-secondary font-semibold">NODE_ID: KLA-C-03</span></div></div></footer>
     </div>
   );
 };

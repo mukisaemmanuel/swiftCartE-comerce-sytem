@@ -39,7 +39,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span>Escrow OTP Verification: <strong className="text-tertiary">Enforced</strong></span>
+<span>Payment OTP Verification: <strong className="text-tertiary">Enforced</strong></span>
 </div>
 </div>
 </div>
@@ -683,7 +683,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                   +256 758 ••• 391 <span className="text-tertiary font-normal">(Encrypted Relay)</span>
 </span>
 <span>•</span>
-<span>URA TIN: 1002948191</span>
+<span>Tax ID: 1002948191</span>
 <span>•</span>
 <span>NIN: CM910248201KLA</span>
 </div>
@@ -717,7 +717,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-2">
 <span className="px-2 py-1 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[14px]" /> OTP Escrow Locked
+<Icon name="lock" className="text-[14px]" /> OTP payment protected
                   </span>
 </div>
 </div>
@@ -757,7 +757,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="check_circle" className="text-emerald-escrow text-[16px]" />
 </div>
 <div className="font-label-md text-label-md text-on-surface font-bold">Bajaj Boxer • UEF 842X</div>
-<div className="text-[11px] text-tertiary font-semibold">URA Tax Cleared 2024</div>
+<div className="text-[11px] text-tertiary font-semibold">Tax Tax Cleared 2024</div>
 </div>
 </div>
 </div>

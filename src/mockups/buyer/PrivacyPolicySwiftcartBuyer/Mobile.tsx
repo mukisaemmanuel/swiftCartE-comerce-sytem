@@ -203,7 +203,7 @@ export const PrivacyPolicySwiftcartBuyer: React.FC<PrivacyPolicySwiftcartBuyerPr
 </summary>
 <div className="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-xs leading-relaxed">
 <p>
-          Buyer records are maintained in compliance with Uganda’s Data Protection and Privacy Act (2019) and hosted on enterprise-grade ISO 27001-certified cloud infrastructure.
+          Buyer records are maintained in compliance with Uganda’s SwiftCart Privacy Policy (2019) and hosted on enterprise-grade ISO 27001-certified cloud infrastructure.
         </p>
 <p>
           All data in transit is protected via TLS 1.3 encryption, and sensitive databases employ AES-256 field encryption at rest. Audit logs are routinely inspected to guard against unauthorized access, credential stuffing, and illicit merchant leakage.
@@ -223,7 +223,7 @@ export const PrivacyPolicySwiftcartBuyer: React.FC<PrivacyPolicySwiftcartBuyerPr
 </summary>
 <div className="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md space-y-space-sm leading-relaxed">
 <p>
-          You hold definitive sovereignty over your personal profile. You may at any point exercise your statutory entitlements:
+          You hold definitive sovereignty over your personal profile. You may at any point exercise your verified platform entitlements:
         </p>
 <div className="space-y-space-xs">
 <div className="flex items-start gap-2 bg-surface-container-low p-2.5 rounded-lg">

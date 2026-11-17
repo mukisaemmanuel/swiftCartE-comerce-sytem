@@ -24,7 +24,7 @@ const BANNERS = [
     id: 2,
     image: '/placeholders/banner-2.svg',
     title: 'Nakasero Flagship Sale',
-    subtitle: 'Verified Ugandan Merchants • Payment Held in Safe Escrow',
+    subtitle: 'Verified Ugandan Merchants • Payment Held in Safe Payment',
     link: '/store-page-soundcore-official-1',
   },
   {
@@ -163,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </div>
           <div>
             <h4 className="font-bold text-[15px] leading-tight text-emerald-950">
-              SwiftCart Safe Escrow
+              SwiftCart Safe Payment
             </h4>
             <p className="text-[14px] text-emerald-800 leading-snug">
               Your payment is held safely by SwiftCart until you confirm delivery.

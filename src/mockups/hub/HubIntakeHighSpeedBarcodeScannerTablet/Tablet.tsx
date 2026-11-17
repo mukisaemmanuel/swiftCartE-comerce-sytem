@@ -62,7 +62,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="format_image_left" className="text-emerald-escrow text-[20px]" />
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold leading-none">0 TAMPER FLAGS</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant font-mono leading-none mt-1">Escrow Intact</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant font-mono leading-none mt-1">Payment Intact</span>
 </div>
 </div>
 </div>
@@ -152,7 +152,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-mono font-bold">#SC-ORD-9488-UG-P01</span>
 <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-semibold flex items-center gap-0.5">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Sealed
+<Icon name="verified_user" className="text-[12px]" /> Payment Sealed
               </span>
 </div>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold mt-1">SoundCore Space One ANC Headphones</span>
@@ -162,7 +162,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col items-end shrink-0">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">Declared Value</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold text-primary whitespace-nowrap">UGX 385,000</span>
-<span className="font-label-sm text-label-sm text-emerald-escrow font-mono mt-1">Bank Custody Ref: #ESC-9081</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-mono mt-1">Bank holding Ref: #ESC-9081</span>
 </div>
 </div>
 
@@ -398,18 +398,18 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-headline-sm text-headline-sm text-error font-extrabold">Tamper Breach Protocol Initiated</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Hold on Order: #SC-ORD-9499</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Hold on Order: #SC-ORD-9499</span>
 </div>
 </div>
 <p className="font-body-md text-body-md text-on-surface">
-        Documenting visible external damage, weight variance exceeding platform tolerances, or seal compromise. Platform escrow will freeze seller remittance pending supervisor review.
+        Documenting visible external damage, weight variance exceeding platform tolerances, or seal compromise. Platform payment will freeze seller remittance pending supervisor review.
       </p>
 <div className="flex flex-col gap-space-xs">
 <label className="font-label-sm text-label-sm text-on-surface-variant font-mono">Select Defect Reason:</label>
 <select className="h-11 bg-surface-container rounded-lg px-space-sm text-on-surface font-body-md text-body-md focus:ring-1 focus:ring-primary focus:outline-none">
 <option>Weight discrepancy &gt; 15% (Physical theft risk)</option>
 <option>Crushed / Damaged protective exterior box</option>
-<option>Broken tamper-evident barcode seal</option>
+<option>Broken Sealed Package Bag barcode seal</option>
 <option>Wrong SKU compared to merchant declaration</option>
 </select>
 </div>
@@ -421,7 +421,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 </div></main>
-<footer className="w-full bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.45)]"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline-variant hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">Bank of Uganda Escrow Custody Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container font-mono text-secondary">NODE_ID: KLA-C-03</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.45)]"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline-variant hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">Pesapal payment holding Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container font-mono text-secondary">NODE_ID: KLA-C-03</span></div></div></footer>
     </div>
   );
 };

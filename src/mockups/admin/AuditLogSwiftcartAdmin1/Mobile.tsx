@@ -88,7 +88,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
         KYC Approvals
       </button>
 <button className="audit-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-secondary transition-transform active:scale-95 hover:bg-surface-container">
-        Escrow Actions
+        Payment Actions
       </button>
 <button className="audit-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-secondary transition-transform active:scale-95 hover:bg-surface-container">
         Account Suspensions
@@ -98,7 +98,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 
 <div className="flex flex-col gap-space-md w-full" id="auditLogStream">
 
-<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="PAYOUTS" data-search="patricia namubiru approved_seller_payout po-8812 kikuubo gadgets momo success">
+<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="PAYOUTS" data-search="denis mukasa approved_seller_payout po-8812 kikuubo gadgets momo success">
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-bold">
@@ -134,7 +134,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <div className="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm">
 <div className="flex items-center gap-1.5 min-w-0">
 <div className="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">P</div>
-<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Patricia Namubiru</span>
+<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Denis Mukasa</span>
 <span className="text-secondary opacity-75 text-[11px]">(Ops Admin)</span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary shrink-0">197.239.4.12</span>
@@ -147,7 +147,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 </div>
 <div className="flex items-center justify-between text-[11px]">
 <span className="text-secondary font-label-sm text-label-sm">2FA Method:</span>
-<span className="font-label-sm text-label-sm font-semibold text-tertiary">Hardware FIDO2 Security Key</span>
+<span className="font-label-sm text-label-sm font-semibold text-tertiary">Hardware Two-Factor Authenticator Security Key</span>
 </div>
 <div className="flex flex-col gap-0.5 mt-1">
 <span className="text-secondary font-label-sm text-label-sm">SHA-256 Hash Digest:</span>
@@ -219,7 +219,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 </div>
 </div>
 
-<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="KYC" data-search="patricia namubiru kyc_tier2_approved seller vnd-8821 soundcore uganda verified nira nin ursb">
+<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="KYC" data-search="denis mukasa kyc_tier2_approved seller vnd-8821 soundcore uganda verified nira nin ursb">
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
@@ -263,7 +263,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <div className="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm">
 <div className="flex items-center gap-1.5 min-w-0">
 <div className="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">P</div>
-<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Patricia Namubiru</span>
+<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Denis Mukasa</span>
 <span className="text-secondary opacity-75 text-[11px]">(KYC Lead)</span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary shrink-0">197.239.4.12</span>
@@ -275,7 +275,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <span className="font-label-sm text-label-sm font-semibold">GOV-NIRA-ACK-90218</span>
 </div>
 <div className="flex items-center justify-between text-[11px]">
-<span className="text-secondary font-label-sm text-label-sm">Certificate Vault:</span>
+<span className="text-secondary font-label-sm text-label-sm">Certificate Store:</span>
 <span className="font-label-sm text-label-sm font-semibold">S3-ENC-AES256-KLA</span>
 </div>
 <div className="flex flex-col gap-0.5 mt-1">
@@ -287,12 +287,12 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 </div>
 </div>
 
-<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="ESCROW" data-search="patrick o arbitration officer freeze_escrow_docket case rt-309 280000 ugx">
+<div className="audit-card w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200" data-cat="PAYMENTS" data-search="patrick o dispute reviewers freeze_escrow_docket case rt-309 280000 ugx">
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-bold">
 <Icon name="ac_unit" className="text-[13px]" />
-            ESCROW FROZEN
+            payment frozen
           </span>
 <span className="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-0.5 rounded">
             09:20:11 AM EAT
@@ -315,7 +315,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <span className="font-label-md text-label-md font-extrabold text-on-surface whitespace-nowrap">UGX 280,000</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-tight mt-0.5">
-            Disputed parcel transit: Damaged display panel reported by buyer. Funds locked in SwiftEscrow smart-vault.
+            Disputed parcel transit: Damaged display panel reported by buyer. Funds locked in SwiftCart payment hold.
           </p>
 </div>
 </div>
@@ -323,19 +323,19 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 <div className="flex items-center gap-1.5 min-w-0">
 <div className="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">O</div>
 <span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Patrick O.</span>
-<span className="text-secondary opacity-75 text-[11px]">(Arbitration Officer)</span>
+<span className="text-secondary opacity-75 text-[11px]">(dispute reviewers)</span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary shrink-0">41.210.158.4</span>
 </div>
 
 <div className="hidden mt-space-sm pt-space-sm bg-surface-container rounded-lg p-space-sm flex-col gap-1.5 text-on-surface" id="evt-meta-4">
 <div className="flex items-center justify-between text-[11px]">
-<span className="text-secondary font-label-sm text-label-sm">Arbitration Docket:</span>
+<span className="text-secondary font-label-sm text-label-sm">dispute review Docket:</span>
 <span className="font-label-sm text-label-sm font-semibold">DISPUTE-2023-UG-882</span>
 </div>
 <div className="flex items-center justify-between text-[11px]">
-<span className="text-secondary font-label-sm text-label-sm">Escrow Contract:</span>
-<span className="font-label-sm text-label-sm font-semibold">SWIFT-ESCROW-V3-KLA</span>
+<span className="text-secondary font-label-sm text-label-sm">payment hold:</span>
+<span className="font-label-sm text-label-sm font-semibold">SWIFT-PAYMENT-V3-KLA</span>
 </div>
 <div className="flex flex-col gap-0.5 mt-1">
 <span className="text-secondary font-label-sm text-label-sm">SHA-256 Hash Digest:</span>
@@ -353,7 +353,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
 </div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">No Audit Records Found</h3>
 <p className="font-body-sm text-body-sm text-secondary max-w-[240px] mt-1">
-      No cryptographic entries match your filter parameters in the current audit block.
+      No audit entries match your filter parameters in the current audit block.
     </p>
 </div>
 

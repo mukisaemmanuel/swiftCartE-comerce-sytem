@@ -27,7 +27,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="px-space-xl py-2 bg-surface-container-lowest/90 backdrop-blur flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-sm">
 <div className="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></div>
-<span className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider">URA EFRIS Node Connected • BoU Sandbox V3 Sync Live</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider">Tax E-INVOICE Node Connected • Pesapal Sandbox V3 Sync Live</span>
 <span className="text-outline/40 font-body-sm text-body-sm">•</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">KYC Re-certification due in 412 days</span>
 </div>
@@ -54,7 +54,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Store Profile &amp; Official Business KYC</h1>
 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow shadow-sm">
 <Icon name="verified" className="text-[16px]" />
-<span className="font-label-sm text-label-sm font-bold tracking-wide uppercase">URSB &amp; Bank of Uganda Verified Merchant • Tier 3</span>
+<span className="font-label-sm text-label-sm font-bold tracking-wide uppercase">URSB &amp; Pesapal Verified Merchant • Tier 3</span>
 </div>
 </div>
 </div>
@@ -144,7 +144,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <input className="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" type="text" value="+256 702 449 180" />
 </div>
 <div className="flex flex-col gap-space-xs">
-<label className="font-label-md text-label-md text-on-surface-variant">Escrow Support Email</label>
+<label className="font-label-md text-label-md text-on-surface-variant">Payment Support Email</label>
 <input className="w-full h-11 px-3 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" type="email" value="support@soundcore.ug" />
 </div>
 </div>
@@ -159,8 +159,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified_user" className="text-[24px]" />
 </div>
 <div className="flex flex-col">
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Statutory Regulatory &amp; KYC Verification Dossier</h2>
-<span className="font-body-sm text-body-sm text-outline">Audited against national databases: URSB, URA Taxpayer Registry &amp; NIRA NIN Database</span>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">verified platform Regulatory &amp; KYC Verification Dossier</h2>
+<span className="font-body-sm text-body-sm text-outline">Audited against national databases: URSB, Tax Taxpayer Registry &amp; NIRA NIN Database</span>
 </div>
 </div>
 <span className="px-3 py-1 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm">Audited: A+ Tier</span>
@@ -186,15 +186,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-4 rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-sm">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider">Uganda Revenue Authority (URA)</span>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider">Uganda Revenue Authority (Tax)</span>
 <span className="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">Taxpayer Identification (TIN)</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-1">TIN #: <span className="font-code-display text-label-md text-white font-bold">1004829104</span></span>
 </div>
-<span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">EFRIS Active</span>
+<span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">E-INVOICE Active</span>
 </div>
 <div className="flex items-center justify-between text-body-sm font-body-sm pt-2 text-on-surface-variant">
 <span className="flex items-center gap-1 text-tertiary"><span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Auto E-Invoicing</span>
-<span>VAT Exempt / Standard 18%</span>
+<span>Tax Exempt / Standard 18%</span>
 </div>
 </div>
 
@@ -230,7 +230,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="flex flex-col gap-space-sm mt-space-sm">
-<span className="font-label-md text-label-md text-on-surface uppercase tracking-wider">Document Vault &amp; Official Filings</span>
+<span className="font-label-md text-label-md text-on-surface uppercase tracking-wider">Document reserve &amp; Official Filings</span>
 <div className="flex flex-col gap-2">
 
 <div className="p-3 rounded-lg bg-surface-container flex items-center justify-between">
@@ -397,7 +397,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="lock_open" className="text-[16px] text-emerald-escrow" />
                 Payout Clearance
               </span>
-<span className="font-label-md text-label-md text-emerald-escrow font-bold">Instant 0-hr Escrow</span>
+<span className="font-label-md text-label-md text-emerald-escrow font-bold">Instant 0-hr Payment</span>
 </div>
 </div>
 </section>
@@ -452,7 +452,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-2">
 <div className="w-7 h-7 rounded-md bg-secondary-container text-white flex items-center justify-center font-bold text-[10px]">SB</div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-white leading-tight">Stanbic Bank Uganda</span>
+<span className="font-label-md text-label-md text-white leading-tight">Pesapal Uganda</span>
 <span className="font-code-display text-body-sm text-outline">A/C: 9030 •••• 94821</span>
 </div>
 </div>

@@ -244,8 +244,8 @@ export const StorePage: React.FC<StorePageProps> = ({
               </strong>
             </div>
             <div>
-              <span className="text-slate-400 block text-[12px] font-semibold">Escrow Protection</span>
-              <strong className="text-emerald-600">SwiftCart Escrow Active</strong>
+              <span className="text-slate-400 block text-[12px] font-semibold">Payment Protection</span>
+              <strong className="text-emerald-600">SwiftCart Protection Active</strong>
             </div>
           </div>
         </div>

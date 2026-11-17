@@ -36,7 +36,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm">
 <Icon name="verified" className="text-[13px]" />
-            Escrow Shield Active
+            Payment Protection Active
           </span>
 </div>
 <h1 className="font-headline-md text-on-surface tracking-tight">Inbound Return Inspection &amp; Acceptance</h1>
@@ -112,7 +112,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="security" className="text-primary text-[22px]" />
-<h2 className="font-headline-sm text-on-surface">SwiftCart Tamper Bag Security Check</h2>
+<h2 className="font-headline-sm text-on-surface">SwiftCart package bag Security Check</h2>
 </div>
 <span className="font-label-sm text-emerald-escrow bg-emerald-escrow/10 px-2 py-0.5 rounded-full">Protocol 4.2</span>
 </div>
@@ -189,7 +189,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-2 gap-space-md">
 <div className="relative group rounded-xl overflow-hidden bg-surface-container-lowest">
-<img className="w-full h-36 object-cover transition-transform group-hover:scale-105" data-alt="Close up detailed inspection macro photograph of a transparent tamper-evident security plastic bag with unbroken red holographic micro-print numbered seal TB-KLA-8820-91X, clean laboratory inspection bench in background." src="/images/eba3c3dcd07aef25.webp" />
+<img className="w-full h-36 object-cover transition-transform group-hover:scale-105" data-alt="Close up detailed inspection macro photograph of a transparent Sealed Package Bag security plastic bag with unbroken red holographic micro-print numbered seal TB-KLA-8820-91X, clean laboratory inspection bench in background." src="/images/eba3c3dcd07aef25.webp" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent flex flex-col justify-end p-2.5">
 <span className="font-label-sm text-on-surface truncate">Front_Seal_Inspection.jpg</span>
 <span className="font-body-sm text-tertiary">Verified Tamper Ribbon</span>
@@ -245,7 +245,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-on-surface-variant">Accessories absent, scratches, or moisture exposure</span>
 </div>
 </div>
-<span className="font-label-sm px-2 py-0.5 rounded bg-surface-container text-danger-penalty">Dispute Escrow</span>
+<span className="font-label-sm px-2 py-0.5 rounded bg-surface-container text-danger-penalty">Dispute Payment</span>
 </div>
 </div>
 </div>
@@ -257,7 +257,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="account_balance" className="text-emerald-escrow text-[22px]" />
-<h2 className="font-headline-sm text-on-surface">Escrow Disposition &amp; Release</h2>
+<h2 className="font-headline-sm text-on-surface">Payment Disposition &amp; Release</h2>
 </div>
 <div className="flex items-center gap-1 text-on-tertiary-fixed font-label-sm bg-tertiary-container px-2 py-0.5 rounded-full">
 <Icon name="lock_clock" className="text-[13px]" />
@@ -268,11 +268,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
 <div className="flex justify-between items-start">
 <div>
-<span className="font-label-sm text-on-surface-variant uppercase">Current Escrow Balance Locked</span>
+<span className="font-label-sm text-on-surface-variant uppercase">Current Pending clearance Locked</span>
 <div className="font-price-display text-emerald-escrow text-[28px] mt-1 whitespace-nowrap">UGX 248,500</div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-on-surface-variant">Hold Vault ID</span>
+<span className="font-label-sm text-on-surface-variant">Hold reserve ID</span>
 <span className="font-code-display text-on-surface block text-[13px] mt-1">ESC-UG-2024-991</span>
 </div>
 </div>
@@ -289,17 +289,17 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Recommended Resolution Action</span>
 <div className="flex flex-col gap-2" id="resolution-options">
 <label className="p-3.5 rounded-xl bg-surface-container-high cursor-pointer flex items-start gap-3 transition-all hover:bg-container-dark-high">
-<input checked={true} className="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="escrow-resolution" type="radio" />
+<input checked={true} className="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="payment-resolution" type="radio" />
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-on-surface">Accept Item &amp; Authorize Buyer Escrow Refund</span>
+<span className="font-label-lg text-on-surface">Accept Item &amp; Authorize Buyer Payment Refund</span>
 <span className="font-label-md text-emerald-escrow whitespace-nowrap">UGX 248,500 Refund</span>
 </div>
 <span className="font-body-sm text-on-surface-variant mt-0.5">Physical goods certified Grade A. Buyer refunded to original MTN MoMo wallet within 15 minutes.</span>
 </div>
 </label>
 <label className="p-3.5 rounded-xl bg-surface-container-low cursor-pointer flex items-start gap-3 transition-all hover:bg-container-dark-high opacity-85">
-<input className="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="escrow-resolution" type="radio" />
+<input className="mt-1 w-4 h-4 text-action-gradient-start accent-action-gradient-start cursor-pointer" name="payment-resolution" type="radio" />
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between">
 <span className="font-label-lg text-on-surface">Deduct 10% Restocking Fee for Opened Seal</span>
@@ -357,7 +357,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center justify-center gap-2 text-on-surface-variant font-body-sm pt-1">
 <Icon name="lock" className="text-[14px]" />
-            Cryptographic ledger stamp will be recorded on SwiftCart Settlement Block #89201
+            Verified ledger stamp will be recorded on SwiftCart Settlement Block #89201
           </div>
 </div>
 </div>

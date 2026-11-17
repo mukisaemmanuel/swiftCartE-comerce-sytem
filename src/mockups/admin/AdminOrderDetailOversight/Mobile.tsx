@@ -68,14 +68,14 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 <Icon name="lock" className="text-[18px]" />
 </div>
 <div>
-<span className="font-label-lg text-label-lg text-emerald-escrow tracking-wide uppercase">In Transit • Escrow Vault Protected</span>
-<span className="block font-body-sm text-body-sm text-on-surface-variant">Cryptographic Buyer Code Handover Required</span>
+<span className="font-label-lg text-label-lg text-emerald-escrow tracking-wide uppercase">In Transit • Payment Protected</span>
+<span className="block font-body-sm text-body-sm text-on-surface-variant">6-Digit Buyer Handover Code Required</span>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow text-on-tertiary font-label-sm text-label-sm">LOCKED</span>
 </div>
 <div className="bg-surface-container-lowest/80 rounded-lg p-space-sm flex items-center justify-between">
-<span className="font-body-md text-body-md text-on-surface-variant">Total Vault Collateral</span>
+<span className="font-body-md text-body-md text-on-surface-variant">Total reserve Collateral</span>
 <span className="font-price-display text-price-display text-emerald-escrow whitespace-nowrap">UGX 253,500</span>
 </div>
 </div>
@@ -139,7 +139,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 </div>
 </div>
 <div className="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Payable Holdback</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Payable Holdback</span>
 <span className="font-body-lg text-body-lg text-on-surface font-bold whitespace-nowrap">UGX 248,500</span>
 </div>
 </div>
@@ -167,7 +167,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 </div>
 <div className="bg-surface-container rounded-lg p-space-xs px-space-sm">
 <span className="font-label-sm text-label-sm text-outline block">Transit Liability</span>
-<span className="font-body-md text-body-md text-emerald-escrow font-medium block">Underwritten 100%</span>
+<span className="font-body-md text-body-md text-emerald-escrow font-medium block">Order Protected</span>
 </div>
 </div>
 </div>
@@ -198,7 +198,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 <Icon name="payments" className="text-mtn-yellow text-[20px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface">Payment Rail Breakdown</span>
 </div>
-<span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-mtn-yellow/15 text-mtn-yellow font-bold">MTN MoMo Escrow</span>
+<span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-mtn-yellow/15 text-mtn-yellow font-bold">MTN momo payment</span>
 </div>
 <div className="bg-surface-container rounded-lg p-space-sm space-y-2">
 <div className="flex items-center justify-between">
@@ -206,7 +206,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 <span className="font-code-display text-label-md text-secondary tracking-normal">#TXN-884920</span>
 </div>
 <div className="flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Total Ingested</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Total Ingested</span>
 <span className="font-body-md text-body-md text-on-surface font-bold whitespace-nowrap">UGX 253,500</span>
 </div>
 <div className="flex items-center justify-between">
@@ -253,7 +253,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold">14:25</span>
 <span className="font-label-sm text-label-sm text-mtn-yellow font-bold">MTN Webhook OK</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface block mt-0.5">MoMo payment cleared into SwiftCart Escrow Vault directly</span>
+<span className="font-body-sm text-body-sm text-on-surface block mt-0.5">MoMo payment cleared into SwiftCart Payment Reserve directly</span>
 </div>
 </div>
 
@@ -344,7 +344,7 @@ export const AdminOrderDetailOversight: React.FC<AdminOrderDetailOversightProps>
 <Icon name="gavel" className="text-[18px]" />
 <span>Emergency Dispatch Hold</span>
 </div>
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error/20 text-error font-bold uppercase">HALT VAULT</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error/20 text-error font-bold uppercase">HALT DISPATCH</span>
 </button>
 </div>
 </div>

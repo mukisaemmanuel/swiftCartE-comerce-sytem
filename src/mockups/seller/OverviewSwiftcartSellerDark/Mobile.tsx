@@ -130,7 +130,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 
 <div className="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
 <div className="flex items-center justify-between mb-2">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Balance</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Pending clearance</span>
 <div className="w-7 h-7 rounded-lg bg-emerald-escrow/10 flex items-center justify-center text-emerald-escrow">
 <Icon name="lock" className="text-[16px]" />
 </div>
@@ -213,7 +213,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 <span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 248,500</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
-<span>In Escrow</span>
+<span>Held until delivery</span>
 </div>
 </div>
 </div>
@@ -257,7 +257,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 <span className="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">UGX 330,000</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
-<span>In Escrow</span>
+<span>Held until delivery</span>
 </div>
 </div>
 </div>
@@ -317,7 +317,7 @@ export const OverviewSwiftcartSellerDark: React.FC<OverviewSwiftcartSellerDarkPr
 
 <div className="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm px-1">
 <Icon name="shield" className="text-[14px] text-emerald-escrow" />
-<span>Guaranteed via SwiftCart Escrow Settlement Protocol</span>
+<span>Guaranteed via SwiftCart Protection Settlement Protocol</span>
 </div>
 </div>
 </div>

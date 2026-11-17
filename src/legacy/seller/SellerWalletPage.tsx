@@ -82,7 +82,7 @@ export const SellerWalletPage: React.FC<SellerWalletPageProps> = () => {
             Store Wallet & Payouts
           </h1>
           <p className="text-[14px] text-[var(--d-text-secondary)] mt-0.5">
-            Transparent escrow releases, commission breakdown, and automated Mobile Money disbursements.
+            Transparent payment releases, commission breakdown, and automated Mobile Money disbursements.
           </p>
         </div>
         <button
@@ -116,10 +116,10 @@ export const SellerWalletPage: React.FC<SellerWalletPageProps> = () => {
           </div>
         </div>
 
-        {/* In Escrow */}
+        {/* Held until delivery */}
         <div className="bg-[var(--d-surface)] rounded-2xl p-5 border border-[var(--d-border)] shadow-sm space-y-3">
           <div className="flex items-center justify-between text-[var(--d-text-secondary)]">
-            <span className="text-[13px] font-bold uppercase tracking-wider">Held in Escrow</span>
+            <span className="text-[13px] font-bold uppercase tracking-wider">Held until delivery</span>
             <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400">
               <Icon name="lock" className="text-xl" />
             </div>
@@ -153,13 +153,13 @@ export const SellerWalletPage: React.FC<SellerWalletPageProps> = () => {
         </div>
       </div>
 
-      {/* Escrow Mechanism Explainer Card */}
+      {/* payment protection mechanism Explainer Card */}
       <div className="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-xs text-blue-300 flex items-start gap-3">
         <Icon name="verified_user" className="text-xl shrink-0 mt-0.5 text-blue-400" />
         <div className="space-y-1">
-          <p className="font-bold text-sm text-blue-200">How Escrow Protection Works on SwiftCart</p>
+          <p className="font-bold text-sm text-blue-200">How Payment Protection Works on SwiftCart</p>
           <p className="leading-relaxed">
-            When a customer places an order, payment is securely deposited into escrow. Once your assigned dispatch rider delivers the package and the buyer confirms receipt via delivery OTP, the escrow funds (minus the marketplace commission) are instantly credited to your <strong>Available Balance</strong>.
+            When a customer places an order, payment is securely deposited into payment. Once your assigned dispatch rider delivers the package and the buyer confirms receipt via delivery OTP, the held funds (minus the marketplace commission) are instantly credited to your <strong>Available Balance</strong>.
           </p>
         </div>
       </div>

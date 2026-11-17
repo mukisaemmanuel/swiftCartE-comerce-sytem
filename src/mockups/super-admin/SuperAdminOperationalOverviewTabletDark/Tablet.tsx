@@ -84,7 +84,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         </span>
 </div>
 <div>
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide">Escrow Vault In-Flight</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide">Payment Reserve In-Flight</span>
 <h3 className="font-headline-sm text-headline-sm text-emerald-escrow font-extrabold mt-0.5 whitespace-nowrap">UGX 198,450,000</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
           100% Backed • MTN &amp; Airtel Trust Accts
@@ -140,12 +140,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="gavel" className="text-[19px]" />
 </div>
 <div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Escrow &amp; Dispute Health</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Payment &amp; Dispute Health</h2>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Real-time platform consumer protection index</span>
 </div>
 </div>
 <span className="font-label-sm text-label-sm px-2.5 py-1 rounded-md bg-emerald-escrow/10 text-emerald-escrow font-bold flex items-center gap-1">
-<Icon name="shield" className="text-[14px]" /> 99.6% Escrow Safety
+<Icon name="shield" className="text-[14px]" /> 99.6% payment safety
           </span>
 </div>
 <div className="grid grid-cols-3 gap-3 p-3 rounded-lg bg-surface-container-low text-center">
@@ -162,13 +162,13 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col items-center justify-center py-1">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Disputed Value</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold mt-0.5 whitespace-nowrap">UGX 1.8M</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant/80">0.9% of vault</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant/80">0.9% of reserve</span>
 </div>
 </div>
 
 <div className="flex flex-col gap-1.5 pt-1">
 <div className="flex justify-between items-center text-on-surface font-label-sm text-label-sm">
-<span className="text-on-surface-variant">Escrow Turnover Velocity (SLA Confidence)</span>
+<span className="text-on-surface-variant">Payment Turnover Velocity (SLA Confidence)</span>
 <span className="text-tertiary font-bold">Normal • 94.8% Same-Day Delivery Release</span>
 </div>
 <div className="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
@@ -192,7 +192,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">17:00 EAT MoMo Settlement Queue</h2>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Automated batch sweep via Stanbic Mobile Money Aggregator</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Automated batch sweep via Pesapal Mobile Money Aggregator</p>
 </div>
 </div>
 <span className="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-bold">
@@ -208,7 +208,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
 <Icon name="lock_clock" className="text-[15px] text-emerald-escrow" />
-              Liquidity checked &amp; reserved in escrow clearing pool
+              Liquidity checked &amp; reserved held until delivery clearing pool
             </span>
 </div>
 <button className="w-full sm:w-auto h-11 px-5 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center justify-center gap-2 shrink-0" type="button">

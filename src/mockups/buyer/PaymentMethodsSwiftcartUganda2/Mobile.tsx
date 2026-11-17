@@ -29,7 +29,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-space-xs">
-<span className="font-label-lg text-label-lg text-on-surface">Swift Escrow Protected</span>
+<span className="font-label-lg text-label-lg text-on-surface">Payment Protected</span>
 <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Active</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
@@ -71,7 +71,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
 <div className="mt-space-md pt-space-sm flex items-center justify-between">
 <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container">
 <Icon name="bolt" className="text-tertiary text-[16px]" />
-<span className="font-label-sm text-label-sm text-on-surface-variant">Instant *165# Prompt</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Instant Mobile prompt Prompt</span>
 </div>
 <div className="flex items-center gap-1 text-tertiary">
 <Icon name="check_circle" className="text-[16px]" />
@@ -125,7 +125,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-space-xs">
-<span className="font-label-lg text-label-lg text-on-surface">Stanbic Visa Debit</span>
+<span className="font-label-lg text-label-lg text-on-surface">Pesapal Visa Debit</span>
 </div>
 <span className="font-headline-sm text-headline-sm text-on-surface tracking-wider mt-0.5">•••• 4092</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Expires 08/27</span>
@@ -178,7 +178,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
 <div className="mt-space-xl bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
 <div className="flex items-center gap-space-xs">
 <Icon name="info" className="text-primary text-[20px]" />
-<h3 className="font-label-lg text-label-lg text-on-surface">How Swift Escrow Works</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface">How swift protection Works</h3>
 </div>
 <div className="mt-space-md flex flex-col gap-space-md">
 
@@ -189,7 +189,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
 <div className="flex flex-col min-w-0">
 <span className="font-label-md text-label-md text-on-surface">Approve instant USSD prompt</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-            Your telecom triggers a PIN prompt on your phone (MTN *165# or Airtel *185#).
+            Your telecom triggers a PIN prompt on your phone (MTN Mobile prompt or Airtel Money).
           </p>
 </div>
 </div>
@@ -199,7 +199,7 @@ export const PaymentMethodsSwiftcartUganda2: React.FC<PaymentMethodsSwiftcartUga
           2
         </div>
 <div className="flex flex-col min-w-0">
-<span className="font-label-md text-label-md text-on-surface">Funds secured in escrow</span>
+<span className="font-label-md text-label-md text-on-surface">Funds secured held until delivery</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
             SwiftCart locks the payment. The merchant is not paid until you are satisfied.
           </p>

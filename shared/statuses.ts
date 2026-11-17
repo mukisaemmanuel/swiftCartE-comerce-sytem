@@ -36,18 +36,28 @@ export const PAYMENT_STATUS = {
 } as const;
 export type PaymentStatus = (typeof PAYMENT_STATUS)[keyof typeof PAYMENT_STATUS];
 
-export const ESCROW_STATUS = {
+export const PAYMENT_HOLD_STATUS = {
   HELD: 'HELD',
-  HELD_IN_ESCROW: 'HELD_IN_ESCROW',
   RELEASED: 'RELEASED',
   REFUNDED: 'REFUNDED',
-  FROZEN: 'FROZEN',
-  FROZEN_DISPUTE: 'FROZEN_DISPUTE',
-  FROZEN_RETURN: 'FROZEN_RETURN',
-  RELEASE_PENDING: 'RELEASE_PENDING',
-  NOT_APPLICABLE: 'NOT_APPLICABLE',
+  DISPUTED: 'DISPUTED',
 } as const;
-export type EscrowStatus = (typeof ESCROW_STATUS)[keyof typeof ESCROW_STATUS];
+export type PaymentHoldStatus = (typeof PAYMENT_HOLD_STATUS)[keyof typeof PAYMENT_HOLD_STATUS];
+
+export const ESCROW_STATUS = {
+  HELD: 'HELD',
+  HELD_IN_ESCROW: 'HELD',
+  RELEASED: 'RELEASED',
+  ESCROW_RELEASED: 'RELEASED',
+  REFUNDED: 'REFUNDED',
+  DISPUTED: 'DISPUTED',
+  FROZEN: 'DISPUTED',
+  FROZEN_DISPUTE: 'DISPUTED',
+  FROZEN_RETURN: 'DISPUTED',
+  RELEASE_PENDING: 'HELD',
+  NOT_APPLICABLE: 'RELEASED',
+} as const;
+export type EscrowStatus = PaymentHoldStatus;
 
 export const DISPATCH_STATUS = {
   PENDING: 'PENDING',

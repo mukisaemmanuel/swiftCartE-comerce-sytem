@@ -42,7 +42,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1.5 rounded-full">
 <Icon name="verified_user" className="text-[18px]" />
-<span className="font-label-md text-label-md font-bold tracking-tight">SwiftCart Escrow Vault</span>
+<span className="font-label-md text-label-md font-bold tracking-tight">SwiftCart Payment Reserve</span>
 </div>
 <span className="text-on-surface-variant/40 font-body-sm text-body-sm">•</span>
 
@@ -68,7 +68,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="relative z-10 w-20 h-20 rounded-full bg-gradient-to-tr from-primary to-primary-container text-on-primary shadow-[0_8px_24px_rgba(218,55,0,0.35)] flex flex-col items-center justify-center">
 <Icon name="stay_current_portrait" className="text-[34px] animate-bounce" />
-<span className="font-label-sm text-label-sm font-extrabold tracking-widest text-primary-fixed mt-0.5">*165#</span>
+<span className="font-label-sm text-label-sm font-extrabold tracking-widest text-primary-fixed mt-0.5">Mobile prompt</span>
 </div>
 
 <div className="absolute -top-1 right-2 bg-surface-container-lowest text-tertiary shadow-md rounded-full px-2 py-0.5 flex items-center gap-1 font-label-sm text-label-sm font-bold">
@@ -133,7 +133,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="min-w-0">
 <p className="font-label-md text-label-md text-on-surface font-bold">Verify Merchant &amp; Sum</p>
 <div className="mt-1 bg-surface-container-lowest px-3 py-1.5 rounded-lg flex items-center justify-between gap-2 shadow-sm">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Merchant: <strong className="text-on-surface font-label-md text-label-md">SwiftCart Escrow Vault</strong></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Merchant: <strong className="text-on-surface font-label-md text-label-md">SwiftCart Payment Reserve</strong></span>
 <span className="font-price-display text-price-display text-primary">UGX 305,000</span>
 </div>
 </div>
@@ -164,7 +164,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div>
 <div className="flex items-center gap-2 text-tertiary">
 <Icon name="shield_lock" className="text-[22px]" />
-<span className="font-label-lg text-label-lg font-bold">Escrow Safety Hold</span>
+<span className="font-label-lg text-label-lg font-bold">payment safety Hold</span>
 </div>
 
 <div className="mt-3 bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col items-center justify-center text-center">
@@ -186,12 +186,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-3 leading-relaxed">
-                Your money is <strong className="text-on-surface font-label-md text-label-md">NOT paid to the merchant yet</strong>. It is held securely in the SwiftCart Escrow custodial vault until you receive, inspect, and approve your items.
+                Your money is <strong className="text-on-surface font-label-md text-label-md">NOT paid to the merchant yet</strong>. It is held securely in the SwiftCart Protection protected reserve until you receive, inspect, and approve your items.
               </p>
 </div>
 <div className="mt-4 pt-3 flex items-center gap-2 text-tertiary font-label-sm text-label-sm font-bold bg-tertiary/10 p-2 rounded-lg">
 <Icon name="verified" className="text-[16px]" />
-<span>100% Guaranteed Refund If Undelivered</span>
+<span>Quality Assured Refund If Undelivered</span>
 </div>
 </div>
 </div>
@@ -217,7 +217,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
 <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
 <Icon name="contact_support" className="text-[18px] text-primary shrink-0" />
-<span>Didn't receive the prompt on your phone? Dial <strong className="text-on-surface font-label-md text-label-md">*165#</strong> manually or reach SwiftCart Support.</span>
+<span>Didn't receive the prompt on your phone? Dial <strong className="text-on-surface font-label-md text-label-md">Mobile prompt</strong> manually or reach SwiftCart Support.</span>
 </div>
 <a className="shrink-0 flex items-center gap-1.5 font-label-md text-label-md font-bold text-primary hover:text-primary-container transition-colors" href="tel:0800220800" onClick={() => alertToast('Action triggered')}>
 <Icon name="phone_in_talk" className="text-[18px]" />
@@ -234,7 +234,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>•</span>
 <div className="flex items-center gap-1.5">
 <Icon name="verified_user" className="text-[16px] text-secondary" />
-<span>Regulated by Bank of Uganda Guidelines</span>
+<span>standard by Pesapal Guidelines</span>
 </div>
 <span>•</span>
 <div className="flex items-center gap-1.5">

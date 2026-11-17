@@ -33,7 +33,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-space-xs">
 <Icon name="lock" className="text-[15px] text-tertiary" />
-<span className="font-label-sm text-label-sm text-on-surface">Escrow Lock Engine 100% Active</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payment Lock Engine 100% Active</span>
 </div>
 <span className="font-code-display text-label-sm text-primary">PORT: 8092-STG</span>
 </div>
@@ -111,7 +111,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface-variant font-medium">Parcels</span>
 </div>
 <div className="mt-1 flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Protected</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Protected</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow font-bold whitespace-nowrap">UGX 19.4M</span>
 </div>
 </div>
@@ -318,7 +318,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div>
 <span className="font-label-md text-label-md text-on-surface font-bold">Lockbox Serial: #BX-04-209</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Tamper seal clamp intact • Weather seal valid</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">package seal clamp intact • Weather seal valid</p>
 </div>
 </div>
 <Icon name="check_circle" className="text-emerald-escrow text-[22px]" />
@@ -369,7 +369,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="flex flex-col justify-center sm:pl-space-sm sm:border-l sm:border-surface-container-highest/60">
-<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Total Bag Escrow</span>
+<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Total Bag Payment</span>
 <span className="font-price-display text-headline-sm text-emerald-escrow font-black whitespace-nowrap">UGX 1,420,000</span>
 <div className="flex items-center gap-1 text-emerald-escrow font-body-sm text-body-sm">
 <Icon name="lock" className="text-[13px]" />
@@ -378,7 +378,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="flex flex-col justify-center sm:pl-space-sm sm:border-l sm:border-surface-container-highest/60">
-<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Tamper Seal Tag</span>
+<span className="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">package seal Tag</span>
 <span className="font-code-display text-label-lg text-primary font-bold">#TS-884920</span>
 <span className="font-body-sm text-body-sm text-tertiary flex items-center gap-1">
 <Icon name="verified" className="text-[14px]" />
@@ -402,7 +402,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-2.5 px-space-md">Waybill</th>
 <th className="py-2.5 px-space-sm">Description</th>
 <th className="py-2.5 px-space-sm">Destination Drop-Off</th>
-<th className="py-2.5 px-space-sm">Escrow Value</th>
+<th className="py-2.5 px-space-sm">Payment Value</th>
 <th className="py-2.5 px-space-md text-right">Delivery Rule</th>
 </tr>
 </thead>
@@ -488,7 +488,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="fingerprint" className="text-[20px]" />
 </span>
 <div>
-<h4 className="font-headline-sm text-headline-sm text-on-surface font-bold">2-Factor Handover Custody Transfer</h4>
+<h4 className="font-headline-sm text-headline-sm text-on-surface font-bold">2-Factor Handover holding Transfer</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Both parties must cryptographically clear before dispatch release</p>
 </div>
 </div>

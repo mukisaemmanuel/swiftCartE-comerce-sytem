@@ -38,7 +38,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="h-4 w-px bg-surface-container-highest"></div>
 <div className="flex items-center gap-space-xs text-amber-warning font-label-sm uppercase tracking-wide">
 <span className="w-2 h-2 rounded-full bg-amber-warning animate-ping"></span>
-<span>Handshake Stage 03: Final Code Custody Swap</span>
+<span>Handshake Stage 03: Final Code holding Swap</span>
 </div>
 </div>
 <div className="flex items-center gap-space-md">
@@ -106,9 +106,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="bg-container-dark-low rounded-xl p-3 shadow-md flex flex-col gap-2">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Custody Parcel Verification</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">holding Parcel Verification</span>
 <span className="flex items-center gap-1 font-label-sm text-[10px] text-tertiary-fixed bg-tertiary-container/20 px-2 py-0.5 rounded-full">
-<Icon name="verified_user" className="text-[12px]" /> UGX 180,000 Escrow
+<Icon name="verified_user" className="text-[12px]" /> UGX 180,000 Payment
                   </span>
 </div>
 <div className="flex items-center gap-3 bg-surface-container-high/50 p-2 rounded-lg">
@@ -133,7 +133,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="key" className="text-action-gradient-start text-[18px]" />
 <span className="font-label-md text-label-md text-on-surface font-bold">Delivery Passcode</span>
 </div>
-<span className="text-[10px] text-amber-warning font-label-sm uppercase bg-amber-warning/10 px-2 py-0.5 rounded">Custody Gate</span>
+<span className="text-[10px] text-amber-warning font-label-sm uppercase bg-amber-warning/10 px-2 py-0.5 rounded">holding Gate</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-tight">
                   Request 6-digit code shown on customer's phone or SMS. Do not hand parcel prior to verified match.
@@ -172,7 +172,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="w-full h-12 mt-1 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end hover:opacity-95 text-on-primary-container font-label-lg shadow-[0_4px_18px_rgba(218,55,0,0.35)] flex items-center justify-center gap-2 transition-transform active:scale-98" id="verify-handshake-btn">
 <Icon name="task_alt" className="text-[20px]" />
-<span>Validate &amp; Release Escrow</span>
+<span>Validate &amp; release payment</span>
 </button>
 </div>
 
@@ -343,13 +343,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="badge" className="text-tertiary text-[20px]" />
 <div className="flex flex-col">
 <span className="leading-tight">Log National ID (NIN)</span>
-<span className="text-[10px] text-on-surface-variant font-normal">Physical ID scan for high value escrow</span>
+<span className="text-[10px] text-on-surface-variant font-normal">Physical ID scan for high value payment</span>
 </div>
 </button>
 </div>
 
 <div className="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
-<span className="font-label-sm text-[10px] uppercase text-on-surface-variant font-bold">Cryptographic Trail Log</span>
+<span className="font-label-sm text-[10px] uppercase text-on-surface-variant font-bold">Verified Trail Log</span>
 <div className="flex flex-col gap-1 max-h-24 overflow-y-auto font-code-display text-[11px] text-on-surface-variant pr-1" id="audit-trail-log">
 <div className="flex justify-between">
 <span>[14:34:10] Rider entered Kololo Terrace Perimeter (&lt;10m)</span>
@@ -360,7 +360,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-on-surface">SENT</span>
 </div>
 <div className="flex justify-between">
-<span>[14:34:15] Escrow hold lock #ESC-180000 armed. Waiting 6 digits.</span>
+<span>[14:34:15] Payment Hold lock #ESC-180000 armed. Waiting 6 digits.</span>
 <span className="text-amber-warning">ARMED</span>
 </div>
 </div>

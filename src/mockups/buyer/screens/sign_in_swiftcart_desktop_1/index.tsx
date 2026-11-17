@@ -101,8 +101,8 @@ export const Screen: React.FC<ScreenProps> = (props) => {
               <Icon name="verified_user" className="text-[22px]" />
             </div>
             <div className="min-w-0">
-              <span className="font-label-md text-white font-semibold">100% Escrow Protection</span>
-              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Funds held securely in escrow until you inspect and accept your items.</p>
+              <span className="font-label-md text-white font-semibold">100% Payment Protection</span>
+              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Funds held securely held until delivery until you inspect and accept your items.</p>
             </div>
           </div>
 
@@ -113,7 +113,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </div>
             <div className="min-w-0">
               <span className="font-label-md text-white font-semibold">Zero-Fee Mobile Money</span>
-              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Instant debit push via MTN MoMo (*165#) &amp; Airtel Money (*185#).</p>
+              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Instant debit push via MTN MoMo (Mobile prompt) &amp; Airtel Money (Mobile prompt).</p>
             </div>
           </div>
 
@@ -124,7 +124,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </div>
             <div className="min-w-0">
               <span className="font-label-md text-white font-semibold">1,400+ Verified Merchants</span>
-              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Fully certified URSB and URA registered stores guaranteed.</p>
+              <p className="text-body-sm text-white/80 leading-snug mt-0.5">Fully certified URSB and Tax registered stores guaranteed.</p>
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
               </label>
               <div className="flex items-center gap-1 text-tertiary bg-emerald-50 px-2 py-0.5 rounded-full">
                 <Icon name="verified" className="text-[15px]" />
-                <span className="font-label-sm text-label-sm font-semibold">Escrow Ready</span>
+                <span className="font-label-sm text-label-sm font-semibold">Payment Ready</span>
               </div>
             </div>
 
@@ -295,7 +295,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           <div className="flex items-center gap-2 text-on-surface-variant mb-4 bg-surface-container-low/70 p-2.5 rounded-lg">
             <Icon name="shield" className="text-[18px] text-tertiary shrink-0" />
             <p className="font-body-sm text-body-sm leading-tight text-on-surface-variant/90 text-xs">
-              Your data is encrypted and protected under the <span className="font-semibold text-on-surface">Uganda Data Protection and Privacy Act 2019</span>.
+              Your data is encrypted and protected under the <span className="font-semibold text-on-surface">Uganda SwiftCart Privacy Policy 2019</span>.
             </p>
           </div>
 
@@ -324,7 +324,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <Icon name="verified_user" className="text-[24px]" />
           </div>
           <div>
-            <div className="font-label-md text-white font-bold text-sm">100% Escrow Protection</div>
+            <div className="font-label-md text-white font-bold text-sm">100% Payment Protection</div>
             <div className="text-xs text-white/60">Money safe till item confirmed</div>
           </div>
         </div>
@@ -343,7 +343,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           </div>
           <div>
             <div className="font-label-md text-white font-bold text-sm">Zero MoMo Fees</div>
-            <div className="text-xs text-white/60">MTN (*165#) &amp; Airtel (*185#)</div>
+            <div className="text-xs text-white/60">MTN (Mobile prompt) &amp; Airtel (Mobile prompt)</div>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -366,7 +366,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         <div className="flex items-center gap-6">
           <a href="#privacy" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Privacy Policy</a>
           <a href="#terms" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Terms of Service</a>
-          <a href="#disputes" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Escrow &amp; Dispute Resolution</a>
+          <a href="#disputes" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Payment &amp; Dispute Resolution</a>
           <a href="#contact" className="hover:text-white transition" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Contact Support</a>
         </div>
       </div>

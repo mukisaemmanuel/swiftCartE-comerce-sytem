@@ -309,7 +309,7 @@ export const RidersCouriersSwiftcartAdmin: React.FC<RidersCouriersSwiftcartAdmin
 <Icon name="shield_with_heart" className="text-error text-[18px] shrink-0 mt-0.5" />
 <div>
 <p className="font-label-md text-label-md font-bold text-on-error-container">Critical Integrity Breach</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Failed 3 tamper-evident bag QR scans during transit in Ntinda. Account frozen pending hub inventory audit.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Failed 3 Sealed Package Bag QR scans during transit in Ntinda. Account frozen pending hub inventory audit.</p>
 </div>
 </div>
 <div className="flex items-center justify-between pt-1">
@@ -341,7 +341,7 @@ export const RidersCouriersSwiftcartAdmin: React.FC<RidersCouriersSwiftcartAdmin
 <div className="flex items-center gap-2.5">
 <input checked={true} className="accent-primary w-4 h-4" name="reason" type="radio" value="tamper" />
 <div>
-<p className="font-label-md text-label-md font-semibold text-on-surface">Tamper Seal Violation</p>
+<p className="font-label-md text-label-md font-semibold text-on-surface">package seal Violation</p>
 <p className="font-label-sm text-label-sm text-secondary">Package seal broken or missing tag</p>
 </div>
 </div>

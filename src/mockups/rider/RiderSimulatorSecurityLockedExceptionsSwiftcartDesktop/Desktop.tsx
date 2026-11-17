@@ -109,7 +109,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-danger-penalty text-[16px] font-semibold">(3 Failed Attempts)</span>
 </h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-space-sm px-space-xs text-center leading-relaxed">
-                  Security Protocol Activated: 3 invalid delivery OTP attempts were entered for <span className="text-primary font-mono font-bold">Waybill #SC-98241</span>. Parcel lockbox is secured. Custody cannot be transferred without supervisor clearance.
+                  Security Protocol Activated: 3 invalid delivery OTP attempts were entered for <span className="text-primary font-mono font-bold">Waybill #SC-98241</span>. Parcel lockbox is secured. holding cannot be transferred without supervisor clearance.
                 </p>
 </div>
 
@@ -123,7 +123,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-on-surface">Samsung Galaxy A54 5G (Sealed)</span>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-<span>Escrow Hold:</span>
+<span>Payment Hold:</span>
 <span className="text-tertiary-fixed font-bold font-price-display text-[16px] whitespace-nowrap">UGX 1,450,000</span>
 </div>
 <div className="flex items-center justify-between text-danger-penalty font-label-sm text-label-sm pt-space-xs">
@@ -215,7 +215,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="badge" className="text-action-gradient-start text-[22px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface">Central Dispatch Identity Verification Workbench</span>
 </div>
-<span className="px-space-sm py-0.5 rounded-full bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase font-bold whitespace-nowrap">Escrow Hold UGX 1.45M</span>
+<span className="px-space-sm py-0.5 rounded-full bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase font-bold whitespace-nowrap">Payment Hold UGX 1.45M</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 

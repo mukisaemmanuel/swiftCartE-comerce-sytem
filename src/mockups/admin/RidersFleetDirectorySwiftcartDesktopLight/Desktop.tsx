@@ -648,7 +648,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>•</span>
 <span>NIRA NIN: <strong>CM88031204</strong></span>
 <span>•</span>
-<span>URA TIN: <strong>100492819</strong></span>
+<span>Tax ID: <strong>100492819</strong></span>
 </div>
 </div>
 </div>

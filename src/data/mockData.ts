@@ -17,7 +17,7 @@ import type {
 import {
   ORDER_STATUS,
   PAYMENT_STATUS,
-  ESCROW_STATUS,
+  PAYMENT_HOLD_STATUS,
   SELLER_STATUS,
   PRODUCT_STATUS,
   RETURN_STATUS,
@@ -598,7 +598,7 @@ export const MOCK_REVIEWS: Review[] = [
     userName: 'Mbabazi Sarah',
     rating: 5,
     comment:
-      'Very crisp camera and super quick charging! Mobile money payment was smooth and escrow kept me reassured until delivery.',
+      'Very crisp camera and super quick charging! Mobile money payment was smooth and payment protection kept me reassured until delivery.',
     date: '4 days ago',
     verifiedPurchase: true,
   },
@@ -693,7 +693,8 @@ export const MOCK_ORDERS: Order[] = [
     orderNumber: 'SWIFT-UG-8901',
     status: ORDER_STATUS.CONFIRMED,
     paymentStatus: PAYMENT_STATUS.PAID,
-    escrowStatus: ESCROW_STATUS.HELD_IN_ESCROW,
+    paymentHoldStatus: PAYMENT_HOLD_STATUS.HELD,
+    escrowStatus: PAYMENT_HOLD_STATUS.HELD,
     createdAt: daysAgo(2, 4),
     items: [
       {
@@ -724,8 +725,8 @@ export const MOCK_ORDERS: Order[] = [
       {
         status: ORDER_STATUS.PAID,
         timestamp: '2 days ago',
-        title: 'Payment Confirmed & Held in Escrow',
-        description: 'Payment secured safely by SwiftCart Escrow.',
+        title: 'Payment Confirmed & Held until delivery',
+        description: 'Payment secured safely by SwiftCart Protection.',
       },
       {
         status: ORDER_STATUS.CONFIRMED,
@@ -740,7 +741,8 @@ export const MOCK_ORDERS: Order[] = [
     orderNumber: 'SWIFT-UG-9140',
     status: ORDER_STATUS.OUT_FOR_DELIVERY,
     paymentStatus: PAYMENT_STATUS.PAID,
-    escrowStatus: ESCROW_STATUS.HELD_IN_ESCROW,
+    paymentHoldStatus: PAYMENT_HOLD_STATUS.HELD,
+    escrowStatus: PAYMENT_HOLD_STATUS.HELD,
     createdAt: daysAgo(1, 2),
     items: [
       {
@@ -773,7 +775,7 @@ export const MOCK_ORDERS: Order[] = [
         status: ORDER_STATUS.PAID,
         timestamp: '1 day ago',
         title: 'Payment Secured',
-        description: 'Held safely in SwiftCart Escrow.',
+        description: 'Held safely until delivery confirmation.',
       },
       {
         status: ORDER_STATUS.PROCESSING,
@@ -794,7 +796,8 @@ export const MOCK_ORDERS: Order[] = [
     orderNumber: 'SWIFT-UG-7822',
     status: ORDER_STATUS.DELIVERED,
     paymentStatus: PAYMENT_STATUS.PAID,
-    escrowStatus: ESCROW_STATUS.RELEASED,
+    paymentHoldStatus: PAYMENT_HOLD_STATUS.RELEASED,
+    escrowStatus: PAYMENT_HOLD_STATUS.RELEASED,
     createdAt: daysAgo(8, 5),
     items: [
       {
@@ -819,7 +822,7 @@ export const MOCK_ORDERS: Order[] = [
       {
         status: ORDER_STATUS.PAID,
         timestamp: '8 days ago',
-        title: 'Payment Secured in Escrow',
+        title: 'Payment Secured',
         description: 'Paid via MTN MoMo.',
       },
       {
@@ -832,7 +835,7 @@ export const MOCK_ORDERS: Order[] = [
         status: ORDER_STATUS.DELIVERED,
         timestamp: '6 days ago',
         title: 'Delivered / Collected',
-        description: 'Collected by buyer. Escrow funds released to merchant.',
+        description: 'Collected by buyer. Payment released to merchant.',
       },
     ],
   },
@@ -886,9 +889,9 @@ export const MOCK_SELLER_APPLICATION: SellerApplication = {
 export const MOCK_NOTIFICATIONS: Notification[] = [
   {
     id: 'notif-1',
-    title: 'Order Confirmed & Escrow Protected',
+    title: 'Order Confirmed & Payment Protected',
     message:
-      'Your payment for Order SWIFT-UG-8901 is safely held in SwiftCart Escrow. The merchant is preparing your package.',
+      'Your payment for Order SWIFT-UG-8901 is safely held in SwiftCart Protection. The merchant is preparing your package.',
     timestamp: '2 hours ago',
     read: false,
     type: 'order',

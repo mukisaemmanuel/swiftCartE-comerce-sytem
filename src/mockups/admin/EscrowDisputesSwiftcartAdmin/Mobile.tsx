@@ -23,7 +23,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
       <div className="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop"></div>
-<main className="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div className="px-margin pt-space-md pb-space-xs flex items-center justify-between"><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate whitespace-nowrap">Escrow &amp; Disputes</h1><span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary"><span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Live MTN/Airtel</span></div><div className="flex-1 w-full px-margin"><div className="flex flex-col w-full pb-8">
+<main className="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div className="px-margin pt-space-md pb-space-xs flex items-center justify-between"><h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate whitespace-nowrap">Payment &amp; Disputes</h1><span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary"><span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Live MTN/Airtel</span></div><div className="flex-1 w-full px-margin"><div className="flex flex-col w-full pb-8">
 
 <div className="mb-space-sm rounded-xl bg-surface-container-high p-space-sm flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-xs min-w-0">
@@ -32,7 +32,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-label-sm text-label-sm text-secondary truncate">Trust Protocol</span>
-<span className="font-label-md text-label-md text-on-surface truncate">Bank of Uganda Escrow Trust</span>
+<span className="font-label-md text-label-md text-on-surface truncate">Pesapal Payment Protection</span>
 </div>
 </div>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-tertiary shadow-sm shrink-0">
@@ -47,7 +47,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
     </button>
 <button className="px-space-md py-1.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md flex items-center gap-1.5 shrink-0">
 <Icon name="lock_clock" className="text-[15px]" />
-      Escrow Frozen (2)
+      payment frozen (2)
     </button>
 <button className="px-space-md py-1.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md flex items-center gap-1.5 shrink-0">
 <Icon name="hourglass_top" className="text-[15px]" />
@@ -70,7 +70,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <span className="font-body-sm text-body-sm text-secondary">Order #SC-8921 • Kampala Central Cluster</span>
 </div>
 <div className="text-right shrink-0">
-<span className="font-label-sm text-label-sm text-secondary block">Frozen Escrow</span>
+<span className="font-label-sm text-label-sm text-secondary block">Frozen Payment</span>
 <span className="font-price-display text-price-display text-primary-container leading-none whitespace-nowrap">UGX 280k</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <div className="mt-space-sm rounded-lg bg-surface-container-low p-space-sm flex items-center justify-between">
 <div className="flex items-center gap-space-xs">
 <Icon name="account_balance" className="text-tertiary text-[18px]" />
-<span className="font-label-sm text-label-sm text-on-surface">Escrow Vault Balance:</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payment Reserve Balance:</span>
 </div>
 <span className="font-label-md text-label-md text-tertiary whitespace-nowrap">UGX 280,000 Protected</span>
 </div>
@@ -91,7 +91,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <div className="flex items-center gap-space-xs">
 <div className="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md">AK</div>
 <div>
-<p className="font-label-md text-label-md text-on-surface">Alex K. (Buyer)</p>
+<p className="font-label-md text-label-md text-on-surface">Denis M. (Buyer)</p>
 <p className="font-label-sm text-label-sm text-secondary">Kololo, Kampala • MTN MoMo User</p>
 </div>
 </div>
@@ -99,7 +99,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 </div>
 <div className="rounded-lg bg-surface-container-low p-space-sm mt-space-xs">
 <p className="font-body-md text-body-md text-on-surface leading-snug">
-          “Left ear cup does not power on after unboxing. Tamper seal was intact upon delivery, but internal acoustic driver is dead. Device will not reset or accept firmware.”
+          “Left ear cup does not power on after unboxing. package seal was intact upon delivery, but internal acoustic driver is dead. Device will not reset or accept firmware.”
         </p>
 </div>
 <div className="mt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
@@ -153,7 +153,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <div className="grid grid-cols-3 gap-space-xs">
 <div className="flex flex-col">
 <div className="relative w-full h-24 rounded-lg overflow-hidden bg-surface-container">
-<img className="w-full h-full object-cover" data-alt="Close up photograph of intact holographic tamper seal label marked UG-SEAL-8891 on a sleek black electronics box in daylight, sharp detail and micro text readable." src="/images/3120e154604f4638.webp" />
+<img className="w-full h-full object-cover" data-alt="Close up photograph of intact holographic security label marked UG-SEAL-8891 on a sleek black electronics box in daylight, sharp detail and micro text readable." src="/images/3120e154604f4638.webp" />
 <span className="absolute bottom-1 left-1 px-1 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">Seal</span>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface mt-1 truncate">UG-SEAL-8891</span>
@@ -222,7 +222,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <div className="w-3 h-3 rounded-full bg-tertiary mt-1 shrink-0"></div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface">Delivered to Alex K. (Kololo)</span>
+<span className="font-label-md text-label-md text-on-surface">Delivered to Denis M. (Kololo)</span>
 <span className="font-label-sm text-label-sm text-secondary">11:02 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary">Receiver entered OTP-9912. Tamper proof outer sleeve marked undisturbed.</p>
@@ -236,7 +236,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <span className="font-label-md text-label-md text-primary-container">Formal Dispute Lodged</span>
 <span className="font-label-sm text-label-sm text-secondary">15:10 EAT</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">Buyer declared non-functional acoustic driver; automated escrow release frozen.</p>
+<p className="font-body-sm text-body-sm text-secondary">Buyer declared non-functional acoustic driver; automated Payment Release frozen.</p>
 </div>
 </div>
 </div>
@@ -245,8 +245,8 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <div className="mt-space-sm rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
 <div className="flex items-center justify-between mb-space-sm">
 <div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Binding Arbitration</h3>
-<p className="font-body-sm text-body-sm text-secondary whitespace-nowrap">Final judicial order on UGX 280,000 Escrow</p>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">Binding dispute review</h3>
+<p className="font-body-sm text-body-sm text-secondary whitespace-nowrap">Final judicial order on UGX 280,000 Payment</p>
 </div>
 <Icon name="balance" className="text-primary-container text-[24px]" />
 </div>
@@ -264,7 +264,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <button className="w-full py-2.5 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-between active:scale-[0.99] transition-all">
 <div className="flex items-center gap-space-sm">
 <Icon name="send_money" className="text-[20px] text-tertiary" />
-<span>Release Escrow to Seller</span>
+<span>release payment to Seller</span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary">Full Payout</span>
 </button>
@@ -284,7 +284,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 </div>
 </div>
 
-<div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-space-sm" id="arbitration-modal">
+<div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-space-sm" id="dispute review-modal">
 <div className="w-full max-w-sm rounded-xl bg-surface-container-lowest p-space-md shadow-xl flex flex-col space-y-space-sm max-h-[795px] overflow-y-auto">
 <div className="flex items-start justify-between">
 <div className="flex items-center gap-space-xs">
@@ -292,7 +292,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <Icon name="gavel" className="text-[20px]" />
 </div>
 <div>
-<h4 className="font-headline-sm text-headline-sm text-on-surface" id="modal-title">Arbitration Decision</h4>
+<h4 className="font-headline-sm text-headline-sm text-on-surface" id="modal-title">dispute review Decision</h4>
 <p className="font-body-sm text-body-sm text-secondary">Case #RT-309 • Immutable Log</p>
 </div>
 </div>
@@ -313,7 +313,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 </div>
 
 <div className="hidden space-y-space-xs" id="partial-split-fields">
-<label className="font-label-sm text-label-sm text-secondary block whitespace-nowrap">Define Escrow Allocation (UGX)</label>
+<label className="font-label-sm text-label-sm text-secondary block whitespace-nowrap">Define Payment Allocation (UGX)</label>
 <div className="grid grid-cols-2 gap-space-xs">
 <div>
 <span className="font-label-sm text-label-sm text-secondary block mb-0.5">To Buyer</span>
@@ -331,7 +331,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 <label className="font-label-sm text-label-sm text-on-surface block font-bold">
           Mandatory Arbiter Rationale <span className="text-error">*</span>
 </label>
-<textarea className="w-full p-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest placeholder:text-secondary" id="arbiter-reason" placeholder="Enter objective finding (e.g. Tamper seal verified intact while electronic driver confirmed non-responsive upon unboxing)..." rows={3}></textarea>
+<textarea className="w-full p-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest placeholder:text-secondary" id="arbiter-reason" placeholder="Enter objective finding (e.g. Package seal verified intact while electronic driver confirmed non-responsive upon unboxing)..." rows={3}></textarea>
 </div>
 
 <div className="rounded-lg bg-surface-container-low p-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
@@ -353,7 +353,7 @@ export const EscrowDisputesSwiftcartAdmin: React.FC<EscrowDisputesSwiftcartAdmin
 
 <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-2.5 rounded-full font-label-md text-label-md shadow-xl flex items-center gap-space-xs transition-opacity duration-300 opacity-0 pointer-events-none" id="toast">
 <Icon name="check_circle" className="text-tertiary-fixed-dim text-[18px]" />
-<span id="toast-message">Ruling logged to Bank of Uganda Escrow Trust</span>
+<span id="toast-message">Ruling logged to Pesapal Payment Protection</span>
 </div>
 </div>
 </div></main>

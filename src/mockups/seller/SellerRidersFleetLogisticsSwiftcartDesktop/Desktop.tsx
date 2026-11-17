@@ -33,7 +33,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md text-on-surface-variant">
 <div className="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold bg-surface-container px-2.5 py-1 rounded-full text-tertiary">
 <Icon name="security" className="text-[15px]" />
-        Escrow Protected Delivery Route
+        Payment Protected Delivery Route
       </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant/70">Synced 12s ago</span>
 </div>
@@ -211,7 +211,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 
-<div className="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container/60 transition-all border-l-4 border-l-emerald-escrow">
+<div className="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container/60 transition-all border-l-4 border-l-emerald-payment">
 <div className="flex items-start justify-between gap-space-sm">
 <div className="flex items-center gap-space-sm">
 <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-surface-container-high flex-shrink-0">
@@ -363,14 +363,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           </span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-          Packed at Nakasero showroom and sealed with tamper-evident SwiftCart tape. Escrow locked.
+          Packed at Nakasero showroom and sealed with Sealed Package Bag SwiftCart tape. payment protected.
         </p>
 
 <div className="mt-2 p-space-md rounded-xl bg-surface-container-high shadow-md flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
 <span className="font-label-md text-label-md text-action-gradient-start font-bold">#SC-98239</span>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px]" /> UGX 165,000 Escrow
+<Icon name="lock" className="text-[12px]" /> UGX 165,000 Payment
             </span>
 </div>
 <div className="flex items-start gap-3">
@@ -423,7 +423,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start gap-2.5">
 <Icon name="verified_user" className="text-emerald-escrow text-[18px] mt-0.5" />
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-<strong>Escrow Auto-Settlement:</strong> Funds release instantly to your seller balance when customer enters rider's secret 4-digit blind handover PIN.
+<strong>Payment Auto-Settlement:</strong> Funds release instantly to your seller balance when customer enters rider's secret 4-digit blind handover PIN.
           </p>
 </div>
 <div className="flex items-start gap-2.5">

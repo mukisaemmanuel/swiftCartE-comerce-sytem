@@ -91,7 +91,7 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
           Returns & Disputes Console
         </h1>
         <p className="text-[14px] text-[var(--d-text-secondary)] mt-0.5">
-          Handle customer return requests, inspect inbound packages, and resolve escrow disputes.
+          Handle customer return requests, inspect inbound packages, and resolve Payments & Disputes.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
                       </span>
                       <div>
                         <span className="text-[10px] px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 font-bold border border-purple-500/20">
-                          {ret.escrowStatus.replace(/_/g, ' ')}
+                          {(ret.paymentHoldStatus || ret.escrowStatus).replace(/_/g, ' ')}
                         </span>
                       </div>
                     </div>
@@ -185,7 +185,7 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
                   <div className="flex items-center gap-2 mt-1">
                     <StatusChip status={selectedReturn.status} />
                     <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 font-bold border border-purple-500/20">
-                      Escrow: {selectedReturn.escrowStatus}
+                      Payment Hold: {selectedReturn.paymentHoldStatus || selectedReturn.escrowStatus}
                     </span>
                   </div>
                 </div>
@@ -197,11 +197,11 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
                 </div>
               </div>
 
-              {/* Escrow status notice */}
+              {/* payment hold status notice */}
               <div className="p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs text-purple-300 flex items-center gap-2">
                 <Icon name="lock" className="text-lg shrink-0" />
                 <span>
-                  <strong>Escrow Security Notice:</strong> Payout for this order is held until the return request is resolved or inspection is completed.
+                  <strong>Payment Security Notice:</strong> Payout for this order is held until the return request is resolved or inspection is completed.
                 </span>
               </div>
 
@@ -257,7 +257,7 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
                       className="touch-target px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs cursor-pointer flex items-center gap-1.5"
                     >
                       <Icon name="check" className="text-base" />
-                      <span>Approve Return (Freeze Escrow)</span>
+                      <span>Approve Return (Freeze Payment)</span>
                     </button>
                     <button
                       type="button"
@@ -366,11 +366,11 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
                 </div>
               </div>
 
-              {/* Status & Escrow Notice */}
+              {/* Status & Payment Notice */}
               <div className="p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs text-purple-300 flex items-center gap-2">
                 <Icon name="lock" className="text-lg shrink-0" />
                 <span>
-                  <strong>Escrow Frozen:</strong> Payout for order {selectedDispute.orderNumber} is held in dispute mediation.
+                  <strong>payment frozen:</strong> Payout for order {selectedDispute.orderNumber} is held in dispute mediation.
                 </span>
               </div>
 
@@ -437,7 +437,7 @@ export const SellerReturnsPage: React.FC<SellerReturnsPageProps> = () => {
         onCancel={() => setIsRejectDialogOpen(false)}
         onConfirm={handleConfirmRejectReturn}
         title="Reject Return Request"
-        message="Rejecting a return will release the escrow funds back to your wallet unless the customer escalates to a formal dispute."
+        message="Rejecting a return will release the held funds back to your wallet unless the customer escalates to a formal dispute."
         actionLabel="Reject Return"
         isDangerous
         requiresReason

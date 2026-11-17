@@ -37,7 +37,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-on-surface-variant">•</span>
 <div className="flex items-center gap-1 text-tertiary">
 <Icon name="verified_user" className="text-[15px]" />
-<span className="font-label-sm tracking-tight text-on-surface">Cryptographic Handover Enabled</span>
+<span className="font-label-sm tracking-tight text-on-surface">Verified Handover Enabled</span>
 </div>
 </div>
 <div className="flex items-center gap-space-sm">
@@ -357,7 +357,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm">6 Parcels</span>
 </div>
 <div className="flex items-center gap-space-sm">
-<span className="font-label-sm text-on-surface-variant">Total Escrow Value:</span>
+<span className="font-label-sm text-on-surface-variant">Total Payment Value:</span>
 <span className="font-price-display text-price-display text-primary whitespace-nowrap">UGX 1,420,000</span>
 </div>
 </div>
@@ -373,7 +373,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div>
 <div className="flex items-center gap-2">
 <span className="font-label-lg text-label-lg text-on-surface">SoundCore Space One ANC</span>
-<span className="font-label-sm px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed">High Value Escrow</span>
+<span className="font-label-sm px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed">High Value Payment</span>
 </div>
 <span className="font-body-sm text-on-surface-variant">#SC-9952 • Sarah Namubiru • Acacia Mall Store #4A</span>
 </div>

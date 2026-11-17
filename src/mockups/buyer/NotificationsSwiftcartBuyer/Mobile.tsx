@@ -44,8 +44,8 @@ export const NotificationsSwiftcartBuyer: React.FC<NotificationsSwiftcartBuyerPr
 <span>Orders &amp; Delivery</span>
 <span className="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
 </button>
-<button className="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-95" data-filter="escrow">
-<span>Payment &amp; Escrow</span>
+<button className="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-95" data-filter="payment">
+<span>Payment &amp; Payment</span>
 </button>
 <button className="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-95" data-filter="promos">
 <span>Promos &amp; Vouchers</span>
@@ -101,7 +101,7 @@ export const NotificationsSwiftcartBuyer: React.FC<NotificationsSwiftcartBuyerPr
 </div>
 </article>
 
-<article className="notification-item unread relative flex flex-col p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all active:scale-[0.99] cursor-pointer" data-category="escrow">
+<article className="notification-item unread relative flex flex-col p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all active:scale-[0.99] cursor-pointer" data-category="payment">
 <div className="flex items-start gap-3">
 
 <div className="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed shadow-sm">
@@ -122,7 +122,7 @@ export const NotificationsSwiftcartBuyer: React.FC<NotificationsSwiftcartBuyerPr
 
 <div className="mt-2 flex items-center gap-2">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
-<Icon name="security" className="text-[14px] text-tertiary" /> Escrow Lock Active
+<Icon name="security" className="text-[14px] text-tertiary" /> Payment Lock Active
             </span>
 <span className="font-label-sm text-label-sm text-secondary">Airtel Money •• 491</span>
 </div>

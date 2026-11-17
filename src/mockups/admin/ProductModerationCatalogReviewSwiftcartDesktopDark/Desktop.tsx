@@ -116,7 +116,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-3 flex items-center gap-2">
 <span className="px-2 py-0.5 rounded bg-container-dark-high text-error font-label-sm text-label-sm font-semibold whitespace-nowrap">
-          Escrow Frozen: UGX 4.2M
+          payment frozen: UGX 4.2M
         </span>
 </div>
 </div>
@@ -157,7 +157,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             All Queued (8)
           </button>
 <button className="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
-            Escrow Holds
+            Payment Holds
           </button>
 </div>
 <div className="flex items-center gap-1 pr-1">
@@ -216,7 +216,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col flex-1 min-w-0">
 <div className="flex items-center justify-between gap-1">
 <span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm uppercase font-bold">
-                  Escrow Review
+                  Payment Review
                 </span>
 <span className="font-label-sm text-label-sm text-outline">12m ago</span>
 </div>
@@ -231,7 +231,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-wrap gap-1 mt-2.5">
 <span className="px-2 py-0.5 rounded bg-surface-dark text-secondary font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="account_balance_wallet" className="text-[13px]" />
-                  High Value Escrow Hold
+                  High Value Payment Hold
                 </span>
 </div>
 </div>
@@ -408,7 +408,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between">
 <span className="font-label-lg text-label-lg text-on-surface">Packaging Hologram Inconsistency</span>
-<span className="font-label-sm text-label-sm text-danger-penalty font-bold uppercase">Tamper Seal Missing</span>
+<span className="font-label-sm text-label-sm text-danger-penalty font-bold uppercase">package seal Missing</span>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant mt-1">
                 Vision model flag: Outer shrink wrap seal lacks Anker security micro-print and certified EAC (East African Community) customs duty tax stamp.
@@ -506,7 +506,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="h-[50px] px-space-md rounded-xl bg-surface-dark hover:bg-container-dark-high text-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
 <Icon name="lock_clock" className="text-[20px] text-emerald-escrow" />
-<span>Approve with 7-Day Escrow Hold</span>
+<span>Approve with 7-Day Payment Hold</span>
 </button>
 
 <button className="h-[50px] px-space-md rounded-xl bg-surface-container/40 text-outline cursor-not-allowed font-label-lg text-label-lg flex items-center justify-center gap-2 opacity-60" disabled={true}>
@@ -520,7 +520,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="history_edu" className="text-[14px]" />
               Decisions are irreversibly recorded on Audit Log Hash #MOD-9942-UG
             </span>
-<span className="text-tertiary">Escrow Protection: Active</span>
+<span className="text-tertiary">Payment Protection: Active</span>
 </div>
 </div>
 </div>

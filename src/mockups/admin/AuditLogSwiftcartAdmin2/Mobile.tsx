@@ -199,7 +199,7 @@ export const AuditLogSwiftcartAdmin2: React.FC<AuditLogSwiftcartAdmin2Props> = (
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold">
 <Icon name="payments" className="text-[14px]" />
-            Approved Escrow Payout
+            Approved Seller Payout
           </span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary shrink-0 flex items-center gap-1">

@@ -54,7 +54,7 @@ export const ScanQrHandoverSwiftcartUganda: React.FC<ScanQrHandoverSwiftcartUgan
 <div className="flex items-center gap-1.5 mt-0.5">
 <span className="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
-<Icon name="verified_user" className="text-[14px]" /> Swift Escrow Protected
+<Icon name="verified_user" className="text-[14px]" /> Payment Protected
               </span>
 </div>
 </div>
@@ -72,7 +72,7 @@ export const ScanQrHandoverSwiftcartUganda: React.FC<ScanQrHandoverSwiftcartUgan
 <div className="flex flex-col gap-0.5">
 <span className="font-label-md text-label-md text-on-primary-fixed-variant">1. Unbox &amp; Inspect First</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Check the tamper-evident seal and confirm your <strong className="text-on-surface font-semibold">SoundCore Space One ANC</strong> powers on before sharing this QR code or 6-digit PIN with Rider Kizito.
+            Check the Sealed Package Bag seal and confirm your <strong className="text-on-surface font-semibold">SoundCore Space One ANC</strong> powers on before sharing this QR code or 6-digit PIN with Rider Kizito.
           </p>
 </div>
 </div>
@@ -191,7 +191,7 @@ export const ScanQrHandoverSwiftcartUganda: React.FC<ScanQrHandoverSwiftcartUgan
 <div className="flex flex-col gap-1.5">
 <label className="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container">
 <input checked={true} className="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox" />
-<span className="font-body-sm text-body-sm text-on-surface">SwiftCart tamper-evident seal is undamaged</span>
+<span className="font-body-sm text-body-sm text-on-surface">SwiftCart Sealed Package Bag seal is undamaged</span>
 </label>
 <label className="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container">
 <input checked={true} className="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox" />
@@ -218,14 +218,14 @@ export const ScanQrHandoverSwiftcartUganda: React.FC<ScanQrHandoverSwiftcartUgan
 </div>
 </div>
 <div className="text-right">
-<span className="font-currency-code text-currency-code text-on-surface-variant block">ESCROW TOTAL</span>
+<span className="font-currency-code text-currency-code text-on-surface-variant block">PAYMENT TOTAL</span>
 <span className="font-price-display text-price-display text-primary leading-tight">UGX 385,000</span>
 </div>
 </div>
 
 <div className="px-1 text-center">
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-snug">
-          Scanning this QR code or handing over PIN <span className="font-semibold text-on-surface">749-206</span> instantly releases <span className="font-semibold text-on-surface">UGX 385,000</span> held in escrow to <span className="font-semibold text-on-surface">SoundCore Uganda Official</span>.
+          Scanning this QR code or handing over PIN <span className="font-semibold text-on-surface">749-206</span> instantly releases <span className="font-semibold text-on-surface">UGX 385,000</span> held until delivery to <span className="font-semibold text-on-surface">SoundCore Uganda Official</span>.
         </p>
 </div>
 

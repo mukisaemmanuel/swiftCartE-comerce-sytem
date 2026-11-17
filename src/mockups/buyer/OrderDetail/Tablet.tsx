@@ -38,7 +38,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface">My Orders</span>
 <span className="bg-primary/10 text-primary font-label-md text-label-md px-2 py-0.5 rounded-full font-bold">8</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">Manage verified delivery status, live dispatch, and MoMo escrow releases</p>
+<p className="font-body-sm text-body-sm text-secondary">Manage verified delivery status, live dispatch, and momo payment releases</p>
 </div>
 </div>
 
@@ -117,7 +117,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="two_wheeler" className="text-[13px]" />
 <span>Mukasa (14 mins)</span>
 </div>
-<div className="font-body-sm text-body-sm text-secondary">MTN MoMo Escrow</div>
+<div className="font-body-sm text-body-sm text-secondary">MTN momo payment</div>
 </div>
 </div>
 </div>
@@ -227,7 +227,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div>
 <div className="flex items-center gap-2">
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold">Order #SC-ORD-9488</span>
-<span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Escrow Active</span>
+<span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">holds active</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary">Placed on Friday, 14 Feb 2025 at 14:22 EAT • Payment: MTN Mobile Money</p>
 </div>
@@ -404,7 +404,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="text-on-surface font-semibold">UGX 8,500</span>
 </div>
 <div className="flex justify-between text-secondary">
-<span>MoMo Buyer Protection &amp; Escrow Guarantee</span>
+<span>MoMo Buyer Protection &amp; Payment Protection</span>
 <span className="text-tertiary font-bold">FREE (UGX 0)</span>
 </div>
 <div className="flex justify-between text-on-surface font-bold pt-1 border-t border-surface-container-high text-body-lg">
@@ -456,7 +456,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row items-center gap-space-sm justify-between">
 <div className="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
 <Icon name="shield" className="text-[20px] text-tertiary" />
-<span>Escrow funds held securely until PIN validation</span>
+<span>held funds held securely until PIN validation</span>
 </div>
 <div className="flex items-center gap-space-xs w-full sm:w-auto">
 <button className="flex-1 sm:flex-initial px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 transition-colors" type="button" onClick={() => alertToast('Action triggered')}>
@@ -480,7 +480,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div>
-</div></main><footer className="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="max-w-7xl mx-auto px-margin py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg border-b border-surface-container-high"><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="verified_user" className="text-[32px] text-tertiary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</div><div className="font-body-sm text-body-sm text-secondary">100% payout security until delivery is confirmed</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="two_wheeler" className="text-[32px] text-primary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</div><div className="font-body-sm text-body-sm text-secondary">Rapid localized urban courier network</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="replay" className="text-[32px] text-tertiary" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</div><div className="font-body-sm text-body-sm text-secondary">Drop off returns at any verified hub in Uganda</div></div></div></div><div className="py-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary"><div className="flex flex-wrap items-center justify-center gap-space-md"><a className="hover:text-primary transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="hover:text-primary transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="hover:text-primary transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="hover:text-primary transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="hover:text-primary transition-colors font-bold text-on-surface" data-path="merchant-registration" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="text-center">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div className="max-w-7xl mx-auto px-margin py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg border-b border-surface-container-high"><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="verified_user" className="text-[32px] text-tertiary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</div><div className="font-body-sm text-body-sm text-secondary">100% payout security until delivery is confirmed</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="two_wheeler" className="text-[32px] text-primary-container" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</div><div className="font-body-sm text-body-sm text-secondary">Rapid localized urban courier network</div></div></div><div className="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg"><Icon name="replay" className="text-[32px] text-tertiary" /><div><div className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</div><div className="font-body-sm text-body-sm text-secondary">Drop off returns at any verified hub in Uganda</div></div></div></div><div className="py-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary"><div className="flex flex-wrap items-center justify-center gap-space-md"><a className="hover:text-primary transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="hover:text-primary transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="hover:text-primary transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="hover:text-primary transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="hover:text-primary transition-colors font-bold text-on-surface" data-path="merchant-registration" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="text-center">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

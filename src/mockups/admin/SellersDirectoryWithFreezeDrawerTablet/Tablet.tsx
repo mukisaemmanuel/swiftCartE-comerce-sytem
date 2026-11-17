@@ -35,11 +35,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="chevron_right" className="text-[14px]" />
 <span className="text-on-surface">COMMERCE NODES</span>
 <Icon name="chevron_right" className="text-[14px]" />
-<span className="text-primary font-bold">DIRECTORY &amp; ESCROW ENFORCEMENT</span>
+<span className="text-primary font-bold">DIRECTORY &amp; PAYMENT ENFORCEMENT</span>
 </div>
 <div className="flex items-center gap-space-sm bg-surface-container-high px-space-md py-1 rounded-full shadow-sm">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
-<span className="font-label-sm text-label-sm text-on-surface">BoU Escrow Safeguard Live • Audit Ledger #2910</span>
+<span className="font-label-sm text-label-sm text-on-surface">Pesapal Payment Safeguard Live • Audit Ledger #2910</span>
 </div>
 </div>
 
@@ -65,7 +65,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
 <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-escrow/10 rounded-bl-full pointer-events-none"></div>
 <div className="flex items-center justify-between mb-space-xs">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Escrow Bond</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Payment Bond</span>
 <span className="p-1.5 rounded-lg bg-emerald-escrow/20 text-emerald-escrow">
 <Icon name="lock_clock" className="text-[18px]" />
 </span>
@@ -167,7 +167,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
 <span>Sort by:</span>
 <span className="text-on-surface font-bold cursor-pointer flex items-center">
-            Risk &amp; Escrow Held
+            Risk &amp; Payment Held
             <Icon name="arrow_drop_down" className="text-[16px]" />
 </span>
 </div>
@@ -198,7 +198,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-4 gap-2 pt-2 bg-surface-container/50 p-2.5 rounded-lg">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Bond</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Bond</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 14.85M</span>
 </div>
 <div className="flex flex-col">
@@ -239,7 +239,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-4 gap-2 pt-2 bg-surface-container/50 p-2.5 rounded-lg">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Bond</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Bond</span>
 <span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX 8.50M</span>
 </div>
 <div className="flex flex-col">
@@ -282,7 +282,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-4 gap-2 pl-2 bg-surface-container-lowest/70 p-2.5 rounded-lg">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Held</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Held</span>
 <span className="font-label-md text-label-md text-danger-penalty font-black whitespace-nowrap">UGX 5.00M</span>
 </div>
 <div className="flex flex-col">
@@ -329,7 +329,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-4 gap-2 pt-2 bg-surface-container/50 p-2.5 rounded-lg">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Bond</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Bond</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 12.00M</span>
 </div>
 <div className="flex flex-col">
@@ -369,7 +369,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="grid grid-cols-4 gap-2 pt-2 bg-surface-container/50 p-2.5 rounded-lg">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Bond</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Bond</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 6.20M</span>
 </div>
 <div className="flex flex-col">
@@ -424,17 +424,17 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>Security Anomaly Triggered</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface leading-snug">
-            Excessive customer non-delivery reports <span className="font-bold text-danger-penalty">(3 dockets in 24h)</span> and duplicate SafeBoda tamper seal codes detected across William St &amp; Owino Hubs.
+            Excessive customer non-delivery reports <span className="font-bold text-danger-penalty">(3 dockets in 24h)</span> and duplicate SafeBoda package seal codes detected across William St &amp; Owino Hubs.
           </p>
 </div>
 
 <div className="space-y-space-xs mb-space-md">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Financial &amp; Logistics Custody Impact</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Financial &amp; Logistics holding Impact</span>
 <div className="bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
 <div className="flex items-center justify-between">
 <span className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
 <Icon name="lock" className="text-amber-warning text-[17px]" />
-                Frozen Escrow Balance
+                Frozen Pending clearance
               </span>
 <span className="font-label-lg text-label-lg text-danger-penalty font-bold whitespace-nowrap">UGX 8,450,000</span>
 </div>
@@ -465,7 +465,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <input checked={true} className="mt-1 text-primary focus:ring-0 accent-primary" name="enforcement_path" type="radio" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface font-bold">Temporary Administrative Freeze (48h)</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Lock all withdrawals, hold orders in escrow, dispatch physical hub inspector.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Lock all withdrawals, hold orders held until delivery, dispatch physical hub inspector.</span>
 </div>
 </label>
 
@@ -473,15 +473,15 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <input className="mt-1 text-primary focus:ring-0 accent-primary" name="enforcement_path" type="radio" />
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Tier-2 Probation Sanction</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Require 50% escrow surcharge and mandatory Hub pre-check before dispatch.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Require 50% payment surcharge and mandatory Hub pre-check before dispatch.</span>
 </div>
 </label>
 
 <label className="flex items-start gap-space-sm p- space-sm p-3 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer">
 <input className="mt-1 text-danger-penalty focus:ring-0 accent-danger-penalty" name="enforcement_path" type="radio" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-danger-penalty font-bold">Permanent Blacklist &amp; BoU Referral</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Revoke merchant license, liquidate escrow bond to victims, submit AML report.</span>
+<span className="font-label-md text-label-md text-danger-penalty font-bold">Permanent Blacklist &amp; Pesapal Referral</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Revoke merchant license, liquidate payment bond to victims, submit AML report.</span>
 </div>
 </label>
 </div>

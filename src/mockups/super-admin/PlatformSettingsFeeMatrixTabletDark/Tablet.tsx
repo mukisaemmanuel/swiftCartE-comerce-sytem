@@ -62,7 +62,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </button>
 <button className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button">
 <Icon name="account_balance_wallet" className="text-[18px]" />
-<span className="font-label-md text-label-md whitespace-nowrap">Escrow &amp; Payout SLA</span>
+<span className="font-label-md text-label-md whitespace-nowrap">Payment &amp; Payout SLA</span>
 </button>
 <button className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button">
 <Icon name="two_wheeler" className="text-[18px]" />
@@ -84,7 +84,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Settlement Engine</span>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Dual-Rail MoMo Pipeline (MTN Uganda &amp; Airtel Africa)</h3>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated batch dispatch programmed to execute daily at 17:00 EAT with full escrow audit trails.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated batch dispatch programmed to execute daily at 17:00 EAT with full payment audit trails.</p>
 </div>
 </div>
 <div className="flex items-center gap-2 shrink-0">
@@ -107,7 +107,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="tune" className="text-primary text-[20px]" />
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Category Commission Matrix</h3>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Gross revenue rake deducted at order capture into holding escrow.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Gross revenue rake deducted at order capture into holding payment.</p>
 </div>
 <div className="flex items-center gap-2">
 <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">5 Active Tiers</span>
@@ -254,7 +254,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 pb-1">
 <Icon name="gavel" className="text-emerald-escrow text-[20px]" />
 <div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Escrow Holding &amp; Release Rules</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">payment holding &amp; Release Rules</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Controls fund locks between customer delivery confirmation and merchant balance crediting.</p>
 </div>
 </div>
@@ -280,7 +280,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-4 rounded-xl bg-surface-container flex flex-col justify-between space-y-3">
 <div className="space-y-1.5">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fast-Track Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fast-Track Payment</span>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-bold">Enabled</span>
 </div>
 <div className="font-headline-md text-headline-md text-emerald-escrow font-extrabold flex items-baseline gap-1">
@@ -300,7 +300,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-4 rounded-xl bg-surface-container flex flex-col justify-between space-y-3">
 <div className="space-y-1.5">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Compliance Cap</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Compliance Cap</span>
 <span className="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">High Value</span>
 </div>
 <div className="font-headline-md text-headline-md text-on-surface font-extrabold whitespace-nowrap">

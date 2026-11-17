@@ -42,7 +42,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 px-space-sm py-1 bg-tertiary-container/10 text-tertiary rounded-full font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[14px]" />
-<span>BOU NPS Compliant (Act 2020)</span>
+<span>Pesapal Verified Gateway</span>
 </div>
 </div>
 </div>
@@ -72,7 +72,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
 <Icon name="arrow_upward" className="text-[14px]" />
 <span>+8.4% vs avg</span>
-<span className="text-on-surface-variant font-body-sm text-body-sm">• 100% cryptographic capture</span>
+<span className="text-on-surface-variant font-body-sm text-body-sm">• 100% system audit capture</span>
 </div>
 </div>
 <div className="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
@@ -90,12 +90,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="space-y-1">
 <div className="font-headline-sm text-headline-sm text-primary tracking-tight">7 Critical Actions</div>
 <div className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
-<span>3 Roles • 2 Escrows • 2 Root Rotations</span>
+<span>3 Roles • 2 Payments • 2 Root Rotations</span>
 </div>
 </div>
 <div className="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
 <Icon name="lock" className="text-[14px]" />
-<span>100% Dual-Key 2FA Confirmed</span>
+<span>100% two-step admin Confirmed</span>
 </div>
 </div>
 
@@ -110,7 +110,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="font-headline-sm text-headline-sm text-on-surface tracking-tight">99.99% Ledger Uptime</div>
 <div className="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
 <Icon name="sync" className="text-[14px] text-tertiary" />
-<span>Stanbic Trust Anchor reconciled 2m ago</span>
+<span>Pesapal Settlement Anchor reconciled 2m ago</span>
 </div>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
@@ -129,7 +129,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="space-y-1">
 <div className="font-headline-sm text-headline-sm text-tertiary tracking-tight">0 Breaches Detected</div>
 <div className="font-body-sm text-body-sm text-on-surface-variant">
-            Enclave chassis sealed • Zero tamper alerts
+            Server connection secure • Zero system alerts
           </div>
 </div>
 <div className="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm pt-1">
@@ -151,7 +151,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full h-11 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="categoryFilter">
 <option value="ALL">All Categories</option>
 <option value="PRIVILEGED">Privileged Escalation</option>
-<option value="ESCROW">Escrow &amp; Funds</option>
+<option value="PAYMENT">Payment &amp; Funds</option>
 <option value="KYC">KYC &amp; Onboarding</option>
 <option value="SETTINGS">Platform Settings</option>
 <option value="DISPATCH">Dispatch &amp; Riders</option>
@@ -172,10 +172,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full h-11 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
 <option>All Staff Officers</option>
 <option>Kizito Ronald (ADM-001)</option>
-<option>Patricia Namubiru (ADM-004)</option>
+<option>Denis Mukasa (ADM-004)</option>
 <option>Sarah Auma (ADM-012)</option>
 <option>Brian Mukasa (ADM-022)</option>
-<option>System Cron / Enclave</option>
+<option>System Cron / Background Worker</option>
 </select>
 </div>
 
@@ -206,7 +206,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             Privileged <span className="ml-1 bg-primary-fixed text-on-primary-fixed px-1.5 py-0.2 rounded-full text-label-sm">7</span>
 </button>
 <button className="audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
-            Escrow &amp; Funds <span className="ml-1 text-label-sm opacity-70">412</span>
+            Payment &amp; Funds <span className="ml-1 text-label-sm opacity-70">412</span>
 </button>
 <button className="audit-tab px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
             Auth &amp; 2FA <span className="ml-1 text-label-sm opacity-70">1.2k</span>
@@ -231,7 +231,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                   Actor: <strong className="text-on-surface">Kizito Ronald (ADM-001)</strong>
 </p>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                  Target: <span className="text-primary font-medium">Patricia Namubiru (ADM-004)</span>
+                  Target: <span className="text-primary font-medium">Denis Mukasa (ADM-004)</span>
 </p>
 </div>
 <div className="flex items-center justify-between pt-1 text-on-surface-variant">
@@ -364,14 +364,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="pl-2 space-y-space-xs">
 <div className="flex items-center justify-between">
 <span className="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-0.5 rounded-full flex items-center gap-1 font-bold">
-                  INFO / HSM
+                  INFO / Security Gateway Node (SEC-KLA)
                 </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">09:00:00 EAT</span>
 </div>
 <div>
-<h4 className="font-label-lg text-label-lg text-on-surface">SESSION_ROOT_KEY_ATTESTATION</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">SESSION_ROOT_KEY_Verification Approved</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Actor: <strong className="text-on-surface">System Cron / Enclave Daemon</strong>
+                  Actor: <strong className="text-on-surface">System Cron / Background Worker</strong>
 </p>
 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
                   Target: Hardware Security Module #01 (Kololo DC)
@@ -481,7 +481,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.2 rounded-full">Primary Authorizer</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                    Staff ID: ADM-001 • Signature method: Master Credential Vault + Biometric Touch ID
+                    Staff ID: ADM-001 • Signature method: Master Credential Store + Biometric Touch ID
                   </p>
 <p className="font-body-sm text-body-sm text-tertiary flex items-center gap-1 text-[11px]">
 <Icon name="check_circle" className="text-[13px]" /> Attested: 24 Oct 2025 at 14:18:02 EAT
@@ -502,7 +502,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.2 rounded-full">Consensus Co-Signer</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                    Staff ID: ADM-002 • Signed via FIDO2 Hardware Token (NFC Key #9810-UG)
+                    Staff ID: ADM-002 • Signed via Two-Factor Authenticator (NFC Key #9810-UG)
                   </p>
 <p className="font-body-sm text-body-sm text-tertiary flex items-center gap-1 text-[11px]">
 <Icon name="check_circle" className="text-[13px]" /> Attested: 24 Oct 2025 at 14:18:19 EAT
@@ -517,7 +517,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="gavel" className="text-primary text-[18px] mt-0.5" />
 <div className="text-body-sm font-body-sm">
 <span className="font-label-md text-label-md text-on-surface">Legal Governance Justification:</span>
-              "Appointed Interim Chief Compliance Officer per Board Resolution BR-2025-09 (Uganda Data Protection &amp; Privacy Compliance Mandate)."
+              "Assigned Senior Operations Lead per Staff Schedule SS-2025-09."
             </div>
 </div>
 </div>
@@ -526,7 +526,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <h3 className="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
 <Icon name="terminal" className="text-primary text-[20px]" />
-<span>Signed Ledger Block &amp; Cryptographic Attestation</span>
+<span>Signed Ledger Block &amp; Verification Approved</span>
 </h3>
 <button className="flex items-center gap-1 px-space-sm py-1 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="copyPayloadBtn">
 <Icon name="content_copy" className="text-[14px]" />
@@ -542,12 +542,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
   <span className="text-primary-fixed-dim">"event"</span>: &#123;
     <span className="text-primary-fixed-dim">"type"</span>: <span className="text-secondary-fixed">"SUPER_ADMIN_ROLE_ELEVATION"</span>,
     <span className="text-primary-fixed-dim">"origin_actor"</span>: <span className="text-secondary-fixed">"Kizito Ronald (ADM-001)"</span>,
-    <span className="text-primary-fixed-dim">"grantee"</span>: <span className="text-secondary-fixed">"Patricia Namubiru (ADM-004)"</span>,
+    <span className="text-primary-fixed-dim">"grantee"</span>: <span className="text-secondary-fixed">"Denis Mukasa (ADM-004)"</span>,
     <span className="text-primary-fixed-dim">"quorum"</span>: <span className="text-secondary-fixed">"2/2_REQUIRING_BOARD_MINUTES_REF"</span>
   &#125;,
   <span className="text-primary-fixed-dim">"ecdsa_signature_r"</span>: <span className="text-secondary-fixed">"0x4b78fa9e01...77a1"</span>,
   <span className="text-primary-fixed-dim">"ecdsa_signature_s"</span>: <span className="text-secondary-fixed">"0x902f1a6b82...02cc"</span>,
-  <span className="text-primary-fixed-dim">"hsm_root_key_fingerprint"</span>: <span className="text-secondary-fixed">"SHA256:UgCart-HSM-KLA-1"</span>,
+  <span className="text-primary-fixed-dim">"hsm_root_key_fingerprint"</span>: <span className="text-secondary-fixed">"SHA256:UgCart-Security Gateway Node (SEC-KLA)-1"</span>,
   <span className="text-primary-fixed-dim">"stanbic_reconciliation_ref"</span>: <span className="text-secondary-fixed">"STAN-UG-REC-20251024-88914"</span>
 &#125;</code></pre>
 </div>
@@ -561,7 +561,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </button>
 <button className="px-space-md h-10 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-colors" id="reverifyBtn">
 <Icon name="security_update_good" className="text-[18px] text-tertiary" />
-<span>Re-Verify Against Stanbic Anchor</span>
+<span>Re-Verify Against Pesapal Settlement Anchor</span>
 </button>
 </div>
 <div className="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
@@ -578,15 +578,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="account_balance" className="text-[24px]" />
 </div>
 <div className="space-y-1">
-<h4 className="font-label-lg text-label-lg text-on-surface">Legal Admissibility &amp; Cryptographic Immutability Guarantee</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">Digital Records Security & Audit Log Guarantee</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
-            All audit logs are cryptographically sealed pursuant to the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011) §18</strong> and the <strong className="text-on-surface">Bank of Uganda National Payment Systems (NPS) Regulatory Ledger Standards</strong>. Zero-knowledge rollup hashes are immutably anchored every 10 minutes to Stanbic Bank Uganda’s Institutional Trust Anchor.
+            All audit logs are securely logged pursuant to the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011) §18</strong> and the <strong className="text-on-surface">Pesapal Gateway Digital Standards</strong>. Zero-knowledge rollup hashes are immutably anchored every 10 minutes to Pesapal Secure Settlement Infrastructure.
           </p>
 </div>
 </div>
 <div className="flex items-center gap-space-md flex-shrink-0">
 <div className="text-right hidden sm:block">
-<div className="font-label-md text-label-md text-on-surface">Bank of Uganda NPS-04</div>
+<div className="font-label-md text-label-md text-on-surface">Pesapal Gateway Rails</div>
 <div className="font-label-sm text-label-sm text-tertiary">Compliance Audited • 2025</div>
 </div>
 <Icon name="shield" className="text-[36px] text-tertiary" />

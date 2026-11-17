@@ -30,7 +30,7 @@ export const RiderSellerPickupDeliveryDetailLight: React.FC<RiderSellerPickupDel
 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
 <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
 </span>
-<span className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-bold whitespace-nowrap">Escrow Locked: UGX 340,000</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-bold whitespace-nowrap">payment protected: UGX 340,000</span>
 </div>
 <div className="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
 <Icon name="cell_tower" className="text-[13px] text-tertiary" />
@@ -132,7 +132,7 @@ export const RiderSellerPickupDeliveryDetailLight: React.FC<RiderSellerPickupDel
 <Icon name="lock" className="text-[14px]" />
 </div>
 <div className="flex items-center justify-between flex-1 min-w-0">
-<span className="font-body-sm text-body-sm text-secondary">5. Buyer Handover &amp; Escrow Release</span>
+<span className="font-body-sm text-body-sm text-secondary">5. Buyer Handover &amp; Payment Release</span>
 <span className="font-label-sm text-label-sm text-secondary">OTP req.</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ export const RiderSellerPickupDeliveryDetailLight: React.FC<RiderSellerPickupDel
 <div className="flex items-center justify-between pt-1">
 <div className="flex items-center gap-1.5">
 <Icon name="verified_user" className="text-[16px] text-tertiary font-bold" />
-<span className="font-body-sm text-body-sm text-on-surface-variant font-medium">Tamper Seal: <span className="font-bold text-on-surface font-mono">#TS-88410</span></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant font-medium">package seal: <span className="font-bold text-on-surface font-mono">#TS-88410</span></span>
 </div>
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">VERIFIED</span>
 </div>
@@ -225,7 +225,7 @@ export const RiderSellerPickupDeliveryDetailLight: React.FC<RiderSellerPickupDel
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-bold uppercase tracking-wider">Geofenced</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-snug">
-        Ask buyer for code upon physical delivery inspection at handover. Code releases escrow instantly.
+        Ask buyer for code upon physical delivery inspection at handover. Code releases payment instantly.
       </p>
 
 <div className="grid grid-cols-6 gap-2 py-space-xs">

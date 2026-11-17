@@ -64,7 +64,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-<span>Custody Value</span>
+<span>holding Value</span>
 <span className="font-label-sm text-label-sm text-on-surface whitespace-nowrap">UGX 36,890,000</span>
 </div>
 </div>
@@ -111,18 +111,18 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col justify-between">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Safe Vault H Status</span>
+<span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Safe reserve H Status</span>
 <Icon name="lock" className="text-secondary text-[20px]" />
 </div>
 <div className="my-2">
 <div className="flex items-baseline gap-2">
 <span className="font-headline-md text-headline-md text-on-surface">14 Items</span>
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">Dual-Key OK</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">two-step admin OK</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Vault Locked &amp; Secured</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">reserve Locked &amp; Secured</span>
 </div>
 <div className="pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
-<span>Custody Value</span>
+<span>holding Value</span>
 <span className="font-label-sm text-label-sm text-on-surface whitespace-nowrap">UGX 16,200,000</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <button className="text-left p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors">
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-label-lg text-on-surface">Vault H</span>
+<span className="font-label-lg text-label-lg text-on-surface">reserve H</span>
 <span className="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface">14 pcs</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate block mt-0.5">Flagships / High Val</span>
@@ -421,7 +421,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-baseline gap-1">
 <span className="font-currency-code text-currency-code text-on-surface-variant whitespace-nowrap">UGX</span>
 <span className="font-price-display text-price-display text-primary-container">248,500</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant ml-1">(Prepaid Mobile Money Escrow)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant ml-1">(Prepaid Mobile money payment)</span>
 </div>
 
 <button className="px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-transform active:scale-95">
@@ -465,7 +465,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <option>Select Target Bin...</option>
 <option>Bay B - Shelf B3-04 (Audio)</option>
 <option>Bay A - Shelf A1-08 (Small)</option>
-<option>Vault H - Slot VH-02 (Secure)</option>
+<option>reserve H - Slot VH-02 (Secure)</option>
 </select>
 <button className="px-3 py-2 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-sm text-label-sm">
                     Move
@@ -507,7 +507,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container p-3 rounded-xl flex flex-col justify-between gap-2.5">
 <div className="flex items-center gap-2 text-on-surface">
 <Icon name="assignment_return" className="text-error text-[20px]" />
-<span className="font-label-md text-label-md">Merchant Custody Transfer</span>
+<span className="font-label-md text-label-md">Merchant holding Transfer</span>
 </div>
 <div>
 <button className="w-full py-2 bg-error text-on-error rounded-lg font-label-md text-label-md shadow-sm hover:opacity-95 flex items-center justify-center gap-1.5 transition-transform active:scale-98">
@@ -549,7 +549,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0"></div>
 <div className="flex-1">
 <div className="flex items-center justify-between">
-<span className="font-label-md text-label-md text-on-surface">Intake Inbound Scanned &amp; Escrow Verified</span>
+<span className="font-label-md text-label-md text-on-surface">Intake Inbound Scanned &amp; payment verified</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">09:15 EAT</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Manifest #MN-48190 from Victoria Tech Rider (Kampala Central Dispatch)</span>

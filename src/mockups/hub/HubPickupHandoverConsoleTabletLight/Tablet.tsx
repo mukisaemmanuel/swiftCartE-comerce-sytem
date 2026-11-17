@@ -265,7 +265,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <h1 className="font-headline-md text-headline-md text-on-surface tracking-tight">Waybill #SC-9952</h1>
 <span className="bg-tertiary/10 text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
 <Icon name="verified_user" className="text-[15px]" />
-                Swift Escrow Protected
+                Payment Protected
               </span>
 </div>
 <div className="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm text-body-sm">
@@ -308,8 +308,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col justify-between bg-surface-container-lowest p-space-md rounded-xl">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Release Value</span>
-<span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary/10 px-2 py-0.5 rounded">MoMo Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Release Value</span>
+<span className="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary/10 px-2 py-0.5 rounded">MoMo payment protected</span>
 </div>
 <div className="my-1">
 <span className="font-price-display text-price-display text-on-surface font-extrabold tracking-tight whitespace-nowrap">UGX 248,500</span>
@@ -363,9 +363,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-tertiary/10 text-tertiary px-space-md py-2.5 rounded-xl flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="check_circle" className="text-[20px]" />
-<span className="font-label-md text-label-md font-bold">Blind PIN Match Confirmed • Matches Escrow Secret Hash</span>
+<span className="font-label-md text-label-md font-bold">Blind PIN Match Confirmed • Matches Payment Secret Hash</span>
 </div>
-<span className="font-label-sm text-label-sm font-mono opacity-80">Cryptographic Proof: 18ms</span>
+<span className="font-label-sm text-label-sm font-mono opacity-80">Verified Proof: 18ms</span>
 </div>
 </div>
 
@@ -375,7 +375,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <label className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low cursor-pointer">
 <input checked={true} className="w-5 h-5 accent-tertiary rounded" type="checkbox" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface font-bold">Tamper Seal #SEAL-4419</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold">package seal #SEAL-4419</span>
 <span className="font-body-sm text-body-sm text-tertiary font-semibold">Intact &amp; Verified</span>
 </div>
 </label>
@@ -423,7 +423,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <button className="w-full sm:flex-1 h-14 bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-lg text-label-lg rounded-xl shadow-[0_4px_14px_rgba(218,55,0,0.30)] flex items-center justify-center gap-2 active:scale-98 transition-all hover:brightness-105">
 <Icon name="lock_open" className="text-[22px]" />
-<span className="whitespace-nowrap">Confirm Handover &amp; Release Escrow (UGX 248,500)</span>
+<span className="whitespace-nowrap">Confirm Handover &amp; release payment (UGX 248,500)</span>
 </button>
 <div className="flex items-center gap-space-sm w-full sm:w-auto">
 <button className="flex-1 sm:flex-initial h-14 px-space-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 transition-colors">

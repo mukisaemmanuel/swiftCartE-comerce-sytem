@@ -128,11 +128,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="mt-space-md flex flex-col">
 <div className="flex items-baseline gap-2">
 <span className="font-headline-lg text-headline-lg text-danger-penalty tracking-tight">6</span>
-<span className="font-label-sm text-danger-penalty/80">forfeited custody</span>
+<span className="font-label-sm text-danger-penalty/80">forfeited holding</span>
 </div>
 <div className="flex items-center justify-between text-body-sm text-on-surface-variant mt-1">
 <span>Settlement Shield</span>
-<span className="text-emerald-escrow font-label-md">Escrow Safe Hold</span>
+<span className="text-emerald-escrow font-label-md">Payment Safe Hold</span>
 </div>
 </div>
 <div className="w-full bg-surface-container-highest h-1.5 rounded-full mt-space-sm overflow-hidden">
@@ -313,7 +313,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-on-surface-variant uppercase">Tracking Number</span>
 <span className="font-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow flex items-center gap-1 font-bold">
-<Icon name="verified_user" className="text-[14px]" /> Escrow Active
+<Icon name="verified_user" className="text-[14px]" /> holds active
               </span>
 </div>
 <div className="flex items-baseline justify-between">
@@ -334,7 +334,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container flex flex-col">
 <span className="font-label-sm text-on-surface-variant">Check-In Time</span>
 <span className="font-label-md text-on-surface mt-1">11:38 AM EAT</span>
-<span className="font-body-sm text-tertiary">3h in custody</span>
+<span className="font-body-sm text-tertiary">3h in holding</span>
 </div>
 <div className="p-space-sm rounded-lg bg-surface-container flex flex-col">
 <span className="font-label-sm text-on-surface-variant">Discharge SLA</span>
@@ -385,7 +385,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="warning" className="text-amber-warning text-[22px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface">Aging Exceptions &amp; Resolution Hub</span>
 </div>
-<p className="text-body-sm font-body-sm text-on-surface-variant">Real-time isolation of stalled inventory exceeding operational thresholds. Escrow safeguards apply.</p>
+<p className="text-body-sm font-body-sm text-on-surface-variant">Real-time isolation of stalled inventory exceeding operational thresholds. Payment safeguards apply.</p>
 </div>
 
 <div className="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container rounded-xl">
@@ -630,7 +630,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified" className="text-[18px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-md text-on-surface">Escrow Integrity Governance</span>
+<span className="font-label-md text-on-surface">Payment Integrity Governance</span>
 <span className="font-body-sm text-on-surface-variant">All 14 aging parcels have locked ledger funds. No seller disbursement released pending delivery or RTO scan.</span>
 </div>
 </div>

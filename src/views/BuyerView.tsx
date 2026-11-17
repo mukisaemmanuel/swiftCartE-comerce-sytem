@@ -187,9 +187,9 @@ export const BuyerView: React.FC<BuyerViewProps> = ({ route, onNavigate }) => {
     // 18. Order Delivered & Review Modal
     if (path.startsWith('/order-delivered')) return <OrderDelivered onNavigate={onNavigate} onAction={handleAction} />;
 
-    // 19. Returns & Escrow Disputes
+    // 19. Returns & Payments & Disputes
     if (path === '/returns-disputes') return <ReturnsDisputes onNavigate={onNavigate} onAction={handleAction} />;
-    if (path === '/escrow-dispute-return-request' || path === '/escrow-dispute') {
+    if (path === '/escrow-dispute-return-request' || path === '/escrow-dispute' || path === '/payment-dispute-return-request' || path === '/payment-dispute') {
       return <EscrowDisputeReturn onNavigate={onNavigate} onAction={handleAction} />;
     }
     if (path === '/dispute-evidence-form' || path === '/dispute-evidence') {

@@ -53,7 +53,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
 
 <div className="hidden sm:flex flex-col items-end px-3 py-1 rounded-xl bg-surface-container-low border border-slate-200/70">
-<span className="text-[10px] font-bold tracking-wider text-secondary uppercase">Escrow Reserve</span>
+<span className="text-[10px] font-bold tracking-wider text-secondary uppercase">Payment Reserve</span>
 <span className="text-xs md:text-sm font-extrabold text-on-surface">UGX 14,850,000</span>
 </div>
 
@@ -111,11 +111,11 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           </span>
 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
 <Icon name="lock" className="text-[13px] text-tertiary" />
-            Tier-1 Escrow Verified
+            Tier-1 payment verified
           </span>
 </div>
 <p className="text-xs text-secondary font-medium">
-          Live merchant metrics for Pioneer Mall G-14 hub • Real-time synchronization with Bank of Uganda Central Switch Escrow
+          Live merchant metrics for Pioneer Mall G-14 hub • Real-time synchronization with Pesapal Central Switch Payment
         </p>
 </div>
 
@@ -168,7 +168,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-<span className="text-secondary font-medium">Net Escrow Payout:</span>
+<span className="text-secondary font-medium">Net Seller Payout:</span>
 <span className="font-extrabold text-on-surface">UGX 39,422,000</span>
 </div>
 </div>
@@ -350,7 +350,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="p-3 rounded-xl bg-surface-container-low border border-slate-200/60">
 <span className="text-[11px] font-semibold text-secondary uppercase tracking-wider">Net Margin Realized</span>
 <div className="text-base font-extrabold text-on-surface mt-0.5">92.0%</div>
-<span className="text-[11px] text-secondary">8% SwiftCart Escrow &amp; Tax</span>
+<span className="text-[11px] text-secondary">8% SwiftCart Protection &amp; Tax</span>
 </div>
 <div className="p-3 rounded-xl bg-surface-container-low border border-slate-200/60">
 <span className="text-[11px] font-semibold text-secondary uppercase tracking-wider">Daily Peak</span>
@@ -616,7 +616,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 
 <div className="flex flex-col gap-1">
 <div className="flex justify-between text-xs">
-<span className="font-bold text-on-surface">4. Paid &amp; Escrow Locked</span>
+<span className="font-bold text-on-surface">4. Paid &amp; payment protected</span>
 <div className="flex items-center gap-1.5">
 <span className="text-[10px] text-tertiary font-bold">14.8% completion</span>
 <span className="font-extrabold text-tertiary">184 Orders</span>
@@ -663,12 +663,12 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="mt-2.5 flex items-center justify-between">
 <div>
 <span className="text-xl font-black text-on-surface">72%</span>
-<span className="text-xs text-secondary block">MTN MoMo Escrow</span>
+<span className="text-xs text-secondary block">MTN momo payment</span>
 </div>
 <div className="h-7 w-px bg-slate-200"></div>
 <div className="text-right">
 <span className="text-xl font-black text-on-surface">28%</span>
-<span className="text-xs text-secondary block">Airtel Money Escrow</span>
+<span className="text-xs text-secondary block">Airtel money payment</span>
 </div>
 </div>
 </div>
@@ -679,7 +679,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex justify-between items-center text-[10px] text-secondary mt-1">
 <span>Instant Auto-settlement</span>
-<span className="font-bold text-slate-600">Bank of Uganda Regulated</span>
+<span className="font-bold text-slate-600">Pesapal Verified Rails</span>
 </div>
 </div>
 </div>
@@ -716,7 +716,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span>William St Central Hub: 99.8% Online</span>
 <span>•</span>
 <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold text-[11px]">
-          Bank of Uganda Escrow Regulated
+          Pesapal Payment standard
         </span>
 </div>
 <div>

@@ -88,7 +88,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Escrow Released Counter</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Paid to seller Counter</span>
 <Icon name="lock_open" className="text-tertiary text-[20px]" />
 </div>
 <div>
@@ -150,7 +150,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">payment protected</span>
 <span className="font-price-display text-price-display text-on-surface font-extrabold text-[16px] whitespace-nowrap">UGX 325,000</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Payment Hold</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold text-[15px] whitespace-nowrap">UGX 195,000</span>
 </div>
 </div>
@@ -223,7 +223,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Payment Hold</span>
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold text-[15px] whitespace-nowrap">UGX 95,000</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
 <div className="flex items-center gap-space-xs text-on-surface-variant">
 <Icon name="cloud_done" className="text-[16px] text-tertiary" />
-<span className="font-body-sm text-body-sm">Inventory synced with Kampala Vault 44s ago</span>
+<span className="font-body-sm text-body-sm">Inventory synced with Kampala reserve 44s ago</span>
 </div>
 <a className="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">View Overdue (11)</a>
 </div>
@@ -344,7 +344,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>Resend SMS Code</span>
 </button>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Customer must supply the 6-digit cryptographic PIN delivered via SMS or SwiftCart App.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Customer must supply the 6-digit verified PIN delivered via SMS or SwiftCart App.</p>
 
 <div className="flex items-center justify-center gap-space-sm py-space-sm">
 <div className="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-headline-lg text-headline-lg text-on-surface font-extrabold shadow-inner">8</div>
@@ -431,7 +431,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="w-full py-4 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm shadow-md hover:shadow-lg hover:opacity-95 transition-all flex items-center justify-center gap-space-sm active:scale-[0.99]" type="button">
 <Icon name="lock_open" className="text-[24px]" />
-<span className="whitespace-nowrap">Release Goods &amp; Confirm Escrow Disbursement (UGX 325,000)</span>
+<span className="whitespace-nowrap">Release Goods &amp; Confirm Seller Payout (UGX 325,000)</span>
 </button>
 </div>
 </section>

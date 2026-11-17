@@ -58,7 +58,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
       setStep(3);
     } else if (step === 3) {
       if (!payoutAccount.trim() || !accountHolderName.trim()) {
-        setErrorMsg('Please provide your payout account details for escrow payouts.');
+        setErrorMsg('Please provide your payout account details for seller payouts.');
         return;
       }
       setStep(4);
@@ -112,7 +112,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
             Become a SwiftCart Seller
           </h1>
           <p className="text-sm text-slate-500">
-            Open your store, reach verified buyers across Uganda, and enjoy protected escrow payouts
+            Open your store, reach verified buyers across Uganda, and enjoy protected seller payouts
           </p>
         </div>
       </div>
@@ -297,9 +297,9 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
 
         {step === 3 && (
           <div className="space-y-4">
-            <h2 className="text-lg font-bold text-[#0E1B4D]">Step 3: Payout Account (Escrow Disbursement)</h2>
+            <h2 className="text-lg font-bold text-[#0E1B4D]">Step 3: Payout Account (Seller Payout)</h2>
             <p className="text-xs text-slate-500">
-              When orders are completed and buyers provide their handover code, escrow funds will be disbursed to this account.
+              When orders are completed and buyers provide their handover code, held funds will be disbursed to this account.
             </p>
 
             <div>
@@ -418,7 +418,7 @@ export const BecomeSellerPage: React.FC<BecomeSellerPageProps> = ({ onNavigate }
                 className="mt-1 rounded border-slate-300 text-[#FF8A1F] focus:ring-orange-400 w-4 h-4"
               />
               <span className="text-xs text-slate-600">
-                I confirm that all provided details and identity credentials are true, and I agree to the SwiftCart Merchant Escrow Agreement.
+                I confirm that all provided details and identity credentials are true, and I agree to the SwiftCart Merchant Terms & Conditions.
               </span>
             </label>
           </div>

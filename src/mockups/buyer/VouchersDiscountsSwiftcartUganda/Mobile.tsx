@@ -45,7 +45,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 pt-0.5">
 <Icon name="verified_user" className="text-tertiary text-[16px]" />
-      Voucher discount applies directly to your Swift Escrow deposit.
+      Voucher discount applies directly to your Swift Buyer Payment.
     </p>
 </section>
 
@@ -82,7 +82,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 <Icon name="schedule" className="text-[12px]" /> 2 Days Left
             </span>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
-<Icon name="shield" className="text-[13px]" /> Escrow Verified
+<Icon name="shield" className="text-[13px]" /> payment verified
             </span>
 </div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface truncate">100% Free Boda Delivery</h2>
@@ -114,7 +114,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 </button>
 <div className="hidden text-on-surface-variant font-body-sm text-[12px] bg-surface-container-low p-space-sm rounded-lg space-y-1" id="terms-1">
 <p>• Valid strictly for Swift Express Boda delivery riders within 8km radius of Kampala Central.</p>
-<p>• Minimum basket size: UGX 35,000 paid through Swift Escrow.</p>
+<p>• Minimum basket size: UGX 35,000 paid through swift protection.</p>
 <p>• Cannot be merged with merchant flash promos or storewide vouchers.</p>
 </div>
 </div>
@@ -168,7 +168,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 </button>
 <div className="hidden text-on-surface-variant font-body-sm text-[12px] bg-surface-container-low p-space-sm rounded-lg space-y-1" id="terms-2">
 <p>• Applicable only on items marked with the Kikuubo or Pioneer Verified badge.</p>
-<p>• Escrow protection covers item inspection upon delivery before disbursement.</p>
+<p>• Payment protection covers item inspection upon delivery before disbursement.</p>
 <p>• One redemption per registered mobile number.</p>
 </div>
 </div>
@@ -219,7 +219,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 <Icon name="expand_more" className="text-[16px] transition-transform" />
 </button>
 <div className="hidden text-on-surface-variant font-body-sm text-[12px] bg-surface-container-low p-space-sm rounded-lg space-y-1" id="terms-3">
-<p>• Only eligible on buyer account initial escrow order.</p>
+<p>• Only eligible on buyer account initial payment order.</p>
 <p>• Capped at UGX 40,000 maximum discount deduction.</p>
 </div>
 </div>
@@ -245,7 +245,7 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
             </span>
 </div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface truncate">UGX 5,000 Airtel Rebate</h2>
-<p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Instant credit into escrow when initiating payment via Airtel Money merchant push prompt.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Instant credit into payment when initiating payment via Airtel Money merchant push prompt.</p>
 </div>
 </div>
 
@@ -284,9 +284,9 @@ export const VouchersDiscountsSwiftcartUganda: React.FC<VouchersDiscountsSwiftca
 <Icon name="lock" className="text-[26px]" />
 </div>
 <div className="flex-1 min-w-0">
-<h3 className="font-label-lg text-label-lg text-on-surface">Swift Escrow Protected</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface">Payment Protected</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-        Escrow Protected: your money is held by SwiftCart until you confirm delivery.
+        Payment Protected: your money is held by SwiftCart until you confirm delivery.
       </p>
 </div>
 </footer>

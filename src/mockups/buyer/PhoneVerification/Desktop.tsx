@@ -87,7 +87,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               Two-Factor Account Protection
             </h1>
 <p className="text-orange-100 text-sm leading-relaxed font-normal">
-              Every SwiftCart account is safeguarded by carrier-grade verification to protect escrow releases and Kampala doorstep handovers.
+              Every SwiftCart account is safeguarded by carrier-grade verification to protect payment releases and Kampala doorstep handovers.
             </p>
 </div>
 
@@ -98,7 +98,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div>
 <h4 className="text-xs font-bold text-white tracking-wide uppercase">Delivery Code Security</h4>
-<p className="text-xs text-orange-100/90 leading-snug mt-0.5">Your 6-digit OTP guarantees only you can authorize parcel receipt and release escrow funds to merchants.</p>
+<p className="text-xs text-orange-100/90 leading-snug mt-0.5">Your 6-digit OTP guarantees only you can authorize parcel receipt and release payment funds to merchants.</p>
 </div>
 </div>
 <div className="flex items-start gap-3.5 bg-black/20 backdrop-blur-md p-3.5 rounded-xl border border-white/10 hover:border-white/20 transition-all">
@@ -124,7 +124,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified" className="text-lg text-amber-200" />
 </div>
 <div>
-<h4 className="text-xs font-bold text-white tracking-wide uppercase">100% Escrow Protection</h4>
+<h4 className="text-xs font-bold text-white tracking-wide uppercase">100% Payment Protection</h4>
 <p className="text-xs text-orange-100/90 leading-snug mt-0.5">Payments held securely until you inspect goods in person.</p>
 </div>
 </div>
@@ -231,9 +231,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-stone-50 rounded-xl p-4 border border-stone-200/70 flex items-start gap-3.5 mb-6">
 <Icon name="security" className="text-emerald-600 text-xl flex-shrink-0 mt-0.5" />
 <div className="space-y-1">
-<div className="text-xs font-bold uppercase tracking-wider text-emerald-800">Swift Escrow Protected</div>
+<div className="text-xs font-bold uppercase tracking-wider text-emerald-800">Payment Protected</div>
 <p className="text-xs text-stone-600 leading-relaxed">
-                SwiftCart protects your account with carrier-grade two-factor authentication to ensure safe payments and delivery code security under Uganda Data Protection and Privacy Act 2019.
+                SwiftCart protects your account with carrier-grade two-factor authentication to ensure safe payments and delivery code security under Uganda SwiftCart Privacy Policy 2019.
               </p>
 </div>
 </div>
@@ -256,7 +256,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="verified_user" className="text-2xl" />
 </div>
 <div>
-<div className="text-sm font-bold text-white">100% Escrow Protection</div>
+<div className="text-sm font-bold text-white">100% Payment Protection</div>
 <div className="text-xs text-stone-400">Funds held until inspection</div>
 </div>
 </div>
@@ -293,7 +293,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div>
 <h5 className="text-white font-bold uppercase tracking-wider mb-4 text-xs">SwiftCart Uganda</h5>
 <p className="text-stone-400 leading-relaxed mb-3">
-            Uganda's fastest growing escrow marketplace connecting verified sellers with verified buyers across greater Kampala and nationwide.
+            Uganda's fastest growing payment marketplace connecting verified sellers with verified buyers across greater Kampala and nationwide.
           </p>
 <div className="flex items-center gap-2 text-stone-300 font-semibold">
 <Icon name="headset_mic" className="text-base text-[#da3700]" />
@@ -304,7 +304,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h5 className="text-white font-bold uppercase tracking-wider mb-4 text-xs">Customer Service</h5>
 <ul className="space-y-2.5 text-stone-400">
 <li><a className="hover:text-white transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; Live Chat</a></li>
-<li><a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Escrow Protection FAQs</a></li>
+<li><a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Payment Protection FAQs</a></li>
 <li><a className="hover:text-white transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>SafeBoda Tracking</a></li>
 <li><a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Dispute Resolution Policy</a></li>
 <li><a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Doorstep Return Guidelines</a></li>
@@ -340,7 +340,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
         </div>
 <div className="flex flex-wrap items-center gap-6">
 <a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a>
-<a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Escrow Agreement</a>
+<a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>payment terms</a>
 <a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Security Disclosures</a>
 <a className="hover:text-white transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a>
 </div>

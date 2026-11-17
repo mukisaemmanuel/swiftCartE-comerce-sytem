@@ -50,7 +50,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                 Up to 40% Off Genuine Audio &amp; Gadgets
               </h2>
 <p className="font-body-md text-body-md text-on-surface-variant mb-space-lg max-w-md">
-                SoundCore Space One ANC Headphones now available with verified warranty. Funds locked safely in Escrow until delivery.
+                SoundCore Space One ANC Headphones now available with verified warranty. You pay through Pesapal. We pay the seller after you confirm delivery with your 6-digit code..
               </p>
 <div className="flex items-center gap-space-md flex-wrap">
 <a className="inline-flex items-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-xl py-3 rounded-xl shadow-md transition-transform active:scale-95" data-path="tech-deal" href="#" onClick={() => alertToast('Action triggered')}>
@@ -59,7 +59,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </a>
 <div className="flex items-center gap-space-xs bg-surface-container-lowest/90 px-space-md py-2 rounded-lg shadow-sm">
 <Icon name="verified_user" className="text-primary text-[18px]" />
-<span className="font-label-sm text-label-sm text-on-surface">Escrow Protected</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payment Protected</span>
 <div className="w-1 h-1 rounded-full bg-outline-variant"></div>
 <span className="font-label-sm text-label-sm text-on-surface-variant">MTN &amp; Airtel Instant Pay</span>
 </div>
@@ -157,7 +157,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               Kikuubo Bulk Oil, Rice &amp; Flour
             </h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-              Save big with direct wholesale packs. Verified sellers with escrow release on delivery.
+              Save big with direct wholesale packs. Verified sellers with Payment Release on delivery.
             </p>
 </div>
 <div className="relative z-10 flex items-center justify-between pt-space-xs">
@@ -300,7 +300,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex items-center gap-space-sm">
-<span className="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-space-sm py-1 rounded-full font-bold">100% Escrow Protected</span>
+<span className="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-space-sm py-1 rounded-full font-bold">100% Payment Protected</span>
 <a className="font-label-md text-label-md text-primary hover:text-primary-container font-bold flex items-center gap-1" data-path="all-flash-deals" href="#" onClick={() => alertToast('Action triggered')}>
 <span>See All Deals</span>
 <Icon name="chevron_right" className="text-[16px]" />
@@ -672,7 +672,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
 <div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface tracking-tight">Curated Marketplace Picks</h2>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Live stock in central Kampala warehouses with escrow lock</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Live stock in central Kampala warehouses with payment lock</span>
 </div>
 
 <div className="flex items-center gap-space-xs overflow-x-auto pb-1" id="productTabs">
@@ -753,7 +753,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="inline-flex items-center gap-1 bg-surface-container-low text-on-surface-variant px-1.5 py-0.5 rounded font-label-sm text-label-sm mb-space-sm">
 <Icon name="local_shipping" className="text-primary text-[14px]" />
-<span>Escrow Checked</span>
+<span>Payment Checked</span>
 </div>
 </div>
 <button className="w-full bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>
@@ -904,9 +904,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="lock_reset" className="text-[26px]" />
 </div>
 <div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface leading-tight mb-1">100% Escrow Release</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface leading-tight mb-1">100% Payment Release</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-            Payment is held securely in vault escrow. The merchant is paid only after you inspect and give the 6-digit confirmation code.
+            Payment is held securely in reserve payment. The merchant is paid only after you inspect and give the 6-digit confirmation code.
           </p>
 </div>
 </div>
@@ -954,18 +954,18 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="text-center mb-space-lg">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Clarity &amp; Transparency</span>
 <h2 className="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">Frequently Asked Questions</h2>
-<p className="font-body-md text-body-md text-on-surface-variant mt-1">Everything you need to know about buying with Escrow Protection in Uganda</p>
+<p className="font-body-md text-body-md text-on-surface-variant mt-1">Everything you need to know about buying with Payment Protection in Uganda</p>
 </div>
 <div className="flex flex-col gap-space-sm" id="faqAccordion">
 
 <div className="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
 <button aria-expanded="false" className="faq-toggle w-full p-space-lg flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>
-<span className="font-label-lg text-label-lg text-on-surface font-bold">How does SwiftCart Escrow work in Uganda?</span>
+<span className="font-label-lg text-label-lg text-on-surface font-bold">How does SwiftCart Protection work in Uganda?</span>
 <Icon name="expand_more" className="text-on-surface-variant transform transition-transform duration-200" />
 </button>
 <div className="faq-content hidden px-space-lg pb-space-lg pt-0">
 <p className="font-body-md text-body-md text-on-surface-variant">
-              When you pay with MTN MoMo, Airtel Money, or Card, the payment does not go directly to the seller. Instead, funds are securely locked in an Escrow trust account. The merchant prepares and dispatches your order. Only when you receive the package, inspect it, and provide your delivery code is the payment released to the merchant.
+              When you pay with MTN MoMo, Airtel Money, or Card, the payment does not go directly to the seller. Instead, funds are securely locked in an Payment Protection account. The merchant prepares and dispatches your order. Only when you receive the package, inspect it, and provide your delivery code is the payment released to the merchant.
             </p>
 </div>
 </div>
@@ -1001,7 +1001,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </button>
 <div className="faq-content hidden px-space-lg pb-space-lg pt-0">
 <p className="font-body-md text-body-md text-on-surface-variant">
-              Yes. SwiftCart Uganda seamlessly integrates with MTN Mobile Money (*165#) and Airtel Money (*185#). During checkout, simply input your Ugandan phone number (+256) and an instant PIN approval push prompt will be sent directly to your phone. Zero hidden charges.
+              Yes. SwiftCart Uganda seamlessly integrates with MTN Mobile Money and Airtel Money (Mobile prompt). During checkout, simply input your Ugandan phone number (+256) and an instant PIN approval push prompt will be sent directly to your phone. Zero hidden charges.
             </p>
 </div>
 </div>
@@ -1009,7 +1009,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </section>
 </div>
-</div></main><footer className="w-full bg-surface-container-low text-on-surface-variant mt-space-xl shadow-[0_-4px_20px_rgba(14,27,77,0.03)]"><div className="max-w-7xl mx-auto px-margin pt-16 pb-12"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div className="flex flex-col gap-space-md"><div className="flex items-center gap-space-xs"><span className="font-headline-sm text-headline-sm font-bold text-primary">SwiftCart</span><span className="font-label-sm text-label-sm uppercase bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded font-bold">Uganda</span></div><p className="font-body-md text-body-md text-on-surface-variant">Kampala's high-trust online marketplace with 100% Genuine Escrow Protection. Every order is held secure until you inspect and verify delivery.</p><div className="flex flex-col gap-space-xs text-on-surface font-label-md text-label-md"><div className="flex items-center gap-space-xs"><Icon name="call" className="text-primary text-[18px]" /><span>+256 800 220 800 (Toll Free)</span></div><div className="flex items-center gap-space-xs"><Icon name="chat" className="text-tertiary text-[18px]" /><span>WhatsApp: +256 701 498 442</span></div><div className="flex items-start gap-space-xs"><Icon name="business" className="text-outline text-[18px]" /><span>Acacia Mall Annex &amp; Nakasero Trade Tower, Kampala</span></div></div></div><div className="flex flex-col gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Customer Service</span><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="track-order" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>Track Your Order</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="escrow-refunds" href="#" onClick={() => alertToast('Action triggered')}>Returns &amp; Escrow Refunds</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="payment-methods" href="#" onClick={() => alertToast('Action triggered')}>MTN MoMo &amp; Airtel Payment Options</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Swift Escrow Protection Policy</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="delivery-rates" href="#" onClick={() => alertToast('Action triggered')}>SafeBoda Delivery Rates &amp; Speeds</a></div><div className="flex flex-col gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">About &amp; Business</span><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="about-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>About SwiftCart Uganda</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="become-verified-seller" href="#" onClick={() => alertToast('Action triggered')}>Become a Verified Seller</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="safeboda-fleet" href="#" onClick={() => alertToast('Action triggered')}>SafeBoda Dispatch Fleet</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="careers" href="#" onClick={() => alertToast('Action triggered')}>Careers in Kampala</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy &amp; Data Security</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a></div><div className="flex flex-col gap-space-md"><span className="font-headline-sm text-headline-sm text-on-surface font-bold">Payment &amp; Trust</span><div className="flex flex-wrap gap-space-xs"><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">MTN MoMo</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Airtel Money</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Visa</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Mastercard</span></div><div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md"><Icon name="verified_user" className="text-tertiary text-[28px]" /><div><div className="font-label-lg text-label-lg font-bold text-on-surface">100% Escrow Protected</div><div className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</div></div></div><div className="flex flex-col gap-space-xs"><span className="font-label-md text-label-md text-on-surface font-bold">Shop Faster on Mobile</span><div className="flex items-center gap-space-xs bg-surface-container-highest px-space-md py-space-xs rounded-lg text-on-surface font-body-sm text-body-sm"><Icon name="phone_android" className="text-[20px]" /><span>Download the SwiftCart App</span></div></div></div></div><div className="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm"><div className="text-on-surface-variant">© 2024 SwiftCart Uganda Ltd. Registered with URA &amp; URSB. All prices in UGX (Ugandan Shilling) with 0 decimals.</div><div className="flex items-center gap-space-md text-on-surface-variant"><span>Kampala Cloud Node (Active)</span><span>No Hidden Tariffs</span></div></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-low text-on-surface-variant mt-space-xl shadow-[0_-4px_20px_rgba(14,27,77,0.03)]"><div className="max-w-7xl mx-auto px-margin pt-16 pb-12"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div className="flex flex-col gap-space-md"><div className="flex items-center gap-space-xs"><span className="font-headline-sm text-headline-sm font-bold text-primary">SwiftCart</span><span className="font-label-sm text-label-sm uppercase bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded font-bold">Uganda</span></div><p className="font-body-md text-body-md text-on-surface-variant">Kampala's high-trust online marketplace with 100% Genuine Payment Protection. Every order is held secure until you inspect and verify delivery.</p><div className="flex flex-col gap-space-xs text-on-surface font-label-md text-label-md"><div className="flex items-center gap-space-xs"><Icon name="call" className="text-primary text-[18px]" /><span>+256 800 220 800 (Toll Free)</span></div><div className="flex items-center gap-space-xs"><Icon name="chat" className="text-tertiary text-[18px]" /><span>WhatsApp: +256 701 498 442</span></div><div className="flex items-start gap-space-xs"><Icon name="business" className="text-outline text-[18px]" /><span>Acacia Mall Annex &amp; Nakasero Trade Tower, Kampala</span></div></div></div><div className="flex flex-col gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Customer Service</span><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="track-order" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>Track Your Order</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="payment-refunds" href="#" onClick={() => alertToast('Action triggered')}>Returns &amp; Payment Refunds</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="payment-methods" href="#" onClick={() => alertToast('Action triggered')}>MTN MoMo &amp; Airtel Payment Options</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>swift payment protection Policy</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="delivery-rates" href="#" onClick={() => alertToast('Action triggered')}>SafeBoda Delivery Rates &amp; Speeds</a></div><div className="flex flex-col gap-space-sm"><span className="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">About &amp; Business</span><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="about-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>About SwiftCart Uganda</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="become-verified-seller" href="#" onClick={() => alertToast('Action triggered')}>Become a Verified Seller</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="safeboda-fleet" href="#" onClick={() => alertToast('Action triggered')}>SafeBoda Dispatch Fleet</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="careers" href="#" onClick={() => alertToast('Action triggered')}>Careers in Kampala</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy &amp; Data Security</a><a className="hover:text-primary transition-colors font-body-md text-body-md" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a></div><div className="flex flex-col gap-space-md"><span className="font-headline-sm text-headline-sm text-on-surface font-bold">Payment &amp; Trust</span><div className="flex flex-wrap gap-space-xs"><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">MTN MoMo</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Airtel Money</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Visa</span><span className="bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-label-md text-label-md shadow-sm">Mastercard</span></div><div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md"><Icon name="verified_user" className="text-tertiary text-[28px]" /><div><div className="font-label-lg text-label-lg font-bold text-on-surface">100% Payment Protected</div><div className="font-body-sm text-body-sm text-on-surface-variant">Funds released only after inspection</div></div></div><div className="flex flex-col gap-space-xs"><span className="font-label-md text-label-md text-on-surface font-bold">Shop Faster on Mobile</span><div className="flex items-center gap-space-xs bg-surface-container-highest px-space-md py-space-xs rounded-lg text-on-surface font-body-sm text-body-sm"><Icon name="phone_android" className="text-[20px]" /><span>Download the SwiftCart App</span></div></div></div></div><div className="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm"><div className="text-on-surface-variant">© 2024 SwiftCart Uganda Ltd. Registered with Tax &amp; URSB. All prices in UGX (Ugandan Shilling) with 0 decimals.</div><div className="flex items-center gap-space-md text-on-surface-variant"><span>Kampala Cloud Node (Active)</span><span>No Hidden Tariffs</span></div></div></div></footer>
     </div>
   );
 };

@@ -63,7 +63,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-space-sm">
 <div className="font-price-display text-price-display text-on-surface">14 Pkgs</div>
-<div className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">UGX 3,420,000 in Escrow</div>
+<div className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 whitespace-nowrap">UGX 3,420,000 in Payment</div>
 </div>
 </div>
 
@@ -133,11 +133,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="font-body-md text-body-md text-on-surface-variant truncate">SoundCore Space One ANC</div>
 <div className="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface">
 <span className="font-price-display text-[16px] leading-5 font-bold text-primary whitespace-nowrap">UGX 380,000</span>
-<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-outline">Escrow Held</span>
+<span className="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-outline">Payment Held</span>
 </div>
 <div className="mt-space-xs flex items-center gap-1 text-error font-label-sm text-label-sm">
 <Icon name="report" className="text-[14px]" />
-<span>Tamper Seal Sliced alert</span>
+<span>package seal Sliced alert</span>
 </div>
 <div className="mt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
 <span>Rider: Kizito B. (UFA 421Z)</span>
@@ -220,7 +220,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="lock" className="text-[20px]" />
 </div>
 <div>
-<div className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Custody Vault</div>
+<div className="font-label-sm text-label-sm text-on-surface-variant uppercase">payment holding reserve</div>
 <div className="font-headline-sm text-headline-sm text-primary font-bold whitespace-nowrap">UGX 380,000</div>
 <div className="font-body-sm text-body-sm text-error font-medium">Settlement Frozen</div>
 </div>
@@ -234,7 +234,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div>
 <span className="font-label-md text-label-md text-on-surface">Linked Dispute Docket #DSP-104</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant block">Under Fast-Track Arbitration • Assigned Officer: Patricia Namubiru (HQ Escrow Ops)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant block">Under Fast-Track dispute review • Assigned Officer: Denis Mukasa (HQ Payment Ops)</span>
 </div>
 </div>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-lowest font-label-sm text-label-sm text-on-surface hover:bg-surface shadow-sm flex items-center gap-1 transition-colors">
@@ -327,14 +327,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-low rounded-xl p-space-sm space-y-space-xs flex flex-col">
 <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-dim">
-<img className="w-full h-full object-cover" data-alt="High-resolution tablet macro camera shot showing a sliced holographic tamper-evident security seal on a matte black electronics cardboard box. The razor cut through the seal exposes the silver void pattern under harsh inspection light." src="/images/28294412f12f1b49.webp" />
+<img className="w-full h-full object-cover" data-alt="High-resolution tablet macro camera shot showing a sliced holographic Sealed Package Bag security seal on a matte black electronics cardboard box. The razor cut through the seal exposes the silver void pattern under harsh inspection light." src="/images/28294412f12f1b49.webp" />
 <div className="absolute bottom-2 left-2 bg-on-surface/80 backdrop-blur-sm text-surface-container-lowest px-2 py-0.5 rounded text-[10px] font-label-sm">
                   11:32:04 EAT • Nakasero Bay Q-02 Cam
                 </div>
 </div>
 <div className="flex items-center justify-between pt-1">
 <div>
-<span className="font-label-md text-label-md text-on-surface block">Photo 1: Tamper Seal Micro-Cut</span>
+<span className="font-label-md text-label-md text-on-surface block">Photo 1: package seal Micro-Cut</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Razor penetration beneath sticker lip</span>
 </div>
 <button className="px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-dim transition-colors">
@@ -369,7 +369,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-body-sm text-body-sm text-on-surface-variant">Authored by William Ssebaggala (Hub Lead)</span>
 </div>
 <div className="bg-surface-container-low rounded-xl p-space-md font-body-md text-body-md text-on-surface leading-relaxed">
-            “Package arrived with tamper tape sliced from underneath. SoundCore unit powers on, but customer substituted factory black braided cable with unbranded white USB-A lead. Escrow hold maintained. Forwarded to Victoria Tech vendor channel for immediate claim validation.”
+            “Package arrived with tamper tape sliced from underneath. SoundCore unit powers on, but customer substituted factory black braided cable with unbranded white USB-A lead. Payment Hold maintained. Forwarded to Victoria Tech vendor channel for immediate claim validation.”
           </div>
 </div>
 

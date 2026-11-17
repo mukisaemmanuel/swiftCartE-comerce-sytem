@@ -34,7 +34,7 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <span className="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
 </div>
 <p className="font-body-sm text-body-sm text-on-secondary-container leading-tight">
-        Commission rate modifications require verified Superadmin hardware token authorization.
+        Commission rate modifications require verified Superadmin Two-Factor Authenticator authorization.
       </p>
 </div>
 </div>
@@ -315,7 +315,7 @@ export const CommissionRatesEarningsSwiftcartAdmin: React.FC<CommissionRatesEarn
 <div className="p-space-sm rounded-xl bg-surface-container text-center flex flex-col items-center space-y-1 mt-space-sm">
 <div className="flex items-center gap-1 text-on-surface-variant">
 <Icon name="account_balance" className="text-[16px]" />
-<span className="font-label-sm text-label-sm font-semibold">Automated SwiftCart Escrow Settlement</span>
+<span className="font-label-sm text-label-sm font-semibold">Automated SwiftCart Protection Settlement</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
       Ledger reconciles automatically every 24 hours against MTN MoMo, Airtel Money, and Standard Bank merchant pools.

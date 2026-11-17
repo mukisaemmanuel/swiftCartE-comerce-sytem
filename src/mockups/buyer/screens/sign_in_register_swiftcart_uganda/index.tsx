@@ -30,7 +30,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </button>
 <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-md text-label-md">
 <Icon name="verified_user" className="text-[16px]" />
-<span className="">Escrow Protected</span>
+<span className="">Payment Protected</span>
 </div>
 </div>
 
@@ -166,7 +166,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 
-<div className="rounded-xl bg-surface-container-low p-space-md flex items-center gap-3"><div className="w-10 h-10 rounded-lg bg-tertiary-container/15 text-tertiary shrink-0 flex items-center justify-center"><Icon name="verified_user" className="text-[22px]" /></div><div className="flex flex-col min-w-0 text-left"><span className="font-label-md text-label-md text-on-surface">Escrow Protected</span><span className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Escrow Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</span></div></div>
+<div className="rounded-xl bg-surface-container-low p-space-md flex items-center gap-3"><div className="w-10 h-10 rounded-lg bg-tertiary-container/15 text-tertiary shrink-0 flex items-center justify-center"><Icon name="verified_user" className="text-[22px]" /></div><div className="flex flex-col min-w-0 text-left"><span className="font-label-md text-label-md text-on-surface">Payment Protected</span><span className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Payment Protected: your money is held by SwiftCart until you confirm delivery. Payments are processed by our secure payment partner.</span></div></div>
 
 <div className="flex flex-col items-center text-center gap-1 px-4">
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">

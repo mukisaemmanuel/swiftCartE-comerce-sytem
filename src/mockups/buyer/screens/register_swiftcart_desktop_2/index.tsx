@@ -33,13 +33,13 @@ export const Screen: React.FC<ScreenProps> = (props) => {
               <span className="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SwiftCart</span>
               <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-primary-fixed text-primary tracking-wider uppercase">Uganda</span>
             </div>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">Official Escrow Hub</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">Official Payment Hub</span>
           </div>
         </a>
         <div className="h-6 w-px bg-surface-container-high hidden md:block"></div>
         <span className="hidden md:inline-flex items-center gap-2 text-xs font-semibold text-tertiary bg-tertiary-fixed/30 px-2.5 py-1 rounded-full">
           <Icon name="verified_user" className="text-[14px] text-tertiary" />
-          Bank-Grade Buyer Escrow Active
+          Bank-Grade Buyer holds active
         </span>
       </div>
       <div className="flex items-center gap-5">
@@ -78,7 +78,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <img src={`${assetBase}/images/23bba0068dfb8034.webp`} alt="SwiftCart" className="h-8 w-auto brightness-0 invert" />
             <div className="flex flex-col">
               <span className="font-bold tracking-tight text-base leading-tight">SwiftCart Uganda</span>
-              <span className="text-[10px] tracking-widest uppercase text-white/90 font-bold">Verified Escrow System</span>
+              <span className="text-[10px] tracking-widest uppercase text-white/90 font-bold">Verified Payment System</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             Shop fearlessly with protected Kampala checkout.
           </h1>
           <p className="text-white/80 text-sm mb-6 leading-relaxed">
-            Your payment is held in safe custody until you physically receive and verify your package.
+            Your payment is held in safe holding until you physically receive and verify your package.
           </p>
 
           
@@ -132,7 +132,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
               </div>
               <div className="flex flex-col min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-bold text-white">Automated Escrow Vault</span>
+                  <span className="text-sm font-bold text-white">Automated Payment Reserve</span>
                   <span className="bg-white/20 text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded uppercase">Zero Risk</span>
                 </div>
                 <span className="text-xs text-white/80 mt-0.5">Money released only after your personal inspection.</span>
@@ -292,7 +292,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           <div className="flex items-start gap-2.5 pt-2">
             <input className="mt-1 h-4 w-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer shrink-0" id="terms" required={true} type="checkbox" />
             <label className="text-xs text-on-surface-variant leading-relaxed cursor-pointer select-none" htmlFor="terms">
-              I agree to the SwiftCart <a className="text-primary font-bold hover:underline" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a>, <a className="text-primary font-bold hover:underline" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a>, and <span className="text-tertiary font-bold">100% Escrow Protection rules</span>.
+              I agree to the SwiftCart <a className="text-primary font-bold hover:underline" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a>, <a className="text-primary font-bold hover:underline" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a>, and <span className="text-tertiary font-bold">100% Payment Protection rules</span>.
             </label>
           </div>
 
@@ -328,7 +328,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <Icon name="verified_user" className="text-2xl" />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-white">100% Escrow Protection</h4>
+            <h4 className="text-sm font-bold text-white">100% Payment Protection</h4>
             <p className="text-xs text-[#dfd9d3]/70 mt-0.5">Funds secured till delivery signoff</p>
           </div>
         </div>
@@ -370,7 +370,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
       </div>
       <div className="flex items-center gap-6">
         <a href="#" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Terms of Service</a>
-        <a href="#" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Buyer Escrow Policy</a>
+        <a href="#" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Buyer payment protection policy</a>
         <a href="#" className="hover:text-white transition" onClick={() => alertToast('Action triggered')}>Privacy Notice</a>
         <a href="#" className="hover:text-white transition" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Contact Support</a>
       </div>

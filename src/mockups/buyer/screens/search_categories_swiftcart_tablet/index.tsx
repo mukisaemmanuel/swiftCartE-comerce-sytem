@@ -161,7 +161,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <input checked={true} className="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox" />
 <span className="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">
 <Icon name="shield" className="text-[15px] text-tertiary" />
-              MoMo Instant Escrow
+              MoMo Instant Payment
             </span>
 </label>
 <label className="flex items-center gap-space-xs py-1 cursor-pointer select-none">
@@ -207,7 +207,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-xs">
 <Icon name="verified" className="text-[20px] text-tertiary shrink-0" />
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-tight">
-            SwiftCart MoMo Escrow locks seller funds until delivery confirmation in Uganda.
+            SwiftCart momo payment locks seller funds until delivery confirmation in Uganda.
           </p>
 </div>
 </aside>
@@ -242,7 +242,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="shield" className="text-[11px]" /> Official Store
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore Space One Active Noise Cancelling Headphones
@@ -293,7 +293,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="shield" className="text-[11px]" /> SoundCore Official
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore Life Q30 Hybrid Active Noise Cancelling
@@ -344,7 +344,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="shield" className="text-[11px]" /> SoundCore Official
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore Space Q45 Ultra ANC Hi-Res Wireless
@@ -392,7 +392,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-surface-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="verified" className="text-[11px] text-tertiary" /> Anker Audio Kampala
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore Liberty 4 NC Earbuds 98.5% Noise Reduction
@@ -440,7 +440,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-surface-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="check_circle" className="text-[11px] text-tertiary" /> Pioneer Mall Tech
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore H30i Wireless On-Ear Foldable 70H Playtime
@@ -490,7 +490,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
 <Icon name="shield" className="text-[11px]" /> SoundCore Official
                 </span>
-<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Escrow</span>
+<span className="bg-tertiary-fixed-dim text-on-tertiary-container font-label-sm text-label-sm px-1 py-0.5 rounded font-semibold">Payment</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold line-clamp-2 min-h-[40px] group-hover:text-primary transition-colors">
                 SoundCore VR P10 Low-Latency Wireless Gaming Earbuds
@@ -552,7 +552,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="verified_user" className="text-[20px]" />
 </div>
 <div>
-<span className="font-label-md text-label-md text-on-surface font-bold block">MTN &amp; Airtel MoMo Escrow</span>
+<span className="font-label-md text-label-md text-on-surface font-bold block">MTN &amp; Airtel momo payment</span>
 <span className="font-body-sm text-body-sm text-secondary">Pay securely upon pickup confirmation</span>
 </div>
 </div>
@@ -577,7 +577,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 </div>
-</main><footer className="w-full bg-surface-container-low mt-space-xl py-space-xl"><div className="max-w-[1440px] mx-auto px-margin md:px-margin-desktop"><div className="grid grid-cols-2 md:grid-cols-4 gap-space-lg mb-space-xl"><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Shop &amp; Deliver</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Express Kampala Dispatch</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Entebbe &amp; Upcountry Hubs</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>SwiftCart Assurance</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Verified Merchants Directory</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Customer Support</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; FAQs</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>Track My Order</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Returns &amp; Refunds</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Dispute Resolution</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Payment &amp; Trust</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MTN MoMo Escrow</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Airtel Money Secure</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Bank &amp; Visa Cards</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Cash on Collection Points</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Sell on SwiftCart</span><p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Access millions of verified buyers across Uganda with zero listing friction.</p><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">Merchant Hub</span></div></div></div><div className="flex flex-col md:flex-row items-center justify-between pt-space-md border-t border-surface-container-high text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 SwiftCart Uganda Ltd. Engineered for commercial velocity.</p><div className="flex items-center gap-space-md mt-space-sm md:mt-0"><span className="text-secondary">Uganda Shilling (UGX)</span><span className="text-secondary">•</span><span className="text-secondary">Region: Kampala / Central</span></div></div></div></footer>
+</main><footer className="w-full bg-surface-container-low mt-space-xl py-space-xl"><div className="max-w-[1440px] mx-auto px-margin md:px-margin-desktop"><div className="grid grid-cols-2 md:grid-cols-4 gap-space-lg mb-space-xl"><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Shop &amp; Deliver</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Express Kampala Dispatch</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Entebbe &amp; Upcountry Hubs</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>SwiftCart Assurance</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Verified Merchants Directory</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Customer Support</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; FAQs</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>Track My Order</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Returns &amp; Refunds</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Dispute Resolution</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Payment &amp; Trust</span><ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>MTN momo payment</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Airtel Money Secure</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Bank &amp; Visa Cards</a></li><li><a className="hover:text-primary transition-colors" href="#" onClick={() => alertToast('Action triggered')}>Cash on Collection Points</a></li></ul></div><div><span className="font-label-lg text-label-lg text-on-surface block mb-space-sm">Sell on SwiftCart</span><p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Access millions of verified buyers across Uganda with zero listing friction.</p><div className="flex items-center gap-space-xs"><span className="font-label-sm text-label-sm px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">Merchant Hub</span></div></div></div><div className="flex flex-col md:flex-row items-center justify-between pt-space-md border-t border-surface-container-high text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 SwiftCart Uganda Ltd. Engineered for commercial velocity.</p><div className="flex items-center gap-space-md mt-space-sm md:mt-0"><span className="text-secondary">Uganda Shilling (UGX)</span><span className="text-secondary">•</span><span className="text-secondary">Region: Kampala / Central</span></div></div></div></footer>
     </div>
   );
 };

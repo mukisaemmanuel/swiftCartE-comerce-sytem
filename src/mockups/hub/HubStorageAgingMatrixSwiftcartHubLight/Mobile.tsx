@@ -184,7 +184,7 @@ export const HubStorageAgingMatrixSwiftcartHubLight: React.FC<HubStorageAgingMat
 <div className="flex flex-col items-end">
 <span className="font-price-display text-[16px] text-on-surface font-extrabold whitespace-nowrap">UGX 340,000</span>
 <span className="font-label-sm text-[10px] text-tertiary font-bold flex items-center gap-0.5">
-<Icon name="verified_user" className="text-[12px]" /> Escrow Held
+<Icon name="verified_user" className="text-[12px]" /> Payment Held
           </span>
 </div>
 </div>
@@ -285,7 +285,7 @@ export const HubStorageAgingMatrixSwiftcartHubLight: React.FC<HubStorageAgingMat
 <div className="flex flex-col items-end">
 <span className="font-price-display text-[16px] text-on-surface font-extrabold whitespace-nowrap">UGX 285,000</span>
 <span className="font-label-sm text-[10px] text-tertiary font-bold flex items-center gap-0.5">
-<Icon name="security" className="text-[12px]" /> Escrow Protected
+<Icon name="security" className="text-[12px]" /> Payment Protected
           </span>
 </div>
 </div>

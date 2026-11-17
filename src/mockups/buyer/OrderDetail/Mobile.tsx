@@ -110,7 +110,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span>UGX 5,000</span>
 </div>
 <div className="flex justify-between items-center pt-1 mt-0.5">
-<span className="font-label-md text-label-md text-on-surface font-bold">Total Paid (MoMo Escrow)</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Total Paid (momo payment)</span>
 <span className="font-price-display text-price-display text-primary">UGX 253,500</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-semibold">Payment Confirmed</span>
 <span className="font-body-sm text-body-sm text-secondary">14:25</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">MTN MoMo Escrow Verified (#TXN-884920)</p>
+<p className="font-body-sm text-body-sm text-secondary">MTN momo payment Verified (#TXN-884920)</p>
 </div>
 
 <div className="relative">
@@ -289,7 +289,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-bold truncate">Dispute #SC-ORD-9281</span>
 </div>
 <span className="font-label-sm text-label-sm text-on-error-container bg-error-container px-2 py-0.5 rounded-full font-bold">
-          Escrow Held
+          Payment Held
         </span>
 </div>
 <div className="flex gap-space-sm items-center">
@@ -303,7 +303,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2">
 <Icon name="shield" className="text-primary text-[18px] shrink-0 mt-0.5" />
 <div className="flex flex-col min-w-0">
-<div className="font-label-sm text-label-sm text-on-surface font-bold">Under Support Review • SwiftCart Escrow Protected</div>
+<div className="font-label-sm text-label-sm text-on-surface font-bold">Under Support Review • SwiftCart Payment Protected</div>
 <p className="font-body-sm text-body-sm text-secondary leading-tight mt-0.5">
             Seller SoundCore Official responded. SwiftCart Trust Team is verifying the parcel return tracking number.
           </p>
@@ -320,7 +320,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <Icon name="verified_user" className="text-[22px]" />
 </div>
 <div className="flex flex-col min-w-0">
-<div className="font-label-md text-label-md text-on-surface font-bold">SwiftCart Uganda Escrow Guarantee</div>
+<div className="font-label-md text-label-md text-on-surface font-bold">SwiftCart Uganda Payment Protection</div>
 <p className="font-body-sm text-body-sm text-secondary leading-tight">
           Payments are never released to merchants until you confirm inspection with your 6-digit handover code.
         </p>

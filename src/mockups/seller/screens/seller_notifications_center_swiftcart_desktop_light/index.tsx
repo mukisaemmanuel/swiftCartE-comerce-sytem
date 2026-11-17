@@ -31,7 +31,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           onClick={() => setDrawerOpen(false)}
         />
       )}
-      <aside className="fixed z-50 left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="flex flex-col"><div className="h-16 px-space-xl flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/logo-full.png" /><span className="font-headline-sm text-headline-sm text-primary tracking-tight">SwiftCart</span><span className="ml-auto bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">Merchant</span></div><div className="px-space-md py-space-sm mx-space-md mb-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-[0_1px_4px_rgba(14,27,77,0.03)]"><div className="flex items-center gap-space-sm min-w-0"><div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0"><Icon name="verified" className="text-primary text-[18px]" /></div><div className="min-w-0"><p className="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span> Kampala Hub</p></div></div><Icon name="unfold_more" className="text-on-surface-variant text-[16px]" /></div><nav className="px-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a aria-current="page" className="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]" data-path="overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}>Overview</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}><span>Orders</span><span className="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Pending</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/products-seller'); }}><span>Products &amp; Inventory</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">2 Low</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><span>Riders &amp; Logistics</span><span className="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">6 Active</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}><span>Returns &amp; Disputes</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">1 Case</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>Wallet &amp; Payouts</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/analytics-seller'); }}>Analytics &amp; Heatmaps</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/discounts-ads-seller'); }}>Discounts &amp; Ads</a></nav></div><div className="p-space-md border-t border-surface-container-high space-y-1"><nav className="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>Store Profile &amp; KYC</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>Settings</a></nav><div className="mt-space-md p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div className="flex items-center gap-2"><Icon name="shield" className="text-tertiary text-[18px]" /><span className="font-label-sm text-label-sm text-on-surface-variant">Swift Escrow Protected</span></div><Icon name="lock" className="text-tertiary text-[16px]" /></div></div></aside>
+      <aside className="fixed z-50 left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div className="flex lg:hidden justify-end px-3 pt-2 pb-0"><button type="button" className="sidebar-close-btn p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" aria-label="Close menu" onClick={() => setDrawerOpen(false)}><Icon name="close" className="text-[20px]" /></button></div><div className="flex flex-col"><div className="h-16 px-space-xl flex items-center gap-space-sm"><img alt="SwiftCart" className="h-8 w-auto object-contain" src="/brand/logo-full.png" /><span className="font-headline-sm text-headline-sm text-primary tracking-tight">SwiftCart</span><span className="ml-auto bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">Merchant</span></div><div className="px-space-md py-space-sm mx-space-md mb-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-[0_1px_4px_rgba(14,27,77,0.03)]"><div className="flex items-center gap-space-sm min-w-0"><div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0"><Icon name="verified" className="text-primary text-[18px]" /></div><div className="min-w-0"><p className="font-label-md text-label-md text-on-surface truncate">SoundCore Uganda</p><p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span> Kampala Hub</p></div></div><Icon name="unfold_more" className="text-on-surface-variant text-[16px]" /></div><nav className="px-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a aria-current="page" className="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]" data-path="overview" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/overview-seller'); }}>Overview</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/orders-seller'); }}><span>Orders</span><span className="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Pending</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products-inventory" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/products-seller'); }}><span>Products &amp; Inventory</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">2 Low</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riders-logistics" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><span>Riders &amp; Logistics</span><span className="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">6 Active</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-disputes" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/returns-disputes-seller'); }}><span>Returns &amp; Disputes</span><span className="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">1 Case</span></a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="wallet-payouts" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>Wallet &amp; Payouts</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-heatmaps" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/analytics-seller'); }}>Analytics &amp; Heatmaps</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="discounts-ads" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/discounts-ads-seller'); }}>Discounts &amp; Ads</a></nav></div><div className="p-space-md border-t border-surface-container-high space-y-1"><nav className="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_2px_8px_rgba(218,55,0,0.20)]"><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="store-profile-kyc" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>Store Profile &amp; KYC</a><a className="flex items-center justify-between px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}>Settings</a></nav><div className="mt-space-md p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div className="flex items-center gap-2"><Icon name="shield" className="text-tertiary text-[18px]" /><span className="font-label-sm text-label-sm text-on-surface-variant">Payment Protected</span></div><Icon name="lock" className="text-tertiary text-[16px]" /></div></div></aside>
 <div className="pl-72 flex flex-col min-h-screen"><header className="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div className="flex items-center gap-space-lg flex-1 max-w-xl"><button type="button" className="sidebar-hamburger-btn lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container mr-2" aria-label="Open menu" onClick={() => setDrawerOpen(true)}><Icon name="menu" className="text-[22px]" /></button><div className="relative w-full flex items-center"><Icon name="search" className="absolute left-3 text-on-surface-variant text-[18px]" /><input className="w-full h-10 pl-10 pr-12 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_2px_rgba(14,27,77,0.02)]" placeholder="Search orders, SKU, customer phone (+256)..." type="search" /><kbd className="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">⌘K</kbd></div></div><div className="flex items-center gap-space-md"><div className="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_2px_rgba(14,27,77,0.04)]"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-label-sm text-label-sm text-on-surface">MTN &amp; Airtel Rails Active</span></div><button aria-label="Theme Toggle (Light Active)" className="w-9 h-9 rounded-xl bg-surface-container-lowest text-primary hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" title="Light Mode Active" type="button" onClick={() => toggleTheme()}><Icon name="light_mode" className="text-[18px]" /></button><button aria-label="Notifications (3 unread)" className="relative w-9 h-9 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-all shadow-[0_1px_2px_rgba(14,27,77,0.04)]" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-notifications'); }}><Icon name="notifications" className="text-[18px]" /><span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] leading-[18px] text-center font-bold ring-2 ring-surface-container-lowest shadow-sm">3</span></button><div className="flex items-center gap-space-sm pl-space-sm"><div className="hidden sm:flex flex-col text-right"><span className="font-label-md text-label-md text-on-surface leading-tight">Kizito Ronald</span><span className="font-label-sm text-label-sm text-on-surface-variant">Store General Manager</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md text-label-md">KR</div></div></div></header><main className="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div className="flex flex-col w-full">
 
 <div className="w-full bg-surface-container-high px-space-xl py-space-xs flex items-center justify-between shadow-sm">
@@ -51,7 +51,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
 <Icon name="security" className="text-[14px] text-primary" />
-        BoU Regulated Escrow Hub #UG-4412
+        Pesapal Secure Payment Hub #UG-4412
       </span>
 <span className="text-outline-variant font-body-sm">•</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Live Ping: 28ms</span>
@@ -124,7 +124,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </button>
 
 <button className="px-space-lg py-2 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all flex items-center gap-2 shadow-sm" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/seller-wallet-payouts'); }}>
-<span>Escrow &amp; Payouts</span>
+<span>Payment &amp; Payouts</span>
 <span className="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">8</span>
 </button>
 
@@ -169,7 +169,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap">
 <span className="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center gap-1 font-bold">
 <span className="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
-                  URGENT ESCROW HOLD
+                  URGENT Payment Hold
                 </span>
 <span className="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px]">Unread</span>
 </div>
@@ -178,12 +178,12 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="pl-1">
 <h3 className="font-headline-sm text-[16px] text-on-surface font-bold tracking-tight">Dispute #DSP-88219 filed for Order #SC-97810</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
-                UGX 342,000 temporarily held in Bank of Uganda sandbox. Merchant response window ends in 14 hours.
+                UGX 342,000 temporarily held in Pesapal sandbox. Merchant response window ends in 14 hours.
               </p>
 <div className="mt-space-md pt-space-xs flex items-center justify-between flex-wrap gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
 <div className="flex items-center gap-2">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Docket:</span>
-<span className="font-label-sm text-label-sm text-primary font-mono font-bold">BOU-ESCR-7489</span>
+<span className="font-label-sm text-label-sm text-primary font-mono font-bold">Pesapal-ESCR-7489</span>
 </div>
 <div className="flex items-center gap-1 text-primary-container font-label-sm text-label-sm font-bold">
 <Icon name="timer" className="text-[15px]" />
@@ -282,14 +282,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-start justify-between gap-space-sm mb-space-xs">
 <span className="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 font-bold">
 <Icon name="verified_user" className="text-[13px]" />
-                KYC &amp; REGULATORY ATTESTATION
+                KYC &amp; Verification Approved
               </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant shrink-0">Oct 22</span>
 </div>
 <div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold">Annual URSB Business Certificate Verified</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
-                Uganda Registration Services Bureau attestation logged. Tier 3 daily payout limit maintained at UGX 20,000,000.
+                Uganda Registration Services Bureau Verification Approved logged. Tier 3 daily payout limit maintained at UGX 20,000,000.
               </p>
 </div>
 </article>
@@ -307,7 +307,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-space-xs">
 <Icon name="report_problem" className="text-error text-[20px]" />
 <span className="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">
-                  PRIORITY ESCROW BLOCK • Urgent Action Required
+                  PRIORITY PAYMENT BLOCK • Urgent Action Required
                 </span>
 </div>
 <div className="flex items-center gap-1.5 text-on-surface font-label-md text-label-md">
@@ -330,7 +330,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
                   </span>
 <span className="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="account_balance" className="text-[13px]" />
-                    Bank of Uganda Escrow Custody
+                    Pesapal payment holding
                   </span>
 </div>
 </div>
@@ -356,7 +356,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm text-error bg-error-container px-1.5 py-0.2 rounded font-bold">Tampered Packaging</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Buyer <span className="font-label-md text-label-md text-on-surface">Nantongo Grace</span> reported torn tamper seal tape at handover. SafeBoda rider paused handover OTP exchange.
+                  Buyer <span className="font-label-md text-label-md text-on-surface">Nantongo Grace</span> reported torn package seal tape at handover. SafeBoda rider paused handover OTP exchange.
                 </p>
 
 <div className="pt-space-xs flex items-center gap-space-sm">
@@ -406,7 +406,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div>
 <h4 className="font-label-md text-label-md text-on-surface font-bold">Nakasero Hub CCTV Outbound Sealing Tape Log</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                    Barcode SC-97810 scanned at 14:02:18 EAT • Station 03 (Tamper seal intact)
+                    Barcode SC-97810 scanned at 14:02:18 EAT • Station 03 (package seal intact)
                   </p>
 </div>
 </div>
@@ -418,7 +418,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 
 <div className="space-y-space-sm pt-space-xs">
 <div className="flex items-center justify-between">
-<h4 className="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">Escrow &amp; Custody Telematics Audit Trail</h4>
+<h4 className="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">Payment &amp; holding Telematics Audit Trail</h4>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-bold">
 <Icon name="verified" className="text-[14px]" />
                   Ledger Immutable
@@ -432,10 +432,10 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="w-1.5 h-1.5 rounded-full bg-tertiary"></div>
 </div>
 <div className="flex items-baseline justify-between gap-space-sm">
-<span className="font-label-md text-label-md text-on-surface">Order Placed &amp; Escrow Committed</span>
+<span className="font-label-md text-label-md text-on-surface">Order Placed &amp; Payment Committed</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant font-mono">11:21 EAT</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Buyer payment of UGX 342,000 received via Airtel Money UG (+256 701 ••• 882) into Swift Escrow ledger.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Buyer payment of UGX 342,000 received via Airtel Money UG (+256 701 ••• 882) into Swift Payment Holds.</p>
 </div>
 
 <div className="relative">
@@ -465,7 +465,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="gavel" className="text-surface text-[12px]" />
 </div>
 <div className="flex items-baseline justify-between gap-space-sm">
-<span className="font-label-md text-label-md text-error font-bold">Dispute Logged &amp; Escrow Frozen</span>
+<span className="font-label-md text-label-md text-error font-bold">Dispute Logged &amp; payment frozen</span>
 <span className="font-body-sm text-body-sm text-error font-mono font-bold">14:48 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Customer uploaded photos citing torn seal tape. Merchant SLA clock started automatically.</p>
@@ -496,7 +496,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="hub" className="text-primary text-[22px]" />
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Escrow &amp; Dispatch Alert Routing</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">Payment &amp; Dispatch Alert Routing</h3>
 </div>
 <span className="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
@@ -504,7 +504,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             </span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-            Define multi-channel fallback relays for urgent payout holds, rider telematics delays, and Bank of Uganda compliance pings.
+            Define multi-channel fallback relays for urgent payout holds, rider telematics delays, and Pesapal compliance pings.
           </p>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
@@ -550,7 +550,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div>
 <span className="font-label-md text-label-md text-on-surface block font-bold">WhatsApp</span>
 <span className="font-body-sm text-[11px] text-primary font-bold block">Instant Ping</span>
-<span className="font-body-sm text-[11px] text-on-surface-variant mt-0.5 block">High-Value Escrow Holds</span>
+<span className="font-body-sm text-[11px] text-on-surface-variant mt-0.5 block">High-Value Payment Holds</span>
 </div>
 </div>
 

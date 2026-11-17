@@ -213,7 +213,7 @@ export const SellerApplicationStatus: React.FC<SellerApplicationStatusProps> = (
 <Icon name="shield" className="text-[20px]" />
 </div>
 <div className="min-w-0 flex-1">
-<h4 className="font-label-md text-label-md text-on-surface">Swift Escrow Protected</h4>
+<h4 className="font-label-md text-label-md text-on-surface">Payment Protected</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
             Your money is held securely by SwiftCart until you confirm customer delivery. Payouts are instant to MTN MoMo or Airtel Money.
           </p>

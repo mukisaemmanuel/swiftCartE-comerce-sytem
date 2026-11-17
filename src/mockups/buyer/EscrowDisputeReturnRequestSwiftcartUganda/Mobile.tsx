@@ -19,7 +19,7 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(14,27,77,0.04)]"><div className="h-20 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Go back" className="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0 hidden xs:block" src={"/brand/swiftcart-logo-icon.png"} /><div className="flex flex-col min-w-0 pr-1"><div className="flex items-center gap-space-xs"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Dispute &amp; Return Request</h1></div><div className="flex items-center gap-space-sm mt-0.5"><span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-bold tracking-wide">#ORD-8942</span><span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-bold"><Icon name="verified_user" className="text-[13px]" />Swift Escrow Protected</span></div></div></div><div className="flex items-center shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(218,55,0,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
+      <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(14,27,77,0.04)]"><div className="h-20 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Go back" className="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all"><Icon name="arrow_back" className="text-[24px]" /></button><img alt="SwiftCart" className="h-8 w-auto object-contain shrink-0 hidden xs:block" src={"/brand/swiftcart-logo-icon.png"} /><div className="flex flex-col min-w-0 pr-1"><div className="flex items-center gap-space-xs"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Dispute &amp; Return Request</h1></div><div className="flex items-center gap-space-sm mt-0.5"><span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-bold tracking-wide">#ORD-8942</span><span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-bold"><Icon name="verified_user" className="text-[13px]" />Payment Protected</span></div></div></div><div className="flex items-center shrink-0"><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(218,55,0,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header>
 <main className="flex-1 flex flex-col relative w-full pt-20 pb-safe bg-surface"><div className="flex flex-col w-full pb-32">
 
 <section className="px-margin pt-space-md">
@@ -36,11 +36,11 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 </div>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-snug">
-        Filing this dispute <strong className="text-primary font-bold">immediately freezes SoundCore Uganda Official's payout</strong>. Your UGX 385,000 remains locked safely inside the SwiftCart Escrow Vault.
+        Filing this dispute <strong className="text-primary font-bold">immediately freezes SoundCore Uganda Official's payout</strong>. Your UGX 385,000 remains locked safely inside the SwiftCart Payment Reserve.
       </p>
 <div className="mt-space-sm pt-space-xs flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
 <Icon name="verified" className="text-tertiary text-[16px]" />
-<span>Escrow Reference: <strong className="font-bold text-on-surface">ESC-99214-UG</strong></span>
+<span>Payment Reference: <strong className="font-bold text-on-surface">ESC-99214-UG</strong></span>
 </div>
 </div>
 </section>
@@ -180,7 +180,7 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 <h3 className="font-label-lg text-label-lg text-on-surface">Upload Proof (Photos / Video)</h3>
 <span className="font-label-sm text-label-sm text-tertiary font-bold">1 of 3 uploaded</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Required for fast dispute validation by Kampala arbitration desk.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Required for fast dispute validation by Kampala Dispute Desk.</p>
 
 <div className="grid grid-cols-3 gap-space-sm">
 
@@ -206,14 +206,14 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 <Icon name="qr_code_scanner" className="text-[20px]" />
 </div>
 <span className="font-label-sm text-label-sm text-on-surface font-bold">Scan Box S/N</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant text-[9px] mt-0.5">Tamper seal</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant text-[9px] mt-0.5">package seal</span>
 </button>
 </div>
 
 <div className="mt-space-sm p-space-sm rounded-lg bg-surface-container-low flex items-start gap-2">
 <Icon name="lightbulb" className="text-primary text-[18px] shrink-0 mt-0.5" />
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-<strong className="font-bold text-on-surface">Arbitration Tip:</strong> Close-up photos of the serial number (#SC-9821) and packaging seals accelerate escrow decisions to under 4 hours.
+<strong className="font-bold text-on-surface">dispute review Tip:</strong> Close-up photos of the serial number (#SC-9821) and packaging seals accelerate payment decisions to under 4 hours.
       </p>
 </div>
 </section>
@@ -252,7 +252,7 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-bold">Zero Fee</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-            Full UGX 385,000 returned to MTN MoMo <strong className="text-on-surface font-bold">+256 772 345 678</strong> instantly upon escrow release.
+            Full UGX 385,000 returned to MTN MoMo <strong className="text-on-surface font-bold">+256 772 345 678</strong> instantly upon Payment Release.
           </p>
 </div>
 <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 self-center">
@@ -324,7 +324,7 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 <div className="flex-1">
 <h4 className="font-label-md text-label-md text-on-surface font-bold">SwiftCart Fair Trade Guarantee</h4>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
-          Your dispute is backed by Uganda Consumer Protection Regulations. Our Kampala arbitration desk mediates between buyer and merchant within 4 to 12 hours. Merchant cannot withdraw or touch locked escrow funds until case resolution.
+          Your dispute is backed by Uganda Consumer Protection Regulations. Our Kampala Dispute Desk mediates between buyer and merchant within 4 to 12 hours. Merchant cannot withdraw or touch locked held funds until case resolution.
         </p>
 </div>
 </div>
@@ -339,7 +339,7 @@ export const EscrowDisputeReturnRequestSwiftcartUganda: React.FC<EscrowDisputeRe
 </button>
 <div className="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
 <Icon name="shield" className="text-tertiary text-[14px]" />
-<span>Kampala Escrow Custody • 100% Free Dispute Resolution</span>
+<span>Kampala payment holding • 100% Free Dispute Resolution</span>
 </div>
 </div>
 </div>

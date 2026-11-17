@@ -42,7 +42,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Merchant Wallet &amp; Automated Payouts</h1>
 <span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-sm">
 <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-              Direct Escrow Settlement Active
+              Direct payment settlement Active
             </span>
 </div>
 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
@@ -53,7 +53,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-outline-variant">•</span>
 <span className="flex items-center gap-1">
 <Icon name="account_balance" className="text-secondary text-[16px]" />
-              Bank of Uganda Regulatory Sandbox ID: <span className="font-mono font-medium text-on-surface">BOU-NPS-2024-918</span>
+              Pesapal Regulatory Sandbox ID: <span className="font-mono font-medium text-on-surface">Pesapal-Pesapal Rails-2024-918</span>
 </span>
 </div>
 </div>
@@ -74,7 +74,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="flex items-center gap-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface px-space-md py-2.5 rounded-xl font-label-md text-label-md transition-all shadow-[0_1px_4px_rgba(14,27,77,0.04)]">
 <Icon name="receipt" className="text-[18px] text-secondary" />
-<span>EFRIS Tax Report</span>
+<span>E-INVOICE Tax Report</span>
 </button>
 
 <button className="flex items-center gap-2 bg-gradient-to-r from-[#FF8A1F] to-primary-container text-on-primary-container hover:brightness-105 active:scale-[0.98] px-space-lg py-2.5 rounded-xl font-label-lg text-label-lg shadow-[0_4px_14px_rgba(218,55,0,0.25)] transition-all">
@@ -115,7 +115,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_2px_8px_rgba(14,27,77,0.04)] relative overflow-hidden flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="space-y-1">
-<span className="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Escrow Custody Vault</span>
+<span className="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">payment holding reserve</span>
 <div className="flex items-baseline gap-1 mt-1">
 <span className="font-currency-code text-currency-code text-on-surface-variant whitespace-nowrap">UGX</span>
 <span className="font-headline-lg text-headline-lg text-on-surface tracking-tight">12,450,000</span>
@@ -132,7 +132,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           </p>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
 <span className="text-tertiary font-semibold">Central Bank Protected</span>
-<span className="text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">100% Insured</span>
+<span className="text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">100% protected</span>
 </div>
 </div>
 </div>
@@ -180,7 +180,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             Effective Rate: 2.85% (SafeBoda Subsidy Applied)
           </p>
 <div className="flex items-center justify-between font-label-sm text-label-sm">
-<span className="text-secondary font-semibold">URA EFRIS E-Invoicing</span>
+<span className="text-secondary font-semibold">Tax E-INVOICE E-Invoicing</span>
 <span className="text-tertiary bg-tertiary-fixed/30 px-1.5 py-0.5 rounded font-bold">Auto-Filed</span>
 </div>
 </div>
@@ -298,7 +298,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="arrow_upward" className="text-primary text-[18px] shrink-0 mt-0.5" />
 <div className="min-w-0">
 <p className="font-label-md text-label-md text-on-surface leading-tight">Min Auto-Disburse Floor</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 500,000 (Balances below hold in escrow)</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 500,000 (Balances below hold held until delivery)</p>
 </div>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
@@ -326,7 +326,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-lg space-y-space-md">
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
 <div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Escrow Clearing &amp; Settlement Ledger</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Payment Clearing &amp; Settlement Ledger</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Live cryptographically validated transaction journal with telecom carrier callbacks</p>
 </div>
 <div className="flex items-center gap-space-sm">
@@ -356,13 +356,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             MoMo Payouts (42)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors">
-            Escrow Releases (112)
+            Payment Releases (112)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors">
             Dispute Holds (2)
           </button>
 <button className="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 transition-colors">
-            EFRIS Tax Deductions (28)
+            E-INVOICE Tax Deductions (28)
           </button>
 </div>
 </div>
@@ -429,7 +429,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-3.5 px-space-md whitespace-nowrap">
 <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
-<Icon name="lock_open" className="text-[12px]" /> Escrow Handover
+<Icon name="lock_open" className="text-[12px]" /> Payment Handover
                 </span>
 </td>
 <td className="py-3.5 px-space-md text-on-surface font-medium whitespace-nowrap">
@@ -464,7 +464,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-3.5 px-space-md whitespace-nowrap">
 <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
-<Icon name="lock_open" className="text-[12px]" /> Escrow Handover
+<Icon name="lock_open" className="text-[12px]" /> Payment Handover
                 </span>
 </td>
 <td className="py-3.5 px-space-md text-on-surface font-medium whitespace-nowrap">
@@ -588,7 +588,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">99.98% Up</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Automatic retry queue with cryptographic idempotency key prevents duplicated disbursements.
+            Automatic retry queue with verified idempotency key prevents duplicated disbursements.
           </p>
 </div>
 </div>
@@ -614,11 +614,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="space-y-1">
 <div className="flex items-center gap-2">
-<h3 className="font-label-md text-label-md text-on-surface">Bank of Uganda Escrow Policy</h3>
+<h3 className="font-label-md text-label-md text-on-surface">Pesapal payment protection policy</h3>
 <span className="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">Sec 14 Compliant</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Funds from buyers are locked in licensed custodian partner trust accounts until delivery verification code is confirmed.
+            Funds from buyers are locked in registered custodian partner trust accounts until delivery verification code is confirmed.
           </p>
 </div>
 </div>

@@ -134,7 +134,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
             />
           </div>
 
-          {/* Escrow Protection */}
+          {/* Payment Protection */}
           <PaymentProtectionNotice />
         </div>
 
@@ -206,7 +206,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
           {/* Action Buttons for Buyer */}
           <div className="space-y-2">
             <button
-              onClick={() => onNavigate(`/escrow-dispute-return-request?orderId=${order?.id || 'order-1001'}`)}
+              onClick={() => onNavigate(`/payment-dispute-return-request?orderId=${order?.id || 'order-1001'}`)}
               className="w-full py-3 rounded-xl border border-slate-200 text-[#0E1B4D] font-bold text-xs sm:text-sm hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5 min-h-[44px]"
             >
               <Icon name="assignment_return" className="text-base" />
@@ -218,7 +218,7 @@ export const OrderDetailPage: React.FC<OrderDetailPageProps> = ({ onNavigate }) 
               className="w-full py-3 rounded-xl border border-red-200 text-red-600 font-bold text-xs sm:text-sm hover:bg-red-50 transition-colors flex items-center justify-center gap-1.5 min-h-[44px]"
             >
               <Icon name="gavel" className="text-base" />
-              <span>Open Escrow Dispute</span>
+              <span>Open Payment Dispute</span>
             </button>
           </div>
         </div>

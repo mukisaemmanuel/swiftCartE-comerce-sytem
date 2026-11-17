@@ -40,7 +40,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-4">
 <div className="flex items-start justify-between">
 <div>
-<span className="font-label-sm text-label-sm text-primary uppercase tracking-widest block font-bold">Field Logistics &amp; High-Integrity Escrow Fleet</span>
+<span className="font-label-sm text-label-sm text-primary uppercase tracking-widest block font-bold">Field Logistics &amp; High-Integrity Payment Fleet</span>
 <h1 className="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">Fleet Operations &amp; Couriers Roster</h1>
 </div>
 <div className="flex items-center gap-2">
@@ -261,7 +261,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-md text-label-md font-bold">4.65</span>
 <span className="text-on-surface-variant font-body-sm text-body-sm">(612)</span>
 </div>
-<span className="font-label-sm text-label-sm text-danger-penalty font-bold uppercase tracking-wider">Escrow Blocked</span>
+<span className="font-label-sm text-label-sm text-danger-penalty font-bold uppercase tracking-wider">Payment Blocked</span>
 </div>
 </div>
 
@@ -484,7 +484,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center justify-between my-1">
 <div className="flex flex-col">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Cryptographic Delivery Token:</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Verified Delivery Token:</span>
 <span className="font-label-sm text-label-sm text-amber-warning font-semibold">Awaiting 4-Digit Buyer Entry on Rider Mobile</span>
 </div>
 <div className="flex gap-1">
@@ -494,7 +494,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="w-6 h-7 rounded bg-surface-dark flex items-center justify-center font-code-display text-on-surface-variant text-label-md">•</span>
 </div>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Rider cannot release escrow without physical OTP match.</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Rider cannot release payment without physical OTP match.</span>
 </div>
 </div>
 </div>
@@ -514,15 +514,15 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-tertiary font-extrabold whitespace-nowrap">UGX 55,000</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">MTN MoMo Payout</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Settled via Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Settled via Payment</span>
 </div>
 <div className="p-3.5 rounded-2xl bg-container-dark-low shadow-sm flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow in Custody</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment on Hold</span>
 <div className="my-1">
 <span className="font-headline-sm text-headline-sm text-amber-warning font-extrabold whitespace-nowrap">UGX 248,500</span>
 <span className="font-label-sm text-label-sm text-amber-warning/80 block mt-0.5">Active Cargo Value</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Underwriter Insured</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Underwriter protected</span>
 </div>
 <div className="p-3.5 rounded-2xl bg-container-dark-low shadow-sm flex flex-col justify-between">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Incident Rate</span>

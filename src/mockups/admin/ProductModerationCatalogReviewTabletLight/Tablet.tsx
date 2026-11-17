@@ -169,7 +169,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                         </div>
                         <span className="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
                           <Icon name="shield_locked" className="text-[13px]" />
-                          High-Value Escrow Gate
+                          High-Value Payment Gate
                         </span>
                       </div>
                     </div>
@@ -359,7 +359,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                       <span className="font-headline-sm text-[18px] text-tertiary font-extrabold">98.4%</span>
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Completed</span>
+                      <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Payment Completed</span>
                       <span className="font-headline-sm text-[18px] text-on-surface font-extrabold">420 Units</span>
                     </div>
                     <div className="flex flex-col">
@@ -450,7 +450,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                       </li>
                       <li className="flex items-center gap-2">
                         <Icon name="account_balance_wallet" className="text-[16px] text-secondary" />
-                        <span>MTN MoMo &amp; Airtel Money Escrow held until customer PIN validation.</span>
+                        <span>MTN MoMo &amp; Airtel money payment held until customer PIN validation.</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Icon name="inventory_2" className="text-[16px] text-secondary" />
@@ -464,7 +464,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <label className="font-label-md text-label-md text-on-surface font-bold" htmlFor="moderator-note">Internal Moderator Compliance Note</label>
-                      <span className="font-label-sm text-label-sm text-on-surface-variant">Signed by: Officer Patricia Namubiru (KLA-8842-SA)</span>
+                      <span className="font-label-sm text-label-sm text-on-surface-variant">Signed by: Officer Denis Mukasa (KLA-8842-SA)</span>
                     </div>
                     <textarea className="w-full p-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none focus:shadow-[0_0_0_2px_#da3700] transition-all resize-none" id="moderator-note" placeholder="Provide reason or conditional approval comment for the merchant audit ledger..." rows={2}>AI serial mismatch flag reviewed and cleared. GS1 barcode validates against Anker East Africa consignment #ANK-UG-882. Packaging intact, genuine serial registered. Verified for Swift Express dispatch.</textarea>
                   </div>

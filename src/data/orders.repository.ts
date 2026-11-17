@@ -70,7 +70,8 @@ export class MockOrdersRepository implements OrdersRepository {
       orderNumber: `SWIFT-UG-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`,
       status: order.status || 'PENDING',
       paymentStatus: order.paymentStatus || 'PENDING',
-      escrowStatus: order.escrowStatus || 'HELD_IN_ESCROW',
+      paymentHoldStatus: order.paymentHoldStatus || order.escrowStatus || 'HELD',
+      escrowStatus: order.paymentHoldStatus || order.escrowStatus || 'HELD',
       createdAt: new Date().toISOString(),
       items: order.items || [],
       subtotal: order.subtotal || 0,
@@ -107,8 +108,10 @@ export class MockOrdersRepository implements OrdersRepository {
     order.status = status;
     if (status === 'PAID') {
       order.paymentStatus = 'PAID';
-      order.escrowStatus = 'HELD_IN_ESCROW';
+      order.paymentHoldStatus = 'HELD';
+      order.escrowStatus = 'HELD';
     } else if (status === 'DELIVERED') {
+      order.paymentHoldStatus = 'RELEASED';
       order.escrowStatus = 'RELEASED';
     }
 
@@ -181,7 +184,8 @@ export class MockOrdersRepository implements OrdersRepository {
 
     if (order) {
       order.status = 'DISPUTED';
-      order.escrowStatus = 'FROZEN_DISPUTE';
+      order.paymentHoldStatus = 'DISPUTED';
+      order.escrowStatus = 'DISPUTED';
     }
 
     this.disputes.unshift(newDispute);

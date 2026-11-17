@@ -78,7 +78,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="trending_up" className="text-[15px]" />
             +8.4% vs avg
           </span>
-<span className="font-body-sm text-body-sm text-outline">100% cryptographic capture</span>
+<span className="font-body-sm text-body-sm text-outline">100% system audit capture</span>
 </div>
 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary/40 via-secondary to-transparent"></div>
 </div>
@@ -97,7 +97,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-xs flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">3 Role • 2 Escrow • 2 Root</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">3 Role • 2 Payment • 2 Root</span>
 <span className="font-label-sm text-label-sm text-tertiary">All 2FA Confirmed</span>
 </div>
 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-warning/40 via-amber-warning to-transparent"></div>
@@ -117,7 +117,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-xs flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-outline">Stanbic Anchor synced</span>
+<span className="font-body-sm text-body-sm text-outline">Pesapal Settlement Anchor synced</span>
 <span className="font-label-sm text-label-sm text-secondary-fixed">2m ago</span>
 </div>
 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-tertiary/40 via-emerald-escrow to-transparent"></div>
@@ -137,7 +137,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-md pt-space-xs flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-outline">Enclave chassis sealed</span>
+<span className="font-body-sm text-body-sm text-outline">Server nodes verified</span>
 <span className="font-label-sm text-label-sm text-tertiary">0 Tamper Alerts</span>
 </div>
 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-container/40 via-action-gradient-start to-transparent"></div>
@@ -155,7 +155,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full h-11 appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 rounded-lg cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
 <option>Category: All</option>
 <option>Privileged Escalation</option>
-<option>Escrow &amp; Funds</option>
+<option>Payment &amp; Funds</option>
 <option>KYC &amp; Onboarding</option>
 <option>Platform Settings</option>
 <option>Dispatch &amp; Riders</option>
@@ -178,10 +178,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full h-11 appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 rounded-lg cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
 <option>Actor: All Officers</option>
 <option>Kizito Ronald (ADM-001)</option>
-<option>Patricia Namubiru (ADM-004)</option>
+<option>Denis Mukasa (ADM-004)</option>
 <option>Sarah Auma (ADM-012)</option>
 <option>Brian Mukasa (ADM-022)</option>
-<option>Automated Enclave Daemon</option>
+<option>Automated System Worker</option>
 </select>
 <Icon name="arrow_drop_down" className="absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]" />
 </div>
@@ -211,7 +211,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               Privileged (7)
             </button>
 <button className="px-3 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-all whitespace-nowrap">
-              Financial &amp; Escrow (412)
+              Financial &amp; Payment (412)
             </button>
 <button className="px-3 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-all whitespace-nowrap">
               Auth &amp; 2FA (1,290)
@@ -235,7 +235,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-1">
 <div>Actor: <strong className="text-on-surface">Kizito Ronald</strong> <span className="text-outline font-label-sm text-label-sm">(ADM-001)</span></div>
-<div>Target: <strong className="text-secondary">Patricia Namubiru</strong> <span className="text-outline font-label-sm text-label-sm">(ADM-004)</span></div>
+<div>Target: <strong className="text-secondary">Denis Mukasa</strong> <span className="text-outline font-label-sm text-label-sm">(ADM-004)</span></div>
 </div>
 <div className="flex items-center justify-between pt-2 mt-1 text-label-sm font-label-sm flex-wrap gap-2">
 <div className="flex items-center gap-2 font-mono text-outline">
@@ -346,13 +346,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-start justify-between gap-2">
 <div className="flex items-center gap-2">
 <span className="px-2 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container/40 text-secondary uppercase font-bold tracking-wider">INFO</span>
-<span className="font-code-display text-[15px] font-bold text-on-surface">SESSION_ROOT_KEY_ATTESTATION</span>
+<span className="font-code-display text-[15px] font-bold text-on-surface">SESSION_ROOT_KEY_Verification Approved</span>
 </div>
 <span className="font-label-sm text-label-sm text-outline whitespace-nowrap">09:00:00 EAT</span>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-1">
-<div>Actor: <strong className="text-tertiary">System Cron / Enclave Daemon</strong></div>
-<div>Target: Hardware Security Module #01 (HSM-KLA)</div>
+<div>Actor: <strong className="text-tertiary">System Cron / Background Worker</strong></div>
+<div>Target: Security Gateway Node (SEC-KLA)</div>
 </div>
 <div className="flex items-center justify-between pt-2 mt-1 text-label-sm font-label-sm flex-wrap gap-2">
 <div className="flex items-center gap-2 font-mono text-outline">
@@ -414,14 +414,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="text-on-surface font-semibold">196.12.140.22 <span className="text-outline font-normal">(Kololo NOC)</span></div>
 </div>
 <div>
-<div className="text-outline text-label-sm font-label-sm">Hardware Token Proof</div>
+<div className="text-outline text-label-sm font-label-sm">Two-Factor Authenticator Proof</div>
 <div className="text-emerald-escrow font-semibold flex items-center gap-1">
 <Icon name="fingerprint" className="text-[14px]" />
                 YubiKey 5C NFC Verified
               </div>
 </div>
 <div>
-<div className="text-outline text-label-sm font-label-sm">Browser &amp; OS Enclave</div>
+<div className="text-outline text-label-sm font-label-sm">Browser & Device Security</div>
 <div className="text-on-surface font-semibold">Firefox 131.0 on macOS</div>
 </div>
 </div>
@@ -452,7 +452,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface truncate">Kizito Ronald (Lead Super Admin)</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow">Initiated</span>
 </div>
-<span className="font-body-sm text-body-sm text-outline">Verified with Master Cryptographic Password + Biometrics</span>
+<span className="font-body-sm text-body-sm text-outline">Verified with Master Verified Password + Biometrics</span>
 </div>
 </div>
 
@@ -465,12 +465,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface truncate">A. Kato (Secondary Super Admin ADM-002)</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow">Co-Signed</span>
 </div>
-<span className="font-body-sm text-body-sm text-outline">Hardware Token Push Authorized at 14:18:19 EAT</span>
+<span className="font-body-sm text-body-sm text-outline">Two-Factor Authenticator at 14:18:19 EAT</span>
 </div>
 </div>
 <div className="p-2.5 rounded bg-surface-dark/70 text-body-sm font-body-sm text-on-surface-variant flex items-start gap-2">
 <Icon name="gavel" className="text-amber-warning text-[18px] shrink-0 mt-0.5" />
-<span>Governance Note: <strong className="text-on-surface">Appointed Interim Chief Compliance Officer</strong> per Board Resolution BR-2025-09 (Uganda NPS Directive §4).</span>
+<span>Governance Note: <strong className="text-on-surface">Appointed Interim Head of Operations</strong> per operations schedule BR-2025-09 (Platform Merchant Terms §4).</span>
 </div>
 </div>
 
@@ -478,7 +478,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline flex items-center gap-1.5">
 <Icon name="terminal" className="text-[16px] text-secondary" />
-              Signed Cryptographic Payload &amp; Merkle Leaf
+              Signed Digital Audit Record & Log Entry
             </span>
 <button className="font-label-sm text-label-sm text-primary hover:text-primary-fixed transition-colors flex items-center gap-1" id="copyJsonBtn">
 <Icon name="content_copy" className="text-[14px]" />
@@ -504,11 +504,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col gap-2 pt-1">
 <button className="w-full h-11 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2 active:scale-95">
 <Icon name="picture_as_pdf" className="text-action-gradient-start text-[18px]" />
-<span>Download Cryptographic Certificate (PDF)</span>
+<span>Download Audit Log Certificate (PDF)</span>
 </button>
 <button className="w-full h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-label-md transition-all flex items-center justify-center gap-2 active:scale-95">
 <Icon name="account_balance" className="text-[17px]" />
-<span>Re-Verify Block Against Stanbic Trust Anchor</span>
+<span>Re-Verify Block Against Pesapal Settlement Anchor</span>
 </button>
 </div>
 </div>
@@ -520,9 +520,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="policy" className="text-[22px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">Legal Compliance &amp; Regulatory Attestation</span>
+<span className="font-label-md text-label-md text-on-surface">Legal Compliance &amp; Verification Approved</span>
 <p className="font-body-sm text-body-sm text-outline mt-0.5 leading-normal max-w-4xl">
-            All audit logs are immutably signed pursuant to the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011) §18</strong> and <strong className="text-on-surface">Bank of Uganda National Payment Systems (NPS) Regulatory Ledger Standards</strong>. Zero-knowledge cryptographic rollups are committed to offsite cold storage nodes every 10 minutes.
+            All audit logs are immutably signed pursuant to the <strong className="text-on-surface">Uganda Electronic Transactions Act (2011) §18</strong> and <strong className="text-on-surface">Pesapal Gateway Digital Standards</strong>. Zero-knowledge verified rollups are committed to offsite cold storage nodes every 10 minutes.
           </p>
 </div>
 </div>

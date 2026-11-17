@@ -125,7 +125,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="bg-primary-fixed/40 rounded-lg px-space-sm py-1.5 flex items-center justify-between gap-space-xs">
 <div className="flex items-center gap-1.5 min-w-0">
 <Icon name="confirmation_number" className="text-[16px] text-primary-container" />
-<span className="font-label-md text-label-md text-on-primary-fixed truncate">5% OFF next escrow order</span>
+<span className="font-label-md text-label-md text-on-primary-fixed truncate">5% OFF next payment order</span>
 </div>
 <span className="font-label-sm text-label-sm text-primary px-1.5 py-0.5 rounded bg-surface-container-lowest uppercase tracking-wider shrink-0 font-bold">Claimed</span>
 </div>
@@ -194,7 +194,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
               </span>
 <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
 <Icon name="shield" className="text-[12px]" />
-                Escrow Verified
+                payment verified
               </span>
 </div>
 </div>
@@ -354,7 +354,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <Icon name="shield_with_heart" className="text-[18px] text-tertiary" />
 </div>
 <div className="flex flex-col gap-0.5">
-<span className="font-label-md text-label-md text-on-surface">Escrow Protected</span>
+<span className="font-label-md text-label-md text-on-surface">Payment Protected</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
           Your money is held securely by SwiftCart via MTN MoMo / Airtel Money until you inspect and confirm your goods in hand.
         </p>

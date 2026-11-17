@@ -194,7 +194,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 <span className="px-1.5 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold uppercase tracking-wider text-[9px]">Critical • 6h Freeze</span>
 <span className="font-label-sm text-label-sm text-secondary font-mono">#RT-309</span>
 </div>
-<h3 className="font-label-lg text-label-lg text-on-surface font-bold mt-1 leading-snug">Escrow Dispute: Kampala Smart Hub vs. Buyer</h3>
+<h3 className="font-label-lg text-label-lg text-on-surface font-bold mt-1 leading-snug">Payment Dispute: Kampala Smart Hub vs. Buyer</h3>
 <p className="font-body-sm text-body-sm text-secondary mt-0.5 line-clamp-1 whitespace-nowrap">Item reported damaged screen on UGX 1,450,000 tablet delivery.</p>
 </div>
 </div>
@@ -261,7 +261,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 <span className="font-label-sm text-label-sm text-secondary font-bold">Tier 2 Merchant</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold mt-1 leading-snug">Ssenyonga Electronics Wholesale</h3>
-<p className="font-body-sm text-body-sm text-secondary mt-0.5 line-clamp-1 whitespace-nowrap">UGX 50,000,000 declared initial catalog stock • URA TIN verified.</p>
+<p className="font-body-sm text-body-sm text-secondary mt-0.5 line-clamp-1 whitespace-nowrap">UGX 50,000,000 declared initial catalog stock • Tax ID verified.</p>
 </div>
 </div>
 <div className="flex flex-col items-end shrink-0">
@@ -293,7 +293,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 <span className="font-label-sm text-label-sm text-secondary font-mono">Batch #UG-882</span>
 </div>
 <h3 className="font-label-lg text-label-lg text-on-surface font-bold mt-1 leading-snug whitespace-nowrap">Payout Batch: UGX 12,800,000</h3>
-<p className="font-body-sm text-body-sm text-secondary mt-0.5 line-clamp-1">8 verified merchants • Escrow release conditions satisfied.</p>
+<p className="font-body-sm text-body-sm text-secondary mt-0.5 line-clamp-1">8 verified merchants • Payment Release conditions satisfied.</p>
 </div>
 </div>
 <div className="flex flex-col items-end shrink-0">
@@ -357,7 +357,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 <Icon name="refresh" className="text-[14px]" />Live Feed
       </button>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">Tamper-evident audit log streams directly from cluster workers.</p>
+<p className="font-body-sm text-body-sm text-secondary">Sealed Package Bag audit log streams directly from cluster workers.</p>
 </div>
 
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md" id="audit-feed">
@@ -368,7 +368,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-baseline justify-between gap-1">
-<p className="font-label-md text-label-md text-on-surface font-bold truncate">Patricia Namubiru (Operations)</p>
+<p className="font-label-md text-label-md text-on-surface font-bold truncate">Denis Mukasa (Operations)</p>
 <span className="font-label-sm text-label-sm text-secondary shrink-0 font-mono">2m ago</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary mt-0.5">Approved batch payout to Airtel Money for <span className="font-bold text-on-surface whitespace-nowrap">UGX 4,200,000</span> (Ggaba Market stores).</p>
@@ -386,7 +386,7 @@ export const OverviewSwiftcartAdmin: React.FC<OverviewSwiftcartAdminProps> = (pr
 <p className="font-label-md text-label-md text-on-surface font-bold truncate">SafeBoda Courier #B-201</p>
 <span className="font-label-sm text-label-sm text-secondary shrink-0 font-mono">11m ago</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary mt-0.5">Reported broken security tamper seal on Parcel <span className="font-bold text-on-surface">#SC-8921</span> at Lugogo Mall checkpoint.</p>
+<p className="font-body-sm text-body-sm text-secondary mt-0.5">Reported broken package seal on Parcel <span className="font-bold text-on-surface">#SC-8921</span> at Lugogo Mall checkpoint.</p>
 </div>
 </div>
 

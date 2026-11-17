@@ -175,7 +175,7 @@ export const ScanSwiftcartHubAgent: React.FC<ScanSwiftcartHubAgentProps> = (prop
 </div>
 <div className="flex-1 min-w-0">
 <p className="font-label-sm text-label-sm text-on-surface font-semibold truncate">
-            Level-2 Hologram Foil Tamper Seal Intact
+            Level-2 Hologram Foil package seal Intact
           </p>
 <p className="font-label-sm text-[10px] text-tertiary font-mono">Digital Signature ID: #HLG-9941-KLA</p>
 </div>

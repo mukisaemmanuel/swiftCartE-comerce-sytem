@@ -21,7 +21,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.05)]"><div className="h-16 max-w-6xl mx-auto px-4 flex items-center justify-between"><div className="flex items-center gap-3"><img alt="swiftcart-logo-final.png" className="h-8 w-auto object-contain" src={`${assetBase}/brand/swiftcart-logo-icon.png`} /><span className="font-headline-sm text-headline-sm font-bold text-on-surface">SwiftCart</span><span className="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded bg-surface-container text-secondary font-bold tracking-wider">Checkout</span></div><div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-tertiary font-label-md text-label-md font-semibold"><Icon name="verified" className="text-[18px]" /><span>Bank of Uganda &amp; MoMo Escrow Protected</span></div><div className="flex items-center gap-3"><a className="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}><Icon name="contact_support" className="text-[18px]" /><span className="hidden sm:inline">Live Support</span></a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header><main className="w-full pt-16 bg-background flex-1 flex flex-col"><div className="flex flex-col w-full">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.05)]"><div className="h-16 max-w-6xl mx-auto px-4 flex items-center justify-between"><div className="flex items-center gap-3"><img alt="swiftcart-logo-final.png" className="h-8 w-auto object-contain" src={`${assetBase}/brand/swiftcart-logo-icon.png`} /><span className="font-headline-sm text-headline-sm font-bold text-on-surface">SwiftCart</span><span className="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded bg-surface-container text-secondary font-bold tracking-wider">Checkout</span></div><div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-tertiary font-label-md text-label-md font-semibold"><Icon name="verified" className="text-[18px]" /><span>Pesapal &amp; MoMo Payment Protected</span></div><div className="flex items-center gap-3"><a className="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}><Icon name="contact_support" className="text-[18px]" /><span className="hidden sm:inline">Live Support</span></a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header><main className="w-full pt-16 bg-background flex-1 flex flex-col"><div className="flex flex-col w-full">
 
 <div className="w-full bg-surface-container-lowest shadow-sm py-4 px-6 mb-6">
 <div className="max-w-5xl mx-auto flex items-center justify-between">
@@ -127,7 +127,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
                 </p>
 <div className="flex items-center gap-3 mt-2.5 pt-2 bg-surface-container/60 rounded-lg px-2.5 py-1.5">
 <div className="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
-<Icon name="verified_user" className="text-[16px]" /> Escrow Transit Insurance Included
+<Icon name="verified_user" className="text-[16px]" /> Payment Transit Insurance Included
                   </div>
 <span className="text-secondary">•</span>
 <span className="font-label-sm text-label-sm text-secondary">Rider code handoff</span>
@@ -181,7 +181,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <h2 className="font-headline-sm text-headline-sm font-bold text-on-surface">Payment Method Selection</h2>
 </div>
 <span className="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
-<Icon name="lock" className="text-[16px]" /> Uganda Escrow Secured
+<Icon name="lock" className="text-[16px]" /> Uganda payment secured
             </span>
 </div>
 <div className="space-y-3">
@@ -195,15 +195,15 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="px-2.5 py-1 rounded bg-[#ffcc00] text-black font-extrabold text-[12px] tracking-tight">MTN MoMo</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface">MTN Mobile Money</span>
 </div>
-<span className="font-label-sm text-label-sm font-bold text-tertiary px-2 py-0.5 rounded bg-tertiary-fixed/40">USSD *165# Instant</span>
+<span className="font-label-sm text-label-sm font-bold text-tertiary px-2 py-0.5 rounded bg-tertiary-fixed/40">USSD Prompt on Phone</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary mt-1.5">
-                    Instant escrow lock prompt will be triggered to Dennis M. (<strong className="text-on-surface">+256 772 123 456</strong>).
+                    Instant payment lock prompt will be triggered to Dennis M. (<strong className="text-on-surface">+256 772 123 456</strong>).
                   </p>
 <div className="mt-3 p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="security" className="text-primary text-[20px]" />
-<span className="font-body-sm text-body-sm text-on-surface font-medium">Funds held in SwiftCart Vault until code release</span>
+<span className="font-body-sm text-body-sm text-on-surface font-medium">Funds held in SwiftCart reserve until code release</span>
 </div>
 <span className="font-label-sm text-label-sm font-bold text-primary">0% Surcharge</span>
 </div>
@@ -220,7 +220,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="px-2.5 py-1 rounded bg-[#e60000] text-white font-extrabold text-[12px] tracking-tight">Airtel</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface">Airtel Money</span>
 </div>
-<span className="font-label-sm text-label-sm text-secondary font-semibold">USSD *185#</span>
+<span className="font-label-sm text-label-sm text-secondary font-semibold">USSD Mobile prompt</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary mt-1">
                     Pay securely using Airtel Money PIN prompt on your registered Airtel SIM.
@@ -244,7 +244,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-sm text-label-sm text-secondary font-semibold">3D Secure Verified</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary mt-1">
-                    Supports Stanbic, Absa, Centenary Bank &amp; standard international cards.
+                    Supports Pesapal, Absa, Centenary Bank &amp; standard international cards.
                   </p>
 </div>
 </div>
@@ -337,7 +337,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-baseline justify-between pt-1">
 <div>
 <span className="font-label-lg text-label-lg font-bold text-on-surface block">Total Payable</span>
-<span className="font-label-sm text-label-sm text-secondary">All Uganda taxes &amp; VAT included</span>
+<span className="font-label-sm text-label-sm text-secondary">All Uganda taxes &amp; Tax included</span>
 </div>
 <div className="text-right">
 <span className="font-price-display text-price-display font-black text-primary">UGX 388,500</span>
@@ -351,11 +351,11 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="lock_clock" className="text-[14px]" />
 </div>
 <span className="font-label-md text-label-md font-bold text-tertiary uppercase tracking-wide">
-                SwiftCart Escrow Vault
+                SwiftCart Payment Reserve
               </span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary leading-snug">
-              Your payment is strictly locked in safe escrow until Dennis inspects the items and provides the secret <strong className="text-on-surface font-semibold">6-digit handover OTP</strong> to the courier.
+              Your payment is strictly locked in safe payment until Dennis inspects the items and provides the secret <strong className="text-on-surface font-semibold">6-digit handover OTP</strong> to the courier.
             </p>
 </div>
 
@@ -367,7 +367,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex flex-col items-center gap-1.5 pt-1 text-center">
 <div className="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
 <Icon name="security" className="text-[16px] text-tertiary" />
-<span>100% Money-Back Escrow Guarantee • Instant USSD Prompt</span>
+<span>100% Money-Back Payment Protection • Instant USSD Prompt</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary text-[11px]">
               By proceeding, you agree to the <a className="text-primary hover:underline" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>SwiftCart Buyer Protection Terms</a>.

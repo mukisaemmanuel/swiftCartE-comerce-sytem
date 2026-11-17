@@ -8,15 +8,15 @@ export interface HelpCentrePageProps {
 interface FaqItem {
   question: string;
   answer: string;
-  category: 'orders' | 'escrow' | 'returns' | 'general';
+  category: 'orders' | 'payment' | 'returns' | 'general';
 }
 
 const FAQS: FaqItem[] = [
   {
-    category: 'escrow',
-    question: 'How does SwiftCart Escrow protect my payment?',
+    category: 'payment',
+    question: 'How does SwiftCart Protection protect my payment?',
     answer:
-      'When you pay via MTN MoMo, Airtel Money, or Card, your funds are safely held in a protected escrow holding account. The merchant is only credited AFTER you inspect the item and share your 6-digit delivery handover code with the rider or pickup station.',
+      'When you pay via MTN MoMo, Airtel Money, or Card, your funds are safely held in a protected payment protection account. The merchant is only credited AFTER you inspect the item and share your 6-digit delivery handover code with the rider or pickup station.',
   },
   {
     category: 'orders',
@@ -34,7 +34,7 @@ const FAQS: FaqItem[] = [
     category: 'returns',
     question: 'What is the SwiftCart 3-day return policy?',
     answer:
-      'If an item is damaged, defective, or not as described, you can initiate a return or open an escrow dispute within 3 calendar days of delivery. Payout to the seller is immediately frozen while our team assists you with a replacement or full refund.',
+      'If an item is damaged, defective, or not as described, you can initiate a return or open an Payment Dispute within 3 calendar days of delivery. Payout to the seller is immediately frozen while our team assists you with a replacement or full refund.',
   },
   {
     category: 'orders',
@@ -46,7 +46,7 @@ const FAQS: FaqItem[] = [
 
 export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'orders' | 'escrow' | 'returns'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'orders' | 'payment' | 'returns'>('all');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const filteredFaqs = FAQS.filter((faq) => {
@@ -134,14 +134,14 @@ export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) =>
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search questions about escrow, boda delivery, returns..."
+          placeholder="Search questions about payment, boda delivery, returns..."
           className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-[#FF8A1F] shadow-xs"
         />
       </div>
 
       {/* Category Tabs */}
       <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-        {(['all', 'escrow', 'orders', 'returns'] as const).map((cat) => (
+        {(['all', 'payment', 'orders', 'returns'] as const).map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}

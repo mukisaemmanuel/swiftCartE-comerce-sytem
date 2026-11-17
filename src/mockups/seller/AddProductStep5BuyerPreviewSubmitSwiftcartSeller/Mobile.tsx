@@ -223,7 +223,7 @@ export const AddProductStep5BuyerPreviewSubmitSwiftcartSeller: React.FC<AddProdu
 </section>
 
 <section className="px-gutter mt-space-md">
-<div className="bg-surface-container-high rounded-xl p-space-md shadow-sm transition-all" id="attestationCard">
+<div className="bg-surface-container-high rounded-xl p-space-md shadow-sm transition-all" id="Verification ApprovedCard">
 <div className="flex items-start gap-space-sm">
 
 <div className="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
@@ -231,12 +231,12 @@ export const AddProductStep5BuyerPreviewSubmitSwiftcartSeller: React.FC<AddProdu
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center gap-1.5 mb-1">
-<h4 className="font-label-lg text-label-lg font-bold text-on-surface">Merchant Legal Attestation</h4>
+<h4 className="font-label-lg text-label-lg font-bold text-on-surface">Merchant Legal Verification Approved</h4>
 <span className="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-bold">Mandatory</span>
 </div>
 <label className="flex items-start gap-3 cursor-pointer group select-none mt-2">
 <div className="relative flex items-center mt-0.5">
-<input className="sr-only peer" id="merchantAttestationCheckbox" type="checkbox" />
+<input className="sr-only peer" id="merchantVerification ApprovedCheckbox" type="checkbox" />
 <div className="w-5 h-5 rounded bg-surface-container-lowest peer-checked:bg-primary-container flex items-center justify-center shadow-sm transition-colors">
 <Icon name="check" className="text-[16px] text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity font-bold" />
 </div>

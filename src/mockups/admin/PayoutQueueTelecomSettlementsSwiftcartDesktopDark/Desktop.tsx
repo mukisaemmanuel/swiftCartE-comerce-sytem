@@ -94,7 +94,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-2 text-xs font-label-sm text-label-sm text-tertiary">
 <Icon name="verified" className="text-[14px]" />
-<span>Reconciled with Stanbic Escrow</span>
+<span>Reconciled with Pesapal Payment</span>
 </div>
 </div>
 
@@ -163,7 +163,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="px-1.5 py-0.5 rounded-full bg-surface-container-low text-[11px] font-mono">484</span>
 </button>
 <button className="px-space-md py-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-2 whitespace-nowrap transition-colors" type="button">
-<span>Merchant Escrow Releases</span>
+<span>Merchant Payment Releases</span>
 <span className="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-mono">184</span>
 </button>
 <button className="px-space-md py-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-2 whitespace-nowrap transition-colors" type="button">
@@ -353,7 +353,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-space-md px-space-lg">
 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm font-bold">
 <Icon name="lock" className="text-[14px]" />
-                FROZEN IN ESCROW
+                FROZEN HELD UNTIL DELIVERY
               </span>
 </td>
 <td className="py-space-md px-space-lg text-center">
@@ -390,7 +390,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-2">
 <Icon name="account_balance" className="text-[18px] text-secondary" />
 <div className="flex flex-col">
-<span className="font-medium text-on-surface text-xs">Stanbic Bank EFT</span>
+<span className="font-medium text-on-surface text-xs">Pesapal EFT</span>
 <span className="font-code-display text-[11px] text-on-surface-variant">A/C ••• 9482</span>
 </div>
 </div>
@@ -503,7 +503,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-space-sm">
 <div className="flex items-center gap-2">
 <Icon name="account_balance" className="text-secondary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-[16px]">Stanbic Custodial Escrow Pool</span>
+<span className="font-headline-sm text-headline-sm text-[16px]">Pesapal protected settlement pool</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow text-xs font-mono font-bold">100% Fully Backed</span>
 </div>
@@ -575,7 +575,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-bold text-on-surface">T+1 (Nightly 21:00 EAT)</span>
 </div>
 <div className="p-2 rounded-lg bg-surface-container-low flex items-center justify-between">
-<span className="text-on-surface-variant">Stanbic RTGS EFT Batch</span>
+<span className="text-on-surface-variant">Pesapal RTGS EFT Batch</span>
 <span className="font-bold text-on-surface">Daily 11:00 &amp; 16:00 EAT</span>
 </div>
 </div>
@@ -614,7 +614,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h4 className="font-label-md text-label-md text-on-surface uppercase tracking-wider">Settlement Arithmetic</h4>
 <div className="p-space-md rounded-xl bg-surface-container-low space-y-2.5 text-xs font-body-sm">
 <div className="flex justify-between">
-<span className="text-on-surface-variant">Gross Escrow Intake:</span>
+<span className="text-on-surface-variant">Gross Payment Intake:</span>
 <span className="font-mono text-on-surface whitespace-nowrap">UGX 18,200,000</span>
 </div>
 <div className="flex justify-between">
@@ -643,7 +643,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="text-on-surface-variant"><span className="text-tertiary">14:02:12.014</span> [HEADER] X-Target-Telecom: MTN-UGANDA-B2C</div>
 <div className="text-emerald-escrow"><span className="text-tertiary">14:02:12.052</span> [RESPONSE-200] Status: "QUEUED_AT_SWITCH"</div>
 <div className="text-on-surface-variant"><span className="text-tertiary">14:02:12.055</span> [ID-LOCK] TelecomTxnId: "MOMO_UG_9901419202"</div>
-<div className="text-secondary"><span className="text-tertiary">14:02:12.080</span> [ESCROW-AUDIT] Stanbic Mirror Debit Pending Execution</div>
+<div className="text-secondary"><span className="text-tertiary">14:02:12.080</span> [PAYMENT-AUDIT] Pesapal Mirror Debit Pending Execution</div>
 </div>
 </div>
 
@@ -690,7 +690,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="text-xs text-on-surface-variant pt-1">
           • MTN Rail: UGX 94,150,000<br />
           • Airtel Money: UGX 17,100,000<br />
-          • Stanbic EFT: UGX 31,400,000 (Forwarded to next bank clearing)
+          • Pesapal EFT: UGX 31,400,000 (Forwarded to next bank clearing)
         </div>
 </div>
 <div className="flex items-center justify-end gap-space-sm pt-2">

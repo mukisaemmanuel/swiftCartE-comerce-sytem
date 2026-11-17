@@ -100,7 +100,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-extrabold text-[15px] text-on-surface">#SC-ORD-9488</span>
 <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px] uppercase">MTN MoMo</span>
 <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold flex items-center gap-1">
-<Icon name="lock" className="text-[12px] text-emerald-600" /> Escrow Guaranteed
+<Icon name="lock" className="text-[12px] text-emerald-600" /> payment guaranteed
               </span>
 </div>
 <span className="font-extrabold text-[15px] text-on-surface tracking-tight whitespace-nowrap">UGX 388,500</span>
@@ -142,7 +142,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           </p>
 <div className="flex items-center justify-between text-[12px] text-slate-500 mb-2.5">
 <span className="truncate">Patricia K. • Nakasero Hill</span>
-<span className="text-emerald-700 font-bold text-[11px]">Vault Funded</span>
+<span className="text-emerald-700 font-bold text-[11px]">reserve Funded</span>
 </div>
 <div className="flex items-center justify-between gap-2 pt-1 border-t border-slate-100">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-50 text-orange-700 border border-orange-200 text-[11px] font-bold">
@@ -208,7 +208,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2 flex-wrap mb-1">
 <h1 className="text-[20px] font-extrabold text-on-surface tracking-tight">Order #SC-ORD-9488</h1>
 <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold flex items-center gap-1">
-<Icon name="shield" className="text-[13px]" /> UGX 388,500 Frozen in Vault
+<Icon name="shield" className="text-[13px]" /> UGX 388,500 Frozen in reserve
               </span>
 </div>
 <p className="text-[12px] text-slate-500">
@@ -296,7 +296,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between mb-2.5">
 <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Fulfillment Milestones</span>
 <span className="text-[11px] font-bold text-emerald-700 flex items-center gap-1">
-<Icon name="verified_user" className="text-[14px]" /> Escrow Stage 3/4 Complete
+<Icon name="verified_user" className="text-[14px]" /> Payment Stage 3/4 Complete
             </span>
 </div>
 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -350,7 +350,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-2">
 <div className="flex items-center justify-between px-1">
 <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Dispatched Items Manifest (2)</span>
-<span className="text-[11px] font-bold text-slate-600">Total Net: 0.85 kg • Insured</span>
+<span className="text-[11px] font-bold text-slate-600">Total Net: 0.85 kg • protected</span>
 </div>
 <div className="flex flex-col gap-2">
 
@@ -474,7 +474,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2">
 <button className="h-10 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-[12px] font-bold flex items-center justify-center gap-1.5 transition-colors">
 <Icon name="verified" className="text-[17px] text-emerald-700" />
-<span>Verify Tamper Seal</span>
+<span>Verify package seal</span>
 </button>
 <button className="h-10 px-3.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 text-[12px] font-bold flex items-center justify-center gap-1.5 transition-colors">
 <Icon name="gavel" className="text-[17px]" />
@@ -499,7 +499,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>•</span>
 <span>William St Central Hub: <strong>99.8% Online</strong></span>
 <span>•</span>
-<span className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold">Bank of Uganda Escrow Regulated</span>
+<span className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold">Pesapal Payment standard</span>
 </div>
 <div>
 <span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span>

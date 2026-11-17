@@ -35,7 +35,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-sm bg-tertiary-container/10 px-space-md py-space-xs rounded-full">
 <Icon name="verified_user" className="text-tertiary text-[18px]" />
-<span className="text-tertiary font-label-md text-label-md font-bold">Bank of Uganda Regulated Escrow Holding</span>
+<span className="text-tertiary font-label-md text-label-md font-bold">Pesapal Verified Rails payment holding</span>
 </div>
 </div>
 
@@ -396,7 +396,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span>-UGX 20,000</span>
 </div>
 <div className="flex justify-between items-center text-on-surface-variant">
-<span className="text-body-sm font-body-sm">Escrow Protection Service Fee</span>
+<span className="text-body-sm font-body-sm">Payment Protection Service Fee</span>
 <span className="text-tertiary font-label-sm text-label-sm uppercase font-bold">FREE</span>
 </div>
 </div>
@@ -406,7 +406,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex justify-between items-baseline">
 <div className="flex flex-col">
 <span className="font-headline-sm text-headline-sm text-on-surface font-black">Total Payable</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">VAT inclusive where applicable</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Tax inclusive where applicable</span>
 </div>
 <div className="flex items-baseline gap-1">
 <span className="font-currency-code text-currency-code text-primary font-bold">UGX</span>
@@ -423,9 +423,9 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm mt-space-xs">
 <Icon name="verified_user" className="text-tertiary text-[22px] shrink-0 mt-0.5" />
 <div className="flex flex-col text-left">
-<span className="font-label-md text-label-md text-on-surface font-bold">100% Swift Escrow Custody</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">100% swift protection holding</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
-                Your payment is held safely in escrow. Sellers are only paid after you inspect the package in person and verify delivery with your 6-digit confirmation PIN.
+                Your payment is held safely held until delivery. Sellers are only paid after you inspect the package in person and verify delivery with your 6-digit confirmation PIN.
               </p>
 </div>
 </div>
@@ -497,7 +497,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <Icon name="verified_user" className="text-[24px]" />
           </div>
           <div className="flex flex-col">
-            <span className="text-white font-bold text-label-lg">100% Escrow Protection</span>
+            <span className="text-white font-bold text-label-lg">100% Payment Protection</span>
             <span className="text-[13px] text-[#94a3b8] mt-0.5 leading-snug">Funds locked until 6-digit delivery PIN confirmed</span>
           </div>
         </div>
@@ -518,7 +518,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           </div>
           <div className="flex flex-col">
             <span className="text-white font-bold text-label-lg">Zero MoMo Fees</span>
-            <span className="text-[13px] text-[#94a3b8] mt-0.5 leading-snug">Free instant deposit via MTN *165# &amp; Airtel *185#</span>
+            <span className="text-[13px] text-[#94a3b8] mt-0.5 leading-snug">Free instant deposit via MTN Mobile prompt &amp; Airtel Money</span>
           </div>
         </div>
         
@@ -553,11 +553,11 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           </div>
         </div>
         <p className="text-[13px] text-[#94a3b8] leading-relaxed pr-4">
-          Uganda's premier multi-vendor commerce marketplace. Escrow protection, rapid SafeBoda dispatch, and verified merchant hubs across Kampala, Entebbe, and Jinja.
+          Uganda's premier multi-vendor commerce marketplace. Payment protection, rapid SafeBoda dispatch, and verified merchant hubs across Kampala, Entebbe, and Jinja.
         </p>
         <div className="flex items-center gap-2 bg-[#1e293b]/70 border border-[#334155] px-3.5 py-2 rounded-xl text-xs text-white">
           <Icon name="shield" className="text-tertiary-fixed text-[18px]" />
-          <span className="font-semibold">Escrow Protected • National Payment Systems (NPS)</span>
+          <span className="font-semibold">Payment Protected • Pesapal Payment Guidelines</span>
         </div>
       </div>
 
@@ -566,7 +566,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         <h4 className="text-white font-bold text-label-lg tracking-wide uppercase text-xs">Customer Service</h4>
         <ul className="flex flex-col gap-2.5 text-[13px]">
           <li><a href="#" className="hover:text-white transition-colors" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help Center &amp; FAQs</a></li>
-          <li><a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Escrow Dispute Resolution</a></li>
+          <li><a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Payment Dispute Resolution</a></li>
           <li><a href="#" className="hover:text-white transition-colors flex items-center gap-1.5" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}>SafeBoda Express Tracking <span className="bg-[#da3700]/20 text-[#ffb5a1] text-[10px] px-1.5 py-0.5 rounded font-bold">Live</span></a></li>
           <li><a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Returns &amp; Refund Policy</a></li>
           <li><a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Report Unverified Vendor</a></li>
@@ -600,7 +600,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <div className="w-5 h-5 rounded bg-[#FFCC00] flex items-center justify-center text-[#1e1b18] font-bold text-[9px] shrink-0">M</div>
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-xs">MTN MoMo</span>
-              <span className="text-[10px] text-[#94a3b8]">*165# Instant</span>
+              <span className="text-[10px] text-[#94a3b8]">Prompt on Phone</span>
             </div>
           </div>
           
@@ -608,7 +608,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
             <div className="w-5 h-5 rounded bg-[#E51B24] flex items-center justify-center text-white font-bold text-[9px] shrink-0">A</div>
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-xs">Airtel Money</span>
-              <span className="text-[10px] text-[#94a3b8]">*185# Zero Fee</span>
+              <span className="text-[10px] text-[#94a3b8]">Mobile prompt Zero Fee</span>
             </div>
           </div>
           
@@ -630,7 +630,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         </div>
         <div className="mt-2 pt-2 border-t border-[#1e293b] flex items-center gap-2 text-[11px] text-[#64748b]">
           <Icon name="account_balance" className="text-[15px] text-tertiary-fixed" />
-          <span>Regulated under Bank of Uganda National Payment Systems (NPS)</span>
+          <span>standard under Pesapal Payment Guidelines</span>
         </div>
       </div>
     </div>
@@ -647,7 +647,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
         <span>•</span>
         <a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Terms of Service</a>
         <span>•</span>
-        <a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Escrow Protocol</a>
+        <a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Payment Protocol</a>
         <span>•</span>
         <a href="#" className="hover:text-white transition-colors" onClick={() => alertToast('Action triggered')}>Data Protection Compliance</a>
       </div>

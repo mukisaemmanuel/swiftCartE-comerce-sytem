@@ -31,7 +31,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-md text-headline-md text-on-surface tracking-tight">Overpayments, Refunds &amp; Reconciliation Ledger</span>
 <span className="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 shadow-sm">
 <Icon name="gavel" className="text-[14px]" />
-            Bank of Uganda NPS Reversal Protocol §38
+            Pesapal Standard Reversal Protocol
           </span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -56,7 +56,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1 relative overflow-hidden">
 <div className="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-primary-fixed/20 pointer-events-none"></div>
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Refund Pool</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Refund Pool</span>
 <Icon name="account_balance_wallet" className="text-primary text-[20px]" />
 </div>
 <div className="flex items-baseline gap-1 mt-1">
@@ -65,7 +65,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 text-tertiary mt-1">
 <Icon name="format_image_left" className="text-[14px]" />
-<span className="font-label-sm text-label-sm font-semibold">100% Ring-Fenced Escrow</span>
+<span className="font-label-sm text-label-sm font-semibold">100% reserved Payment</span>
 </div>
 </div>
 
@@ -182,7 +182,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface mt-1 line-clamp-2">
-          Docket #DSP-104 Arbitration Ruling: Full refund issued for tampered OEM sound cable.
+          Docket #DSP-104 dispute review Ruling: Full refund issued for tampered OEM sound cable.
         </p>
 <div className="flex items-center justify-between mt-3 pt-2.5 bg-surface-container-low rounded-lg px-space-sm">
 <div className="flex items-center gap-1.5">
@@ -276,14 +276,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="h-2 w-2 rounded-full bg-[#FFCC00]"></span>
 <span className="font-label-sm text-label-sm text-on-surface">MTN MoMo (+256 788 ••• 311)</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Adjust Ready</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Adjust Ready</span>
 </div>
 </div>
 
 <div className="p-space-sm rounded-xl bg-surface-container shadow-sm flex items-center gap-2">
 <Icon name="info" className="text-primary text-[20px]" />
 <span className="font-body-sm text-body-sm text-on-surface-variant leading-snug">
-          Uganda National Payment Systems Act 2020: Direct reverse calls require verified KYC phone binding.
+          Uganda Pesapal Payment Guidelines: Direct reverse calls require verified KYC phone binding.
         </span>
 </div>
 </div>
@@ -333,7 +333,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 <div className="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Vault Release</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Reserve Release</span>
 <div className="flex items-baseline gap-1">
 <span className="font-currency-code text-currency-code text-on-surface whitespace-nowrap">UGX</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface">380,000</span>
@@ -388,7 +388,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pt-1">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Network Gateway Fee</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">
-              UGX 0 <span className="font-label-sm text-label-sm text-on-surface-variant font-normal">(Absorbed via Swift Escrow Guarantee)</span>
+              UGX 0 <span className="font-label-sm text-label-sm text-on-surface-variant font-normal">(Absorbed via Swift Payment Protection)</span>
 </span>
 </div>
 </div>
@@ -402,16 +402,16 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <label className="flex items-start gap-space-sm cursor-pointer select-none">
 <input checked={true} className="mt-1 h-4 w-4 rounded accent-primary text-primary focus:ring-0 cursor-pointer" id="complianceCheck" type="checkbox" />
 <span className="font-body-sm text-body-sm text-on-surface">
-              I confirm this reversal complies with <strong>Bank of Uganda National Payment Systems Regulations (2020)</strong> and SwiftCart Fair Bailment Policy under binding Docket #DSP-104.
+              I confirm this reversal complies with <strong>Pesapal Commercial Terms and Guidelines</strong> and SwiftCart Fair Bailment Policy under binding Docket #DSP-104.
             </span>
 </label>
 
 <div className="flex flex-col gap-2 pt-1">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant font-semibold">Authorizer Master PIN (Officer Patricia Namubiru)</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant font-semibold">Authorizer Master PIN (Officer Denis Mukasa)</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
 <Icon name="lock_reset" className="text-[14px]" />
-                Hardware Token Linked
+                Two-Factor Authenticator Linked
               </span>
 </div>
 
@@ -464,7 +464,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">14:18 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Senior Arbitrator Officer Patricia Namubiru signed dispute arbitration closing Docket #DSP-104 with 100% buyer restitution.
+                Senior Support Specialist Denis Mukasa signed dispute resolution closing Case #DSP-104 with 100% buyer restitution.
               </p>
 </div>
 </div>
@@ -473,11 +473,11 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="w-3 h-3 rounded-full bg-primary mt-1 shrink-0"></div>
 <div className="flex flex-col">
 <div className="flex items-center gap-2">
-<span className="font-label-md text-label-md text-on-surface font-bold">Escrow Lock Shifted</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Payment Lock Shifted</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">14:20 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Escrow funds debited from Victoria Tech Ltd vault partition and isolated into Kampala Refund Staging Pool.
+                held funds debited from Victoria Tech Ltd reserve partition and isolated into Kampala Refund Staging Pool.
               </p>
 </div>
 </div>

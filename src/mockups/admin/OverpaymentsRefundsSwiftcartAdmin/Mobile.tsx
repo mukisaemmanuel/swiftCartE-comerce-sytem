@@ -37,7 +37,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div className="flex items-baseline justify-between gap-space-sm mb-space-xs">
 <div>
 <p className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 1,420,000</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Total Overpayments &amp; Return Escrows</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Total Overpayments &amp; Return Payments</p>
 </div>
 <div className="text-right">
 <span className="font-label-lg text-label-lg text-primary bg-primary-fixed/60 px-2.5 py-1 rounded-lg">3 Cases Pending</span>
@@ -71,7 +71,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div>
 <div className="flex items-center gap-1.5 mb-1">
 <span className="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded uppercase tracking-wide">High Priority</span>
-<span className="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded">MoMo USSD *165#</span>
+<span className="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded">MTN Mobile Money</span>
 </div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface tracking-tight">Case #REF-1049</h2>
 <p className="font-label-md text-label-md text-primary font-semibold">Carrier Duplicate USSD Debit</p>
@@ -141,7 +141,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div>
 <div className="flex items-center gap-1.5 mb-1">
 <span className="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded uppercase">Pre-dispatch</span>
-<span className="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded">Airtel *185#</span>
+<span className="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded">Airtel Money</span>
 </div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Case #REF-1042</h3>
 <p className="font-label-md text-label-md text-on-surface-variant">Cancelled Pre-dispatch Return</p>
@@ -152,7 +152,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm leading-relaxed">
-      Buyer cancelled order <span className="font-semibold text-on-surface">#SC-9910</span> before merchant dispatch packaging. Escrow funds held for single-hop reversal.
+      Buyer cancelled order <span className="font-semibold text-on-surface">#SC-9910</span> before merchant dispatch packaging. held funds held for single-hop reversal.
     </p>
 <div className="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between mb-space-sm">
 <div className="flex items-center gap-2">
@@ -221,7 +221,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Authorize USSD Reversal</h3>
-<p className="font-label-sm text-label-sm text-on-surface-variant">Zero Platform Escrow Deduction</p>
+<p className="font-label-sm text-label-sm text-on-surface-variant">Zero Platform Payment Deduction</p>
 </div>
 </div>
 <button className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" id="close-modal-btn" type="button">
@@ -236,7 +236,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 </div>
 <div className="flex justify-between items-center text-sm">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Carrier Operator</span>
-<span className="font-label-md text-label-md text-on-surface">MTN MoMo Gateway (*165#)</span>
+<span className="font-label-md text-label-md text-on-surface">MTN MoMo Gateway</span>
 </div>
 <div className="flex justify-between items-center text-sm">
 <span className="font-body-sm text-body-sm text-on-surface-variant">Platform Reconciliation Fee</span>
@@ -250,7 +250,7 @@ export const OverpaymentsRefundsSwiftcartAdmin: React.FC<OverpaymentsRefundsSwif
 <div className="bg-tertiary-container/15 rounded-lg p-2.5 flex items-start gap-2 mb-space-lg text-tertiary">
 <Icon name="security" className="text-[20px] mt-0.5" />
 <p className="font-body-sm text-body-sm text-on-tertiary-container leading-snug">
-          Transaction will immediately debit SwiftCart Suspense Escrow Account #UG-MTN-001 and post an idempotent callback to MTN Mobile Money core switch.
+          Transaction will immediately debit SwiftCart Suspense Payment Hold Account #UG-MTN-001 and post an idempotent callback to MTN Mobile Money core switch.
         </p>
 </div>
 

@@ -110,7 +110,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 </div>
 </div>
-<div className="flex items-center justify-between pt-space-xs bg-surface-container-low/50 p-space-sm rounded-lg"><div className="flex items-center gap-1.5"><Icon name="shield" className="text-tertiary text-[18px]" /><div className="flex flex-col"><span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Escrow Protected</span><span className="font-body-sm text-body-sm text-on-surface-variant">Your money is held by SwiftCart until you confirm delivery</span></div></div><div className="text-right flex-shrink-0 ml-2"><span className="font-body-sm text-body-sm text-on-surface-variant">Total</span><div className="font-price-display text-price-display text-on-surface">UGX 338,500</div></div></div>
+<div className="flex items-center justify-between pt-space-xs bg-surface-container-low/50 p-space-sm rounded-lg"><div className="flex items-center gap-1.5"><Icon name="shield" className="text-tertiary text-[18px]" /><div className="flex flex-col"><span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Payment Protected</span><span className="font-body-sm text-body-sm text-on-surface-variant">Your money is held by SwiftCart until you confirm delivery</span></div></div><div className="text-right flex-shrink-0 ml-2"><span className="font-body-sm text-body-sm text-on-surface-variant">Total</span><div className="font-price-display text-price-display text-on-surface">UGX 338,500</div></div></div>
 <div className="flex flex-col gap-2 pt-space-xs"><button className="w-full h-12 rounded-xl bg-gradient-to-r from-primary-container to-primary text-on-primary font-label-lg text-label-lg shadow-md hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2" onClick={(e) => { e.preventDefault(); onNavigate?.('/order-tracking'); }}><Icon name="near_me" className="text-[20px]" />Track Order</button><div className="grid grid-cols-2 gap-space-sm"><button className="h-11 rounded-xl bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm hover:bg-surface-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" onClick={() => alertToast('Action triggered')}><Icon name="call" className="text-[18px]" />Call Courier</button><button className="h-11 rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" onClick={() => alertToast('Action triggered')}><Icon name="receipt_long" className="text-[18px]" />Order Details</button></div><p className="font-body-sm text-body-sm text-on-surface-variant text-center pt-0.5">6-digit delivery code available inside Track Order after tapping Reveal code</p></div>
 </div>
 </div>
@@ -157,7 +157,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 <span className="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="check_circle" className="text-[14px]" />
-          Escrow Released
+          Paid to seller
         </span>
 </div>
 <div className="flex items-start justify-between">
@@ -196,8 +196,8 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <Icon name="verified_user" className="text-secondary text-[22px]" />
 </div>
 <div className="flex flex-col flex-1">
-<h4 className="font-label-md text-label-md text-on-surface">SwiftCart Escrow Guarantee</h4>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Escrow Protected: your money is held by SwiftCart until you confirm delivery.</p>
+<h4 className="font-label-md text-label-md text-on-surface">SwiftCart Protection Guarantee</h4>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Payment Protected: your money is held by SwiftCart until you confirm delivery.</p>
 </div>
 <button className="text-primary font-label-md text-label-md hover:underline whitespace-nowrap" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>Help</button>
 </div>

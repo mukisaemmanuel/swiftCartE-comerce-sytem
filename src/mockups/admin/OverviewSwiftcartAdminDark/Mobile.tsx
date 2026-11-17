@@ -63,7 +63,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <div className="flex items-center justify-between mb-space-sm">
 <div className="flex items-center gap-space-xs">
 <Icon name="query_stats" className="text-primary text-[18px]" />
-<span className="font-label-md text-label-md text-on-surface">Escrow Inflow vs Boda Load</span>
+<span className="font-label-md text-label-md text-on-surface">Payment Inflow vs Boda Load</span>
 </div>
 <span className="font-label-sm text-label-sm text-tertiary">Real-Time (Kampala)</span>
 </div>
@@ -91,7 +91,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <section className="px-margin mb-space-lg">
 <div className="flex items-center justify-between mb-space-sm">
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Platform Pulse</h2>
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Escrow Engine</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Payment Engine</span>
 </div>
 <div className="grid grid-cols-2 gap-gutter">
 
@@ -100,7 +100,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 <div className="flex items-center justify-between mb-space-xs">
 <div className="flex items-center gap-1.5">
 <span className="w-2.5 h-2.5 rounded-full bg-emerald-escrow"></span>
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Platform Vault</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Platform reserve</span>
 </div>
 <span className="px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
 <Icon name="lock" className="text-[13px]" />
@@ -140,7 +140,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 </div>
 <div className="mt-space-sm pt-space-xs flex items-center gap-1 text-error font-label-sm text-label-sm">
 <Icon name="warning" className="text-[14px]" />
-<span>Under arbitration</span>
+<span>Under dispute review</span>
 </div>
 </div>
 
@@ -190,7 +190,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 </div>
 <div className="bg-surface-container-high/60 rounded-lg p-2.5 mb-space-md flex items-center gap-2 text-on-surface">
 <Icon name="description" className="text-[18px] text-tertiary" />
-<span className="font-body-sm text-body-sm text-on-surface-variant">Documents: <strong className="text-on-surface font-label-md text-label-md">URA TIN Certificate &amp; National ID</strong></span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Documents: <strong className="text-on-surface font-label-md text-label-md">Tax ID Certificate & National ID</strong></span>
 </div>
 <div className="grid grid-cols-2 gap-gutter">
 <button className="h-11 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform">
@@ -221,7 +221,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 </div>
 <div className="flex items-center justify-between bg-surface-container-high/60 rounded-lg p-2.5 mb-space-md">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Held</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Held</span>
 <span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 1,150,000</span>
 </div>
 <span className="text-danger-penalty font-label-sm text-label-sm bg-danger-penalty/10 px-2 py-1 rounded">Seller Unresponsive</span>
@@ -323,7 +323,7 @@ export const OverviewSwiftcartAdminDark: React.FC<OverviewSwiftcartAdminDarkProp
 </div>
 <div className="space-y-space-sm font-body-sm text-body-sm">
 <div className="flex items-center justify-between">
-<span className="text-on-surface-variant truncate">Auto-Escrow release #TX-48192 (Airtel)</span>
+<span className="text-on-surface-variant truncate">Auto-Payment Release #TX-48192 (Airtel)</span>
 <span className="text-emerald-escrow font-label-sm text-label-sm flex-shrink-0 whitespace-nowrap">+UGX 420,000</span>
 </div>
 <div className="flex items-center justify-between">

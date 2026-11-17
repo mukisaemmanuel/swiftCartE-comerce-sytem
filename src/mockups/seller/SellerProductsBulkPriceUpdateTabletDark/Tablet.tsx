@@ -135,7 +135,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="col-span-4 pl-space-xs">Product &amp; SKU Details</div>
 <div className="col-span-2 text-right whitespace-nowrap">Pricing (UGX)</div>
 <div className="col-span-2 text-center">Stock &amp; Origin</div>
-<div className="col-span-2 text-center">Trust &amp; Escrow</div>
+<div className="col-span-2 text-center">Trust &amp; Payment</div>
 <div className="col-span-1 text-right pr-2">Status</div>
 </div>
 
@@ -179,7 +179,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[14px]" />
 <span>Verified Authentic</span>
 </span>
-<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank Escrow Locked</span>
+<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank payment protected</span>
 </div>
 <div className="col-span-1 flex items-center justify-end pr-2">
 <label className="relative inline-flex items-center cursor-pointer">
@@ -227,7 +227,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[14px]" />
 <span>Verified Authentic</span>
 </span>
-<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank Escrow Locked</span>
+<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank payment protected</span>
 </div>
 <div className="col-span-1 flex items-center justify-end pr-2">
 <label className="relative inline-flex items-center cursor-pointer">
@@ -275,7 +275,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[14px]" />
 <span>Verified Authentic</span>
 </span>
-<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank Escrow Locked</span>
+<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank payment protected</span>
 </div>
 <div className="col-span-1 flex items-center justify-end pr-2">
 <label className="relative inline-flex items-center cursor-pointer">
@@ -321,7 +321,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[14px]" />
 <span>Verified Authentic</span>
 </span>
-<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank Escrow Locked</span>
+<span className="font-body-sm text-[10px] text-outline mt-0.5">Bank payment protected</span>
 </div>
 <div className="col-span-1 flex items-center justify-end pr-2">
 <label className="relative inline-flex items-center cursor-pointer">
@@ -415,7 +415,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Settlement Simulator</span>
 <span className="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
-<Icon name="shield" className="text-[13px]" /> Instant MoMo Escrow
+<Icon name="shield" className="text-[13px]" /> Instant momo payment
             </span>
 </div>
 <div className="flex flex-col gap-1 pt-1">
@@ -475,7 +475,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </main>
-<footer className="w-full bg-surface-container-low py-space-sm shadow-[0_-1px_8px_rgba(0,0,0,0.5)]"><div className="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span>William St Central Hub: Live (99.8%)</span></div><span className="hidden md:inline text-outline-variant">|</span><div className="flex items-center gap-1"><Icon name="electric_moped" className="text-action-gradient-start text-[14px]" /><span>Kampala Boda Dispatch Mesh Active</span></div></div><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1 text-tertiary"><Icon name="lock" className="text-[14px]" /><span>Escrow Secured under Bank of Uganda NPS</span></div><span className="hidden md:inline text-outline-variant">|</span><span>© 2025 SwiftCart Uganda Ltd.</span></div></div></footer>
+<footer className="w-full bg-surface-container-low py-space-sm shadow-[0_-1px_8px_rgba(0,0,0,0.5)]"><div className="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span>William St Central Hub: Live (99.8%)</span></div><span className="hidden md:inline text-outline-variant">|</span><div className="flex items-center gap-1"><Icon name="electric_moped" className="text-action-gradient-start text-[14px]" /><span>Kampala Boda Dispatch Mesh Active</span></div></div><div className="flex items-center gap-space-xs flex-wrap justify-center"><div className="flex items-center gap-1 text-tertiary"><Icon name="lock" className="text-[14px]" /><span>payment secured under Pesapal Pesapal Rails</span></div><span className="hidden md:inline text-outline-variant">|</span><span>© 2025 SwiftCart Uganda Ltd.</span></div></div></footer>
     </div>
   );
 };

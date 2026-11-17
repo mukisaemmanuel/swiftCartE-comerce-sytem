@@ -108,7 +108,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="bg-surface-dark px-space-md py-space-xs rounded-xl flex items-center gap-space-xs text-right" style={{"backgroundColor":"#f3ede7","border":"1px solid #e8e1da"}}>
 <div className="flex flex-col text-right">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Hold</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-extrabold whitespace-nowrap">UGX 180,000</span>
 </div>
 <Icon name="lock" className="text-emerald-escrow text-[22px]" />

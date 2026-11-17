@@ -33,7 +33,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="text-surface-variant font-body-sm">/</span>
 <span className="font-code-display text-body-sm text-on-surface font-extrabold tracking-widest">#SC-9952</span>
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-[11px] font-bold">
-<Icon name="lock" className="text-[13px]" /> UGX 248,500 Escrow Locked
+<Icon name="lock" className="text-[13px]" /> UGX 248,500 payment protected
           </span>
 </div>
 <div className="flex items-center gap-space-md text-on-surface-variant">
@@ -290,7 +290,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             Anti-Fraud Verification Shield
           </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-snug mt-0.5">
-            Customer must supply the 6-digit confirmation code <strong className="text-on-surface">after</strong> physical tamper-seal check. Never transfer item possession without instantaneous platform code submission.
+            Customer must supply the 6-digit confirmation code <strong className="text-on-surface">after</strong> physical package seal check. Never transfer item possession without instantaneous platform code submission.
           </p>
 </div>
 </div>
@@ -315,14 +315,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-space-sm">
 <Icon name="key" className="text-tertiary text-[24px]" />
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Cryptographic Handover</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">Verified Handover</h3>
 </div>
 <button className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-modal-btn">
 <Icon name="close" className="text-[18px]" />
 </button>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-        Request the single-use 6-digit delivery pin directly from Sarah Namubiru. Escrow funds release instantly upon match.
+        Request the single-use 6-digit delivery pin directly from Sarah Namubiru. held funds release instantly upon match.
       </p>
 <div className="flex justify-between gap-space-xs py-space-sm">
 <input autoFocus={true} className="w-12 h-14 text-center font-headline-md text-headline-md rounded-xl bg-surface-container-highest text-on-surface focus:outline-none focus:bg-surface-bright" maxLength={1} type="text" />

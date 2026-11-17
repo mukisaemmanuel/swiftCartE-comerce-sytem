@@ -33,7 +33,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
         <span className="mx-space-xs text-outline/40">|</span>
 <span className="text-on-surface-variant font-label-md text-label-md">MTN-Uganda Ads FastPath Active</span>
 <span className="mx-space-xs text-outline/40">|</span>
-<span className="text-tertiary font-label-md text-label-md">Airtel Money Escrow Sync Ready</span>
+<span className="text-tertiary font-label-md text-label-md">Airtel money payment Sync Ready</span>
 </p>
 </div>
 <div className="hidden xl:flex items-center gap-space-md shrink-0">
@@ -577,7 +577,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>Launch Campaign to Storefront</span>
 </button>
 <p className="font-label-sm text-label-sm text-center text-on-surface-variant">
-                Escrow deduction auto-calculates after campaign completion.
+                Payment deduction auto-calculates after campaign completion.
               </p>
 </div>
 </form>

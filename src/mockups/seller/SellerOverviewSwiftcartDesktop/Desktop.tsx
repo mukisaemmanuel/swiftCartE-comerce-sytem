@@ -40,7 +40,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
 <Icon name="lock" className="text-[14px]" />
-        URSB Verified Escrow Vault Active
+        URSB Verified Payment Reserve Active
       </span>
 <span className="font-code-display text-label-sm text-on-surface-variant/70">EAT 15:42:19</span>
 </div>
@@ -114,7 +114,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container/60 transition-all">
 <div className="flex items-start justify-between">
 <div className="flex flex-col gap-0.5">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Escrow Pending Clearance</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Payment Pending Clearance</span>
 <span className="font-price-display text-price-display text-tertiary font-extrabold mt-1 whitespace-nowrap">UGX 12,450,000</span>
 </div>
 <div className="w-10 h-10 rounded-xl bg-tertiary/15 flex items-center justify-center text-tertiary">
@@ -188,7 +188,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Live Orders Dispatch Stream</h2>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Active Kampala metro pipeline &amp; cryptographic escrow locks</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Active Kampala metro pipeline &amp; verified payment locks</p>
 </div>
 </div>
 <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col text-left md:text-right">
 <span className="font-price-display text-price-display text-on-surface font-extrabold whitespace-nowrap">UGX 380,000</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center md:justify-end gap-1 font-semibold">
-<Icon name="lock" className="text-[14px]" /> Escrow Secured
+<Icon name="lock" className="text-[14px]" /> payment secured
                 </span>
 </div>
 <div className="flex flex-col items-end gap-1">
@@ -314,13 +314,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col text-left md:text-right">
 <span className="font-price-display text-price-display text-on-surface font-extrabold whitespace-nowrap">UGX 240,000</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center md:justify-end gap-1 font-semibold">
-<Icon name="lock_clock" className="text-[14px]" /> Airtel Money Escrow
+<Icon name="lock_clock" className="text-[14px]" /> Airtel money payment
                 </span>
 </div>
 <div className="flex flex-col items-end gap-1">
 <span className="px-3 py-1.5 rounded-lg bg-amber-warning/15 text-amber-warning font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="pin" className="text-[16px]" />
-                  Awaiting Escrow OTP
+                  Awaiting Payment OTP
                 </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Rider at Customer Gate</span>
 </div>
@@ -361,7 +361,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col items-end gap-1">
 <span className="px-3 py-1.5 rounded-lg bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="verified" className="text-[16px]" />
-                  Delivered • Escrow Released
+                  Delivered • Paid to seller
                 </span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">OTP Matched 4719</span>
 </div>
@@ -471,10 +471,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-code-display text-label-sm text-on-surface-variant">#SC-97810</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface font-semibold">
-              Tamper Bag Inspection Pending: Customer reported unsealed box.
+              package bag Inspection Pending: Customer reported unsealed box.
             </p>
 <div className="flex items-center justify-between pt-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Escrow Held: UGX 310,000</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Payment Held: UGX 310,000</span>
 <button className="px-2.5 py-1 rounded bg-danger-penalty/20 hover:bg-danger-penalty/30 text-danger-penalty font-label-sm text-label-sm font-bold transition-colors" type="button">
                 Review Evidence
               </button>
@@ -507,7 +507,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">18:00 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-              Escrow cleared from 34 completed deliveries. Scheduled direct settlement to Registered Merchant PIN.
+              payment cleared from 34 completed deliveries. Scheduled direct settlement to Registered Merchant PIN.
             </p>
 </div>
 </div>

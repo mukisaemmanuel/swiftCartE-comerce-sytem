@@ -26,7 +26,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-transform flex-shrink-0" onClick={() => alertToast('Action triggered')}><Icon name="arrow_back" className="text-[24px]" /></button><img alt="swiftcart-logo-icon-only.png" className="h-7 w-auto object-contain flex-shrink-0 hidden xs:block" src={`${assetBase}/brand/swiftcart-logo-icon.png`} /><div className="flex flex-col min-w-0"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Mobile Money Payment</h1><div className="inline-flex items-center gap-1 text-tertiary"><Icon name="verified_user" className="text-[13px]" /><span className="font-label-sm text-label-sm tracking-tight">Swift Escrow Protected</span></div></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-tertiary shadow-[0_1px_3px_rgba(0,105,71,0.1)]"><Icon name="lock" className="text-[15px]" /><span className="font-label-sm text-label-sm hidden sm:inline">Safe Checkout</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_2px_8px_rgba(218,55,0,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header><main className="flex-1 flex flex-col relative w-full pt-16 bg-surface px-margin pb-safe"><div className="flex flex-col w-full relative">
+      <header className="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(14,27,77,0.04)] pt-safe"><div className="h-16 px-gutter flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" className="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-transform flex-shrink-0" onClick={() => alertToast('Action triggered')}><Icon name="arrow_back" className="text-[24px]" /></button><img alt="swiftcart-logo-icon-only.png" className="h-7 w-auto object-contain flex-shrink-0 hidden xs:block" src={`${assetBase}/brand/swiftcart-logo-icon.png`} /><div className="flex flex-col min-w-0"><h1 className="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Mobile Money Payment</h1><div className="inline-flex items-center gap-1 text-tertiary"><Icon name="verified_user" className="text-[13px]" /><span className="font-label-sm text-label-sm tracking-tight">Payment Protected</span></div></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-tertiary shadow-[0_1px_3px_rgba(0,105,71,0.1)]"><Icon name="lock" className="text-[15px]" /><span className="font-label-sm text-label-sm hidden sm:inline">Safe Checkout</span></div><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_2px_8px_rgba(218,55,0,0.25)]"><Icon name="person" className="text-on-primary text-[18px]" /></div></div></div></header><main className="flex-1 flex flex-col relative w-full pt-16 bg-surface px-margin pb-safe"><div className="flex flex-col w-full relative">
 
 <div className="flex flex-col gap-space-md w-full filter brightness-[0.82] select-none pointer-events-none pb-28">
 
@@ -82,7 +82,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-tertiary">
 <Icon name="shield" className="text-[15px]" />
-<span className="font-label-sm text-label-sm">Escrow Locked</span>
+<span className="font-label-sm text-label-sm">payment protected</span>
 </div>
 </div>
 </div>
@@ -90,7 +90,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <div className="w-full bg-surface-container rounded-xl p-space-md flex items-start gap-3">
 <Icon name="lock_clock" className="text-tertiary text-[20px] mt-0.5" />
 <div className="flex flex-col gap-0.5">
-<span className="font-label-md text-label-md text-on-surface">Swift Safe Escrow Protection</span>
+<span className="font-label-md text-label-md text-on-surface">Swift Safe Payment Protection</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Your payment will remain safeguarded until you inspect your headphones and hand over the 6-digit release code to the rider.</p>
 </div>
 </div>
@@ -106,7 +106,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
             MTN
           </div>
 <div className="flex flex-col">
-<span className="font-label-md text-label-md tracking-tight leading-none text-black">Mobile Money (*165#)</span>
+<span className="font-label-md text-label-md tracking-tight leading-none text-black">Mobile Money (Mobile prompt)</span>
 <span className="font-label-sm text-[10px] text-black/75 tracking-tight font-medium">Telecom Push Request • Live</span>
 </div>
 </div>
@@ -120,7 +120,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 
 <div className="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
 <p className="font-body-md text-body-md text-on-surface font-semibold leading-relaxed">
-            SwiftCart Escrow Deposit: Approve payment of UGX 385,000 to <span className="text-primary font-bold">SWIFTCART UGANDA</span> (Ref: ORD-8942)?
+            SwiftCart Protection Deposit: Approve payment of UGX 385,000 to <span className="text-primary font-bold">SWIFTCART UGANDA</span> (Ref: ORD-8942)?
           </p>
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
 <span>Transaction Fee: <strong>UGX 0</strong></span>
@@ -193,12 +193,12 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 
 <div className="grid grid-cols-2 gap-2">
 
-<a className="flex flex-col p-2.5 bg-surface-container-low rounded-xl active:bg-surface-container transition-colors" href="tel:*165*4*4%23" onClick={() => alertToast('Action triggered')}>
+<a className="flex flex-col p-2.5 bg-surface-container-low rounded-xl active:bg-surface-container transition-colors" href="tel:Mobile prompt*4%23" onClick={() => alertToast('Action triggered')}>
 <div className="flex items-center justify-between text-on-surface">
 <span className="font-label-sm text-label-sm text-primary font-bold">Manual Approval</span>
 <Icon name="call" className="text-[16px]" />
 </div>
-<span className="font-headline-sm text-[13px] text-on-surface mt-0.5">Dial *165*4*4#</span>
+<span className="font-headline-sm text-[13px] text-on-surface mt-0.5">You will receive a prompt on your phone to approve the payment*4#</span>
 <span className="font-body-sm text-[11px] text-on-surface-variant">Approve under 'My Approvals'</span>
 </a>
 
@@ -219,7 +219,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </button>
 <div className="flex items-center gap-1 text-tertiary">
 <Icon name="verified" className="text-[14px]" />
-<span className="font-label-sm text-label-sm">Swift Escrow Protected</span>
+<span className="font-label-sm text-label-sm">Payment Protected</span>
 </div>
 </div>
 </div>

@@ -31,7 +31,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-lg text-amber-warning font-label-sm text-label-sm">
 <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span> MTNN-Uganda Ads FastPath</span>
-<span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span> Airtel Money Escrow Sync</span>
+<span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span> Airtel money payment Sync</span>
 </div>
 </div>
 <div className="px-space-xl py-space-lg flex flex-col gap-space-xl">
@@ -551,7 +551,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="rocket_launch" className="text-[20px]" />
 <span>Launch Campaign to Storefront</span>
 </button>
-<span className="font-label-sm text-label-sm text-center text-outline">Escrow deduction auto-calculates after completion</span>
+<span className="font-label-sm text-label-sm text-center text-outline">Payment deduction auto-calculates after completion</span>
 </div>
 </form>
 </div>

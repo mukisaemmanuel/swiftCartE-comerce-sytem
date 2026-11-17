@@ -67,7 +67,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             In-Transit <span className="ml-1 opacity-80">42</span>
 </button>
 <button className="px-2.5 py-1 rounded-full bg-surface-container-high text-emerald-escrow font-label-sm text-label-sm whitespace-nowrap">
-            Escrow Locked <span className="ml-1 opacity-70">14</span>
+            payment protected <span className="ml-1 opacity-70">14</span>
 </button>
 <button className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap">
             Settled <span className="ml-1 opacity-70">64</span>
@@ -109,7 +109,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pt-1 font-label-sm text-[10px]">
 <span className="text-emerald-escrow flex items-center gap-1">
 <Icon name="lock" className="text-[12px]" />
-                STANBIC VAULT
+                Pesapal Settlement Account
               </span>
 <span className="text-on-surface-variant">SoundCore Uganda</span>
 </div>
@@ -180,7 +180,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="bg-surface-container-low rounded-lg px-2.5 py-1.5 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
 <span className="flex items-center gap-1 text-tertiary">
-<Icon name="verified" className="text-[14px]" /> Escrow Released
+<Icon name="verified" className="text-[14px]" /> Paid to seller
             </span>
 <span>13:58 EAT</span>
 </div>
@@ -206,13 +206,13 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">#SC-ORD-9488</span>
 <span className="px-space-sm py-1 rounded-full bg-amber-warning/15 text-amber-warning font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="shield_lock" className="text-[14px]" />
-                Escrow Protected: UGX 388,500
+                Payment Protected: UGX 388,500
               </span>
 </div>
 <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm mt-1">
 <span className="flex items-center gap-1">
 <Icon name="account_balance" className="text-[14px] text-tertiary" />
-                BoU Escrow Lock: <strong className="text-on-surface">#TX-998124</strong>
+                Payment Hold Ref: <strong className="text-on-surface">#TX-998124</strong>
 </span>
 <span>•</span>
 <span className="flex items-center gap-1">
@@ -268,7 +268,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <p className="font-headline-sm text-headline-sm text-on-surface font-bold">SoundCore Uganda Official</p>
 <div className="mt-1 flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
-<span>URA TIN: <strong className="text-on-surface font-mono">101-884-9023</strong></span>
+<span>Tax ID: <strong className="text-on-surface font-mono">101-884-9023</strong></span>
 <span>•</span>
 <span className="text-tertiary">Pioneer Mall G-14</span>
 </div>
@@ -350,7 +350,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 <div className="flex flex-col gap-2">
-<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Cryptographic Fulfillment Pipeline</span>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Secure Fulfillment Pipeline</span>
 <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
 
 <div className="bg-surface-container-high p-space-sm rounded-lg relative overflow-hidden flex flex-col justify-between">
@@ -397,7 +397,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="admin_panel_settings" className="text-action-gradient-start text-[20px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface font-bold">Superadmin Intervention Controls</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Tier-4 Execution Enclave</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Tier-4 Execution Engine</span>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
 
@@ -416,14 +416,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <button className="px-space-md py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all flex flex-col items-center justify-center text-center gap-1">
 <Icon name="policy" className="text-[20px] text-tertiary" />
 <span className="font-label-md text-label-md font-bold">Quarantine Order</span>
-<span className="font-label-sm text-[10px] text-on-surface-variant">BoU AML/CFT flagging</span>
+<span className="font-label-sm text-[10px] text-on-surface-variant">Payment risk screening</span>
 </button>
 </div>
 </div>
 
 <div className="flex flex-col gap-space-sm">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Internal Audit Stream (Tamper-Evident Ledger)</span>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Internal Audit Stream (Sealed Package Bag Ledger)</span>
 <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
 <Icon name="lock" className="text-[13px]" /> SHA-256 Chained
             </span>
@@ -440,7 +440,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-[10px] text-outline">14:38:12 EAT</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Tamper seal photo verified against merchant packing station camera feed. Serial match confirmed on tamper barcode #SC-TS-4091. No package anomalies reported.
+                  Package seal photo verified against merchant packing station camera feed. Serial match confirmed on package barcode #SC-TS-4091. No package anomalies reported.
                 </p>
 </div>
 </div>
@@ -467,7 +467,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex justify-end">
 <button className="px-space-lg py-2.5 rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-md text-label-md font-bold shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center gap-1.5">
 <Icon name="enhanced_encryption" className="text-[16px]" />
-                Add Cryptographic Internal Note
+                Add Verified Internal Note
               </button>
 </div>
 </div>
@@ -476,7 +476,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></div></main>
-<footer className="w-full bg-surface-container-low py-space-md mt-auto shadow-[0_-4px_16px_rgba(0,0,0,0.3)]"><div className="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 SwiftCart Uganda Ltd • Bank of Uganda Regulated National Payment Operator</span><div className="flex items-center gap-space-md font-label-sm text-label-sm"><span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-tertiary"></span>Latency: 28ms</span><span>Enclave Node: EBB-DC-04</span><span>Build v4.18.2-prod</span></div></div></footer>
+<footer className="w-full bg-surface-container-low py-space-md mt-auto shadow-[0_-4px_16px_rgba(0,0,0,0.3)]"><div className="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 SwiftCart Uganda Ltd • Digital E-Commerce Platform Powered by Pesapal</span><div className="flex items-center gap-space-md font-label-sm text-label-sm"><span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-tertiary"></span>Latency: 28ms</span><span>Server Node: EBB-DC-04</span><span>Build v4.18.2-prod</span></div></div></footer>
     </div>
   );
 };

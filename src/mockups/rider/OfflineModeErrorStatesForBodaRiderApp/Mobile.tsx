@@ -40,7 +40,7 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 </button>
 </div>
 <p className="font-body-sm text-on-surface-variant leading-tight">
-        Using cached manifests &amp; offline cryptographic OTP. Telemetry queued (<span className="font-label-sm text-on-surface">4 events</span>). Next sync probe in <span className="font-label-sm text-primary" id="sync-timer">42s</span>.
+        Using cached manifests &amp; offline verified OTP. Telemetry queued (<span className="font-label-sm text-on-surface">4 events</span>). Next sync probe in <span className="font-label-sm text-primary" id="sync-timer">42s</span>.
       </p>
 </div>
 </section>
@@ -125,7 +125,7 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 <h3 className="font-label-lg text-on-surface">Verify Handover Offline</h3>
 </div>
 <span className="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm">
-          SHA-256 Vault
+          SHA-256 reserve
         </span>
 </div>
 <p className="font-body-sm text-on-surface-variant">
@@ -150,7 +150,7 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 <div className="bg-surface-container-low p-2.5 rounded-lg flex items-start gap-2">
 <Icon name="verified_user" className="text-[18px] text-tertiary mt-0.5" />
 <div className="flex flex-col">
-<span className="font-label-sm text-tertiary">Cryptographic Key Match: Valid (SoundCore Return Auth)</span>
+<span className="font-label-sm text-tertiary">Verified Key Match: Valid (SoundCore Return Auth)</span>
 <p className="font-body-sm text-on-surface-variant">
             Zero-network token confirmed. Signature receipt will automatically dispatch once MTN/Airtel reconnects.
           </p>
@@ -174,7 +174,7 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 <div className="flex items-center gap-2.5 min-w-0">
 <Icon name="photo_camera" className="text-primary text-[20px]" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-on-surface truncate">Buyer Tamper Seal Photo</span>
+<span className="font-label-sm text-on-surface truncate">Buyer package seal Photo</span>
 <span className="font-body-sm text-on-surface-variant truncate">RET-4819_seal.jpg • 1.2 MB</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 <div className="flex items-center gap-2.5 min-w-0">
 <Icon name="draw" className="text-primary text-[20px]" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-on-surface truncate">Alex Kato Doorstep Sig</span>
+<span className="font-label-sm text-on-surface truncate">Isaac Kato Doorstep Sig</span>
 <span className="font-body-sm text-on-surface-variant truncate">sig_8492.dat • SHA-256 Sign</span>
 </div>
 </div>
@@ -261,8 +261,8 @@ export const OfflineModeErrorStatesForBodaRiderApp: React.FC<OfflineModeErrorSta
 <span className="font-body-sm text-on-surface-variant">Push return token via GSM voice channel</span>
 </div>
 </div>
-<a className="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary font-label-sm active:scale-95" href="tel:*165*88%23">
-          *165*88#
+<a className="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary font-label-sm active:scale-95" href="tel:Mobile prompt%23">
+          Mobile prompt
         </a>
 </div>
 

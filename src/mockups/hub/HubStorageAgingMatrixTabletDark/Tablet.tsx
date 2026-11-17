@@ -53,7 +53,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Custody Value</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">holding Value</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 36,890,000</span>
 </div>
 </div>
@@ -109,10 +109,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-space-md rounded-xl bg-container-dark-low shadow-md flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider font-bold">Safe Vault H Status</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider font-bold">Safe reserve H Status</span>
 <div className="flex items-baseline gap-space-xs mt-0.5">
 <span className="font-price-display text-price-display text-on-surface">14 Items</span>
-<span className="font-body-sm text-body-sm text-emerald-escrow">Dual-Key OK</span>
+<span className="font-body-sm text-body-sm text-emerald-escrow">two-step admin OK</span>
 </div>
 </div>
 <div className="w-10 h-10 rounded-lg bg-emerald-escrow/20 flex items-center justify-center text-emerald-escrow">
@@ -120,7 +120,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">Vault Locked Val</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">reserve Locked Val</span>
 <span className="font-label-md text-label-md text-emerald-escrow font-bold whitespace-nowrap">UGX 16,200,000</span>
 </div>
 </div>
@@ -160,7 +160,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <button className="flex flex-col p-space-sm rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high">
 <div className="flex items-center justify-between">
 <span className="font-label-md text-label-md text-emerald-escrow flex items-center gap-1">
-<Icon name="shield" className="text-[14px]" /> Vault H
+<Icon name="shield" className="text-[14px]" /> reserve H
                 </span>
 <span className="font-label-sm text-label-sm text-emerald-escrow">14 pcs</span>
 </div>
@@ -294,7 +294,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="text-right">
 <p className="font-label-lg text-label-lg text-emerald-escrow font-bold whitespace-nowrap">UGX 248,500</p>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Escrow Confirmed</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Payment Confirmed</span>
 </div>
 </div>
 </div>
@@ -405,7 +405,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-start justify-between">
 <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Tracking #SC-9952</span>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-bold">
-<Icon name="verified_user" className="text-[14px]" /> Escrow Secured
+<Icon name="verified_user" className="text-[14px]" /> payment secured
                   </span>
 </div>
 <h2 className="font-headline-sm text-headline-sm text-on-surface mt-1">SoundCore Space One ANC Headphones</h2>
@@ -470,7 +470,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <select className="bg-surface-dark text-on-surface font-body-sm text-body-sm rounded-lg px-2 py-2 flex-1 focus:outline-none focus:ring-1 focus:ring-primary">
 <option>Target: Slot A1-05 (Electronics Free)</option>
 <option>Target: Slot C3-02 (Bulky Oversize)</option>
-<option>Target: Safe Vault H (Locked Dual)</option>
+<option>Target: Safe reserve H (Locked Dual)</option>
 <option>Target: Staging Bay S-01 (Courier Out)</option>
 </select>
 <button className="px-space-md py-2 bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm rounded-lg font-bold transition-all">
@@ -545,7 +545,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="w-2 h-2 rounded-full bg-amber-warning mt-1.5 flex-shrink-0"></div>
 <div className="flex-1">
 <p className="font-label-sm text-label-sm text-on-surface">Automated Customer Dispatch SMS Queued</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant">MTN MoMo Escrow delivery PIN blind token issued to recipient</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">MTN momo payment delivery PIN blind token issued to recipient</p>
 </div>
 <Icon name="send" className="text-[16px] text-amber-warning" />
 </div>
@@ -555,7 +555,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
 <div className="flex items-center gap-space-xs">
 <Icon name="verified" className="text-emerald-escrow text-[18px]" />
-<span className="whitespace-nowrap">Guaranteed Custody: Insured under SwiftCart Hub Bailment Policy (UGX 100M Node Bond)</span>
+<span className="whitespace-nowrap">Guaranteed holding: protected under SwiftCart Hub Bailment Policy (UGX 100M Node Bond)</span>
 </div>
 <span className="text-primary font-mono">Bailment #UG-BLM-8891</span>
 </div>

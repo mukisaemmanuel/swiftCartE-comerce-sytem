@@ -77,7 +77,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
 <div className="flex items-center justify-between text-on-surface-variant">
-<span className="font-label-md text-label-md">Active Regulated Categories</span>
+<span className="font-label-md text-label-md">Active Standard Categories</span>
 <Icon name="category" className="text-[20px] text-secondary" />
 </div>
 <div className="my-space-sm">

@@ -45,7 +45,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="text-on-surface-variant font-code-display text-label-sm">LEDGER-NODE: UG-SEC-01</span>
 </div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Immutable Operational Audit Ledger</h1>
-<p className="font-body-md text-body-md text-on-surface-variant">Real-time chronological log of administrative overrides, role changes, and escrow transactions</p>
+<p className="font-body-md text-body-md text-on-surface-variant">Real-time chronological log of administrative overrides, role changes, and payment transactions</p>
 </div>
 
 <div className="flex items-center gap-2.5 self-start sm:self-auto">
@@ -108,7 +108,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <select className="appearance-none h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none focus:bg-surface-container cursor-pointer transition-colors">
 <option>Action Type: All (1,842)</option>
 <option selected={true}>Role Elevation (2)</option>
-<option>Escrow Release (41)</option>
+<option>Payment Release (41)</option>
 <option>Commission Edit (9)</option>
 <option>Dispatch Override (14)</option>
 <option>Merchant Freeze (1)</option>
@@ -121,8 +121,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <option>Staff: All Operators</option>
 <option selected={true}>Sarah Namatovu (Super Admin)</option>
 <option>Michael Sserwadda (Admin)</option>
-<option>Dennis Mukasa (Escrow Lead)</option>
-<option>Patricia Namubiru (Dispatch)</option>
+<option>Dennis Mukasa (Payment Lead)</option>
+<option>Denis Mukasa (Dispatch)</option>
 <option>Grace Akello (Catalog Ops)</option>
 </select>
 <Icon name="expand_more" className="absolute right-2 top-2.5 pointer-events-none text-[16px] text-on-surface-variant" />
@@ -179,7 +179,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-1 min-w-0">
 <div className="flex items-center gap-2 flex-wrap">
 <span className="font-code-display text-label-sm text-on-surface-variant">#EV-99411</span>
-<span className="px-1.5 py-0.2 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm uppercase">Escrow Release</span>
+<span className="px-1.5 py-0.2 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm uppercase">Payment Release</span>
 <span className="text-on-surface-variant font-body-sm text-body-sm">34m ago</span>
 </div>
 <div className="font-label-md text-label-md text-on-surface font-semibold leading-snug line-clamp-1">17:00 MoMo Payout Sweep Authorized</div>
@@ -284,7 +284,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 <div className="flex flex-col items-start sm:items-end gap-1 flex-shrink-0">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cryptographic Hash</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Record Checksum</span>
 <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-dark font-code-display text-label-sm text-on-surface" title="sha256:7f4d291e0a82bcf651039841da923891">
 <span>sha256:7f4d...b891</span>
 <button className="hover:text-primary transition-colors" title="Copy Hash">
@@ -358,7 +358,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Operational Justification &amp; Verification</span>
 <div className="p-3 rounded-lg bg-surface-dark font-body-md text-body-md text-on-surface">
-              “Temporary handover during executive leave. Designated primary incident commander for Kampala node and weekend escrow clearance sweeps.”
+              “Temporary handover during executive leave. Designated primary incident commander for Kampala node and weekend payment clearance sweeps.”
             </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
 
@@ -392,7 +392,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="grid grid-cols-3 gap-2">
 <div className="p-2.5 rounded-lg bg-surface-container-high text-center flex flex-col gap-1">
 <Icon name="account_balance_wallet" className="text-primary text-[18px] mx-auto" />
-<span className="font-label-sm text-label-sm text-on-surface font-bold">Escrow Disburse</span>
+<span className="font-label-sm text-label-sm text-on-surface font-bold">Payment Disburse</span>
 <span className="font-code-display text-label-sm text-on-surface-variant whitespace-nowrap">UGX 50M limit</span>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container-high text-center flex flex-col gap-1">
@@ -443,7 +443,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="history" className="text-secondary text-[18px]" />
-<span className="font-label-md text-label-md text-on-surface font-bold">Historical Custody: Michael Sserwadda</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Historical Order Log: Michael Sserwadda</span>
 </div>
 <span className="font-code-display text-label-sm text-on-surface-variant">Total Lifetime Overrides: 24</span>
 </div>
@@ -456,7 +456,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-2.5 rounded-lg bg-surface-container flex flex-col gap-0.5">
 <span className="font-code-display text-label-sm text-on-surface-variant">04 Oct 2024</span>
 <span className="font-label-sm text-label-sm text-on-surface font-semibold">Boda Dispute Force-Release</span>
-<span className="font-body-sm text-body-sm text-amber-warning whitespace-nowrap">UGX 45,000 Custody</span>
+<span className="font-body-sm text-body-sm text-amber-warning whitespace-nowrap">UGX 45,000 Hold</span>
 </div>
 <div className="p-2.5 rounded-lg bg-surface-container flex flex-col gap-0.5">
 <span className="font-code-display text-label-sm text-on-surface-variant">12 Sep 2024</span>

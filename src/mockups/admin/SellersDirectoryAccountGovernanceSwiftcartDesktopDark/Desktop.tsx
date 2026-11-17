@@ -179,7 +179,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-3 px-space-md">Store &amp; Business Entity</th>
 <th className="py-3 px-space-md">Category &amp; Hub</th>
 <th className="py-3 px-space-md text-right">30-Day GMV</th>
-<th className="py-3 px-space-md text-right">Escrow Balance</th>
+<th className="py-3 px-space-md text-right">Pending clearance</th>
 <th className="py-3 px-space-md">Trust Score</th>
 <th className="py-3 px-space-md">Compliance Status</th>
 <th className="py-3 px-space-md">Registered Contact</th>
@@ -517,7 +517,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </span>
 </div>
 <div>
-<span className="text-[11px] text-on-surface-variant block">Escrow Ledger Lock</span>
+<span className="text-[11px] text-on-surface-variant block">Payment Holds Lock</span>
 <span className="font-label-lg text-label-lg text-emerald-escrow whitespace-nowrap">UGX 4,120,000</span>
 </div>
 </div>
@@ -535,7 +535,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <ul className="text-body-sm font-body-sm text-on-surface-variant list-disc list-inside space-y-1 pl-1">
 <li>Hides all catalog products from public SwiftCart app &amp; web search</li>
 <li>Instantly locks new inbound order intake</li>
-<li>Freezes total escrow balance of <strong className="text-on-surface whitespace-nowrap">UGX 4,120,000</strong> in ledger custody</li>
+<li>Freezes total pending clearance of <strong className="text-on-surface whitespace-nowrap">UGX 4,120,000</strong> in payment hold</li>
 <li>Halts automated MTN MoMo &amp; Airtel daily vendor settlements</li>
 </ul>
 </div>
@@ -546,7 +546,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <select className="w-full bg-surface-container-high text-on-surface font-body-md text-body-md px-3.5 py-2.5 pr-8 rounded-xl outline-none focus:bg-surface-variant transition-colors">
 <option selected={true}>Counterfeit Investigation / Brand Infringement</option>
 <option>Buyer Dispute Spikes (&gt; 5% Order Volume)</option>
-<option>URA Tax Compliance Discrepancy (TIN Issue)</option>
+<option>Tax Tax Compliance Discrepancy (TIN Issue)</option>
 <option>Incomplete KYC / Expired Business License</option>
 <option>Physical Hub Dispatch Refusal / Non-fulfillment</option>
 </select>
@@ -617,8 +617,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="security" className="text-[22px]" />
 </div>
 <div className="flex flex-col min-w-0">
-<span className="font-label-md text-label-md text-on-surface truncate">Escrow Ledger Health</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 168.4M held in custody across 412 active shop contracts. Zero unreconciled slips.</span>
+<span className="font-label-md text-label-md text-on-surface truncate">Payment Holds Health</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">UGX 168.4M held in reserve across 412 active shop contracts. Zero unreconciled slips.</span>
 </div>
 </div>
 <div className="bg-container-dark-low p-space-md rounded-xl shadow-sm flex items-center gap-space-md">

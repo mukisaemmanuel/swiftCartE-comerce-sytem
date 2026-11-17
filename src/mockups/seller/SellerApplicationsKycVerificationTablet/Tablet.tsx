@@ -167,7 +167,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="flex items-center gap-1">
 <Icon name="schedule" className="text-[14px]" /> Applied 5h ago
             </span>
-<span className="text-secondary font-label-sm">Awaiting Escrow</span>
+<span className="text-secondary font-label-sm">Awaiting Payment</span>
 </div>
 </div>
 
@@ -241,7 +241,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">NATIONAL TAX RECORD</span>
 <div className="flex items-center gap-1.5 mt-0.5">
 <Icon name="fact_check" className="text-tertiary text-[18px]" />
-<span className="font-label-md text-label-md text-on-surface">URA TIN 101-884-9023</span>
+<span className="font-label-md text-label-md text-on-surface">Tax ID 101-884-9023</span>
 </div>
 </div>
 <div className="flex flex-col px-2">
@@ -265,9 +265,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="badge" className="text-primary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-on-surface">Statutory Compliance Documents (4/4)</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">verified platform Compliance Documents (4/4)</span>
 </div>
-<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-2 py-0.5 rounded">All Cryptographic Hashes Authenticated</span>
+<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-2 py-0.5 rounded">All Record Checksumes Authenticated</span>
 </div>
 <div className="grid grid-cols-2 gap-space-md">
 
@@ -341,10 +341,10 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="account_balance" className="text-tertiary text-[20px]" />
-<span className="font-headline-sm text-headline-sm text-on-surface">Bank of Uganda Regulated Settlement Ledger</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">Pesapal Verified Rails Settlement Ledger</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
-            Statutory Trust Compliant
+            verified platform Trust Compliant
           </span>
 </div>
 <div className="grid grid-cols-2 gap-space-md mt-1">
@@ -360,12 +360,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 
 <div className="bg-surface-container-lowest p-space-md rounded-xl flex flex-col gap-1">
-<span className="font-label-sm text-label-sm text-on-surface-variant">ESCROW PERFORMANCE BOND POSTED</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">PAYMENT PERFORMANCE BOND POSTED</span>
 <div className="flex items-baseline gap-1">
 <span className="font-label-sm text-label-sm text-tertiary whitespace-nowrap">UGX</span>
 <span className="font-price-display text-price-display text-tertiary">14,850,000</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Custody Account: Stanbic Bank Uganda (#90300188421)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">holding Account: Pesapal Uganda (#90300188421)</span>
 </div>
 </div>
 </div>
@@ -374,9 +374,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col gap-1">
 <label className="font-label-md text-label-md text-on-surface flex items-center justify-between">
 <span>Superadmin Compliance Note &amp; Audit Recommendation</span>
-<span className="text-tertiary text-label-sm">Enclave Cryptographic Stamp #499</span>
+<span className="text-tertiary text-label-sm">secure engine Verified Stamp #499</span>
 </label>
-<textarea className="w-full bg-surface-container-lowest text-on-surface p-3 rounded-lg font-body-sm text-body-sm focus:outline-none whitespace-nowrap" rows={2}>All statutory documents match URSB &amp; NIRA APIs. Recommend approval for Tier-1 Electronics status with UGX 14.85M bond active in BoU escrow.</textarea>
+<textarea className="w-full bg-surface-container-lowest text-on-surface p-3 rounded-lg font-body-sm text-body-sm focus:outline-none whitespace-nowrap" rows={2}>All verified platform documents match URSB &amp; NIRA APIs. Recommend approval for Tier-1 Electronics status with UGX 14.85M bond active in Pesapal payment.</textarea>
 </div>
 
 <div className="flex items-center justify-between gap-space-md pt-2">

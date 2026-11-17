@@ -85,8 +85,8 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-1.5">
-<span className="font-label-sm text-[10px] text-tertiary font-bold tracking-wide uppercase">Escrow Secured Lock</span>
-<span className="text-secondary font-label-sm text-[9px]">• MTN MoMo Vault</span>
+<span className="font-label-sm text-[10px] text-tertiary font-bold tracking-wide uppercase">payment secured Lock</span>
+<span className="text-secondary font-label-sm text-[9px]">• MTN MoMo reserve</span>
 </div>
 <span className="font-body-sm text-[11px] text-secondary">Ledger Confirmed &amp; Payout Guaranteed</span>
 </div>
@@ -198,7 +198,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-label-md text-label-md font-semibold text-on-surface">Payment Verified</span>
 <span className="font-body-sm text-[11px] text-secondary">14:25</span>
 </div>
-<p className="font-body-sm text-[11px] text-secondary">MTN MoMo Escrow Lock UGX 248,500 settled in vault</p>
+<p className="font-body-sm text-[11px] text-secondary">MTN momo payment Lock UGX 248,500 settled in reserve</p>
 </div>
 </div>
 

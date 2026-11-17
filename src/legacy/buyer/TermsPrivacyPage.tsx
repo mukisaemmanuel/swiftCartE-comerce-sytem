@@ -69,9 +69,9 @@ export const TermsPrivacyPage: React.FC<TermsPrivacyPageProps> = ({ onNavigate }
         {tab === 'terms' ? (
           <>
             <div>
-              <h2 className="text-lg font-bold text-[#0E1B4D] mb-2">1. SwiftCart Escrow Mechanism</h2>
+              <h2 className="text-lg font-bold text-[#0E1B4D] mb-2">1. SwiftCart Protection Mechanism</h2>
               <p>
-                All payments processed through SwiftCart (via Mobile Money or card) are automatically held in a segregated escrow holding account. Payout is not made to the seller until the buyer confirms physical receipt through the 6-digit delivery handover code.
+                All payments processed through SwiftCart (via Mobile Money or card) are automatically held in a segregated payment protection account. Payout is not made to the seller until the buyer confirms physical receipt through the 6-digit delivery handover code.
               </p>
             </div>
 
@@ -85,14 +85,14 @@ export const TermsPrivacyPage: React.FC<TermsPrivacyPageProps> = ({ onNavigate }
             <div>
               <h2 className="text-lg font-bold text-[#0E1B4D] mb-2">3. 3-Day Return & Dispute Window</h2>
               <p>
-                Buyers maintain the right to report defective, counterfeit, or misrepresented products within 3 calendar days of delivery. Upon opening a dispute, escrow disbursements are automatically frozen until mediation resolves the claim.
+                Buyers maintain the right to report defective, counterfeit, or misrepresented products within 3 calendar days of delivery. Upon opening a dispute, Seller Payouts are automatically frozen until mediation resolves the claim.
               </p>
             </div>
 
             <div>
               <h2 className="text-lg font-bold text-[#0E1B4D] mb-2">4. Merchant Responsibilities</h2>
               <p>
-                Merchants agree to list only genuine, available inventory and dispatch packages within agreed SLAs. SwiftCart reserves the right to ban fraudulent vendors and refund affected buyers from escrow reserves.
+                Merchants agree to list only genuine, available inventory and dispatch packages within agreed SLAs. SwiftCart reserves the right to ban fraudulent vendors and refund affected buyers from payment reserves.
               </p>
             </div>
           </>
@@ -101,7 +101,7 @@ export const TermsPrivacyPage: React.FC<TermsPrivacyPageProps> = ({ onNavigate }
             <div>
               <h2 className="text-lg font-bold text-[#0E1B4D] mb-2">1. Data Collection & Uganda Privacy Compliance</h2>
               <p>
-                In compliance with the Data Protection and Privacy Act of Uganda, SwiftCart collects only the minimum personal information required to facilitate e-commerce orders, delivery routing, and escrow transactions.
+                Under SwiftCart privacy and buyer protection principles, SwiftCart collects only the minimum personal information required to facilitate e-commerce orders, delivery routing, and payment transactions.
               </p>
             </div>
 

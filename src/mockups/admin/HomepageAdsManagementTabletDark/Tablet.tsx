@@ -88,7 +88,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-3 flex flex-col">
 <span className="font-price-display text-price-display text-emerald-escrow font-extrabold whitespace-nowrap">UGX 18,240,000</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Settlement ledger held in escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Settlement ledger held until delivery</span>
 </div>
 </div>
 <div className="p-4 rounded-xl bg-surface-container-low shadow-sm relative overflow-hidden flex flex-col justify-between">
@@ -204,7 +204,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="mt-2.5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
 <span>CTR: <strong className="text-on-surface font-bold">9.1%</strong></span>
-<span>Escrow Protected Fleet</span>
+<span>Payment Protected Fleet</span>
 </div>
 </div>
 
@@ -403,7 +403,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-3 rounded-xl bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm shadow-inner">
 <div className="flex items-center gap-2">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span>Cryptographic Ad-Ledger Hash: <span className="font-code-display text-label-sm text-on-surface">0x8F21...A79D</span></span>
+<span>Campaign Record Ref: <span className="font-code-display text-label-sm text-on-surface">0x8F21...A79D</span></span>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Validated by Super Admin</span>
 </div>

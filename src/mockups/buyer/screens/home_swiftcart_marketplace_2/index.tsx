@@ -38,7 +38,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           {toastMessage}
         </div>
       )}
-      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart Logo" className="h-8 w-auto object-contain flex-shrink-0" src={`${assetBase}/brand/logo-full.png`} /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><Icon name="location_on" className="text-primary text-[14px]" /><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Deliver to Alex</span></div><button className="flex items-center gap-space-xs text-left group" onClick={() => alertToast('Action triggered')}><span className="font-label-md text-label-md text-on-surface font-bold truncate">Lagos / NY</span><Icon name="keyboard_arrow_down" className="text-on-surface-variant text-[14px] group-hover:text-primary transition-colors" /></button></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" className="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container transition-colors text-on-surface" onClick={() => alertToast('Action triggered')}><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="User Profile" className="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src={`${assetBase}/images/8c1af1850934fb96.webp`} /></button></div></div></header><main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full">
+      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div className="h-16 px-margin flex items-center justify-between gap-space-sm"><div className="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SwiftCart Logo" className="h-8 w-auto object-contain flex-shrink-0" src={`${assetBase}/brand/logo-full.png`} /><div className="flex flex-col min-w-0"><div className="flex items-center gap-space-xs"><Icon name="location_on" className="text-primary text-[14px]" /><span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Deliver to Mukasa</span></div><button className="flex items-center gap-space-xs text-left group" onClick={() => alertToast('Action triggered')}><span className="font-label-md text-label-md text-on-surface font-bold truncate">Kampala / Nakasero</span><Icon name="keyboard_arrow_down" className="text-on-surface-variant text-[14px] group-hover:text-primary transition-colors" /></button></div></div><div className="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" className="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container transition-colors text-on-surface" onClick={() => alertToast('Action triggered')}><Icon name="notifications" className="text-[22px]" /><span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="User Profile" className="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src={`${assetBase}/images/8c1af1850934fb96.webp`} /></button></div></div></header><main className="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div className="flex flex-col w-full">
 
 <section className="px-margin pt-space-sm pb-space-xs">
 <div className="relative flex items-center bg-surface-container-low rounded-xl shadow-sm focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all duration-200">
@@ -357,8 +357,8 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div>
 <div className="flex items-baseline gap-1.5">
-<span className="font-price-display text-[18px] leading-tight font-extrabold text-primary">$18.90</span>
-<span className="font-body-sm text-[11px] text-on-surface-variant line-through">$42.00</span>
+<span className="font-price-display text-[18px] leading-tight font-extrabold text-primary">UGX 70,000</span>
+<span className="font-body-sm text-[11px] text-on-surface-variant line-through">UGX 155,000</span>
 </div>
 <div className="mt-1.5">
 <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
@@ -381,8 +381,8 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div>
 <div className="flex items-baseline gap-1.5">
-<span className="font-price-display text-[18px] leading-tight font-extrabold text-primary">$4.99</span>
-<span className="font-body-sm text-[11px] text-on-surface-variant line-through">$22.90</span>
+<span className="font-price-display text-[18px] leading-tight font-extrabold text-primary">UGX 18,500</span>
+<span className="font-body-sm text-[11px] text-on-surface-variant line-through">UGX 85,000</span>
 </div>
 <div className="mt-1.5">
 <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
@@ -499,7 +499,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="auto_awesome" className="text-primary text-[22px]" />
 <h3 className="font-headline-sm text-headline-sm font-extrabold text-on-surface">Daily Discoveries</h3>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant font-medium">Personalized for Alex</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant font-medium">Personalized for Mukasa</span>
 </div>
 
 <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2 mb-2">

@@ -255,7 +255,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="offline_bolt" className="text-[22px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-surface">Offline Parcel &amp; Map Vault</span>
+<span className="font-label-lg text-label-lg text-on-surface">Offline Parcel &amp; Map reserve</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">24 Kampala corridors cached offline (142 MB)</span>
 </div>
 </div>
@@ -371,7 +371,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Pre-Delivery Package Damage / Leaking</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Freezes buyer escrow &amp; opens instant photographic claim</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Freezes buyer payment &amp; opens instant photographic claim</span>
 </div>
 </div>
 <Icon name="arrow_forward" className="text-outline group-hover:translate-x-1 transition-transform" />
@@ -382,7 +382,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
 <div className="flex items-center gap-space-sm">
 <Icon name="menu_book" className="text-tertiary text-[24px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Escrow Protocols &amp; Field Guide</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Payment Protocols &amp; Field Guide</h2>
 </div>
 <div className="flex flex-col gap-space-xs">
 
@@ -390,12 +390,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <button className="w-full p-space-md flex items-center justify-between text-left">
 <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
 <Icon name="lock_clock" className="text-tertiary text-[18px]" />
-                How SwiftCart Escrow Protects Your Rider Fee
+                How SwiftCart Protection Protects Your Rider Fee
               </span>
 <Icon name="expand_more" className="text-outline transition-transform" />
 </button>
 <div className="hidden px-space-md pb-space-md font-body-sm text-body-sm text-on-surface-variant" id="acc1-content">
-              Delivery payouts are held in secured escrow backed by Stanbic Bank &amp; released instantly to your Airtel/MTN wallet the moment the 4-digit buyer OTP is entered at destination.
+              Delivery payouts are held in secured payment backed by Pesapal &amp; released instantly to your Airtel/MTN wallet the moment the 4-digit buyer OTP is entered at destination.
             </div>
 </div>
 
@@ -403,7 +403,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <button className="w-full p-space-md flex items-center justify-between text-left">
 <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
 <Icon name="verified" className="text-primary text-[18px]" />
-                Cash-On-Delivery (COD) vs Escrow Flow
+                Cash-On-Delivery (COD) vs Payment Flow
               </span>
 <Icon name="expand_more" className="text-outline transition-transform" />
 </button>

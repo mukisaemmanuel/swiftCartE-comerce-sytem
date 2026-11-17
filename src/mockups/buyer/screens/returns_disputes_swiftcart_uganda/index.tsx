@@ -34,7 +34,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container shadow-sm">
 <Icon name="verified_user" className="text-[16px]" />
-<span className="font-label-sm text-label-sm tracking-wide uppercase">Swift Escrow Vault</span>
+<span className="font-label-sm text-label-sm tracking-wide uppercase">Swift Payment Reserve</span>
 </div>
 <div className="flex items-center gap-1 text-tertiary">
 <Icon name="lock" className="text-[16px]" />
@@ -42,14 +42,14 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 </div>
 <div className="flex flex-col gap-1 mt-1">
-<h2 className="font-headline-sm text-headline-sm text-on-secondary-fixed">UGX 265,000 Frozen in Escrow</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-secondary-fixed">UGX 265,000 Frozen in Payment</h2>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-          Your payment is held safely in our central escrow account. The merchant cannot withdraw these funds until this dispute reaches resolution.
+          Your payment is held safely in our central Payment Hold Account. The merchant cannot withdraw these funds until this dispute reaches resolution.
         </p>
 </div>
 <div className="flex items-center gap-2 pt-1">
 <Icon name="policy" className="text-secondary text-[16px]" />
-<span className="font-label-md text-label-md text-secondary">Bank of Uganda Digital Trust Protocol v2.4</span>
+<span className="font-label-md text-label-md text-secondary">Pesapal Digital Trust Protocol v2.4</span>
 </div>
 </div>
 
@@ -311,7 +311,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(14,27,77,0.06)] px-margin py-space-md flex flex-col gap-2">
 <div className="flex items-center justify-center gap-1.5 text-secondary">
 <Icon name="verified" className="text-[16px] text-tertiary" />
-<p className="font-label-sm text-label-sm text-center">Disputes resolved within 24 hours under Bank of Uganda eCommerce consumer guidelines</p>
+<p className="font-label-sm text-label-sm text-center">Disputes resolved within 24 hours under Pesapal eCommerce consumer guidelines</p>
 </div>
 <button className="w-full h-12 rounded-xl bg-gradient-to-r from-[#FF8A1F] to-[#DA3700] text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(218,55,0,0.30)] active:scale-[0.98] transition-all" id="submitDisputeBtn" onClick={() => alertToast('Action triggered')}>
 <Icon name="assignment_turned_in" className="text-[20px]" />

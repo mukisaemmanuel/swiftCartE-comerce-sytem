@@ -140,18 +140,18 @@ export const OverviewSwiftcartSuperAdmin: React.FC<OverviewSwiftcartSuperAdminPr
 
 <div className="min-w-[240px] bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Escrow Liquidity</span>
+<span className="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Payment Liquidity</span>
 <span className="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center">
 <Icon name="lock" className="text-[16px]" />
 </span>
 </div>
 <div className="my-space-xs">
-<span className="font-label-sm text-label-sm text-secondary block">Stanbic Custody</span>
+<span className="font-label-sm text-label-sm text-secondary block">Pesapal holding</span>
 <span className="font-price-display text-price-display text-on-surface font-extrabold tracking-tight">384.5M</span>
 </div>
 <div className="flex items-center gap-1 text-secondary">
 <Icon name="account_balance" className="text-[14px]" />
-<span className="font-body-sm text-body-sm">Fully Backed &amp; Ringfenced</span>
+<span className="font-body-sm text-body-sm">Fully Backed &amp; reserved</span>
 </div>
 </div>
 

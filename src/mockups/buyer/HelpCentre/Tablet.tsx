@@ -42,12 +42,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           How can we help you today in Uganda?
         </h1>
 <p className="font-body-md text-body-md text-secondary mb-space-md">
-          Instant answers on mobile money escrow, Kampala boda dispatches, pickup lockers, and merchant guarantees.
+          Instant answers on mobile money payment, Kampala boda dispatches, pickup lockers, and merchant guarantees.
         </p>
 
 <div className="relative flex items-center w-full min-h-[48px] bg-surface-container-lowest rounded-lg shadow-sm px-space-md py-space-xs mb-space-md">
 <Icon name="search" className="text-secondary text-[22px] mr-space-sm shrink-0" />
-<input className="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="faq-search" placeholder="Search orders, escrow questions, boda delivery, returns..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') onNavigate?.('/search?q=' + encodeURIComponent(searchQuery)); }} />
+<input className="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="faq-search" placeholder="Search orders, payment questions, boda delivery, returns..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') onNavigate?.('/search?q=' + encodeURIComponent(searchQuery)); }} />
 <button aria-label="Clear query" className="hidden w-8 h-8 rounded-full hover:bg-surface-container text-secondary flex items-center justify-center shrink-0 transition-colors" id="clear-btn" type="button" onClick={() => { setDrawerOpen(false); setModalOpen(false); }}>
 <Icon name="close" className="text-[18px]" />
 </button>
@@ -57,7 +57,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-secondary uppercase font-bold shrink-0">Trending:</span>
 <button className="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm flex items-center gap-1" type="button" onClick={() => alertToast('Action triggered')}>
 <Icon name="lock_open" className="text-[16px] text-tertiary" />
-            Escrow Release
+            Payment Release
           </button>
 <button className="font-label-md text-label-md px-space-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary transition-colors min-h-[36px] shadow-sm flex items-center gap-1" type="button" onClick={() => alertToast('Action triggered')}>
 <Icon name="pin" className="text-[16px] text-primary" />
@@ -115,14 +115,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="faq-content hidden pb-space-sm pr-space-md">
 <div className="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
 <p>
-<strong className="text-on-surface">Rule of Thumb:</strong> Only share your 6-digit code with the rider <span className="text-primary font-semibold">AFTER physically inspecting</span> your package and verifying the tamper seal.
+<strong className="text-on-surface">Rule of Thumb:</strong> Only share your 6-digit code with the rider <span className="text-primary font-semibold">AFTER physically inspecting</span> your package and verifying the package seal.
                   </p>
 <p>
-                    Once the boda courier enters this code into the SwiftCart Fleet App, the MTN/Airtel escrow payment transitions from <em>Locked</em> to <em>Completed</em>. If the seal is compromised, decline handover immediately and report via the ticket panel below.
+                    Once the boda courier enters this code into the SwiftCart Fleet App, the MTN/Airtel payment payment transitions from <em>Locked</em> to <em>Completed</em>. If the seal is compromised, decline handover immediately and report via the ticket panel below.
                   </p>
 <div className="flex items-center gap-2 mt-1">
 <Icon name="verified" className="text-tertiary text-[18px]" />
-<span className="font-label-sm text-label-sm text-tertiary font-bold">Tamper Seal Guarantee Enforced</span>
+<span className="font-label-sm text-label-sm text-tertiary font-bold">package seal Guarantee Enforced</span>
 </div>
 </div>
 </div>
@@ -157,8 +157,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="shield" className="text-[20px]" />
 </div>
 <div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Payments &amp; Mobile Money Escrow</h2>
-<p className="font-body-sm text-body-sm text-secondary">Bank of Uganda regulatory framework and MoMo prompts</p>
+<h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">Payments &amp; Mobile money payment</h2>
+<p className="font-body-sm text-body-sm text-secondary">Pesapal regulatory framework and MoMo prompts</p>
 </div>
 </div>
 <span className="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-secondary font-bold">2 Articles</span>
@@ -167,14 +167,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="faq-item pt-space-xs">
 <button className="w-full flex items-center justify-between py-space-sm text-left min-h-[48px] focus:outline-none group" type="button" onClick={() => alertToast('Action triggered')}>
 <span className="font-label-lg text-label-lg text-on-surface font-semibold group-hover:text-primary transition-colors">
-                  How does the Bank of Uganda escrow protocol protect me?
+                  How does the Pesapal payment protocol protect me?
                 </span>
 <Icon name="expand_more" className="text-secondary transition-transform duration-200" />
 </button>
 <div className="faq-content hidden pb-space-sm pr-space-md">
 <div className="p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-xs">
 <p>
-                    Every UGX sent through MTN Mobile Money or Airtel Money is held in a ring-fenced custodial escrow trust regulated under the <em>National Payment Systems Act 2020</em>.
+                    Every UGX sent through MTN Mobile Money or Airtel Money is held in a reserved protected Payment Protection standard under the <em>Pesapal Payment Guidelines</em>.
                   </p>
 <p>
                     Funds are never transferred to the independent merchant until you confirm inspection of goods via your 6-digit delivery PIN or after a 48-hour inspection period passes without an active dispute.
@@ -196,9 +196,9 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                     If the automated push prompt times out on your handset:
                   </p>
 <ol className="list-decimal pl-5 space-y-1">
-<li>Dial <strong>*165#</strong> on your MTN line immediately.</li>
+<li>Dial <strong>Mobile prompt</strong> on your MTN line immediately.</li>
 <li>Select <strong>Option 4 (Payments)</strong> → <strong>Option 6 (Pending Approvals)</strong>.</li>
-<li>Authorize the transaction labeled <em>SwiftCart Uganda Escrow</em>.</li>
+<li>Authorize the transaction labeled <em>SwiftCart Uganda Payment</em>.</li>
 <li>If it fails, tap "Retry Payment" on checkout within 15 minutes.</li>
 </ol>
 </div>
@@ -309,7 +309,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </p>
 <div className="flex items-center gap-space-xs text-secondary mt-1">
 <Icon name="person" className="text-[16px]" />
-<span className="font-body-sm text-body-sm">Assigned Lead: Officer Patricia Namubiru (Escrow Claims Desk)</span>
+<span className="font-body-sm text-body-sm">Assigned Lead: Officer Denis Mukasa (Payment Support Desk)</span>
 </div>
 </div>
 <button className="w-full sm:w-auto min-h-[48px] px-space-md py-space-xs rounded-lg bg-on-surface text-surface hover:bg-primary transition-colors font-label-lg text-label-lg shrink-0 flex items-center justify-center gap-1 shadow-sm" type="button" onClick={() => alertToast('Action triggered')}>
@@ -433,14 +433,14 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-lg text-label-lg text-surface-bright font-bold">Official Buyer Protection Pledge</span>
 </div>
 <p className="font-body-sm text-body-sm text-surface-variant/80">
-            Every transaction is backed by our Uganda merchant integrity code and formal digital finance escrow covenants.
+            Every transaction is backed by our Uganda merchant integrity code and formal digital finance payment covenants.
           </p>
 <div className="flex flex-col gap-space-xs mt-space-xs">
 
 <div className="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-lowest/10">
 <Icon name="lock" className="text-tertiary-fixed text-[20px] shrink-0" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md font-bold text-surface-bright">100% Escrow Security</span>
+<span className="font-label-md text-label-md font-bold text-surface-bright">100% Payment Security</span>
 <span className="font-body-sm text-body-sm text-surface-variant/70">Payment held safely until delivery code handover</span>
 </div>
 </div>
@@ -456,13 +456,13 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-lowest/10">
 <Icon name="gavel" className="text-secondary-fixed text-[20px] shrink-0" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md font-bold text-surface-bright">Bank of Uganda &amp; UCC Compliant</span>
-<span className="font-body-sm text-body-sm text-surface-variant/70">Operated strictly within National Payment System Act</span>
+<span className="font-label-md text-label-md font-bold text-surface-bright">Pesapal &amp; UCC Compliant</span>
+<span className="font-body-sm text-body-sm text-surface-variant/70">Operated strictly within Pesapal Payment Guidelines</span>
 </div>
 </div>
 </div>
 <div className="pt-space-xs flex items-center justify-between text-surface-variant/60 font-body-sm text-body-sm">
-<span>License: NPS-PSP-2023/048</span>
+<span>License: Pesapal Rails-PSP-2023/048</span>
 <span className="text-tertiary-fixed font-semibold">Active &amp; Certified</span>
 </div>
 </div>
@@ -475,7 +475,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 
-</div></main><footer className="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)] mt-auto"><div className="w-full px-gutter-desktop py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg"><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0"><Icon name="verified_user" className="text-tertiary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel MoMo Escrow</span><span className="font-body-sm text-body-sm text-secondary">Funds secured until 100% item inspection</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0"><Icon name="two_wheeler" className="text-primary-container text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</span><span className="font-body-sm text-body-sm text-secondary">Express city hub runner direct to your doorstep</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><Icon name="assignment_return" className="text-secondary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</span><span className="font-body-sm text-body-sm text-secondary">Drop off at Oasis Mall, Acacia, or Village Mall</span></div></div></div><div className="flex flex-wrap items-center justify-between gap-space-md pt-space-md"><div className="flex flex-wrap items-center gap-space-md"><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="font-label-md text-label-md text-primary font-bold hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="sell-on-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)] mt-auto"><div className="w-full px-gutter-desktop py-space-lg"><div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg"><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0"><Icon name="verified_user" className="text-tertiary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">MTN &amp; Airtel momo payment</span><span className="font-body-sm text-body-sm text-secondary">Funds secured until 100% item inspection</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0"><Icon name="two_wheeler" className="text-primary-container text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">1-Hour Kampala Boda Dispatch</span><span className="font-body-sm text-body-sm text-secondary">Express city hub runner direct to your doorstep</span></div></div><div className="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] min-h-[48px]"><div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><Icon name="assignment_return" className="text-secondary text-[22px]" /></div><div className="flex flex-col"><span className="font-label-lg text-label-lg text-on-surface font-bold">7-Day Free Hub Returns</span><span className="font-body-sm text-body-sm text-secondary">Drop off at Oasis Mall, Acacia, or Village Mall</span></div></div></div><div className="flex flex-wrap items-center justify-between gap-space-md pt-space-md"><div className="flex flex-wrap items-center gap-space-md"><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="terms-of-service" href="#" onClick={() => alertToast('Action triggered')}>Terms of Service</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="privacy-policy" href="#" onClick={() => alertToast('Action triggered')}>Privacy Policy</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="buyer-protection" href="#" onClick={() => alertToast('Action triggered')}>Buyer Protection</a><a className="font-label-md text-label-md text-secondary hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="hub-locations" href="#" onClick={() => alertToast('Action triggered')}>Hub Locations</a><a className="font-label-md text-label-md text-primary font-bold hover:text-on-surface min-h-[48px] flex items-center transition-colors" data-path="sell-on-swiftcart" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>Sell on SwiftCart</a></div><p className="font-body-sm text-body-sm text-secondary">© 2025 SwiftCart Uganda Ltd. All rights reserved.</p></div></div></footer>
     </div>
   );
 };

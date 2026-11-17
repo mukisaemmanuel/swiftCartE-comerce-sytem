@@ -237,7 +237,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
 <div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Recalculated Price Ledger</h3>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Live simulator including escrow guarantee fees &amp; wholesale floor</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Live simulator including Payment Protection fees &amp; wholesale floor</p>
 </div>
 
 <div className="px-space-md py-1.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-md text-label-md flex items-center gap-space-xs self-start sm:self-auto">

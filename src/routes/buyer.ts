@@ -212,7 +212,7 @@ export const buyerRoutes: RouteDefinition[] = [
   },
   {
     path: "/escrow-dispute-return-request",
-    name: "Escrow Dispute Return Request",
+    name: "Payment Dispute Return Request",
     role: "buyer",
     designFiles: {
       mobile: "design/mobile/buyer/escrow_dispute_return_request_swiftcart_uganda",

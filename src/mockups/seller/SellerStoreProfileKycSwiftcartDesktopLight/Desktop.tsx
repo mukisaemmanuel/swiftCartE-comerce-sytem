@@ -28,12 +28,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md flex-wrap">
 <div className="flex items-center gap-1.5 text-tertiary font-bold">
 <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse inline-block"></span>
-<span>URA EFRIS NODE CONNECTED</span>
+<span>Tax E-INVOICE NODE CONNECTED</span>
 </div>
 <span className="opacity-40">•</span>
 <div className="flex items-center gap-1.5 text-secondary">
 <Icon name="sync" className="text-[14px]" />
-<span>BOU SANDBOX V3 SYNC LIVE</span>
+<span>Pesapal SANDBOX V3 SYNC LIVE</span>
 </div>
 <span className="opacity-40">|</span>
 <span className="text-on-surface">KYC Re-certification due in <strong className="text-primary font-bold">412 days</strong></span>
@@ -58,7 +58,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Store Profile &amp; Official Business KYC</h1>
 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-tertiary font-label-sm text-label-sm shadow-sm">
 <Icon name="verified_user" className="text-[14px] text-tertiary" />
-<span>URSB &amp; BANK OF UGANDA VERIFIED MERCHANT • TIER 3</span>
+<span>URSB &amp; TAX VERIFIED VERIFIED MERCHANT • TIER 3</span>
 </div>
 </div>
 </div>
@@ -171,7 +171,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="mail" className="absolute left-2 top-3 text-secondary text-[16px]" />
 </div>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Directly routed to Swift Escrow dispute mediation</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Directly routed to Swift Payment Dispute mediation</p>
 </div>
 </div>
 </div>
@@ -180,10 +180,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-sm border-b-0">
 <div>
 <div className="flex items-center gap-2">
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Statutory Regulatory &amp; KYC Verification Dossier</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">verified platform Regulatory &amp; KYC Verification Dossier</h2>
 <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-tertiary font-label-sm text-label-sm font-bold">Audited: A+ Tier</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Audited against national databases: URSB, URA Taxpayer Registry &amp; NIRA NIN Database</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Audited against national databases: URSB, Tax Taxpayer Registry &amp; NIRA NIN Database</p>
 </div>
 <button className="text-primary hover:text-primary-container font-label-md text-label-md flex items-center gap-1 self-start sm:self-auto" type="button">
 <Icon name="history" className="text-[16px]" />
@@ -227,12 +227,12 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="receipt_long" className="text-[18px]" />
 </div>
 <div>
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Uganda Revenue Authority (URA)</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Uganda Revenue Authority (Tax)</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">TIN 1004829104</span>
 </div>
 </div>
 <span className="px-2 py-0.5 rounded-full bg-emerald-50 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
-<Icon name="check_circle" className="text-[12px]" /> EFRIS Active
+<Icon name="check_circle" className="text-[12px]" /> E-INVOICE Active
               </span>
 </div>
 <div className="grid grid-cols-2 gap-2 pt-2 bg-surface-container-lowest/70 p-2.5 rounded-lg text-body-sm font-body-sm">
@@ -241,7 +241,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-bold text-tertiary">Real-time Fiscalized</span>
 </div>
 <div>
-<span className="text-on-surface-variant block text-[11px]">VAT Status:</span>
+<span className="text-on-surface-variant block text-[11px]">Tax Status:</span>
 <span className="text-on-surface">Standard 18% Compliant</span>
 </div>
 </div>
@@ -306,7 +306,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <h3 className="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
 <Icon name="folder_special" className="text-[18px] text-on-surface-variant" />
-<span>Document Vault &amp; Official Filings</span>
+<span>Document reserve &amp; Official Filings</span>
 </h3>
 <span className="font-label-sm text-label-sm text-on-surface-variant">SHA-256 Encrypted on Swift Ledger</span>
 </div>
@@ -454,7 +454,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="shield" className="text-[16px]" />
 <span>TOP 1% KAMPALA MERCHANT</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Zero fraud flags logged across 1,840+ completed Escrow releases this quarter.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Zero fraud flags logged across 1,840+ completed Payment releases this quarter.</p>
 </div>
 </div>
 <div className="space-y-2 text-body-sm font-body-sm">
@@ -476,7 +476,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
 <span className="text-on-surface-variant">Payout Clearance</span>
-<span className="font-bold text-tertiary">Instant 0-hr Escrow</span>
+<span className="font-bold text-tertiary">Instant 0-hr Payment</span>
 </div>
 </div>
 </div>
@@ -539,7 +539,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="account_balance" className="text-[16px]" />
 </div>
 <div>
-<span className="font-label-md text-label-md text-on-surface font-bold block">Stanbic Bank Uganda</span>
+<span className="font-label-md text-label-md text-on-surface font-bold block">Pesapal Uganda</span>
 <p className="font-mono text-body-sm font-bold text-on-surface mt-0.5">A/C: 9030 •••• 94821</p>
 <p className="font-body-sm text-[11px] text-on-surface-variant">Garden City Branch Kampala • EFT / RTGS</p>
 </div>

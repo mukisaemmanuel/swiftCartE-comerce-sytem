@@ -89,7 +89,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="flex items-center gap-space-xs">
 <Icon name="gshield" className="text-tertiary text-[18px]" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-tertiary">Verified Buyer • Escrow Guarded</span>
+<span className="font-label-sm text-label-sm text-tertiary">Verified Buyer • payment guarded</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Funds held safely until parcel inspected</span>
 </div>
 </div>
@@ -125,7 +125,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="lock" className="text-[18px] text-tertiary" />
 <span className="w-2 h-2 rounded-full bg-tertiary"></span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment</span>
 <span className="font-label-lg text-label-lg text-on-surface mt-0.5">2 Orders</span>
 <span className="font-body-sm text-body-sm text-tertiary text-[11px] font-semibold mt-0.5">Safe release</span>
 </button>
@@ -218,7 +218,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-body-md text-body-md font-semibold text-on-surface">Order History &amp; Receipts</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Track past shipments and escrow releases</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Track past shipments and payment releases</span>
 </div>
 </div>
 <Icon name="chevron_right" className="text-on-surface-variant text-[20px]" />
@@ -336,7 +336,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-body-md text-body-md font-semibold text-on-surface">Instant SMS &amp; App Alerts</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">OTP, Boda dispatch, escrow payouts</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">OTP, Boda dispatch, seller payouts</span>
 </div>
 </div>
 
@@ -376,7 +376,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="font-body-md text-body-md font-semibold text-on-surface">Help Centre &amp; WhatsApp Desk</span>
 <span className="px-1.5 py-0.2 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm">24/7 Live</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Escrow dispute &amp; instant boda check</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Payment Dispute &amp; instant boda check</span>
 </div>
 </div>
 <Icon name="open_in_new" className="text-on-surface-variant text-[20px]" />
@@ -407,7 +407,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-body-md text-body-md font-semibold text-on-surface">About SwiftCart Uganda</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Regulated Escrow, Kampala Logistics Hub</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant truncate">Secure Payment, Kampala Logistics Hub</span>
 </div>
 </div>
 <Icon name="chevron_right" className="text-on-surface-variant text-[20px]" />
@@ -420,7 +420,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="shield" className="text-[20px]" />
 </div>
 <div className="flex flex-col min-w-0">
-<span className="font-body-md text-body-md font-semibold text-on-surface">Terms &amp; Escrow Protection Policy</span>
+<span className="font-body-md text-body-md font-semibold text-on-surface">Terms &amp; Payment Protection Policy</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">Consumer protection laws of Uganda</span>
 </div>
 </div>

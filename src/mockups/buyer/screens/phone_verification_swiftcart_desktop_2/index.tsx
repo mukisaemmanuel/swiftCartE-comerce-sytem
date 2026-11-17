@@ -93,7 +93,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <div className="w-full pt-6 bg-surface-container rounded-lg p-4 flex items-start gap-3">
 <Icon name="security" className="text-tertiary text-xl flex-shrink-0" />
 <div className="space-y-1">
-<div className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary">Swift Escrow Protected</div>
+<div className="font-label-sm text-label-sm uppercase tracking-wide text-tertiary">Payment Protected</div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
             SwiftCart protects your account with carrier-grade two-factor authentication to ensure safe payments and delivery code security.
           </p>

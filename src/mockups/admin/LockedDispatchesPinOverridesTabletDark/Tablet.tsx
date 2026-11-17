@@ -29,7 +29,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
-<span className="text-tertiary">ESCROW PROTOCOL</span>
+<span className="text-tertiary">PAYMENT PROTOCOL</span>
 <span>/</span>
 <span>DISPATCH ENFORCEMENT</span>
 <span>/</span>
@@ -208,7 +208,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-2">
 <span className="font-code-display text-label-lg text-on-surface font-bold">#SC-9462</span>
 <span className="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
-                  ESCROW HELD
+                  PAYMENT HELD
                 </span>
 </div>
 <span className="font-code-display text-label-sm text-on-surface-variant">18m ago</span>
@@ -296,7 +296,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">Active Resolution: #SC-9488</span>
 <span className="px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="lock" className="text-[12px]" />
-                    ESCROW CUSTODY
+                    PAYMENT HOLD
                   </span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
@@ -305,7 +305,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
-<span className="font-label-sm text-label-sm uppercase text-on-surface-variant">Escrow Hold</span>
+<span className="font-label-sm text-label-sm uppercase text-on-surface-variant">Payment Hold</span>
 <span className="font-price-display text-price-display text-on-surface font-extrabold text-tertiary whitespace-nowrap">
                 UGX 248,500
               </span>
@@ -518,7 +518,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <button className="w-full h-[52px] rounded-2xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-[0.99] transition-all" type="button">
 <Icon name="lock_open" className="text-[22px]" />
-              Authorize Immediate Code Override &amp; Release Escrow
+              Authorize Immediate Code Override &amp; release payment
             </button>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -535,7 +535,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
 <Icon name="history_edu" className="text-[16px] text-tertiary" />
-<span>Cryptographic audit entry will be recorded under SuperAdmin UID #ADM-0042 in Uganda Ledger.</span>
+<span>verified audit entry will be recorded under SuperAdmin UID #ADM-0042 in Uganda Ledger.</span>
 </div>
 </div>
 </div>

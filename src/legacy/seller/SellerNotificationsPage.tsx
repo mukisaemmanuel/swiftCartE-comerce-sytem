@@ -34,7 +34,7 @@ export const SellerNotificationsPage: React.FC<SellerNotificationsPageProps> = (
             Merchant Notifications
           </h1>
           <p className="text-[14px] text-[var(--d-text-secondary)] mt-0.5">
-            Operational alerts, customer order updates, escrow releases, and system notices.
+            Operational alerts, customer order updates, payment releases, and system notices.
           </p>
         </div>
         <button
@@ -52,7 +52,7 @@ export const SellerNotificationsPage: React.FC<SellerNotificationsPageProps> = (
           { key: 'ALL', label: 'All Alerts' },
           { key: 'order', label: 'Orders' },
           { key: 'return', label: 'Returns' },
-          { key: 'wallet', label: 'Wallet & Escrow' },
+          { key: 'wallet', label: 'Wallet & Payment' },
           { key: 'system', label: 'System' },
         ].map((f) => (
           <button

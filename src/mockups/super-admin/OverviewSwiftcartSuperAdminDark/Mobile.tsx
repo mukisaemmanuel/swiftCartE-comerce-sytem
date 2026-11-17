@@ -33,7 +33,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-1.5">
-<span className="font-label-lg text-label-lg text-on-surface truncate">Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg text-on-surface truncate">Denis Mukasa</span>
 <span className="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm shrink-0">#SADM-01</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">Executive Platform Governance</span>
@@ -123,7 +123,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 
 <div className="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Custody</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">payment holding</span>
 <span className="w-6 h-6 rounded-md bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center">
 <Icon name="lock" className="text-[14px]" />
 </span>
@@ -252,7 +252,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 </div>
 <div className="flex flex-col">
 <span className="font-label-md text-label-md text-on-surface">Platform Governance Parameters</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow release windows, fee tiers</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Release windows, fee tiers</span>
 </div>
 </div>
 <Icon name="chevron_right" className="text-on-surface-variant text-[20px]" />
@@ -264,7 +264,7 @@ export const OverviewSwiftcartSuperAdminDark: React.FC<OverviewSwiftcartSuperAdm
 <Icon name="security" className="text-danger-penalty text-[20px]" />
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-danger-penalty">High-Authority Controls</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Restricted to Patricia Namubiru (#SADM-01)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Restricted to Denis Mukasa (#SADM-01)</span>
 </div>
 </div>
 

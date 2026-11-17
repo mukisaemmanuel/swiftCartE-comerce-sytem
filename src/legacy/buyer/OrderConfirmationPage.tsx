@@ -62,11 +62,11 @@ export const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({
           </div>
 
           <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
-            <strong className="text-[#0E1B4D]">Important:</strong> Share this 6-digit code with the Boda rider or pickup agent <span className="underline font-bold">ONLY</span> when you have inspected and received your items. Giving this code authorizes the release of funds from SwiftCart Escrow.
+            <strong className="text-[#0E1B4D]">Important:</strong> Share this 6-digit code with the Boda rider or pickup agent <span className="underline font-bold">ONLY</span> when you have inspected and received your items. Giving this code authorizes the release of funds from SwiftCart Protection.
           </p>
         </div>
 
-        {/* Escrow Protection Notice */}
+        {/* Payment Protection Notice */}
         <PaymentProtectionNotice variant="banner" />
 
         {/* Order Details Summary */}

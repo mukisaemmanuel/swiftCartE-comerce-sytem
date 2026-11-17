@@ -177,7 +177,7 @@ export const SellerOrdersPage: React.FC<SellerOrdersPageProps> = ({ onNavigate: 
                         </span>
                         <StatusChip status={order.status} />
                         <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 font-bold border border-purple-500/20">
-                          {order.escrowStatus.replace(/_/g, ' ')}
+                          Hold: {(order.paymentHoldStatus || order.escrowStatus).replace(/_/g, ' ')}
                         </span>
                       </div>
                       <p className="text-xs text-[var(--d-text-secondary)] mt-1">
@@ -222,7 +222,7 @@ export const SellerOrdersPage: React.FC<SellerOrdersPageProps> = ({ onNavigate: 
                 <div className="flex items-center gap-2 mt-1">
                   <StatusChip status={selectedOrder.status} />
                   <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 font-bold border border-purple-500/20">
-                    Escrow: {selectedOrder.escrowStatus}
+                    Payment Hold: {selectedOrder.paymentHoldStatus || selectedOrder.escrowStatus}
                   </span>
                 </div>
               </div>
@@ -435,7 +435,7 @@ export const SellerOrdersPage: React.FC<SellerOrdersPageProps> = ({ onNavigate: 
         onCancel={() => setIsCancelDialogOpen(false)}
         onConfirm={handleConfirmCancel}
         title="Cancel Order"
-        message="Cancelling this order will immediately notify the buyer and reverse their escrow payment."
+        message="Cancelling this order will immediately notify the buyer and reverse their payment payment."
         actionLabel="Cancel Order"
         isDangerous
         requiresReason

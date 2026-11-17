@@ -128,7 +128,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
 <div className="flex items-start justify-between">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Released Counter</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Paid to seller Counter</span>
 <div className="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-emerald-escrow">
 <Icon name="payments" className="text-[20px]" />
 </div>
@@ -210,7 +210,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Locked</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">payment protected</span>
 <span className="font-price-display text-price-display text-emerald-escrow whitespace-nowrap">UGX 325,000</span>
 </div>
 </div>
@@ -272,7 +272,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Payment Hold</span>
 <span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 195,000</span>
 </div>
 </div>
@@ -314,7 +314,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Hold</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Payment Hold</span>
 <span className="font-price-display text-price-display text-on-surface whitespace-nowrap">UGX 95,000</span>
 </div>
 </div>
@@ -338,7 +338,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
 <div className="flex items-center gap-space-xs">
 <Icon name="check_circle" className="text-[18px] text-tertiary" />
-<span>Station inventory synced with Kampala Main Vault 44 seconds ago.</span>
+<span>Station inventory synced with Kampala Main reserve 44 seconds ago.</span>
 </div>
 <button className="text-primary hover:underline font-label-sm text-label-sm uppercase font-bold">View Overdue (11)</button>
 </div>
@@ -506,7 +506,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <button className="w-full h-[54px] rounded-xl bg-gradient-to-r from-action-gradient-start to-action-gradient-end hover:brightness-110 active:scale-[0.99] text-on-primary-container font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-[0_4px_20px_rgba(218,55,0,0.35)] transition-all">
 <Icon name="lock_open" className="text-[22px]" />
-<span>Release Goods &amp; Confirm Escrow Disbursement</span>
+<span>Release Goods &amp; Confirm Seller Payout</span>
 </button>
 
 <div className="grid grid-cols-2 gap-space-sm">

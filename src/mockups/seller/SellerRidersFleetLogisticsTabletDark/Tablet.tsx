@@ -89,7 +89,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="relative overflow-hidden rounded-xl bg-container-dark-low p-space-lg flex flex-col justify-between shadow-md">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Transit In-Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Transit In-Payment</span>
 <span className="p-2 rounded-lg bg-emerald-escrow/10 text-emerald-escrow">
 <Icon name="security" className="text-[20px]" />
 </span>
@@ -98,7 +98,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="font-price-display text-price-display text-on-surface tracking-tight whitespace-nowrap">UGX 3,840,000</div>
 <div className="mt-2 flex items-center gap-1.5 font-label-sm text-label-sm text-emerald-escrow">
 <Icon name="lock" className="text-[14px]" />
-<span>Bank-backed Platform Custody</span>
+<span>Bank-backed Platform holding</span>
 </div>
 </div>
 </div>
@@ -369,7 +369,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Shipment</span>
 <span className="font-label-sm text-label-sm text-emerald-escrow flex items-center gap-1">
-<Icon name="verified_user" className="text-[14px]" /> Escrow Paid
+<Icon name="verified_user" className="text-[14px]" /> Payment Paid
             </span>
 </div>
 <div className="flex items-center gap-space-md">
@@ -436,7 +436,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between text-body-sm text-on-surface">
 <span className="flex items-center gap-2">
 <Icon name="check_circle" className="text-emerald-escrow text-[18px]" />
-<span>Tamper Seal Slip Attached</span>
+<span>package seal Slip Attached</span>
 </span>
 <span className="font-code-display text-[12px] text-primary">#SC-TS-4093</span>
 </div>
@@ -472,7 +472,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 </div></main>
-<footer className="fixed bottom-0 left-0 right-0 h-10 bg-surface-container-lowest/95 backdrop-blur-md z-40 px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div className="flex items-center gap-space-sm"><span className="flex items-center gap-1.5 text-tertiary"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>William St Central Hub Connection: 99.8%</span><span className="text-outline-variant">•</span><span className="text-on-surface-variant">Lat: 18ms</span></div><div className="flex items-center gap-space-xs text-on-surface-variant"><Icon name="account_balance" className="text-[15px] text-emerald-escrow" /><span>Bank of Uganda Escrow Compliance Custody Tier-1 Verified</span></div></footer>
+<footer className="fixed bottom-0 left-0 right-0 h-10 bg-surface-container-lowest/95 backdrop-blur-md z-40 px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div className="flex items-center gap-space-sm"><span className="flex items-center gap-1.5 text-tertiary"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>William St Central Hub Connection: 99.8%</span><span className="text-outline-variant">•</span><span className="text-on-surface-variant">Lat: 18ms</span></div><div className="flex items-center gap-space-xs text-on-surface-variant"><Icon name="account_balance" className="text-[15px] text-emerald-escrow" /><span>Pesapal Payment Compliance holding Tier-1 Verified</span></div></footer>
     </div>
   );
 };

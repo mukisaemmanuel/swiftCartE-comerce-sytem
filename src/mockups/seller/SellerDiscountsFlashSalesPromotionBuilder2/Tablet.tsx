@@ -52,7 +52,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center gap-2.5 flex-shrink-0">
 <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low border border-slate-200/70">
-<span className="text-[11px] font-semibold text-secondary uppercase tracking-wider">Escrow:</span>
+<span className="text-[11px] font-semibold text-secondary uppercase tracking-wider">Payment:</span>
 <span className="text-[13px] font-bold text-on-surface">UGX 14,850,000</span>
 </div>
 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 border border-orange-200/70">
@@ -397,7 +397,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between border-b border-slate-200 pb-2">
 <span className="text-[11px] font-bold text-on-surface uppercase tracking-wider">Step 4 • Settlement &amp; Net Margin Simulator</span>
 <span className="text-tertiary text-[11px] font-bold flex items-center gap-1">
-<Icon name="bolt" className="text-[14px]" /> Instant MoMo Escrow
+<Icon name="bolt" className="text-[14px]" /> Instant momo payment
               </span>
 </div>
 
@@ -415,7 +415,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-mono text-error font-medium">-UGX 16,898</span>
 </div>
 <div className="flex justify-between py-0.5 text-secondary border-b border-dashed border-slate-200">
-<span>Escrow &amp; SafeBoda Levy:</span>
+<span>Payment &amp; SafeBoda Levy:</span>
 <span className="font-mono text-tertiary font-medium">UGX 0 (Subsidized)</span>
 </div>
 <div className="flex justify-between py-1 text-on-surface font-semibold bg-white/70 px-2 rounded">
@@ -593,7 +593,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span>•</span>
 <span>William St Central Hub: 99.8% Online</span>
 <span>•</span>
-<span className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Bank of Uganda Escrow Regulated</span>
+<span className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Pesapal Payment standard</span>
 </div>
 <div>
 <span>© 2024 SwiftCart Uganda Ltd. Pioneer Mall Terminal.</span>

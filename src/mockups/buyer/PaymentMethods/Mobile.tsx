@@ -53,7 +53,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="flex-1 text-center px-2">
 <h1 className="font-headline-sm text-[18px] leading-snug font-bold text-on-surface tracking-tight">Payment Methods</h1>
 </div>
-<button aria-label="Escrow & Payment Help" className="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 active:scale-95 transition-all" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>
+<button aria-label="Payment & Payment Help" className="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 active:scale-95 transition-all" type="button" onClick={(e) => { e.preventDefault(); onNavigate?.('/help-centre'); }}>
 <Icon name="help_outline" className="text-[22px]" />
 </button>
 </div>
@@ -67,7 +67,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center gap-2">
-<span className="font-label-lg text-[13px] font-bold text-on-surface tracking-wide uppercase">Swift Escrow Protected</span>
+<span className="font-label-lg text-[13px] font-bold text-on-surface tracking-wide uppercase">Payment Protected</span>
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-[#006947] text-[11px] font-bold tracking-tight">
 <span className="w-1.5 h-1.5 rounded-full bg-[#006947] animate-pulse"></span>
                 Active
@@ -125,7 +125,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="mt-3.5 pt-3 border-t border-surface-container/60 pl-1 flex items-center justify-between">
 <div className="flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
 <Icon name="bolt" className="text-amber-600 text-[16px]" />
-<span>Instant <strong className="text-on-surface">*165#</strong> USSD prompt</span>
+<span>Instant <strong className="text-on-surface">Mobile prompt</strong> USSD prompt</span>
 </div>
 <div className="flex items-center gap-1 text-[#006947] text-xs font-semibold">
 <Icon name="check_circle" className="text-[16px]" />
@@ -162,7 +162,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="mt-3.5 pt-3 border-t border-surface-container/60 flex items-center justify-between">
 <div className="flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
 <Icon name="touch_app" className="text-red-600 text-[16px]" />
-<span>USSD <strong className="text-on-surface">*185#</strong> ready</span>
+<span>USSD <strong className="text-on-surface">Mobile prompt</strong> ready</span>
 </div>
 <button className="px-3 py-1 rounded-full text-xs font-bold text-primary bg-primary-fixed/60 hover:bg-primary-fixed active:scale-95 transition-all" type="button" onClick={() => alertToast('Action triggered')}>
               Make Default
@@ -190,7 +190,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </div>
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-1.5">
-<span className="font-label-lg text-[15px] font-bold text-on-surface leading-tight">Stanbic Bank</span>
+<span className="font-label-lg text-[15px] font-bold text-on-surface leading-tight">Pesapal</span>
 <Icon name="contactless" className="text-[16px] text-on-surface-variant" />
 </div>
 <div className="flex items-center gap-2 mt-1">
@@ -253,7 +253,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="w-7 h-7 rounded-lg bg-primary-fixed/80 flex items-center justify-center text-primary-container">
 <Icon name="info" className="text-[18px]" />
 </div>
-<h3 className="font-headline-sm text-[15px] font-bold text-on-surface">How Swift Escrow Works</h3>
+<h3 className="font-headline-sm text-[15px] font-bold text-on-surface">How swift protection Works</h3>
 </div>
 <div className="relative flex flex-col gap-4 pl-1">
 
@@ -263,7 +263,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
             </div>
 <div className="flex-1 min-w-0 pt-0.5">
 <h4 className="font-label-lg text-[13px] font-bold text-on-surface leading-tight">
-                Approve instant USSD prompt (*165# or *185#)
+                Approve instant USSD prompt (Mobile prompt or Mobile prompt)
               </h4>
 <p className="text-xs text-on-surface-variant mt-0.5 leading-relaxed">
                 Approve the payment PIN prompt sent straight to your phone.
@@ -277,7 +277,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
             </div>
 <div className="flex-1 min-w-0 pt-0.5">
 <h4 className="font-label-lg text-[13px] font-bold text-on-surface leading-tight">
-                Funds secured in Escrow (Locked until delivery)
+                Funds secured in Payment (Locked until delivery)
               </h4>
 <p className="text-xs text-on-surface-variant mt-0.5 leading-relaxed">
                 Your payment is safely reserved. The seller is not paid until you inspect the order.
@@ -364,9 +364,9 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <Icon name="security" className="text-[22px]" />
 </div>
 <div>
-<h3 className="font-headline-sm text-base font-bold text-on-surface">Swift Escrow Protection</h3>
+<h3 className="font-headline-sm text-base font-bold text-on-surface">swift payment protection</h3>
 <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-          SwiftCart safely holds your payments in escrow until you personally inspect your items and share your 6-digit release code with the boda courier.
+          SwiftCart safely holds your payments held until delivery until you personally inspect your items and share your 6-digit release code with the boda courier.
         </p>
 </div>
 <div className="pt-2">

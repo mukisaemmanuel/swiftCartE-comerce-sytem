@@ -89,7 +89,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
 <div className="space-y-space-xs">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Escrow Vault</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Payment Reserve</span>
 <span className="flex items-center gap-1 text-tertiary font-label-sm text-label-sm bg-tertiary-fixed/40 px-1.5 py-0.5 rounded font-bold">
 <Icon name="shield_locked" className="text-[13px]" />
             100% SECURED
@@ -169,7 +169,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="space-y-0.5">
 <div className="flex items-center gap-space-xs">
 <Icon name="account_balance_wallet" className="text-primary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Escrow Velocity &amp; Daily Liquidity Flow</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Payment Velocity &amp; Daily Liquidity Flow</h2>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Intake gross volume against automated settlement disbursements to vendor mobile wallets</p>
 </div>
@@ -193,7 +193,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-body-sm text-body-sm text-on-surface-variant">Average payout latency 4.2m</span>
 </div>
 <div className="space-y-0.5">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Arbitration Retention</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dispute Retention</span>
 <div className="font-price-display text-price-display text-primary font-extrabold whitespace-nowrap">UGX 1,180,000</div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">3 contested buyer claims</span>
 </div>
@@ -228,7 +228,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-lg">
 <div className="flex items-center gap-2">
 <span className="w-3 h-3 rounded-full bg-primary-container"></span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Inflow (Buyer Purchase)</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Payment Inflow (Buyer Purchase)</span>
 </div>
 <div className="flex items-center gap-2">
 <span className="w-3 h-1 bg-tertiary"></span>
@@ -237,7 +237,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm bg-surface-container px-space-sm py-1 rounded-lg">
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
-<span>Bank of Uganda NPS Act 2020 Compliant Escrow Trust</span>
+<span>Pesapal Pesapal Rails Compliant Payment Protection</span>
 </div>
 </div>
 </div>
@@ -259,7 +259,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-space-sm px-space-md rounded-l-lg">Order ID</th>
 <th className="py-space-sm px-space-md">Merchant &amp; Buyer</th>
 <th className="py-space-sm px-space-md">Corridor</th>
-<th className="py-space-sm px-space-md">Escrow Value</th>
+<th className="py-space-sm px-space-md">Payment Value</th>
 <th className="py-space-sm px-space-md">Rail</th>
 <th className="py-space-sm px-space-md">Status</th>
 <th className="py-space-sm px-space-md text-right rounded-r-lg">Action</th>
@@ -283,7 +283,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-space-md px-space-md">
 <div className="font-bold text-on-surface whitespace-nowrap">UGX 245,000</div>
-<div className="text-tertiary text-label-sm font-label-sm font-semibold">Locked in Vault</div>
+<div className="text-tertiary text-label-sm font-label-sm font-semibold">Held for Delivery</div>
 </td>
 <td className="py-space-md px-space-md">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold">
@@ -320,7 +320,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-space-md px-space-md">
 <div className="font-bold text-on-surface whitespace-nowrap">UGX 180,000</div>
-<div className="text-tertiary text-label-sm font-label-sm font-semibold">Locked in Vault</div>
+<div className="text-tertiary text-label-sm font-label-sm font-semibold">Held for Delivery</div>
 </td>
 <td className="py-space-md px-space-md">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold">
@@ -356,7 +356,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-space-md px-space-md">
 <div className="font-bold text-on-surface whitespace-nowrap">UGX 95,000</div>
-<div className="text-tertiary text-label-sm font-label-sm font-semibold">Locked in Vault</div>
+<div className="text-tertiary text-label-sm font-label-sm font-semibold">Held for Delivery</div>
 </td>
 <td className="py-space-md px-space-md">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-bold">
@@ -366,7 +366,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </td>
 <td className="py-space-md px-space-md">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
-                    Escrow Locked
+                    payment protected
                   </span>
 </td>
 <td className="py-space-md px-space-md text-right">
@@ -419,13 +419,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-space-md bg-surface-container-low rounded-xl space-y-2">
 <div className="flex items-start justify-between gap-space-xs">
 <div className="space-y-0.5">
-<span className="font-label-md text-label-md text-on-surface block font-bold">3 Open Disputes in Escrow Hold</span>
+<span className="font-label-md text-label-md text-on-surface block font-bold">3 Open Disputes in Payment Hold</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant block whitespace-nowrap">Total UGX 1,180,000 frozen by buyer alerts</span>
 </div>
 <span className="font-label-sm text-label-sm bg-primary-fixed text-primary px-2 py-0.5 rounded font-bold">FUNDS</span>
 </div>
 <button className="w-full py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 font-bold">
-<span>Open Arbitration Desk</span>
+<span>Open Dispute Desk</span>
 <Icon name="arrow_forward" className="text-[14px]" />
 </button>
 </div>
@@ -516,8 +516,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-sm">
 <Icon name="account_balance" className="text-[16px] text-secondary" />
 <div>
-<div className="font-bold text-on-surface">Stanbic Bank Trust Escrow</div>
-<div className="text-on-surface-variant text-label-sm font-label-sm">BOU Statutory Vault Sync</div>
+<div className="font-bold text-on-surface">Pesapal Merchant Settlement</div>
+<div className="text-on-surface-variant text-label-sm font-label-sm">Pesapal Gateway Sync</div>
 </div>
 </div>
 <span className="font-label-sm text-label-sm text-secondary font-bold">RECONCILED</span>

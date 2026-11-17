@@ -69,7 +69,7 @@ export const SellerOverviewPage: React.FC<SellerOverviewPageProps> = ({ onNaviga
             Store Overview
           </h1>
           <p className="text-[14px] text-[var(--d-text-secondary)] mt-0.5">
-            Real-time store performance, fulfillment queue and escrow wallet.
+            Real-time store performance, fulfillment queue and payment wallet.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -146,10 +146,10 @@ export const SellerOverviewPage: React.FC<SellerOverviewPageProps> = ({ onNaviga
           </div>
         </div>
 
-        {/* KPI 4: In Escrow */}
+        {/* KPI 4: Held until delivery */}
         <div className="bg-[var(--d-surface)] rounded-2xl p-5 border border-[var(--d-border)] shadow-sm space-y-3">
           <div className="flex items-center justify-between text-[var(--d-text-secondary)]">
-            <span className="text-[13px] font-bold uppercase tracking-wider">Held in Escrow</span>
+            <span className="text-[13px] font-bold uppercase tracking-wider">Held until delivery</span>
             <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400">
               <Icon name="lock" className="text-xl" />
             </div>

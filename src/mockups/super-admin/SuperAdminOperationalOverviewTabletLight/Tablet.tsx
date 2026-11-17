@@ -44,7 +44,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             PN
           </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm font-bold text-on-surface">Patricia Namubiru</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface">Denis Mukasa</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Super Admin Level 4</span>
 </div>
 </div>
@@ -74,7 +74,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_rgba(14,27,77,0.04),0_1px_2px_rgba(14,27,77,0.02)] flex flex-col justify-between relative overflow-hidden group">
 <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-tertiary/5 rounded-full blur-xl group-hover:bg-tertiary/10 transition-colors"></div>
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Vault Balance</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Payment Reserve Balance</span>
 <Icon name="shield_lock" className="text-[18px] text-tertiary" />
 </div>
 <div className="my-space-xs">
@@ -258,7 +258,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">Acacia Mall Hub Point</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-                    3 consecutive failed PIN attempts at courier locker. Cashless escrow on automated hold.
+                    3 consecutive failed PIN attempts at courier locker. Cashless payment on automated hold.
                   </span>
 </div>
 </div>
@@ -284,7 +284,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface">Victoria Tech Supplies</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-                    Tamper seal severed during line check. Non-OEM auxiliary cables detected in batch.
+                    package seal severed during line check. Non-OEM auxiliary cables detected in batch.
                   </span>
 </div>
 </div>
@@ -323,8 +323,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_rgba(14,27,77,0.04),0_1px_2px_rgba(14,27,77,0.02)] flex flex-col gap-space-md">
 <div className="flex items-center justify-between">
 <div className="flex flex-col">
-<span className="font-label-lg text-label-lg text-on-surface">Recent High-Value Escrow Transactions</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow settlement executions with dual-auth verification</span>
+<span className="font-label-lg text-label-lg text-on-surface">Recent High-Value payment transactions</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">payment settlement executions with dual-auth verification</span>
 </div>
 <Icon name="verified_user" className="text-[20px] text-tertiary" />
 </div>
@@ -334,7 +334,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <tr className="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
 <th className="py-2.5 px-space-md rounded-l-lg">Order ID</th>
 <th className="py-2.5 px-space-md">Item / Merchant</th>
-<th className="py-2.5 px-space-md">Escrow Amount</th>
+<th className="py-2.5 px-space-md">Payment Amount</th>
 <th className="py-2.5 px-space-md">Rail / Auth</th>
 <th className="py-2.5 px-space-md rounded-r-lg text-right">Status</th>
 </tr>
@@ -382,7 +382,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <td className="py-3 px-space-md">
 <div className="flex items-center gap-1.5">
 <span className="w-2 h-2 rounded-full bg-error"></span>
-<span className="font-label-sm text-label-sm text-on-surface">Airtel Money Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface">Airtel money payment</span>
 </div>
 </td>
 <td className="py-3 px-space-md text-right">
@@ -408,7 +408,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <td className="py-3 px-space-md">
 <div className="flex items-center gap-1.5">
 <span className="w-2 h-2 rounded-full bg-primary"></span>
-<span className="font-label-sm text-label-sm text-on-surface">MTN MoMo (Escrow)</span>
+<span className="font-label-sm text-label-sm text-on-surface">MTN MoMo (Payment)</span>
 </div>
 </td>
 <td className="py-3 px-space-md text-right">
@@ -463,8 +463,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-space-sm rounded-xl bg-surface-container flex flex-col gap-space-xs">
 <div className="flex items-center justify-between">
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface font-bold">Global Marketplace Killswitch</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Halts escrow releases &amp; cart checkouts</span>
+<span className="font-label-md text-label-md text-on-surface font-bold">Global Marketplace platform pause</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Halts payment releases &amp; cart checkouts</span>
 </div>
 <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
                   DISENGAGED
@@ -555,7 +555,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-2">
 <Icon name="key" className="text-[16px] text-tertiary mt-0.5" />
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm font-bold text-on-surface">Last Cryptographic Key Rotation</span>
+<span className="font-label-sm text-label-sm font-bold text-on-surface">Last System Token Refresh</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">14 Oct 2024 • Lead Security Architect</span>
 </div>
 </div>
@@ -563,13 +563,13 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="event" className="text-[16px] text-secondary mt-0.5" />
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm font-bold text-on-surface">Next Scheduled Compliance Audit</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">31 Oct 2024 • Bank of Uganda Sandbox Review</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">31 Oct 2024 • Pesapal Sandbox Review</span>
 </div>
 </div>
 </div>
 <div className="pt-1 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
 <span>Signed Hash: <span className="font-mono text-on-surface">7f8c...9a2e</span></span>
-<button className="text-primary hover:underline font-bold">Audit Vault</button>
+<button className="text-primary hover:underline font-bold">Audit reserve</button>
 </div>
 </div>
 </div>

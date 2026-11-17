@@ -32,7 +32,7 @@ export const PaymentProtectionNotice: React.FC<PaymentProtectionNoticeProps> = (
       </div>
       <div>
         <h4 className="font-bold text-emerald-900 text-sm mb-0.5 flex items-center gap-1.5">
-          <span>SwiftCart Escrow Protection</span>
+          <span>SwiftCart Protection Protection</span>
           <span className="text-[10px] bg-emerald-200 text-emerald-800 font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
             Safe
           </span>

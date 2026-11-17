@@ -27,7 +27,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 <div className="w-full bg-surface-container-high/90 px-margin py-space-xs flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-xs min-w-0">
 <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-escrow animate-ping"></span>
-<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider truncate whitespace-nowrap">Escrow Locked: UGX 340,000</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider truncate whitespace-nowrap">payment protected: UGX 340,000</span>
 </div>
 <div className="flex items-center gap-1 text-on-surface-variant flex-shrink-0">
 <Icon name="wifi_tethering" className="text-[16px] text-amber-warning" />
@@ -135,7 +135,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 <Icon name="key" className="text-[14px]" />
 </div>
 <div className="flex items-center justify-between flex-1 min-w-0">
-<span className="font-body-md text-body-md text-on-surface-variant truncate">Buyer Handover &amp; Escrow Release</span>
+<span className="font-body-md text-body-md text-on-surface-variant truncate">Buyer Handover &amp; Payment Release</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">OTP</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 <div className="flex items-center gap-space-xs min-w-0">
 <Icon name="security" className="text-[20px] text-emerald-escrow" />
 <div className="flex flex-col min-w-0">
-<span className="font-label-sm text-label-sm text-emerald-escrow font-extrabold uppercase tracking-wide">Tamper Seal Intact</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-extrabold uppercase tracking-wide">package seal Intact</span>
 <span className="font-label-md text-label-md font-mono text-on-surface tracking-wider truncate">#TS-88410</span>
 </div>
 </div>
@@ -241,7 +241,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-1.5">
 <Icon name="dialpad" className="text-[20px] text-tertiary" />
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Escrow Release Code</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">Payment Release Code</h3>
 </div>
 <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-escrow/10 text-emerald-escrow">
 <Icon name="lock" className="text-[14px]" />
@@ -249,7 +249,7 @@ export const RiderSellerPickupDeliveryDetail: React.FC<RiderSellerPickupDelivery
 </div>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-        Ask buyer for code upon physical delivery inspection at handover. Code releases escrow instantly.
+        Ask buyer for code upon physical delivery inspection at handover. Code releases payment instantly.
       </p>
 
 <div className="grid grid-cols-6 gap-2 my-space-xs">

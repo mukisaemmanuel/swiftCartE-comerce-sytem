@@ -34,7 +34,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="bg-surface-dark/15 px-space-xs rounded font-label-sm text-label-sm font-black">SYNCED 10s AGO</span>
 <span className="font-label-sm text-label-sm text-surface-dark flex items-center gap-space-xs">
 <Icon name="lock" className="text-[14px]" />
-        Escrow Bond: UGX 1,500,000 Locked
+        Payment Bond: UGX 1,500,000 Locked
       </span>
 </div>
 </div>
@@ -98,7 +98,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs">
 <span className="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
-<span className="font-label-sm text-label-sm text-tertiary">Direct Escrow Disbursal Ready</span>
+<span className="font-label-sm text-label-sm text-tertiary">Direct Payment Disbursal Ready</span>
 </div>
 </div>
 
@@ -296,7 +296,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs bg-emerald-escrow/15 px-space-sm py-0.5 rounded-full text-emerald-escrow font-label-sm text-label-sm font-bold">
 <Icon name="shield" className="text-[14px]" />
-              Escrow Covered (UGX 388,500)
+              Payment Covered (UGX 388,500)
             </div>
 </div>
 
@@ -407,7 +407,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="font-body-md text-body-md text-on-surface font-bold mt-1">Product Return &amp; Inspection Pickup</div>
 <div className="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
 <Icon name="assignment_return" className="text-[16px] text-danger-penalty" />
-<span>Kololo Heights Court 2B (Tamper Bag Required)</span>
+<span>Kololo Heights Court 2B (package bag Required)</span>
 </div>
 <div className="flex items-center justify-between mt-space-xs pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
 <span>Return Destination: KLA-HUB-04 Ntinda</span>
@@ -423,7 +423,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col flex-1">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Field Marshal Escalation</span>
 <span className="font-label-lg text-label-lg text-on-surface font-black">Marshal Kato Ronald</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Emergency Roadside &amp; Escrow Dispatch Hotline</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Emergency Roadside &amp; Payment Dispatch Hotline</span>
 <a className="mt-space-xs inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm font-black hover:underline" href="tel:+256800220800">
 <Icon name="phone_in_talk" className="text-[18px]" />
                   +256 800 220 800
@@ -455,7 +455,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 
 </div></main>
-<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Escrow Ledger Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest py-space-md"><div className="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>SwiftCart Uganda • Field Operations Mesh v3.14</span><div className="flex items-center gap-space-sm"><span className="flex items-center gap-space-xs"><span className="h-2 w-2 rounded-full bg-emerald-escrow"></span><span>Payment Holds Synchronized</span></span><span>•</span><span>Node: KLA-HUB-04 (Ntinda)</span></div></div></footer>
     </div>
   );
 };

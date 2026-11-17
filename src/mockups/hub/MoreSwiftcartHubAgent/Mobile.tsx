@@ -59,7 +59,7 @@ export const MoreSwiftcartHubAgent: React.FC<MoreSwiftcartHubAgentProps> = (prop
 <div className="flex items-center justify-between gap-2 p-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-sm">
 <div className="flex items-center gap-2 min-w-0">
 <span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
-<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Kampala Rail: Stanbic &amp; MoMo Online</span>
+<span className="font-label-sm text-label-sm text-on-surface font-semibold truncate">Kampala Rail: Pesapal &amp; MoMo Online</span>
 </div>
 <div className="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold flex-shrink-0">
 <Icon name="check_circle" className="text-[14px]" />
@@ -210,7 +210,7 @@ export const MoreSwiftcartHubAgent: React.FC<MoreSwiftcartHubAgentProps> = (prop
 </div>
 <div className="flex flex-col min-w-0">
 <span className="font-label-lg text-label-lg text-on-surface font-bold truncate">Hub SOP &amp; Compliance Guidelines</span>
-<span className="font-body-sm text-body-sm text-secondary truncate">Bank of Uganda NPS §44 &amp; UNBS tamper seal protocols</span>
+<span className="font-body-sm text-body-sm text-secondary truncate">Pesapal Pesapal Rails §44 &amp; UNBS package seal protocols</span>
 </div>
 </div>
 <Icon name="chevron_right" className="text-[20px] text-secondary group-hover:translate-x-0.5 transition-transform" />

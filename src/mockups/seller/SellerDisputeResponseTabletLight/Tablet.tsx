@@ -22,7 +22,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Escrow Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full">
+      <div className="pl-[72px]"><div className="fixed top-[60px] left-[72px] right-0 h-7 bg-surface-container-low border-b border-surface-container-high z-30 px-space-lg flex items-center justify-between text-on-secondary-container"><div className="flex items-center gap-space-xs font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap"><span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span className="font-semibold text-on-surface">Nakasero Mesh Relay Active</span><span className="text-outline">|</span><span>Last synced 12s ago via MTN MoMo Gateway</span><span className="text-outline">|</span><span className="text-tertiary font-semibold flex items-center gap-0.5"><Icon name="verified_user" className="text-[13px]" /> Payment Enforced</span></div><div className="font-label-sm text-label-sm text-secondary font-mono tracking-wide">Hub Node UG-OPS-04</div></div><main className="w-full pt-[88px] min-h-screen bg-surface px-space-lg py-space-md"><div className="flex flex-col w-full">
 
 <section className="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md mb-space-md relative overflow-hidden">
 <div className="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
@@ -31,7 +31,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-wrap items-center justify-between gap-space-xs">
 <div className="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-bold text-on-surface">
-<span className="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Arbitration Desk
+<span className="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Dispute Desk
           </span>
 <span>/</span>
 <span>Nakasero Electronics Cluster</span>
@@ -46,7 +46,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           </span>
 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold">
 <Icon name="lock" className="text-tertiary text-[16px]" />
-            Escrow Locked: UGX 380,000
+            payment protected: UGX 380,000
           </span>
 </div>
 </div>
@@ -113,8 +113,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             </span>
 </div>
 <div className="col-span-2 pt-1">
-<span className="font-label-sm text-label-sm text-secondary block">Custody Security</span>
-<span className="font-body-sm text-body-sm text-on-surface font-mono">Cryptographic OTP #8819 Verified by Buyer</span>
+<span className="font-label-sm text-label-sm text-secondary block">holding Security</span>
+<span className="font-body-sm text-body-sm text-on-surface font-mono">Verified OTP #8819 Verified by Buyer</span>
 </div>
 </div>
 </div>
@@ -176,7 +176,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
           </div>
 <div className="min-w-0">
 <span className="font-label-sm text-label-sm text-secondary block">Assigned Neutral Arbitrator</span>
-<span className="font-label-lg text-label-lg font-bold text-on-surface block truncate">Officer Patricia Namubiru</span>
+<span className="font-label-lg text-label-lg font-bold text-on-surface block truncate">Officer Denis Mukasa</span>
 <span className="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Fair Commerce Chamber Lead
             </span>
@@ -190,7 +190,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
 <span className="font-label-md text-label-md font-bold text-on-surface block mb-space-sm">
-          Dispatch Chain-of-Custody Log
+          Dispatch Chain-of-holding Log
         </span>
 <div className="flex flex-col gap-space-sm font-body-sm text-body-sm">
 <div className="flex items-start gap-space-sm">
@@ -204,7 +204,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="w-2 h-2 rounded-full bg-tertiary mt-1.5 shrink-0"></div>
 <div className="flex-1">
 <span className="font-bold text-on-surface">Handed to Rider Kizito Brian</span>
-<p className="text-secondary text-[11px]">Boda Bag Tamper-Seal #7721 verified • 12 Oct 11:40 EAT</p>
+<p className="text-secondary text-[11px]">Boda Bag package seal #7721 verified • 12 Oct 11:40 EAT</p>
 </div>
 </div>
 <div className="flex items-start gap-space-sm">
@@ -224,7 +224,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between pb-space-sm mb-space-md">
 <div>
 <span className="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider block">Merchant Protocol</span>
-<h2 className="font-headline-md text-headline-md font-bold text-on-surface">Arbitration Defense Response</h2>
+<h2 className="font-headline-md text-headline-md font-bold text-on-surface">dispute review Defense Response</h2>
 </div>
 <div className="flex items-center gap-1 bg-surface-container-low px-3 py-1 rounded-full font-label-sm text-label-sm font-bold text-secondary">
 <span>Step</span>
@@ -240,7 +240,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <input className="w-4 h-4 text-primary-container focus:ring-primary-container" name="dispute_path" type="radio" value="refund" />
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between">
-<span className="font-label-lg text-label-lg font-bold text-on-surface">Accept Return &amp; Release Escrow</span>
+<span className="font-label-lg text-label-lg font-bold text-on-surface">Accept Return &amp; release payment</span>
 <span className="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">0 Penalty Points</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary whitespace-nowrap">Instantly refund UGX 380,000 to buyer's MTN Mobile Money wallet upon courier receipt.</p>
@@ -264,7 +264,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <span className="font-label-lg text-label-lg font-bold text-primary">Contest Dispute &amp; Submit Counter-Evidence</span>
-<span className="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">Formal Arbitration</span>
+<span className="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">Formal dispute review</span>
 </div>
 <Icon name="gavel" className="text-primary text-[20px]" />
 </div>
@@ -344,7 +344,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <label className="flex items-start gap-2.5 cursor-pointer">
 <input checked={true} className="w-4 h-4 mt-0.5 text-primary-container rounded focus:ring-primary-container" type="checkbox" />
 <span className="font-body-sm text-body-sm text-secondary">
-                I accept the final binding resolution rendered by the Nakasero Cluster Arbitration Council within 24 hours.
+                I accept the final binding resolution rendered by the Nakasero Cluster dispute review Council within 24 hours.
               </span>
 </label>
 </div>
@@ -352,7 +352,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center gap-space-md pt-space-sm">
 <button className="flex-1 h-12 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.98]" type="button">
 <Icon name="shield" className="text-[20px]" />
-              Submit Counter-Evidence to Arbitration Desk
+              Submit Counter-Evidence to Dispute Desk
             </button>
 <button className="h-12 px-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold transition-colors" type="button">
               Save Draft

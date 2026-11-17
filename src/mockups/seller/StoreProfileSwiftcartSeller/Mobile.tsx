@@ -214,7 +214,7 @@ export const StoreProfileSwiftcartSeller: React.FC<StoreProfileSwiftcartSellerPr
 <div>
 <span className="font-label-md text-label-md font-bold text-on-surface">Tier 3 Corporate Merchant Upgrade</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-              Unlock unlimited daily SwiftCart settlement limits, bank escrow integration, and priority cross-border transit logistics.
+              Unlock unlimited daily SwiftCart settlement limits, bank payment integration, and priority cross-border transit logistics.
             </p>
 </div>
 </div>
@@ -340,7 +340,7 @@ export const StoreProfileSwiftcartSeller: React.FC<StoreProfileSwiftcartSellerPr
 </button>
 <div className="flex items-center justify-between px-2 pt-2 text-on-surface-variant font-label-sm text-label-sm">
 <span>KYC Encryption: 256-bit SSL</span>
-<span>URA Compliant Gateway 2025</span>
+<span>Tax Compliant Gateway 2025</span>
 </div>
 </div>
 </div>
@@ -372,7 +372,7 @@ export const StoreProfileSwiftcartSeller: React.FC<StoreProfileSwiftcartSellerPr
 <div className="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
 <span className="font-label-md text-label-md font-bold text-on-surface">2. Official 6-Month Commercial Bank Statement</span>
 <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container text-on-surface-variant">
-<span className="font-label-sm text-label-sm truncate">Stanbic / Centenary / Absa Uganda...</span>
+<span className="font-label-sm text-label-sm truncate">Pesapal / Centenary / Absa Uganda...</span>
 <button className="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">Browse</button>
 </div>
 </div>

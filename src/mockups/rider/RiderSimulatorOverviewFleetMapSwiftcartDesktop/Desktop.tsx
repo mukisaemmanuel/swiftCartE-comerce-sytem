@@ -148,10 +148,10 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
             </span>
 <Icon name="notifications_active" className="text-[16px] text-on-surface-variant" />
 </button>
-<button className="w-full h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-freeze-escrow">
+<button className="w-full h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-between transition-transform active:scale-98" id="btn-freeze-payment">
 <span className="flex items-center gap-2">
 <Icon name="lock_clock" className="text-emerald-escrow text-[18px]" />
-              Hold Escrow Release
+              Hold Payment Release
             </span>
 <span className="font-label-sm text-[10px] text-tertiary-fixed font-bold">LOCKED</span>
 </button>
@@ -259,7 +259,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
                   </span>
 <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-emerald-escrow/15 text-emerald-escrow font-label-sm text-[9px] font-bold">
 <Icon name="verified_user" className="text-[11px]" />
-                    ESCROW UGX 180k
+                    PAYMENT UGX 180k
                   </span>
 </div>
 <span className="text-action-gradient-start font-label-sm text-label-sm font-bold animate-pulse">PICKUP PHASE</span>
@@ -493,7 +493,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-start gap-2 text-emerald-escrow">
 <span className="text-primary font-bold">14:38:29</span>
-<span className="whitespace-nowrap">[ESCROW_VERIFY] UGX 180,000 locked in MTN MoMo nodal custody #ESC-9418</span>
+<span className="whitespace-nowrap">[ESCROW_VERIFY] UGX 180,000 locked in MTN MoMo nodal holding #ESC-9418</span>
 </div>
 <div className="flex items-start gap-2 text-on-surface-variant">
 <span className="text-primary font-bold">14:38:34</span>

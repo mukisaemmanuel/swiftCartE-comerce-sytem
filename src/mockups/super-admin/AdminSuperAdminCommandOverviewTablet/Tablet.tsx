@@ -31,8 +31,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[18px]" />
 </div>
 <div className="flex flex-wrap items-center gap-x-space-md gap-y-0.5 min-w-0">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">BoU NPS Statutory Custody</span>
-<span className="font-label-md text-label-md text-on-surface whitespace-nowrap">UGX 198,420,000 in Enclave Escrow</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Pesapal Pesapal Rails order fulfillment</span>
+<span className="font-label-md text-label-md text-on-surface whitespace-nowrap">UGX 198,420,000 in secure engine Payment</span>
 <span className="hidden sm:inline text-surface-container-highest">•</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">14-Day SLA: <span className="font-label-sm text-label-sm text-emerald-escrow">99.8%</span></span>
 <span className="hidden sm:inline text-surface-container-highest">•</span>
@@ -64,7 +64,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">HSM Hardware Enclave</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Security Gateway Node (SEC-KLA) Hardware secure engine</span>
 <span className="font-label-lg text-label-lg text-tertiary mt-0.5">NOMINAL / SEALED</span>
 </div>
 <div className="w-7 h-7 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
@@ -77,12 +77,12 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="font-label-md text-label-md text-on-surface">34°C (Safe)</div>
 </div>
 <div>
-<div className="font-label-sm text-label-sm text-on-surface-variant">HSM Rev</div>
+<div className="font-label-sm text-label-sm text-on-surface-variant">Security Gateway Node (SEC-KLA) Rev</div>
 <div className="font-label-md text-label-md text-secondary">#891,442</div>
 </div>
 </div>
 <div className="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span className="truncate">BoU Attestation Pulse</span>
+<span className="truncate">Pesapal Verification Approved Pulse</span>
 <span className="font-label-sm text-label-sm text-tertiary">4m ago</span>
 </div>
 </div>
@@ -90,7 +90,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">NPS Telecom Gateway</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pesapal Rails Telecom Gateway</span>
 <span className="font-label-lg text-label-lg text-on-surface mt-0.5">Dual Carrier Active</span>
 </div>
 <div className="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
@@ -120,7 +120,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Custody Escrow Balance</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">holding Pending clearance</span>
 <span className="font-headline-sm text-headline-sm text-primary-fixed mt-0.5 whitespace-nowrap">UGX 198.42M</span>
 </div>
 <div className="w-7 h-7 rounded-lg bg-primary-container/20 text-primary-fixed flex items-center justify-center">
@@ -137,7 +137,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 </div>
 <div className="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span className="truncate">Trustee: Stanbic Bank UG</span>
+<span className="truncate">Trustee: Pesapal UG</span>
 <span className="font-label-sm text-label-sm text-tertiary">0% at Risk</span>
 </div>
 </div>
@@ -196,7 +196,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">URSB OK</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant truncate">Registration #UG-KLA-2024-9982 • Category: Consumer Audio &amp; Electronics</span>
-<span className="font-label-sm text-label-sm text-amber-warning mt-1">Pending: Director NIRA Sanction Verification &amp; Mobile Money PIN Escrow Lock</span>
+<span className="font-label-sm text-label-sm text-amber-warning mt-1">Pending: Director NIRA Sanction Verification &amp; Mobile Money PIN Payment Lock</span>
 </div>
 </div>
 <button className="shrink-0 px-3 py-2 rounded-lg bg-gradient-to-r from-action-gradient-start to-action-gradient-end text-on-primary-container font-label-sm text-label-sm transition-transform active:scale-95 shadow-sm" type="button">
@@ -218,7 +218,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex flex-col min-w-0">
 <div className="flex items-center gap-space-xs flex-wrap">
 <span className="font-label-lg text-label-lg text-on-surface">Docket #DSP-8910-KLA</span>
-<span className="px-1.5 py-0.2 rounded bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm">Arbitration Escrow</span>
+<span className="px-1.5 py-0.2 rounded bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm">dispute review Payment</span>
 <span className="font-label-sm text-label-sm text-amber-warning">18h Left on SLA</span>
 </div>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Item: SoundCore Space One ANC • Buyer claims empty box sealed with standard tape</span>
@@ -233,8 +233,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
               </button>
 </div>
 <div className="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-2 py-1 rounded">
-<span>Arbitration SLA countdown running. 5 disputed packages platform-wide.</span>
-<a className="text-secondary hover:underline" href="#">Escrow Arbitration Room →</a>
+<span>dispute review SLA countdown running. 5 disputed packages platform-wide.</span>
+<a className="text-secondary hover:underline" href="#">Payment dispute review Room →</a>
 </div>
 </div>
 
@@ -322,7 +322,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="p-3 bg-surface-container rounded-lg flex flex-col justify-between">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Settlement Rate</span>
 <span className="font-label-lg text-label-lg text-tertiary mt-1">99.4% Instant</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant mt-1">Stanbic MoMo Bridge</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant mt-1">Pesapal MoMo Bridge</span>
 </div>
 </div>
 </div>
@@ -380,7 +380,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-transparent to-surface-dark/40 p-space-sm flex flex-col justify-between">
 <div className="flex items-center justify-between">
 <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low/90 backdrop-blur font-label-sm text-label-sm text-on-surface">
-<span className="w-2 h-2 rounded-full bg-emerald-escrow"></span> GPS Dispatch Enclave Active
+<span className="w-2 h-2 rounded-full bg-emerald-escrow"></span> GPS Dispatch secure engine Active
                 </span>
 <span className="px-2 py-0.5 rounded bg-surface-container-low/90 backdrop-blur font-label-sm text-label-sm text-on-surface">Avg 11.4 min ETA</span>
 </div>
@@ -409,7 +409,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="bg-surface-container p-space-md rounded-lg mb-space-sm">
 <div className="flex items-center justify-between">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Scheduled Clearing Vault</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Scheduled Clearing reserve</span>
 <span className="font-headline-sm text-headline-sm text-tertiary whitespace-nowrap">UGX 42,180,000</span>
 </div>
 <div className="flex items-center justify-between mt-1 text-on-surface-variant font-label-sm text-label-sm">
@@ -429,7 +429,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-md text-label-md text-danger-penalty truncate">Audit Hold: Kikuubo Wholesale Center</span>
 <span className="font-label-sm text-label-sm text-danger-penalty shrink-0 whitespace-nowrap">UGX 4,820,000</span>
 </div>
-<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Trigger: Duplicate Tax Identification Number (URA-TIN 10992381) detected across 2 registered seller profiles.</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Trigger: Duplicate Tax Identification Number (Tax-TIN 10992381) detected across 2 registered seller profiles.</span>
 <div className="mt-space-xs flex items-center gap-2">
 <button className="px-2.5 py-1 rounded bg-danger-penalty/20 hover:bg-danger-penalty/30 text-danger-penalty font-label-sm text-label-sm" type="button">Quarantine Payout</button>
 <button className="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm" type="button">Verify TIN Match</button>
@@ -439,7 +439,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <button className="w-full h-11 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all active:scale-98 flex items-center justify-center gap-2 shadow-sm" type="button">
 <Icon name="account_balance" className="text-[18px]" />
-            Authorize Manual Escrow Sweep
+            Authorize Manual Payment Sweep
           </button>
 </div>
 
@@ -449,7 +449,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="admin_panel_settings" className="text-danger-penalty text-[22px]" />
 <span className="font-headline-sm text-headline-sm text-on-surface">Superadmin Governance</span>
 </div>
-<span className="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Tier-0 Enclave</span>
+<span className="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Tier-0 secure engine</span>
 </div>
 <div className="space-y-2 mb-space-md">
 <div className="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
@@ -461,8 +461,8 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">Dual-Key Root Killswitch</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant">Requires Officer Namubiru + Secondary HSM Token</span>
+<span className="font-label-md text-label-md text-on-surface">two-step admin Root platform pause</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Requires Officer Namubiru + Secondary Security Gateway Node (SEC-KLA) Token</span>
 </div>
 <span className="font-label-sm text-label-sm text-amber-warning px-2 py-1 rounded bg-amber-warning/20">ARMED</span>
 </div>
@@ -474,7 +474,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             </button>
 <button className="py-2.5 px-3 rounded-lg bg-danger-penalty/15 hover:bg-danger-penalty/25 text-danger-penalty font-label-sm text-label-sm transition-all flex items-center justify-center gap-1.5" type="button">
 <Icon name="key" className="text-[16px]" />
-              Enclave Dual-Sign
+              secure engine Dual-Sign
             </button>
 </div>
 </div>

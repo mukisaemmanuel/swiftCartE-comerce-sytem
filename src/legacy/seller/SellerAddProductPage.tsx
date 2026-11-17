@@ -769,7 +769,7 @@ export const SellerAddProductPage: React.FC<SellerAddProductPageProps> = ({
                 className="accent-[#FF8A1F] w-5 h-5 mt-0.5"
               />
               <span className="text-xs text-[var(--d-text-primary)] leading-relaxed">
-                <strong>I confirm this description and photos accurately show my product.</strong> I understand that delivering items that differ significantly from this description will trigger buyer returns and freeze escrow payouts.
+                <strong>I confirm this description and photos accurately show my product.</strong> I understand that delivering items that differ significantly from this description will trigger buyer returns and freeze seller payouts.
               </span>
             </label>
           </div>

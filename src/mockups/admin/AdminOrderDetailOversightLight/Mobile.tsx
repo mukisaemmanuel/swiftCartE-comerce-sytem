@@ -66,14 +66,14 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 </div>
 <div>
 <div className="flex items-center gap-1.5">
-<span className="font-label-sm text-label-sm text-tertiary font-extrabold uppercase tracking-wide">In Transit • Escrow Vault</span>
+<span className="font-label-sm text-label-sm text-tertiary font-extrabold uppercase tracking-wide">In Transit • Payment Reserve</span>
 <span className="bg-tertiary text-on-tertiary font-label-sm text-[9px] px-1.5 py-0.2 rounded-full uppercase">Locked</span>
 </div>
 <p className="font-body-sm text-body-sm text-secondary">Secured MTN MoMo Node Gateway</p>
 </div>
 </div>
 <div className="text-right">
-<div className="font-label-sm text-label-sm text-secondary uppercase">Vault Collateral</div>
+<div className="font-label-sm text-label-sm text-secondary uppercase">reserve Collateral</div>
 <div className="font-label-lg text-label-lg font-extrabold text-on-surface whitespace-nowrap">UGX 253,500</div>
 </div>
 </div>
@@ -152,7 +152,7 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 </div>
 </div>
 <div className="text-right">
-<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-1.5 py-0.5 rounded font-bold">100% Insured</span>
+<span className="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-1.5 py-0.5 rounded font-bold">100% protected</span>
 </div>
 </div>
 <div className="flex items-center justify-between pt-1 font-body-sm text-body-sm bg-surface-bright p-2 rounded-lg">
@@ -211,7 +211,7 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 
 <div className="space-y-space-xs font-body-sm text-body-sm pt-1">
 <div className="flex items-center justify-between text-secondary">
-<span>Escrow Total Ingested</span>
+<span>Payment Total Ingested</span>
 <span className="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">UGX 253,500</span>
 </div>
 <div className="flex items-center justify-between text-secondary">
@@ -293,9 +293,9 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 <div>
 <div className="flex items-baseline gap-2">
 <span className="font-label-sm text-label-sm font-bold text-secondary font-mono">14:25</span>
-<span className="font-label-md text-label-md font-bold text-on-surface">Escrow Ingestion Clear</span>
+<span className="font-label-md text-label-md font-bold text-on-surface">Payment Ingestion Clear</span>
 </div>
-<p className="font-body-sm text-body-sm text-secondary">MoMo payment locked into Escrow Vault. MTN Webhook 200 OK.</p>
+<p className="font-body-sm text-body-sm text-secondary">MoMo payment locked into Payment Reserve. MTN Webhook 200 OK.</p>
 </div>
 </div>
 
@@ -371,9 +371,9 @@ export const AdminOrderDetailOversightLight: React.FC<AdminOrderDetailOversightL
 <Icon name="chevron_right" className="text-secondary text-[20px]" />
 </button>
 
-<button className="w-full bg-error text-on-error py-3.5 px-space-md rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all" id="halt-vault-btn" type="button">
+<button className="w-full bg-error text-on-error py-3.5 px-space-md rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all" id="halt-reserve-btn" type="button">
 <Icon name="gavel" className="text-[20px]" />
-      Emergency Dispatch Hold (HALT VAULT)
+      Emergency Dispatch Hold (HALT DISPATCH)
     </button>
 </div>
 </div>

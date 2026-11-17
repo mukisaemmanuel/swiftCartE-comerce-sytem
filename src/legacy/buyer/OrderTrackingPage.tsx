@@ -139,7 +139,7 @@ export const OrderTrackingPage: React.FC<OrderTrackingPageProps> = ({ onNavigate
         </div>
       </div>
 
-      {/* Escrow Banner */}
+      {/* Payment Banner */}
       <PaymentProtectionNotice />
     </div>
   );

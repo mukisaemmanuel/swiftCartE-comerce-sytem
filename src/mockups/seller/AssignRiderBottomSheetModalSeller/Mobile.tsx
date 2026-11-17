@@ -61,7 +61,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">Needs Rider</span>
 </div>
 <p className="font-label-lg text-label-lg text-on-surface font-bold">Ronald K. • Nakawa</p>
-<p className="font-body-sm text-body-sm text-secondary">UGX 365,000 • Escrow Secured</p>
+<p className="font-body-sm text-body-sm text-secondary">UGX 365,000 • payment secured</p>
 </div>
 </div>
 
@@ -96,7 +96,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <div className="flex items-center gap-1.5">
 <Icon name="verified_user" className="text-tertiary text-[18px]" />
 <span className="font-label-md text-label-md font-bold text-on-surface">UGX 365,000</span>
-<span className="px-2 py-0.5 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-bold">Escrow Locked</span>
+<span className="px-2 py-0.5 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-bold">payment protected</span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary font-semibold">2 Parcels</span>
 </div>

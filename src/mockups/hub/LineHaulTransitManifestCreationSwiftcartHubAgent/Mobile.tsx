@@ -161,7 +161,7 @@ export const LineHaulTransitManifestCreationSwiftcartHubAgent: React.FC<LineHaul
 </div>
 </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Insured Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">protected Payment</span>
 <span className="font-label-lg text-label-lg text-on-surface font-bold truncate whitespace-nowrap">UGX 26,450,000</span>
 <span className="font-label-sm text-label-sm text-on-surface-variant">Full Goods-In-Transit cover</span>
 </div>
@@ -238,7 +238,7 @@ export const LineHaulTransitManifestCreationSwiftcartHubAgent: React.FC<LineHaul
 <span className="font-label-sm text-label-sm text-on-surface font-bold">0.85 kg</span>
 <div className="flex items-center gap-0.5 justify-end text-tertiary">
 <Icon name="verified_user" className="text-[13px]" />
-<span className="font-label-sm text-label-sm">Insured</span>
+<span className="font-label-sm text-label-sm">protected</span>
 </div>
 </div>
 </div>
@@ -314,7 +314,7 @@ export const LineHaulTransitManifestCreationSwiftcartHubAgent: React.FC<LineHaul
 </div>
 <div className="flex items-center gap-2">
 <div className="flex-1 bg-surface-container-lowest px-3 py-2 rounded-md flex items-center justify-between">
-<span className="font-label-lg text-label-lg text-on-surface font-mono font-bold">BOU-SEAL-8891</span>
+<span className="font-label-lg text-label-lg text-on-surface font-mono font-bold">Pesapal-SEAL-8891</span>
 <Icon name="lock" className="text-[18px] text-tertiary" />
 </div>
 <button aria-label="Re-scan primary bolt seal" className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" type="button">

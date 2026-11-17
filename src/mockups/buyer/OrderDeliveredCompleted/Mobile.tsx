@@ -46,7 +46,7 @@ export const OrderDeliveredCompleted: React.FC<OrderDeliveredCompletedProps> = (
 <span className="h-2 w-2 rounded-full bg-tertiary animate-pulse"></span>
 <span className="font-label-md text-label-md text-tertiary uppercase tracking-wider">Verified Handover</span>
 </div>
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Order Delivered &amp; Escrow Released!</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Order Delivered &amp; Paid to seller!</h2>
 <p className="font-body-md text-body-md text-on-surface-variant mt-1.5 px-2">
       Handover verified by Rider <strong className="text-on-surface">Kizito Brian</strong> via secure 6-digit code. Funds of <strong className="text-tertiary">UGX 385,000</strong> have been instantly disbursed to SoundCore Uganda Official.
     </p>
@@ -61,7 +61,7 @@ export const OrderDeliveredCompleted: React.FC<OrderDeliveredCompletedProps> = (
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-2">
 <Icon name="account_balance_wallet" className="text-tertiary text-[22px]" />
-<h3 className="font-headline-sm text-label-lg text-on-surface">Escrow Disbursement Receipt</h3>
+<h3 className="font-headline-sm text-label-lg text-on-surface">Seller Payout Receipt</h3>
 </div>
 <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 font-label-sm text-label-sm text-on-surface-variant">Txn: ESC-99214-UG</span>
 </div>
@@ -222,7 +222,7 @@ export const OrderDeliveredCompleted: React.FC<OrderDeliveredCompletedProps> = (
 
 <div className="text-center px-4 pt-1">
 <p className="font-body-sm text-body-sm text-outline">
-      Have an issue with this delivered item? <a className="text-primary underline font-label-md" href="#">Report within 48h</a> to freeze escrow payout or request a swift return.
+      Have an issue with this delivered item? <a className="text-primary underline font-label-md" href="#">Report within 48h</a> to freeze Seller Payout or request a swift return.
     </p>
 </div>
 </div>

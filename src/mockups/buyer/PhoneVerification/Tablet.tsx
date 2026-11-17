@@ -146,7 +146,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <Icon name="verified_user" className="text-[16px] text-tertiary" />
 <span className="font-label-sm text-label-sm">SwiftCart Uganda 256-bit Secure Gateway</span>
 </div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Bank of Uganda Compliant</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Pesapal Compliant</span>
 </div>
 </div>
 

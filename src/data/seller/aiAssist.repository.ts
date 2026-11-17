@@ -65,7 +65,7 @@ export class MockAiAssistRepository implements IAiAssistRepository {
       title,
       description,
       suggestedCategory: category || 'electronics',
-      suggestedTags: ['Verified Seller', 'Express Boda', 'Escrow Protected', 'Top Quality'],
+      suggestedTags: ['Verified Seller', 'Express Boda', 'Payment Protected', 'Top Quality'],
       suggestedPrice: price,
       unconfirmedFields: {
         brand,

@@ -140,7 +140,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 
 <div className="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
 <div className="flex items-center justify-between mb-2">
-<span className="font-body-sm text-body-sm text-on-surface-variant">Escrow Balance</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Pending clearance</span>
 <div className="w-7 h-7 rounded-lg bg-emerald-escrow/10 flex items-center justify-center text-emerald-escrow">
 <Icon name="lock" className="text-[16px]" />
 </div>
@@ -223,7 +223,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 248,500</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
-<span>In Escrow</span>
+<span>Held until delivery</span>
 </div>
 </div>
 </div>
@@ -267,7 +267,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 <span className="font-label-lg text-label-lg text-on-surface font-bold">UGX 330,000</span>
 <div className="flex items-center justify-end gap-1 text-emerald-escrow font-label-sm text-label-sm">
 <Icon name="verified_user" className="text-[12px]" />
-<span>In Escrow</span>
+<span>Held until delivery</span>
 </div>
 </div>
 </div>
@@ -327,13 +327,13 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 
 <div className="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm px-1">
 <Icon name="shield" className="text-[14px] text-emerald-escrow" />
-<span>Guaranteed via SwiftCart Escrow Settlement Protocol</span>
+<span>Guaranteed via SwiftCart Protection Settlement Protocol</span>
 </div>
 </div>
 </div>
 </div>
 </main>
-<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="manifest-runs" href="#" onClick={() => alertToast('Action triggered')}><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="hub-scanner" href="#" onClick={() => alertToast('Action triggered')}><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="escrow-ledger" href="#" onClick={() => alertToast('Action triggered')}><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Escrow</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
+<nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.60)]" data-active-classes="text-primary-container font-label-md"><div className="h-16 px-gutter flex items-center justify-around"><a aria-current="page" className="flex flex-col items-center justify-center w-16 h-12 text-primary-container font-label-md" data-path="manifest-runs" href="#" onClick={() => alertToast('Action triggered')}><Icon name="local_shipping" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Manifest</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="hub-scanner" href="#" onClick={() => alertToast('Action triggered')}><Icon name="barcode_scanner" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Scanner</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="payment-ledger" href="#" onClick={() => alertToast('Action triggered')}><Icon name="verified_user" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Payment</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="fleet-dispatch" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/riders-seller'); }}><Icon name="two_wheeler" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Fleet</span></a><a className="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface" data-path="profile-ops" href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('/seller/store-profile-seller'); }}><Icon name="manage_accounts" className="text-[22px]" /><span className="font-label-sm text-label-sm tracking-tight mt-0.5">Profile</span></a></div></nav>
     </div>
   );
 };

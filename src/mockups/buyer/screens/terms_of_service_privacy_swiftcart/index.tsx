@@ -60,7 +60,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <div className="flex items-center gap-space-xs whitespace-nowrap">
 <a className="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container-high active:bg-secondary-container rounded-full text-secondary font-label-sm text-label-sm flex items-center gap-1 transition-colors" href="#section-1" onClick={() => alertToast('Action triggered')}>
 <span className="w-4 h-4 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] font-bold">1</span>
-        Escrow Protection
+        Payment Protection
       </a>
 <a className="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container-high active:bg-secondary-container rounded-full text-secondary font-label-sm text-label-sm flex items-center gap-1 transition-colors" href="#section-2" onClick={() => alertToast('Action triggered')}>
 <span className="w-4 h-4 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] font-bold">2</span>
@@ -92,7 +92,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <div className="flex-1 min-w-0">
 <h3 className="font-label-lg text-label-lg text-on-primary-fixed font-bold leading-tight">Buyer Shield Kampala Active</h3>
 <p className="font-body-sm text-body-sm text-on-primary-fixed-variant mt-0.5">
-        Funds are locked in regulated bank custody. Merchants are compensated only after physical acceptance code validation.
+        Funds are locked in standard bank holding. Merchants are compensated only after physical acceptance code validation.
       </p>
 </div>
 </div>
@@ -104,8 +104,8 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <div className="flex items-center gap-space-sm">
 <span className="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0">1</span>
 <div>
-<span className="font-label-sm text-label-sm text-primary tracking-wide uppercase font-bold">Escrow Protection</span>
-<h3 className="font-headline-sm text-headline-sm text-on-surface">SwiftCart Escrow Guarantee</h3>
+<span className="font-label-sm text-label-sm text-primary tracking-wide uppercase font-bold">Payment Protection</span>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">SwiftCart Protection Guarantee</h3>
 </div>
 </div>
 <button aria-label="Toggle section" className="min-w-[36px] min-h-[36px] flex items-center justify-center text-secondary rounded-full hover:bg-surface-container" onClick={() => alertToast('Action triggered')}>
@@ -115,12 +115,12 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 
 <div className="mt-space-sm p-space-xs px-space-sm bg-surface-container-low rounded-lg flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
 <Icon name="account_balance_wallet" className="text-tertiary text-[18px]" />
-<span>Funds held safely in central vault until you verify your parcel.</span>
+<span>Funds held safely in central reserve until you verify your parcel.</span>
 </div>
 
 <div className="mt-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-on-surface" id="body-sec-1">
 <p>
-          All buyer payments conducted via <strong className="text-on-surface">MTN MoMo, Airtel Money Uganda, or Visa/MasterCard</strong> are immediately diverted into the SwiftCart Escrow Holding Vault administered under Bank of Uganda National Payments Systems regulations.
+          All buyer payments conducted via <strong className="text-on-surface">MTN MoMo, Airtel Money Uganda, or Visa/MasterCard</strong> are immediately diverted into the SwiftCart Protection Holding reserve administered under Pesapal National Payments Systems regulations.
         </p>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
           Neither the individual merchant nor the logistics rider possesses access to your transaction value until you physically open the package, confirm authenticity, and furnish the delivery PIN.
@@ -153,7 +153,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 
 <div className="mt-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-on-surface" id="body-sec-2">
 <p>
-          Your unique 6-digit release code serves as your digital signature. Sharing this code with a rider or seller irrevocably transfers escrow funds to the seller's mobile money account.
+          Your unique 6-digit release code serves as your digital signature. Sharing this code with a rider or seller irrevocably transfers held funds to the seller's mobile money account.
         </p>
 <div className="grid grid-cols-2 gap-space-xs my-space-xs">
 <div className="p-space-sm bg-surface-container-low rounded-lg flex flex-col items-center text-center">
@@ -188,11 +188,11 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="mt-space-sm p-space-xs px-space-sm bg-surface-container-low rounded-lg flex items-center gap-space-xs text-on-surface font-label-md text-label-md">
 <Icon name="schedule" className="text-primary-container text-[18px]" />
-<span>48-hour statutory claim window with 0% cancellation deduction fees.</span>
+<span>48-hour verified platform claim window with 0% cancellation deduction fees.</span>
 </div>
 <div className="mt-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-on-surface" id="body-sec-3">
 <p>
-          Buyers maintain a statutory right to log a return or dispute request within <strong className="text-on-surface">48 hours</strong> post-collection for concealed defects, expired consumables, or non-matching specifications.
+          Buyers maintain a verified platform right to log a return or dispute request within <strong className="text-on-surface">48 hours</strong> post-collection for concealed defects, expired consumables, or non-matching specifications.
         </p>
 <ul className="flex flex-col gap-1.5 pl-1 font-body-sm text-body-sm text-on-surface-variant">
 <li className="flex items-center gap-2">
@@ -257,7 +257,7 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 </div>
 <div className="mt-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-on-surface" id="body-sec-5">
 <p>
-          In full conformity with the Uganda Data Protection and Privacy Act (2019), delivery drivers and merchant handlers never view your private telephone digits.
+          In full conformity with the Uganda SwiftCart Privacy Policy (2019), delivery drivers and merchant handlers never view your private telephone digits.
         </p>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
           Calls placed between riders and shoppers are routed via encrypted virtual telecom relays. Once an order finishes delivery, communications channels permanently self-terminate.
@@ -291,9 +291,9 @@ export const Screen: React.FC<ScreenProps> = (_props) => {
 <Icon name="verified" className="text-[28px]" />
 </div>
 <div className="flex-1 min-w-0">
-<h4 className="font-label-lg text-label-lg text-on-surface font-bold">Regulated Marketplace</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface font-bold">standard Marketplace</h4>
 <p className="font-body-sm text-body-sm text-secondary">
-        SwiftCart Retail Operations Uganda Ltd. Reg No: 80020003491. Fully insured escrow provisions.
+        SwiftCart Retail Operations Uganda Ltd. Reg No: 80020003491. protected payment provisions.
       </p>
 </div>
 </div>

@@ -365,9 +365,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="w-7 h-7 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center">
 <Icon name="lock" className="text-[18px]" />
 </div>
-<span className="font-label-lg text-label-lg text-on-surface font-extrabold whitespace-nowrap">UGX 380,000 Escrow Custody</span>
+<span className="font-label-lg text-label-lg text-on-surface font-extrabold whitespace-nowrap">UGX 380,000 payment holding</span>
 <span className="ml-2 px-2 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-bold shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-                  Bank of Uganda Sandbox
+                  Pesapal Sandbox
                 </span>
 </div>
 <p className="font-body-md text-body-md text-on-surface leading-relaxed max-w-2xl">
@@ -375,7 +375,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
               </p>
 </div>
 <div className="hidden sm:flex flex-col items-end shrink-0 text-right">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Status</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">payment hold status</span>
 <span className="font-label-md text-label-md text-tertiary font-bold flex items-center gap-1">
 <Icon name="verified_user" className="text-[16px]" />
                 Pledged &amp; Locked
@@ -509,7 +509,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 </div>
 <div className="flex justify-between items-center text-on-surface-variant">
-<span>Platform Escrow Fee (3.0%)</span>
+<span>Platform Processing Fee (3.0%)</span>
 <span className="text-error whitespace-nowrap">-UGX 11,400</span>
 </div>
 <div className="pt-space-sm mt-space-xs border-t border-surface-container flex justify-between items-baseline">

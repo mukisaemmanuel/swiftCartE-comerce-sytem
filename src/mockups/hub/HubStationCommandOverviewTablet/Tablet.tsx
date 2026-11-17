@@ -51,7 +51,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs font-label-sm text-label-sm px-space-sm py-0.5 rounded bg-emerald-escrow/10 text-emerald-escrow font-mono">
 <Icon name="lock" className="text-[14px]" />
-<span>Stanbic BoU Core: 18ms</span>
+<span>Pesapal Pesapal Core: 18ms</span>
 </div>
 </div>
 </div>
@@ -141,7 +141,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant font-normal">locked</span>
 </div>
 <div className="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">
-<span>Escrow Frozen: </span>
+<span>payment frozen: </span>
 <span className="text-danger-penalty font-mono font-bold whitespace-nowrap">UGX 3.42M</span>
 </div>
 </div>
@@ -261,7 +261,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                   </div>
 <div className="flex items-center gap-space-xs mt-1.5 font-label-sm text-label-sm text-danger-penalty">
 <Icon name="lock_open" className="text-[14px]" />
-<span>1 torn tamper seal; move to quarantine table before count</span>
+<span>1 torn package seal; move to quarantine table before count</span>
 </div>
 </div>
 </div>
@@ -417,7 +417,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex flex-col gap-1.5">
 <div className="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
-<span className="font-bold text-danger-penalty">ZONE D: Quarantine &amp; Dispute Evidence Vault (Locked)</span>
+<span className="font-bold text-danger-penalty">ZONE D: Quarantine &amp; Dispute Evidence reserve (Locked)</span>
 <span className="font-mono text-danger-penalty font-bold">14 Parcels Frozen</span>
 </div>
 <div className="grid grid-cols-4 gap-space-xs">
@@ -443,7 +443,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="w-2 h-2 rounded-full bg-surface-variant"></span>
 </div>
 <div className="font-headline-sm text-headline-sm text-on-surface-variant mt-1 font-mono">00</div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Vault Overflow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">reserve Overflow</span>
 </div>
 <div className="p-space-sm rounded-xl bg-surface-container/50 text-left opacity-60">
 <div className="flex items-center justify-between">
@@ -451,7 +451,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <span className="w-2 h-2 rounded-full bg-surface-variant"></span>
 </div>
 <div className="font-headline-sm text-headline-sm text-on-surface-variant mt-1 font-mono">00</div>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Vault Overflow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">reserve Overflow</span>
 </div>
 </div>
 </div>
@@ -592,19 +592,19 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="rounded-2xl bg-surface-container-low p-space-md shadow-md">
 <div className="flex items-center justify-between mb-space-sm">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Node Telemetry &amp; Custody</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Node Telemetry &amp; holding</span>
 <span className="w-2 h-2 rounded-full bg-emerald-escrow"></span>
 </div>
 <div className="grid grid-cols-2 gap-space-sm">
 <div className="p-space-sm rounded-xl bg-container-dark-low">
 <div className="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
 <Icon name="assured_workload" className="text-emerald-escrow text-[16px]" />
-<span>Platform Escrow</span>
+<span>Platform Payment</span>
 </div>
 <div className="font-headline-sm text-body-lg text-emerald-escrow font-bold font-mono mt-1 truncate whitespace-nowrap">
               UGX 198.4M
             </div>
-<span className="font-label-sm text-label-sm text-tertiary-fixed-dim">Bank of Uganda Locked</span>
+<span className="font-label-sm text-label-sm text-tertiary-fixed-dim">Pesapal Locked</span>
 </div>
 <div className="p-space-sm rounded-xl bg-container-dark-low">
 <div className="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
@@ -645,7 +645,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="absolute inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-action-gradient-start to-transparent animate-pulse shadow-[0_0_12px_#DA3700]" style={{"animation":"scanMove 2s infinite ease-in-out"}}></div>
 <Icon name="barcode_scanner" className="text-[56px] text-primary/40 mb-2" />
 <div className="font-headline-sm text-body-lg text-on-surface font-mono">AIM AT SWIFTCART WAYBILL OR BAG TAG</div>
-<div className="font-body-sm text-body-sm text-on-surface-variant mt-1">Accepts Code128, QR Code &amp; NFC Escrow Rings</div>
+<div className="font-body-sm text-body-sm text-on-surface-variant mt-1">Accepts Code128, QR Code &amp; NFC Payment Rings</div>
 <div className="mt-4 px-space-md py-1.5 rounded-lg bg-surface-container font-mono text-label-sm text-secondary font-bold">
           CAMERA SENSOR ACTIVE: 60FPS LOW-LIGHT
         </div>
@@ -668,7 +668,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 
 </div></main>
-<footer className="w-full bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.45)]"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline-variant hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">Bank of Uganda Escrow Custody Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container font-mono text-secondary">NODE_ID: KLA-C-03</span></div></div></footer>
+<footer className="w-full bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.45)]"><div className="w-full px-margin py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs"><div className="flex items-center gap-space-md"><div className="flex items-center gap-space-xs"><span className="w-2 h-2 rounded-full bg-emerald-escrow"></span><span className="font-label-sm text-label-sm text-on-surface font-semibold">Mesh Node Sync: 99.98% Latency 14ms (William St P2P)</span></div><span className="text-outline-variant hidden sm:inline">•</span><div className="flex items-center gap-space-xs"><Icon name="verified_user" className="text-emerald-escrow text-[16px]" /><span className="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">Pesapal payment holding Assured</span></div></div><div className="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span className="font-mono">EAT (UTC+3) 14:38:09</span><span className="px-space-xs py-0.5 rounded bg-surface-container font-mono text-secondary">NODE_ID: KLA-C-03</span></div></div></footer>
     </div>
   );
 };

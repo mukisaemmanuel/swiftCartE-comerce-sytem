@@ -68,7 +68,7 @@ export const ReturnsDisputesSwiftcartSeller: React.FC<ReturnsDisputesSwiftcartSe
 <div className="font-label-lg text-label-lg text-on-surface truncate">SoundCore Space One ANC</div>
 <div className="font-headline-sm text-headline-sm font-bold text-primary whitespace-nowrap">UGX 280,000</div>
 <div className="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant text-[11px]">
-<span className="">Buyer: Alex K.</span>
+<span className="">Buyer: Denis M.</span>
 <span className="">•</span>
 <span className="text-tertiary flex items-center"><Icon name="verified" className="text-[12px] mr-0.5" />Verified Buyer</span>
 </div>

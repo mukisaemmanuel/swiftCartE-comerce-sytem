@@ -90,7 +90,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="relative overflow-hidden rounded-xl bg-surface-container p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-all">
 <div className="flex items-start justify-between">
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Escrow Vault</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Payment Reserve</span>
 <div className="flex items-baseline gap-1 mt-1">
 <span className="font-currency-code text-currency-code text-tertiary font-bold whitespace-nowrap">UGX</span>
 <span className="font-price-display text-price-display text-tertiary tracking-tight">384,500,000</span>
@@ -107,7 +107,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <span className="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
 <Icon name="verified" className="text-[13px]" />
-            100% Ringfenced
+            100% reserved
           </span>
 </div>
 </div>
@@ -176,9 +176,9 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col">
 <div className="flex items-center gap-space-xs">
 <Icon name="account_balance_wallet" className="text-primary text-[20px]" />
-<h2 className="font-headline-sm text-headline-sm text-on-surface">Escrow Velocity &amp; Daily Inflow vs Disbursements</h2>
+<h2 className="font-headline-sm text-headline-sm text-on-surface">Payment Velocity &amp; Daily Inflow vs Disbursements</h2>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dual-rail statutory custody monitoring across Kampala commerce centers</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dual-rail order fulfillment monitoring across Kampala commerce centers</p>
 </div>
 <div className="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl">
 <button className="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">Daily</button>
@@ -237,7 +237,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center gap-space-md">
 <div className="flex items-center gap-1.5">
 <span className="w-3 h-3 rounded-full bg-tertiary"></span>
-<span className="font-label-sm text-label-sm text-on-surface">Escrow Inflow (Buyer Lock)</span>
+<span className="font-label-sm text-label-sm text-on-surface">Payment Inflow (Buyer Lock)</span>
 </div>
 <div className="flex items-center gap-1.5">
 <span className="w-3 h-1 bg-secondary rounded-full"></span>
@@ -250,7 +250,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-high px-2.5 py-1 rounded-lg">
 <Icon name="policy" className="text-[16px] text-tertiary" />
-<span>Compliant with BoU National Payment Systems Act 2020</span>
+<span>Processed securely via Pesapal Payment Gateway</span>
 </div>
 </div>
 </div>
@@ -422,7 +422,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-3 px-space-md">
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-bright text-tertiary font-label-sm text-label-sm font-bold">
 <Icon name="lock" className="text-[13px]" />
-                      Escrow Vaulted
+                      Payment Vaulted
                     </span>
 </td>
 <td className="py-3 px-space-md text-right">
@@ -511,7 +511,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-on-surface-variant">SLA: 6h remaining</span>
 </div>
 <span className="font-label-md text-label-md text-on-surface font-semibold">14 Seller KYC Dossiers Pending</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Oldest submission waiting 18 hours (URA TIN + trading license verification).</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Oldest submission waiting 18 hours (Tax ID + trading license verification).</p>
 <div className="pt-1 flex items-center justify-end">
 <button className="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface font-label-sm text-label-sm font-bold transition-all" type="button">
                 Review Queue
@@ -540,15 +540,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Arbitration Required
+                Resolution Required
               </span>
 <span className="font-label-sm text-label-sm text-primary font-bold whitespace-nowrap">UGX 1,180,000 Frozen</span>
 </div>
-<span className="font-label-md text-label-md text-on-surface font-semibold">3 Open Disputes in Escrow Hold</span>
+<span className="font-label-md text-label-md text-on-surface font-semibold">3 Open Disputes in Payment Hold</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Customer claim: Damaged screen protector box on delivery to Bugolobi flats.</p>
 <div className="pt-1 flex items-center justify-end">
 <button className="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-secondary-container hover:text-on-secondary-container text-on-surface font-label-sm text-label-sm font-bold transition-all" type="button">
-                Arbitration Desk
+                Dispute Desk
               </button>
 </div>
 </div>
@@ -671,7 +671,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
 <div className="flex items-center gap-2">
 <span className="w-2 h-2 rounded-full bg-secondary"></span>
-<span className="font-label-md text-label-md text-on-surface font-semibold">Stanbic Custody Pool</span>
+<span className="font-label-md text-label-md text-on-surface font-semibold">Pesapal Settlement Pool</span>
 </div>
 <div className="flex items-center gap-2">
 <span className="font-label-sm text-label-sm text-on-surface-variant">100%</span>

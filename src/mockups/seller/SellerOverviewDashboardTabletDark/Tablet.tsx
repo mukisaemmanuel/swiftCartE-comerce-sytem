@@ -95,7 +95,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         
         <div className="bg-surface-container-low border border-[#1e2742] p-5 rounded-2xl shadow-sm flex flex-col justify-between gap-3 hover:border-surface-container-high transition-colors">
           <div className="flex items-center justify-between">
-            <span className="text-[12px] uppercase tracking-wider font-bold text-on-surface-variant">Escrow In-Transit</span>
+            <span className="text-[12px] uppercase tracking-wider font-bold text-on-surface-variant">Payment In-Transit</span>
             <div className="w-8 h-8 rounded-lg bg-emerald-escrow/20 text-emerald-escrow flex items-center justify-center">
               <Icon name="shield_lock" className="text-[18px]" />
             </div>
@@ -104,7 +104,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             <div className="text-[32px] font-extrabold text-emerald-escrow tracking-tight leading-tight whitespace-nowrap">UGX 14,850,000</div>
             <div className="flex items-center gap-1.5 text-tertiary text-[12px] font-semibold mt-1">
               <Icon name="lock" className="text-[15px]" />
-              <span className="">SwiftCart Custody Safe</span>
+              <span className="">SwiftCart holding Safe</span>
             </div>
           </div>
           <div className="pt-2.5 border-t border-[#1e2742] flex items-center justify-between text-[14px] text-on-surface-variant">
@@ -180,7 +180,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-bold text-[14px] text-action-gradient-start">#SC-ORD-9488</span>
                   <span className="bg-emerald-escrow/15 text-tertiary px-2 py-0.5 rounded text-[12px] font-medium flex items-center gap-1">
-                    <Icon name="verified_user" className="text-[13px]" /> Escrow Locked
+                    <Icon name="verified_user" className="text-[13px]" /> payment protected
                   </span>
                   <span className="bg-action-gradient-end/20 text-primary px-2 py-0.5 rounded text-[12px] font-bold">1-Hour Boda</span>
                 </div>
@@ -214,7 +214,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-bold text-[14px] text-action-gradient-start">#SC-ORD-9490</span>
                   <span className="bg-emerald-escrow/15 text-tertiary px-2 py-0.5 rounded text-[12px] font-medium flex items-center gap-1">
-                    <Icon name="verified_user" className="text-[13px]" /> Escrow Locked
+                    <Icon name="verified_user" className="text-[13px]" /> payment protected
                   </span>
                   <span className="bg-secondary-container text-secondary px-2 py-0.5 rounded text-[12px] font-bold">Acacia Hub Locker</span>
                 </div>
@@ -250,7 +250,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-bold text-[14px] text-action-gradient-start">#SC-ORD-9491</span>
                   <span className="bg-emerald-escrow/15 text-tertiary px-2 py-0.5 rounded text-[12px] font-medium flex items-center gap-1">
-                    <Icon name="verified_user" className="text-[13px]" /> Escrow Locked
+                    <Icon name="verified_user" className="text-[13px]" /> payment protected
                   </span>
                   <span className="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded text-[12px] font-bold">Standard Delivery</span>
                 </div>
@@ -425,7 +425,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
         <span className="">William St Hub: Live (99.8%) • Kampala Boda Dispatch Mesh Active</span>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-tertiary flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> Bank of Uganda NPS Escrow</span>
+        <span className="text-tertiary flex items-center gap-1"><Icon name="lock" className="text-[14px]" /> Pesapal Pesapal Rails Payment</span>
         <span className="">•</span>
         <span className="">© 2025 SwiftCart Uganda Ltd.</span>
       </div>

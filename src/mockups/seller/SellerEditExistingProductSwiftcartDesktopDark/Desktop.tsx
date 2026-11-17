@@ -31,7 +31,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-sm text-label-sm text-emerald-escrow uppercase tracking-wider font-bold">Ledger Node: Online</span>
 </div>
 <span className="font-label-sm text-label-sm text-on-surface-variant/40">•</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant/90">EFRIS Auto-Fiscalization Server: Connected (Kampala 1-ms ping)</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant/90">E-INVOICE Auto-Fiscalization Server: Connected (Kampala 1-ms ping)</span>
 </div>
 <div className="flex items-center gap-space-md font-label-sm text-label-sm">
 <span className="text-on-surface-variant/80">Last edited: Today, 14:28 EAT by Kizito Ronald</span>
@@ -174,8 +174,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="check_box" className="text-emerald-escrow text-[18px]" />
 </div>
 <div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider">URSB &amp; EFRIS VAT REGISTERED SKU</span>
-<span className="font-body-sm text-body-sm text-on-surface-variant/90 leading-snug">Automated fiscal e-receipt with genuine QR tax code generated upon buyer payment release into escrow.</span>
+<span className="font-label-sm text-label-sm text-emerald-escrow font-bold uppercase tracking-wider">URSB &amp; E-INVOICE Tax REGISTERED SKU</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant/90 leading-snug">Automated fiscal e-receipt with genuine QR tax code generated upon buyer payment release into payment.</span>
 </div>
 </div>
 </section>
@@ -433,7 +433,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">
 <span>Package Standard:</span>
-<span className="font-bold text-on-surface">Tamper-Evident Bag (Size M)</span>
+<span className="font-bold text-on-surface">Sealed Package Bag (Size M)</span>
 </div>
 <div className="flex items-center justify-between text-on-surface-variant">
 <span>Origin Hub:</span>
@@ -467,7 +467,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="text-danger-penalty font-medium whitespace-nowrap">- UGX 8,550</span>
 </div>
 <div className="flex justify-between items-center text-on-surface-variant">
-<span>Escrow Transit Insurance:</span>
+<span>Payment Transit Insurance:</span>
 <span className="text-danger-penalty font-medium whitespace-nowrap">- UGX 1,710</span>
 </div>
 </div>

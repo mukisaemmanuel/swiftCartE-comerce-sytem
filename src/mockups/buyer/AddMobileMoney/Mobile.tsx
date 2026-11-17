@@ -109,7 +109,7 @@ export const Mobile: React.FC<MobileProps> = (_props) => {
               </div>
               <div className="flex-1 min-w-0">
                 <span className="block text-xs font-extrabold text-stone-900 truncate">MTN Uganda</span>
-                <span className="block text-[10px] font-semibold text-brand-700">*165# Instant</span>
+                <span className="block text-[10px] font-semibold text-brand-700">Prompt on Phone</span>
               </div>
               
               <div className="w-5 h-5 rounded-full bg-brand-500 flex items-center justify-center text-white text-[10px] ml-1 flex-shrink-0">
@@ -124,7 +124,7 @@ export const Mobile: React.FC<MobileProps> = (_props) => {
               </div>
               <div className="flex-1 min-w-0">
                 <span className="block text-xs font-bold text-stone-800 truncate">Airtel Money</span>
-                <span className="block text-[10px] text-stone-500">*185# USSD</span>
+                <span className="block text-[10px] text-stone-500">Prompt on Phone</span>
               </div>
               <div className="w-5 h-5 rounded-full border-2 border-stone-300 ml-1 flex-shrink-0"></div>
             </button>
@@ -179,7 +179,7 @@ export const Mobile: React.FC<MobileProps> = (_props) => {
               </span>
             </div>
             <p className="text-sm font-extrabold text-stone-900 mt-0.5">KATO JOSHUA MUKASA</p>
-            <p className="text-[11px] text-stone-500 mt-0.5 leading-tight">Name must match your National ID (NIN) for seamless escrow dispute refunds.</p>
+            <p className="text-[11px] text-stone-500 mt-0.5 leading-tight">Name must match your National ID (NIN) for seamless Payment Dispute refunds.</p>
           </div>
         </div>
 
@@ -199,7 +199,7 @@ export const Mobile: React.FC<MobileProps> = (_props) => {
         <div className="bg-amber-50/70 border border-amber-200/70 rounded-2xl p-3.5 flex items-start space-x-2.5">
           <i className="fa-solid fa-lock text-brand-600 text-xs mt-1 flex-shrink-0"></i>
           <p className="text-[11px] text-stone-600 leading-relaxed">
-            <strong className="font-bold text-stone-900">Swift Escrow Protection:</strong> When you confirm, a test <strong>*165#</strong> USSD prompt of <span className="font-bold text-stone-900">UGX 0</span> will be sent to your handset to verify wallet ownership. No funds are charged.
+            <strong className="font-bold text-stone-900">swift payment protection:</strong> When you confirm, a test <strong>Mobile prompt</strong> USSD prompt of <span className="font-bold text-stone-900">UGX 0</span> will be sent to your handset to verify wallet ownership. No funds are charged.
           </p>
         </div>
 

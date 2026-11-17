@@ -1,6 +1,6 @@
 import {
   RETURN_STATUS,
-  ESCROW_STATUS,
+  PAYMENT_HOLD_STATUS,
 } from '../../../shared/statuses';
 import type { SellerReturn, SellerDispute } from '../../domain/seller.types';
 
@@ -34,7 +34,8 @@ const INITIAL_MOCK_RETURNS: SellerReturn[] = [
     details: 'Customer reports left audio channel drops out when wire moves.',
     photos: ['/placeholders/product-audio.svg'],
     status: RETURN_STATUS.REQUESTED,
-    escrowStatus: ESCROW_STATUS.FROZEN_RETURN,
+    paymentHoldStatus: PAYMENT_HOLD_STATUS.DISPUTED,
+    escrowStatus: PAYMENT_HOLD_STATUS.DISPUTED,
     refundAmount: 240000,
     createdAt: new Date(Date.now() - 3600000 * 18).toISOString(),
     updatedAt: new Date(Date.now() - 3600000 * 18).toISOString(),
@@ -59,7 +60,8 @@ const INITIAL_MOCK_RETURNS: SellerReturn[] = [
     details: 'Ordered Jet Black but received Cream White.',
     photos: ['/placeholders/headphones.svg'],
     status: RETURN_STATUS.IN_TRANSIT,
-    escrowStatus: ESCROW_STATUS.FROZEN_RETURN,
+    paymentHoldStatus: PAYMENT_HOLD_STATUS.DISPUTED,
+    escrowStatus: PAYMENT_HOLD_STATUS.DISPUTED,
     refundAmount: 380000,
     sellerResponseReason: 'Approved return for exchange or refund.',
     createdAt: new Date(Date.now() - 86400000 * 2).toISOString(),
@@ -142,10 +144,14 @@ export class MockSellerReturnsRepository implements ISellerReturnsRepository {
         condition === 'resaleable'
           ? RETURN_STATUS.RECEIVED_RESALEABLE
           : RETURN_STATUS.RECEIVED_DAMAGED,
+      paymentHoldStatus:
+        condition === 'resaleable'
+          ? PAYMENT_HOLD_STATUS.REFUNDED
+          : PAYMENT_HOLD_STATUS.DISPUTED,
       escrowStatus:
         condition === 'resaleable'
-          ? ESCROW_STATUS.REFUNDED
-          : ESCROW_STATUS.FROZEN_DISPUTE,
+          ? PAYMENT_HOLD_STATUS.REFUNDED
+          : PAYMENT_HOLD_STATUS.DISPUTED,
       updatedAt: new Date().toISOString(),
     };
     this.returns[idx] = updated;

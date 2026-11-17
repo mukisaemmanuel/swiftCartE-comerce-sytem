@@ -428,7 +428,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="flex items-center justify-center gap-space-md text-secondary py-space-xs">
 <div className="flex items-center gap-1 text-center font-label-md text-label-md">
 <Icon name="verified" className="text-tertiary text-[18px]" />
-<span>Kampala Escrow Protected</span>
+<span>Kampala Payment Protected</span>
 </div>
 <span className="text-secondary/40">•</span>
 <div className="flex items-center gap-1 text-center font-label-md text-label-md">

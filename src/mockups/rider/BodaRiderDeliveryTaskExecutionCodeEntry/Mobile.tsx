@@ -188,7 +188,7 @@ export const BodaRiderDeliveryTaskExecutionCodeEntry: React.FC<BodaRiderDelivery
 <div className="pt-space-xs text-center">
 <button className="w-full py-2.5 px-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-highest text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs transition-colors shadow-sm active:scale-98" id="ussd-resend-btn">
 <Icon name="sms" className="text-[18px]" />
-<span className="">Buyer Forgot Code? Trigger USSD Push (*165#)</span>
+<span className="">Buyer Forgot Code? Trigger USSD Push (Mobile prompt)</span>
 </button>
 </div>
 </div>

@@ -183,7 +183,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span className="font-label-md text-label-md text-on-surface font-bold">Isuzu 7-Ton | UBA 441Z</span>
 </div>
 <div className="bg-surface-container-high p-2 rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Driver Custody</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Driver holding</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">Samuel Waiswa</span>
 </div>
 </div>
@@ -538,7 +538,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Line-Haul Handover Verification &amp; Signatures</span>
 <span className="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
-<Icon name="encrypted" className="text-[14px]" /> Cryptographic Key #KLA-04-VERIFIED
+<Icon name="encrypted" className="text-[14px]" /> Verified Key #KLA-04-VERIFIED
             </span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
@@ -561,7 +561,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Receiving Hub Supervisor</span>
 <span className="font-label-md text-label-md text-on-surface font-bold">Brian Mukasa • Kampala Central #04</span>
-<span className="font-body-sm text-body-sm text-tertiary font-semibold">Attestation Approved</span>
+<span className="font-body-sm text-body-sm text-tertiary font-semibold">Verification Approved</span>
 </div>
 </div>
 </div>

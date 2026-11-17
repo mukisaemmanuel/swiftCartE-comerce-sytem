@@ -266,7 +266,7 @@ export const Mobile: React.FC<MobileProps> = (props) => {
 </button>
 <div className="flex items-center justify-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
 <span className="inline-flex items-center gap-1 text-tertiary">
-<Icon name="verified_user" className="text-[13px]" /> Swift Escrow Protected
+<Icon name="verified_user" className="text-[13px]" /> Payment Protected
         </span>
 <span>•</span>
 <span>Kampala, Wakiso &amp; Mukono</span>

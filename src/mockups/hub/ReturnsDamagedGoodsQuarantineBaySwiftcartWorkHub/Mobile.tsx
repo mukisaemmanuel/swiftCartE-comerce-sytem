@@ -27,7 +27,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="hidden mx-margin mt-space-sm p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-md flex items-center justify-between gap-space-sm animate-pulse" id="statusToast">
 <div className="flex items-center gap-space-xs min-w-0">
 <Icon name="verified_user" className="text-tertiary-fixed text-[20px] shrink-0" />
-<span className="font-label-md text-label-md truncate" id="toastMsg">Dispatched to Fraud Arbitration Desk</span>
+<span className="font-label-md text-label-md truncate" id="toastMsg">Dispatched to Fraud Dispute Desk</span>
 </div>
 <button className="text-inverse-on-surface hover:text-on-tertiary-fixed shrink-0" type="button">
 <Icon name="close" className="text-[18px]" />
@@ -78,7 +78,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 </div>
 <div className="bg-surface-container-lowest p-space-xs rounded-lg shadow-sm">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Frozen Escrow</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Frozen Payment</span>
 <div className="flex items-baseline gap-0.5 mt-0.5">
 <span className="font-label-sm text-label-sm font-bold text-primary whitespace-nowrap">UGX</span>
 <span className="font-label-lg text-label-lg font-bold text-on-surface truncate">12,450,000</span>
@@ -109,7 +109,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <Icon name="warning" className="text-primary text-[20px]" />
 <h3 className="font-label-lg text-label-lg font-bold text-on-surface tracking-tight uppercase">High-Risk Incident Spotlight</h3>
 </div>
-<span className="bg-error-container text-on-error-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Escrow Frozen</span>
+<span className="bg-error-container text-on-error-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">payment frozen</span>
 </div>
 <div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
 
@@ -143,7 +143,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
           </span>
 </div>
 <div>
-<span className="font-label-sm text-label-sm text-secondary block">Custody Returned By</span>
+<span className="font-label-sm text-label-sm text-secondary block">holding Returned By</span>
 <span className="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1 truncate">
 <Icon name="two_wheeler" className="text-[14px] text-secondary" /> Brian K. (#RDR-4082)
           </span>
@@ -154,7 +154,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="flex items-center gap-space-xs">
 <Icon name="lock" className="text-primary text-[20px]" />
 <div>
-<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Stanbic Escrow Guarantee</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block uppercase font-bold">Pesapal Payment Protection</span>
 <span className="font-price-display text-price-display text-primary font-bold whitespace-nowrap">UGX 1,850,000</span>
 </div>
 </div>
@@ -179,7 +179,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 </div>
 
 <div className="relative rounded-lg overflow-hidden bg-surface-container-high aspect-square">
-<img className="w-full h-full object-cover" data-alt="Detailed macro photo of a sliced tamper-evident red holographic security tape seal on an electronic wholesale carton box showing void pattern opened in a warehouse audit setting." src="/images/e6ef9a6d3c3a172f.webp" />
+<img className="w-full h-full object-cover" data-alt="Detailed macro photo of a sliced Sealed Package Bag red holographic security tape seal on an electronic wholesale carton box showing void pattern opened in a warehouse audit setting." src="/images/e6ef9a6d3c3a172f.webp" />
 <span className="absolute bottom-1 left-1 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-1 py-0.2 rounded font-mono">Seal Void</span>
 </div>
 
@@ -211,7 +211,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="flex items-start gap-space-xs">
 <Icon name="policy" className="text-error text-[22px]" />
 <div>
-<span className="font-label-md text-label-md font-bold text-on-surface block">Escalate to Fraud &amp; Arbitration Desk</span>
+<span className="font-label-md text-label-md font-bold text-on-surface block">Escalate to Fraud &amp; Dispute Desk</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Potential counterfeit or intentional seal manipulation</span>
 </div>
 </div>
@@ -222,7 +222,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="flex items-start gap-space-xs">
 <Icon name="assured_workload" className="text-tertiary text-[22px]" />
 <div>
-<span className="font-label-md text-label-md font-bold text-on-surface block">Log Insurance Claim (UNBS / Stanbic)</span>
+<span className="font-label-md text-label-md font-bold text-on-surface block">Log Insurance Claim (UNBS / Pesapal)</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">In-transit courier drop casualty; claim 100% loss payout</span>
 </div>
 </div>
@@ -323,7 +323,7 @@ export const ReturnsDamagedGoodsQuarantineBaySwiftcartWorkHub: React.FC<ReturnsD
 <div className="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm text-on-surface-variant">
 <Icon name="verified" className="text-[24px] text-tertiary shrink-0" />
 <p className="font-body-sm text-body-sm">
-        All parcels scanned into Bay 03 are logged with 256-bit hash records into the UNBS Escrow Ledger. Tamper seals verified by Sarah Kyomugisha.
+        All parcels scanned into Bay 03 are logged with 256-bit hash records into the UNBS Payment Holds. package seal verified by Sarah Kyomugisha.
       </p>
 </div>
 </div>

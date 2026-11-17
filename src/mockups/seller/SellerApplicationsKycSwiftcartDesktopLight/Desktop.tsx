@@ -34,7 +34,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs bg-surface-container px-space-md py-1 rounded-full shadow-sm">
 <span className="w-2 h-2 rounded-full bg-emerald-escrow animate-ping"></span>
-<span className="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">Live Regulatory Hook: URSB / URA / NIRA Direct Rails</span>
+<span className="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">Live Regulatory Hook: URSB / Tax / NIRA Direct Rails</span>
 </div>
 </div>
 
@@ -125,7 +125,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex flex-wrap items-center gap-space-xs">
 <span className="font-headline-md text-headline-md text-on-surface font-black">Uganda Tech Gadgets Ltd</span>
 <span className="font-label-sm text-label-sm bg-emerald-escrow/10 text-emerald-escrow px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
-<Icon name="shield" className="text-[14px]" /> Swift Escrow Protected Ready
+<Icon name="shield" className="text-[14px]" /> Payment Protected Ready
                 </span>
 </div>
 <p className="font-headline-sm text-headline-sm text-primary font-bold">Trade Storefront: GadgetPoint Kampala</p>
@@ -173,7 +173,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <section className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
 <div className="flex items-center justify-between mb-space-lg">
 <div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface">Statutory Audit &amp; Mandatory KYC Checklist</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface">verified platform Audit &amp; Mandatory KYC Checklist</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant">Official integration with Republic of Uganda regulatory databases</p>
 </div>
 <span className="font-label-sm text-label-sm bg-emerald-escrow text-surface-container-lowest px-space-sm py-1 rounded-full font-bold flex items-center gap-1">
@@ -218,8 +218,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div>
 <div className="flex items-center gap-space-xs">
-<span className="font-label-lg text-label-lg text-on-surface">Step 2: Tax Compliance (URA EFRIS)</span>
-<span className="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">Verified &amp; EFRIS Linked</span>
+<span className="font-label-lg text-label-lg text-on-surface">Step 2: Tax Compliance (Tax E-INVOICE)</span>
+<span className="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-escrow/15 text-emerald-escrow font-bold">Verified &amp; E-INVOICE Linked</span>
 </div>
 <div className="grid grid-cols-2 md:grid-cols-3 gap-x-space-md gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
 <span>TIN: <strong className="text-on-surface">1009842104</strong></span>
@@ -227,7 +227,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <span>Clearance Valid: <strong className="text-on-surface">Dec 2025</strong></span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
-<Icon name="check_circle" className="text-[16px] text-emerald-escrow" /> Automated e-Invoicing enabled for swift VAT escrow disbursement.
+<Icon name="check_circle" className="text-[16px] text-emerald-escrow" /> Automated e-Invoicing enabled for swift Tax Seller Payout.
                 </p>
 </div>
 </div>
@@ -236,7 +236,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="visibility" className="text-[16px]" />
 <span>URA_TCC_2024_2025.pdf</span>
 </button>
-<span className="font-label-sm text-label-sm text-on-surface-variant">EFRIS Handshake 200 OK</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">E-INVOICE Handshake 200 OK</span>
 </div>
 </div>
 
@@ -304,7 +304,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between mb-space-md">
 <div>
 <h3 className="font-headline-sm text-headline-sm text-on-surface">Telecom &amp; Bank Payout Rails Verification</h3>
-<p className="font-body-sm text-body-sm text-on-surface-variant">Designated destination accounts for escrow release cycles</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Designated destination accounts for Payment Release cycles</p>
 </div>
 <span className="font-label-sm text-label-sm text-emerald-escrow bg-emerald-escrow/10 px-space-sm py-1 rounded font-bold">2 Verified Channels</span>
 </div>
@@ -355,7 +355,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-space-xs mb-space-sm">
 <span className="w-3 h-3 rounded-full bg-secondary"></span>
-<h4 className="font-headline-sm text-headline-sm text-on-surface">Stanbic Bank Uganda Ltd</h4>
+<h4 className="font-headline-sm text-headline-sm text-on-surface">Pesapal Uganda Ltd</h4>
 </div>
 <div className="space-y-1 font-body-sm text-body-sm">
 <div className="flex justify-between">
@@ -394,14 +394,14 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 
 <div>
 <label className="font-label-md text-label-md text-on-surface block mb-1" htmlFor="compliance-notes">
-            Statutory Examination Notes <span className="text-on-surface-variant font-normal">(Recorded directly to immutable compliance audit log)</span>
+            verified platform Examination Notes <span className="text-on-surface-variant font-normal">(Recorded directly to immutable compliance audit log)</span>
 </label>
-<textarea className="w-full bg-surface-container text-on-surface font-body-sm text-body-sm p-space-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="compliance-notes" rows={3}>URSB registration authentic, TIN active on EFRIS. Ready for unconditional onboarding.</textarea>
+<textarea className="w-full bg-surface-container text-on-surface font-body-sm text-body-sm p-space-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="compliance-notes" rows={3}>URSB registration authentic, TIN active on E-INVOICE. Ready for unconditional onboarding.</textarea>
 </div>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md bg-surface-container p-space-md rounded-xl">
 <div>
-<span className="font-label-sm text-label-sm text-on-surface-variant block mb-1">Seller Escrow Hold Period</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant block mb-1">Seller Payment Hold Period</span>
 <select className="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md p-2 rounded-lg focus:outline-none">
 <option>Standard T+1 (24 Hours post delivery)</option>
 <option>Same-Day Accelerated (T+0)</option>

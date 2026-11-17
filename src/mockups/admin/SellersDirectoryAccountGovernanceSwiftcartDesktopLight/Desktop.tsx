@@ -178,7 +178,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <th className="py-3.5 px-space-md">Store &amp; Business Name</th>
 <th className="py-3.5 px-space-md">Category &amp; Hub</th>
 <th className="py-3.5 px-space-md text-right">30-Day GMV</th>
-<th className="py-3.5 px-space-md text-right">Escrow Balance</th>
+<th className="py-3.5 px-space-md text-right">Pending clearance</th>
 <th className="py-3.5 px-space-md text-center">Trust Score</th>
 <th className="py-3.5 px-space-md">Compliance Status</th>
 <th className="py-3.5 px-space-md">Registered Contact</th>
@@ -363,7 +363,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <td className="py-4 px-space-md text-right">
 <div className="flex flex-col items-end">
 <span className="font-label-lg text-label-lg text-danger-penalty font-bold whitespace-nowrap">UGX 0 (Frozen)</span>
-<span className="font-label-sm text-label-sm text-danger-penalty">Escrow locked</span>
+<span className="font-label-sm text-label-sm text-danger-penalty">payment protected</span>
 </div>
 </td>
 <td className="py-4 px-space-md">

@@ -53,7 +53,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onNavigate }) => {
   const handleCheckoutClick = () => {
     // Stage 1 STOP rule: Stop before checkout
     setCheckoutNotice(
-      'Checkout, Escrow payments, and Boda delivery tracking unlock in Stage 2. Your cart is preserved!'
+      'Checkout, Secure payments, and Boda delivery tracking unlock in Stage 2. Your cart is preserved!'
     );
   };
 
