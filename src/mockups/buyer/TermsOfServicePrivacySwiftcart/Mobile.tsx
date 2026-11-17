@@ -252,7 +252,7 @@ export const TermsOfServicePrivacySwiftcart: React.FC<TermsOfServicePrivacySwift
 </div>
 <div className="mt-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-on-surface" id="body-sec-5">
 <p>
-          In full conformity with the Uganda SwiftCart Privacy Policy (2019), delivery drivers and merchant handlers never view your private telephone digits.
+          In accordance with SwiftCart customer privacy guidelines, delivery drivers and merchant handlers never view your private telephone digits.
         </p>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
           Calls placed between riders and shoppers are routed via encrypted virtual telecom relays. Once an order finishes delivery, communications channels permanently self-terminate.

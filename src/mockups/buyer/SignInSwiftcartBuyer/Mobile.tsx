@@ -156,7 +156,7 @@ export const SignInSwiftcartBuyer: React.FC<SignInSwiftcartBuyerProps> = (props)
 
 <div className="flex items-center gap-space-xs text-secondary mt-space-xs">
 <Icon name="shield" className="text-[15px] text-tertiary" />
-<span className="font-label-sm text-label-sm">Uganda Data Protection Compliant • End-to-End Secure</span>
+<span className="font-label-sm text-label-sm">Customer Privacy Protected • End-to-End Secure</span>
 </div>
 </div>
 </div>

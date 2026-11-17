@@ -127,7 +127,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <span className="inline-block mt-4 font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">24/7 Human Desk</span>
 <h3 className="font-headline-sm text-headline-sm text-on-surface mt-1">Live Human Support</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mt-2">
-            Connect directly via WhatsApp (+256 700 220 800) or our toll-free hotline 0800 220 800.
+            Connect directly via WhatsApp (+256 700 000 000) or our toll-free hotline 0800 220 800.
           </p>
 </div>
 <div className="pt-6 mt-4 flex items-center justify-between text-secondary font-label-md text-label-md">
@@ -498,7 +498,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 <Icon name="chat" className="text-[32px]" />
 </div>
 <span className="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-wider">Instant Chat Desk</span>
-<h3 className="font-headline-md text-headline-md text-on-surface mt-1">+256 700 220 800</h3>
+<h3 className="font-headline-md text-headline-md text-on-surface mt-1">+256 700 000 000</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mt-2">
               Direct official WhatsApp channel. Send parcel screenshots, rider numbers, and payment slips directly.
             </p>

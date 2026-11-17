@@ -8,45 +8,51 @@ export interface HelpCentrePageProps {
 interface FaqItem {
   question: string;
   answer: string;
-  category: 'orders' | 'payment' | 'returns' | 'general';
+  category: 'orders' | 'payment' | 'returns' | 'seller';
 }
 
 const FAQS: FaqItem[] = [
   {
     category: 'payment',
-    question: 'How does SwiftCart Protection protect my payment?',
+    question: 'How do payments work on SwiftCart?',
     answer:
-      'When you pay via MTN MoMo, Airtel Money, or Card, your funds are safely held in a protected payment protection account. The merchant is only credited AFTER you inspect the item and share your 6-digit delivery handover code with the rider or pickup station.',
+      'All payments are processed securely through Pesapal. You can pay using MTN Mobile Money, Airtel Money, Visa, or Mastercard. SwiftCart holds your payment safely until you inspect your parcel at delivery and provide your 6-digit delivery code to the courier. Once the 48-hour return window closes, funds are disbursed to the seller.',
+  },
+  {
+    category: 'payment',
+    question: 'What if the mobile money payment prompt does not appear?',
+    answer:
+      'You will receive a prompt on your phone to approve the payment. If network delay occurs, check your mobile money app under pending approvals or contact our customer support team. SwiftCart never asks for your secret PIN.',
   },
   {
     category: 'orders',
-    question: 'What is the 6-digit delivery handover code?',
+    question: 'What is the 6-digit delivery code?',
     answer:
-      'The 6-digit code is generated exclusively for your order and displayed on your Order Confirmation and Order Detail screens. Share it with your Boda rider ONLY after you have verified that the package contains the correct and undamaged items.',
+      'The 6-digit code is generated exclusively for your order and displayed on your Order Details screen and sent via SMS. Share it with your courier ONLY after you have physically received and inspected your package. Disclosing this code confirms delivery.',
   },
   {
     category: 'orders',
-    question: 'How fast is Express Boda delivery in Kampala?',
+    question: 'How fast is courier delivery in Kampala?',
     answer:
-      'Orders placed from verified Kampala merchants are picked up and delivered to your doorstep within 1 to 3 hours.',
+      'Orders placed from verified Kampala merchants are typically delivered to your doorstep within 1 to 3 hours across Kampala and Wakiso districts.',
   },
   {
     category: 'returns',
-    question: 'What is the SwiftCart 3-day return policy?',
+    question: 'What is the return and refund policy?',
     answer:
-      'If an item is damaged, defective, or not as described, you can initiate a return or open an Payment Dispute within 3 calendar days of delivery. Payout to the seller is immediately frozen while our team assists you with a replacement or full refund.',
+      'If an item is damaged, defective, or incorrect, you can request a return within 48 hours of delivery by uploading photo evidence. Our Kampala team will arrange a reverse pickup, and a full refund will be processed back to your original payment method via Pesapal.',
   },
   {
-    category: 'orders',
-    question: 'Can I pick up my parcel from a station hub?',
+    category: 'seller',
+    question: 'How do I become a verified seller on SwiftCart?',
     answer:
-      'Yes! We have pickup hubs at Kampala GPO (Posta Uganda), Nakawa, Entebbe Victoria Mall, Jinja Post Office, and Mukono Central. Station pickup typically costs only UGX 3,500.',
+      'Register your store online by submitting your business details, National ID (NIN) or URSB registration, and physical shop address in Kampala. Once verified, you can list products immediately. Commission is 8% to 12% on completed sales, with daily disbursements to your mobile money or bank account.',
   },
 ];
 
 export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'orders' | 'payment' | 'returns'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'orders' | 'payment' | 'returns' | 'seller'>('all');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const filteredFaqs = FAQS.filter((faq) => {
@@ -73,7 +79,7 @@ export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) =>
             Help & Customer Support
           </h1>
           <p className="text-sm text-slate-500">
-            Frequently asked questions and direct support for Ugandan shoppers
+            Frequently asked questions and direct support for Ugandan shoppers and sellers
           </p>
         </div>
       </div>
@@ -87,15 +93,15 @@ export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) =>
               <Icon name="call" className="text-2xl" />
             </div>
             <div>
-              <h3 className="font-bold text-base text-[#0E1B4D]">Call Support</h3>
+              <h3 className="font-bold text-base text-[#0E1B4D]">Customer Helpline</h3>
               <p className="text-xs text-slate-500">Mon-Sat: 8:00 AM - 8:00 PM</p>
               <div className="font-mono text-xs font-bold text-slate-700 mt-1">
-                +256 700 100 200
+                +256 700 000 000
               </div>
             </div>
           </div>
           <a
-            href="tel:+256700100200"
+            href="tel:+256700000000"
             className="px-4 py-2.5 rounded-xl bg-[#0E1B4D] text-white font-bold text-xs hover:bg-slate-800 transition-colors shrink-0 min-h-[44px] flex items-center justify-center"
           >
             Call Now
@@ -110,20 +116,31 @@ export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) =>
             </div>
             <div>
               <h3 className="font-bold text-base text-[#0E1B4D]">WhatsApp Chat</h3>
-              <p className="text-xs text-slate-500">Instant answers from team</p>
+              <p className="text-xs text-slate-500">support@swiftcart.ug</p>
               <div className="font-mono text-xs font-bold text-emerald-700 mt-1">
-                +256 700 100 200
+                +256 700 000 000
               </div>
             </div>
           </div>
           <a
-            href="https://wa.me/256700100200"
+            href="https://wa.me/256700000000"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-colors shrink-0 min-h-[44px] flex items-center justify-center"
           >
             Chat Now
           </a>
+        </div>
+      </div>
+
+      {/* Physical Office Card */}
+      <div className="bg-white rounded-3xl p-5 border border-slate-200 shadow-xs flex items-center gap-4">
+        <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+          <Icon name="location_on" className="text-xl" />
+        </div>
+        <div className="text-xs text-slate-600">
+          <strong className="text-slate-800 font-bold block text-sm">Kampala Operations Office:</strong>
+          Plot 14 Lumumba Avenue, Nakasero Commercial District, Kampala, Uganda • Open Monday to Saturday
         </div>
       </div>
 
@@ -140,12 +157,12 @@ export const HelpCentrePage: React.FC<HelpCentrePageProps> = ({ onNavigate }) =>
       </div>
 
       {/* Category Tabs */}
-      <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-        {(['all', 'payment', 'orders', 'returns'] as const).map((cat) => (
+      <div className="flex items-center gap-2 border-b border-slate-200 pb-3 overflow-x-auto">
+        {(['all', 'payment', 'orders', 'returns', 'seller'] as const).map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold capitalize transition-all ${
+            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold capitalize transition-all whitespace-nowrap ${
               selectedCategory === cat
                 ? 'bg-[#0E1B4D] text-white'
                 : 'text-slate-600 hover:bg-slate-100'

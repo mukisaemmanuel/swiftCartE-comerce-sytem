@@ -311,7 +311,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
           </div>
           <div className="flex items-center gap-1.5 text-[11px] text-on-surface-variant/70">
             <Icon name="gavel" className="text-sm text-tertiary" />
-            <span>Uganda Data Protection &amp; Privacy Act 2019</span>
+            <span>Customer Privacy Guidelines (Uganda)</span>
           </div>
         </div>
       </div>

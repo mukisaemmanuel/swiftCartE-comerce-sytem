@@ -32,7 +32,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
 </div>
 <div className="flex flex-col">
 <div className="flex flex-wrap items-center gap-space-xs">
-<span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Uganda Data Protection &amp; Privacy Act 2019</span>
+<span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Customer Privacy Guidelines (Uganda)</span>
 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-bold">
 <Icon name="verified" className="text-[13px]" /> Compliant &amp; Registered
             </span>
@@ -153,7 +153,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
                 Consumer Legal Protection
               </span>
 <span className="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
-                Uganda Data Protection &amp; Privacy Act 2019
+                Customer Privacy Guidelines (Uganda)
               </span>
 </div>
 <span className="font-label-sm text-label-sm text-secondary flex items-center gap-1">

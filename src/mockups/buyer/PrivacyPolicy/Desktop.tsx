@@ -356,7 +356,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              SwiftCart operates in complete alignment with the SwiftCart Privacy Policy 2019 of Uganda and Data Protection Regulations 2021 administered by the Personal Data Protection Office (PDPO).
+              SwiftCart operates in complete alignment with the standard customer privacy guidelines for Uganda operations.
             </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="p-4 rounded-xl bg-surface-container-low">

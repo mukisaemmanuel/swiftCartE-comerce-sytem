@@ -37,11 +37,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="max-w-3xl">
 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm mb-3">
 <Icon name="gavel" className="text-[14px]" />
-<span>verified platform Compliance &amp; Consumer Fair Trade Framework</span>
+<span>Uganda Marketplace Guidelines &amp; Consumer Fair Trade Framework</span>
 </div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Terms of Service &amp; Privacy Policy</h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">
-            Clear, binding guidelines governing SwiftCart Uganda marketplace commerce, decentralized telecom payment settlements, physical doorstep inspection rights, and national data safeguards.
+            Clear guidelines governing SwiftCart Uganda marketplace commerce, payment processing via Pesapal, 6-digit doorstep delivery inspection, and customer safeguards.
           </p>
 </div>
 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-shrink-0">
@@ -66,11 +66,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
 <Icon name="account_balance" className="text-[16px] text-tertiary" />
-<span>Certified by <strong className="text-on-surface">URSB &amp; Ministry of Trade</strong></span>
+<span>Registered with <strong className="text-on-surface">URSB (Uganda Registration)</strong></span>
 </div>
 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
 <Icon name="shield" className="text-[16px] text-tertiary" />
-<span>SwiftCart User Privacy Guidelines (Kampala Operations)</span>
+<span>SwiftCart Marketplace Terms (Kampala Operations)</span>
 </div>
 </div>
 </div>
@@ -121,8 +121,8 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-3.5 rounded-xl bg-surface-container flex items-start gap-3">
 <Icon name="verified_user" className="text-[20px] text-tertiary flex-shrink-0 mt-0.5" />
 <div>
-<p className="font-label-md text-label-md text-on-surface">Pesapal Payment Sandbox</p>
-<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">All customer funds quarantined in tier-one custodian banks under FinTech regulation.</p>
+<p className="font-label-md text-label-md text-on-surface">Pesapal Payment Gateway</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">All customer payments processed securely through Pesapal payment rails.</p>
 </div>
 </div>
 <div className="p-3.5 rounded-xl bg-surface-container flex items-start gap-3">
@@ -146,7 +146,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              Welcome to SwiftCart Uganda, operated by SwiftCart Uganda Technologies Ltd (URSB Reg #800200331902). By accessing our website, mobile application, or engaging via our automated USSD merchant integrations, you agree unconditionally to be bound by these Terms of Service, the Uganda Electronic Transactions Act 2011, and the Electronic Signatures Act 2011.
+              Welcome to SwiftCart Uganda, operated by SwiftCart Uganda Technologies Ltd. By accessing our platform, you agree to these Terms of Service. Note: These draft terms must be reviewed and approved by a qualified Ugandan commercial lawyer prior to live commercial operation.
             </p>
 <p>
               If you do not agree with any provision laid out herein, you must immediately terminate use of our marketplace platform and discontinue placing, processing, or fulfilling merchant orders.
@@ -172,30 +172,30 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              SwiftCart operates an enforceable third-party telecom Payment System designed to eliminate digital commerce fraud across Kampala, Wakiso, and national delivery corridors.
+              SwiftCart operates a payment protection system designed to protect buyers and sellers across Kampala, Wakiso, and national delivery corridors.
             </p>
 <div className="p-5 rounded-xl bg-tertiary-container/10 text-tertiary flex items-start gap-4">
 <Icon name="lock" className="text-[28px] flex-shrink-0" />
 <div className="space-y-1">
-<h4 className="font-label-lg text-label-lg text-on-surface">Mandatory 6-Digit Doorstep OTP Release Mechanism</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">Mandatory 6-Digit Doorstep Code Verification</h4>
 <p className="font-body-md text-body-md text-on-surface-variant">
-                  When you make payment via MTN MoMo, Airtel Money, or Card rails, funds are immediately quarantined in an independent Payment Hold Account. The vendor is <strong className="text-on-surface">NEVER credited</strong> until you examine the parcel at your doorstep and verbally provide or digitally validate the secure 6-digit confirmation OTP to the delivery agent.
+                  When you make payment via MTN MoMo, Airtel Money, or Card through Pesapal, funds are safely held pending fulfillment. The merchant is <strong className="text-on-surface">paid only after</strong> you examine the parcel at your doorstep and provide the secure 6-digit confirmation code to the courier, and the return window closes.
                 </p>
 </div>
 </div>
-<h3 className="font-headline-sm text-headline-sm text-on-surface pt-2">Payment Quarantine Protocols:</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface pt-2">Payment Protection Guidelines:</h3>
 <ul className="space-y-3 font-body-md text-body-md text-on-surface-variant pl-2">
 <li className="flex items-start gap-2.5">
 <Icon name="check_circle" className="text-[18px] text-tertiary flex-shrink-0 mt-0.5" />
-<span><strong>No Advance Release:</strong> No customer service executive or merchant has authority to manually override payment prior to confirmed doorstep receipt without your express recorded confirmation.</span>
+<span><strong>No Advance Release:</strong> No customer service executive or merchant has authority to release payment prior to confirmed doorstep receipt with your 6-digit code.</span>
 </li>
 <li className="flex items-start gap-2.5">
 <Icon name="check_circle" className="text-[18px] text-tertiary flex-shrink-0 mt-0.5" />
-<span><strong>48-Hour Auto-Payment Hold:</strong> For high-value electronics (over UGX 500,000) and mechanical goods, a secondary inspection window remains open for functional failure claims.</span>
+<span><strong>48-Hour Return Window:</strong> For electronics and packaged goods, you have a 48-hour return window to report functional defects or mismatched items.</span>
 </li>
 <li className="flex items-start gap-2.5">
 <Icon name="check_circle" className="text-[18px] text-tertiary flex-shrink-0 mt-0.5" />
-<span><strong>Zero-Deduction Refund:</strong> If a merchant fails to dispatch within agreed delivery SLAs, 100% of payment capital returns to the original telecom wallet within 4 hours.</span>
+<span><strong>Full Refund on Cancellation:</strong> If an order cannot be fulfilled by the merchant, 100% of your payment returns to your original payment method via Pesapal.</span>
 </li>
 </ul>
 <div className="relative overflow-hidden rounded-xl bg-surface-container p-5 flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
@@ -204,11 +204,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <Icon name="shield_person" className="text-[28px]" />
 </div>
 <div>
-<div className="font-label-lg text-label-lg text-on-surface">Standard payment settlement Flow</div>
-<div className="font-body-sm text-body-sm text-on-surface-variant">Consumer Pays → Safe holding → Doorstep Check → OTP Release</div>
+<div className="font-label-lg text-label-lg text-on-surface">Standard Payment Flow</div>
+<div className="font-body-sm text-body-sm text-on-surface-variant">Customer Pays → Held by Pesapal → Doorstep Check → Code Confirms Delivery</div>
 </div>
 </div>
-<span className="px-3 py-1 rounded-full bg-surface-container-lowest font-label-sm text-label-sm text-secondary shadow-sm">Secured by Pesapal holding</span>
+<span className="px-3 py-1 rounded-full bg-surface-container-lowest font-label-sm text-label-sm text-secondary shadow-sm">Secured via Pesapal</span>
 </div>
 </div>
 </section>
@@ -216,20 +216,20 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-4 border-b border-surface-variant/30">
 <div className="flex items-center gap-3">
 <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary font-currency-code text-currency-code flex items-center justify-center">03</span>
-<h2 className="font-headline-md text-headline-md text-on-surface">SafeBoda Delivery &amp; Handover Code Protocol</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface">Courier Delivery &amp; Handover Code Protocol</h2>
 </div>
 <span className="px-2.5 py-1 rounded bg-primary-fixed font-label-sm text-label-sm text-primary">Strict Doorstep Rule</span>
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              SwiftCart has partnered with verified SafeBoda City Hub dispatchers and certified regional fleet operators. The safety and integrity of the physical delivery handoff are governed by mandatory protocol:
+              SwiftCart has partnered with verified couriers and SafeBoda dispatchers. The handover of packages is governed by standard verification protocols:
             </p>
 <div className="p-5 rounded-xl bg-error-container/40 text-on-error-container flex items-start gap-4">
 <Icon name="warning" className="text-[28px] text-error flex-shrink-0" />
 <div className="space-y-1">
-<h4 className="font-label-lg text-label-lg text-error">CRITICAL CONSUMER WARNING: DO NOT DISCLOSE PIN PRE-DELIVERY</h4>
+<h4 className="font-label-lg text-label-lg text-error">CRITICAL CONSUMER NOTICE: DO NOT DISCLOSE CODE BEFORE DELIVERY</h4>
 <p className="font-body-md text-body-md text-on-surface-variant">
-                  You must <strong className="text-error">NEVER</strong> share your delivery verification code or SMS PIN over a phone call, WhatsApp chat, or before the courier is physically standing before you. Doing so constitutes premature acceptance and forfeits immediate automated doorstep rejection claims.
+                  You must <strong className="text-error">NEVER</strong> share your 6-digit delivery code over a phone call, WhatsApp, or before the courier is physically standing before you with the package. Sharing the code confirms receipt of goods.
                 </p>
 </div>
 </div>
@@ -237,19 +237,19 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="p-4 rounded-xl bg-surface-container-low">
 <div className="flex items-center gap-2 mb-2 text-on-surface font-label-lg text-label-lg">
 <Icon name="inventory_2" className="text-[18px] text-tertiary" />
-<span>Step 1: Inspect External Seal</span>
+<span>Step 1: Inspect External Package</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Verify the Sealed Package Bag SwiftCart holographic tape is unbroken. If torn or re-taped, reject handover immediately without providing the code.
+                  Verify the package seal is intact and shows no signs of tampering or damage before accepting.
                 </p>
 </div>
 <div className="p-4 rounded-xl bg-surface-container-low">
 <div className="flex items-center gap-2 mb-2 text-on-surface font-label-lg text-label-lg">
 <Icon name="pin" className="text-[18px] text-primary" />
-<span>Step 2: Authenticate Only Upon Approval</span>
+<span>Step 2: Share Code Only Upon Approval</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Only present the 6-digit PIN to the rider's SafeBoda merchant app once you are fully satisfied with physical condition and quantity.
+                  Only provide the 6-digit code to the courier once you have verified the package contents and condition.
                 </p>
 </div>
 </div>
@@ -259,35 +259,35 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-4 border-b border-surface-variant/30">
 <div className="flex items-center gap-3">
 <span className="w-8 h-8 rounded-lg bg-secondary/10 text-secondary font-currency-code text-currency-code flex items-center justify-center">04</span>
-<h2 className="font-headline-md text-headline-md text-on-surface">Payments via MTN MoMo &amp; Airtel Money</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface">Payments via MTN MoMo, Airtel Money &amp; Cards</h2>
 </div>
-<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Telecom Infrastructure</span>
+<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Pesapal Gateway</span>
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              SwiftCart integrates directly with national telecom payment gateways under Pesapal regulatory sandboxes. We respect absolute boundary divisions between our marketplace and your telecom balance:
+              SwiftCart processes payments through the Pesapal payment gateway. We maintain strict separation between our marketplace and your financial credentials:
             </p>
 <div className="p-5 rounded-xl bg-surface-container flex items-start gap-4">
 <Icon name="phonelink_lock" className="text-[28px] text-secondary flex-shrink-0" />
 <div className="space-y-1">
-<h4 className="font-label-lg text-label-lg text-on-surface">Absolute Mobile Money PIN Security Guarantee</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">Mobile Money PIN Security</h4>
 <p className="font-body-md text-body-md text-on-surface-variant">
-                  SwiftCart <strong className="text-on-surface">NEVER</strong> collects, stores, transmits, or prompts for your personal MTN MoMo or Airtel Money secret PIN. All debit authorizations execute entirely on encrypted carrier USSD prompts pushed directly to your mobile handset via official shortcodes (Mobile prompt or Mobile prompt).
+                  SwiftCart <strong className="text-on-surface">NEVER</strong> collects, stores, transmits, or prompts for your personal MTN MoMo or Airtel Money PIN or card CVV. All debit authorizations execute entirely through an automated approval prompt on your phone.
                 </p>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
 <div className="p-3.5 rounded-xl bg-surface-container-low text-center">
 <span className="font-headline-sm text-headline-sm text-primary">0%</span>
-<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">Buyer MoMo Transaction Surcharge</p>
+<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">Buyer Checkout Surcharge</p>
 </div>
 <div className="p-3.5 rounded-xl bg-surface-container-low text-center">
-<span className="font-headline-sm text-headline-sm text-secondary">256-bit</span>
-<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">End-to-End TLS Financial Tunneling</p>
+<span className="font-headline-sm text-headline-sm text-secondary">Pesapal</span>
+<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">Encrypted Payment Gateway</p>
 </div>
 <div className="p-3.5 rounded-xl bg-surface-container-low text-center">
-<span className="font-headline-sm text-headline-sm text-tertiary">&lt; 15s</span>
-<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">Instant Settlement Webhook Confirmation</p>
+<span className="font-headline-sm text-headline-sm text-tertiary">Fast</span>
+<p className="font-label-sm text-label-sm text-on-surface-variant mt-1">Automatic Confirmation</p>
 </div>
 </div>
 </div>
@@ -296,13 +296,13 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-4 border-b border-surface-variant/30">
 <div className="flex items-center gap-3">
 <span className="w-8 h-8 rounded-lg bg-tertiary/10 text-tertiary font-currency-code text-currency-code flex items-center justify-center">05</span>
-<h2 className="font-headline-md text-headline-md text-on-surface">Return &amp; Dispute dispute review Policy</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface">Return &amp; Dispute Policy</h2>
 </div>
-<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Uganda ETA 2011</span>
+<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Consumer Protection</span>
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              Under the Uganda Electronic Transactions Act 2011 (Part IV: Consumer Protection), you are entitled to fair commercial transparency, accurate representation, and structured recourse mechanisms.
+              Under Ugandan consumer fair-trade principles, buyers are entitled to clear recourse when items do not match what was ordered.
             </p>
 <div className="p-5 rounded-xl bg-surface-container-low">
 <div className="flex items-center gap-2 mb-2">
@@ -310,15 +310,15 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <h4 className="font-label-lg text-label-lg text-on-surface">48-Hour Post-Delivery Inspection Window</h4>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant">
-                Even after physical OTP entry, buyers possess a verified platform 48-hour warranty against latent technical defects, counterfeit parts, or goods deviating fundamentally from listing specifications. Initiating a claim locks merchant funds from wallet payout pending swift dispute triage.
+                Even after providing the delivery code, buyers possess a 48-hour inspection period against technical defects, wrong sizes, or counterfeit goods. Initiating a claim holds merchant disbursement pending support review.
               </p>
 </div>
 <div className="space-y-2">
-<h4 className="font-label-lg text-label-lg text-on-surface">dispute review Triage Steps:</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">Dispute Resolution Steps:</h4>
 <ol className="space-y-2 font-body-md text-body-md text-on-surface-variant list-decimal pl-5">
-<li><strong className="text-on-surface">Dispute Ticket Logged:</strong> Buyer uploads high-definition photographic or video proof via SwiftCart portal within 48 hours of dispatch receipt.</li>
-<li><strong className="text-on-surface">Neutral Technical Assessment:</strong> SwiftCart inspection hubs in Nakasero review claims alongside the vendor's pre-dispatch manifest within 24 working hours.</li>
-<li><strong className="text-on-surface">Direct Binding Adjudication:</strong> If merchant fault is upheld, a full refund plus SafeBoda reverse transit credit is returned automatically to the buyer's MoMo account.</li>
+<li><strong className="text-on-surface">Dispute Ticket Logged:</strong> Buyer uploads photos or video evidence via SwiftCart portal within 48 hours of delivery receipt.</li>
+<li><strong className="text-on-surface">Support Review:</strong> SwiftCart customer care team in Kampala reviews claim alongside vendor dispatch records within 24 working hours.</li>
+<li><strong className="text-on-surface">Resolution &amp; Refund:</strong> If the claim is verified, a return pickup is arranged and a full refund is processed via Pesapal to the buyer's original payment method.</li>
 </ol>
 </div>
 </div>
@@ -327,20 +327,20 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-4 border-b border-surface-variant/30">
 <div className="flex items-center gap-3">
 <span className="w-8 h-8 rounded-lg bg-error/10 text-error font-currency-code text-currency-code flex items-center justify-center">06</span>
-<h2 className="font-headline-md text-headline-md text-on-surface">Merchant Obligations &amp; Counterfeit Zero-Tolerance</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface">Merchant Obligations &amp; Prohibited Items</h2>
 </div>
 <span className="px-2.5 py-1 rounded bg-error-container/20 font-label-sm text-label-sm text-error">Strict Sanctions</span>
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              Every vendor operating on SwiftCart undergoes National Identification and Registration Authority (NIRA) verification and physical trading license registry check with URSB.
+              Every vendor operating on SwiftCart undergoes identity verification and proof of commercial shop location in Uganda.
             </p>
 <div className="p-5 rounded-xl bg-surface-container flex items-start gap-4">
 <Icon name="gavel" className="text-[28px] text-error flex-shrink-0" />
 <div className="space-y-1">
-<h4 className="font-label-lg text-label-lg text-on-surface">Automatic Account Seizure &amp; Criminal Referral</h4>
+<h4 className="font-label-lg text-label-lg text-on-surface">Prohibited Items &amp; Account Suspension</h4>
 <p className="font-body-md text-body-md text-on-surface-variant">
-                  Supplying cloned electronics, expired food items from central markets, or grey-market uncertified pharmaceutical products will result in permanent vendor blacklist, pending clearance confiscation for consumer restitution, and immediate reporting to the Uganda Police Special Investigations Directorate (SID).
+                  Supplying cloned electronics, expired food items, uncertified pharmaceuticals, firearms, or hazardous goods will result in permanent vendor suspension, forfeiture of pending balances for buyer refunds, and reporting to relevant Ugandan authorities.
                 </p>
 </div>
 </div>
@@ -350,30 +350,30 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="flex items-center justify-between pb-4 border-b border-surface-variant/30">
 <div className="flex items-center gap-3">
 <span className="w-8 h-8 rounded-lg bg-tertiary/10 text-tertiary font-currency-code text-currency-code flex items-center justify-center">07</span>
-<h2 className="font-headline-md text-headline-md text-on-surface">Data Privacy &amp; Uganda SwiftCart Privacy Policy 2019</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface">Limitation of Liability &amp; Legal Review Note</h2>
 </div>
-<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">NITA-UG Compliant</span>
+<span className="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Platform Scope</span>
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              SwiftCart operates in complete alignment with the SwiftCart Privacy Policy 2019 of Uganda and Data Protection Regulations 2021 administered by the Personal Data Protection Office (PDPO).
+              SwiftCart operates an online marketplace connecting independent buyers, sellers, and dispatch couriers.
             </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="p-4 rounded-xl bg-surface-container-low">
-<span className="font-label-lg text-label-lg text-on-surface block mb-1">Information We Collect</span>
+<span className="font-label-lg text-label-lg text-on-surface block mb-1">Liability Cap</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Contact numbers, physical delivery coordinates, device telemetry, order histories, and communications necessary strictly to fulfill SafeBoda dispatch routing and tax compliance.
+                  To the maximum extent permitted by Ugandan law, SwiftCart total liability for any order is strictly limited to the purchase price paid.
                 </p>
 </div>
 <div className="p-4 rounded-xl bg-surface-container-low">
-<span className="font-label-lg text-label-lg text-on-surface block mb-1">Your verified platform Data Rights</span>
+<span className="font-label-lg text-label-lg text-on-surface block mb-1">Pre-Launch Legal Notice</span>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Right of access, right to rectification, right to object to commercial profiling, and the right to have personal identifiers permanently expunged upon full loan or payment closure.
+                  These terms are draft provisions subject to formal legal review and approval by a qualified Ugandan commercial lawyer prior to live launch.
                 </p>
 </div>
 </div>
 <p className="text-body-md font-body-md text-on-surface-variant">
-              We never sell, rent, or lease consumer registry data to commercial third parties. Delivery drivers are provided only masked call proxy numbers and drop-off street names without personal ledger visibility.
+              SwiftCart is an online marketplace platform and does not hold banking or deposit-taking licenses. All electronic payments are processed through Pesapal.
             </p>
 </div>
 </section>
@@ -387,7 +387,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="mt-6 space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p>
-              For formal legal inquiries, subpoenas, consumer dispute review claims, or data protection officer notices:
+              For formal legal inquiries, commercial notices, or customer support:
             </p>
 <div className="p-5 rounded-xl bg-surface-container space-y-3">
 <div className="flex items-center gap-2">
@@ -400,11 +400,11 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 <div className="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
 <Icon name="mail" className="text-[18px] text-outline" />
-<span>legal-desk@swiftcart.ug / compliance@swiftcart.ug</span>
+<span>support@swiftcart.ug / legal@swiftcart.ug</span>
 </div>
 <div className="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
 <Icon name="phone" className="text-[18px] text-outline" />
-<span>Toll-Free Helpline: 0800 220 800 (Toll Free on MTN &amp; Airtel)</span>
+<span>Support Phone: +256 700 000 000 | Toll-Free: 0800 220 800</span>
 </div>
 </div>
 </div>

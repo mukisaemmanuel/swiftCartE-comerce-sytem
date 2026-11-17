@@ -37,7 +37,7 @@ export const AuditLogSwiftcartAdmin1: React.FC<AuditLogSwiftcartAdmin1Props> = (
         IMMUTABLE SECURITY AUDIT TRAIL • READ ONLY
       </p>
 <p className="font-body-sm text-body-sm text-surface-variant opacity-90 leading-tight mt-0.5">
-        Compliant with Uganda Data Protection &amp; Privacy Act 2019
+        Compliant with Customer Privacy Guidelines (Uganda)
       </p>
 </div>
 </div>

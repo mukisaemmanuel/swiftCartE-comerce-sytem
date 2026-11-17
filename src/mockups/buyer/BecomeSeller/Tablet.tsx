@@ -318,7 +318,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div className="mt-space-lg mb-space-md flex flex-wrap items-center justify-between gap-space-sm px-space-xs text-on-surface-variant">
 <div className="flex items-center gap-space-xs font-label-sm text-label-sm">
 <Icon name="lock" className="text-[16px] text-tertiary" />
-<span>256-bit SSL encrypted KYC storage compliant with Data Protection &amp; Privacy Act 2019 (Uganda)</span>
+<span>256-bit SSL encrypted KYC storage compliant with Customer Privacy Guidelines (Uganda)</span>
 </div>
 <div className="flex items-center gap-space-sm font-label-sm text-label-sm">
 <span>Application ID: <strong className="text-on-surface">SC-UG-2024-9142</strong></span>
