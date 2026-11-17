@@ -31,7 +31,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div className="flex items-center gap-8">
 <a className="flex items-center gap-3 group" href="#" onClick={() => alertToast('Action triggered')}>
-<img alt="SwiftCart Uganda" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" src={`${assetBase}/images/0904559101697798.webp`} />
+<img alt="SwiftCart Uganda" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" src={`${assetBase}/brand/swiftcart-logo-icon.png`} />
 </a>
 <div className="h-6 w-px bg-stone-200 hidden md:block"></div>
 <div className="hidden md:flex items-center gap-2 text-xs font-semibold text-stone-600 bg-orange-50/70 px-3 py-1.5 rounded-full border border-orange-200/50">
@@ -79,7 +79,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
 </div>
 
 <div className="inline-block bg-white rounded-2xl p-3 shadow-lg">
-<img alt="SwiftCart Uganda" className="h-10 w-auto object-contain" src={`${assetBase}/images/0904559101697798.webp`} />
+<img alt="SwiftCart Uganda" className="h-10 w-auto object-contain" src={`${assetBase}/brand/swiftcart-logo-icon.png`} />
 </div>
 
 <div className="space-y-2.5">

@@ -22,7 +22,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
   return (
     <div className="relative w-full overflow-x-hidden min-h-screen">
       
-      <div className="pl-64"><main className="relative pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-16">
+      <div className="w-full"><main className="relative pt-16 bg-surface min-h-screen"><div className="flex flex-col w-full pb-16">
 
 <div className="px-space-md sm:px-space-lg pt-space-md pb-space-lg flex flex-col gap-space-md">
 

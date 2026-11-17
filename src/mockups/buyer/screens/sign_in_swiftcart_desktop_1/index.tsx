@@ -26,7 +26,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
   <header className="w-full border-b border-surface-container-high bg-surface-container-lowest/90 backdrop-blur-md sticky top-0 z-50 px-6 py-3.5">
     <div className="max-w-7xl mx-auto flex items-center justify-between">
       <a href="#home" className="flex items-center gap-3" onClick={(e) => { e.preventDefault(); onNavigate?.('/account'); }}>
-        <img src={`${assetBase}/images/6ef56f7b9b3ddf40.webp`} alt="SwiftCart Uganda" className="h-9 w-auto object-contain" />
+        <img src={`${assetBase}/brand/swiftcart-logo-icon.png`} alt="SwiftCart Uganda" className="h-9 w-auto object-contain" />
         <span className="hidden sm:inline-block font-headline-sm text-[18px] font-bold text-primary tracking-tight border-l border-surface-container-high pl-3 text-on-surface-variant">Accounts</span>
       </a>
       <div className="flex items-center gap-6 text-body-sm text-on-surface-variant">
@@ -68,7 +68,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
           
           <div className="pt-2">
             <div className="bg-white/95 backdrop-blur-sm rounded-xl p-2.5 inline-block shadow-lg mb-3">
-              <img src={`${assetBase}/images/6ef56f7b9b3ddf40.webp`} alt="SwiftCart Uganda" className="h-8 w-auto object-contain" />
+              <img src={`${assetBase}/brand/swiftcart-logo-icon.png`} alt="SwiftCart Uganda" className="h-8 w-auto object-contain" />
             </div>
             <h1 className="font-headline-md text-[26px] md:text-[30px] font-bold text-white tracking-tight leading-tight">
               Welcome Back to Uganda's Premier Marketplace
@@ -360,7 +360,7 @@ export const Screen: React.FC<ScreenProps> = (props) => {
       
       <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
         <div className="flex items-center gap-2">
-          <img src={`${assetBase}/images/18a63b8793377535.webp`} alt="SwiftCart" className="h-6 w-auto brightness-0 invert opacity-80" />
+          <img src={`${assetBase}/brand/swiftcart-logo-icon-white.png`} alt="SwiftCart" className="h-6 w-auto brightness-0 invert opacity-80" />
           <span>© 2025 SwiftCart Uganda Ltd. All rights reserved. Kampala, Uganda.</span>
         </div>
         <div className="flex items-center gap-6">

@@ -33,7 +33,7 @@ export const SignInRegisterSwiftcartUganda: React.FC<SignInRegisterSwiftcartUgan
 </div>
 
 <div className="flex flex-col items-center text-center gap-space-xs mt-1">
-<div className="h-14 flex items-center justify-center"><img src="/brand/swiftcart-logo-icon.png" alt="SwiftCart" className="h-12 object-contain mx-auto" /></div>
+<div className="h-14 flex items-center justify-center"><img src={"/brand/swiftcart-logo-icon.png"} alt="SwiftCart" className="h-12 object-contain mx-auto" /></div>
 <p className="font-label-lg text-label-lg text-secondary tracking-wide uppercase">
         Uganda's Most Trusted Marketplace
       </p>

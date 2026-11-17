@@ -59,6 +59,10 @@ The automated pixelmatch fidelity audit tests screens at standard responsive tar
 - `users_roles_swiftcart_super_admin`: Stitch exported a 431x1600 canvas vs 390px mobile viewport.
 - `deliveries_swiftcart_rider`: Stitch exported a 473x1600 canvas vs 390px mobile viewport.
 
+## Stage M11 Logged Visual Oddities
+- **Buyer Home Hero Banner Headline Overlap**: On buyer desktop and tablet home (`/`, `/home-swiftcart-marketplace-2`), the headline text ("SoundCore Space One ANC") partially overlaps the headphone product image in the hero banner. This reproduces the original Stitch mockup (`home_marketplace_swiftcart_desktop_1` and `home_marketplace_swiftcart_desktop_2`) composition exactly, where the headline layer sits over the visual. Logged for future design refinement.
+
+
 
 
 

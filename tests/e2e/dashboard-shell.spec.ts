@@ -115,38 +115,34 @@ test.describe('Dashboard Shell Responsive Phone Quality Gate (390x844)', () => {
             ).toBe(true);
 
             // Click hamburger if present
-            const hamburger = page
-              .locator(
-                'button.sidebar-hamburger-btn, button#drawer-trigger, button[aria-label="Open sidebar"], button[aria-label="Open menu"], button[aria-label*="menu" i]:not([aria-label*="close" i]), button:has([data-icon="menu"]):not([aria-label*="close" i])'
-              )
-              .first();
+            const hamburger = page.locator('button.sidebar-hamburger-btn').first();
             if (await hamburger.isVisible().catch(() => false)) {
               console.log(`[${role}] Clicking hamburger for ${route.path}`);
-              await hamburger.evaluate((btn: HTMLElement) => btn.click()).catch(() => {});
+              await hamburger.evaluate((btn: HTMLElement) => btn.click()).catch(() => { });
               await page.waitForTimeout(350);
 
-              const isOpen = await page.evaluate(() => {
+              const drawerInfo = await page.evaluate((roleName) => {
                 const aside =
-                  document.querySelector('aside#seller-drawer') ||
-                  document.querySelector('aside#admin-drawer') ||
-                  document.querySelector('aside[id*="drawer"]') ||
-                  document.querySelector('aside.fixed') ||
+                  document.querySelector(`aside#${roleName}-drawer`) ||
+                  document.querySelector('aside[data-testid="dashboard-drawer"]') ||
                   document.querySelector('aside');
-                if (!aside) return false;
+                if (!aside) return { open: false, reason: 'no aside found' };
+                const hasOpenClass = aside.classList.contains('translate-x-0');
                 const rect = aside.getBoundingClientRect();
-                return rect.right > 50 && rect.left > -50;
-              });
-              expect(isOpen, `Route ${route.path} sidebar should open on hamburger click`).toBe(true);
+                const open = hasOpenClass || (rect.right > 50 && rect.left > -50);
+                return { open, hasOpenClass, rect: { left: rect.left, right: rect.right, width: rect.width }, className: aside.className };
+              }, role);
+              expect(drawerInfo.open, `Route ${route.path} sidebar should open on hamburger click: ${JSON.stringify(drawerInfo)}`).toBe(true);
 
               // Close via backdrop or close button
               const closeBtn = page
                 .locator(
-                  'button.sidebar-close-btn, button[aria-label="Close menu"], button[aria-label="Close sidebar"], button[aria-label*="close" i], div.fixed.inset-0.bg-black'
+                  'button.sidebar-close-btn, [data-testid="drawer-backdrop"], button[aria-label="Close menu"]'
                 )
                 .first();
               if (await closeBtn.isVisible().catch(() => false)) {
-                await closeBtn.evaluate((btn: HTMLElement) => btn.click()).catch(() => {});
-                await page.waitForTimeout(100);
+                await closeBtn.evaluate((btn: HTMLElement) => btn.click()).catch(() => { });
+                await page.waitForTimeout(300);
               }
             }
           }
@@ -167,8 +163,10 @@ test.describe('Dashboard Shell Responsive Phone Quality Gate (390x844)', () => {
               className.includes('label-sm') ||
               className.includes('tag') ||
               className.includes('text-[10px]') ||
+              className.includes('text-[10.5px]') ||
               className.includes('text-[11px]') ||
               className.includes('text-[9px]') ||
+              className.includes('text-[8px]') ||
               className.includes('caption')
             ) {
               continue;

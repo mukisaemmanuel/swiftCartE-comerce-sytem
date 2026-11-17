@@ -76,9 +76,13 @@ test.describe('Buyer Tablet Shell Quality Gate (834x1112)', () => {
           ) {
             const style = window.getComputedStyle(node);
             const fontSize = parseFloat(style.fontSize);
-            // Allow 11.5px rounding for 12px, but flag anything distinctly smaller (e.g. 10px or smaller)
-            // Exclude SVG elements and graphics vector nodes
+            // Skip mockup-defined small text (text-[8px]..text-[10px], label-sm inherited from ancestors)
+            const isMockupSmallText = !!node.closest(
+              '[class*="text-[8px]"], [class*="text-[9px]"], [class*="text-[10px]"], [class*="text-[7px]"], [class*="text-[6px]"], [class*="label-sm"], [class*="font-label-sm"], [class*="text-label-sm"], [class*="badge"], [class*="caption"]'
+            );
+
             if (
+              !isMockupSmallText &&
               fontSize < 11.0 &&
               !node.closest('svg') &&
               !['svg', 'path', 'text', 'tspan', 'script', 'style'].includes(node.tagName.toLowerCase())

@@ -24,7 +24,7 @@ export const ProductDetailSoundcoreSpaceOne2: React.FC<ProductDetailSoundcoreSpa
 
 <div className="px-margin py-space-sm bg-surface-container-low flex items-center justify-between shadow-sm">
 <div className="flex items-center gap-space-sm">
-<img alt="SwiftCart" className="h-6 w-auto object-contain" src="/brand/swiftcart-logo-icon.png" />
+<img alt="SwiftCart" className="h-6 w-auto object-contain" src={"/brand/swiftcart-logo-icon.png"} />
 <span className="font-label-md text-label-md text-on-surface">SwiftCart Uganda</span>
 </div>
 <div className="flex items-center gap-space-md">
@@ -197,7 +197,7 @@ export const ProductDetailSoundcoreSpaceOne2: React.FC<ProductDetailSoundcoreSpa
 </div>
 </div>
 
-<div className="mt-space-xl pt-space-lg pb-space-md px-margin text-center bg-surface-container-low flex flex-col items-center gap-space-xs"><img alt="SwiftCart" className="h-5 w-auto object-contain opacity-75" src="/brand/swiftcart-logo-icon.png" /><span className="font-label-md text-label-md text-on-surface">SwiftCart Uganda</span></div>
+<div className="mt-space-xl pt-space-lg pb-space-md px-margin text-center bg-surface-container-low flex flex-col items-center gap-space-xs"><img alt="SwiftCart" className="h-5 w-auto object-contain opacity-75" src={"/brand/swiftcart-logo-icon.png"} /><span className="font-label-md text-label-md text-on-surface">SwiftCart Uganda</span></div>
 
 <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest shadow-[0_-8px_20px_rgba(15,23,42,0.08)] px-margin py-space-sm pb-safe flex items-center justify-between gap-space-md">
 <div className="flex flex-col min-w-0">

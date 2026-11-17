@@ -92,6 +92,8 @@ for (const vp of viewports) {
         if (nextRoute) {
           console.log(`[${vp.name}-${role}] Navigating to second route: ${nextRoute}`);
           await page.goto(nextRoute, { waitUntil: 'networkidle' });
+          await page.waitForFunction(() => !document.body.innerText.includes('Loading SwiftCart Portal...'), { timeout: 8000 }).catch(() => {});
+          await page.waitForFunction(() => document.documentElement.getAttribute('data-theme') === 'light', { timeout: 5000 });
           const secondRouteTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
           expect(secondRouteTheme, `Theme should persist as light on ${nextRoute}`).toBe('light');
           const secondRouteBg = await page.evaluate(() => window.getComputedStyle(document.body).backgroundColor);

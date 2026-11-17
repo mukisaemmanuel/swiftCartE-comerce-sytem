@@ -27,7 +27,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
     <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div className="flex items-center gap-6">
         <a href="#" className="flex items-center gap-3.5 group" onClick={(e) => { e.preventDefault(); onNavigate?.('/cart'); }}>
-          <img src={`${assetBase}/images/ce3704038c05f2da.webp`} alt="SwiftCart Uganda" className="h-11 w-auto object-contain" />
+          <img src={`${assetBase}/brand/swiftcart-logo-icon.png`} alt="SwiftCart Uganda" className="h-11 w-auto object-contain" />
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
               <span className="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SwiftCart</span>
@@ -365,7 +365,7 @@ export const Desktop: React.FC<DesktopProps> = (props) => {
     
     <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#dfd9d3]/60">
       <div className="flex items-center gap-4">
-        <img src={`${assetBase}/images/6ef56f7b9b3ddf40.webp`} alt="SwiftCart Logo" className="h-7 w-auto brightness-0 invert opacity-80" />
+        <img src={`${assetBase}/brand/swiftcart-logo-icon.png`} alt="SwiftCart Logo" className="h-7 w-auto brightness-0 invert opacity-80" />
         <span>© 2025 SwiftCart Uganda Ltd. Pioneer Mall Building, Level 3, Kampala. All rights reserved.</span>
       </div>
       <div className="flex items-center gap-6">

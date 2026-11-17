@@ -106,7 +106,166 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full items-start">
 
-
+<aside className="lg:col-span-5 flex flex-col gap-space-md">
+  {/* Search & Filter Panel */}
+  <div className="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+    <div className="relative w-full flex items-center">
+      <Icon name="search" className="absolute left-3 text-on-surface-variant text-[20px]" />
+      <input
+        className="w-full bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md pl-10 pr-20 py-2.5 rounded-lg outline-none focus:ring-1 focus:ring-primary shadow-inner"
+        placeholder="Scan Barcode / Waybill / Phone 07..."
+        type="text"
+        defaultValue="#SC-9952"
+      />
+      <button className="absolute right-2 px-space-xs py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm flex items-center gap-1">
+        <Icon name="document_scanner" className="text-[14px]" />
+        <span>AUTO</span>
+      </button>
+    </div>
+    {/* Filter Chips */}
+    <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+      <button className="px-space-md py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm whitespace-nowrap shadow-sm">
+        All Ready (19)
+      </button>
+      <button className="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">
+        Arrived Today (12)
+      </button>
+      <button className="px-space-md py-1 rounded-full bg-surface-container text-amber-warning font-label-sm text-label-sm whitespace-nowrap">
+        Priority (&gt;24h) (5)
+      </button>
+      <button className="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap">
+        Staged Bay A (7)
+      </button>
+    </div>
+  </div>
+  {/* Parcel List Queue */}
+  <div className="flex flex-col gap-space-sm">
+    {/* CARD 1: Selected Active Item SC-9952 */}
+    <div className="bg-surface-container-high rounded-xl p-space-md flex flex-col gap-space-xs shadow-md relative overflow-hidden cursor-pointer">
+      <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container" />
+      <div className="flex items-center justify-between pl-1">
+        <div className="flex items-center gap-space-sm">
+          <span className="font-code-display text-[15px] font-bold text-primary tracking-wide">#SC-9952</span>
+          <span className="px-2 py-0.5 rounded bg-emerald-escrow/20 text-emerald-escrow font-label-sm text-label-sm flex items-center gap-1">
+            <Icon name="verified_user" className="text-[13px]" /> Escrow Guarded
+          </span>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase">Active Staging</span>
+      </div>
+      <div className="pl-1 flex flex-col gap-0.5 mt-0.5">
+        <div className="flex items-center justify-between">
+          <span className="font-headline-sm text-[16px] text-on-surface font-bold">Sarah Namubiru</span>
+          <span className="font-price-display text-[16px] text-tertiary">UGX 248,500</span>
+        </div>
+        <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+          <Icon name="headphones" className="text-[15px]" />
+          <span className="truncate">SoundCore Space One ANC • Jet Black</span>
+        </div>
+      </div>
+      <div className="pl-1 pt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/60 rounded p-1.5 mt-1">
+        <span className="flex items-center gap-1">
+          <Icon name="warehouse" className="text-primary text-[15px]" /> Shelf B4-02
+        </span>
+        <span className="flex items-center gap-1 text-emerald-escrow">
+          <Icon name="pin_drop" className="text-[15px]" /> Kololo / Acacia Mall Gate 2
+        </span>
+      </div>
+    </div>
+    {/* CARD 2: SC-9960 */}
+    <div className="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm transition-all cursor-pointer">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-space-sm">
+          <span className="font-code-display text-[15px] font-bold text-on-surface tracking-wide">#SC-9960</span>
+          <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Shelf A1-14</span>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm flex items-center gap-1 animate-pulse">
+          <Icon name="person_pin_circle" className="text-[13px]" /> Customer in Lobby
+        </span>
+      </div>
+      <div className="flex flex-col gap-0.5 mt-0.5">
+        <div className="flex items-center justify-between">
+          <span className="font-headline-sm text-[15px] text-on-surface">David Opio</span>
+          <span className="font-price-display text-[15px] text-on-surface">UGX 115,000</span>
+        </div>
+        <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+          <Icon name="bolt" className="text-[15px]" />
+          <span className="truncate">Anker 65W GaN Rapid Charger</span>
+        </div>
+      </div>
+      <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+        <span>Arrived: 10:40 EAT</span>
+        <span className="text-primary font-semibold">Ready for Verify</span>
+      </div>
+    </div>
+    {/* CARD 3: SC-9964 */}
+    <div className="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm transition-all cursor-pointer">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-space-sm">
+          <span className="font-code-display text-[15px] font-bold text-on-surface tracking-wide">#SC-9964</span>
+          <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Shelf C2-09</span>
+        </div>
+        <span className="font-label-sm text-label-sm text-on-surface-variant">Arrived 11:15 EAT</span>
+      </div>
+      <div className="flex flex-col gap-0.5 mt-0.5">
+        <div className="flex items-center justify-between">
+          <span className="font-headline-sm text-[15px] text-on-surface">Brenda N.</span>
+          <span className="font-price-display text-[15px] text-on-surface">UGX 145,000</span>
+        </div>
+        <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+          <Icon name="headset_mic" className="text-[15px]" />
+          <span className="truncate">Oraimo FreePods 4 Noise-Cancel</span>
+        </div>
+      </div>
+      <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+        <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow" /> Escrow Locked</span>
+        <span className="text-on-surface-variant">Awaiting Caller Arrival</span>
+      </div>
+    </div>
+    {/* CARD 4: SC-9971 High Value */}
+    <div className="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm transition-all cursor-pointer">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-space-sm">
+          <span className="font-code-display text-[15px] font-bold text-amber-warning tracking-wide">#SC-9971</span>
+          <span className="px-2 py-0.5 rounded bg-amber-warning/20 text-amber-warning font-label-sm text-label-sm flex items-center gap-1">
+            <Icon name="shield" className="text-[13px]" /> Safe H-01
+          </span>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-danger-penalty/20 text-danger-penalty font-label-sm text-label-sm font-bold uppercase">
+          High Priority Escrow
+        </span>
+      </div>
+      <div className="flex flex-col gap-0.5 mt-0.5">
+        <div className="flex items-center justify-between">
+          <span className="font-headline-sm text-[15px] text-on-surface">Ronald Kato</span>
+          <span className="font-price-display text-[15px] text-tertiary">UGX 1,800,000</span>
+        </div>
+        <div className="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+          <Icon name="tablet_mac" className="text-[15px]" />
+          <span className="truncate">Apple iPad Pro 11&quot; M4 (Space Grey)</span>
+        </div>
+      </div>
+      <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+        <span className="text-on-surface-variant flex items-center gap-1">
+          <Icon name="lock" className="text-[14px]" /> Dual-Auth Required
+        </span>
+        <span className="text-amber-warning font-semibold">Vault Keeper Staged</span>
+      </div>
+    </div>
+  </div>
+  {/* Inbound Manifest Dispatch Summary Card */}
+  <div className="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+    <div className="flex items-center gap-space-sm">
+      <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+        <Icon name="hub" className="text-[22px]" />
+      </div>
+      <div className="flex flex-col">
+        <span className="font-label-md text-label-md text-on-surface">SafeBoda Linehaul Hub Run #72</span>
+        <span className="font-body-sm text-body-sm text-on-surface-variant">Last offload: 09:15 EAT • 28 parcels accepted</span>
+      </div>
+    </div>
+    <Icon name="chevron_right" className="text-on-surface-variant" />
+  </div>
+</aside>
 
 <section className="lg:col-span-7 flex flex-col gap-space-md">
 

@@ -381,8 +381,8 @@ export const ROUTE_HEADING_MAP: Record<string, string> = {
   '/seller/seller-wallet-payouts': 'Wallet & Payouts',
 
   // Admin
-  '/admin/overview-admin': 'Admin Command Overview',
-  '/admin': 'Admin Command Overview',
+  '/admin/overview-admin': 'Escrow Ledger',
+  '/admin': 'Escrow Ledger',
   '/admin/admin-order-detail-oversight': 'Order Oversight Detail',
   '/admin/audit-log-admin-1': 'Audit Log',
   '/admin/audit-log-admin-2': 'Security Ledger',
@@ -492,7 +492,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
       >
         <div className="h-16 px-4 lg:px-6 flex items-center justify-between gap-2 lg:gap-4 w-full">
           {/* Left: Mobile/Tablet Hamburger & Title (Hidden on desktop where sidebar provides branding) */}
-          <div className="lg:hidden flex items-center gap-2 min-w-0 shrink-0 max-w-[260px] md:max-w-xs">
+          <div className="lg:hidden flex items-center gap-2 min-w-0 flex-1 pr-2">
             {navConfig.hasDrawer && (
               <button
                 type="button"
@@ -518,7 +518,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
                   {navConfig.subtitle}
                 </span>
               </div>
-              <h1 className="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight truncate whitespace-nowrap">
+              <h1 className="font-headline-sm text-[16px] sm:text-headline-sm text-on-surface leading-tight tracking-tight truncate">
                 {displayHeading}
               </h1>
             </div>
@@ -589,10 +589,21 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
               ))}
             </div>
 
+            {/* Sync / Refresh Action Button (from mobile/tablet mockups) */}
+            <button
+              type="button"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 transition-all active:scale-95 shrink-0"
+              aria-label="Sync status"
+              title="Sync Status"
+              onClick={() => {}}
+            >
+              <Icon name="sync_alt" className="text-[18px]" />
+            </button>
+
             {/* Exactly ONE theme toggle in the header: ALWAYS visible across mobile, tablet, and desktop */}
             <button
               type="button"
-              className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 transition-all active:scale-95"
+              className="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-surface-container-highest/50 transition-all active:scale-95 shrink-0"
               aria-label="Toggle Theme"
               title="Toggle Theme"
               onClick={() => toggleTheme()}
@@ -660,6 +671,7 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
             className={`fixed top-0 bottom-0 left-0 z-50 w-[310px] max-w-[85vw] flex flex-col pt-safe pb-safe shadow-2xl transition-transform duration-300 ease-in-out ${
               isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
             } ${theme === 'dark' ? 'bg-[#0d1225] border-r border-[#2f3448]/60 text-slate-100' : 'bg-white border-r border-slate-200 text-slate-900'}`}
+            id={`${role}-drawer`}
             data-testid="dashboard-drawer"
             aria-label={`${navConfig.title} navigation`}
           >
@@ -715,11 +727,15 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
 
                     {item.badge !== undefined && (
                       <span
-                        className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                        className={`px-2 py-0.5 rounded-full text-[11px] font-bold flex items-center justify-center ${
                           isActive ? 'bg-white/20 text-white' : 'bg-primary-container/20 text-primary-container'
                         }`}
                       >
-                        {item.badge}
+                        {typeof item.badge === 'string' && (item.badge === 'check_circle' || item.badge.includes('_')) ? (
+                          <Icon name={item.badge} className="text-[14px]" />
+                        ) : (
+                          item.badge
+                        )}
                       </span>
                     )}
                   </a>
@@ -839,11 +855,15 @@ export const RoleDashboardShell: React.FC<RoleDashboardShellProps> = ({
 
                 {item.badge !== undefined && (
                   <span
-                    className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                    className={`px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center justify-center ${
                       isActive ? 'bg-white/20 text-white' : 'bg-primary-container/20 text-primary-container'
                     }`}
                   >
-                    {item.badge}
+                    {typeof item.badge === 'string' && (item.badge === 'check_circle' || item.badge.includes('_')) ? (
+                      <Icon name={item.badge} className="text-[13px]" />
+                    ) : (
+                      item.badge
+                    )}
                   </span>
                 )}
               </a>
