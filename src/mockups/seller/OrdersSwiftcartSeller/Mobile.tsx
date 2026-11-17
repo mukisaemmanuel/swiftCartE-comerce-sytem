@@ -135,7 +135,7 @@ export const OrdersSwiftcartSeller: React.FC<OrdersSwiftcartSellerProps> = (prop
 <div className="flex flex-col min-w-0">
 <span className="font-label-lg text-label-lg font-bold text-on-surface truncate">Ronald K.</span>
 <div className="flex items-center gap-1 text-secondary font-body-sm text-body-sm truncate">
-<span className="material-outlined text-[15px] shrink-0 text-secondary">location_on</span>
+<Icon name="location_on" className="text-[15px] shrink-0 text-secondary" />
 <span className="truncate">Nakawa Division, Kampala</span>
 </div>
 </div>
