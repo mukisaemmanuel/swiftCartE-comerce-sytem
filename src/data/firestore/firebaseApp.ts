@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth, connectAuthEmulator } from 'firebase/auth';
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore/lite';
 import { getStorage, connectStorageEmulator } from 'firebase/storage';
 
 const firebaseConfig = {
@@ -17,17 +17,20 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 
+function hasInternalFlag(target: object, key: string): boolean {
+  return Boolean((target as unknown as Record<string, unknown>)[key]);
+}
+
 // In development or if emulator enabled, connect to local emulators
 if (typeof window !== 'undefined' && (import.meta.env.DEV || import.meta.env.VITE_USE_EMULATOR === 'true')) {
   try {
-    // Only connect once
-    if (!(auth as any)._emulatorConfig) {
+    if (!hasInternalFlag(auth, '_emulatorConfig')) {
       connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true });
     }
-    if (!(db as any)._settingsFrozen) {
+    if (!hasInternalFlag(db, '_settingsFrozen')) {
       connectFirestoreEmulator(db, 'localhost', 8080);
     }
-    if (!(storage as any)._emulatorConfig) {
+    if (!hasInternalFlag(storage, '_emulatorConfig')) {
       connectStorageEmulator(storage, 'localhost', 9199);
     }
   } catch {

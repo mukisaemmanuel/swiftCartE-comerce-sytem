@@ -7,7 +7,7 @@ export function maskPhoneNumber(phone?: string): string {
   return `${prefix}*****${suffix}`;
 }
 
-export function sanitizeLogData(data: any): any {
+export function sanitizeLogData(data: unknown): unknown {
   if (data === null || data === undefined) return data;
   if (typeof data !== 'object') return data;
 
@@ -15,8 +15,9 @@ export function sanitizeLogData(data: any): any {
     return data.map(sanitizeLogData);
   }
 
-  const sanitized: Record<string, any> = {};
+  const sanitized: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(data)) {
+    if (value === undefined) continue;
     const lowerKey = key.toLowerCase();
     if (
       lowerKey.includes('authorization') ||
@@ -48,7 +49,7 @@ export function sanitizeLogData(data: any): any {
 }
 
 export const logger = {
-  info(message: string, context?: Record<string, any>) {
+  info(message: string, context?: Record<string, unknown>) {
     const entry = {
       timestamp: new Date().toISOString(),
       level: 'INFO',
@@ -58,7 +59,7 @@ export const logger = {
     console.log(JSON.stringify(entry));
   },
 
-  warn(message: string, context?: Record<string, any>) {
+  warn(message: string, context?: Record<string, unknown>) {
     const entry = {
       timestamp: new Date().toISOString(),
       level: 'WARN',
@@ -68,12 +69,18 @@ export const logger = {
     console.warn(JSON.stringify(entry));
   },
 
-  error(message: string, error?: any, context?: Record<string, any>) {
+  error(message: string, error?: unknown, context?: Record<string, unknown>) {
+    const errDetails =
+      error instanceof Error
+        ? { error: error.message, stack: error.stack }
+        : error !== undefined
+          ? { error: String(error) }
+          : {};
     const entry = {
       timestamp: new Date().toISOString(),
       level: 'ERROR',
       message,
-      ...(error ? { error: error?.message || String(error), stack: error?.stack } : {}),
+      ...errDetails,
       ...(context ? { context: sanitizeLogData(context) } : {}),
     };
     console.error(JSON.stringify(entry));

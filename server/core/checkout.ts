@@ -34,6 +34,29 @@ export const checkoutSchema = z.object({
 
 export type CheckoutInput = z.infer<typeof checkoutSchema>;
 
+interface FirestoreProductRecord {
+  id: string;
+  title?: string;
+  status?: string;
+  stock?: number;
+  price?: number;
+  sellerId?: string;
+  sellerName?: string;
+  image?: string;
+  images?: string[];
+}
+
+interface ValidatedOrderItem {
+  productId: string;
+  title: string;
+  sellerId: string;
+  sellerName: string;
+  price: number;
+  quantity: number;
+  total: number;
+  image: string | null;
+}
+
 export async function handleCheckout(req: Request, res: Response, next: NextFunction) {
   try {
     if (!req.user) {
@@ -66,47 +89,50 @@ export async function handleCheckout(req: Request, res: Response, next: NextFunc
     const productIds = Array.from(new Set(items.map((i) => i.productId)));
     const productDocs = await Promise.all(productIds.map((pid) => dbAdmin.collection('products').doc(pid).get()));
 
-    const productMap = new Map<string, any>();
+    const productMap = new Map<string, FirestoreProductRecord>();
     for (const pDoc of productDocs) {
       if (!pDoc.exists) {
         return next(AppError.notFound(`Product with ID "${pDoc.id}" no longer exists`));
       }
-      productMap.set(pDoc.id, { id: pDoc.id, ...pDoc.data() });
+      productMap.set(pDoc.id, { id: pDoc.id, ...(pDoc.data() as Omit<FirestoreProductRecord, 'id'>) });
     }
 
     // 3. Re-calculate order items and partition by seller
     let subtotalUGX = 0;
-    const validatedItems: any[] = [];
-    const sellerSubOrderMap = new Map<string, any[]>();
+    const validatedItems: ValidatedOrderItem[] = [];
+    const sellerSubOrderMap = new Map<string, ValidatedOrderItem[]>();
 
     for (const item of items) {
       const prod = productMap.get(item.productId);
+      if (!prod) {
+        return next(AppError.notFound(`Product with ID "${item.productId}" not found`));
+      }
       const statusUpper = String(prod.status || '').toUpperCase();
       if (statusUpper !== 'APPROVED' && statusUpper !== 'ACTIVE') {
-        return next(AppError.badRequest(`Product "${prod.title}" is currently unavailable for purchase`));
+        return next(AppError.badRequest(`Product "${prod.title || item.productId}" is currently unavailable for purchase`));
       }
 
       if (typeof prod.stock === 'number' && prod.stock < item.quantity) {
-        return next(AppError.badRequest(`Insufficient stock for "${prod.title}". Only ${prod.stock} available.`));
+        return next(AppError.badRequest(`Insufficient stock for "${prod.title || item.productId}". Only ${prod.stock} available.`));
       }
 
-      const unitPrice = Number(prod.price || 0);
-      if (unitPrice <= 0) {
-        return next(AppError.badRequest(`Product "${prod.title}" has invalid price configuration`));
+      const unitPrice = Math.round(Number(prod.price || 0));
+      if (!Number.isInteger(unitPrice) || unitPrice <= 0) {
+        return next(AppError.badRequest(`Product "${prod.title || item.productId}" has invalid price configuration`));
       }
 
       const lineTotal = unitPrice * item.quantity;
       subtotalUGX += lineTotal;
 
-      const itemRecord = {
+      const itemRecord: ValidatedOrderItem = {
         productId: prod.id,
-        title: prod.title,
+        title: prod.title || 'SwiftCart Product',
         sellerId: prod.sellerId || 'seller_default',
         sellerName: prod.sellerName || 'Verified Seller',
         price: unitPrice,
         quantity: item.quantity,
         total: lineTotal,
-        image: prod.image || (Array.isArray(prod.images) ? prod.images[0] : null),
+        image: prod.image || (Array.isArray(prod.images) ? prod.images[0] : null) || null,
       };
 
       validatedItems.push(itemRecord);
@@ -119,7 +145,7 @@ export async function handleCheckout(req: Request, res: Response, next: NextFunc
     // 4. Calculate Delivery Fees based on delivery type
     // Flat delivery fee: Doorstep in Kampala: UGX 5,000; Pickup station: UGX 2,500
     const deliveryFeeUGX = deliveryType === 'PICKUP_STATION' ? 2500 : 5000;
-    const totalUGX = subtotalUGX + deliveryFeeUGX;
+    const totalUGX = Math.round(subtotalUGX + deliveryFeeUGX);
 
     const orderRef = dbAdmin.collection('orders').doc();
     const orderId = orderRef.id;
@@ -144,9 +170,11 @@ export async function handleCheckout(req: Request, res: Response, next: NextFunc
     });
 
     // 6. Create Order Document and Sub-Orders
+    const primarySellerId = validatedItems[0]?.sellerId || 'seller_default';
     const orderData = {
       id: orderId,
       buyerId,
+      sellerId: primarySellerId,
       buyerName: deliveryAddress.recipientName,
       buyerPhone: deliveryAddress.phone,
       items: validatedItems,
@@ -204,7 +232,7 @@ export async function handleCheckout(req: Request, res: Response, next: NextFunc
       });
     }
 
-    // Save Payment Record
+    // Save Payment Record & Tracking Index Document
     const paymentRef = dbAdmin.collection('payments').doc(`pay_${orderId}`);
     batch.set(paymentRef, {
       id: `pay_${orderId}`,
@@ -217,6 +245,16 @@ export async function handleCheckout(req: Request, res: Response, next: NextFunc
       status: PAYMENT_STATUS.PENDING,
       createdAt: nowIso,
       updatedAt: nowIso,
+    });
+
+    const trackingIndexRef = dbAdmin.collection('paymentTracking').doc(pesapalRes.orderTrackingId);
+    batch.set(trackingIndexRef, {
+      orderTrackingId: pesapalRes.orderTrackingId,
+      orderId,
+      buyerId,
+      totalUGX,
+      currency: 'UGX',
+      createdAt: nowIso,
     });
 
     await batch.commit();

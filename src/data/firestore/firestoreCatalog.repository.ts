@@ -7,7 +7,7 @@ import {
   where,
   addDoc,
   serverTimestamp,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db } from './firebaseApp';
 import type { Product, Category, Seller, Review } from '../../domain/types';
 import type { CatalogRepository, ProductFilters } from '../catalog.repository';

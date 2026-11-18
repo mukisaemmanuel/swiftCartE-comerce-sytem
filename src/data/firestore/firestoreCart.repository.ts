@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore/lite';
 import { db, auth } from './firebaseApp';
 import type { Cart, CartItem, Voucher } from '../../domain/types';
 import type { CartRepository } from '../cart.repository';

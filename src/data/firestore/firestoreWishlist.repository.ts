@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore/lite';
 import { db, auth } from './firebaseApp';
 import type { Product, Seller } from '../../domain/types';
 import type { WishlistRepository } from '../wishlist.repository';

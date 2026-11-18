@@ -47,9 +47,11 @@ describe('Server State Machines Unit Tests', () => {
 
       try {
         assertTransition(ORDER_STATUS_TRANSITIONS, ORDER_STATUS.CANCELLED, ORDER_STATUS.PAID, 'Order');
-      } catch (err: any) {
-        expect(err.code).toBe('STATE_TRANSITION_INVALID');
-        expect(err.statusCode).toBe(400);
+      } catch (err: unknown) {
+        expect(err).toBeInstanceOf(AppError);
+        const appErr = err as AppError;
+        expect(appErr.code).toBe('STATE_TRANSITION_INVALID');
+        expect(appErr.statusCode).toBe(400);
       }
     });
   });

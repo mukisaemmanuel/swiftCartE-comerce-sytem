@@ -7,7 +7,7 @@ import {
   updateDoc,
   query,
   where,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db, auth } from './firebaseApp';
 import type {
   Address,

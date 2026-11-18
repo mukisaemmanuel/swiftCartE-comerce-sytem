@@ -7,7 +7,7 @@ export interface NotificationPayload {
   body: string;
   type?: 'ORDER' | 'PAYMENT' | 'DELIVERY' | 'RETURN' | 'PAYOUT' | 'SYSTEM';
   link?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export interface NotificationProvider {

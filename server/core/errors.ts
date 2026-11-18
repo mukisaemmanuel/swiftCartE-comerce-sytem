@@ -75,7 +75,7 @@ export class AppError extends Error {
 }
 
 export function errorHandler(
-  err: any,
+  err: unknown,
   _req: Request,
   res: Response,
   _next: NextFunction
@@ -113,9 +113,21 @@ export function errorHandler(
     });
   }
 
-  const statusCode = typeof err.statusCode === 'number' ? err.statusCode : 500;
-  const message = statusCode < 500 ? (err.message || 'Client error') : 'Internal server error';
-  const code = err.code || (statusCode === 404 ? 'NOT_FOUND' : 'INTERNAL');
+  const errObj =
+    typeof err === 'object' && err !== null ? (err as { statusCode?: unknown; code?: unknown; message?: unknown }) : {};
+  const statusCode = typeof errObj.statusCode === 'number' ? errObj.statusCode : 500;
+  const message =
+    statusCode < 500
+      ? typeof errObj.message === 'string' && errObj.message
+        ? errObj.message
+        : 'Client error'
+      : 'Internal server error';
+  const code =
+    typeof errObj.code === 'string' && errObj.code
+      ? errObj.code
+      : statusCode === 404
+        ? 'NOT_FOUND'
+        : 'INTERNAL';
 
   if (statusCode >= 500) {
     console.error('[UnhandledError]', err);

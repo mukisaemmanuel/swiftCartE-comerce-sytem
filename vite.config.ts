@@ -69,8 +69,17 @@ export default defineConfig({
           if (id.includes('icons-data-2')) {
             return 'icons-2';
           }
-          if (id.includes('node_modules/firebase')) {
-            return 'firebase';
+          if (id.includes('@firebase/auth') || id.includes('firebase/auth')) {
+            return 'firebase-auth';
+          }
+          if (id.includes('@firebase/firestore') || id.includes('firebase/firestore')) {
+            return 'firebase-firestore';
+          }
+          if (id.includes('@firebase/storage') || id.includes('firebase/storage')) {
+            return 'firebase-storage';
+          }
+          if (id.includes('node_modules/firebase') || id.includes('node_modules/@firebase')) {
+            return 'firebase-core';
           }
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react-vendor';

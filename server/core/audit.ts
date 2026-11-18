@@ -7,9 +7,9 @@ export interface AuditLogEntry {
   action: string;
   targetId?: string;
   targetType?: string;
-  before?: Record<string, any> | null;
-  after?: Record<string, any> | null;
-  metadata?: Record<string, any> | null;
+  before?: Record<string, unknown> | null;
+  after?: Record<string, unknown> | null;
+  metadata?: Record<string, unknown> | null;
   ipAddress?: string;
   timestamp?: string;
 }

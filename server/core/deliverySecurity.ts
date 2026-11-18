@@ -85,7 +85,7 @@ export async function verifyDeliveryCode(
 
   const deliveryRef = dbAdmin.collection('deliveries').doc(deliveryId);
 
-  return await dbAdmin.runTransaction(async (transaction) => {
+  const txResult = await dbAdmin.runTransaction(async (transaction) => {
     const secretDoc = await transaction.get(secretRef);
     if (!secretDoc.exists) {
       throw AppError.notFound('Delivery code security record not found');
@@ -98,6 +98,12 @@ export async function verifyDeliveryCode(
     }
     const delivery = deliveryDoc.data()!;
 
+    const holdsSnap = delivery.orderId
+      ? await transaction.get(
+          dbAdmin.collection('payoutHolds').where('orderId', '==', delivery.orderId)
+        )
+      : null;
+
     // 1. Replay check
     if (secret.isUsed || delivery.status === DISPATCH_STATUS.DELIVERED) {
       throw AppError.badRequest('Delivery has already been confirmed. Code cannot be reused.', 'ALREADY_EXISTS');
@@ -105,9 +111,10 @@ export async function verifyDeliveryCode(
 
     // 2. Lockout check
     if (secret.attemptCount >= secret.maxAttempts || delivery.status === DISPATCH_STATUS.LOCKED) {
-      throw AppError.badRequest(
-        'Delivery code is locked due to too many failed attempts. Contact admin to unlock or reissue.',
-        'OTP_LOCKED'
+      throw new AppError(
+        423,
+        'OTP_LOCKED',
+        'Delivery code is locked due to too many failed attempts. Contact admin to unlock or reissue.'
       );
     }
 
@@ -122,17 +129,19 @@ export async function verifyDeliveryCode(
     if (!isValid) {
       const newAttemptCount = secret.attemptCount + 1;
       const isNowLocked = newAttemptCount >= secret.maxAttempts;
+      const nowIso = new Date().toISOString();
 
       transaction.update(secretRef, {
         attemptCount: newAttemptCount,
-        updatedAt: new Date().toISOString(),
+        updatedAt: nowIso,
       });
 
       if (isNowLocked) {
         transaction.update(deliveryRef, {
           status: DISPATCH_STATUS.LOCKED,
           lockReason: 'EXCEEDED_CODE_ATTEMPTS',
-          lockedAt: new Date().toISOString(),
+          lockedAt: nowIso,
+          updatedAt: nowIso,
         });
 
         // Mirror status to orders if orderId linked
@@ -140,34 +149,17 @@ export async function verifyDeliveryCode(
           const orderRef = dbAdmin.collection('orders').doc(delivery.orderId);
           transaction.update(orderRef, {
             dispatchStatus: DISPATCH_STATUS.LOCKED,
-            updatedAt: new Date().toISOString(),
+            updatedAt: nowIso,
           });
         }
       }
 
-      await logAuditEvent({
-        actorUid,
-        actorRole: 'RIDER',
-        action: isNowLocked ? 'DELIVERY_CODE_LOCKED' : 'DELIVERY_CODE_FAILED_ATTEMPT',
-        targetId: deliveryId,
-        targetType: 'DELIVERY',
-        metadata: {
-          attemptCount: newAttemptCount,
-          maxAttempts: secret.maxAttempts,
-          isLocked: isNowLocked,
-        },
-      });
-
-      if (isNowLocked) {
-        throw AppError.badRequest('Delivery code locked after 5 failed attempts.', 'OTP_LOCKED');
-      }
-
-      const remainingAttempts = secret.maxAttempts - newAttemptCount;
-      throw AppError.badRequest(
-        `Invalid 6-digit delivery code. ${remainingAttempts} attempts remaining.`,
-        'OTP_INVALID',
-        { remainingAttempts }
-      );
+      return {
+        ok: false as const,
+        attemptCount: newAttemptCount,
+        maxAttempts: secret.maxAttempts,
+        isNowLocked,
+      };
     }
 
     // SUCCESS: Mark used, set status to DELIVERED, start return window
@@ -191,14 +183,23 @@ export async function verifyDeliveryCode(
       const orderRef = dbAdmin.collection('orders').doc(delivery.orderId);
       transaction.update(orderRef, {
         status: ORDER_STATUS.DELIVERED,
+        dispatchStatus: DISPATCH_STATUS.DELIVERED,
         deliveredAt: nowIso,
         returnWindowDays,
         returnWindowEndsAt,
         updatedAt: nowIso,
       });
 
-      // Update payout hold due date: returnWindowEndsAt
-      if (delivery.sellerId) {
+      // Update payout hold due date: returnWindowEndsAt on all holds for this order
+      if (holdsSnap && !holdsSnap.empty) {
+        for (const hDoc of holdsSnap.docs) {
+          transaction.update(hDoc.ref, {
+            holdReleaseDueAt: returnWindowEndsAt,
+            deliveredAt: nowIso,
+            updatedAt: nowIso,
+          });
+        }
+      } else if (delivery.sellerId) {
         const holdRef = dbAdmin.collection('payoutHolds').doc(`hold_${delivery.orderId}`);
         transaction.set(
           holdRef,
@@ -215,17 +216,49 @@ export async function verifyDeliveryCode(
       }
     }
 
+    return {
+      ok: true as const,
+      orderId: delivery.orderId as string | undefined,
+      returnWindowEndsAt,
+    };
+  });
+
+  if (!txResult.ok) {
     await logAuditEvent({
       actorUid,
       actorRole: 'RIDER',
-      action: 'DELIVERY_CONFIRMED_VIA_CODE',
+      action: txResult.isNowLocked ? 'DELIVERY_CODE_LOCKED' : 'DELIVERY_CODE_FAILED_ATTEMPT',
       targetId: deliveryId,
       targetType: 'DELIVERY',
-      metadata: { orderId: delivery.orderId, returnWindowEndsAt },
+      metadata: {
+        attemptCount: txResult.attemptCount,
+        maxAttempts: txResult.maxAttempts,
+        isLocked: txResult.isNowLocked,
+      },
     });
 
-    return { success: true };
+    if (txResult.isNowLocked) {
+      throw new AppError(423, 'OTP_LOCKED', 'Delivery code locked after 5 failed attempts.');
+    }
+
+    const remainingAttempts = txResult.maxAttempts - txResult.attemptCount;
+    throw AppError.badRequest(
+      `Invalid 6-digit delivery code. ${remainingAttempts} attempts remaining.`,
+      'OTP_INVALID',
+      { remainingAttempts }
+    );
+  }
+
+  await logAuditEvent({
+    actorUid,
+    actorRole: 'RIDER',
+    action: 'DELIVERY_CONFIRMED_VIA_CODE',
+    targetId: deliveryId,
+    targetType: 'DELIVERY',
+    metadata: { orderId: txResult.orderId, returnWindowEndsAt: txResult.returnWindowEndsAt },
   });
+
+  return { success: true };
 }
 
 /**

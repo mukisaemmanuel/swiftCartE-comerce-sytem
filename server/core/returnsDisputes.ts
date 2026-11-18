@@ -131,7 +131,7 @@ export async function handleReviewReturn(req: Request, res: Response, next: Next
       return next(AppError.unauthorized('Authentication required'));
     }
 
-    const { returnId } = req.params;
+    const returnId = String(req.params.returnId);
     const { action, notes } = req.body;
 
     const returnDoc = await dbAdmin.collection('returns').doc(returnId).get();

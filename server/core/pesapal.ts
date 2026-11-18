@@ -54,6 +54,41 @@ export interface PesapalRefundResult {
   message: string;
 }
 
+interface PesapalAuthApiResponse {
+  token?: string;
+  expiryDate?: string;
+}
+
+interface PesapalIpnApiResponse {
+  ipn_id?: string;
+  ipnId?: string;
+  url?: string;
+}
+
+interface PesapalSubmitOrderApiResponse {
+  order_tracking_id?: string;
+  merchant_reference?: string;
+  redirect_url?: string;
+  status?: string | number;
+}
+
+interface PesapalTransactionStatusApiResponse {
+  payment_method?: string;
+  amount?: number | string;
+  currency?: string;
+  status_code?: number | string;
+  payment_status_description?: string;
+  confirmation_code?: string;
+  payment_account?: string;
+  merchant_reference?: string;
+  message?: string;
+}
+
+interface PesapalRefundApiResponse {
+  status?: string | number;
+  message?: string;
+}
+
 export class PesapalClient {
   private config: PesapalConfig;
   private cachedToken: { token: string; expiresAt: number } | null = null;
@@ -118,7 +153,7 @@ export class PesapalClient {
         throw AppError.internal(`Pesapal authentication failed: status ${response.status}`);
       }
 
-      const data = (await response.json()) as any;
+      const data = (await response.json()) as PesapalAuthApiResponse;
       if (!data.token) {
         throw AppError.internal('Pesapal auth returned response without token');
       }
@@ -130,7 +165,7 @@ export class PesapalClient {
       };
 
       return data.token;
-    } catch (err: any) {
+    } catch (err: unknown) {
       if (err instanceof AppError) throw err;
       logger.error('[Pesapal] Network error during authentication', err);
       throw AppError.unavailable('Pesapal service currently unreachable');
@@ -163,7 +198,7 @@ export class PesapalClient {
       throw AppError.internal(`Failed to register IPN with Pesapal: status ${response.status}`);
     }
 
-    const data = (await response.json()) as any;
+    const data = (await response.json()) as PesapalIpnApiResponse;
     const ipnId = data.ipn_id || data.ipnId;
     if (!ipnId) {
       throw AppError.internal('Pesapal IPN registration response did not contain ipn_id');
@@ -214,7 +249,7 @@ export class PesapalClient {
         throw AppError.badRequest(`Pesapal order submission rejected: status ${response.status}`);
       }
 
-      const data = (await response.json()) as any;
+      const data = (await response.json()) as PesapalSubmitOrderApiResponse;
       if (!data.order_tracking_id || !data.redirect_url) {
         throw AppError.internal('Pesapal response missing order_tracking_id or redirect_url');
       }
@@ -225,7 +260,7 @@ export class PesapalClient {
         redirectUrl: data.redirect_url,
         status: String(data.status || '200'),
       };
-    } catch (err: any) {
+    } catch (err: unknown) {
       if (err instanceof AppError) throw err;
       logger.error('[Pesapal] Network error submitting order', err);
       throw AppError.unavailable('Pesapal service currently unreachable');
@@ -255,7 +290,7 @@ export class PesapalClient {
         throw AppError.badRequest(`Pesapal transaction query failed: status ${response.status}`);
       }
 
-      const data = (await response.json()) as any;
+      const data = (await response.json()) as PesapalTransactionStatusApiResponse;
 
       return {
         orderTrackingId,
@@ -269,7 +304,7 @@ export class PesapalClient {
         merchantReference: data.merchant_reference,
         message: data.message,
       };
-    } catch (err: any) {
+    } catch (err: unknown) {
       if (err instanceof AppError) throw err;
       logger.error('[Pesapal] Network error querying transaction status', err, { orderTrackingId });
       throw AppError.unavailable('Pesapal service currently unreachable');
@@ -303,12 +338,12 @@ export class PesapalClient {
         throw AppError.badRequest(`Pesapal refund failed: status ${response.status}`);
       }
 
-      const data = (await response.json()) as any;
+      const data = (await response.json()) as PesapalRefundApiResponse;
       return {
         status: String(data.status || 'SUCCESS'),
         message: data.message || 'Refund request processed',
       };
-    } catch (err: any) {
+    } catch (err: unknown) {
       if (err instanceof AppError) throw err;
       logger.error('[Pesapal] Network error during refund request', err);
       throw AppError.unavailable('Pesapal refund service unreachable');

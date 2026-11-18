@@ -5,9 +5,17 @@ This document serves as the security compliance verification for the SwiftCart b
 ---
 
 ## 1. Secrets Scan & Key Hygiene
-- [x] **Zero Hard-Coded Secrets**: Scanned repository and git history. No Pesapal API keys, private keys, Firebase service account credentials, or database passwords exist in source files or version control.
+- [x] **Zero Hard-Coded Secrets**: Scanned repository files and full `main..backend` git diff history for real Firebase API keys (`AIzaSy...`), PEM private keys, AWS keys, GitHub/Slack tokens, and merchant secrets (`0` hits found).
 - [x] **Environment Variable Template**: `.env.example` provides explicit variable definitions with blank or non-sensitive sample values.
-- [x] **Secret Storage in Production**: Production credentials must be stored exclusively in Google Cloud Secret Manager or Firebase Secrets (`firebase functions:secrets:set PESAPAL_CONSUMER_KEY`, etc.).
+- [x] **Secret Storage in Production**: Production credentials must be stored exclusively in Google Cloud Secret Manager or Firebase Secrets (`firebase functions:secrets:set PESAPAL_CONSUMER_KEY`, etc.). See [PESAPAL-GO-LIVE.md](./PESAPAL-GO-LIVE.md).
+
+---
+
+## 1A. Tamper-Proof Payment Verification & Refund Controls (Stage B2)
+- [x] **Firestore-Only Order Resolution**: Pesapal IPN (`/api/payments/ipn`) completely ignores `OrderMerchantReference` in the HTTP request and resolves orders exclusively via the `pesapalOrderTrackingId` (`paymentTracking` index / `orders` query) stored at checkout. Unknown tracking IDs return `200 ACKNOWLEDGED` with zero database writes.
+- [x] **3-Point Integrity Assertion**: Both IPN reconciliation and status polling (`/api/payments/status/:orderId`) enforce `statusResult.merchantReference === orderId`, `currency === 'UGX'`, and integer `statusResult.amount === order.totalUGX`. Mismatches mark payment `MISMATCH`, keep the order unpaid, alert admins (`ADMIN_ALERT`), and write `PAYMENT_VERIFICATION_MISMATCH` to `auditLog`.
+- [x] **Atomic Idempotency**: Order and payment state updates execute inside a single `dbAdmin.runTransaction`; duplicate `COMPLETED` callbacks change nothing and `FAILED`/`PENDING` callbacks cannot move a `PAID` order backward.
+- [x] **Protected Refunds**: `/api/orders/:orderId/refund` requires Firebase authentication, restricts calls to the purchasing buyer (`order.buyerId === req.user.uid`) or `admin`/`super-admin`, requires `PAID` status, caps refund amount as an integer `<= paidAmountUGX`, and acquires an atomic `REFUND_PENDING` lock to block double refunds.
 
 ---
 

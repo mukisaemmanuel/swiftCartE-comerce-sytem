@@ -8,7 +8,7 @@ import {
   addDoc,
   updateDoc,
   serverTimestamp,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db, auth } from './firebaseApp';
 import type { Order, PickupStation, ReturnRequest, Dispute } from '../../domain/types';
 import type { OrderStatus } from '../../../shared/statuses';

@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { DecodedIdToken } from 'firebase-admin/auth';
+import type {} from '../express';
 import { authAdmin } from './firebaseAdmin';
 import { AppError } from './errors';
 
@@ -20,15 +21,6 @@ export interface AuthenticatedUser {
   stationId?: string;
   emailVerified: boolean;
   token: DecodedIdToken;
-}
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace Express {
-    interface Request {
-      user?: AuthenticatedUser;
-    }
-  }
 }
 
 /**
@@ -68,8 +60,8 @@ export async function requireAuth(
     let decodedToken: DecodedIdToken;
     try {
       decodedToken = await authAdmin.verifyIdToken(idToken);
-    } catch (err: any) {
-      const msg = err?.message || 'Invalid or expired Firebase ID token';
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Invalid or expired Firebase ID token';
       return next(AppError.unauthorized(`Authentication failed: ${msg}`));
     }
 

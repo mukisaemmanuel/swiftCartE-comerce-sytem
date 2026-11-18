@@ -113,8 +113,8 @@ app.post('/api/payments/ipn', handlePaymentIpn);
 // Payment status polling
 app.get('/api/payments/status/:orderId', publicRateLimiter, handlePaymentStatusPoll);
 
-// Admin / Dispute refund
-app.post('/api/orders/:orderId/refund', requireAuth, requireRole('admin', 'super-admin'), handleRefund);
+// Buyer (own paid order) or Admin refund
+app.post('/api/orders/:orderId/refund', standardRateLimiter, requireAuth, handleRefund);
 
 // ---------------------------------------------------------------------------
 // 5. DELIVERIES & 6-DIGIT CODE
@@ -213,9 +213,9 @@ app.post(
   requireRole('admin', 'super-admin'),
   async (req, res, next) => {
     try {
-      const { payoutId } = req.params;
+      const payoutId = String(req.params.payoutId);
       const result = await approveSellerPayout(payoutId, req.user!.uid);
-      res.status(200).json({ success: true, ...result });
+      res.status(200).json(result);
     } catch (err) {
       next(err);
     }

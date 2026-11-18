@@ -56,10 +56,10 @@ describe('Pesapal 3.0 Client Unit & Integration Tests', () => {
   });
 
   it('submits order request with strict UGX currency and server amount', async () => {
-    let capturedBody: any;
-    let capturedHeaders: any;
+    let capturedBody: Record<string, unknown> = {};
+    let capturedHeaders: Record<string, string> = {};
 
-    global.fetch = vi.fn().mockImplementation(async (url: string, opts: any) => {
+    global.fetch = vi.fn().mockImplementation(async (url: string, opts?: RequestInit) => {
       if (url.includes('/api/Auth/RequestToken')) {
         return {
           ok: true,
@@ -71,8 +71,8 @@ describe('Pesapal 3.0 Client Unit & Integration Tests', () => {
         };
       }
       if (url.includes('/api/Transactions/SubmitOrderRequest')) {
-        capturedHeaders = opts.headers;
-        capturedBody = JSON.parse(opts.body);
+        capturedHeaders = (opts?.headers || {}) as Record<string, string>;
+        capturedBody = JSON.parse(String(opts?.body || '{}')) as Record<string, unknown>;
         return {
           ok: true,
           status: 200,
@@ -147,8 +147,8 @@ describe('Pesapal 3.0 Client Unit & Integration Tests', () => {
   });
 
   it('submits refund request with confirmation code and amount', async () => {
-    let capturedRefundBody: any;
-    global.fetch = vi.fn().mockImplementation(async (url: string, opts: any) => {
+    let capturedRefundBody: Record<string, unknown> = {};
+    global.fetch = vi.fn().mockImplementation(async (url: string, opts?: RequestInit) => {
       if (url.includes('/api/Auth/RequestToken')) {
         return {
           ok: true,
@@ -157,7 +157,7 @@ describe('Pesapal 3.0 Client Unit & Integration Tests', () => {
         };
       }
       if (url.includes('/api/Transactions/RefundRequest')) {
-        capturedRefundBody = JSON.parse(opts.body);
+        capturedRefundBody = JSON.parse(String(opts?.body || '{}')) as Record<string, unknown>;
         return {
           ok: true,
           status: 200,
