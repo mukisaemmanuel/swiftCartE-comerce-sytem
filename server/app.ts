@@ -213,9 +213,9 @@ app.post(
   requireRole('admin', 'super-admin'),
   async (req, res, next) => {
     try {
-      const payoutId = String(req.params.payoutId);
+      const { payoutId } = req.params;
       const result = await approveSellerPayout(payoutId, req.user!.uid);
-      res.status(200).json(result);
+      res.status(200).json({ success: true, ...result });
     } catch (err) {
       next(err);
     }
@@ -230,3 +230,4 @@ app.use('/api', (_req, _res, next) => {
 });
 
 app.use(errorHandler);
+

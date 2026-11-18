@@ -156,7 +156,7 @@ export async function handlePaymentIpn(req: Request, res: Response, next: NextFu
  */
 export async function handlePaymentStatusPoll(req: Request, res: Response, next: NextFunction) {
   try {
-    const orderId = String(req.params.orderId);
+    const { orderId } = req.params;
     const orderDoc = await dbAdmin.collection('orders').doc(orderId).get();
 
     if (!orderDoc.exists) {
@@ -204,7 +204,7 @@ export async function handleRefund(req: Request, res: Response, next: NextFuncti
       return next(AppError.unauthorized('Authentication required'));
     }
 
-    const orderId = String(req.params.orderId);
+    const { orderId } = req.params;
     const { remarks = 'Customer refund' } = req.body;
 
     const orderDoc = await dbAdmin.collection('orders').doc(orderId).get();
@@ -255,3 +255,4 @@ export async function handleRefund(req: Request, res: Response, next: NextFuncti
     return next(err);
   }
 }
+

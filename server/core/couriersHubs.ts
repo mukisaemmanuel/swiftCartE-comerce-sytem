@@ -197,7 +197,7 @@ export async function handleCreateDispatch(req: Request, res: Response, next: Ne
 export async function handleGetBuyerDeliveryCode(req: Request, res: Response, next: NextFunction) {
   try {
     if (!req.user) return next(AppError.unauthorized('Authentication required'));
-    const orderId = String(req.params.orderId);
+    const { orderId } = req.params;
 
     const orderDoc = await dbAdmin.collection('orders').doc(orderId).get();
     if (!orderDoc.exists) return next(AppError.notFound('Order not found'));
@@ -233,7 +233,7 @@ export async function handleGetBuyerDeliveryCode(req: Request, res: Response, ne
 export async function handleVerifyRiderDeliveryCode(req: Request, res: Response, next: NextFunction) {
   try {
     if (!req.user) return next(AppError.unauthorized('Authentication required'));
-    const deliveryId = String(req.params.deliveryId);
+    const { deliveryId } = req.params;
     const { code } = req.body;
 
     const result = await verifyDeliveryCode(deliveryId, code, req.user.uid);
@@ -249,7 +249,7 @@ export async function handleVerifyRiderDeliveryCode(req: Request, res: Response,
 export async function handleAdminUnlockDelivery(req: Request, res: Response, next: NextFunction) {
   try {
     if (!req.user) return next(AppError.unauthorized('Authentication required'));
-    const deliveryId = String(req.params.deliveryId);
+    const { deliveryId } = req.params;
     const { reason = 'Admin code reset' } = req.body;
 
     const result = await adminReissueDeliveryCode(deliveryId, req.user.uid, reason);
@@ -263,3 +263,4 @@ export async function handleAdminUnlockDelivery(req: Request, res: Response, nex
     return next(err);
   }
 }
+
