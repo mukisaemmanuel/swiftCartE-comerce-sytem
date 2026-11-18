@@ -36,7 +36,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
             </span>
 <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-escrow bg-emerald-escrow/10 px-space-sm py-0.5 rounded-full">
 <Icon name="lock" className="text-[14px]" />
-              Pesapal verified platform Payment
+              Payment Protected
             </span>
 <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
 <Icon name="check_circle" className="text-[14px] text-tertiary" />
@@ -61,17 +61,17 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="bg-surface-container rounded-lg p-space-sm md:min-w-[280px] shadow-sm flex flex-col justify-between">
 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pb-1">
-<span className="uppercase tracking-wider">Payment Reserve Guarantee</span>
+<span className="uppercase tracking-wider">Payment Hold Guarantee</span>
 <span className="text-emerald-escrow font-bold">LOCKED</span>
 </div>
 <div className="flex items-baseline justify-between mt-0.5">
 <span className="font-price-display text-price-display text-emerald-escrow tracking-tight whitespace-nowrap">
               UGX 388,500
             </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Pesapal Pesapal Rails</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant">Pesapal Gateway Rails</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1 opacity-80">
-            Protected under Pesapal Payment Guidelines order fulfillment. Direct settlement upon OTP validation.
+            Protected under Pesapal payment processing rails. Direct settlement upon delivery confirmation.
           </p>
 </div>
 </div>
@@ -98,7 +98,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <label className="flex items-start gap-space-sm bg-surface-container p-space-sm rounded-lg cursor-pointer transition-colors hover:bg-surface-container-high">
 <input checked={true} className="mt-1 h-5 w-5 rounded bg-surface-dark text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox" />
 <div className="flex flex-col">
-<span className="font-label-md text-label-md text-on-surface">Package package seal Verified</span>
+<span className="font-label-md text-label-md text-on-surface">Package Seal Verified</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">
                   Seal <strong className="text-primary font-code-display tracking-wider font-semibold">#SC-TS-4091</strong> intact and matches digital manifest token.
                 </span>
@@ -192,7 +192,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 <div>
 <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1">
 <Icon name="key" className="text-[16px]" />
-                Verified holding Handover
+                Secure Delivery Handover
               </span>
 <h2 className="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">
                 Ask Consignee for 6-Digit OTP
@@ -243,7 +243,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 
 <div className="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mt-3 text-center">
 <Icon name="shield" className="text-[15px] text-amber-warning" />
-<span>Attempt 1 of 3: Pesapal Pesapal Rails verified platform protocol enforces 15-min lockout on repeated invalid codes.</span>
+<span>Attempt 1 of 3: Security protocol enforces 15-min lockout on repeated invalid codes.</span>
 </div>
 </div>
 
@@ -302,7 +302,7 @@ export const Tablet: React.FC<TabletProps> = (props) => {
 </button>
 
 <div className="flex items-center justify-between text-on-surface-variant text-[11px] px-1 pt-1 opacity-75">
-<span>Pesapal Pesapal Rails §18 Protocol</span>
+<span>Platform Security Protocol</span>
 <span className="flex items-center gap-1">
 <span className="w-1.5 h-1.5 rounded-full bg-emerald-escrow"></span>
               Terminal Telemetry Synced

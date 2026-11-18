@@ -42,7 +42,12 @@ const SELLER_ALIASES: Record<string, string> = {
   '/seller/add-product': '/seller/add-product-step-1-photos-seller',
 };
 
+const ROUTE_ALIASES: Record<string, string> = {
+  ...SELLER_ALIASES,
+  '/payment-methods': '/payment-methods-1',
+};
+
 export const findRouteByPath = (path: string): RouteDefinition | undefined => {
-  const targetPath = SELLER_ALIASES[path] || path;
+  const targetPath = ROUTE_ALIASES[path] || path;
   return allRoutes.find((r) => r.path === targetPath);
 };
