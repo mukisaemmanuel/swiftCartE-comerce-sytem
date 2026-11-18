@@ -5,6 +5,13 @@ import { MockOrdersRepository, type OrdersRepository } from './orders.repository
 import { MockAccountRepository, type AccountRepository } from './account.repository';
 import { MockAuthRepository, type AuthRepository } from './auth.repository';
 
+import { FirestoreCatalogRepository } from './firestore/firestoreCatalog.repository';
+import { FirestoreCartRepository } from './firestore/firestoreCart.repository';
+import { FirestoreWishlistRepository } from './firestore/firestoreWishlist.repository';
+import { FirestoreOrdersRepository } from './firestore/firestoreOrders.repository';
+import { FirestoreAccountRepository } from './firestore/firestoreAccount.repository';
+import { FirestoreAuthRepository } from './firestore/firestoreAuth.repository';
+
 export * from './catalog.repository';
 export * from './cart.repository';
 export * from './wishlist.repository';
@@ -31,14 +38,35 @@ import { MockSellerDiscountsRepository, type ISellerDiscountsRepository } from '
 import { MockSellerStoreRepository, type ISellerStoreRepository } from './seller/sellerStore.repository';
 import { MockAiAssistRepository, type IAiAssistRepository } from './seller/aiAssist.repository';
 
-// Repositories
-export const catalogRepository: CatalogRepository = new MockCatalogRepository();
-export const cartRepository: CartRepository = new MockCartRepository();
-export const wishlistRepository: WishlistRepository = new MockWishlistRepository();
-export const ordersRepository: OrdersRepository = new MockOrdersRepository();
-export const accountRepository: AccountRepository = new MockAccountRepository();
-export const authRepository: AuthRepository = new MockAuthRepository();
+// Data source toggle: default to 'mock' unless explicitly set to 'firebase'
+const isFirebase = typeof import.meta !== 'undefined' && import.meta.env?.VITE_DATA_SOURCE === 'firebase';
 
+// Buyer Repositories
+export const catalogRepository: CatalogRepository = isFirebase
+  ? new FirestoreCatalogRepository()
+  : new MockCatalogRepository();
+
+export const cartRepository: CartRepository = isFirebase
+  ? new FirestoreCartRepository()
+  : new MockCartRepository();
+
+export const wishlistRepository: WishlistRepository = isFirebase
+  ? new FirestoreWishlistRepository()
+  : new MockWishlistRepository();
+
+export const ordersRepository: OrdersRepository = isFirebase
+  ? new FirestoreOrdersRepository()
+  : new MockOrdersRepository();
+
+export const accountRepository: AccountRepository = isFirebase
+  ? new FirestoreAccountRepository()
+  : new MockAccountRepository();
+
+export const authRepository: AuthRepository = isFirebase
+  ? new FirestoreAuthRepository()
+  : new MockAuthRepository();
+
+// Seller Repositories (will be migrated in subsequent stages; using robust mock stores for now)
 export const sellerOrdersRepository: ISellerOrdersRepository = new MockSellerOrdersRepository();
 export const sellerProductsRepository: ISellerProductsRepository = new MockSellerProductsRepository();
 export const sellerRidersRepository: ISellerRidersRepository = new MockSellerRidersRepository();

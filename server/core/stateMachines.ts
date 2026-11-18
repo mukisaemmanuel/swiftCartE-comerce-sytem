@@ -1,0 +1,354 @@
+import {
+  ORDER_STATUS,
+  PAYMENT_STATUS,
+  PAYMENT_HOLD_STATUS,
+  DISPATCH_STATUS,
+  RETURN_STATUS,
+  SELLER_STATUS,
+  PRODUCT_STATUS,
+  PAYOUT_STATUS,
+  OrderStatus,
+  PaymentStatus,
+  PaymentHoldStatus,
+  DispatchStatus,
+  ReturnStatus,
+  SellerStatus,
+  ProductStatus,
+  PayoutStatus,
+} from '../../shared/statuses';
+import { AppError } from './errors';
+
+// ---------------------------------------------------------------------------
+// 1. ORDER STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const ORDER_STATUS_TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
+  [ORDER_STATUS.PENDING]: [ORDER_STATUS.PENDING_PAYMENT, ORDER_STATUS.PAID, ORDER_STATUS.CANCELLED],
+  [ORDER_STATUS.PENDING_PAYMENT]: [ORDER_STATUS.PAID, ORDER_STATUS.CANCELLED],
+  [ORDER_STATUS.PAID]: [
+    ORDER_STATUS.CONFIRMED,
+    ORDER_STATUS.PROCESSING,
+    ORDER_STATUS.READY_FOR_PICKUP,
+    ORDER_STATUS.SHIPPED,
+    ORDER_STATUS.CANCELLED,
+    ORDER_STATUS.REFUNDED,
+  ],
+  [ORDER_STATUS.CONFIRMED]: [
+    ORDER_STATUS.PROCESSING,
+    ORDER_STATUS.READY_FOR_PICKUP,
+    ORDER_STATUS.SHIPPED,
+    ORDER_STATUS.CANCELLED,
+    ORDER_STATUS.REFUNDED,
+  ],
+  [ORDER_STATUS.PROCESSING]: [
+    ORDER_STATUS.READY_FOR_PICKUP,
+    ORDER_STATUS.SHIPPED,
+    ORDER_STATUS.IN_TRANSIT,
+    ORDER_STATUS.CANCELLED,
+    ORDER_STATUS.REFUNDED,
+  ],
+  [ORDER_STATUS.READY_FOR_PICKUP]: [
+    ORDER_STATUS.SHIPPED,
+    ORDER_STATUS.IN_TRANSIT,
+    ORDER_STATUS.OUT_FOR_DELIVERY,
+    ORDER_STATUS.CANCELLED,
+  ],
+  [ORDER_STATUS.SHIPPED]: [
+    ORDER_STATUS.IN_TRANSIT,
+    ORDER_STATUS.OUT_FOR_DELIVERY,
+    ORDER_STATUS.DELIVERED,
+    ORDER_STATUS.DELIVERY_FAILED,
+  ],
+  [ORDER_STATUS.IN_TRANSIT]: [
+    ORDER_STATUS.OUT_FOR_DELIVERY,
+    ORDER_STATUS.DELIVERED,
+    ORDER_STATUS.DELIVERY_FAILED,
+  ],
+  [ORDER_STATUS.OUT_FOR_DELIVERY]: [
+    ORDER_STATUS.DELIVERED,
+    ORDER_STATUS.DELIVERY_FAILED,
+  ],
+  [ORDER_STATUS.DELIVERED]: [
+    ORDER_STATUS.RETURN_REQUESTED,
+    ORDER_STATUS.DISPUTED,
+  ],
+  [ORDER_STATUS.DELIVERY_FAILED]: [
+    ORDER_STATUS.OUT_FOR_DELIVERY,
+    ORDER_STATUS.IN_TRANSIT,
+    ORDER_STATUS.CANCELLED,
+    ORDER_STATUS.RETURNED,
+  ],
+  [ORDER_STATUS.RETURN_REQUESTED]: [
+    ORDER_STATUS.RETURN_APPROVED,
+    ORDER_STATUS.RETURN_REJECTED,
+    ORDER_STATUS.DISPUTED,
+  ],
+  [ORDER_STATUS.RETURN_APPROVED]: [
+    ORDER_STATUS.RETURNED,
+    ORDER_STATUS.REFUNDED,
+  ],
+  [ORDER_STATUS.RETURN_REJECTED]: [
+    ORDER_STATUS.DISPUTED,
+  ],
+  [ORDER_STATUS.RETURNED]: [
+    ORDER_STATUS.REFUNDED,
+  ],
+  [ORDER_STATUS.DISPUTED]: [
+    ORDER_STATUS.REFUNDED,
+    ORDER_STATUS.PAID,
+    ORDER_STATUS.DELIVERED,
+  ],
+  [ORDER_STATUS.CANCELLED]: [],
+  [ORDER_STATUS.REFUNDED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 2. PAYMENT STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const PAYMENT_STATUS_TRANSITIONS: Record<PaymentStatus, PaymentStatus[]> = {
+  [PAYMENT_STATUS.PENDING]: [
+    PAYMENT_STATUS.PENDING_PAYMENT,
+    PAYMENT_STATUS.PAID,
+    PAYMENT_STATUS.SUCCESSFUL,
+    PAYMENT_STATUS.FAILED,
+    PAYMENT_STATUS.CANCELLED,
+    PAYMENT_STATUS.EXPIRED,
+  ],
+  [PAYMENT_STATUS.PENDING_PAYMENT]: [
+    PAYMENT_STATUS.PAID,
+    PAYMENT_STATUS.SUCCESSFUL,
+    PAYMENT_STATUS.FAILED,
+    PAYMENT_STATUS.CANCELLED,
+    PAYMENT_STATUS.EXPIRED,
+  ],
+  [PAYMENT_STATUS.UNPAID]: [
+    PAYMENT_STATUS.PENDING_PAYMENT,
+    PAYMENT_STATUS.PAID,
+    PAYMENT_STATUS.CANCELLED,
+    PAYMENT_STATUS.EXPIRED,
+  ],
+  [PAYMENT_STATUS.PAID]: [
+    PAYMENT_STATUS.REFUND_PENDING,
+    PAYMENT_STATUS.REFUNDED,
+    PAYMENT_STATUS.PARTIALLY_REFUNDED,
+  ],
+  [PAYMENT_STATUS.SUCCESSFUL]: [
+    PAYMENT_STATUS.REFUND_PENDING,
+    PAYMENT_STATUS.REFUNDED,
+    PAYMENT_STATUS.PARTIALLY_REFUNDED,
+  ],
+  [PAYMENT_STATUS.REFUND_PENDING]: [
+    PAYMENT_STATUS.REFUNDED,
+    PAYMENT_STATUS.PARTIALLY_REFUNDED,
+    PAYMENT_STATUS.FAILED,
+  ],
+  [PAYMENT_STATUS.PARTIALLY_REFUNDED]: [
+    PAYMENT_STATUS.REFUNDED,
+  ],
+  [PAYMENT_STATUS.FAILED]: [],
+  [PAYMENT_STATUS.PAYMENT_FAILED]: [],
+  [PAYMENT_STATUS.REFUNDED]: [],
+  [PAYMENT_STATUS.CANCELLED]: [],
+  [PAYMENT_STATUS.EXPIRED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 3. PAYMENT HOLD STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const PAYMENT_HOLD_STATUS_TRANSITIONS: Record<PaymentHoldStatus, PaymentHoldStatus[]> = {
+  [PAYMENT_HOLD_STATUS.HELD]: [
+    PAYMENT_HOLD_STATUS.RELEASED,
+    PAYMENT_HOLD_STATUS.REFUNDED,
+    PAYMENT_HOLD_STATUS.DISPUTED,
+  ],
+  [PAYMENT_HOLD_STATUS.DISPUTED]: [
+    PAYMENT_HOLD_STATUS.HELD,
+    PAYMENT_HOLD_STATUS.RELEASED,
+    PAYMENT_HOLD_STATUS.REFUNDED,
+  ],
+  [PAYMENT_HOLD_STATUS.RELEASED]: [],
+  [PAYMENT_HOLD_STATUS.REFUNDED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 4. DISPATCH STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const DISPATCH_STATUS_TRANSITIONS: Record<DispatchStatus, DispatchStatus[]> = {
+  [DISPATCH_STATUS.PENDING]: [
+    DISPATCH_STATUS.ASSIGNED,
+    DISPATCH_STATUS.LOCKED,
+    DISPATCH_STATUS.FAILED,
+  ],
+  [DISPATCH_STATUS.ASSIGNED]: [
+    DISPATCH_STATUS.PICKED_UP,
+    DISPATCH_STATUS.IN_TRANSIT,
+    DISPATCH_STATUS.LOCKED,
+    DISPATCH_STATUS.FAILED,
+    DISPATCH_STATUS.PENDING,
+  ],
+  [DISPATCH_STATUS.PICKED_UP]: [
+    DISPATCH_STATUS.IN_TRANSIT,
+    DISPATCH_STATUS.OUT_FOR_DELIVERY,
+    DISPATCH_STATUS.LOCKED,
+    DISPATCH_STATUS.FAILED,
+  ],
+  [DISPATCH_STATUS.IN_TRANSIT]: [
+    DISPATCH_STATUS.OUT_FOR_DELIVERY,
+    DISPATCH_STATUS.DELIVERED,
+    DISPATCH_STATUS.DELIVERY_FAILED,
+    DISPATCH_STATUS.LOCKED,
+  ],
+  [DISPATCH_STATUS.OUT_FOR_DELIVERY]: [
+    DISPATCH_STATUS.DELIVERED,
+    DISPATCH_STATUS.DELIVERY_FAILED,
+    DISPATCH_STATUS.LOCKED,
+  ],
+  [DISPATCH_STATUS.DELIVERY_FAILED]: [
+    DISPATCH_STATUS.OUT_FOR_DELIVERY,
+    DISPATCH_STATUS.IN_TRANSIT,
+    DISPATCH_STATUS.RETURN_INTAKE,
+    DISPATCH_STATUS.LOCKED,
+    DISPATCH_STATUS.FAILED,
+  ],
+  [DISPATCH_STATUS.LOCKED]: [
+    DISPATCH_STATUS.ASSIGNED,
+    DISPATCH_STATUS.OUT_FOR_DELIVERY,
+    DISPATCH_STATUS.RETURN_INTAKE,
+    DISPATCH_STATUS.FAILED,
+  ],
+  [DISPATCH_STATUS.RETURN_INTAKE]: [
+    DISPATCH_STATUS.DELIVERED,
+    DISPATCH_STATUS.FAILED,
+  ],
+  [DISPATCH_STATUS.DELIVERED]: [],
+  [DISPATCH_STATUS.FAILED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 5. RETURN STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const RETURN_STATUS_TRANSITIONS: Record<ReturnStatus, ReturnStatus[]> = {
+  [RETURN_STATUS.REQUESTED]: [
+    RETURN_STATUS.APPROVED,
+    RETURN_STATUS.REJECTED,
+  ],
+  [RETURN_STATUS.APPROVED]: [
+    RETURN_STATUS.IN_TRANSIT,
+    RETURN_STATUS.REJECTED,
+  ],
+  [RETURN_STATUS.IN_TRANSIT]: [
+    RETURN_STATUS.RECEIVED_RESALEABLE,
+    RETURN_STATUS.RECEIVED_DAMAGED,
+  ],
+  [RETURN_STATUS.RECEIVED_RESALEABLE]: [
+    RETURN_STATUS.REFUNDED,
+  ],
+  [RETURN_STATUS.RECEIVED_DAMAGED]: [
+    RETURN_STATUS.REFUNDED,
+    RETURN_STATUS.REJECTED,
+  ],
+  [RETURN_STATUS.REFUNDED]: [],
+  [RETURN_STATUS.REJECTED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 6. SELLER STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const SELLER_STATUS_TRANSITIONS: Record<SellerStatus, SellerStatus[]> = {
+  [SELLER_STATUS.PENDING]: [
+    SELLER_STATUS.UNDER_REVIEW,
+    SELLER_STATUS.APPROVED,
+    SELLER_STATUS.ACTIVE,
+    SELLER_STATUS.REJECTED,
+  ],
+  [SELLER_STATUS.UNDER_REVIEW]: [
+    SELLER_STATUS.APPROVED,
+    SELLER_STATUS.ACTIVE,
+    SELLER_STATUS.REJECTED,
+  ],
+  [SELLER_STATUS.APPROVED]: [
+    SELLER_STATUS.ACTIVE,
+    SELLER_STATUS.SUSPENDED,
+    SELLER_STATUS.BANNED,
+  ],
+  [SELLER_STATUS.ACTIVE]: [
+    SELLER_STATUS.SUSPENDED,
+    SELLER_STATUS.BANNED,
+  ],
+  [SELLER_STATUS.SUSPENDED]: [
+    SELLER_STATUS.ACTIVE,
+    SELLER_STATUS.APPROVED,
+    SELLER_STATUS.BANNED,
+  ],
+  [SELLER_STATUS.REJECTED]: [
+    SELLER_STATUS.UNDER_REVIEW,
+    SELLER_STATUS.PENDING,
+  ],
+  [SELLER_STATUS.BANNED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// 7. PRODUCT STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const PRODUCT_STATUS_TRANSITIONS: Record<ProductStatus, ProductStatus[]> = {
+  [PRODUCT_STATUS.DRAFT]: [
+    PRODUCT_STATUS.UNDER_REVIEW,
+  ],
+  [PRODUCT_STATUS.UNDER_REVIEW]: [
+    PRODUCT_STATUS.APPROVED,
+    PRODUCT_STATUS.REJECTED,
+    PRODUCT_STATUS.DRAFT,
+  ],
+  [PRODUCT_STATUS.APPROVED]: [
+    PRODUCT_STATUS.UNDER_REVIEW,
+    PRODUCT_STATUS.DRAFT,
+    PRODUCT_STATUS.REJECTED,
+  ],
+  [PRODUCT_STATUS.REJECTED]: [
+    PRODUCT_STATUS.DRAFT,
+    PRODUCT_STATUS.UNDER_REVIEW,
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// 8. PAYOUT STATUS STATE MACHINE
+// ---------------------------------------------------------------------------
+export const PAYOUT_STATUS_TRANSITIONS: Record<PayoutStatus, PayoutStatus[]> = {
+  [PAYOUT_STATUS.PENDING]: [
+    PAYOUT_STATUS.APPROVED,
+    PAYOUT_STATUS.REJECTED,
+  ],
+  [PAYOUT_STATUS.APPROVED]: [
+    PAYOUT_STATUS.PAID,
+    PAYOUT_STATUS.REJECTED,
+  ],
+  [PAYOUT_STATUS.PAID]: [],
+  [PAYOUT_STATUS.REJECTED]: [],
+};
+
+// ---------------------------------------------------------------------------
+// TRANSITION ENFORCEMENT ENGINE
+// ---------------------------------------------------------------------------
+export function canTransition<T extends string>(
+  transitions: Record<T, T[]>,
+  current: T,
+  next: T
+): boolean {
+  if (current === next) return true;
+  const allowed = transitions[current] || [];
+  return allowed.includes(next);
+}
+
+export function assertTransition<T extends string>(
+  transitions: Record<T, T[]>,
+  current: T,
+  next: T,
+  entityName: string
+): void {
+  if (!canTransition(transitions, current, next)) {
+    throw AppError.badRequest(
+      `Invalid state transition for ${entityName}: cannot move from "${current}" to "${next}"`,
+      'STATE_TRANSITION_INVALID',
+      { current, next, allowed: transitions[current] || [] }
+    );
+  }
+}

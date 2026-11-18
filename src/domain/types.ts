@@ -237,6 +237,7 @@ export interface OrderRider {
 export interface Order {
   id: string;
   orderNumber: string;
+  buyerId?: string;
   status: OrderStatus;
   paymentStatus: PaymentStatus;
   paymentHoldStatus: PaymentHoldStatus;

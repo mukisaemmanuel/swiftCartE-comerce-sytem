@@ -1,10 +1,312 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Stage 0 safe default: deny all by default
+
+    // =========================================================================
+    // HELPER FUNCTIONS (ROLES FROM CUSTOM CLAIMS ONLY: request.auth.token.role)
+    // =========================================================================
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Normalizes role from custom claims (handles lowercase or UPPER_SNAKE)
+    function role() {
+      return isSignedIn() ? request.auth.token.get('role', '') : '';
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isSuperAdmin() {
+      return role() == 'super-admin' || role() == 'SUPER_ADMIN';
+    }
+
+    function isAdmin() {
+      return isSuperAdmin() || role() == 'admin' || role() == 'ADMIN';
+    }
+
+    function isSeller() {
+      return role() == 'seller' || role() == 'SELLER';
+    }
+
+    function isBuyer() {
+      return role() == 'buyer' || role() == 'BUYER';
+    }
+
+    function isRider() {
+      return role() == 'rider' || role() == 'RIDER';
+    }
+
+    function isHubAgent() {
+      return role() == 'hub' || role() == 'HUB_AGENT' || role() == 'hub-agent';
+    }
+
+    function ownsSeller(sellerId) {
+      return isSeller() && (
+        sellerId == request.auth.uid ||
+        sellerId == ('seller_' + request.auth.uid) ||
+        request.auth.token.get('sellerId', '') == sellerId ||
+        (exists(/databases/$(database)/documents/sellerProfiles/$(sellerId)) &&
+         get(/databases/$(database)/documents/sellerProfiles/$(sellerId)).data.userId == request.auth.uid) ||
+        (exists(/databases/$(database)/documents/sellers/$(sellerId)) &&
+         get(/databases/$(database)/documents/sellers/$(sellerId)).data.userId == request.auth.uid)
+      );
+    }
+
+    // =========================================================================
+    // 1. USERS COLLECTION
+    // Users read/write only their own profile. Client cannot alter role or status.
+    // =========================================================================
+    match /users/{uid} {
+      allow get: if isOwner(uid) || isAdmin();
+      allow list: if isAdmin();
+      allow create: if isSignedIn()
+                    && request.auth.uid == uid
+                    && (request.resource.data.role in ['buyer', 'BUYER', ''] || !('role' in request.resource.data))
+                    && (!('status' in request.resource.data) || request.resource.data.status in ['ACTIVE', 'PENDING_VERIFICATION']);
+      allow update: if isOwner(uid)
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+                      'name', 'phone', 'avatarUrl', 'notificationPreferences', 'shippingAddresses', 'updatedAt'
+                    ]);
+      allow delete: if false;
+    }
+
+    // =========================================================================
+    // 2. SELLER PROFILES (sellerProfiles and sellers alias)
+    // Public read for storefront. Only owning seller or admin can update profile fields.
+    // Balance and status changes are server-only.
+    // =========================================================================
+    match /sellerProfiles/{sellerId} {
+      allow read: if true;
+      allow create: if isAdmin();
+      allow update: if (ownsSeller(sellerId) || isAdmin())
+                    && !request.resource.data.diff(resource.data).affectedKeys().hasAny([
+                      'balance', 'pendingBalance', 'status', 'commissionRate', 'isVerified'
+                    ]);
+      allow delete: if isAdmin();
+    }
+
+    match /sellers/{sellerId} {
+      allow read: if true;
+      allow create: if isAdmin();
+      allow update: if (ownsSeller(sellerId) || isAdmin())
+                    && !request.resource.data.diff(resource.data).affectedKeys().hasAny([
+                      'balance', 'pendingBalance', 'status', 'commissionRate', 'isVerified'
+                    ]);
+      allow delete: if isAdmin();
+    }
+
+    // =========================================================================
+    // 3. PRODUCTS
+    // Public read for approved products. Sellers can read/manage their own products.
+    // =========================================================================
+    match /products/{productId} {
+      allow read: if resource.data.status in ['APPROVED', 'approved']
+                  || (isSignedIn() && ownsSeller(resource.data.sellerId))
+                  || isAdmin();
+      allow create: if isSignedIn()
+                    && ownsSeller(request.resource.data.sellerId)
+                    && request.resource.data.status in ['DRAFT', 'UNDER_REVIEW', 'draft', 'under_review'];
+      allow update: if (isSignedIn() && ownsSeller(resource.data.sellerId))
+                    ? (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['rating', 'salesCount', 'reviewCount'])
+                       && (request.resource.data.status == resource.data.status || request.resource.data.status in ['DRAFT', 'UNDER_REVIEW', 'draft', 'under_review']))
+                    : isAdmin();
+      allow delete: if (isSignedIn() && ownsSeller(resource.data.sellerId)) || isAdmin();
+    }
+
+    // =========================================================================
+    // 4. CATEGORIES
+    // Public read. Admin only write.
+    // =========================================================================
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // =========================================================================
+    // 5. CARTS
+    // Owner only read/write.
+    // =========================================================================
+    match /carts/{cartId} {
+      allow read, write: if isSignedIn() && (cartId == request.auth.uid || resource.data.userId == request.auth.uid || request.resource.data.userId == request.auth.uid);
+    }
+
+    // =========================================================================
+    // 6. ORDERS & SUB-ORDERS
+    // Client cannot write directly. Orders are created and progressed via Server API.
+    // Read allowed only to purchasing buyer, owning seller, and admin.
+    // =========================================================================
+    match /orders/{orderId} {
+      allow read: if (isSignedIn() && resource.data.buyerId == request.auth.uid)
+                  || ownsSeller(resource.data.sellerId)
+                  || isAdmin();
+      allow write: if false;
+
+      match /sub_orders/{subOrderId} {
+        allow read: if (isSignedIn() && get(/databases/$(database)/documents/orders/$(orderId)).data.buyerId == request.auth.uid)
+                    || ownsSeller(resource.data.sellerId)
+                    || isAdmin();
+        allow write: if false;
+      }
+    }
+
+    match /order_groups/{orderGroupId} {
+      allow read: if (isSignedIn() && resource.data.buyerId == request.auth.uid) || isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 7. PAYMENTS
+    // Financial records are strictly managed by Cloud Functions.
+    // Read allowed to buyer and admin.
+    // =========================================================================
+    match /payments/{paymentId} {
+      allow read: if (isSignedIn() && (resource.data.buyerId == request.auth.uid || resource.data.userId == request.auth.uid))
+                  || isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 8. PAYOUT HOLDS (replaces escrow_ledger)
+    // Server-only write. Read by owning seller and admin.
+    // =========================================================================
+    match /payoutHolds/{holdId} {
+      allow read: if (isSignedIn() && ownsSeller(resource.data.sellerId)) || isAdmin();
+      allow write: if false;
+    }
+
+    match /escrow_ledger/{ledgerId} {
+      allow read: if (isSignedIn() && ownsSeller(resource.data.sellerId)) || isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 9. PAYOUTS
+    // Server-only write. Read by owning seller and admin.
+    // =========================================================================
+    match /payouts/{payoutId} {
+      allow read: if (isSignedIn() && ownsSeller(resource.data.sellerId)) || isAdmin();
+      allow write: if false;
+    }
+
+    match /payout_requests/{requestId} {
+      allow read: if (isSignedIn() && ownsSeller(resource.data.sellerId)) || isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 10. DELIVERIES (deliveries and order_dispatches)
+    // Read by admin, assigned rider, owning seller, and hub agent. Client write blocked.
+    // =========================================================================
+    match /deliveries/{deliveryId} {
+      allow read: if isAdmin()
+                  || ownsSeller(resource.data.sellerId)
+                  || (isRider() && resource.data.riderId == request.auth.uid)
+                  || isHubAgent();
+      allow write: if false;
+    }
+
+    match /order_dispatches/{dispatchId} {
+      allow read: if isAdmin()
+                  || ownsSeller(resource.data.sellerId)
+                  || (isRider() && resource.data.riderId == request.auth.uid)
+                  || isHubAgent();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 11. COURIERS (couriers and seller_couriers)
+    // Read by owning seller and admin. Client writes blocked.
+    // =========================================================================
+    match /couriers/{courierId} {
+      allow read: if isAdmin() || (isSignedIn() && ownsSeller(resource.data.sellerId));
+      allow write: if false;
+    }
+
+    match /seller_couriers/{courierId} {
+      allow read: if isAdmin() || (isSignedIn() && ownsSeller(resource.data.sellerId));
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 12. HUBS (hubs and pickup_stations)
+    // Public read. Admin write only.
+    // =========================================================================
+    match /hubs/{hubId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /pickup_stations/{stationId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // =========================================================================
+    // 13. RETURNS & DISPUTES
+    // Read by purchasing buyer, owning seller, and admin. Client write blocked.
+    // =========================================================================
+    match /returns/{returnId} {
+      allow read: if (isSignedIn() && resource.data.buyerId == request.auth.uid)
+                  || ownsSeller(resource.data.sellerId)
+                  || isAdmin();
+      allow write: if false;
+    }
+
+    match /return_requests/{returnId} {
+      allow read: if (isSignedIn() && resource.data.buyerId == request.auth.uid)
+                  || ownsSeller(resource.data.sellerId)
+                  || isAdmin();
+      allow write: if false;
+    }
+
+    match /disputes/{disputeId} {
+      allow read: if (isSignedIn() && (resource.data.buyerId == request.auth.uid || ownsSeller(resource.data.sellerId)))
+                  || isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 14. REVIEWS
+    // Public read. Client write blocked (created via server to verify order).
+    // =========================================================================
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // 15. NOTIFICATIONS
+    // Read and mark-as-read by owning recipient.
+    // =========================================================================
+    match /notifications/{notifId} {
+      allow read: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow update: if isSignedIn()
+                    && resource.data.userId == request.auth.uid
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['read', 'readAt']);
+      allow create, delete: if false;
+    }
+
+    // =========================================================================
+    // 16. AUDIT LOG (auditLog and audit_logs)
+    // Admin only read. Zero client writes.
+    // =========================================================================
+    match /auditLog/{logId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /audit_logs/{logId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // =========================================================================
+    // DEFAULT DENY
+    // =========================================================================
     match /{document=**} {
       allow read, write: if false;
     }
   }
 }
-

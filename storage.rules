@@ -1,10 +1,88 @@
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
-    // Stage 0 safe default: deny all by default
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.role in ['admin', 'super-admin', 'ADMIN', 'SUPER_ADMIN']
+      );
+    }
+
+    function isSeller(sellerId) {
+      return isAuthenticated() && 
+             (request.auth.token.role in ['seller', 'SELLER']) && 
+             (request.auth.token.sellerId == sellerId || request.auth.uid == sellerId);
+    }
+
+    function isBuyer(buyerId) {
+      return isAuthenticated() && request.auth.uid == buyerId;
+    }
+
+    function isImage() {
+      return request.resource.contentType.matches('image/(jpeg|png|webp)');
+    }
+
+    function isImageOrPdf() {
+      return request.resource.contentType.matches('image/(jpeg|png|webp)') || 
+             request.resource.contentType == 'application/pdf';
+    }
+
+    // 1. Product Images
+    match /products/{sellerId}/{productId}/{file} {
+      allow read: if true;
+      allow create, update: if isSeller(sellerId)
+                           && isImage()
+                           && request.resource.size <= 2 * 1024 * 1024;
+      allow delete: if isSeller(sellerId) || isAdmin();
+    }
+
+    // 2. Return Evidence Photos
+    match /returns/{buyerId}/{sellerId}/{returnId}/{file} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == buyerId ||
+        isAdmin() ||
+        isSeller(sellerId)
+      );
+      allow create, update: if isBuyer(buyerId)
+                           && isImage()
+                           && request.resource.size <= 3 * 1024 * 1024;
+      allow delete: if isBuyer(buyerId) || isAdmin();
+    }
+
+    // 3. KYC Documents (National ID / Certificate of Incorporation)
+    match /kyc/{userId}/{file} {
+      allow read: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      allow create, update: if isAuthenticated() && request.auth.uid == userId
+                           && isImageOrPdf()
+                           && request.resource.size <= 5 * 1024 * 1024;
+      allow delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 4. User Profile Avatars
+    match /avatars/{userId}/{file} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAuthenticated() && request.auth.uid == userId 
+                           && isImage() 
+                           && request.resource.size <= 1 * 1024 * 1024;
+      allow delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 5. Dispute Evidence
+    match /disputes/{disputeId}/{file} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAuthenticated()
+                           && isImageOrPdf()
+                           && request.resource.size <= 5 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Default deny
     match /{allPaths=**} {
       allow read, write: if false;
     }
   }
 }
-
